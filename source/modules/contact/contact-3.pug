@@ -1,0 +1,66 @@
+mixin contact-page
+  .container.pt-30
+    .row
+      .col-lg-6.mb-30
+        section.contact-info
+          p.font-weight-bold.text-uppercase.text-16 CÔNG TY TNHH MTV HH VIỆT HƯNG
+          p
+            strong.text-uppercase Trụ sở chính:
+          p Số nhà 188, đường 18, Thôn Mao Dộc, Xã Phượng Mao, Huyện Quế Võ, Bắc Ninh
+          p
+            a.text-default(href="tel:0964 284 362")
+              i.fa.fa-fw.fa-phone.text-primary.mr-2
+              | 0964 284 362
+          p
+            a.text-default(href="tel:096 427 2654")
+              i.fa.fa-fw.fa-fax.text-primary.mr-2
+              | 096 427 2654
+          p
+            a.text-default(href="mailto:quanda01mail@gmail.com")
+              i.fa.fa-fw.fa-envelope-o.text-primary.mr-2
+              | quanda01mail@gmail.com
+
+          br
+
+          p
+            strong.text-uppercase Nhà máy sản xuất
+          p
+            | Số nhà 188, đường 18, Thôn Mao Dộc, Xã Phượng Mao, Huyện Quế Võ, Bắc Ninh
+          p
+            a.text-default(href="tel:0964 284 362")
+              i.fa.fa-fw.fa-phone.text-primary.mr-2
+              | 0964 284 362
+          p
+            a.text-default(href="tel:096 427 2654")
+              i.fa.fa-fw.fa-fax.text-primary.mr-2
+              | 096 427 2654
+          p
+            a.text-default(href="mailto:quanda01mail@gmail.com")
+              i.fa.fa-fw.fa-envelope-o.text-primary.mr-2
+              | quanda01mail@gmail.com
+
+      .col-lg-6.mb-30
+        form.contact-form
+          .form-group
+            label Name #[span.text-danger *]
+            .form-row
+              .col-6
+                input.form-control(type='text', placeholder='Họ')
+              .col-6
+                input.form-control(type='text', placeholder='Tên')
+          .form-group
+            label Số điện thoại #[span.text-danger *]
+            input.form-control(type='text', placeholder='')
+          .form-group
+            label Công ty #[span.text-danger *]
+            input.form-control(type='text', placeholder='')
+          .form-group
+            label Email #[span.text-danger *]
+            input.form-control(type='text', placeholder='')
+          .form-group
+            label Nội dung #[span.text-danger *]
+            textarea.form-control(rows='4', placeholder='')
+          button.btn.btn-primary.text-uppercase.text-white(type="submit") Gửi đi
+
+  .contact-map.embed-responsive
+    iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')

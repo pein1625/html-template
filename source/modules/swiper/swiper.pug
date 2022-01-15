@@ -1,0 +1,66 @@
+mixin preview-slider
+  .preview-slider
+    .preview-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide.bg-white
+            .ratio.ratio-3x2
+              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+
+mixin thumb-slider
+  .thumb-slider
+    .thumb-slider__prev
+      i.fa.fa-angle-left
+    .thumb-slider__next
+      i.fa.fa-angle-right
+    .thumb-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide.bg-white
+            .ratio.ratio-3x2
+              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+
+mixin preview
+  article.preview
+    .preview__main
+      +preview-slider
+    .preview__thumbs
+      +thumb-slider
+
+mixin swiper(el, number, hasNav, hasPaging)
+  div(class=el)
+    if (hasNav)
+      div(class=el + '__prev')
+        i.fa.fa-angle-left
+      div(class=el + '__next')
+        i.fa.fa-angle-right
+    if (hasPaging)
+      div(class=el + '__pagination')
+    .swiper-container(class=el + '__container')
+      .swiper-wrapper
+        - for(let i = 0; i < number; i++)
+          .swiper-slide
+            block
+
+mixin banner-slider
+  .banner-slider
+    .banner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 3; i++)
+          .swiper-slide
+            a.banner-slider__frame(href="#!")
+              img(src="./images/banner-slide.jpg", alt="")
+
+mixin partner-slider
+  .partner-slider
+    .partner-slider__prev
+      i.fa.fa-angle-left
+    .partner-slider__next
+      i.fa.fa-angle-right
+    .partner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            a.partner-slider__frame(href="#!")
+              //- img(src=`./images/partner-${i + 1}.png`, alt="")
+              +img

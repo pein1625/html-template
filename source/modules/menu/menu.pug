@@ -1,0 +1,48 @@
+mixin menu-sub(menu, index = 0)
+  ul.menu.menu-sub(class=index?`menu-sub-${index + 1}`:'')
+    each item in menu
+      li.menu-item(class=item.submenu?'menu-item-group':'')
+        a.menu-link(href=item.url)= item.text
+        if (item.submenu)
+          span.menu-toggle
+          +menu-sub(item.submenu, index + 1)
+
+mixin menu(menu)
+  ul.menu.menu-root
+    each item in menu
+      if (item.isMega)
+        li.menu-item.menu-item-mega
+          a.menu-link(href=item.url, class=item.active?'active':'')= item.text
+          span.menu-toggle
+          .menu-mega
+            +menu-sub(item.submenu)
+      else
+        li.menu-item(class=item.submenu?'menu-item-group':'')
+          a.menu-link(href=item.url, class=item.active?'active':'')
+            if (item.hasIcon)
+              i.fa.fa-fw.fa-lg.fa-home
+            else
+              = item.text
+          if (item.submenu)
+            span.menu-toggle
+            +menu-sub(item.submenu)
+
+mixin menu-float
+  ul.menu.menu-float
+    each item in menu
+      if (item.isMega)
+        li.menu-item.menu-item-mega
+          a.menu-link(href=item.url, class=item.active?'active':'')= item.text
+          span.menu-toggle
+          .menu-mega
+            +menu-sub(item.submenu)
+      else
+        li.menu-item(class=item.submenu?'menu-item-group':'')
+          a.menu-link(href=item.url, class=item.active?'active':'')
+            if (item.hasIcon)
+              i.fa.fa-fw.fa-lg.fa-home
+            else
+              = item.text
+          if (item.submenu)
+            span.menu-toggle
+            +menu-sub(item.submenu)

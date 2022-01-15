@@ -1,0 +1,164 @@
+.order {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $primary;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $border-color;
+    border-radius: 4px 4px 0 0;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__body {
+    border: 1px solid $border-color;
+    border-top: 0;
+    padding: 20px 20px 16px;
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+
+  &__info {
+    &--expand {
+      display: none;
+      padding-top: 20px;
+    }
+  }
+
+  &__toggle {
+    border-top: 1px solid $border-color;
+    padding: 16px 0 0;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    background: $primary;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    border: 0;
+    line-height: 35px;
+  }
+
+  &__price {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 700;
+    color: $danger;
+  }
+
+  &__extend {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px;
+    border: 1px solid $border-color;
+    border-top: 0;
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+
+    &--label {
+      color: #999;
+    }
+
+    .form-control,
+    .custom-select {
+      height: 30px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px 10px 0;
+
+    &__title {
+      padding: 12px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__body {
+      padding: 12px;
+    }
+
+    &__extend {
+      padding: 4px 12px;
+    }
+  }
+}
+
+.order-product {
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &__frame {
+    @include frame('rect', 100%);
+    @include frame('zoom');
+    width: 80px;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  &__price {
+    font-size: 14px;
+    font-weight: 700;
+    color: $danger;
+    text-align: right;
+  }
+}
+
+.discount-form {
+  .input-group {
+    .form-control {
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .input-group-text {
+      border-radius: 4px;
+      background: $primary;
+      font-weight: 700;
+      color: #fff;
+      border: 0;
+    }
+  }
+}

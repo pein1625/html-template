@@ -1,0 +1,23 @@
+.contact-info {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 30px;
+
+    a {
+      color: $gray-800;
+    }
+  }
+}
+
+.contact-map {
+  height: 200px;
+  flex-grow: 1;
+  margin-top: 20px;
+}

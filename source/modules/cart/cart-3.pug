@@ -1,0 +1,25 @@
+mixin cart
+  .cart
+    table.table.border.mb-30
+      thead
+        tr
+          th.text-center Hình ảnh
+          th Tên sản phẩm
+          th.text-center Số lượng
+          th.text-center Đơn giá
+          th.text-center Thành tiền
+          th
+      tbody
+        - for(let i = 0; i < 3; i++)
+          tr
+            td.text-center
+              a.cart__frame(href="#!")
+                +img
+            td
+              a.cart__name(href="#!") Xịt phòng tinh dầu thiên nhiên Refreshing
+            td.text-center
+              +quantity
+            td.text-center.text-nowrap 215.000 đ
+            td.text-center.text-danger.text-nowrap 215.000 đ
+            td.text-center
+              a.cart__remove(href="#!")

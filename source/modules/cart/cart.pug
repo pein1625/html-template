@@ -1,0 +1,37 @@
+mixin cart-product
+  .cart-product.media
+    a.cart-product__remove(href="#!") &times;
+    a.cart-product__frame(href="#!")
+      +img
+    .media-body
+      h3.cart-product__title
+        a(href="#!") JACKET MILITARY GREEN
+      .cart-product__info
+        small.text-muted Size:
+        span.ms-1 L
+        small.text-muted.ms-2 Color:
+        span.cart-product__color.ms-2(style="background-color: #007bff;")
+      .d-flex.align-items-center
+        +quantity
+        .cart-product__price
+          span  100,000
+          span  VNĐ
+
+mixin cart
+  article.cart.js-cart
+    .cart__backdrop.js-cart-close
+    .cart__wrapper
+      .cart__header
+        .cart__title GIỎ HÀNG
+        button.cart__close.js-cart-close
+      .cart__body
+        ul.cart__list
+          - for(let i = 0; i < 10; i++)
+            li
+              +cart-product
+      .cart__footer
+        .cart__total
+          span.text-uppercase Tổng
+          span.ms-auto.js-cart-product-total 1,000,000
+          span.ms-1 VNĐ
+        a.btn.btn-block.btn-dark.rounded-18.text-uppercase.text-700(href="#!") ĐẶT HÀNG

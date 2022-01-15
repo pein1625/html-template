@@ -1,0 +1,38 @@
+mixin distribution
+  section.distribution
+    .distribution__grid
+      .distribution__left
+        .tab-content
+          - for(let i = 0; i < 10; i++)
+            .tab-pane(id=`map-tab-${i + 1}`, class = i ? '' : 'active')
+              .distribution__map.embed-responsive
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.276132266579!2d105.78908421429776!3d21.02163449339879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab50f898373b%3A0xf94978347b40462!2zMjEwIFRydW5nIEvDrW5oLCBZw6puIEhvw6AsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1581392395987!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+      .distribution__right
+        .distribution__content
+          .distribution__subtitle
+            img(src="./images/icon-location.png", alt="")
+            span Tìm kiếm theo địa chỉ
+          .form-row
+            .col-6.mb-30
+              select.form-control
+                option -- Tỉnh/thành phố --
+                option -- Tỉnh/thành phố --
+                option -- Tỉnh/thành phố --
+            .col-6.mb-30
+              select.form-control
+                option -- Quận/huyện --
+                option -- Quận/huyện --
+                option -- Quận/huyện --
+
+          .distribution__body
+            ul.nav.distribution__list
+              - for(let i = 0; i < 10; i++)
+                li.nav-item.distribution__item
+                  a.nav-link.distribution__label(href=`#map-tab-${i + 1}`, data-toggle="tab") Tên cửa hàng: TESTING EMC
+                  .distribution__contact
+                    i.fa.fa-fw.fa-home.mr-2
+                    div 138-142 Hai Bà Trưng, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh.
+                  .distribution__contact
+                    i.fa.fa-fw.fa-fax.mr-2
+                    div #[a(href="tel:(024) 35576191") (024) 35576191] - #[a(href="tel:(024) 35576200") (024) 35576200]

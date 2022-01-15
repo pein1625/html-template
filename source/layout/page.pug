@@ -1,0 +1,34 @@
+include ../modules/head/head
+include ../modules/utils/utils
+include ../modules/card/card
+include ../modules/form/form
+include ../modules/widgets/widgets
+include ../modules/header/header
+include ../modules/footer/footer
+include ../modules/modal/modal
+include ../modules/swiper/swiper
+include ../modules/social/social
+include ../modules/sticky/sticky
+
+block define
+
+doctype html
+html(lang="vi")
+  +head(head)
+  body(class=addBodyClass?addBodyClass:'')
+    .page
+      block header
+        // header
+        +header
+
+      .page__content
+
+        // main content
+        block content
+
+      block footer
+        // footer
+        +footer
+
+    // modals + sticky widgets
+    +btn-movetop

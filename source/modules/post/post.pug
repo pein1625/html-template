@@ -1,0 +1,25 @@
+mixin post(addClass='')
+  article.post(class=addClass)
+    h1.post-title Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .post-info
+      .mr-3 2020-01-07 14:36:00
+      div
+        +social-btns
+    h2.post-sapo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque beatae consequuntur delectus deleniti dolores eaque earum expedita facilis, maiores maxime nemo numquam placeat porro repellendus, vero voluptatum. Repellat, velit.
+    .post-content
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida vel magna eget auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida vel magna eget auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus quam enim, quis sodales purus pretium eu. Sed sagittis mi eget arcu varius, vitae sagittis turpis mattis. Nam arcu libero, sollicitudin id sagittis nec, porttitor in velit. Sed sodales odio sit amet nisl volutpat molestie. Morbi egestas ante lorem, ut convallis nunc viverra vitae.
+      p Nullam laoreet enim et nisl iaculis, eget dignissim purus pulvinar. Morbi imperdiet aliquet urna, non lobortis metus hendrerit quis. Mauris ac augue lorem. Cras sit amet augue interdum, tempus orci et, cursus eros. Nam mattis velit vehicula dui interdum accumsan quis nec lectus. Fusce est dui, ullamcorper in lacinia et, aliquam vestibulum diam. Suspendisse blandit, orci sagittis dictum rutrum, orci arcu sollicitudin est, ut fringilla dui ligula et dolor. Nulla mattis, dui in sollicitudin hendrerit, tellus ante maximus metus, vulputate bibendum lectus felis vel mi. Curabitur at ligula a metus finibus pellentesque.
+      p.text-center
+        +img
+      p Sed dictum in arcu ut scelerisque. In non mattis magna, vel consequat elit. Duis mattis tincidunt molestie. Fusce auctor, ante vel posuere hendrerit, mi nisi ultrices velit, in rutrum urna nunc vitae ante. Proin a egestas nisl, vitae pretium quam. Nunc lobortis lectus et nisl egestas, scelerisque bibendum sapien finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam quis mi quis lorem cursus consequat. Nam egestas nec ipsum eu ornare. Vestibulum pulvinar pharetra libero at pharetra. Ut id condimentum arcu, a pulvinar urna.
+      p Aenean volutpat lectus vitae hendrerit dignissim. Fusce eu fermentum tellus, ut rutrum ex. Nulla suscipit, purus eu placerat suscipit, eros dolor pharetra libero, eget mattis lorem sapien porta neque.Nam sollicitudin laoreet dui sit amet semper. Nullam eu neque porttitor, fringilla sapien nec, semper risus. Nam blandit ex vitae metus suscipit varius. Morbi ullamcorper interdum arcu non pharetra. Etiam porttitor turpis quis neque consequat sagittis.
+
+mixin relate-post(addClass='')
+  section.relate-post(class=addClass)
+    h2.relate-post__title
+      span Bài viết liên quan
+    ul.relate-post__list
+      - for(let i = 0; i < 3; i++)
+        li.relate-post__item
+          a.relate-post__link(href="#!") Lorem ipsum dolor sit amet, consectetur adipiscing elit.

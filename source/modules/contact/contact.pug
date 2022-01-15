@@ -1,0 +1,61 @@
+mixin contact-page(addClass='')
+  section(class=addClass)
+    .container
+      .row
+        .col-lg-6.mb-30.d-flex.flex-column
+          +contact-info
+          +contact-map
+
+        .col-lg-6.mb-30
+          +contact-form
+
+mixin contact-info
+  section.contact-info
+    h2.contact-info__title CÔNG TY TNHH XUẤT NHẬP KHẨU NAM VƯƠNG
+    .contact-info__desc
+      div Địa chỉ : Quốc lộ 37, Thôn Thanh Tân, Xã Lê Lợi, Thành Phố Chí Linh, Tỉnh Hải Dương
+      div MST: 0801306180
+      div Hotline: 0869 980 980
+      div Email: Namvuonggroup@gmail.com
+
+mixin contact-map
+  .contact-map.embed-responsive
+    <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.276387059152!2d105.7890845153546!3d21.021624293396805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab50f898373b%3A0xf94978347b40462!2zMjEwIFRydW5nIEvDrW5oLCBZw6puIEhvw6AsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1555514478680!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe>
+
+mixin contact-form
+  form.card.card-body
+    .form-group.form-row
+      .col-md-9.offset-md-3.text-center
+        h2.text-20.text-700.mb-0 THÔNG TIN
+    .form-group.form-row
+      label.col-form-label.col-md-3
+        span Họ và tên
+        span.ms-1.text-danger *
+      .col-md-9
+        input.form-control(type='text')
+    .form-group.form-row
+      label.col-form-label.col-md-3
+        span Số điện thoại
+        span.ms-1.text-danger *
+      .col-md-9
+        input.form-control(type='text')
+    .form-group.form-row
+      label.col-form-label.col-md-3
+        span Email
+        span.ms-1.text-danger *
+      .col-md-9
+        input.form-control(type='text')
+    .form-group.form-row
+      label.col-form-label.col-md-3
+        span Tiêu đề
+      .col-md-9
+        input.form-control(type='text')
+    .form-group.form-row
+      label.col-form-label.col-md-3
+        span Nội dung
+        span.ms-1.text-danger *
+      .col-md-9
+        textarea.form-control(rows='3')
+    .form-group.form-row.mb-0
+      .col-md-9.offset-md-3.text-center
+        button.btn.btn-primary LIÊN HỆ NGAY

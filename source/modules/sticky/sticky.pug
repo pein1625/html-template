@@ -1,0 +1,33 @@
+mixin btn-movetop
+  button.btn-movetop(type="button", data-target="body")
+    i.fa.fa-arrow-up
+
+mixin phone-ring
+  a.phone-ring(href="#!")
+    span.phone-ring__icon
+      i.fa.fa-phone
+    span.phone-ring__text 0123.456.789
+
+mixin sticky-btns
+  .sticky-btns
+    .sticky-btns__wrapper
+      a.sticky-btns__item(href="tel:0987.654.321")
+        .sticky-btns__icon
+          i.fa.fa-phone.fa-lg.text-white
+        span Kinh doanh 1
+      a.sticky-btns__item(href="tel:0987.654.321")
+        .sticky-btns__icon
+          i.fa.fa-phone.fa-lg.text-white
+        span Kinh doanh 2
+      a.sticky-btns__item(href="tel:0987.654.321")
+        .sticky-btns__icon
+          i.fa.fa-facebook.fa-lg.text-white
+        span Facebook
+      a.sticky-btns__item(href="tel:0987.654.321")
+        .sticky-btns__icon.sticky-btns__icon--zalo
+          img(src="./images/icon-zalo-chat-white.png", alt="")
+        span Zalo
+    a.sticky-btns__toggle(href="#!")
+      .sticky-btns__icon
+        img(src="./images/icon-grid.png", alt="")
+      span Liên hệ

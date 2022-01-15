@@ -1,0 +1,131 @@
+mixin order-2
+  section.order
+    h2.order__title Thông tin giao dịch
+    .row
+      .col-lg-7.col-xl-8.mb-30
+        section.order__block
+          h3.order__subtitle Thông tin mua hàng
+          .order__body
+            form
+              .order__info
+                h4.order__label Thông tin người mua hàng
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Họ và tên người mua hàng #[span.text-danger *]
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Số điện thoại liên lạc #[span.text-danger *]
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Email
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Địa chỉ
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Phương thức thanh toán
+                  .col-md-8
+                    select.custom-select
+                      option -- Chọn phương thức thanh toán --
+                      option -- Chọn phương thức thanh toán --
+                      option -- Chọn phương thức thanh toán --
+                .form-row
+                  .form-group.col-md-6
+                    select.custom-select
+                      option Chọn tỉnh / thành phố
+                      option Chọn tỉnh / thành phố
+                      option Chọn tỉnh / thành phố
+                  .form-group.col-md-6
+                    select.custom-select
+                      option Chọn quận / huyện
+
+              .order__toggle
+                label.checkbox-styled(class=addClass)
+                  input.checkbox-styled__input.js-order-toggle(type="checkbox", checked)
+                  span.checkbox-styled__icon
+                  | Thông tin người mua hàng giống thông tin người nhận hàng
+
+              .order__info.order__info--expand
+                h4.order__label Thông tin người nhận hàng
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Họ và tên người mua hàng #[span.text-danger *]
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Số điện thoại liên lạc #[span.text-danger *]
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Email
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Địa chỉ
+                  .col-md-8
+                    input.form-control(type="text")
+                .form-group.form-row
+                  label.col-form-label.col-md-4 Phương thức thanh toán
+                  .col-md-8
+                    select.custom-select
+                      option -- Chọn phương thức thanh toán --
+                      option -- Chọn phương thức thanh toán --
+                      option -- Chọn phương thức thanh toán --
+                .form-row
+                  .form-group.col-md-6
+                    select.custom-select
+                      option Chọn tỉnh / thành phố
+                      option Chọn tỉnh / thành phố
+                      option Chọn tỉnh / thành phố
+                  .form-group.col-md-6
+                    select.custom-select
+                      option Chọn quận / huyện
+
+      .col-lg-5.col-xl-4.mb-30
+        section.order__block
+          h3.order__subtitle Mã giảm giá
+          .order__body
+            +discount-form
+
+        section.order__block
+          h3.order__subtitle Đơn hàng (1 sản phẩm)
+          .order__body
+            +order-product
+          .order__extend
+            .order__extend--label Tổng tiền hàng
+            .order__extend--content
+              span.order__price 395.000 VNĐ
+          .order__extend
+            .order__extend--label Shipping
+            .order__extend--content
+              select.custom-select
+                option Giao hàng nhanh: 50.000 VNĐ
+                option Giao hàng nhanh: 50.000 VNĐ
+                option Giao hàng nhanh: 50.000 VNĐ
+          .order__extend
+            .order__extend--label Tổng tiền thanh toán
+            .order__extend--content
+              span.order__price 445.000 VNĐ
+
+        button.order__btn Tiến hành thanh toán
+
+mixin order-product
+  .order-product.media
+    a.order-product__frame(href="./product-detail.html")
+      +img
+    h4.order-product__title.media-body
+      a(href="./product-detail.html") Bộ dưỡng trắng và phục hồi da
+    .order-product__price
+      div 395.000 VNĐ
+      div x1
+      div 395.000 VNĐ
+
+mixin discount-form
+  form.discount-form
+    .text-center.mb-2 Nơi quý khách nhập “ Mã giảm giá ” để hưởng những ưu đãi từ Thanh Trang
+    .input-group
+      input.form-control(type="text", placeholder="Nhập mã giảm giá")
+      .input-group-append
+        button.input-group-text(type="button") Sử dụng

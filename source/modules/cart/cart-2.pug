@@ -1,0 +1,28 @@
+mixin cart-2(addClass='')
+  .cart-2(class=addClass)
+    table.table.table-bordered.table-expand-lg
+      thead
+        tr
+          th SẢN PHẨM
+          th Đơn giá
+          th SỐ LƯỢNG
+          th Số tiền
+          th Thao tác
+      tbody
+        - for(let i = 0; i < 4; i++)
+          tr
+            td(data-label="SẢN PHÂM:")
+              .media.align-items-center
+                a.cart-2__frame(href="#!")
+                  +img
+                .media-body
+                  a.cart-2__name(href="#!") Bộ dưỡng trắng và phục hồi da
+            td.cart-2__price.text-700(data-label="Đơn giá:") 395.000 VNĐ
+            td(data-label="Số lượng:")
+              +quantity
+            td.cart-2__price.text-700(data-label="Số tiền:") 395.000 VNĐ
+            td(data-label="Thao tác:")
+              a.cart-2__delete(href="#!") Xóa
+    .cart-2__footer Tổng tiền hàng (1 Sản phẩm): #[strong.text-danger 395.000 VNĐ]
+    .mt-30
+      a.btn.btn-primary(href="#!") Tiếp Tục Mua Hàng

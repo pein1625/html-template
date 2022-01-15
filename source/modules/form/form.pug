@@ -1,0 +1,84 @@
+mixin checkbox(name="checkbox", addClass="", addInputClass="")
+  if (!block)
+    - addClass = addClass += ' checkbox-styled--textless'
+  label.checkbox-styled(class=addClass)
+    input.checkbox-styled__input(type="checkbox", name=name, class=addInputClass)
+    span.checkbox-styled__icon
+    block
+
+mixin radio(name="radio", addClass="", addInputClass="")
+  if (!block)
+    - addClass = addClass += ' radio-styled--textless'
+  label.radio-styled(class=addClass)
+    input.radio-styled__input(type="radio", name=name, class=addInputClass)
+    span.radio-styled__icon
+    block
+
+mixin quantity(addClass='', addInputClass='', step=1)
+  .quantity(class=addClass)
+    .quantity__btn(data-plus=`-${step}`)
+    input.quantity__input(type="text", value="1", data-type="number" class=addInputClass)
+    .quantity__btn(data-plus=`${step}`)
+
+mixin star-input(name='star-input', addClass = '')
+  .star-input(class=addClass)
+    input(type="radio", name=name, value="5")
+    span
+    input(type="radio", name=name, value="4")
+    span
+    input(type="radio", name=name, value="3")
+    span
+    input(type="radio", name=name, value="2")
+    span
+    input(type="radio", name=name, value="1")
+    span
+
+mixin color-picker
+  .color-picker
+    label.color-picker__item
+      input(type="radio", name="color-picker")
+      span(style="background-color: #f00;")
+    label.color-picker__item
+      input(type="radio", name="color-picker")
+      span(style="background-color: #0ff;")
+    label.color-picker__item
+      input(type="radio", name="color-picker")
+      span(style="background-color: #f0f;")
+    label.color-picker__item
+      input(type="radio", name="color-picker")
+      span(style="background-color: #0f0;")
+    label.color-picker__item
+      input(type="radio", name="color-picker")
+      span(style="background-color: #00f;")
+
+mixin size-picker
+  .size-picker
+    label.size-picker__item
+      input(type="radio", name="size-picker")
+      span XS
+    label.size-picker__item
+      input(type="radio", name="size-picker")
+      span S
+    label.size-picker__item
+      input(type="radio", name="size-picker")
+      span M
+    label.size-picker__item
+      input(type="radio", name="size-picker")
+      span L
+    label.size-picker__item
+      input(type="radio", name="size-picker")
+      span XL
+
+- nSelectId = 0
+mixin n-select(placeholder='Placeholder', ...list)
+  - nSelectId++
+  .n-select
+    .n-select__field
+      input(type="radio", name="order", checked)
+      span.n-select__placeholder.text-muted= placeholder
+      each item, index in list
+        input(type="radio", name="order", id=`select-${nSelectId}-option-${index + 1}`)
+        span= item
+    .n-select__dropdown
+      each item, index in list
+        label.n-select__label(for=`select-${nSelectId}-option-${index + 1}`)= item

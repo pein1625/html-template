@@ -1,0 +1,54 @@
+.file-input {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 0;
+
+  &__btn {
+    display: inline-block;
+    border: 1px solid $border-color;
+    line-height: 33px;
+    padding: 0 16px;
+    background-color: $light;
+    margin-right: 12px;
+  }
+
+  &__btn-2 {
+    display: inline-block;
+    background-color: $secondary;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 12px;
+    line-height: 28px;
+    border-radius: 4px;
+    color: $white;
+    margin-right: 12px;
+  }
+
+  &__btn-3 {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 12px;
+    line-height: 26px;
+    color: $secondary;
+    border: 1px solid $secondary;
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+}

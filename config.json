@@ -1,0 +1,42 @@
+{
+  "using": ["jquery", "popper", "bootstrap"],
+  "data": {
+    "jquery": {
+      "js": ["./node_modules/jquery/dist/jquery.min.js"]
+    },
+    "bootstrap": {
+      "js": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
+    },
+    "popper": {
+      "js": ["./node_modules/@popperjs/core/dist/umd/popper.min.js"]
+    },
+    "swiper": {
+      "css": ["./node_modules/swiper/css/swiper.css"],
+      "js": ["./node_modules/swiper/js/swiper.js"]
+    },
+    "fancybox": {
+      "css": ["./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"],
+      "js": ["./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js"]
+    },
+    "animate": {
+      "css": ["./node_modules/animate.css/animate.min.css"]
+    },
+    "wow": {
+      "js": ["./node_modules/wowjs/dist/wow.js"]
+    },
+    "bootstrap-datepicker": {
+      "css": ["./node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css", "./node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.css"],
+      "js": ["./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"]
+    },
+    "clockpicker": {
+      "css": ["./node_modules/clockpicker/dist/bootstrap-clockpicker.css"],
+      "js": ["./node_modules/clockpicker/dist/bootstrap-clockpicker.js"]
+    },
+    "moment": {
+      "js": ["./node_modules/moment/moment.js"]
+    },
+    "jquery-zoom": {
+      "js": ["./node_modules/jquery-zoom/jquery.zoom.js"]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin expandable(height="400")
+  .expandable(data-height=height)
+    .expandable__content
+      if (block)
+        block
+      else
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque enim ipsum recusandae nobis atque vitae beatae eligendi mollitia, iure corporis exercitationem, suscipit ut, eaque minima magni! In minus sint omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, asperiores voluptate ratione praesentium cum officiis sapiente nulla pariatur. Nam officiis at provident dolor nobis consequatur qui dignissimos voluptates. Aperiam, iusto.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque enim ipsum recusandae nobis atque vitae beatae eligendi mollitia, iure corporis exercitationem, suscipit ut, eaque minima magni! In minus sint omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, asperiores voluptate ratione praesentium cum officiis sapiente nulla pariatur. Nam officiis at provident dolor nobis consequatur qui dignissimos voluptates. Aperiam, iusto.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque enim ipsum recusandae nobis atque vitae beatae eligendi mollitia, iure corporis exercitationem, suscipit ut, eaque minima magni! In minus sint omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, asperiores voluptate ratione praesentium cum officiis sapiente nulla pariatur. Nam officiis at provident dolor nobis consequatur qui dignissimos voluptates. Aperiam, iusto.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque enim ipsum recusandae nobis atque vitae beatae eligendi mollitia, iure corporis exercitationem, suscipit ut, eaque minima magni! In minus sint omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, asperiores voluptate ratione praesentium cum officiis sapiente nulla pariatur. Nam officiis at provident dolor nobis consequatur qui dignissimos voluptates. Aperiam, iusto.
+    .expandable__footer
+      a.expandable__toggle(href="#!", data-label-expand="Xem thêm", data-label-collapse="Đóng lại")

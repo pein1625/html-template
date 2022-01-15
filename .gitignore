@@ -1,0 +1,8 @@
+node_modules/
+dest/
+.idea/
+package-lock.json
+.rar
+.zip
+.DStore
+.DS_Store

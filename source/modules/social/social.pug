@@ -1,0 +1,14 @@
+mixin facebook-script
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0" nonce="QH5eTQTz"></script>
+
+mixin facebook-comment(addClass='')
+  .fb-comments(class=addClass, data-href="https://developers.facebook.com/docs/plugins/comments#configurator", data-width="100%", data-numposts="5")
+
+mixin facebook-page(addClass='')
+  .fb-page(class=addClass, data-href="https://www.facebook.com/facebook" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
+    blockquote.fb-xfbml-parse-ignore(cite="https://www.facebook.com/facebook")
+      a(href="https://www.facebook.com/facebook") Facebook
+
+mixin social-btns
+  img(src="./images/like-share-btns.png", alt="")

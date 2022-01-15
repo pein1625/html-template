@@ -1,0 +1,63 @@
+mixin order
+  article.order
+    .row
+      .col-lg-4.mb-30
+        h3.order__subtitle Thông tin khách hàng
+        .form-group
+          input.form-control(type='text', placeholder="Họ và tên")
+        .form-group.form-inline
+          label Giới tính
+          .ms-3
+            +radio('gender')
+              | Nam
+          .ms-3
+            +radio('gender')
+              | Nữ
+        .form-group
+          input.form-control(type='text', placeholder="Số điện thoại")
+        .form-group
+          input.form-control(type='text', placeholder="Email")
+        .form-group
+          input.form-control(type='text', placeholder="Địa chỉ nhận hàng")
+        .form-text
+          | Bạn cần hỗ trợ online? Hotline
+          a.text-primary.text-700.ms-1(href="tel:+842422213093") 84-2422213093
+
+      .col-lg-4.mb-30
+        h3.order__subtitle Thời gian nhận hàng
+        .form-group
+          .mb-2
+            +radio('receive-time')
+              | Trong giờ hành chính
+          .mb-2
+            +radio('receive-time')
+              | Ngoài giờ hành chính
+
+        h3.order__subtitle.mt-3 Hình thức thanh toán
+        .form-group
+          .mb-2
+            +radio('payment-type', '', 'js-payment-option')
+              | Thanh toán khi nhận hàng (COD)
+          .mb-2
+            +radio('payment-type', '', 'js-payment-option js-bank-transfer-option')
+              | Chuyển khoản ngân hàng
+          .alert.alert-info.collapse.js-bank-transfer-info
+            div NGÂN HÀNG NGOẠI THƯƠNG VIỆT NAM - VIETCOMBANK
+            div Số tài khoản: 0541000232917
+            div Chủ tài khoản: Phan Thị Như Quỳnh
+            div Phòng GD: Vĩnh Hoàng, Hoàng Mai - Hà Nội.
+        .form-group.mb-0
+          textarea.form-control(rows='4', placeholder='Viết chú ý, yêu cầu hoá đơn GTGT...')
+
+      .col-lg-4.mb-30
+        h3.order__subtitle Đơn hàng (2 sản phẩm)
+        ul.order__list
+          each item in [1,2,3]
+            li
+              +cart-product('order')
+
+        .order__total
+          span.mr-3 Tổng cộng:
+          span.js-order-product-total 300,000
+          span  VNĐ
+        button.btn.btn-block.btn-dark.text-uppercase.text-700.rounded-18(type="submit") ĐẶT HÀNG

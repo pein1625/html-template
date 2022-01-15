@@ -1,0 +1,219 @@
+{
+	"head": {
+		"jquery": {
+			"js": [
+				"./vendor/jquery/jquery.min.js"
+			]
+		},
+		"popper": {
+			"js": [
+				"./vendor/popper/popper.min.js"
+			]
+		},
+		"bootstrap": {
+			"js": [
+				"./vendor/bootstrap/bootstrap.min.js"
+			]
+		},
+		"owl-carousel": {
+			"css": [
+				"./vendor/owl-carousel/owl.carousel.min.css"
+			],
+			"js": [
+				"./vendor/owl-carousel/owl.carousel.min.js"
+			]
+		},
+		"slick-carousel": {
+			"css": [
+				"./vendor/slick-carousel/slick.min.css"
+			],
+			"js": [
+				"./vendor/slick-carousel/slick.min.js"
+			]
+		},
+		"fontawesome": {
+			"css": [
+				"./vendor/font-awesome-4.7.0/css/font-awesome.min.css"
+			]
+		},
+		"animate": {
+			"css": [
+				"./vendor/animate/animate.min.css"
+			]
+		},
+		"wow": {
+			"js": [
+				"./vendor/wow/wow.min.js"
+			]
+		},
+		"jquery-zoom": {
+			"js": [
+				"./vendor/jquery-zoom/jquery-zoom.min.js"
+			]
+		},
+		"parallax": {
+			"js": [
+				"./vendor/parallax/parallax.min.js"
+			]
+		},
+		"ripple": {
+			"css": [
+				"./vendor/ripple/ripple.min.css"
+			],
+			"js": [
+				"./vendor/ripple/ripple.min.js"
+			]
+		},
+		"chosen": {
+			"css": [
+				"./vendor/chosen/chosen.min.css"
+			],
+			"js": [
+				"./vendor/chosen/chosen.min.js"
+			]
+		},
+		"bootstrap-datepicker": {
+			"css": [
+				"./vendor/bootstrap-datepicker/bootstrap-datepicker.min.css"
+			],
+			"js": [
+				"./vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"
+			]
+		},
+		"clockpicker": {
+			"css": [
+				"./vendor/clockpicker/clockpicker.min.css"
+			],
+			"js": [
+				"./vendor/clockpicker/clockpicker.min.js"
+			]
+		},
+		"swiper": {
+			"css": [
+				"./vendor/swiper/swiper.min.css"
+			],
+			"js": [
+				"./vendor/swiper/swiper.min.js"
+			]
+		},
+		"fancybox": {
+			"css": [
+				"./vendor/fancybox/fancybox.min.css"
+			],
+			"js": [
+				"./vendor/fancybox/fancybox.min.js"
+			]
+		},
+		"moment": {
+			"js": [
+				"./vendor/moment/moment.min.js"
+			]
+		},
+		"underscore": {
+			"js": [
+				"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"
+			]
+		},
+		"clndr": {
+			"js": [
+				"https://cdnjs.cloudflare.com/ajax/libs/clndr/1.4.7/clndr.min.js"
+			]
+		}
+	},
+	"menu": [
+		{
+			"text": "Trang chủ",
+			"url": "./index.html",
+			"active": true,
+			"hasIcon": false
+		},
+		{
+			"text": "Giới thiệu",
+			"url": "./about.html",
+			"submenu": [
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						},
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						},
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"text": "Sản phẩm",
+			"url": "./products.html"
+		},
+		{
+			"text": "Dự án",
+			"url": "./projects.html"
+		},
+		{
+			"text": "Hệ thống phân phối",
+			"url": "./distribution.html"
+		},
+		{
+			"text": "Tin tức",
+			"url": "./news.html"
+		},
+		{
+			"text": "Liên hệ",
+			"url": "./contact.html"
+		}
+	],
+	"pageList": {
+		"data": [
+			{
+				"title": "Trang chủ",
+				"url": "index"
+			},
+			{
+				"title": "Giới thiệu",
+				"url": "about"
+			},
+			{
+				"title": "Sản phẩm",
+				"url": "products"
+			},
+			{
+				"title": "Chi tiết sản phẩm",
+				"url": "product-detail"
+			},
+			{
+				"title": "Tin tức",
+				"url": "news"
+			},
+			{
+				"title": "Chi tiết tin tức",
+				"url": "news-detail"
+			},
+			{
+				"title": "Liên hệ",
+				"url": "contact"
+			}
+		]
+	}
+}

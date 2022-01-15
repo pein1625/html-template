@@ -1,0 +1,58 @@
+mixin contact-page
+  section.contact-page
+    .container
+      h1.contact-page__title Liên hệ
+      .row
+        .col-lg-6.mb-30
+          h2.contact-page__subtitle Viết nhận xét
+          +contact-form
+
+        .col-lg-6.mb-30
+          h2.contact-page__subtitle Chúng tôi ở đây
+          +contact-info
+
+
+mixin contact-map
+  .contact-map.embed-responsive
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.276132266579!2d105.78908421429776!3d21.02163449339879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab50f898373b%3A0xf94978347b40462!2zMjEwIFRydW5nIEvDrW5oLCBZw6puIEhvw6AsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1581392395987!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+mixin contact-form
+  form.contact-form
+    .form-group Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc với bạn sớm nhất có thể.
+    .form-group
+      input.form-control(type="text", placeholder="Tên của bạn")
+    .form-group
+      input.form-control(type="text", placeholder="Số điện thoại của bạn")
+    .form-group
+      input.form-control(type="email", placeholder="Email của bạn")
+    .form-group
+      textarea.form-control(rows="6", placeholder="Viết bình luận")
+    button.btn.btn-primary.text-700.text-uppercase.px-20(type="submit") Gửi liên hệ
+
+mixin contact-info
+  section.contact-info
+    h3.contact-info__title LEHAIS Art
+    .contact-info__subtitle Liên Hệ Ngay Để Được Tư Vấn Trực Tuyến
+    .contact-info__item.media
+      .contact-info__icon
+        //- img(src="./images/icon-map-marker.png", alt="")
+        i.fa.fa-fw.fa-map-marker
+      .media-body
+        .contact-info__label Địa chỉ:
+        div Tầng 4 - APEX HH2D  - Xuân Mai Corp - Hà Đông - Hà Nội
+    .contact-info__item.media
+      .contact-info__icon
+        //- img(src="./images/icon-envelope-o.png", alt="")
+        i.fa.fa-fw.fa-envelope-o
+      .media-body
+        .contact-info__label Email:
+        div
+          a(href="mailto:arts.lehais@gmail.com") arts.lehais@gmail.com
+    .contact-info__item.media
+      .contact-info__icon
+        //- img(src="./images/icon-phone-o.png", alt="")
+        i.fa.fa-fw.fa-phone
+      .media-body
+        .contact-info__label Hotline:
+        div
+          a(href="tel:0934 020 989") 0934 020 989

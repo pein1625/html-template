@@ -1,0 +1,39 @@
+mixin img(type = 'any', w = 600, h = 400, addClass='')
+  - i = Math.floor(Math.random() * 89 + 10)
+  if (type === 'avatar')
+    img(src=`https://pavatar.qom.vn/${w + i}`, alt="", class = addClass)
+  else
+    img(src=`https://placeimg.qom.vn/${w + i}/${h + i}/${type}`, alt="", class = addClass)
+
+mixin breadcrumb(...list)
+  - var lastItem = list.pop()
+  ol.breadcrumb
+    each item in list
+      li.breadcrumb-item
+        a.link-unstyled(href="#!")= item
+    li.breadcrumb-item.active= lastItem
+
+mixin pagination
+  ul.pagination
+    li.page-item.disabled
+      a.page-link(href="#!")
+        i.fal.fa-angle-left
+    li.page-item.active
+      a.page-link(href="#!") 1
+    li.page-item
+      a.page-link(href="#!") 2
+    li.page-item
+      a.page-link(href="#!") 3
+    li.page-item
+      a.page-link(href="#!") 4
+    li.page-item
+      a.page-link(href="#!") 5
+    li.page-item
+      a.page-link(href="#!")
+        i.fal.fa-angle-right
+
+mixin search
+  form.search.input-group
+    input.form-control(type='text', placeholder='Tìm kiếm...')
+    button.input-group-text
+      i.far.fa-search

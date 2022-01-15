@@ -1,0 +1,40 @@
+mixin agency-section
+  section.agency
+    .container
+      h2.agency__title Hệ thống phân phối
+      .agency__grid
+        .agency__left
+          #map
+        .agency__right
+          .agency__content
+            .agency__subtitle
+              img(src="./images/icon-location.png", alt="")
+              span Tìm kiếm theo địa chỉ
+            .form-row
+              .col-6.mb-30
+                select.form-control
+                  option -- Chọn tỉnh/thành phố --
+                  option -- Chọn tỉnh/thành phố --
+                  option -- Chọn tỉnh/thành phố --
+              .col-6.mb-30
+                select.form-control
+                  option -- Chọn quận/huyện --
+                  option -- Chọn quận/huyện --
+                  option -- Chọn quận/huyện --
+
+            .agency__body
+              ul.nav.agency__list
+                - for(let i = 0; i < 10; i++)
+                  li.nav-item.agency__item
+                    a.nav-link.agency__label.js-map-goto(href="#!", data-lat="21.0647083", data-lng="105.6986183") 184 Nguyễn Tuân, P. Nhân Chính, Q. Thanh Xuân, Hà Nội
+                    .agency__contact
+                      i.fa.fa-fw.fa-map-marker.mr-2
+                      div Số 184 đường Nguyễn Tuân, phường Nhân Chính, quận Thanh Xuân, Hà Nội
+                    .agency__contact
+                      i.fa.fa-fw.fa-phone.mr-2
+                      div #[a(href="tel:02435576191") (024) 35576191] - #[a(href="tel:") (024) 35576200]
+  script
+    include _agency.js
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/markerclustererplus/2.1.4/markerclusterer.min.js")
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwpwR40C5TNuJyPqK1czYk1vL0gNXAn3M&callback=initMap" async)
