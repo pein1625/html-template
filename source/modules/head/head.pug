@@ -12,7 +12,7 @@ mixin head(data)
     each item in rest
       if (cssList = data[item].css)
         each css in cssList
-          link(rel="stylesheet", href=css)
+          link(rel="stylesheet", type="text/css", href=css)
     link(rel="stylesheet", type="text/css", href="./css/app.css")
 
     // Scripts
@@ -21,4 +21,5 @@ mixin head(data)
       if (jsList = data[item].js)
         each js in jsList
           script(src=js, defer)
+    script(src="./js/FileSaver.min.js", defer)
     script(src="./js/app.js", defer)

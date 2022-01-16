@@ -191,28 +191,8 @@
 				"url": "index"
 			},
 			{
-				"title": "Giới thiệu",
-				"url": "about"
-			},
-			{
-				"title": "Sản phẩm",
-				"url": "products"
-			},
-			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
-			},
-			{
-				"title": "Tin tức",
-				"url": "news"
-			},
-			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
-			},
-			{
-				"title": "Liên hệ",
-				"url": "contact"
+				"title": "countdown",
+				"url": "countdown"
 			}
 		]
 	}
