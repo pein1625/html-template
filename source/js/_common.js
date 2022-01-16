@@ -221,7 +221,9 @@
 
     if (imgData) {
       $(this).attr("disabled", true).css("opacity", 0.6);
-      return download(imgData);
+      download(imgData);
+      $(this).attr("disabled", false).css("opacity", 1);
+      return;
     }
 
     console.log("No image data!");
@@ -235,6 +237,10 @@ function download(image, type = "download", social_chanel = "") {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
+}
+
+function openInNewTab(url) {
+  window.open(url, '_blank').focus();
 }
 
 // countdown timer

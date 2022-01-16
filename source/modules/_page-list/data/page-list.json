@@ -8,6 +8,10 @@
       {
         "title": "countdown",
         "url": "countdown"
+      },
+      {
+        "title": "Photo Upload",
+        "url": "frame"
       }
     ]
   }
