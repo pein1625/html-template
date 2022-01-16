@@ -1,0 +1,10 @@
+extends layout/page
+
+block content
+    article.countdown
+        img.countdown__banner(src="./images/banner.jpg", alt="")
+        .countdown__content
+            img.countdown__logo(src="./images/logo.svg", alt="")
+            .countdown__time.js-countdown(data-countdown="2022-01-22T09:00:00") 23:00:00
+            .countdown__date 22.01.2022
+            .countdown__text Comming soon...
