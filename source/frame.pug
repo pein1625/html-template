@@ -12,7 +12,18 @@ block content
               img.frame__overlay(src="./images/photo-frame.png", alt="")
             input.js-image-value(type="hidden")
             .frame__btns
-              button.frame__btn.frame__btn--download.js-download-image(type="button") Download photo
               label.frame__btn.frame__btn--upload(for="upload-input")
                 input.js-input-preview#upload-input(type="file", data-target=".frame__img", accept="image/*;capture=camera")
                 span Upload photo
+              button.frame__btn.frame__btn--download.js-download-image(type="button", data-download-url="https://vitualevent.zend.website/download-image") Download photo
+              button.frame__btn.frame__btn--share(type="button", data-bs-toggle="collapse", data-bs-target="#frame-share") Share now
+              #frame-share.collapse
+                .row.g-2
+                  .col-6
+                    a.frame__btn.text-center.frame__btn--facebook.js-share-btn(href="#!", data-chanel="Facebook")
+                      img(src="./images/icon-facebook.png", alt="", height='20')
+                      .fs-12.mt-1 Facebook
+                  .col-6
+                    a.frame__btn.text-center.frame__btn--twitter.js-share-btn(href="#!", data-chanel="Twitter")
+                      img(src="./images/icon-twitter.png", alt="", height='20')
+                      .fs-12.mt-1 Twitter

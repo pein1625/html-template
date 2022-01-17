@@ -162,6 +162,8 @@
   const $downloadBtn = $(".js-download-image");
   const overlayImage = document.querySelector(".frame__overlay");
 
+  window.url_download_image = $downloadBtn.data('download-url');
+
   if (!$previewInput.length) return;
 
   $previewInput.on("change", function () {
@@ -228,19 +230,71 @@
 
     console.log("No image data!");
   });
+
+  $('.js-share-btn').on('click', function(e) {
+    e.preventDefault();
+    var chanel = $(this).data('chanel');
+    e.preventDefault();
+
+    var imgData = $hiddenInput.val();
+
+    if (imgData) {
+      $(this).attr("disabled", true).css("opacity", 0.6);
+      download(imgData, 'share', chanel);
+      $(this).attr("disabled", false).css("opacity", 1);
+      return;
+    }
+
+    console.log("No image data!");
+  });
 });
 
 function download(image, type = "download", social_chanel = "") {
-  var a = document.createElement('a');
-  a.href = image;
-  a.download = "image.jpg";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  $.ajax({
+      url: window.url_download_image,
+      type: "POST",
+      dataType: "json",
+      data: {
+          image: image
+      },
+      success: async function (res) {
+          if (res.hasOwnProperty("error")) {
+              $(".ajax-response").html("<span class='text-danger'>" + res.error.message + "</span>");
+          } else {
+              if (type === "download") {
+                  downloadImage(res.image_url, "your_image.jpg");
+              } else {
+                  let url_share = "";
+                  if (social_chanel === "Facebook") {
+                      url_share = "https://www.facebook.com/sharer.php?u=" + res.image_url + "&amp;style=layout-explore";
+                  } else {
+                      url_share = "https://twitter.com/share?url=" + res.image_url + "&amp;style=layout-explore";
+                  }
+                  window.open(url_share, this.title, "width=500,height=500,top=300px,left=300px");
+                  return false;
+              }
+          }
+      }
+
+  });
 }
 
-function openInNewTab(url) {
-  window.open(url, '_blank').focus();
+function downloadImage(imageSrc, fileName = "your_image.jpg") {
+  $(".js-download-image").attr("disabled", false).css("opacity", 1);
+  if (iOS()) {
+      window.open(imageSrc, '_blank')
+      //window.location.href = imageSrc;
+      return;
+  }
+  saveAs(imageSrc, fileName);
+}
+
+// Detect iPhone + iPad + Mac
+
+function iOS() {
+  return ["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      navigator.userAgent.includes("Mac") && "ontouchend" in document;
 }
 
 // countdown timer
