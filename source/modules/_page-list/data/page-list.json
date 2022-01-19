@@ -12,6 +12,10 @@
       {
         "title": "Photo Upload",
         "url": "frame"
+      },
+      {
+        "title": "Intro",
+        "url": "intro"
       }
     ]
   }
