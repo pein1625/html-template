@@ -91,10 +91,10 @@
 
             if (index === 0) {
               let position = {
-                width: 0.833333,
-                height: 0.555484,
-                top: 0.222272,
-                left: 0.083333,
+                width: 0.813333,
+                height: 0.549444,
+                top: 0.066111,
+                left: 0.09,
               };
 
               if (image.width >= image.height) {
