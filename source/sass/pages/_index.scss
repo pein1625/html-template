@@ -3,18 +3,25 @@
   width: 220px;
   height: 255px;
   z-index: 1;
+  transform-style: preserve-3d;
+  perspective: 200px;
 }
 
 .eyebrow {
   position: absolute;
+  z-index: 2;
   top: 39%;
   left: 29%;
   transform: translateX(-50%);
+  transition: 0.5s ease-out;
 
   &-right {
-    left: auto;
-    right: 29%;
-    transform: translateX(50%) rotateY(180deg);
+    left: 71%;
+    transform: translateX(-50%);
+
+    img {
+      transform: rotateY(180deg);
+    }
   }
 }
 
@@ -24,7 +31,8 @@
   z-index: 1;
   top: 40%;
   left: 29%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
+  transition: 0.5s ease-out;
 
   &::before {
     content: "";
@@ -47,7 +55,6 @@
     perspective-origin: 50% 50%;
     background: radial-gradient(circle at 50% 40%, #fcfcfc, #f1f2f3 66%, #9b5050 100%);
     border-radius: 50%;
-    // box-shadow: rgba(77,77,77,0.2) 0px 5px 60px 0px inset;
   }
 }
 
@@ -60,6 +67,7 @@
   top: 15%;
   left: 15%;
   z-index: 10;
+  // animation: eyeBallMove 6s linear infinite;
 
   &::after {
     content: "";
@@ -92,9 +100,8 @@
     #6fbfff 30%,
     #34566f 100%
   );
-  // transform: translate(-75px, 0) rotateY(20deg);
-  // transform: translate(68px, -60px) skewX(15deg) skewY(2deg);
-  // animation: eyeMove 6s ease-out infinite;
+  animation: eyeMove 6s ease-out infinite;
+  // animation: irisMove 6s linear infinite;
 
   &::before {
     content: "";
@@ -132,9 +139,7 @@
 }
 
 .eye-right {
-  left: auto;
-  right: 29%;
-  transform: translate(50%, 0);
+  left: 71%;
 }
 
 .eye-right .eyeliner {
@@ -146,6 +151,7 @@
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.5s ease-out;
 }
 
 .nose {
@@ -153,6 +159,7 @@
   top: 62%;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.5s ease-out;
 }
 
 @keyframes eyeMove {
@@ -160,15 +167,39 @@
     transform: none;
   }
   20% {
-    transform: translate(-68px, 30px) skewX(15deg) skewY(-10deg) scale(0.95);
+    transform: translate(-20%, 10%) skewX(15deg) skewY(-10deg) scale(0.95);
   }
   25.5%, 44% {
      transform: none;
   }
   50%, 60% {
-    transform: translate(68px, -40px) skewX(5deg) skewY(2deg) scale(0.95);
+    transform: translate(20%, -15%) skewX(5deg) skewY(2deg) scale(0.95);
   }
   66%, 100% {
     transform: none;
+  }
+}
+
+@keyframes eyeBallMove {
+  0%, 25.5%, 44%, 66%, 100% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(-45deg);
+  }
+  50%, 60% {
+    transform: rotateZ(135deg);
+  }
+}
+
+@keyframes irisMove {
+  0%, 25.5%, 44%, 66%, 100% {
+    transform: translate(0, 0) rotateY(0deg) rotateZ(0deg);
+  }
+  20% {
+    transform: translate(-30%, 0) rotateY(20deg) rotateZ(45deg);
+  }
+  50%, 60% {
+    transform: translate(-30%, 0) rotateY(20deg) rotateZ(-135deg);
   }
 }
