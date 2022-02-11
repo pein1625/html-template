@@ -80,6 +80,7 @@ $(function() {
   if ($("#picker").length < 1) return;
 
   const $gradientCheck = $('.js-gradient-check');
+  const $hatCheck = $('.js-hat-check');
   const $gradientTab = $('.js-gradient-tab');
 
   var colorPicker = new iro.ColorPicker('#picker');
@@ -95,6 +96,16 @@ $(function() {
 
   $gradientCheck.on('change', function() {
     $gradientTab.toggle();
+  });
+
+  $hatCheck.on('change', function() {
+    if ($(this).prop('checked')) {
+      $('#hat').attr('style', '');
+      $('#hairFront2').attr('style', 'opacity: 0');
+    } else {
+      $('#hat').attr('style', 'opacity: 0');
+      $('#hairFront2').attr('style', '');
+    }
   });
 
   function updateColor() {
