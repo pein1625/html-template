@@ -1,0 +1,14 @@
+.c-nav {
+    width: 25vw;
+    background-color: #fff;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 75vw;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}
