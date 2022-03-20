@@ -164,24 +164,24 @@
 			]
 		},
 		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
+			"text": "Dịch Vụ",
+			"url": "#!"
 		},
 		{
-			"text": "Dự án",
-			"url": "./projects.html"
+			"text": "Giải pháp thực tế ảo",
+			"url": "#!"
 		},
 		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
+			"text": "Blog",
+			"url": "#!"
 		},
 		{
-			"text": "Tin tức",
-			"url": "./news.html"
+			"text": "Đối tác",
+			"url": "#!"
 		},
 		{
 			"text": "Liên hệ",
-			"url": "./contact.html"
+			"url": "#!"
 		}
 	],
 	"pageList": {

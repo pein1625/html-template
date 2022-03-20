@@ -2,6 +2,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #020322;
+  font-size: 14px;
+
+  --header-height: 92px;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
+
+    --header-height: 112px;
+  }
 }
 
 img {

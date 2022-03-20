@@ -8,3 +8,17 @@
     flex-grow: 1;
   }
 }
+
+.text-gradient {
+  display: inline-block;
+  color: #fff;
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  @media (min-width: 1600px) {
+    max-width: 80% !important;
+  }
+}

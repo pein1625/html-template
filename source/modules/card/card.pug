@@ -1,0 +1,40 @@
+mixin feedback
+  .feedback
+    .feedback__avatar
+      img(src="./images/avatar.jpg" alt="")
+    .feedback__name
+      span.text-gradient Ms. Phùng Thị Hải Hà
+    .feedback__pos
+      div Marketing Manager
+      .fw-400 Viettel Post
+    .feedback__text Cảm ơn VR Click Studio, các bạn đã có những phản hồi và triển khai công việc trong dự án với chúng tôi rất nhanh chóng và chuyên nghiệp, sự kiện của chúng tôi nhờ đó cũng đã thành công tốt đẹp. Sản phẩm của VR Plus cũng được chúng tôi sử dụng ở nhiều sự kiện khác nhau thành công.
+
+mixin button
+  a.button(href="#!")
+    span Xem thêm
+    i.fal.fa-angle-double-right
+
+mixin solution(img='./images/solution-slide-1.png', title='VR 360 Tour')
+  .solution
+    img.solution__img(src=img, alt="")
+    .solution__content
+      .solution__label Giải pháp
+      .solution__title= title
+
+mixin card-1(img='', name='VR 360 Tour')
+  .card-1
+    .card-1__frame
+      img(src=img, alt="")
+    .card-1__content
+      .card-1__label Giải pháp
+      .card-1__name= name
+
+mixin card-2(img='', title='')
+  a.card-2(href="#!")
+    .card-2__frame
+      img(src=img, alt="")
+    .card-2__title
+      if (block)
+        block
+      else
+        span= title

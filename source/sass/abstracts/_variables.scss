@@ -88,18 +88,15 @@ $instagram: #5851db;
 // Form
 $input-group-addon-bg: #fff;
 
+$blue: #09c6ff;
+$blue-darker: #100e26;
+$purple: #a959fa;
+$cyan: #01f3d4;
+
 // others
-$gradient: linear-gradient(
-  to right,
-  #ff0000,
-  #ffff00,
-  #00ff00,
-  #0000ff,
-  #fb0094,
-  #ff0000
-);
+$gradient: linear-gradient(to right, $purple, $blue);
 
 // $font-size-base: 0.875rem;
-$font-family-sans-serif: Arial, system-ui, -apple-system, "Segoe UI", Roboto,
-  "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: "Helvetica Neue", Arial, system-ui, -apple-system,
+  "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

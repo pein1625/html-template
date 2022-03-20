@@ -64,3 +64,85 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin feedback-slider
+  .feedback-slider
+    .feedback-slider__prev
+      i.fal.fa-angle-left
+    .feedback-slider__next
+      i.fal.fa-angle-right
+    .feedback-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +feedback
+
+mixin project-slider
+  .project-slider
+    .project-slider__prev
+      i.fal.fa-angle-left
+    .project-slider__next
+      i.fal.fa-angle-right
+    .project-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .project
+            .project__frame
+              .project__rect
+                img(src="./images/project-1.jpg", alt="")
+            .project__title NOVAHILLS MŨI NÉ
+              br
+              | RESORT & VILLAS
+            .project__subtitle sa bàn ảo
+        .swiper-slide
+          .project
+            .project__frame
+              .project__rect
+                img(src="./images/project-2.jpg", alt="")
+            .project__title WYNDHAM PHÚ QUỐC
+            .project__subtitle VR tour
+        .swiper-slide
+          .project
+            .project__frame
+              .project__rect
+                img(src="./images/project-3.jpg", alt="")
+            .project__title vhs-ecopark
+            .project__subtitle VR tour 360
+
+mixin card-slider
+  .card-slider
+    .card-slider__pagination
+    .card-slider__pagination
+    .card-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +card-1('./images/card-1-1.jpg', 'VR 360 Tour')
+        .swiper-slide
+          +card-1('./images/card-1-2.jpg', 'VR 360 Store')
+        .swiper-slide
+          +card-1('./images/card-1-3.jpg', 'VR 360 Event')
+        .swiper-slide
+          +card-1('./images/card-1-1.jpg', 'VR 360 Tour')
+        .swiper-slide
+          +card-1('./images/card-1-2.jpg', 'VR 360 Store')
+        .swiper-slide
+          +card-1('./images/card-1-3.jpg', 'VR 360 Event')
+
+
+mixin solution-slider
+  .solution-slider
+    .solution-slider__pagination
+    .solution-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +solution('./images/solution-slide-1.png', 'VR 360 TOUR')
+        .swiper-slide
+          +solution('./images/solution-slide-2.png', 'VR 360 STORE')
+        .swiper-slide
+          +solution('./images/solution-slide-3.png', 'VR 360 EVENT')
+        .swiper-slide
+          +solution('./images/solution-slide-1.png', 'VR 360 TOUR')
+        .swiper-slide
+          +solution('./images/solution-slide-2.png', 'VR 360 STORE')
+        .swiper-slide
+          +solution('./images/solution-slide-3.png', 'VR 360 EVENT')

@@ -7,8 +7,43 @@ mixin header
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
           .header__elements
             +navbar
+              +search
               +menu(menu)
-            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+            .h-language.dropdown.ms-3
+              button.dropdown-toggle(type="button", data-bs-toggle="dropdown")
+                img(src="./images/vn.svg", alt="")
+              ul.dropdown-menu.dropdown-menu-end
+                li
+                  a.dropdown-item(href="#!")
+                    img(src="./images/vn.svg", alt="")
+                    | Tiếng Việt
+                li
+                  a.dropdown-item(href="#!")
+                    img(src="./images/gb.svg", alt="")
+                    | English
+
+            .h-account.dropdown.ms-3
+              button.dropdown-toggle(type="button", data-bs-toggle="dropdown")
+                i.fal.fa-lg.fa-user
+              ul.dropdown-menu.dropdown-menu-end
+                li
+                  a.dropdown-item(href="#!")
+                    i.fal.fa-fw.fa-address-card.me-3
+                    | Thông tin cá nhân
+                li
+                  a.dropdown-item(href="#!")
+                    i.fal.fa-fw.fa-sign-in.me-3
+                    | Đăng nhập
+                li
+                  a.dropdown-item(href="#!")
+                    i.fal.fa-fw.fa-sign-out.me-3
+                    | Đăng xuất
+
+            button.h-search-toggle.d-none.d-lg-inline-block.ms-3(type="button")
+              i.fal.fa-lg.fa-search
+
+            button.btn-toggle.text-white.d-xl-none.js-navbar-toggle.ms-3

@@ -1,2 +1,42 @@
 mixin footer
   footer.footer
+    .container
+      .footer__grid
+        .footer__col
+          a.footer__logo(href="./index.html")
+            img(src="./images/logo.png", alt="")
+          .footer__content(style="max-width: 320px;")
+            p Tiên phong ứng dụng công nghệ thực tế ảo, công nghệ 360 trong chiến lược Marketing
+
+        .footer__col
+          .footer__heading Liên hệ
+          .footer__content
+            p Hotline: #[a(href="tel:(+84) 963.186.388") (+84) 963.186.388]
+              br
+              | Email: #[a(href="mailto:hello@vrplus.vn") hello@vrplus.vn]
+              br
+              | Trụ sở chính: Tầng 06, 93 Tô Hiệu, Q. Cầu Giấy, Hà Nội
+              br
+              | Văn phòng HCM: 456 Phan Xích Long, Q. Phú Nhuận, TP. HCM
+
+        .footer__col
+          .footer__heading Dịch vụ
+          ul.f-menu
+            each item in ["Tour 360 (không gian 360)","Lập trình website tương tác","Diễn họa 3D","Chụp ảnh và video 360","Phòng chiếu ảo 3D","VR BOOTH thực tế ảo"]
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading Đối tác
+          .footer__content
+            img(src="./images/footer-partners.png", alt="")
+
+      .footer__end
+        .footer__copyright Copyright © 2020 VR Click Studio. All rights reserved.
+        .f-social
+          a.f-social__item(href="#!")
+            i.fab.fa-fw.fa-instagram
+          a.f-social__item(href="#!")
+            i.fab.fa-fw.fa-facebook-f
+          a.f-social__item(href="#!")
+            i.fab.fa-fw.fa-twitter

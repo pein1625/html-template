@@ -20,6 +20,100 @@ function addSwiper(selector, options = {}) {
       };
     }
 
+    if (options.loopedSlides === true) {
+      options.loopedSlides = $sliderContainer.find(".swiper-slide").length;
+    }
+
     return new Swiper($sliderEl, options);
   });
 }
+
+// solution + card-slider
+$(function () {
+  if (!$(".solution-slider").length) {
+    return;
+  }
+
+  var thumbSlider = addSwiper(".card-slider", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    pagination: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+  })[0];
+
+  addSwiper(".solution-slider", {
+    effect: "fade",
+    allowTouchMove: false,
+    pagination: true,
+    thumbs: {
+      swiper: thumbSlider,
+    },
+  });
+});
+
+// Feedback slider
+$(function () {
+  addSwiper(".feedback-slider", {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    navigation: true,
+    speed: 600,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+});
+
+// Project slider
+$(function () {
+  var projectSliders = addSwiper(".project-slider", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1.5,
+    loop: true,
+    loopedSlides: true,
+    navigation: true,
+    coverflowEffect: {
+      rotate: 15,
+      stretch: 0,
+      depth: 10,
+      modifier: 1,
+      slideShadows: false,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  if (!projectSliders) return;
+
+  $(".js-project-tab").on("shown.bs.tab", function () {
+    projectSliders.map((slider) => {
+      slider.update();
+    });
+  });
+});

@@ -1,3 +1,138 @@
 extends layout/page
 
 block content
+  // Banner
+  section.banner
+    img.banner__img(src="./images/banner-img.png" alt="")
+    .container
+      .banner__content
+        .banner__title
+          span GIẢI PHÁP
+            br
+            | VR 360 TOUR
+        .banner__desc Một sự độc đáo và mới lạ, một trải nghiệm không thể hoàn hảo hơn cho khách hàng của bạn trong các chiến dịch marketing, đã tới lúc bạn phải nghĩ tới một công nghệ mới, giúp bạn kéo khách hàng về phía mình và biến họ thành trung tâm để chăm sóc.
+        .mt-3.mt-lg-5
+          +button
+
+  // Giải pháp
+  section.s-solution
+    .container
+      .s-solution__grid
+        .s-solution__aside
+          +card-slider
+        .s-solution__main
+          +solution-slider
+
+  // Các lĩnh vực ứng dụng
+  section.s-field
+    h2.s-title
+      span.fw-300 Các lĩnh vực
+      br
+      span.fw-700 Ứng dụng của VR 360
+    .container
+      .s-field__desc
+        p.text-uppercase #[span.fw-700(style="color: #01f4d4;") VR CLick studio] là một trong những Creative Agency tiên phong trong việc nghiên cứu & triển khai ứng dụng các giải pháp 360 độ, nội dung 3D, thực tế ảo và thực tế ảo tăng cường (AR) trên các thiết bị thông minh, các nền tảng công nghệ phù hợp với mọi chiến lược marketing & bán hàng của các thương hiệu.
+      .row.g-3.g-lg-4
+        .col-md-3.col-6
+          +card-2(`./images/card-2-1.jpg`, 'Giáo dục')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-2.jpg`, 'Y tế')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-3.jpg`, 'Hotel, Resort')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-4.jpg`, 'Khu công nghiệp')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-5.jpg`, 'Bất động sản')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-6.jpg`, 'Bán lẻ')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-7.jpg`, 'Triển lãm ảo')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-8.jpg`, 'Showroom 360 ô tô')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-9.jpg`, 'Showroom 360 nội thất')
+        .col-md-3.col-6
+          +card-2(`./images/card-2-10.jpg`)
+            span Showroom 360
+              br
+              | đồ gia dụng
+        .col-md-3.col-6
+          +card-2(`./images/card-2-11.jpg`)
+            span Showroom 360
+              br
+              | thiết bị vệ sinh
+        .col-md-3.col-6
+          +card-2(`./images/card-2-12.jpg`)
+            span Showroom 360
+              br
+              | thời trang
+
+  // Khu vực trải nghiệm
+  section.s-experience
+    .container
+      .position-relative
+        h2.s-experience__title #[span.fw-300 Khu vực] #[span.fw-700 trải nghiệm sản phẩm]
+    .s-experience__wrapper
+      img.s-experience__bg(src="./images/experience-bg.jpg", alt="")
+      .s-experience__body
+        .container
+          .ratio.ratio-16x9
+            iframe(width='560' height='315' src='https://www.youtube.com/embed/CGQoE63sJWw' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+            a.s-experience__overlay(href="#!")
+              img(src="./images/play-btn.png", alt="")
+              span Bấm để trải nghiệm...
+
+  // Dự án tiêu biểu
+  section.s-project
+    .container
+      h2.s-project__title
+        span Dự án tiêu biểu
+      ul.nav.project-tabs
+        each item, index in ['Tất cả', 'Du lịch', 'Bán lẻ', 'Y tế', 'Văn phòng', 'Sự kiện ảo', 'Bất động sản', 'KCN-Nhà máy']
+          li.nav-item
+            a.nav-link.js-project-tab(href=`#project-tab-${index}`, class=index?"":"active", data-bs-toggle='tab')= item
+      .s-project__wrapper
+        .tab-content
+          each item, index in ['Tất cả', 'Du lịch', 'Bán lẻ', 'Y tế', 'Văn phòng', 'Sự kiện ảo', 'Bất động sản', 'KCN-Nhà máy']
+            .tab-pane.fade(id=`project-tab-${index}`, class=index?"":"show active")
+              +project-slider
+
+  // Bạn cần thực tế ảo trong chiến lực marketing?
+  section.s-intro
+    .container
+      .row.align-items-center.justify-content-between.g-30
+        .col-xl-auto
+          h2.s-intro__title.mb-3.mb-lg-4
+            | BẠN CẦN #[span THỰC TẾ ẢO]
+            br
+            | TRONG #[span CHIẾN LƯỢC MARKETING?]
+          a.s-intro__btn(href="#!")
+            span.fw-300 Liên hệ với
+            br
+            span.fw-500 VR Click Studio
+
+        .col-xl-auto
+          img.s-intro__img(src="./images/intro.png", alt="")
+
+  // Khách hàng tiêu biểu
+  section.s-customer
+    .container
+      .position-relative
+        h2.s-title
+          span.fw-300 Khách hàng
+          br
+          span.fw-700 Tiêu biểu
+        .s-customer__grid
+          - for(let i = 0; i < 18; i++)
+            .s-customer__frame
+              img(src=`./images/customer-${i + 1}.png`, alt="")
+      .text-center.py-4.py-xl-5
+        +button
+
+  // Nhận xét khách hàng
+  section.section
+    .container
+      h2.section__title.fw-700
+        span.text-gradient Nhận xét khách hàng
+      +feedback-slider
+    .section__blur-line

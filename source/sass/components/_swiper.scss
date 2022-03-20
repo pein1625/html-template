@@ -161,3 +161,259 @@
     }
   }
 }
+
+.solution-slider {
+  width: calc(100% + 180px);
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 3px;
+      background: linear-gradient(to right, transparent, $cyan, $cyan);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+      transform: translate(-10%, -50%);
+      margin-top: 2px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $cyan;
+      opacity: 1;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &-active {
+        box-shadow: 0 0 0 2px #fff, 0 0 3px 3px $cyan;
+      }
+    }
+  }
+
+  .swiper-slide {
+    opacity: 0 !important;
+
+    &-active {
+      opacity: 1 !important;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    width: calc(100% + 100px);
+
+    &__pagination {
+      &::before {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    padding-bottom: 20px;
+
+    &__pagination {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.card-slider {
+  width: calc(100% - 20px);
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__pagination {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+
+    .swiper-pagination-bullet {
+      width: 6px;
+      height: 50px;
+      border-radius: 3px;
+      opacity: 0;
+
+      &-active {
+        background-color: $cyan;
+        opacity: 1;
+        box-shadow: 0 1px 2px rgba(#000, 0.4);
+      }
+    }
+  }
+
+  .swiper-slide {
+    padding: 10px;
+    height: auto;
+
+    &-thumb-active .card-1 {
+      box-shadow: 0 1px 9px $blue;
+    }
+  }
+}
+
+.feedback-slider {
+  position: relative;
+  z-index: 1;
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $cyan;
+    border-radius: 50%;
+    color: $cyan;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    transition: 0.4s;
+    font-size: 20px;
+    line-height: 1;
+
+    &:hover {
+      background-color: $cyan;
+      color: $blue-darker;
+    }
+  }
+
+  &__next {
+    left: auto;
+    right: -60px;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__prev,
+    &__next {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+    }
+
+    &__prev {
+      left: -15px;
+    }
+
+    &__next {
+      right: -15px;
+    }
+  }
+}
+
+.project-slider {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px;
+
+  .swiper-slide {
+    padding: 30px 10px 0;
+  }
+
+  .swiper-slide-active .project__frame {
+    background-color: $black;
+    border-color: $purple;
+    box-shadow: 0 2px 10px rgba($purple, 0.5);
+  }
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $cyan;
+    border-radius: 50%;
+    color: $cyan;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 20%;
+    transition: 0.4s;
+    font-size: 20px;
+    line-height: 1;
+
+    &:hover {
+      background-color: $cyan;
+      color: $blue-darker;
+    }
+  }
+
+  &__next {
+    left: auto;
+    right: 20%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__prev,
+    &__next {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 0;
+
+    &__prev {
+      top: 50%;
+      left: 12%;
+      transform: translateY(-50%);
+    }
+
+    &__next {
+      top: 50%;
+      right: 12%;
+      transform: translateY(-50%);
+    }
+  }
+}

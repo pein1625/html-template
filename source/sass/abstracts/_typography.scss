@@ -1,0 +1,9 @@
+@include font-face("Helvetica Neue", "HelveticaNeue");
+@include font-face("Helvetica Neue", "HelveticaNeue-Italic", 400, italic);
+@include font-face("Helvetica Neue", "HelveticaNeue-UltraLight", 300);
+@include font-face("Helvetica Neue", "HelveticaNeue-UltraLightItalic", 300, italic);
+@include font-face("Helvetica Neue", "HelveticaNeue-Medium", 500);
+@include font-face("Helvetica Neue", "HelveticaNeue-Bold", 700);
+@include font-face("Helvetica Neue", "HelveticaNeue-BoldItalic", 700, italic);
+
+$helvetica: "Helvetica Neue", sans-serif;
