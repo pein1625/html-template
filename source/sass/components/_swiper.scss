@@ -162,7 +162,8 @@
   }
 }
 
-.solution-slider {
+.solution-slider,
+.solution-slider-2 {
   width: calc(100% + 180px);
   position: relative;
   z-index: 1;
@@ -244,7 +245,8 @@
   }
 }
 
-.card-slider {
+.card-slider,
+.card-slider-2 {
   width: calc(100% - 20px);
   height: 100%;
   position: absolute;

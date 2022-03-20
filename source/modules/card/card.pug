@@ -14,19 +14,22 @@ mixin button
     span Xem thêm
     i.fal.fa-angle-double-right
 
-mixin solution(img='./images/solution-slide-1.png', title='VR 360 Tour')
+mixin solution(img='./images/solution-slide-1.png', title='VR 360 Tour', desc=false)
   .solution
     img.solution__img(src=img, alt="")
     .solution__content
-      .solution__label Giải pháp
+      .solution__label= desc ? 'Ứng dụng' : 'Giải pháp'
       .solution__title= title
+      if (desc)
+        .solution__desc Giải pháp Tour 360 (không gian 360) ứng dụng công nghệ thực tế ảo cho trường học sẽ giúp cho các trường học giới thiệu được chi tiết về tình...
+        +button
 
-mixin card-1(img='', name='VR 360 Tour')
+mixin card-1(img='', name='VR 360 Tour', label='Giải pháp')
   .card-1
     .card-1__frame
       img(src=img, alt="")
     .card-1__content
-      .card-1__label Giải pháp
+      .card-1__label= label
       .card-1__name= name
 
 mixin card-2(img='', title='')

@@ -43,13 +43,40 @@ $(function () {
     watchSlidesVisibility: true,
   })[0];
 
-  addSwiper(".solution-slider", {
+  var solutionSlider = addSwiper(".solution-slider", {
     effect: "fade",
     allowTouchMove: false,
     pagination: true,
     thumbs: {
       swiper: thumbSlider,
     },
+  })[0];
+
+  var thumbSlider2 = addSwiper(".card-slider-2", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    pagination: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+  })[0];
+
+  var solutionSlider2 = addSwiper(".solution-slider-2", {
+    effect: "fade",
+    allowTouchMove: false,
+    pagination: true,
+    thumbs: {
+      swiper: thumbSlider2,
+    },
+  })[0];
+
+  if (!thumbSlider2 || !solutionSlider2) return;
+
+  $(".js-solution-tab").on("shown.bs.tab", function () {
+    thumbSlider.update();
+    thumbSlider2.update();
+    solutionSlider.update();
+    solutionSlider2.update();
   });
 });
 
