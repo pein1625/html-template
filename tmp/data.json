@@ -122,14 +122,9 @@
 	},
 	"menu": [
 		{
-			"text": "Trang chủ",
-			"url": "./index.html",
-			"active": true,
-			"hasIcon": false
-		},
-		{
 			"text": "Giới thiệu",
 			"url": "./about.html",
+			"active": true,
 			"submenu": [
 				{
 					"text": "Dropdown",

@@ -160,27 +160,6 @@
   padding: 120px 0 150px;
   background: linear-gradient(to top right, #1d0042, #22018e);
 
-  &__title {
-    font-size: 2rem;
-    line-height: 1.4;
-    text-transform: uppercase;
-    min-width: 30%;
-    border-radius: 16px;
-    background: linear-gradient(to right bottom, #100e26, #1d193b);
-    @include shadow("md");
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 24px;
-    text-align: center;
-    white-space: nowrap;
-
-    span {
-      @include text-gradient;
-    }
-  }
-
   &__desc {
     text-align: center;
     font-size: 1rem;
@@ -391,105 +370,6 @@
       &::after {
         display: none;
       }
-    }
-  }
-}
-
-.s-intro {
-  position: relative;
-  z-index: 1;
-  padding: 100px 0;
-  background: linear-gradient(to top right, #23044a, #210a93);
-  overflow: hidden;
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(
-      to right,
-      transparent 0%,
-      $purple 50%,
-      $blue 51%,
-      transparent 100%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: blur(4px);
-  }
-
-  &::after {
-    top: auto;
-    bottom: 0;
-  }
-
-  &__title {
-    font-size: 3rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #fff;
-
-    span {
-      font-weight: 700;
-      color: $cyan;
-    }
-  }
-
-  &__btn {
-    display: inline-block;
-    color: $white;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid $purple;
-    box-shadow: 0 2px 10px rgba($purple, 0.5);
-    background-color: #220186;
-    padding: 8px 30px;
-    text-align: center;
-    line-height: 1.2;
-    transition: 0.4s;
-
-    &:hover {
-      color: $white;
-      background-color: $purple;
-    }
-  }
-
-  &__img {
-    width: 430px;
-    object-fit: contain;
-    object-position: 50% 50%;
-  }
-
-  @include media-breakpoint-down(xxl) {
-    padding: 60px 0;
-
-    &__title {
-      font-size: 2.2rem;
-    }
-
-    &__btn {
-      font-size: 20px;
-    }
-
-    &__img {
-      width: 350px;
-    }
-  }
-
-  @include media-breakpoint-down(xl) {
-    text-align: center;
-  }
-
-  @include media-breakpoint-down(lg) {
-    &__title {
-      font-size: 24px;
-    }
-
-    &__img {
-      width: 250px;
     }
   }
 }

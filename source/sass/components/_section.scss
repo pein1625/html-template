@@ -32,3 +32,40 @@
     }
   }
 }
+
+.section-2 {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to top right, #23044a, #210a93);
+  padding: 60px 0;
+
+  &--custom {
+    padding-top: 120px;
+  }
+
+  &__desc {
+    text-align: center;
+    font-size: 1rem;
+    color: $white;
+    margin: 0 0 50px;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__desc {
+      font-size: 14px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+
+    &--custom {
+      padding-top: 80px;
+    }
+
+    &__desc {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+  }
+}
