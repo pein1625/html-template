@@ -11,21 +11,21 @@ block content
   section.pros
     .container
       .row.g-20
-        .col-md-4
+        .col-md-4.wow.fadeInRight(data-wow-delay="0.2s")
           .pros__item
             img.pros__icon(src="./images/pros-icon-1.png", alt="")
             .pros__text
               span Sáng tạo
                 br
                 | trong từng dự án
-        .col-md-4
+        .col-md-4.wow.fadeInRight(data-wow-delay="0.3s")
           .pros__item
             img.pros__icon(src="./images/pros-icon-2.png", alt="")
             .pros__text
               span Toàn bộ
                 br
                 | khách hàng hài lòng
-        .col-md-4
+        .col-md-4.wow.fadeInRight(data-wow-delay="0.4s")
           .pros__item
             img.pros__icon(src="./images/pros-icon-3.png", alt="")
             .pros__text
@@ -45,7 +45,7 @@ block content
     .container
       .row.g-3.g-md-4.g-xl-30.g-xxl-60
         - for(let i = 0; i < 9; i++)
-          .col-6.col-sm-4
+          .col-6.col-sm-4.wow.fadeInUp(data-wow-delay="0.3s")
             +member
 
   // Intro

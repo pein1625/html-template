@@ -159,12 +159,12 @@
 			]
 		},
 		{
-			"text": "Dịch Vụ",
-			"url": "#!"
+			"text": "Dịch vụ",
+			"url": "./services.html"
 		},
 		{
 			"text": "Giải pháp thực tế ảo",
-			"url": "#!"
+			"url": "./solutions.html"
 		},
 		{
 			"text": "Blog",
@@ -190,24 +190,16 @@
 				"url": "about"
 			},
 			{
-				"title": "Sản phẩm",
-				"url": "products"
+				"title": "Dịch vụ",
+				"url": "services"
 			},
 			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
+				"title": "Giải pháp",
+				"url": "solutions"
 			},
 			{
-				"title": "Tin tức",
-				"url": "news"
-			},
-			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
-			},
-			{
-				"title": "Liên hệ",
-				"url": "contact"
+				"title": "Chi tiết bài viết",
+				"url": "post"
 			}
 		]
 	}

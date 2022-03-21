@@ -158,14 +158,41 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 3em;
+        margin-right: 60px;
       }
     }
 
     &-root > &-item > &-link {
       font-size: 16px;
-      padding: 12px 0;
+      padding: 10px 0;
       transition: 0.3s;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: $cyan;
+        transition: 0.3s;
+        transform: rotateY(90deg);
+        transform-origin: left;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      &.active {
+        &::after {
+          transform: rotateY(0);
+        }
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      &::after {
+        transform: rotateY(0);
+      }
     }
 
     &-root > &-item > &-toggle {
@@ -186,6 +213,16 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    &-root {
+      margin-right: 100px;
+    }
+
+    &-root > &-item {
+      &:not(:last-child) {
+        margin-right: 80px;
+      }
+    }
+
     &-root > &-item > &-link {
       font-size: 20px;
     }

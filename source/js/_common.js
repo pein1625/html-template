@@ -1,9 +1,13 @@
 $(function () {
+  new WOW().init();
+});
+
+$(function () {
   var $search = $(".search");
 
   $(".h-search-toggle").on("click", function (e) {
     e.stopPropagation();
-    $search.fadeToggle();
+    $search.fadeToggle("fast");
   });
 
   $search.on("click", function (e) {
@@ -13,7 +17,7 @@ $(function () {
   $("html, body").on("click", function () {
     if ($(window).width() < 1200) return;
 
-    $search.fadeOut();
+    $search.fadeOut("fast");
   });
 });
 
