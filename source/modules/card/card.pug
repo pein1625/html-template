@@ -49,3 +49,9 @@ mixin member
     .member__name
       span Ms. Phùng Thị Hải Hà
     .fw-300 Founder / CEO
+
+mixin n-video(img='https://img.youtube.com/vi/QZjDi_PB68o/sddefault.jpg')
+  .n-video
+    img.n-video__img(src=img, alt="")
+    a.n-video__overlay(href="https://www.youtube.com/watch?v=QZjDi_PB68o", data-fancybox="video")
+      img(src="./images/icon-youtube-play.png", alt="")

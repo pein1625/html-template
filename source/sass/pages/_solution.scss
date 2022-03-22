@@ -205,14 +205,14 @@
       &::after {
         content: "";
         display: block;
-        width: 50px;
+        width: 45px;
         height: 3px;
         background-color: $cyan;
       }
     }
   }
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(xxl) {
     margin-bottom: 20px;
 
     .nav-item {
@@ -223,6 +223,53 @@
 
     .nav-link {
       font-size: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .nav-item {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+
+    .nav-link {
+      font-size: 16px;
+
+      &.active {
+        &::after {
+          width: 30px;
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+    text-align: center;
+    overflow: auto;
+    white-space: nowrap;
+
+    .nav-item {
+      display: inline-block;
+      padding-bottom: 6px;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .nav-item {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    .nav-link {
+      font-size: 14px;
     }
   }
 }

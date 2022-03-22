@@ -137,10 +137,10 @@ mixin solution-slider
             +solution('./images/solution-slide-3.png', 'VR 360 EVENT')
 
 mixin card-slider-2
-  .card-slider-2
-    .card-slider-2__pagination
-    .card-slider-2__pagination
-    .card-slider-2__container.swiper-container
+  .card-slider
+    .card-slider__pagination
+    .card-slider__pagination
+    .card-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 2; i++)
           .swiper-slide
@@ -151,9 +151,9 @@ mixin card-slider-2
             +card-1('./images/card-1-6.jpg', 'CÔNG NGHỆ THỰC TẾ ẢO CHO BẤT ĐỘNG SẢN', 'Ứng dụng')
 
 mixin solution-slider-2
-  .solution-slider-2
-    .solution-slider-2__pagination
-    .solution-slider-2__container.swiper-container
+  .solution-slider
+    .solution-slider__pagination
+    .solution-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 2; i++)
           .swiper-slide
@@ -162,3 +162,17 @@ mixin solution-slider-2
             +solution('./images/solution-slide-5.png', 'Thực tế ảo cho khu công nghiệp', true)
           .swiper-slide
             +solution('./images/solution-slide-6.png', 'CÔNG NGHỆ THỰC TẾ ẢO CHO BẤT ĐỘNG SẢN', true)
+
+mixin video-slider
+  .video-slider
+    .video-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 5; i++)
+          .swiper-slide
+            +n-video
+    .video-slider__nav
+      .video-slider__prev
+        i.fal.fa-angle-left
+      .video-slider__pagination
+      .video-slider__next
+        i.fal.fa-angle-right

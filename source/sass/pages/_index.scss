@@ -110,6 +110,10 @@
   z-index: 1;
   background: linear-gradient(to bottom, transparent 0%, #101a43 100%);
 
+  &--custom {
+    background: 0;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: 445px calc(100% - 445px);

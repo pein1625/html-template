@@ -1,5 +1,13 @@
 {
-  "using": ["jquery", "popper", "bootstrap", "swiper", "wow", "animate"],
+  "using": [
+    "jquery",
+    "popper",
+    "bootstrap",
+    "swiper",
+    "wow",
+    "animate",
+    "fancybox"
+  ],
   "data": {
     "jquery": {
       "js": ["./node_modules/jquery/dist/jquery.min.js"]

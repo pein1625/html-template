@@ -1,0 +1,81 @@
+extends layout/page
+
+block content
+  // Banner
+  section.solution-banner
+    img.solution-banner__bg(src="./images/solution-banner-bg.png", alt="")
+    .container
+      .solution-banner__text
+        img(src="./images/blog-banner-text.png", alt="")
+
+  // Solutions
+  section.n-solution
+    .container
+      .n-solution__grid
+        a.n-solution__item(href="./post.html")
+          .n-solution__frame
+            img(src="./images/solution-1.jpg", alt="")
+          .n-solution__content
+            .n-solution__title Công nghệ thực tế ảo cho thời trang
+            .n-solution__subtitle Blog - 15/11/2021
+        a.n-solution__item(href="./post.html")
+          .n-solution__frame
+            img(src="./images/solution-2.jpg", alt="")
+          .n-solution__content
+            .n-solution__title Giải pháp số hoá 3d, đưa mọi vật vào thực tế ảo
+            .n-solution__subtitle Blog-17/11/2021
+        a.n-solution__item(href="./post.html")
+          .n-solution__frame
+            img(src="./images/solution-3.jpg", alt="")
+          .n-solution__content
+            .n-solution__title Giải pháp công nghệ thực tế ảo cho sự kiện
+            .n-solution__subtitle Blog-18/11/2021
+        a.n-solution__item(href="./post.html")
+          .n-solution__frame
+            img(src="./images/solution-4.jpg", alt="")
+          .n-solution__content
+            .n-solution__title VR click studio THỰC HIỆN DỰ ÁN VR TOUR 360 CHO BẢO TÀNG VNPT VINAPHONE
+            .n-solution__subtitle Blog/ giải pháp thực tế ảo/ vr tour
+        a.n-solution__item(href="./post.html")
+          .n-solution__frame
+            img(src="./images/solution-5.jpg", alt="")
+          .n-solution__content
+            .n-solution__title Ứng dụng công nghệ thực tế ảo trong y tế
+            .n-solution__subtitle Giải pháp/ giải pháp thực tế ảo/ vr tour
+
+  // Công nghệ - Giải pháp
+  section.s-solution.s-solution--custom.pb-30.pb-md-50.pb-xl-60(style="z-index: 2")
+    .container
+      ul.nav.solution-tabs
+        li.nav-item
+          a.nav-link.js-solution-tab.active(href='#solution-tab-1', data-bs-toggle='tab') All
+        li.nav-item
+          a.nav-link.js-solution-tab(href='#solution-tab-2', data-bs-toggle='tab') 3D Scanning
+        li.nav-item
+          a.nav-link.js-solution-tab(href='#solution-tab-3', data-bs-toggle='tab') 3D Visuazilation
+        li.nav-item
+          a.nav-link.js-solution-tab(href='#solution-tab-4', data-bs-toggle='tab') Ar Application
+        li.nav-item
+          a.nav-link.js-solution-tab(href='#solution-tab-5', data-bs-toggle='tab') Livestream 360
+        li.nav-item
+          a.nav-link.js-solution-tab(href='#solution-tab-6', data-bs-toggle='tab') VR Tour
+
+      .tab-content
+        each item, index in ['All', '3D Scanning', '3D Visuazilation', 'Ar Application', 'Livestream 360', 'VR Tour']
+          .tab-pane.fade(id=`solution-tab-${index + 1}`, class=index?"":"show active")
+            .s-solution__grid
+              .s-solution__aside
+                +card-slider
+              .s-solution__main
+                +solution-slider
+
+  // Video section
+  section.s-video
+    img.s-video__bg(src="./images/s-video-bg.jpg", alt="")
+    .container
+      h2.s-video__title Video 360 VR Click Studio
+      .s-video__wrapper
+        +video-slider
+
+  // Intro
+  +s-intro

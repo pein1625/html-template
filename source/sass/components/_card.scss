@@ -455,3 +455,48 @@
     }
   }
 }
+
+.n-video {
+  position: relative;
+  z-index: 1;
+  transition: 0.4s;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.2);
+    transition: 0.4s;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    &:hover {
+      background-color: rgba(#000, 0.45);
+    }
+
+    img {
+      height: 18%;
+    }
+  }
+}
