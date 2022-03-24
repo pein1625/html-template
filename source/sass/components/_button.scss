@@ -82,7 +82,7 @@
 
 .button {
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   background-color: $warning;
   color: $white;
   line-height: 20px;
@@ -99,6 +99,11 @@
   &--sm {
     padding: 8px 30px;
     font-size: 14px;
+  }
+
+  &--dark {
+    @include btn("shine");
+    background-color: $text-dark;
   }
 
   @include media-breakpoint-down(xl) {

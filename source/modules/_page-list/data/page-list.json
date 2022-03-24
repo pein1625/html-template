@@ -6,10 +6,6 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
-      },
-      {
         "title": "Sản phẩm",
         "url": "products"
       },
@@ -24,10 +20,6 @@
       {
         "title": "Chi tiết tin tức",
         "url": "news-detail"
-      },
-      {
-        "title": "Liên hệ",
-        "url": "contact"
       }
     ]
   }

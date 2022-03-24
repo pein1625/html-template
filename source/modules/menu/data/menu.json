@@ -11,8 +11,8 @@
       "url": "./about.html"
     },
     {
-      "text": "Dịch vụ",
-      "url": "./services.html",
+      "text": "Sản phẩm",
+      "url": "./products.html",
       "submenu": [
         {
           "text": "Cứu hộ giao thông",

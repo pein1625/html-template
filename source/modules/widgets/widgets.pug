@@ -1,0 +1,7 @@
+mixin banner(title='', ...list)
+  section.banner
+    img.banner__bg(src="./images/banner-bg.jpg", alt="")
+    .container
+      .banner__title= title
+      .banner__breadcrumb
+        +breadcrumb(...list)

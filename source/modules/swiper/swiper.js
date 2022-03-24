@@ -127,3 +127,53 @@ $(function () {
     },
   });
 });
+
+// vertical preview sync slider
+$(function () {
+  if (!$(".preview-slider, .thumb-slider").length) {
+    return;
+  }
+
+  if (!window.addSwiper) {
+    console.warn('"addSwiper" funtion is required!');
+    return;
+  }
+
+  var thumbSlider = addSwiper(".thumb-slider", {
+    navigation: true,
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    spaceBetween: 10,
+  })[0];
+
+  addSwiper(".preview-slider", {
+    effect: "fade",
+    allowTouchMove: false,
+    thumbs: {
+      swiper: thumbSlider,
+    },
+  });
+});
+
+$(function () {
+  addSwiper(".product-slider", {
+    slidesPerView: 2,
+    spaceBetween: 16,
+    speed: 400,
+    navigation: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+    },
+  });
+});

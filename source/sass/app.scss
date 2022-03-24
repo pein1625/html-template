@@ -28,6 +28,7 @@
 @import "components/navbar";
 @import "components/modal";
 @import "components/swiper";
+@import "components/swiper.vertical";
 @import "components/section";
 @import "components/header";
 @import "components/footer";
@@ -35,3 +36,5 @@
 
 // pages (override or individual styles)
 @import "pages/index";
+@import "pages/news";
+@import "pages/product";

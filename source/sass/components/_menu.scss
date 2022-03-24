@@ -219,3 +219,52 @@
     }
   }
 }
+
+.menu-aside {
+  border: 0;
+
+  .menu-item {
+    border: 0;
+  }
+
+  .menu-link {
+    color: $text-light;
+    padding: 8px 20px;
+    font-size: 15px;
+
+    &:hover {
+      color: $text-dark;
+    }
+  }
+
+  .menu-toggle {
+    height: 36px;
+    border-left: 0;
+  }
+
+  & > .menu-item {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #444;
+      position: absolute;
+      top: 18px;
+      left: 4px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .menu-sub {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-sub .menu-link {
+    padding-left: 40px;
+  }
+}

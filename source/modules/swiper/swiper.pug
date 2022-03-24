@@ -4,20 +4,20 @@ mixin preview-slider
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
+            .preview-slider__frame
               img(src=`http://placekitten.com/1000/75${i}`, alt="")
 
 mixin thumb-slider
   .thumb-slider
     .thumb-slider__prev
-      i.fa.fa-angle-left
+      i.fal.fa-angle-up
     .thumb-slider__next
-      i.fa.fa-angle-right
+      i.fal.fa-angle-down
     .thumb-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
+            .thumb-slider__frame
               img(src=`http://placekitten.com/1000/75${i}`, alt="")
 
 mixin preview
@@ -147,3 +147,15 @@ mixin procedure-slider
           +procedure('./images/procedure-icon-5.png', '05. Thông báo cho khách hàng và trả xe')
         .swiper-slide
           +procedure('./images/procedure-icon-6.png', '06. Chăm sóc khách hàng sau sửa chữa')
+
+mixin product-slider
+  .product-slider
+    .product-slider__prev
+      i.fal.fa-angle-left
+    .product-slider__next
+      i.fal.fa-angle-right
+    .product-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +product

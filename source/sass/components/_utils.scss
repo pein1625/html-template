@@ -1,4 +1,6 @@
 .breadcrumb {
+  margin-bottom: 0;
+
   &-item {
     &,
     & + &::before,
@@ -11,11 +13,14 @@
   }
 
   &--white .breadcrumb-item,
-  &--white .breadcrumb-item + .breadcrumb-item::before,
   &--white .breadcrumb-item + .breadcrumb-item.active,
-  &--white .breadcrumb-item + .breadcrumb-item.active::before,
-  &--white .breadcrumb-item a,
   &--white .breadcrumb-item a:hover {
+    color: #ffc107;
+  }
+
+  &--white .breadcrumb-item + .breadcrumb-item::before,
+  &--white .breadcrumb-item + .breadcrumb-item.active::before,
+  &--white .breadcrumb-item a {
     color: $white;
   }
 }
@@ -30,14 +35,34 @@
   }
 
   .page-link {
-    color: $gray-800;
-    padding: 8px 16px;
-    border-radius: 4px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background-color: #f1f1f1;
+    color: $text-light;
+    padding: 0;
+
+    &:hover {
+      color: $white;
+      background-color: $text-dark;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $text-dark;
+    border-color: $text-dark;
+    color: $white;
   }
 
   @media (max-width: 767px) {
     .page-link {
-      padding: 4px 10px;
+      width: 32px;
+      height: 32px;
+      font-size: 13px;
     }
   }
 }

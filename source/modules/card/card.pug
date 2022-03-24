@@ -51,6 +51,33 @@ mixin news(img='./images/news-1.jpg')
       a(href="#!") Garage phục hồi xe ô tô tai nạn, va chạm tốt nhất tại Hà Nội
     .news__desc Dịch vụ phục hồi xe tai nạn là một trong những dịch vụ mà G arage ô tô Qua...
 
+mixin news-2(img='./images/news-1.jpg')
+  .news-2
+    .row.gy-3.gx-30
+      .col-sm-auto
+        a.news-2__frame(href="./news-detail.html")
+          img(src=img, alt="")
+      .col-sm
+        h3.news-2__title
+          a(href="./news-detail.html") PHỤC HỒI MAZDA 6 VA CHẠM VỠ ĐÈN PHA - MÓP ĐUÔI HÔNG SAU ĐẸP NHƯ MỚI
+        .news-2__time
+          i.fal.fa-calendar-alt.me-2
+          | Thứ Mon, 07/03/2022
+        .news-2__desc PHỤC HỒI MAZDA 6 VA CHẠM VỠ ĐÈN PHA - MÓP ĐUÔI HÔNG SAU ĐẸP NHƯ MỚI Tư vấn Sửa Chữa Miễn Phí - Tận Tâm Với Khách Hàng - Bảo Hành Uy Tín - Chăm Sóc Trọn Đời - Cạnh Tranh Giá Thành - Thời Gian Nhanh Nhất ... đã làm nên thương hiệu QUANGDUCAUTO
+
+mixin news-3
+  .news-3
+    .row.g-3
+      .col-auto
+        a.news-3__frame(href="./news-detail.html")
+          img(src="./images/news-1.jpg", alt="")
+      .col
+        h3.news-3__title
+          a(href="./news-detail.html") Garage phục hồi xe ô tô tai nạn, va chạm tốt nhất tại Hà Nội
+        .news-3__time
+          i.fal.fa-calendar-alt.me-2
+          | Thứ Fri, 31/12/2021
+
 mixin service-2(img='./images/news-1.jpg')
   .service-2
     .service-2__frame
@@ -65,3 +92,12 @@ mixin procedure(img='', title='')
   .procedure
     img.procedure__icon(src=img, alt="")
     .procedure__title=title
+
+mixin product
+  .product
+    a.product__frame(href="./product-detail.html")
+      img(src="./images/product-1.jpg", alt="")
+    h3.product__name
+      a(href="./product-detail.html") Ắc quy ô tô
+    .product__price 1,234,567₫
+    .product__stars.stars.stars--5

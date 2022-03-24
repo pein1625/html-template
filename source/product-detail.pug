@@ -1,0 +1,68 @@
+extends layout/page
+
+block content
+  +banner('Sản phẩm', 'Trang chủ', 'Sản phẩm', 'Ắc quy ô tô')
+
+  section.section
+    .container
+      .row.g-30
+        .col-lg-6
+          +preview
+        .col-lg-6
+          section.pd-info
+            h1.pd-info__title Evening Leather Bag
+            .pd-info__stars
+              .stars.stars--5
+              small.ms-2 (123 customers reviewed)
+            .pd-info__info
+              div #[strong Category:] Sofa & so far
+              div.text-success Free Shipping
+            .pd-info__price
+              label Price:
+              | 1,234,567₫
+            .mb-3
+              label.fw-700 Color:
+              +color-picker
+            .mb-3
+              label.fw-700 Size:
+              +size-picker
+            .pd-info__custom
+            .pd-info__btns
+              a.pd-info__btn(href="#!") Buy Now
+              a.pd-info__btn.pd-info__btn--yellow(href="#!") Add To Cart
+
+  section.section.bg-light
+    .container
+      ul.nav.pd-tabs
+        li.nav-item
+          a.nav-link.active(href='#pd-tab-1', data-bs-toggle='tab') Chi tiết sản phẩm
+        li.nav-item
+          a.nav-link(href='#pd-tab-2', data-bs-toggle='tab') Thông số chi tiết
+      .tab-content
+        #pd-tab-1.tab-pane.fade.show.active
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ullam aperiam dicta, excepturi assumenda praesentium nostrum veritatis aspernatur necessitatibus voluptatem! Asperiores tenetur fuga perspiciatis aliquam mollitia quos, saepe placeat aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus esse eum pariatur in modi nesciunt tempore asperiores earum itaque cum, libero atque illo quas expedita! Sed neque voluptatibus recusandae.
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ullam aperiam dicta, excepturi assumenda praesentium nostrum veritatis aspernatur necessitatibus voluptatem! Asperiores tenetur fuga perspiciatis aliquam mollitia quos, saepe placeat aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus esse eum pariatur in modi nesciunt tempore asperiores earum itaque cum, libero atque illo quas expedita! Sed neque voluptatibus recusandae.
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ullam aperiam dicta, excepturi assumenda praesentium nostrum veritatis aspernatur necessitatibus voluptatem! Asperiores tenetur fuga perspiciatis aliquam mollitia quos, saepe placeat aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus esse eum pariatur in modi nesciunt tempore asperiores earum itaque cum, libero atque illo quas expedita! Sed neque voluptatibus recusandae.
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ullam aperiam dicta, excepturi assumenda praesentium nostrum veritatis aspernatur necessitatibus voluptatem! Asperiores tenetur fuga perspiciatis aliquam mollitia quos, saepe placeat aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium doloribus esse eum pariatur in modi nesciunt tempore asperiores earum itaque cum, libero atque illo quas expedita! Sed neque voluptatibus recusandae.
+
+        #pd-tab-2.tab-pane.fade
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th STT
+                  th Tên
+                  th Thông số 1
+                  th Thông số 2
+              tbody
+                - for(let i = 0; i < 10; i++)
+                  tr
+                    td 01
+                    td Tên thông số
+                    td Tên thông số
+                    td Tên thông số
+
+  section.section
+    .container
+      h2.section__title Sản phẩm đã xem
+      +product-slider

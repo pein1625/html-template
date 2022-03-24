@@ -1,0 +1,86 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  &__item {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #f7f8fb;
+    line-height: 1.4;
+    color: $text-light;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $white;
+      border-color: $text-color;
+      color: $text-color;
+    }
+  }
+}
+
+.relate-post {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        content: "\f101";
+        font-family: "Font Awesome 5 Pro";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    a {
+      color: $text-light;
+
+      &:hover {
+        color: $text-dark;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.form-comment {
+  border-top: 1px solid $border-color;
+  padding-top: 40px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    border: 1px solid $border-color;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+}

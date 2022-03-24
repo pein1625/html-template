@@ -1,0 +1,113 @@
+.pd-info {
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__stars {
+    margin-bottom: 10px;
+
+    small {
+      color: #aaa;
+    }
+  }
+
+  &__info {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    padding: 20px 0;
+    margin: 20px 0;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 700;
+    color: $danger;
+    margin-bottom: 20px;
+
+    label {
+      color: $text-light;
+      margin: 0 10px 0 0;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 9px 30px;
+    background-color: $text-dark;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.4s;
+    border: 1px solid $text-dark;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      background-color: $white;
+      color: $text-dark;
+    }
+
+    &--yellow {
+      background-color: $warning;
+      border-color: $warning;
+    }
+  }
+}
+
+.pd-tabs {
+  justify-content: center;
+  margin-bottom: 24px;
+
+  .nav-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  .nav-link {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $text-light;
+
+    &:hover {
+      color: $text-dark;
+    }
+
+    &.active {
+      color: $text-dark;
+      border-bottom: 2px solid $text-dark;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .nav-link {
+      font-size: 14px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .nav-item {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    .nav-link {
+      padding: 0 0 4px;
+    }
+  }
+}

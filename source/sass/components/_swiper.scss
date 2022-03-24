@@ -264,3 +264,10 @@
     }
   }
 }
+
+.product-slider {
+  position: relative;
+  z-index: 1;
+
+  @include slider-nav-2();
+}
