@@ -1,5 +1,5 @@
 mixin service(img='', title='')
-  a.service(href="#!")
+  a.service(href="./products.html")
     .service__frame
       img(src=img, alt="")
     .service__title= title
@@ -42,13 +42,13 @@ mixin faq(question='Tôi có thể đặt lịch bảo dưỡng ô tô tại Gar
 
 mixin news(img='./images/news-1.jpg')
   .news
-    .news__frame
+    a.news__frame(href="./news-detail.html")
       img(src=img, alt="")
     .news__time
       i.fal.fa-calendar-alt.me-2
       | Thứ Mon, 07/03/2022
     h3.news__title
-      a(href="#!") Garage phục hồi xe ô tô tai nạn, va chạm tốt nhất tại Hà Nội
+      a(href="./news-detail.html") Garage phục hồi xe ô tô tai nạn, va chạm tốt nhất tại Hà Nội
     .news__desc Dịch vụ phục hồi xe tai nạn là một trong những dịch vụ mà G arage ô tô Qua...
 
 mixin news-2(img='./images/news-1.jpg')
@@ -80,12 +80,12 @@ mixin news-3
 
 mixin service-2(img='./images/news-1.jpg')
   .service-2
-    .service-2__frame
+    a.service-2__frame(href="./product-detail.html")
       img(src=img, alt="")
     h3.service-2__title
-      a(href="#!") {2022} BẢNG GIÁ SƠN XE Ô TÔ TẠI GARAGE QUANG ĐỨC
+      a(href="./product-detail.html") {2022} BẢNG GIÁ SƠN XE Ô TÔ TẠI GARAGE QUANG ĐỨC
     .service-2__desc 1. Tại sao cần bảo dưỡng xe ô tô định kỳ Bảo dưỡng xe ô tô là bước rất...
-    a.service-2__link(href="#!") Xem chi tiết
+    a.service-2__link(href="./product-detail.html") Xem chi tiết
       i.fal.fa-angle-double-right.ms-2
 
 mixin procedure(img='', title='')

@@ -84,6 +84,7 @@
 .service-2 {
   &__frame {
     @include frame("rect", 66.66%);
+    @include frame("zoom");
     border-radius: 10px;
     margin-bottom: 8px;
   }
@@ -249,6 +250,7 @@
 .news {
   &__frame {
     @include frame("rect", 66.66%);
+    @include frame("zoom");
     border-radius: 10px;
   }
 
