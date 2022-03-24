@@ -61,5 +61,21 @@
 
   @media (min-width: 1200px) {
     display: none;
+    width: 300px;
+    padding: 8px;
+    @include shadow("sm");
+    border: 0;
+    position: absolute;
+    top: calc(100% + 40px);
+    right: 0;
+    z-index: 10;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    top: calc(100% + 50px);
+  }
+
+  @include media-breakpoint-down(xl) {
+    display: block !important;
   }
 }

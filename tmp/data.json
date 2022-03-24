@@ -129,22 +129,26 @@
 		},
 		{
 			"text": "Giới thiệu",
-			"url": "./about.html",
+			"url": "./about.html"
+		},
+		{
+			"text": "Dịch vụ",
+			"url": "./services.html",
 			"submenu": [
 				{
-					"text": "Dropdown",
+					"text": "Cứu hộ giao thông",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Tư vấn bảo hiểm",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Bảo trì, bảo dưỡng",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Dịch vụ gầm máy",
 					"url": "#!",
 					"submenu": [
 						{
@@ -162,18 +166,6 @@
 					]
 				}
 			]
-		},
-		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
-		},
-		{
-			"text": "Dự án",
-			"url": "./projects.html"
-		},
-		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
 		},
 		{
 			"text": "Tin tức",

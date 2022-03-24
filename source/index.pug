@@ -1,3 +1,131 @@
 extends layout/page
 
 block content
+  // banner slider
+  +banner-slider
+
+  // services category
+  section.section(style="background-color: #fffbfc;")
+    .container
+      +service-slider
+
+  // about
+  section.section.s-about
+    img.s-about__bg(src="./images/section-bg-3.png", alt="")
+    .container
+      .row.g-30.g-xl-60
+        .col-lg-6
+          h2.section__title.text-start Về Trung Tâm Ô tô Quang Đức
+          .section__desc.text-start.pt-xl-3 Garage Quang Đức với đội ngũ thợ dày dặn kinh nghiệm, được đào tạo chuyên sâu và kinh nghiệm lâu năm, trang bị máy móc và thiết bị hiện đại. Với quy trình chuyên nghiệp, các kỹ thuật viên của Garage Quang Đức sẽ xử lý mọi vấn đề về ô tô một cách nhanh chóng nhất.
+          a.button(href="#!") Xem thêm
+        .col-lg-6
+          +n-video('https://img.youtube.com/vi/CfEryEkmPEk/sddefault.jpg', 'https://www.youtube.com/watch?v=CfEryEkmPEk')
+
+  // QUY TRÌNH SỬA CHỮA TẠI GARAGE QUANG ĐỨC
+  section.s-procedure
+    .d-flex.justify-content-center
+      h2.s-procedure__title QUY TRÌNH SỬA CHỮA TẠI GARAGE QUANG ĐỨC
+    .s-procedure__wrapper
+      .container
+        +procedure-slider
+
+  // Các dịch vụ nổi bật tại Garage
+  section.section
+    .container
+      h2.section__title Các dịch vụ nổi bật tại Garage
+      .row.g-3.g-sm-20.g-xl-30
+        - for(let i = 0; i < 8; i++)
+          .col-6.col-md-4.col-lg-3
+            +service-2
+
+  // Lý do khách hàng đến với chúng tôi
+  section.section.section--bg
+    img.section__bg(src="./images/section-bg-2.jpg", alt="")
+    .container
+      .row.g-30.g-xl-60
+        .col-lg-6
+          h2.section__title.text-start Lý do khách hàng đến với chúng tôi
+          .section__desc.text-start.text-dark Việc mang tới dịch vụ hoàn hảo, môi trường thoải mái luôn là mục tiêu mà chúng tôi theo đuổi. Trong đó điều mà chúng tôi quan tâm hàng đầu chính chất lượng của từng sản phẩm
+          .row.g-3.g-sm-20.g-xl-30
+            .col-6
+              .reason
+                img.reason__icon(src="./images/reason-icon-1.png", alt="")
+                .reason__title Đội ngũ kỹ thuật viên nhiều năm kinh nghiệm
+            .col-6
+              .reason
+                img.reason__icon(src="./images/reason-icon-2.png", alt="")
+                .reason__title Năng suất làm việc hiệu quả
+            .col-6
+              .reason
+                img.reason__icon(src="./images/reason-icon-3.png", alt="")
+                .reason__title Sử dụng công nghệ kỹ thuật tiên tiến
+            .col-6
+              .reason
+                img.reason__icon(src="./images/reason-icon-4.png", alt="")
+                .reason__title Đội ngũ hỗ trợ 24/7, phục vụ tận tình nhất
+
+        .col-lg-6
+          form.form-advice(action="#!")
+            h3.form-advice__title TƯ VẤN / ĐẶT LỊCH
+            .mb-3
+              input.form-control(type="text", placeholder="Họ và tên")
+            .mb-3
+              input.form-control(type="text", placeholder="Số điện thoại")
+            .mb-3
+              input.form-control(type="text", placeholder="Email")
+            .mb-3
+              select.form-select
+                option Loại dịch vụ
+                option Cứu hộ giao thông
+                option Tư vấn bảo hiểm
+                option Bảo trì xe
+                option Bảo dưỡng xe
+            .mb-3
+              label.form-label Ngày sử dụng dịch vụ
+              .input-group
+                input.form-control.js-datepicker(type="text")
+                span.input-group-text
+                  i.fal.fa-calendar-alt
+            .mb-3
+              input.form-control(type="text", placeholder="Địa chỉ")
+            .mb-3
+              input.form-control(type="text", placeholder="Yêu cầu thêm")
+            .text-end
+              button.button.button--sm(type="submit") Gửi yêu cầu
+
+  // Tin tức mới nhất
+  section.section
+    .container
+      h2.section__title Tin tức mới nhất
+      .section__desc Cập nhật tin tức mới nhất về chương trình ưu đãi của Garage Quang Đức
+      .row.g-3.g-sm-20.g-xl-30
+        - for(let i = 0; i < 8; i++)
+          .col-6.col-md-4.col-lg-3
+            +news
+
+  // Câu hỏi thường gặp
+  section.section
+    .container
+      h2.section__title Câu hỏi thường gặp
+      .section__desc Tổng hợp những câu hỏi thường gặp nhất dành cho khách hàng
+      .row.gy-3.gx-30
+        - for(let i = 0; i < 6; i++)
+          .col-lg-6
+            +faq
+      .text-center.mt-4.mt-lg-30
+        a.button(href="#!") Xem thêm
+
+  // Đội ngũ chuyên viên dày dặn kinh nghiệm
+  section.section
+    .container
+      h2.section__title Đội ngũ chuyên viên dày dặn kinh nghiệm
+      .section__desc Xe của Quý khách sẽ được chăm sóc bởi đội ngũ lãnh đạo kinh nghiệm, nhiệt tình và kỹ thuật viên giỏi tay nghề nhất!
+      +expert-slider
+
+  // Cảm nhận của khách hàng về dịch vụ của Quang Đức
+  section.section.section--bg
+    img.section__bg(src="./images/section-bg.jpg", alt="")
+    .container
+      h2.section__title Cảm nhận của khách hàng về dịch vụ của Quang Đức
+      .section__desc Hãy xem khách hàng đã từng sử dụng dịch vụ tại Garage Quang Đức nói gì về chúng tôi
+      +feedback-slider

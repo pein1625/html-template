@@ -1,2 +1,57 @@
 mixin footer
   footer.footer
+    .container
+      .footer__grid
+        .footer__col
+          a.footer__logo(href="./index.html")
+            img(src="./images/logo-footer.png", alt="")
+          .footer__name GARAGE QUANG ĐỨC
+          ul.f-contact
+            li
+                span.f-contact__icon
+                  i.fas.fa-home
+                span #[strong Trụ sở:]  1075 Giải Phóng, Giáp Bát, Hoàng Mai, Hà Nội, Vietnam
+            li
+              span.f-contact__icon
+                i.fas.fa-phone
+              span #[strong Hotline:] #[a(href="tel:0962677726") 0962677726]
+            li
+              span.f-contact__icon
+                i.fas.fa-envelope
+              span #[strong Email:] #[a(href="mailto:Garaquangduc1075@gmail.com") Garaquangduc1075@gmail.com]
+
+        .footer__col
+          .footer__heading Thông tin công ty
+          ul.f-menu
+            each item in ["Trang chủ","Giới thiệu","Dịch vụ","Tin tức","Liên hệ"]
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading Dịch vụ
+          ul.f-menu
+            each item in ["Cứu hộ giao thông","Tư vấn bảo hiểm","Bảo trì, bảo dưỡng","Dịch vụ gầm máy","Vệ sinh xe","Dịch vụ đồng sơn","Phục hồi xe tai nạn"]
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .f-time
+            .f-time__clock
+              img(src="./images/clock.png", alt="")
+            .f-time__heading GIỜ LÀM VIỆC
+            - for(let i = 0; i < 6; i++)
+              .f-time__item
+                span Thứ #{i + 2}
+                span 8h00 - 17h00
+
+      .footer__payments
+        a(href="#!")
+          img(src="./images/icon-mastercard.png", alt="")
+        a(href="#!")
+          img(src="./images/icon-visa.png", alt="")
+        a(href="#!")
+          img(src="./images/icon-maestro.png", alt="")
+        a(href="#!")
+          img(src="./images/icon-paypal.png", alt="")
+
+      .footer__copyright @ Bản quyền thuộc về #[a(href="#!") Garage Quang Đức] | Cung cấp bởi #[a(href="#!") Sapo]

@@ -64,3 +64,86 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin banner-slider
+  .banner-slider
+    .banner-slider__prev
+      i.fal.fa-angle-left
+    .banner-slider__next
+      i.fal.fa-angle-right
+    .banner-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          .banner-slider__frame
+            img(src="./images/banner-1.png", alt="")
+        .swiper-slide
+          .banner-slider__frame
+            img(src="./images/banner-2.png", alt="")
+        .swiper-slide
+          .banner-slider__frame
+            img(src="./images/banner-3.png", alt="")
+
+mixin service-slider
+  .service-slider
+    .service-slider__prev
+      i.fal.fa-angle-left
+    .service-slider__next
+      i.fal.fa-angle-right
+    .service-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +service('./images/service-1.png', 'Dịch vụ đồng sơn')
+        .swiper-slide
+          +service('./images/service-2.png', 'Phục hồi xe tai nạn')
+        .swiper-slide
+          +service('./images/service-3.png', 'Bảo trì, bảo dưỡng xe')
+        .swiper-slide
+          +service('./images/service-4.png', 'Dịch vụ gầm máy')
+        .swiper-slide
+          +service('./images/service-5.png', 'Chăm sóc nội ngoại thất xe')
+        .swiper-slide
+          +service('./images/service-6.png', 'Tư vấn bảo hiểm')
+        .swiper-slide
+          +service('./images/service-7.png', 'Cứu hộ giao thông')
+
+mixin feedback-slider
+  .feedback-slider
+    .feedback-slider__pagination
+    .feedback-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 3; i++)
+          .swiper-slide
+            +feedback
+
+mixin expert-slider
+  .expert-slider
+    .expert-slider__prev
+      i.fal.fa-angle-left
+    .expert-slider__next
+      i.fal.fa-angle-right
+    .expert-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +expert
+
+mixin procedure-slider
+  .procedure-slider
+    .procedure-slider__prev
+      i.fal.fa-angle-left
+    .procedure-slider__next
+      i.fal.fa-angle-right
+    .procedure-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +procedure('./images/procedure-icon-1.png', '01. Lên lịch và kế hoạch bảo dưỡng')
+        .swiper-slide
+          +procedure('./images/procedure-icon-2.png', '02. Tiếp đón và báo giá khách hàng')
+        .swiper-slide
+          +procedure('./images/procedure-icon-3.png', '03. Lên kế hoạch sửa chữa và chuẩn bị phụ tùng')
+        .swiper-slide
+          +procedure('./images/procedure-icon-4.png', '04. Tiến hành sửa chữa')
+        .swiper-slide
+          +procedure('./images/procedure-icon-5.png', '05. Thông báo cho khách hàng và trả xe')
+        .swiper-slide
+          +procedure('./images/procedure-icon-6.png', '06. Chăm sóc khách hàng sau sửa chữa')

@@ -10,10 +10,10 @@
 
   &__logo {
     display: inline-flex;
-    margin: 16px 0;
+    margin: 10px 0;
 
     img {
-      height: 40px;
+      height: 60px;
     }
   }
 
@@ -21,5 +21,186 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__logo {
+      margin: 10px 0;
+
+      img {
+        height: 70px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &__logo {
+      margin: 16px 0;
+
+      img {
+        height: 80px;
+      }
+    }
+  }
+}
+
+.top-page {
+  border-bottom: 1px solid $border-color;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    color: $text-light;
+  }
+
+  &__socials {
+    display: flex;
+    margin-left: auto;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      color: $text-light;
+      padding: 5px;
+      font-size: 16px;
+      height: 40px;
+      line-height: 30px;
+
+      &:hover {
+        color: $text-dark;
+      }
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__text {
+      font-size: 12px;
+    }
+
+    &__socials {
+      a {
+        height: 30px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__text {
+      display: none;
+    }
+  }
+}
+
+.navigation {
+  border-top: 1px solid $border-color;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 40px;
+    background-color: $text-dark;
+    border-top: 0;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: 50px;
+  }
+}
+
+.search-toggle {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border: 0;
+    color: $white;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.h-info {
+  padding: 20px;
+  color: $text-light;
+
+  &__item {
+    padding-left: 56px;
+    position: relative;
+    z-index: 1;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__label {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 13px;
+
+    &--hotline {
+      font-size: 18px;
+      line-height: 1;
+
+      a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  a {
+    color: $text-dark;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    padding: 0;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+    }
   }
 }

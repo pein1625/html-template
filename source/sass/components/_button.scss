@@ -79,3 +79,33 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  background-color: $warning;
+  color: $white;
+  line-height: 20px;
+  padding: 10px 40px;
+  border-radius: 25px;
+  transition: 0.4s;
+  border: 0;
+
+  &:hover {
+    background-color: $text-dark;
+    color: $white;
+  }
+
+  &--sm {
+    padding: 8px 30px;
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
+
+    &--sm {
+      font-size: 13px;
+    }
+  }
+}

@@ -102,7 +102,11 @@
     // menu root
     &-root {
       display: flex;
+      width: 100%;
       border: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
 
     &-root &-item {
@@ -161,18 +165,38 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 40px;
       }
     }
 
     &-root > &-item > &-link {
       font-size: 14px;
-      padding: 12px 0;
+      line-height: 20px;
+      padding: 10px 24px;
       transition: 0.3s;
+      color: $white;
+      text-transform: unset;
+
+      &.active {
+        background-color: #000;
+      }
     }
 
     &-root > &-item > &-toggle {
       display: none;
+    }
+
+    &-root > &-item:hover > &-link {
+      background-color: #000;
+    }
+
+    &-root > &-item-group > &-link {
+      &::after {
+        content: "\f0d7";
+        font-family: "Font Awesome 5 Pro";
+        margin-left: 8px;
+        line-height: 1;
+      }
     }
 
     &-root > &-item-group > &-sub {
@@ -189,15 +213,9 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
     &-root > &-item > &-link {
       font-size: 16px;
-      padding: 20px 0;
+      padding: 15px 24px;
     }
   }
 }
