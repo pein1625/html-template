@@ -14,6 +14,7 @@ $phoneRingColor: #e73a35;
   bottom: 50px;
   left: 50px;
   box-shadow: 0 5px 20px rgba(#000, 0.3);
+  white-space: nowrap;
 
   &:hover {
     color: $white;
@@ -84,13 +85,17 @@ $phoneRingColor: #e73a35;
     background-color: rgba(#fff, 0.7);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     left: 15px;
     bottom: 15px;
 
     &__text {
       display: none;
     }
+  }
+
+  @media (min-width: 992px) {
+    display: none;
   }
 }
 

@@ -5,52 +5,12 @@ block content
 
   section.section
     .container
-      .row.g-30
-        .col-lg-8.col-xl-9.order-lg-1
-          h1.section__title.text-start.mb-30 Sản phẩm
-          .row.g-3.col-sm-20
-            - for(let i = 0; i < 12; i++)
-              .col-6.col-md-4.col-xl-3
-                +product
+      // h1.section__title Sản phẩm
+      // .section__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, sint eligendi itaque nobis cumque, repellat voluptates accusantium cupiditate blanditiis natus atque? Voluptatem cum quos nemo id maxime? Laboriosam, earum ab?
+      .row.g-3.col-sm-20
+        - for(let i = 0; i < 12; i++)
+          .col-6.col-md-4.col-xl-3
+            +product
 
-          nav.d-flex.justify-content-center.mt-30.mt-xl-60
-            +pagination
-
-        .col-lg-4.col-xl-3
-          section.aside
-            h2.aside__title Liên kết
-            ul.menu.menu-aside
-              li.menu-item
-                a.menu-link(href="#!") Trang chủ
-              li.menu-item
-                a.menu-link(href="#!") Giới thiệu
-              li.menu-item.menu-item-group
-                a.menu-link(href="#!") Dịch vụ
-                span.menu-toggle
-                ul.menu-sub
-                  li.menu-item
-                    a.menu-link(href="#!") Cứu hộ giao thông
-                  li.menu-item
-                    a.menu-link(href="#!") Tư vấn bảo hiểm
-                  li.menu-item
-                    a.menu-link(href="#!") Bảo trì, bảo dưỡng
-                  li.menu-item
-                    a.menu-link(href="#!") Dịch vụ gầm máy
-                  li.menu-item
-                    a.menu-link(href="#!") Vệ sinh xe
-              li.menu-item
-                a.menu-link(href="#!") Tin tức
-              li.menu-item
-                a.menu-link(href="#!") Liên hệ
-
-          section.aside
-            h2.aside__title Sản phẩm nổi bật
-            - for(let i = 0; i < 4; i++)
-              .mb-4.ml-0
-                +news-3
-
-          section.aside
-            h2.aside__title Tags
-            nav.tags
-              each item in ['ắc quy', 'ắc quy ô tô', 'bảo dưỡng', 'bảo hiểm', 'bảo hiểm bắt buộc', 'bảo hiểm bắt buộc xe ô tô phải có']
-                a.tags__item(href="#!")= item
+      nav.d-flex.justify-content-center.mt-30.mt-xl-60
+        +pagination

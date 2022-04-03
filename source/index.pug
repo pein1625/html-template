@@ -4,13 +4,18 @@ block content
   // banner slider
   +banner-slider
 
-  // services category
-  section.section(style="background-color: #fffbfc;")
+  // products
+  section.section
     .container
-      +service-slider
+      h2.section__title Sản phẩm nổi bật
+      .section__desc Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis at perferendis voluptas iste voluptatibus, quasi, enim ut quae eligendi aliquam voluptates. Vero modi tempora, sapiente eaque explicabo perspiciatis temporibus quaerat.
+      .row.g-3.col-sm-20
+        - for(let i = 0; i < 12; i++)
+          .col-6.col-md-4
+            +product
 
   // about
-  section.section.s-about
+  section.section.s-about(style="background-color: #fffbfc;")
     img.s-about__bg(src="./images/section-bg-3.png", alt="")
     .container
       .row.g-30.g-xl-60
@@ -21,22 +26,10 @@ block content
         .col-lg-6
           +n-video('https://img.youtube.com/vi/CfEryEkmPEk/sddefault.jpg', 'https://www.youtube.com/watch?v=CfEryEkmPEk')
 
-  // QUY TRÌNH SỬA CHỮA TẠI GARAGE QUANG ĐỨC
-  section.s-procedure
-    .d-flex.justify-content-center
-      h2.s-procedure__title QUY TRÌNH SỬA CHỮA TẠI GARAGE QUANG ĐỨC
-    .s-procedure__wrapper
-      .container
-        +procedure-slider
-
-  // Các dịch vụ nổi bật tại Garage
+  // services category
   section.section
     .container
-      h2.section__title Các dịch vụ nổi bật tại Garage
-      .row.g-3.g-sm-20.g-xl-30
-        - for(let i = 0; i < 8; i++)
-          .col-6.col-md-4.col-lg-3
-            +service-2
+      +service-slider
 
   // Lý do khách hàng đến với chúng tôi
   section.section.section--bg
@@ -93,6 +86,23 @@ block content
             .text-end
               button.button.button--sm(type="submit") Gửi yêu cầu
 
+  //- // QUY TRÌNH SỬA CHỮA TẠI GARAGE QUANG ĐỨC
+  //- section.s-procedure
+  //-   .d-flex.justify-content-center
+  //-     h2.s-procedure__title QUY TRÌNH SỬA CHỮA TẠI GARAGE QUANG ĐỨC
+  //-   .s-procedure__wrapper
+  //-     .container
+  //-       +procedure-slider
+
+  //- // Các dịch vụ nổi bật tại Garage
+  //- section.section
+  //-   .container
+  //-     h2.section__title Các dịch vụ nổi bật tại Garage
+  //-     .row.g-3.g-sm-20.g-xl-30
+  //-       - for(let i = 0; i < 8; i++)
+  //-         .col-6.col-md-4.col-lg-3
+  //-           +service-2
+
   // Tin tức mới nhất
   section.section
     .container
@@ -103,29 +113,29 @@ block content
           .col-6.col-md-4.col-lg-3
             +news
 
-  // Câu hỏi thường gặp
-  section.section
-    .container
-      h2.section__title Câu hỏi thường gặp
-      .section__desc Tổng hợp những câu hỏi thường gặp nhất dành cho khách hàng
-      .row.gy-3.gx-30
-        - for(let i = 0; i < 6; i++)
-          .col-lg-6
-            +faq
-      .text-center.mt-4.mt-lg-30
-        a.button(href="#!") Xem thêm
+  //- // Câu hỏi thường gặp
+  //- section.section
+  //-   .container
+  //-     h2.section__title Câu hỏi thường gặp
+  //-     .section__desc Tổng hợp những câu hỏi thường gặp nhất dành cho khách hàng
+  //-     .row.gy-3.gx-30
+  //-       - for(let i = 0; i < 6; i++)
+  //-         .col-lg-6
+  //-           +faq
+  //-     .text-center.mt-4.mt-lg-30
+  //-       a.button(href="#!") Xem thêm
 
-  // Đội ngũ chuyên viên dày dặn kinh nghiệm
-  section.section
-    .container
-      h2.section__title Đội ngũ chuyên viên dày dặn kinh nghiệm
-      .section__desc Xe của Quý khách sẽ được chăm sóc bởi đội ngũ lãnh đạo kinh nghiệm, nhiệt tình và kỹ thuật viên giỏi tay nghề nhất!
-      +expert-slider
+  //- // Đội ngũ chuyên viên dày dặn kinh nghiệm
+  //- section.section
+  //-   .container
+  //-     h2.section__title Đội ngũ chuyên viên dày dặn kinh nghiệm
+  //-     .section__desc Xe của Quý khách sẽ được chăm sóc bởi đội ngũ lãnh đạo kinh nghiệm, nhiệt tình và kỹ thuật viên giỏi tay nghề nhất!
+  //-     +expert-slider
 
-  // Cảm nhận của khách hàng về dịch vụ của Quang Đức
-  section.section.section--bg
-    img.section__bg(src="./images/section-bg.jpg", alt="")
-    .container
-      h2.section__title Cảm nhận của khách hàng về dịch vụ của Quang Đức
-      .section__desc Hãy xem khách hàng đã từng sử dụng dịch vụ tại Garage Quang Đức nói gì về chúng tôi
-      +feedback-slider
+  //- // Cảm nhận của khách hàng về dịch vụ của Quang Đức
+  //- section.section.section--bg
+  //-   img.section__bg(src="./images/section-bg.jpg", alt="")
+  //-   .container
+  //-     h2.section__title Cảm nhận của khách hàng về dịch vụ của Quang Đức
+  //-     .section__desc Hãy xem khách hàng đã từng sử dụng dịch vụ tại Garage Quang Đức nói gì về chúng tôi
+  //-     +feedback-slider

@@ -65,6 +65,11 @@
       border-color: $warning;
     }
   }
+
+  &__desc {
+    font-size: 13px;
+    color: $text-light;
+  }
 }
 
 .pd-tabs {
