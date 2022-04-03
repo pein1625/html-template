@@ -407,15 +407,11 @@
     padding-bottom: 0;
 
     &__prev {
-      top: 50%;
-      left: 12%;
-      transform: translateY(-50%);
+      left: 10%;
     }
 
     &__next {
-      top: 50%;
-      right: 12%;
-      transform: translateY(-50%);
+      right: 10%;
     }
   }
 }
