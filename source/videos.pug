@@ -1,0 +1,44 @@
+extends layout/page
+
+block content
+  .videos
+    .videos__body
+      .ratio.ratio-16x9
+        iframe.videos__frame(width='560' height='315' src='https://www.youtube.com/embed/ZUEBpjhEzfk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      .videos__list
+        .videos__item
+          .n-video.ratio.ratio-16x9(data-video-id="cjFFhgG1-RE")
+            img.n-video__img(src=`https://img.youtube.com/vi/cjFFhgG1-RE/sddefault.jpg`, alt="")
+            .n-video__overlay
+        .videos__item
+          .n-video.ratio.ratio-16x9(data-video-id="FrYFkQtw-Z4")
+            img.n-video__img(src=`https://img.youtube.com/vi/FrYFkQtw-Z4/sddefault.jpg`, alt="")
+            .n-video__overlay
+        .videos__item
+          .n-video.ratio.ratio-16x9(data-video-id="W0yZiZ37_GE")
+            img.n-video__img(src=`https://img.youtube.com/vi/W0yZiZ37_GE/sddefault.jpg`, alt="")
+            .n-video__overlay
+        .videos__item
+          .n-video.ratio.ratio-16x9(data-video-id="51cFprE-Mb0")
+            img.n-video__img(src=`https://img.youtube.com/vi/51cFprE-Mb0/sddefault.jpg`, alt="")
+            .n-video__overlay
+        .videos__item
+          .n-video.ratio.ratio-16x9(data-video-id="pt3L21X0lR4")
+            img.n-video__img(src=`https://img.youtube.com/vi/pt3L21X0lR4/sddefault.jpg`, alt="")
+            .n-video__overlay
+
+    .videos__aside
+      .videos__btns
+        - for(let i = 0; i < 2; i++)
+          a.videos__btn(href="#!", data-list="Z1_tEu5W9Fk,WMod_QVas_o,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,yRql5UCNevk") Khoa học cơ bản
+          a.videos__btn(href="#!", data-list="nrQnnbsSC5A,-H-2NrGkvHQ,ajZ_XkSk1V8,sqpYsKo-yu8,nrQnnbsSC5A,4aZZCM5u_BM") Ngoại ngữ
+          a.videos__btn(href="#!", data-list="GyvvdI_8IvA,Py-kThk1C0w,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,4jZghHLr_so") Công nghệ thông tin
+          a.videos__btn(href="#!", data-list="m4krwZ_gEXU,WMod_QVas_o,ajZ_XkSk1V8,yRql5UCNevk,h-nGiMyFai8,4aZZCM5u_BM") Điều dưỡng
+          a.videos__btn(href="#!", data-list="3JqCDUHcf-c,m4krwZ_gEXU,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,yRql5UCNevk") Điện - Điện tử
+          a.videos__btn(href="#!", data-list="_ePUJLa9CEo,WMod_QVas_o,m4krwZ_gEXU,GL0l0ksWxpM,m4krwZ_gEXU,GyvvdI_8IvA") Công nghệ sinh học, Hóa học..
+          a.videos__btn(href="#!", data-list="Py-kThk1C0w,Z1_tEu5W9Fk,ajZ_XkSk1V8,3JqCDUHcf-c,ajZ_XkSk1V8,yRql5UCNevk") Cơ khí - Cơ điện tử
+          a.videos__btn(href="#!", data-list="-H-2NrGkvHQ,WMod_QVas_o,-H-2NrGkvHQ,sqpYsKo-yu8,GL0l0ksWxpM,nrQnnbsSC5A") Khoa học và kỹ thuật vật liệu
+          a.videos__btn(href="#!", data-list="sqpYsKo-yu8,7Ez2_bxvExk,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,yRql5UCNevk") Kỹ thuật ô tô và năng lượng
+          a.videos__btn(href="#!", data-list="7Ez2_bxvExk,4aZZCM5u_BM,-H-2NrGkvHQ,m4krwZ_gEXU,4aZZCM5u_BM,ajZ_XkSk1V8") Dược
+          a.videos__btn(href="#!", data-list="4jZghHLr_so,WMod_QVas_o,GL0l0ksWxpM,3JqCDUHcf-c,ajZ_XkSk1V8,Z1_tEu5W9Fk") Du lịch
+          a.videos__btn(href="#!", data-list="4aZZCM5u_BM,4jZghHLr_so,GL0l0ksWxpM,h-nGiMyFai8,m4krwZ_gEXU,yRql5UCNevk") Kỹ thuật Y học

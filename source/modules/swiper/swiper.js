@@ -23,3 +23,10 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.video-slider', {
+    slidesPerView: 4,
+    spaceBetween: 8,
+  });
+});

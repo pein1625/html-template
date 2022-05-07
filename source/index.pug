@@ -1,3 +1,32 @@
 extends layout/page
 
+mixin popup
+  #popup-post.popup.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h4.modal-title Khoa du lịch
+          button.close(type="button", data-bs-dismiss="modal")
+            i.fal.fa-times
+        .modal-body
+          .popup__frame.ratio.ratio-16x9
+            iframe(src="./post.html", frameborder="0")
+
+mixin popup-video
+  #popup-video.popup.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h4.modal-title Khoa du lịch
+          button.close(type="button", data-bs-dismiss="modal")
+            i.fal.fa-times
+        .modal-body
+          .popup__frame.ratio.ratio-16x9
+            iframe(src="./videos.html", frameborder="0")
+
 block content
+  .container.py-5
+    button.btn.btn-primary.me-4(type="button", data-bs-toggle="modal", data-bs-target="#popup-post") Open Post
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-video") Open Videos
+    +popup
+    +popup-video
