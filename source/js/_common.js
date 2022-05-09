@@ -2,6 +2,7 @@ $(function() {
   const $videoBody = $('.videos__body');
   const $frame = $('.videos__frame');
   const $videoList = $('.videos__list');
+  const $videoTitle = $('.js-video-title');
 
   $videoBody.on('click', '.n-video', function() {
     const $video = $(this);
@@ -12,7 +13,9 @@ $(function() {
     $video.addClass('active');
 
     const videoId = $video.data('video-id');
+    const videoTitle = $video.attr('title');
 
+    $videoTitle.html(videoTitle);
     $frame.attr('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
   });
 
@@ -26,20 +29,22 @@ $(function() {
     $('.videos__btn.active').removeClass('active');
     $(this).addClass('active');
 
-    let idList = $(this).data('list') || '';
+    let videoList = $(this).data('list') || '';
 
-    idList = idList.split(',');
+    videoList = typeof videoList === 'string' ? JSON.parse(videoList) : videoList;
 
-    if (idList.length < 1) return false;
+    if (!Array.isArray(videoList) || videoList.length < 1) return false;
 
-    $frame.attr('src', `https://www.youtube.com/embed/${idList[0]}`);
-    console.log(idList);
+    $frame.attr('src', `https://www.youtube.com/embed/${videoList[0].id}`);
+
+    $videoTitle.html(videoList[0].title);
+
     $videoList.empty();
 
-    idList.slice(1).forEach(videoId => {
+    videoList.slice(1).forEach(item => {
       $videoList.append(`
 <div class="videos__item">
-  <div class="n-video ratio ratio-16x9" data-video-id="${videoId}"><img class="n-video__img" src="https://img.youtube.com/vi/${videoId}/sddefault.jpg" alt="">
+  <div class="n-video ratio ratio-16x9" data-video-id="${item.id}" title="${item.title}"><img class="n-video__img" src="https://img.youtube.com/vi/${item.id}/sddefault.jpg" alt="">
       <div class="n-video__overlay"></div>
     </div>
 </div>`);

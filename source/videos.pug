@@ -1,44 +1,47 @@
 extends layout/page
 
 block content
-  .videos
-    .videos__body
-      .ratio.ratio-16x9
-        iframe.videos__frame(width='560' height='315' src='https://www.youtube.com/embed/ZUEBpjhEzfk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-      .videos__list
-        .videos__item
-          .n-video.ratio.ratio-16x9(data-video-id="cjFFhgG1-RE")
-            img.n-video__img(src=`https://img.youtube.com/vi/cjFFhgG1-RE/sddefault.jpg`, alt="")
-            .n-video__overlay
-        .videos__item
-          .n-video.ratio.ratio-16x9(data-video-id="FrYFkQtw-Z4")
-            img.n-video__img(src=`https://img.youtube.com/vi/FrYFkQtw-Z4/sddefault.jpg`, alt="")
-            .n-video__overlay
-        .videos__item
-          .n-video.ratio.ratio-16x9(data-video-id="W0yZiZ37_GE")
-            img.n-video__img(src=`https://img.youtube.com/vi/W0yZiZ37_GE/sddefault.jpg`, alt="")
-            .n-video__overlay
-        .videos__item
-          .n-video.ratio.ratio-16x9(data-video-id="51cFprE-Mb0")
-            img.n-video__img(src=`https://img.youtube.com/vi/51cFprE-Mb0/sddefault.jpg`, alt="")
-            .n-video__overlay
-        .videos__item
-          .n-video.ratio.ratio-16x9(data-video-id="pt3L21X0lR4")
-            img.n-video__img(src=`https://img.youtube.com/vi/pt3L21X0lR4/sddefault.jpg`, alt="")
-            .n-video__overlay
+  .layout
+    .layout__title.js-video-title KHOA DU LỊCH
+    .layout__body
+      .videos
+        .videos__body
+          .ratio.ratio-16x9
+            iframe.videos__frame(width='560' height='315' src='https://www.youtube.com/embed/ZUEBpjhEzfk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+          .videos__list
+            .videos__item
+              .n-video.ratio.ratio-16x9(data-video-id="cjFFhgG1-RE", title="Khoa học cơ bản")
+                img.n-video__img(src=`https://img.youtube.com/vi/cjFFhgG1-RE/sddefault.jpg`, alt="")
+                .n-video__overlay
+            .videos__item
+              .n-video.ratio.ratio-16x9(data-video-id="FrYFkQtw-Z4", title="Ngoại ngữ")
+                img.n-video__img(src=`https://img.youtube.com/vi/FrYFkQtw-Z4/sddefault.jpg`, alt="")
+                .n-video__overlay
+            .videos__item
+              .n-video.ratio.ratio-16x9(data-video-id="W0yZiZ37_GE", title="Công nghệ thông tin")
+                img.n-video__img(src=`https://img.youtube.com/vi/W0yZiZ37_GE/sddefault.jpg`, alt="")
+                .n-video__overlay
+            .videos__item
+              .n-video.ratio.ratio-16x9(data-video-id="51cFprE-Mb0", title="Điều dưỡng")
+                img.n-video__img(src=`https://img.youtube.com/vi/51cFprE-Mb0/sddefault.jpg`, alt="")
+                .n-video__overlay
+            .videos__item
+              .n-video.ratio.ratio-16x9(data-video-id="pt3L21X0lR4", title="Điện - Điện tử")
+                img.n-video__img(src=`https://img.youtube.com/vi/pt3L21X0lR4/sddefault.jpg`, alt="")
+                .n-video__overlay
 
-    .videos__aside
-      .videos__btns
-        - for(let i = 0; i < 2; i++)
-          a.videos__btn(href="#!", data-list="Z1_tEu5W9Fk,WMod_QVas_o,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,yRql5UCNevk") Khoa học cơ bản
-          a.videos__btn(href="#!", data-list="nrQnnbsSC5A,-H-2NrGkvHQ,ajZ_XkSk1V8,sqpYsKo-yu8,nrQnnbsSC5A,4aZZCM5u_BM") Ngoại ngữ
-          a.videos__btn(href="#!", data-list="GyvvdI_8IvA,Py-kThk1C0w,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,4jZghHLr_so") Công nghệ thông tin
-          a.videos__btn(href="#!", data-list="m4krwZ_gEXU,WMod_QVas_o,ajZ_XkSk1V8,yRql5UCNevk,h-nGiMyFai8,4aZZCM5u_BM") Điều dưỡng
-          a.videos__btn(href="#!", data-list="3JqCDUHcf-c,m4krwZ_gEXU,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,yRql5UCNevk") Điện - Điện tử
-          a.videos__btn(href="#!", data-list="_ePUJLa9CEo,WMod_QVas_o,m4krwZ_gEXU,GL0l0ksWxpM,m4krwZ_gEXU,GyvvdI_8IvA") Công nghệ sinh học, Hóa học..
-          a.videos__btn(href="#!", data-list="Py-kThk1C0w,Z1_tEu5W9Fk,ajZ_XkSk1V8,3JqCDUHcf-c,ajZ_XkSk1V8,yRql5UCNevk") Cơ khí - Cơ điện tử
-          a.videos__btn(href="#!", data-list="-H-2NrGkvHQ,WMod_QVas_o,-H-2NrGkvHQ,sqpYsKo-yu8,GL0l0ksWxpM,nrQnnbsSC5A") Khoa học và kỹ thuật vật liệu
-          a.videos__btn(href="#!", data-list="sqpYsKo-yu8,7Ez2_bxvExk,GL0l0ksWxpM,h-nGiMyFai8,ajZ_XkSk1V8,yRql5UCNevk") Kỹ thuật ô tô và năng lượng
-          a.videos__btn(href="#!", data-list="7Ez2_bxvExk,4aZZCM5u_BM,-H-2NrGkvHQ,m4krwZ_gEXU,4aZZCM5u_BM,ajZ_XkSk1V8") Dược
-          a.videos__btn(href="#!", data-list="4jZghHLr_so,WMod_QVas_o,GL0l0ksWxpM,3JqCDUHcf-c,ajZ_XkSk1V8,Z1_tEu5W9Fk") Du lịch
-          a.videos__btn(href="#!", data-list="4aZZCM5u_BM,4jZghHLr_so,GL0l0ksWxpM,h-nGiMyFai8,m4krwZ_gEXU,yRql5UCNevk") Kỹ thuật Y học
+        .videos__aside
+          .videos__btns
+            - for(let i = 0; i < 2; i++)
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Khoa học cơ bản
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Ngoại ngữ
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Công nghệ thông tin
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Điều dưỡng
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Điện - Điện tử
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Công nghệ sinh học, Hóa học..
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Cơ khí - Cơ điện tử
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Khoa học và kỹ thuật vật liệu
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Kỹ thuật ô tô và năng lượng
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Dược
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Du lịch
+              a.videos__btn(href="#!", data-list='[{"title":"Khoa học cơ bản","id":"Z1_tEu5W9Fk"},{"title":"Ngoại ngữ","id":"WMod_QVas_o"},{"title":"Công nghệ thông tin","id":"GL0l0ksWxpM"},{"title":"Điều dưỡng","id":"h-nGiMyFai8"},{"title":"Điện - Điện tử","id":"ajZ_XkSk1V8"},{"title":"Công nghệ sinh học, Hóa học..","id":"yRql5UCNevk"},{"title":"Cơ khí - Cơ điện tử","id":"4aZZCM5u_BM"},{"title":"Khoa học và kỹ thuật vật liệu","id":"4jZghHLr_so"},{"title":"Dược","id":"GL0l0ksWxpM"},{"title":"Du lịch","id":"h-nGiMyFai8"},{"title":"Kỹ thuật Y học","id":"m4krwZ_gEXU"}]') Kỹ thuật Y học
