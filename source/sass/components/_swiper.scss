@@ -366,6 +366,14 @@
     box-shadow: 0 2px 10px rgba($purple, 0.5);
   }
 
+  .swiper-slide-active .project {
+    transition: 0.4s;
+  }
+
+  .swiper-slide-active:hover .project {
+    transform: scale(1.05);
+  }
+
   &__prev,
   &__next {
     display: flex;
