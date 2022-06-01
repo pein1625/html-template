@@ -161,3 +161,17 @@
     }
   }
 }
+
+.banner-label-slider {
+  background-color: $white;
+  padding: 10px 16px;
+
+  .swiper-slide {
+    cursor: pointer;
+    color: $black;
+
+    &-thumb-active {
+      font-weight: 700;
+    }
+  }
+}

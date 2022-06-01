@@ -1,3 +1,35 @@
 extends layout/page
 
 block content
+  .container
+    .row.g-2.mt-2
+      .col-lg-8
+        +banner-slider
+        +banner-label-slider
+      .col-lg-4.d-flex.flex-column
+        section.s-share
+          h3.s-share__title Chia sẻ hôm nay
+          .s-share__body
+            - for(let i = 0; i < 2; i++)
+              .c-post
+                .row.gx-2.gy-0
+                  .col-auto
+                    .c-post__frame
+                      img(src="./images/post.jpg", alt="")
+                  .col
+                    h4.c-post__title
+                      a(href="#!") Bàn Làm Việc Văn Phòng
+                    .c-post__info
+                      i.fal.fa-calendar-alt.me-2
+                      | 25 Tháng Năm, 2022
+          a.s-share__more(href="#!") Xem thêm
+
+        a.news-btn.mt-2(href="#!")
+          .row.gx-2.gy-0.h-100
+            .col-7
+              .news-btn__text Tin tức
+                br
+                | Thị trường
+            .col-5
+              .news-btn__icon
+                i.fas.fa-play

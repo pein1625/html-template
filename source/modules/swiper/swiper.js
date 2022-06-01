@@ -23,3 +23,24 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  const labelSlider = addSwiper('.banner-label-slider', {
+    slidesPerView: 4,
+    freeMode: true,
+    spaceBetween: 10,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+  })[0];
+
+  addSwiper('.banner-slider', {
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+      disableInteraction: false,
+    },
+    thumbs: {
+      swiper: labelSlider,
+    },
+  })
+});

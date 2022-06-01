@@ -11,13 +11,16 @@
 //   xxl: 1400px
 // );
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1320px
-// );
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  // xxl: 1320px
+);
+
+$primary: #C4A070;
+$secondary: #252839;
 
 $spacer: 1rem;
 $spacers: (
@@ -99,7 +102,7 @@ $gradient: linear-gradient(
   #ff0000
 );
 
-// $font-size-base: 0.875rem;
+$font-size-base: 0.875rem;
 $font-family-sans-serif: Arial, system-ui, -apple-system, "Segoe UI", Roboto,
   "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

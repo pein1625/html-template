@@ -5,10 +5,61 @@ mixin header
   header.header
     .header__wrapper
       .container
+        .top-page
+          .top-page__info.me-auto
+            i.fas.fa-users.me-2.text-primary
+            | Săn voucher 80 TRIỆU sắm nội thất cùng ZITO
+
+          ul.top-nav.nav
+            li.nav-item.dropdown
+              //- button.dropdown-toggle(type="button", data-bs-toggle="dropdown")
+              a.nav-link.dropdown-toggle(href="javascript:void(0);", data-bs-toggle="dropdown")
+                i.fas.fa-info-circle.me-2
+                | Về chúng tôi
+              ul.dropdown-menu
+                li
+                  a.dropdown-item(href="#!") ZITO Long Biên
+                li
+                  a.dropdown-item(href="#!") ZITO Quảng Ninh
+                li
+                  a.dropdown-item(href="#!") ZITO Hải Phòng
+                li
+                  a.dropdown-item(href="#!") ZITO Nghệ An
+            li.nav-item
+              a.nav-link(href="#!") Liên hệ
+            li.nav-item
+              a.nav-link(href="#!")
+                i.fal.fa-megaphone.me-2
+                | Tin tức
+            li.nav-item
+              a.nav-link(href="#!") Tuyển dụng
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="javascript:void(0);", data-bs-toggle="dropdown") Dự án tiêu biểu
+              ul.dropdown-menu
+                li
+                  a.dropdown-item(href="#!") Thiết kế
+                li
+                  a.dropdown-item(href="#!") Thi công
+
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
           .header__elements
             +navbar
+              +search
               +menu(menu)
+              nav.h-btns
+                a.h-btns__btn.bg-danger(href="#!") Dự án tiêu biểu
+                a.h-btns__btn(href="#!") Khuyến mại
+              .h-support
+                div Hỗ trợ khách hàng
+                a(href="tel:0943.32.4111")
+                  span 0943.32.4111
+
+            nav.mb-nav.d-xl-none
+              a(href="#!") Ưu đãi
+              a(href="#!") Địa chỉ
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+  nav.navigation
+    .container

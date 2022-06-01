@@ -46,10 +46,17 @@ mixin banner-slider
   .banner-slider
     .banner-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 3; i++)
+        - for(let i = 0; i < 6; i++)
           .swiper-slide
             a.banner-slider__frame(href="#!")
               img(src="./images/banner-slide.jpg", alt="")
+
+mixin banner-label-slider
+  .banner-label-slider
+    .banner-label-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide Bàn ăn bạch mã
 
 mixin partner-slider
   .partner-slider

@@ -48,6 +48,7 @@
   background-color: $light;
 
   .form-control {
+    font-size: 12px;
     border-right: 0;
 
     &:focus {
@@ -55,11 +56,25 @@
     }
   }
 
+  .input-group-text {
+    background-color: $secondary;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-color: $secondary;
+  }
+
   .form-control:focus ~ .input-group-text {
-    border-color: $input-focus-border-color;
+    border-color: $secondary;
   }
 
   @media (min-width: 1200px) {
-    display: none;
+    width: 700px;
+    padding: 0;
+    border: 0;
+    background: 0;
+    margin: 0 auto;
   }
 }

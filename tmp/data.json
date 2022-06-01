@@ -128,60 +128,74 @@
 			"hasIcon": false
 		},
 		{
-			"text": "Giới thiệu",
+			"text": "Nội thất phòng khách",
 			"url": "./about.html",
 			"submenu": [
 				{
-					"text": "Dropdown",
+					"text": "Sofa gỗ",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Sofa Giường Gỗ",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Sofa Gỗ Chữ L",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
+					"text": "Sofa gỗ hương",
+					"url": "#!"
+				},
+				{
+					"text": "Sofa gỗ mun",
+					"url": "#!"
+				},
+				{
+					"text": "Sofa gỗ óc chó",
+					"url": "#!"
+				},
+				{
+					"text": "Sofa gỗ sồi",
+					"url": "#!"
+				},
+				{
+					"text": "Sofa Văng Gỗ",
+					"url": "#!"
+				},
+				{
+					"text": "Tủ Giày Gỗ",
+					"url": "#!"
+				},
+				{
+					"text": "Tủ Rượu Gỗ",
+					"url": "#!"
+				},
+				{
+					"text": "Kệ tivi gỗ",
+					"url": "#!"
+				},
+				{
+					"text": "Bàn Trà Gỗ",
+					"url": "#!"
+				},
+				{
+					"text": "Kệ gỗ trang trí",
+					"url": "#!"
 				}
 			]
 		},
 		{
-			"text": "Sản phẩm",
+			"text": "Nội thất phòng ngủ",
 			"url": "./products.html"
 		},
 		{
-			"text": "Dự án",
+			"text": "Nội thất phòng bếp",
 			"url": "./projects.html"
 		},
 		{
-			"text": "Hệ thống phân phối",
+			"text": "Video",
 			"url": "./distribution.html"
-		},
-		{
-			"text": "Tin tức",
-			"url": "./news.html"
-		},
-		{
-			"text": "Liên hệ",
-			"url": "./contact.html"
 		}
 	],
 	"pageList": {

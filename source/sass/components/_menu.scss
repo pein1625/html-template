@@ -103,6 +103,9 @@
     &-root {
       display: flex;
       border: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
 
     &-root &-item {
@@ -161,18 +164,33 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 16px;
       }
     }
 
     &-root > &-item > &-link {
-      font-size: 14px;
-      padding: 12px 0;
+      font-size: 13px;
+      padding: 15px;
       transition: 0.3s;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    &-root > &-item:hover > &-link {
+      color: $primary;
     }
 
     &-root > &-item > &-toggle {
       display: none;
+    }
+
+    &-root > &-item-group > &-link {
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;
+        margin-left: 8px;
+      }
     }
 
     &-root > &-item-group > &-sub {
@@ -185,19 +203,6 @@
     &-root > &-item-group &-item-group:hover > &-sub {
       display: block;
       animation: menu-float-show 0.2s ease-out;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
     }
   }
 }
