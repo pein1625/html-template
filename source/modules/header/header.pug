@@ -43,10 +43,10 @@ mixin header
 
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.png", alt="")
-          .header__elements
+            img.d-none.d-md-block(src="./images/logo.png", alt="")
+            img.d-md-none(src="./images/logo-mobile.png", alt="")
+          .header__elements.ms-3
             +navbar
-              +search
               +menu(menu)
               nav.h-btns
                 a.h-btns__btn.bg-danger(href="#!") Dự án tiêu biểu
@@ -56,9 +56,11 @@ mixin header
                 a(href="tel:0943.32.4111")
                   span 0943.32.4111
 
-            nav.mb-nav.d-xl-none
-              a(href="#!") Ưu đãi
-              a(href="#!") Địa chỉ
+            +search
+
+            //- nav.mb-nav.d-xl-none
+            //-   a(href="#!") Ưu đãi
+            //-   a(href="#!") Địa chỉ
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
 
   nav.navigation

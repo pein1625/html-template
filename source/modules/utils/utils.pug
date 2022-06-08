@@ -35,4 +35,7 @@ mixin pagination
 mixin search
   form.search.input-group
     input.form-control(type='text', placeholder='Từ khoá tìm kiếm')
-    button.input-group-text Tìm kiếm
+    button.input-group-text
+      span.d-xl-none
+        i.fal.fa-search
+      span.d-none.d-xl-inline Tìm kiếm
