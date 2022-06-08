@@ -19,6 +19,9 @@
 //   xxl: 1320px
 // );
 
+$primary: #0D4C79;
+$secondary: #C92049;
+
 $spacer: 1rem;
 $spacers: (
   0: 0,
@@ -100,6 +103,6 @@ $gradient: linear-gradient(
 );
 
 // $font-size-base: 0.875rem;
-$font-family-sans-serif: Arial, system-ui, -apple-system, "Segoe UI", Roboto,
+$font-family-sans-serif: 'Montserrat', Arial, system-ui, -apple-system, "Segoe UI", Roboto,
   "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

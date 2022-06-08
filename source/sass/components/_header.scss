@@ -1,6 +1,15 @@
 .header {
   position: relative;
   z-index: $zindex-fixed;
+  height: 60px;
+
+  &__wrapper {
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 
   &__inner {
     display: flex;
@@ -10,10 +19,10 @@
 
   &__logo {
     display: inline-flex;
-    margin: 16px 0;
+    margin: 18px 0 12px;
 
     img {
-      height: 40px;
+      height: 30px;
     }
   }
 
@@ -21,5 +30,151 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 90px;
+
+    .container {
+      max-width: 100%;
+      padding: 0 30px;
+    }
+
+    &__wrapper {
+      padding-left: 90px;
+    }
+
+    &__logo {
+      margin: 30px 0 20px;
+
+      img {
+        height: 40px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    height: 120px;
+
+    .container {
+      padding: 0 50px;
+    }
+
+    &__wrapper {
+      padding-left: 120px;
+    }
+
+    &__logo {
+      margin: 40px 0 20px;
+
+      img {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: 0;
+  border: 0;
+  font-size: 20px;
+
+  @include media-breakpoint-up(xl) {
+    width: 90px;
+    height: 90px;
+    font-size: 24px;
+    color: $white;
+    background-color: $primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.h-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  list-style: none;
+  margin: 0;
+  border-bottom: 1px solid $border-color;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    color: #B3B3B3;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 90px;
+    flex-direction: column;
+    padding: 0 0 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 120px;
+    padding: 0 0 50px;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.lang {
+  display: flex;
+
+  a {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  img {
+    height: 20px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    img {
+      height: 30
+    }
   }
 }

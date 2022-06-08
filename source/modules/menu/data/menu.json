@@ -43,20 +43,16 @@
       ]
     },
     {
-      "text": "Sản phẩm",
+      "text": "Lĩnh vực hoạt động",
       "url": "./products.html"
-    },
-    {
-      "text": "Dự án",
-      "url": "./projects.html"
-    },
-    {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
     },
     {
       "text": "Tin tức",
       "url": "./news.html"
+    },
+    {
+      "text": "Tuyển dụng",
+      "url": "./recruit.html"
     },
     {
       "text": "Liên hệ",

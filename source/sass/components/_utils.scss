@@ -43,12 +43,23 @@
 }
 
 .search {
-  padding: 16px 20px;
-  border-top: 1px solid #aaa;
-  background-color: $light;
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 16px 0;
+  background-color: $white;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.show {
+    display: block;
+  }
 
   .form-control {
     border-right: 0;
+    padding-left: 16px;
 
     &:focus {
       box-shadow: unset;
@@ -57,6 +68,14 @@
 
   .form-control:focus ~ .input-group-text {
     border-color: $input-focus-border-color;
+  }
+
+  .input-group-text {
+    border-left: 0;
+
+    &:not(:last-child) {
+      border-right: 0!important;
+    }
   }
 
   @media (min-width: 1200px) {

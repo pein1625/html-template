@@ -164,20 +164,16 @@
 			]
 		},
 		{
-			"text": "Sản phẩm",
+			"text": "Lĩnh vực hoạt động",
 			"url": "./products.html"
-		},
-		{
-			"text": "Dự án",
-			"url": "./projects.html"
-		},
-		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
 		},
 		{
 			"text": "Tin tức",
 			"url": "./news.html"
+		},
+		{
+			"text": "Tuyển dụng",
+			"url": "./recruit.html"
 		},
 		{
 			"text": "Liên hệ",
@@ -195,24 +191,24 @@
 				"url": "about"
 			},
 			{
-				"title": "Sản phẩm",
-				"url": "products"
-			},
-			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
+				"title": "Dự án",
+				"url": "projects"
 			},
 			{
 				"title": "Tin tức",
 				"url": "news"
 			},
 			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
+				"title": "Tuyển dụng",
+				"url": "recruit"
 			},
 			{
 				"title": "Liên hệ",
 				"url": "contact"
+			},
+			{
+				"title": "Chi tiết bài viết",
+				"url": "detail"
 			}
 		]
 	}

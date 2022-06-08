@@ -7,8 +7,34 @@ mixin header
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
           .header__elements
             +navbar
               +menu(menu)
-            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+              ul.h-social
+                li
+                  a(href="#!")
+                    i.fab.fa-fw.fa-facebook-f
+                li
+                  a(href="#!")
+                    i.fab.fa-fw.fa-instagram
+                li
+                  a(href="#!")
+                    i.fab.fa-fw.fa-youtube
+                li
+                  a(href="#!")
+                    i.fab.fa-fw.fa-twitter
+
+            +search
+
+            nav.lang.ms-xl-30
+              a(href="#!")
+                img(src="./images/vn.svg", alt="")
+              a(href="#!")
+                img(src="./images/gb.svg", alt="")
+
+            button.search-btn.ms-2.ms-xl-0(type="button")
+              i.fal.fa-search
+
+            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-2

@@ -10,24 +10,24 @@
         "url": "about"
       },
       {
-        "title": "Sản phẩm",
-        "url": "products"
-      },
-      {
-        "title": "Chi tiết sản phẩm",
-        "url": "product-detail"
+        "title": "Dự án",
+        "url": "projects"
       },
       {
         "title": "Tin tức",
         "url": "news"
       },
       {
-        "title": "Chi tiết tin tức",
-        "url": "news-detail"
+        "title": "Tuyển dụng",
+        "url": "recruit"
       },
       {
         "title": "Liên hệ",
         "url": "contact"
+      },
+      {
+        "title": "Chi tiết bài viết",
+        "url": "detail"
       }
     ]
   }
