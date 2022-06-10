@@ -1,0 +1,72 @@
+.post {
+  font-size: 14px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $primary;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    color: $primary;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  &__sapo {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  &__sharing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid $border-color;
+    padding-top: 24px;
+    margin-top: 30px;
+
+    a {
+      display: inline-flex;
+      margin-left: 20px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        object-position: 50% 50%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+
+    &__title {
+      font-size: 30px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &__title {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    &__info {
+      margin-bottom: 30px;
+    }
+  }
+}
