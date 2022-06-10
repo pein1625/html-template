@@ -1,4 +1,6 @@
 .section {
+  font-size: 14px;
+
   &__title {
     font-size: 24px;
     line-height: 1.2;
@@ -8,15 +10,54 @@
     margin-bottom: 1em;
   }
 
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8em;
+    text-transform: uppercase;
+    color: $primary;
+
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+
+  &__info {
+    table {
+      td {
+        border: 0;
+        padding: 4px 0;
+        vertical-align: baseline;
+
+        &:first-child {
+          min-width: 130px;
+          font-weight: 700;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
   @include media-breakpoint-up(xl) {
+    font-size: 16px;
+
     &__title {
       font-size: 30px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
     }
   }
 
   @include media-breakpoint-up(xxl) {
     &__title {
       font-size: 35px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
     }
   }
 }

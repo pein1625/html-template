@@ -79,3 +79,26 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.button {
+  display: inline-block;
+  background: $primary;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 0;
+  transition: 0.4s;
+
+  &:hover {
+    color: $white;
+    background-color: darken($primary, 5%);
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
+    padding: 16px 30px;
+  }
+}
