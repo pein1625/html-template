@@ -7,17 +7,19 @@ mixin img(type = 'any', w = 600, h = 400, addClass='')
 
 mixin breadcrumb(...list)
   - var lastItem = list.pop()
-  ol.breadcrumb
+  ol.breadcrumb.breadcrumb--white.mb-0
     each item in list
       li.breadcrumb-item
         a.link-unstyled(href="#!")= item
-    li.breadcrumb-item.active= lastItem
+    li.breadcrumb-item.active
+      span= lastItem
 
 mixin pagination
   ul.pagination
-    li.page-item.disabled
-      a.page-link(href="#!")
-        i.fal.fa-angle-left
+    li.page-item.disabled.me-auto
+      a.page-link.text-primary.font-size-base(href="#!")
+        i.fas.fa-arrow-left
+        span.d-none.d-md-inline.ms-2 Trang trước
     li.page-item.active
       a.page-link(href="#!") 1
     li.page-item
@@ -28,9 +30,10 @@ mixin pagination
       a.page-link(href="#!") 4
     li.page-item
       a.page-link(href="#!") 5
-    li.page-item
-      a.page-link(href="#!")
-        i.fal.fa-angle-right
+    li.page-item.ms-auto
+      a.page-link.text-primary.font-size-base(href="#!")
+        span.d-none.d-md-inline.me-2 Trang sau
+        i.fas.fa-arrow-right
 
 mixin search
   form.search

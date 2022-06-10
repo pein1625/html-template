@@ -1,0 +1,6 @@
+mixin banner(title, bg, ...breadcrumb)
+  article.banner
+    img.banner__bg(src=bg, alt="")
+    .banner__title= title
+    .banner__breadcrumb
+      +breadcrumb(...breadcrumb)

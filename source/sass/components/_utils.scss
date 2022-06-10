@@ -1,4 +1,7 @@
 .breadcrumb {
+  font-size: 14px;
+  text-transform: uppercase;
+
   &-item {
     &,
     & + &::before,
@@ -7,6 +10,15 @@
     a,
     a:hover {
       color: $gray-800;
+    }
+
+    a {
+      line-height: 1.2;
+      display: inline-block;
+
+      &:hover {
+        border-bottom: 1px solid currentColor;
+      }
     }
   }
 
@@ -17,6 +29,10 @@
   &--white .breadcrumb-item a,
   &--white .breadcrumb-item a:hover {
     color: $white;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
   }
 }
 
@@ -31,13 +47,32 @@
 
   .page-link {
     color: $gray-800;
-    padding: 8px 16px;
-    border-radius: 4px;
+    background: 0;
+    padding: 0 8px;
+    border: 0 !important;
+    border-radius: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #828282;
   }
 
-  @media (max-width: 767px) {
+
+
+  .page-item.active,
+  .page-item:hover {
     .page-link {
-      padding: 4px 10px;
+      color: $primary;
+      background: 0;
+    }
+  }
+
+  .page-item.disabled .page-link {
+    color: #828282 !important;
+  }
+
+  @include media-breakpoint-up(xl) {
+    .page-link {
+      font-size: 18px;
     }
   }
 }

@@ -1,0 +1,25 @@
+mixin news(img="./images/news-1.jpg")
+  .news
+    a.news__frame(href="./detail.html")
+      img(src=img, alt="")
+    .news__body
+      h3.news__title
+        a(href="#!") Chưa thông qua cấp phép vắc xin Nanocovax do thiếu dữ liệu
+      .news__info
+        span.me-3 Tin tức
+        span August 29, 2021
+      .news__desc Sáng nay, 29/8, Bộ Y tế họp xem xét cấp phép khẩn cấp vắc xin Nanocovax. Theo thông tin ban đầu, nhóm nghiên cứu được yêu cầu bổ sung...
+      a.news__link(href="./detail.html") Đọc thêm
+
+mixin news-2
+  .news-2
+    .news-2__frame
+      img(src="./images/news-1.jpg", alt="")
+    .news-2__content
+      .row.g-3.align-items-end
+        .col
+          h3.news-2__title CHƯA THÔNG QUA CẤP PHÉP VẮC XIN NANOCOVAX DO THIẾU DỮ LIỆU
+          .news-2__desc Sáng nay. 29/8, Bộ Y tế họp xem xét cấp phép khẩn cấp vắc xin Nanocovax. Theo thông tin ban đầu, nhóm nghiên cứu được yêu cầu bổ sung...
+        .col-auto.d-none.d-md-block
+          span.news-2__btn Đọc thêm
+    a.news-2__link(href="./detail.html")

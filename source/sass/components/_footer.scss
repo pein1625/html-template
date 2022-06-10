@@ -1,0 +1,134 @@
+.footer {
+  font-size: 14px;
+  padding: 40px 0;
+  background-color: #E6E6E6;
+
+  &__logo {
+    display: inline-flex;
+
+    img {
+      height: 40px;
+    }
+  }
+
+  &__copyright {
+    color: #B3B3B3;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+    padding: 90px 0;
+
+    &__logo {
+      img {
+        height: 50px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 120px 0;
+
+    &__logo {
+      img {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.f-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #4D4D4D;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.f-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #4D4D4D;
+  font-weight: 600;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.subscribe {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 8px;
+  }
+
+  .form-control {
+    border-radius: 0;
+    padding-left: 20px;
+    border: 0;
+    height: 40px;
+    font-size: inherit;
+  }
+
+  .input-group-text {
+    background-color: $primary;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-size: inherit;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    align-items: center;
+
+    &__title {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    &__group {
+      flex: 1;
+      max-width: 320px;
+    }
+
+    .input-group-text {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
