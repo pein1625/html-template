@@ -1,0 +1,97 @@
+extends layout/page
+
+block content
+  .container.py-60.py-xl-80
+    +breadcrumb-2('Trang chủ', 'TUYỂN DỤNG', 'NHÂN VIÊN CHĂM SÓC KHÁCH HÀNG')
+
+    article.section.mt-4.mt-xl-30.border-bottom.pb-50.mb-50
+      h2.section__title nhân viên chăm sóc khách hàng
+
+      .row.g-30
+        .col-lg-8
+          h3.section__subtitle MÔ TẢ CÔNG VIỆC
+          p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+            br
+            | - Lorem ipsum dolor sit amet.
+          h3.section__subtitle Yêu cầu công việc
+          p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+            br
+            | - Lorem ipsum dolor sit amet.
+          h3.section__subtitle QUYỀN LỢI
+          p - Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.
+            br
+            | - Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+            br
+            | - Lorem ipsum dolor sit amet.
+        .col-lg-4
+          h3.section__subtitle TỔNG QUAN VỀ CÔNG VIỆC
+          .section__info
+            table.table
+              tbody
+                tr
+                  td(width="1%") Loại hình:
+                  td Toàn thời gian
+                tr
+                  td(width="1%") Cấp bậc:
+                  td Nhân viên chính thức
+                tr
+                  td(width="1%") Số lượng:
+                  td 02
+                tr
+                  td(width="1%") Thu nhập:
+                  td Nguyễn Trãi, Thượng Đình, Thanh Xuân, Hà Nội
+                tr
+                  td(width="1%") Hạn nộp:
+                  td 10.000.000 VND
+
+          h3.section__subtitle Thông tin liên hệ
+          .section__info
+            table.table
+              tbody
+                tr
+                  td(width="1%") Người liên hệ:
+                  td Toàn thời gian
+                tr
+                  td(width="1%") Số điện thoại:
+                  td Nhân viên chính thức
+                tr
+                  td(width="1%") Email:
+                  td 02
+
+    form.recruit-form.form
+      h2.recruit-form__title NỘP ĐƠN ỨNG TUYỂN CÔNG VIỆC NÀY
+      .row.gx-30.gy-3
+        .col-md-6
+          input.form-control(type="text", placeholder="Họ và tên*", required)
+        .col-md-6
+          input.form-control(type="text", placeholder="Họ và tên*", required)
+        .col-md-6
+          input.form-control(type="email", placeholder="Địa chỉ email*", required)
+        .col-md-6
+          select.form-select
+            option Nhân viên Chăm sóc khách hàng
+            option Nhân viên Chăm sóc khách hàng
+            option Nhân viên Chăm sóc khách hàng
+            option Nhân viên Chăm sóc khách hàng
+        .col-12
+          textarea.form-control(rows="6", placeholder="Thư ứng tuyển")
+        .col-12
+          +file-input
+        .col-12.text-end
+          button.button(type="submit") Ứng tuyển

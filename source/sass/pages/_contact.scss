@@ -1,0 +1,9 @@
+.contact-info {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary;
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,46 @@
+extends layout/page
+
+block content
+  +banner('Liên hệ', './images/banner-contact.jpg', 'Trang chủ', 'Liên hệ')
+
+  .container.py-60.py-xl-80
+    article.section
+      h2.section__title LIÊN HỆ VỚI CHÚNG TÔI
+
+      .row.g-30.gx-xl-60.gx-xl-80
+        .col-lg-6
+          form.form
+            .row.gy-3.gx-30
+              .col-12
+                input.form-control(type="text", placeholder="Họ và tên*", required)
+              .col-md-7
+                input.form-control(type="email", placeholder="Địa chỉ email*", required)
+              .col-md-5
+                input.form-control(type="text", placeholder="Số điện thoại*", required)
+              .col-12
+                textarea.form-control(rows="5", placeholder="Ghi chú*", required)
+
+        .col-lg-6
+          section.contact-info
+            h2.contact-info__title CÔNG TY TNHH THƯƠNG MẠI VÀ ĐẦU TƯ BIG HOLDING
+
+            ul.f-contact.mt-3.mt-xl-4
+              li.f-contact__item
+                .row.g-3
+                  .col-auto
+                    i.fas.fa-lg.fa-fw.fa-phone-square.text-primary
+                  .col
+                    a(href="tel:+84981045948") + 84 981 045 948
+
+              li.f-contact__item
+                .row.g-3
+                  .col-auto
+                    i.fas.fa-lg.fa-fw.fa-envelope.text-primary
+                  .col
+                    a(href="mailto:info@bigholding.vn") info@bigholding.vn
+
+              li.f-contact__item
+                .row.g-3
+                  .col-auto
+                    i.fas.fa-lg.fa-fw.fa-home.text-primary
+                  .col Lô số 22, tầng 1 tòa R4 Royal City, số 72 Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam.

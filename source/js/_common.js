@@ -9,3 +9,9 @@ $(function() {
     $search.removeClass('show');
   });
 });
+
+$(function() {
+  $('.filter__btn').on('click', function() {
+    $('.filter__box').slideToggle('fast');
+  })
+});

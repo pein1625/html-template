@@ -69,6 +69,7 @@
 
   .page-item.disabled .page-link {
     color: #828282 !important;
+    background: 0;
   }
 
   @include media-breakpoint-up(xl) {

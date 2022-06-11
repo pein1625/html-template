@@ -18,16 +18,20 @@
         "url": "news"
       },
       {
+        "title": "Chi tiết bài viết",
+        "url": "detail"
+      },
+      {
         "title": "Tuyển dụng",
         "url": "recruit"
       },
       {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Chi tiết tuyển dụng",
+        "url": "recruit-detail"
       },
       {
-        "title": "Chi tiết bài viết",
-        "url": "detail"
+        "title": "Liên hệ",
+        "url": "contact"
       }
     ]
   }
