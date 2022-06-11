@@ -64,10 +64,8 @@ mixin project
         .col-auto
           img.project__brand(src=`./images/brand-${pjCount % 3 + 1}.png`, alt="")
         .col-auto
-          a.project__link(href="#!") Xem tiếp
+          a.project__link(href="./detail.html") Xem tiếp
             i.fas.fa-angle-right.ms-2
-
-  - pjCount++
 
 mixin project-2
   .project-2
@@ -75,7 +73,7 @@ mixin project-2
       img(src="./images/project-4.jpg", alt="")
     .project-2__content
       h3.project-2__title
-        a.text-white(href="./detail.html")  CÔNG NGHỆ
+        a.text-white(href="./detail.html") CÔNG NGHỆ
           br
           | & CÔNG NGHIỆP
       .project-2__desc Big Holding là doanh nghiệp tư vấn và thực hiện đầu tư vào các lĩnh vực có tầm quan trọng và ảnh hưởng thiết thực đến đời sống xã hội với mục tiêu đem lại sự phát triển phồn vinh cho đất nước, cũng như sự tin tưởng cho các cổ đông, nhà đầu tư.

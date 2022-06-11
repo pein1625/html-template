@@ -40,8 +40,6 @@
   }
 
   @include media-breakpoint-up(xl) {
-    font-size: 16px;
-
     &__title {
       font-size: 30px;
     }
@@ -52,11 +50,73 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    font-size: 16px;
+
     &__title {
       font-size: 35px;
     }
 
     &__subtitle {
+      font-size: 24px;
+    }
+  }
+}
+
+.section-2 {
+  padding: 80px 0;
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    margin-bottom: 1.5em;
+  }
+
+  & + & {
+    padding-top: 0;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__header {
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__title {
       font-size: 24px;
     }
   }

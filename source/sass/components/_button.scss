@@ -93,12 +93,12 @@
 
   &:hover {
     color: $white;
-    background-color: darken($primary, 5%);
+    background-color: $secondary;
     text-transform: uppercase;
   }
 
   @include media-breakpoint-up(xxl) {
     font-size: 16px;
-    padding: 16px 30px;
+    padding: 14px 30px;
   }
 }

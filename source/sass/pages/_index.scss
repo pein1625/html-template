@@ -1,0 +1,57 @@
+.h-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+
+  &__icon {
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+    object-position: 50% 50%;
+  }
+
+  &__title {
+    font-size: 1.25em;
+    font-weight: 700;
+    margin: 1em 0;
+  }
+
+  &__desc {
+    margin-bottom: 1em;
+  }
+
+  &__link {
+    color: $primary;
+    font-weight: 700;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__icon {
+      width: 90px;
+      height: 70px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+
+    &__icon {
+      width: 80px;
+      height: 60px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+}

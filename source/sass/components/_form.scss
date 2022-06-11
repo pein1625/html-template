@@ -535,6 +535,13 @@
     .form-select {
       padding-top: 12px;
       padding-bottom: 12px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+
+    .form-control,
+    .form-select {
       font-size: 16px;
     }
   }

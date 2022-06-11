@@ -1,4 +1,6 @@
 .filter {
+  font-size: 14px;
+
   &__box {
     display: none;
     background-color: $white;
@@ -27,6 +29,10 @@
     &__box {
       padding: 30px;
     }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
   }
 }
 
@@ -94,8 +100,6 @@
   }
 
   @include media-breakpoint-up(xl) {
-    font-size: 16px;
-
     &__title {
       font-size: 24px;
       margin-bottom: 20px;

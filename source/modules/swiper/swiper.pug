@@ -42,15 +42,6 @@ mixin swiper(el, number, hasNav, hasPaging)
           .swiper-slide
             block
 
-mixin banner-slider
-  .banner-slider
-    .banner-slider__container.swiper-container
-      .swiper-wrapper
-        - for(let i = 0; i < 3; i++)
-          .swiper-slide
-            a.banner-slider__frame(href="#!")
-              img(src="./images/banner-slide.jpg", alt="")
-
 mixin partner-slider
   .partner-slider
     .partner-slider__prev
@@ -64,3 +55,82 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin img-slider
+  .img-slider
+    .img-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            if (block)
+              block
+            else
+              .ratio.ratio-10x6
+                img(src="./images/img-slide-1.jpg", alt="")
+
+mixin info-slider
+  .info-slider
+    .info-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            .info-slider__title Nhà máy Thực phẩm Quốc tế Thăng Long
+            .info-slider__desc Dược phẩm Quốc tế Thăng Long với gần 10 năm kinh nghiệm hoạt động trong lĩnh vực sản xuất phân phối mỹ phẩm được bào chế từ thảo mộc thiên nhiên và thiết bị y tế. Qua nhiều năm kinh nghiệm trong lĩnh vực kinh doanh đa dạng các loại sản phẩm được phát triển rộng khắp trên cả nước.
+            a.info-slider__link(href="./detail.html") Xem chi tiết dự án
+
+    .info-slider__nav
+      .info-slider__pagination.me-auto
+      .info-slider__prev
+        img(src="./images/icon-long-arrow-left.png", alt="")
+      .info-slider__next
+        img(src="./images/icon-long-arrow-right.png", alt="")
+
+
+mixin intro-slider
+  .intro-slider
+    .intro-slider__frame.wow.fadeInRight(data-wow-delay="0.2s")
+      img(src="./images/intro-slide-1.jpg", alt="")
+    .intro-slider__content.wow.fadeInLeft(data-wow-delay="0.2s")
+      .intro-slider__container.swiper-container
+        .swiper-wrapper
+          - for(let i = 0; i < 4; i++)
+            .swiper-slide
+              .intro-slider__subtitle Giới thiệu tập đoàn
+              .intro-slider__title BIG HOLDING
+              .intro-slider__desc
+                p Big Holding là doanh nghiệp tư vấn và thực hiện đầu tư vào các lĩnh vực có tầm quan trọng và ảnh hưởng thiết thực đến đời sống xã hội với mục tiêu đem lại sự phát triển phồn vinh cho đất nước, cũng như sự tin tưởng cho các cổ đông, nhà đầu tư.
+                p Với uy tín nhiều năm trên thị trường, Big Holding được các khách hàng, đối tác nhớ đến là một doanh nghiệp trách nhiệm và đặt chữ tín lên hàng đầu, luôn đảm bảo quyền lợi cao nhất của mỗi cá nhân, tổ chức khi hợp tác và sử dụng dịch vụ của tập đoàn.
+      .intro-slider__nav
+        .intro-slider__pagination.me-auto
+        .intro-slider__prev
+          img(src="./images/icon-long-arrow-left.png", alt="")
+        .intro-slider__next
+          img(src="./images/icon-long-arrow-right.png", alt="")
+
+mixin banner-slider
+  .banner-slider
+    .banner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 2; i++)
+          .swiper-slide
+            .banner-slider__frame
+              img(src="./images/banner-slide-1.jpg", alt="")
+            .banner-slider__content
+              .banner-slider__title GÓP PHẦN ĐƯA VIỆT NAM
+                br
+                | TRỞ NÊN VĨ ĐẠI
+              a.button(href="#!") Liên hệ
+          .swiper-slide
+            .banner-slider__frame
+              img(src="./images/banner-slide-2.jpg", alt="")
+            .banner-slider__content
+              .banner-slider__title GÓP PHẦN ĐƯA VIỆT NAM
+                br
+                | TRỞ NÊN VĨ ĐẠI
+              a.button(href="./contact.html") Liên hệ
+      .banner-slider__nav
+        .banner-slider__prev
+          img(src="./images/icon-long-arrow-left.png", alt="")
+        .banner-slider__next
+          img(src="./images/icon-long-arrow-right.png", alt="")
+        .banner-slider__pagination.ms-auto

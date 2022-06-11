@@ -15,3 +15,7 @@ $(function() {
     $('.filter__box').slideToggle('fast');
   })
 });
+
+$(function() {
+  new WOW().init();
+});

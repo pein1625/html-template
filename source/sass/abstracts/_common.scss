@@ -11,9 +11,25 @@
 
   @include media-breakpoint-up(xl) {
     padding-left: 90px;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 120vh;
+      width: 90px;
+      background-color: $white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 0 1px 6px rgba(#000, 0.06);
+    }
   }
 
   @include media-breakpoint-up(xxl) {
-    padding-left: 120px;
+    padding-left: 100px;
+
+    &::before {
+      width: 100px;
+    }
   }
 }

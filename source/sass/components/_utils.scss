@@ -109,13 +109,43 @@
 
   .input-group-text {
     border-left: 0;
+    border-radius: 0 !important;
 
     &:not(:last-child) {
       border-right: 0!important;
     }
   }
 
-  @media (min-width: 1200px) {
-    display: none;
+  @include media-breakpoint-up(xl) {
+    .form-control {
+      height: 60px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding: 20px 0;
+  }
+}
+
+.n-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary;
+  text-transform: uppercase;
+
+  i {
+    transition: 0.4s;
+  }
+
+  &:hover {
+    color: $secondary;
+
+    i {
+      transform: translateX(5px);
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
   }
 }

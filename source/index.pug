@@ -1,6 +1,124 @@
 extends layout/page
 
 block content
-  img.d-block.w-100(src="./images/banner-slide-1.jpg", alt="")
+  +banner-slider
 
-  .container
+  section.section-2
+    .container
+      .section-2__header
+        .row.align-items-end
+          .col-sm
+            h2.section-2__title.mb-0 TIN TỨC - SỰ KIỆN
+          .col-sm-auto
+            +n-link('./news.html')
+
+      .row.g-30.gx-xl-50
+        .col-lg-4.wow.fadeInRight(data-wow-delay="0.1s")
+          +news
+        .col-lg-4.wow.fadeInRight(data-wow-delay="0.2s")
+          +news
+        .col-lg-4.wow.fadeInRight(data-wow-delay="0.3s")
+          +news
+
+  section.section-2
+    .container
+      +intro-slider
+
+  section.section-2
+    .container
+      .row.gx-3.gy-4.g-xl-30
+        .col-lg-3.col-6
+          .h-info
+            img.h-info__icon(src="./images/icon-user-check.png", alt="")
+            .h-info__title Năng Lực Nhân Sự
+            .h-info__desc Tập thể lao động chất lượng cao, kỷ luật đoàn kết, được đào tạo chính quy, bồi dưỡng thường xuyên.
+            .mt-auto
+              a.h-info__link(href="#!") Xem Thêm...
+        .col-lg-3.col-6
+          .h-info
+            img.h-info__icon(src="./images/icon-eye.png", alt="")
+            .h-info__title Tầm Nhìn
+            .h-info__desc Trở thành doanh nghiệp tiên phong trong lĩnh vực Đầu tư tại Việt Nam.
+            .mt-auto
+              a.h-info__link(href="#!") Xem Thêm...
+        .col-lg-3.col-6
+          .h-info
+            img.h-info__icon(src="./images/icon-diamond.png", alt="")
+            .h-info__title Giá Trị Cốt Lõi
+            .h-info__desc Luôn hướng đến giải quyết công việc một cách chất lượng, thể hiển được năng lực và tạo sự đột phá, ghi dấu trong ngành.
+            .mt-auto
+              a.h-info__link(href="#!") Xem Thêm...
+        .col-lg-3.col-6
+          .h-info
+            img.h-info__icon(src="./images/icon-flag.png", alt="")
+            .h-info__title Sứ Mệnh
+            .h-info__desc Đưa đất nước Việt Nam trở nên vĩ đại. Thấu hiểu được những trăn trở của khách hàng khi nghiên cứu đầu tư vào một dự án có giá trị lớn.
+            .mt-auto
+              a.h-info__link(href="#!") Xem Thêm...
+
+  section.section-2
+    .container
+      .section-2__header
+        .row.g-3
+          .col-sm
+            h2.section-2__title.mb-20 LĨNH VỰC HOẠT ĐỘNG
+            .section-2__desc.mb-0(style="max-width:900px") Với tầm nhìn trở thành doanh nghiệp tiên phong trong lĩnh vực đầu tư tại Việt Nam, Big Holding không ngừng đổi mới, sáng tạo để kiến tạo hệ sinh thái các sản phẩm dịch vụ đẳng cấp, góp phần nâng cao chất lượng cuộc sống của người Việt và nâng tầm vị thế của thương hiệu Việt trên trường quốc tế.
+          .col-sm-auto.align-self-end
+            +n-link('./projects.html')
+      .row.g-3.g-xl-30.g-xxl-50
+        .col-lg-3.col-6
+          .card-3
+            a.card-3__frame(href="./detail.html")
+              img(src="./images/card-3-1.jpg", alt="")
+            .card-3__body
+              .card-3__title CÔNG NGHỆ - CÔNG NGHIỆP
+            a.card-3__overlay(href="./detail.html")
+              img.card-3__icon(src="./images/icon-tech.png", alt="")
+              .card-3__title-2 CÔNG NGHỆ
+                br
+                | CÔNG NGHIỆP
+        .col-lg-3.col-6
+          .card-3
+            a.card-3__frame(href="./detail.html")
+              img(src="./images/card-3-2.jpg", alt="")
+            .card-3__body
+              .card-3__title THƯƠNG MẠI - DỊCH VỤ
+            a.card-3__overlay(href="./detail.html")
+              img.card-3__icon(src="./images/icon-tech.png", alt="")
+              .card-3__title-2 CÔNG NGHỆ
+                br
+                | CÔNG NGHIỆP
+        .col-lg-3.col-6
+          .card-3
+            a.card-3__frame(href="./detail.html")
+              img(src="./images/card-3-3.jpg", alt="")
+            .card-3__body
+              .card-3__title TƯ VẤN ĐẦU TƯ
+            a.card-3__overlay(href="./detail.html")
+              img.card-3__icon(src="./images/icon-tech.png", alt="")
+              .card-3__title-2 CÔNG NGHỆ
+                br
+                | CÔNG NGHIỆP
+        .col-lg-3.col-6
+          .card-3
+            a.card-3__frame(href="./detail.html")
+              img(src="./images/card-3-4.jpg", alt="")
+            .card-3__body
+              .card-3__title THIỆN NGUYỆN XÃ HỘI
+            a.card-3__overlay(href="./detail.html")
+              img.card-3__icon(src="./images/icon-tech.png", alt="")
+              .card-3__title-2 CÔNG NGHỆ
+                br
+                | CÔNG NGHIỆP
+
+  section.section-2
+    .container
+      .section-2__header
+        .section-2__subtitle Chất lượng trong mọi công việc
+        h2.section-2__title DỰ ÁN TIÊU BIỂU
+
+      .row.g-30.g-xxl-50.align-items-center
+        .col-lg-6
+          +img-slider
+        .col-lg-6.pl-xxl-40
+          +info-slider
