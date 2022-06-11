@@ -1,0 +1,45 @@
+.project-nav {
+  display: block;
+  white-space: nowrap;
+  overflow: auto;
+  background-color: $white;
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
+
+    &.active {
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+
+    a {
+      display: block;
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    a {
+      font-size: 16px;
+      padding: 24px;
+    }
+  }
+}

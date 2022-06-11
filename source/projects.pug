@@ -1,0 +1,22 @@
+extends layout/page
+
+block content
+  +banner('Lĩnh vực hoạt động', './images/banner-news.jpg', 'Trang chủ', 'Tin tức')
+
+  nav.project-nav
+    a.active(href="#!") CÔNG NGHỆ & CÔNG NGHIỆP
+    a(href="#!") THƯƠNG MẠI & DỊCH VỤ
+    a(href="#!") TƯ VẤN ĐẦU TƯ
+    a(href="#!") THIỆN NGUYỆN XÃ HỘI
+
+  .container.py-60.py-xl-80
+    .mb-60.mb-xl-80
+      +project-2
+
+    .row.g-30.gy-xl-60
+      - for(let i = 0; i < 6; i++)
+        .col-lg-4
+          +project
+
+    nav.mt-40.mt-xl-50
+      +pagination

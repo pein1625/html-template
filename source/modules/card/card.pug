@@ -50,3 +50,32 @@ mixin recruit
             .col Hạn nộp hồ sơ: 05/06/2022
       .col-md-auto
         a.button(href="./recruit-detail.html") XEM CHI TIẾT
+
+- pjCount = 0
+mixin project
+  .project
+    a.project__frame(href="./detail.html")
+      img(src=`./images/project-${pjCount % 3 + 1}.jpg`, alt="")
+    .project__body
+      h3.project__title
+        a(href="./detail.html") CÔNG TY CỔ PHẨN DƯỢC PHẨM QUỐC TẾ THĂNG LONG
+      .project__desc Nỗ lực kiến tạo nên tiêu chuẩn sống mới cho người Việt bằng những khu đô thị xanh – tiện ích – chất lượng và cam kết thủ tục pháp lý...
+      .row.mt-auto.justify-content-between.align-items-center
+        .col-auto
+          img.project__brand(src=`./images/brand-${pjCount % 3 + 1}.png`, alt="")
+        .col-auto
+          a.project__link(href="#!") Xem tiếp
+            i.fas.fa-angle-right.ms-2
+
+  - pjCount++
+
+mixin project-2
+  .project-2
+    a.project-2__frame(href="./detail.html")
+      img(src="./images/project-4.jpg", alt="")
+    .project-2__content
+      h3.project-2__title
+        a.text-white(href="./detail.html")  CÔNG NGHỆ
+          br
+          | & CÔNG NGHIỆP
+      .project-2__desc Big Holding là doanh nghiệp tư vấn và thực hiện đầu tư vào các lĩnh vực có tầm quan trọng và ảnh hưởng thiết thực đến đời sống xã hội với mục tiêu đem lại sự phát triển phồn vinh cho đất nước, cũng như sự tin tưởng cho các cổ đông, nhà đầu tư.
