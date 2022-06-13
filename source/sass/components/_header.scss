@@ -34,7 +34,7 @@
   }
 
   @include media-breakpoint-up(xl) {
-    height: 90px;
+    height: 80px;
 
     .container {
       max-width: 100%;
@@ -42,14 +42,14 @@
     }
 
     &__wrapper {
-      padding-left: 90px;
+      padding-left: 80px;
     }
 
     &__logo {
       margin: 25px 0 15px;
 
       img {
-        height: 50px;
+        height: 40px;
       }
     }
   }
@@ -86,8 +86,8 @@
   font-size: 20px;
 
   @include media-breakpoint-up(xl) {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     font-size: 24px;
     color: $white;
     background-color: $primary;

@@ -65,7 +65,7 @@ mixin img-slider
             if (block)
               block
             else
-              .ratio.ratio-10x6
+              a.ratio.ratio-10x6.hover-zoom(href="./detail.html")
                 img(src="./images/img-slide-1.jpg", alt="")
 
 mixin info-slider
@@ -74,7 +74,7 @@ mixin info-slider
       .swiper-wrapper
         - for(let i = 0; i < 4; i++)
           .swiper-slide
-            .info-slider__title Nhà máy Thực phẩm Quốc tế Thăng Long
+            a.info-slider__title(href="./detail.html") Nhà máy Thực phẩm Quốc tế Thăng Long
             .info-slider__desc Dược phẩm Quốc tế Thăng Long với gần 10 năm kinh nghiệm hoạt động trong lĩnh vực sản xuất phân phối mỹ phẩm được bào chế từ thảo mộc thiên nhiên và thiết bị y tế. Qua nhiều năm kinh nghiệm trong lĩnh vực kinh doanh đa dạng các loại sản phẩm được phát triển rộng khắp trên cả nước.
             a.info-slider__link(href="./detail.html") Xem chi tiết dự án
 
@@ -88,9 +88,9 @@ mixin info-slider
 
 mixin intro-slider
   .intro-slider
-    .intro-slider__frame.wow.fadeInRight(data-wow-delay="0.2s")
+    .intro-slider__frame
       img(src="./images/intro-slide-1.jpg", alt="")
-    .intro-slider__content.wow.fadeInLeft(data-wow-delay="0.2s")
+    .intro-slider__content
       .intro-slider__container.swiper-container
         .swiper-wrapper
           - for(let i = 0; i < 4; i++)

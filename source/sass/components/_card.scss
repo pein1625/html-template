@@ -60,6 +60,15 @@
     }
   }
 
+  &:hover &__frame img {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title,
+  &:hover &__link {
+    color: $secondary;
+  }
+
   @include media-breakpoint-up(xxl) {
     font-size: 16px;
   }
@@ -162,6 +171,7 @@
 
   &__frame {
     @include frame('rect', 75%);
+    @include frame('zoom');
   }
 
   &__title {
@@ -174,6 +184,18 @@
 
   .button {
     padding: 10px 20px;
+  }
+
+  &:hover &__title {
+    color: $secondary;
+  }
+
+  &:hover .button {
+    background-color: $secondary;
+  }
+
+  &:hover &__frame img {
+    transform: scale(1.1);
   }
 
   @include media-breakpoint-up(md) {
@@ -242,6 +264,15 @@
 
   &__brand {
     height: 50px;
+  }
+
+  &:hover &__frame img {
+    transform: scale(1.1);
+  }
+
+  &:hover &__title,
+  &:hover &__link {
+    color: $secondary
   }
 
   @include media-breakpoint-up(xxl) {

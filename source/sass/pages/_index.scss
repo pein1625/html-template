@@ -55,3 +55,14 @@
     }
   }
 }
+
+.project-sync.active {
+  .info-slider__title,
+  .info-slider__link {
+    color: $secondary
+  }
+
+  .img-slider .swiper-slide img {
+    transform: scale(1.1);
+  }
+}

@@ -163,7 +163,7 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 50px;
+        margin-right: 35px;
       }
     }
 
@@ -171,6 +171,10 @@
       font-size: 16px;
       padding: 12px 0;
       transition: 0.3s;
+
+      &.active {
+        color: $secondary;
+      }
     }
 
     &-root > &-item:hover > &-link {

@@ -167,6 +167,10 @@
     font-size: 1.5em;
     font-weight: 700;
     color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
   }
 
   &__desc {
@@ -549,7 +553,7 @@
 
   @include media-breakpoint-down(xxl) {
     &__frame {
-      height: calc(100vh - 90px);
+      height: calc(100vh - 80px);
     }
 
     &__content {

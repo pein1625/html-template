@@ -117,13 +117,19 @@
   }
 
   @include media-breakpoint-up(xl) {
+    padding: 18px 0;
+
     .form-control {
-      height: 60px;
+      height: 45px;
     }
   }
 
   @include media-breakpoint-up(xxl) {
     padding: 20px 0;
+
+    .form-control {
+      height: 60px;
+    }
   }
 }
 
