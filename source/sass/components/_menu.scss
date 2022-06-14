@@ -201,6 +201,18 @@
   @include media-breakpoint-up(xxl) {
     &-root > &-item {
       &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &-root > &-item > &-link {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &-root > &-item {
+      &:not(:last-child) {
         margin-right: 60px;
       }
     }

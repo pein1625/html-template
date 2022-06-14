@@ -66,6 +66,16 @@
     }
 
     &__logo {
+      margin: 30px 0 20px;
+
+      img {
+        height: 50px;
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &__logo {
       margin: 25px 0 15px;
 
       img {

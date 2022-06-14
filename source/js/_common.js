@@ -37,12 +37,12 @@ $(function() {
   const $content = $('.intro-slider__content');
   const $frame = $('.intro-slider__frame');
 
-  if (!$frame.length || $window.width() < 1200) return;
+  if (!$frame.length || $window.width() < 992) return;
 
   $window.on('scroll', calcPos);
 
   function calcPos() {
-    const windowHeight = $window.width();
+    const windowHeight = $window.height();
     const scrollTop = $window.scrollTop();
     const framePos = $frame.offset().top - windowHeight * 2 / 3 - scrollTop + $frame.outerHeight() / 2;
     const contentPos = $content.offset().top - windowHeight * 2 / 3 - scrollTop + $content.outerHeight() / 2;
