@@ -51,3 +51,20 @@ $(function() {
     $frame.css('transform', `translateX(${framePos > 0 ? Math.floor(framePos / 2) : 0}px)`)
   }
 });
+
+$(function() {
+  const $window = $(window);
+  const $content = $('.parallax-1');
+
+  if (!$content.length || $window.width() < 992) return;
+
+  $window.on('scroll', calcPos);
+
+  function calcPos() {
+    const windowHeight = $window.height();
+    const scrollTop = $window.scrollTop();
+    const contentPos = $content.offset().top - windowHeight * 2 / 3 - scrollTop + $content.outerHeight() / 3;
+
+    $content.css('transform', `translateY(${contentPos > 0 ? Math.floor(contentPos / 5) : 0}px)`)
+  }
+});
