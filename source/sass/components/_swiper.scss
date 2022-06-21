@@ -163,6 +163,8 @@
 }
 
 .info-slider {
+  font-size: 15px;
+
   &__title {
     font-size: 1.5em;
     font-weight: 700;
@@ -287,6 +289,7 @@
     color: $white;
     padding: 60px 50px 80px;
     box-shadow: 0 1px 10px rgba(#000, 0.1);
+    font-size: 15px;
 
     a,
     a:hover {
@@ -456,7 +459,7 @@
   }
 
   &__frame {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     max-height: 57vw;
 
     img {
@@ -551,9 +554,15 @@
     margin-right: 16px;
   }
 
+  @media (max-width: 1599px) {
+    &__nav {
+      padding-bottom: 60px;
+    }
+  }
+
   @include media-breakpoint-down(xxl) {
     &__frame {
-      height: calc(100vh - 80px);
+      height: calc(100vh - 64px);
     }
 
     &__content {
@@ -565,7 +574,7 @@
     }
 
     &__nav {
-      padding: 0 60px 60px;
+      padding: 0 60px 40px;
     }
   }
 

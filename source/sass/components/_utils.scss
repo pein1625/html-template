@@ -117,24 +117,24 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding: 18px 0;
+    padding: 12px 0;
 
     .form-control {
-      height: 45px;
+      height: 40px;
     }
   }
 
   @include media-breakpoint-up(xxl) {
-    padding: 20px 0;
+    padding: 15px 0;
 
     .form-control {
-      height: 60px;
+      height: 50px;
     }
   }
 }
 
 .n-link {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: $primary;
   text-transform: uppercase;

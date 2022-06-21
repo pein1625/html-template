@@ -10,13 +10,13 @@
   }
 
   @include media-breakpoint-up(xl) {
-    padding-left: 80px;
+    padding-left: 64px;
 
     &::before {
       content: '';
       display: block;
       height: 120vh;
-      width: 80px;
+      width: 64px;
       background-color: $white;
       position: fixed;
       z-index: 100;
@@ -27,10 +27,10 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    padding-left: 100px;
+    padding-left: 80px;
 
     &::before {
-      width: 100px;
+      width: 80px;
     }
   }
 }

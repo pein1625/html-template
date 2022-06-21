@@ -70,7 +70,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -159,7 +159,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -206,7 +206,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 16px;
+    font-size: 15px;
     padding: 30px;
 
     &__title {
@@ -276,7 +276,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 16px;
+    font-size: 15px;
 
     &__body {
       padding: 35px;
@@ -300,6 +300,7 @@
 .project-2 {
   position: relative;
   z-index: 1;
+  font-size: 15px;
 
   &__frame {
     @include frame('rect', 60%);
@@ -377,6 +378,7 @@
   box-shadow: 0 1px 10px rgba(#000, 0.16);
   transition: 0.4s;
   height: 100%;
+  font-size: 15px;
 
   &__title {
     font-size: 28px;
@@ -451,6 +453,8 @@
 }
 
 .card-2 {
+  font-size: 15px;
+
   &__logo {
     height: 100px;
     object-fit: contain;
@@ -517,7 +521,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 3em;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
