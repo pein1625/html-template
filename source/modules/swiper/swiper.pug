@@ -64,3 +64,63 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin product-slider
+  .product-slider
+    .product-slider__prev
+      i.fal.fa-angle-left
+    .product-slider__next
+      i.fal.fa-angle-right
+    .product-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 10; i++)
+          .swiper-slide
+            +product(`./images/product-${i % 5 + 1}.png`)
+
+mixin intro-slider
+  .intro-slider
+    .intro-slider__frame
+      img(src="./images/about.jpg", alt="")
+    .intro-slider__content
+      .intro-slider__container.swiper-container
+        .swiper-wrapper
+          - for(let i = 0; i < 4; i++)
+            .swiper-slide
+              .intro-slider__title Giới thiệu doanh nghiệp
+              .intro-slider__desc
+                p Tiền thân của Công ty Minh Nam là Trung tâm phân phối Thiết bị văn phòng PLUS, hoạt động từ năm 1998, chuyên phân phối các sản phẩm Văn phòng phẩm và Thiết bị văn phòng PLUS
+                p Ngày 12 tháng 07 năm 2005 Công ty TNHH Thiết bị văn phòng Minh Nam được thành lập và  phân phối chính thức các sản phẩm văn phòng phẩm PLUS  - Nhật Bản. Mục tiêu của chúng tôi là cung cấp tới Quý khách hàng các sản phẩm văn phòng phẩm “CHẤT LƯỢNG TỐT NHẤT VÀ GIÁ CẢ HỢP LÝ NHẤT”
+      .intro-slider__prev
+        i.fal.fa-angle-left
+      .intro-slider__next
+        i.fal.fa-angle-right
+
+mixin banner-slider
+  .banner-slider
+    .banner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 2; i++)
+          .swiper-slide
+            .banner-slider__frame
+              img(src="./images/banner-slide.jpg", alt="")
+            .banner-slider__content
+              .banner-slider__title THIẾT BỊ
+                br
+                | VĂN PHÒNG PHẨM
+                br
+                | MINH NAM
+              .banner-slider__desc PLUS Việt Nam có năng lực làm ra các sản phẩm chất lượng cao thỏa mãn yêu cầu của thị trường Nhật Bản và thế giới.
+          .swiper-slide
+            .banner-slider__frame
+              img(src="./images/banner-slide.jpg", alt="")
+            .banner-slider__content
+              .banner-slider__title THIẾT BỊ
+                br
+                | VĂN PHÒNG PHẨM
+                br
+                | MINH NAM
+              .banner-slider__desc PLUS Việt Nam có năng lực làm ra các sản phẩm chất lượng cao thỏa mãn yêu cầu của thị trường Nhật Bản và thế giới.
+      .banner-slider__prev
+        i.fal.fa-angle-left
+      .banner-slider__next
+        i.fal.fa-angle-right

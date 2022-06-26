@@ -1,0 +1,6 @@
+@include font-face('UTMAvo', 'UTMAvo');
+@include font-face('UTMAvo', 'UTMAvo-Italic', 400, italic);
+@include font-face('UTMAvo', 'UTMAvoBold', 700);
+@include font-face('UTMAvo', 'UTMAvoBold-Italic', 700, italic);
+
+$avo: 'UTMAvo', sans-serif;

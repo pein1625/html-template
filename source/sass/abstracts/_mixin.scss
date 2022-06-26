@@ -439,3 +439,7 @@
     background-color: $thumb-color;
   }
 }
+
+@mixin rounded() {
+  border-radius: 8px;
+}

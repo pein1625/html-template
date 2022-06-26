@@ -1,3 +1,30 @@
 extends layout/page
 
 block content
+  // Banner slider
+  +banner-slider
+
+  // Giới thiệu doanh nghiệp
+  section.section
+    .container
+      +intro-slider
+
+  // Sản phẩm
+  section.section
+    .container
+      h2.section__title Sản phẩm
+      +product-slider
+      .text-center.mt-30
+        a.button(href="#!") Xem tất cả
+
+  // Tin tức - Sự kiện
+  section.section
+    .container
+      h2.section__title Tin tức - Sự kiện
+      .row.g-30
+        .col-lg-7
+          +video
+        .col-lg-5.d-flex.flex-column.justify-content-between.gap-3
+          +news('./images/news-1.jpg')
+          +news('./images/news-2.jpg')
+          +news('./images/news-3.jpg')

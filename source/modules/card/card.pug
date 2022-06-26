@@ -1,0 +1,24 @@
+mixin video
+  .video.ratio.ratio-16x9
+    iframe(width='560' height='315' src='https://www.youtube.com/embed/zmZvmWbFTGQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+mixin news(img="")
+  .news
+    .row.g-3
+      .col-auto
+        a.news__frame(href="#!")
+          img(src=img, alt="")
+      .col
+        .news__info Tin tức | June 10, 2022
+        h3.news__title
+          a(href="#!") Tiêu đề của bài viết tin tức có độ dài tối đa khoảng 02 dòng  Tiêu đề của bài viết tin tức có độ dài tối đa khoảng 02 dòng
+        a.news__link(href="#!") Xem tiếp
+          i.fal.fa-angle-right.ms-2
+
+mixin product(img='./images/product-1.png', name='Bìa còng bật 9cm')
+  .product
+    a.product__frame(href="#!")
+      img(src=img, alt="")
+    h3.product__name
+      a(href="#!")= name
+    .product__desc Lorem ipsum dolor sit amet, con sec tetur adipiscing elit.

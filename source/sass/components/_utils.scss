@@ -43,12 +43,25 @@
 }
 
 .search {
-  padding: 16px 20px;
-  border-top: 1px solid #aaa;
-  background-color: $light;
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 16px 0;
+  background-color: $white;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.show {
+    display: block;
+  }
 
   .form-control {
     border-right: 0;
+    padding-left: 16px;
+    font-size: 14px;
+    background: #F3F3F3;
 
     &:focus {
       box-shadow: unset;
@@ -59,7 +72,50 @@
     border-color: $input-focus-border-color;
   }
 
-  @media (min-width: 1200px) {
-    display: none;
+  .input-group-text {
+    border-left: 0;
+    background: #F3F3F3;
+
+    &:not(:last-child) {
+      border-right-width: 0!important;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+    width: 260px;
+    position: static;
+    padding: 0;
+    margin-left: 40px;
+
+    .form-control {
+      height: 40px;
+      border: 0;
+
+      &:focus {
+        background-color: #eee;
+      }
+    }
+
+    .input-group-text {
+      &:last-child {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        border-radius: 4px !important;
+        border: 0 !important;
+        background: $blue;
+        color: $white;
+
+        &:hover {
+          background-color: $blue-darker;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: 50px;
   }
 }

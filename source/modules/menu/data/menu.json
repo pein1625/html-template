@@ -1,29 +1,32 @@
 {
   "menu": [
     {
-      "text": "Trang chủ",
-      "url": "./index.html",
-      "active": true,
-      "hasIcon": false
-    },
-    {
       "text": "Giới thiệu",
       "url": "./about.html",
+      "active": true
+    },
+    {
+      "text": "Sản phẩm",
+      "url": "./products.html",
       "submenu": [
         {
-          "text": "Dropdown",
+          "text": "Băng xóa",
           "url": "#!"
         },
         {
-          "text": "Dropdown",
+          "text": "Băng dán",
           "url": "#!"
         },
         {
-          "text": "Dropdown",
+          "text": "Bấm kim",
           "url": "#!"
         },
         {
-          "text": "Dropdown",
+          "text": "File bìa nhựa lưu hồ sơ",
+          "url": "#!"
+        },
+        {
+          "text": "...(Update sau)",
           "url": "#!",
           "submenu": [
             {
@@ -43,23 +46,11 @@
       ]
     },
     {
-      "text": "Sản phẩm",
-      "url": "./products.html"
-    },
-    {
-      "text": "Dự án",
-      "url": "./projects.html"
-    },
-    {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
-    },
-    {
-      "text": "Tin tức",
+      "text": "Tin tức - Sự kiện",
       "url": "./news.html"
     },
     {
-      "text": "Liên hệ",
+      "text": "Tuyển dụng - Liên hệ",
       "url": "./contact.html"
     }
   ]
