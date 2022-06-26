@@ -1,0 +1,33 @@
+.tab-btn {
+  display: block;
+  color: $white;
+  padding: 30px 16px 10px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background-color: rgba(#000, 0.05);
+  }
+
+  &.active {
+    background-color: #20545E;
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 12px;
+
+    &::before {
+      content: '';
+      width: 100%;
+      max-width: 150px;
+      border-bottom: 1px solid $white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

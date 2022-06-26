@@ -51,3 +51,30 @@ $(function() {
     });
   });
 });
+
+$(function() {
+  const ipnElement = document.querySelector('.js-copy-text-input')
+  const btnElement = document.querySelector('.js-copy-text')
+
+  if (!btnElement) return false;
+
+  btnElement.addEventListener('click', function() {
+    btnElement.innerText = 'Đã sao chép!' // step 3
+    ipnElement.select()              // step 4
+    document.execCommand('copy')     // step 5
+  })
+});
+
+$(function() {
+  $('.tab-btn').on('click', function(e) {
+    e.preventDefault();
+    const $el = $(this);
+
+    if ($el.hasClass('active')) return false;
+    var url = $el.attr('href');
+    $el.siblings('.active').removeClass('active');
+    $el.addClass('active');
+
+    $el.closest('.layout').find('.layout__iframe').attr('src', url);
+  });
+});

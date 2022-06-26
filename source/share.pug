@@ -1,0 +1,21 @@
+extends layout/page
+
+block content
+  .layout
+    .layout__title Chia sẻ
+    .layout__body.bg-white.d-flex.flex-column.justify-content-center.align-items-center
+      .share
+        .share__label Chia sẻ URL dưới
+        .input-group
+          input.form-control.js-copy-text-input(type="text", value="https://ez-viz.net/ocp2-the-crown/", readonly)
+          button.input-group-text.js-copy-text(type="button") Sao chép
+        .share__btns
+          a.share__btn(href="#!")
+            img(src="./images/icon-viber-white.png", alt="")
+            | Viber
+          a.share__btn.share__btn--zalo(href="#!")
+            img(src="./images/icon-zalo.png", alt="")
+            | Zalo
+          a.share__btn.share__btn--facebook(href="#!")
+            img(src="./images/icon-facebook-circle.png", alt="")
+            | Facebook

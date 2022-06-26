@@ -1,0 +1,16 @@
+extends layout/page
+
+block content
+  .list
+    form.list__search
+      .input-group
+        span.input-group-text
+          i.fal.fa-search
+        input.form-control(type="text")
+        button.input-group-text Tìm kiếm
+    .list__body
+      .list__content
+        - for(let i = 0; i < 12; i++)
+          .list__item
+            .list__name #{i + 1}. Mã căn tương ứng
+            a.list__btn(href="#!") Vị trí

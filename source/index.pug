@@ -11,21 +11,62 @@ mixin popup
           .popup__frame.ratio.ratio-16x9
             iframe(src="./post.html", frameborder="0")
 
-mixin popup-video
-  #popup-video.popup.modal.fade(tabindex='-1')
+mixin popup-share
+  #popup-share.popup.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered.popup-share
+      .modal-content
+        .modal-header
+          button.close.close--sm(type="button", data-bs-dismiss="modal")
+            i.fal.fa-times
+        .modal-body
+          .popup__frame.ratio.ratio-16x9
+            iframe(src="./share.html", frameborder="0")
+
+mixin popup-layout
+  #popup-layout.popup.modal.fade(tabindex='-1')
     .modal-dialog.modal-dialog-centered
       .modal-content
         .modal-header
-          h4.modal-title Khoa du lịch
           button.close(type="button", data-bs-dismiss="modal")
             i.fal.fa-times
         .modal-body
           .popup__frame.ratio.ratio-16x9
-            iframe(src="./videos.html", frameborder="0")
+            iframe(src="./layout.html", frameborder="0")
+
+mixin popup-list
+  #popup-list.popup.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          button.close.close--list(type="button", data-bs-dismiss="modal")
+            i.fal.fa-times
+        .modal-body
+          .popup__frame.ratio.ratio-16x9
+            iframe(src="./list.html", frameborder="0")
+
+mixin popup-frame
+  #popup-frame.popup.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          button.close(type="button", data-bs-dismiss="modal")
+            i.fal.fa-times
+        .modal-body
+          .popup__frame.ratio.ratio-16x9
+            iframe(src="./frame.html", frameborder="0")
 
 block content
   .container.py-5
-    button.btn.btn-primary.me-4(type="button", data-bs-toggle="modal", data-bs-target="#popup-post") Open Post
-    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-video") Open Videos
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-post") Open Post
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-frame") Open Frame
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-layout") Open Layout
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-share") Open Share
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-list") Open List
     +popup
-    +popup-video
+    +popup-share
+    +popup-layout
+    +popup-list
+    +popup-frame
+
+    .mt-5
+      iframe.rounded.shadow(src="./subtitle.html", frameborder="0", style="width: 230px; height: 320px;")
