@@ -17,7 +17,7 @@
     @include max-line(3);
     font-size: 1.25em;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
     max-height: 3.6em;
     margin-bottom: 0.8em;
 
@@ -70,7 +70,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -108,7 +108,7 @@
   &__title {
     @include max-line(3);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     max-height: 3.6em;
     max-width: 700px;
@@ -159,7 +159,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -206,7 +206,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 15px;
+    font-size: 16px;
     padding: 30px;
 
     &__title {
@@ -238,7 +238,7 @@
 
   &__title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
 
@@ -276,7 +276,7 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 15px;
+    font-size: 16px;
 
     &__body {
       padding: 35px;
@@ -300,7 +300,6 @@
 .project-2 {
   position: relative;
   z-index: 1;
-  font-size: 15px;
 
   &__frame {
     @include frame('rect', 60%);
@@ -323,7 +322,7 @@
 
   &__title {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
   }
@@ -378,11 +377,10 @@
   box-shadow: 0 1px 10px rgba(#000, 0.16);
   transition: 0.4s;
   height: 100%;
-  font-size: 15px;
 
   &__title {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     color: $primary;
     margin-bottom: 30px;
@@ -408,8 +406,7 @@
   }
 
   &__link {
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 500;
     color: $primary;
     transition: 0.4s;
 
@@ -453,7 +450,7 @@
 }
 
 .card-2 {
-  font-size: 15px;
+  font-size: 16px;
 
   &__logo {
     height: 100px;
@@ -475,9 +472,8 @@
   }
 
   &__link {
-    font-weight: 700;
+    font-weight: 500;
     color: $primary;
-    text-transform: uppercase;
 
     &:hover {
       color: $secondary;
@@ -521,8 +517,8 @@
     flex-direction: column;
     justify-content: center;
     min-height: 3em;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     margin: 0;

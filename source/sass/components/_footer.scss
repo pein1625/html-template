@@ -7,7 +7,7 @@
     display: inline-flex;
 
     img {
-      height: 40px;
+      height: 32px;
     }
   }
 
@@ -22,16 +22,10 @@
       max-width: 100%;
       padding: 0 30px;
     }
-
-    &__logo {
-      img {
-        height: 40px;
-      }
-    }
   }
 
   @include media-breakpoint-up(xxl) {
-    font-size: 15px;
+    font-size: 16px;
 
     .container {
       padding: 0 50px;
@@ -39,7 +33,7 @@
 
     &__logo {
       img {
-        height: 50px;
+        height: 40px;
       }
     }
   }

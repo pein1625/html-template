@@ -163,11 +163,11 @@
 }
 
 .info-slider {
-  font-size: 15px;
+  font-size: 16px;
 
   &__title {
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 600;
     color: $primary;
 
     &:hover {
@@ -289,7 +289,7 @@
     color: $white;
     padding: 60px 50px 80px;
     box-shadow: 0 1px 10px rgba(#000, 0.1);
-    font-size: 15px;
+    font-size: 16px;
 
     a,
     a:hover {
@@ -299,7 +299,7 @@
 
   &__title {
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
   }

@@ -91,8 +91,7 @@
   }
 
   &-root > &-item > &-link {
-    font-weight: 700;
-    // text-transform: uppercase;
+    font-weight: 500;
   }
 
   @include media-breakpoint-up(xl) {
@@ -164,7 +163,7 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 35px;
+        margin-right: 45px;
       }
     }
 
@@ -202,7 +201,7 @@
   @include media-breakpoint-up(xxl) {
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 50px;
       }
     }
 

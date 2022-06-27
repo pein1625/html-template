@@ -27,7 +27,7 @@ mixin pagination
   ul.pagination
     li.page-item.disabled.me-auto
       a.page-link.text-primary.font-size-base(href="#!")
-        i.fas.fa-arrow-left
+        i.fal.fa-arrow-left
         span.d-none.d-md-inline.ms-2 Trang trước
     li.page-item.active
       a.page-link(href="#!") 1
@@ -42,7 +42,7 @@ mixin pagination
     li.page-item.ms-auto
       a.page-link.text-primary.font-size-base(href="#!")
         span.d-none.d-md-inline.me-2 Trang sau
-        i.fas.fa-arrow-right
+        i.fal.fa-arrow-right
 
 mixin search
   form.search
@@ -54,5 +54,5 @@ mixin search
         i.fal.fa-times
 
 mixin n-link(url='#!')
-  a.n-link(href=url) Xem chi tiết
-    i.fas.fa-arrow-right.ms-2
+  a.n-link(href=url) Xem tất cả
+    i.fal.fa-lg.fa-arrow-right.ms-2

@@ -52,18 +52,23 @@
     padding: 0 8px;
     border: 0 !important;
     border-radius: 0;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 500;
     color: #828282;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
 
 
   .page-item.active,
+  .page-item:focus,
   .page-item:hover {
     .page-link {
       color: $primary;
       background: 0;
+      outline: 0;
     }
   }
 
@@ -134,10 +139,9 @@
 }
 
 .n-link {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   color: $primary;
-  text-transform: uppercase;
 
   i {
     transition: 0.4s;
