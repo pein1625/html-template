@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -22,7 +23,7 @@
 
   &__body {
     width: 100%;
-    border: 10px solid $orange-darker;
+    border: 10px solid rgba($orange-darker, 0.8);
     border-top: 0 !important;
     position: relative;
     background-color: $orange;
@@ -43,6 +44,7 @@
   &__main {
     flex: 0 0 66.66%;
     position: relative;
+    order: 1;
   }
 
   &__iframe {
@@ -63,11 +65,44 @@
       border-width: 0 4px 4px 0;
     }
   }
+
+  @media (max-width: 500px) {
+    &__grid {
+      flex-direction: column;
+    }
+
+    &__aside {
+      flex: 1;
+      order: 2;
+    }
+
+    &__main {
+      flex: unset;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 56.25%;
+      }
+    }
+  }
 }
 
 .popup {
+  &--list .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
   .modal-content {
-    background-color: $purple;
+    background: rgba($purple, 0.8);
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   .modal-header {
@@ -98,9 +133,9 @@
     }
 
     .close--list {
-      top: 52px;
-      right: 4px;
-      font-size: 20px;
+      top: 60px;
+      right: 8px;
+      font-size: 24px;
       color: $orange;
     }
   }
@@ -136,6 +171,10 @@
   }
 
   @media (max-width: 991px) {
+    .modal-content {
+      border-radius: 8px;
+    }
+
     .modal-header {
       .close {
         top: 20px;
@@ -154,6 +193,10 @@
 
     .popup-share &__frame {
       height: 200px;
+    }
+
+    &--list .modal-content {
+      border-radius: 8px;
     }
   }
 }
