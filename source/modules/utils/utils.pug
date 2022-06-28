@@ -18,6 +18,7 @@ mixin pagination
     li.page-item.disabled
       a.page-link(href="#!")
         i.fal.fa-angle-left
+        span.d-none.d-md-inline.ms-1 Prev
     li.page-item.active
       a.page-link(href="#!") 1
     li.page-item
@@ -29,7 +30,14 @@ mixin pagination
     li.page-item
       a.page-link(href="#!") 5
     li.page-item
+      a.page-link(href="#!") ...
+    li.page-item
+      a.page-link(href="#!") 800
+    li.page-item
+      a.page-link(href="#!") 801
+    li.page-item
       a.page-link(href="#!")
+        span.d-none.d-md-inline.me-1 Next
         i.fal.fa-angle-right
 
 mixin search
