@@ -182,6 +182,10 @@
       transition: 0.3s;
     }
 
+    &-root > &-item:hover > &-link {
+      color: $secondary;
+    }
+
     &-root > &-item-group > &-link {
       &::after {
         content: '\f107';

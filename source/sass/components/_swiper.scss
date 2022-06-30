@@ -8,7 +8,7 @@
     align-items: center;
     border-radius: 50%;
     color: #fff;
-    font-size: 50px;
+    font-size: 56px;
     position: absolute;
     z-index: 10;
     top: 50%;
@@ -19,6 +19,7 @@
 
     &:hover {
       transform: translateY(-50%) scale(1.2);
+      color: #B3B3B3;
     }
 
     &:focus {
@@ -111,7 +112,7 @@
   &__prev,
   &__next {
     padding: 10px 5px;
-    font-size: 40px;
+    font-size: 56px;
     line-height: 1;
     color: $blue;
     position: absolute;

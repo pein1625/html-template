@@ -10,7 +10,7 @@ block content
       +intro-slider
 
   // Sản phẩm
-  section.section
+  section.section.parallax-1
     .container
       h2.section__title Sản phẩm
       +product-slider
@@ -18,13 +18,16 @@ block content
         a.button(href="#!") Xem tất cả
 
   // Tin tức - Sự kiện
-  section.section
+  section.section.parallax-1
     .container
       h2.section__title Tin tức - Sự kiện
       .row.g-30
-        .col-lg-7
+        .col-lg-7.wow.fadeInLeft(data-wow-delay="0.1s")
           +video
         .col-lg-5.d-flex.flex-column.justify-content-between.gap-3
-          +news('./images/news-1.jpg')
-          +news('./images/news-2.jpg')
-          +news('./images/news-3.jpg')
+          .wow.fadeInRight(data-wow-delay="0.3s")
+            +news('./images/news-1.jpg')
+          .wow.fadeInRight(data-wow-delay="0.45s")
+            +news('./images/news-2.jpg')
+          .wow.fadeInRight(data-wow-delay="0.6s")
+            +news('./images/news-3.jpg')

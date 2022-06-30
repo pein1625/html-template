@@ -75,7 +75,8 @@ mixin product-slider
       .swiper-wrapper
         - for(let i = 0; i < 10; i++)
           .swiper-slide
-            +product(`./images/product-${i % 5 + 1}.png`)
+            .wow.zoomIn(data-wow-delay="0.3s")
+              +product(`./images/product-${i % 5 + 1}.png`)
 
 mixin intro-slider
   .intro-slider

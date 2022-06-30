@@ -22,7 +22,7 @@
     margin-bottom: 20px;
 
     &--name {
-      max-width: 382px;
+      max-width: 364px;
     }
   }
 
@@ -75,6 +75,7 @@
   padding: 0;
 
   li {
+    text-align: justify;
     &:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -91,8 +92,13 @@
 
 .f-contact {
   li {
+    text-align: justify;
     &:not(:last-child) {
       margin-bottom: 10px;
+    }
+
+    .col {
+      text-align: justify;
     }
   }
 }
