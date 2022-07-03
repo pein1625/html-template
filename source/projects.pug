@@ -1,7 +1,27 @@
 extends layout/page
 
 block content
-  +banner('Lĩnh vực hoạt động', './images/banner-news.jpg', 'Trang chủ', 'Tin tức')
+  article.banner
+    img.banner__bg(src='./images/banner-project.jpg', alt="")
+    .container
+      .row.align-items-center
+        .col-lg
+          .banner__title.text-start Lĩnh vực
+            br
+            | hoạt động
+          .banner__breadcrumb.justify-content-start
+            +breadcrumb('Trang chủ', 'Lĩnh vực hoạt động')
+        .col-lg-auto.mt-4.mt-lg-0
+          .calendar
+            .calendar__label LỊCH SỰ KIỆN
+            - for(let i = 0; i < 3; i++)
+              .calendar__item
+                .row.g-10.align-items-center
+                  .calendar__title.col
+                    a(href="#!") [WEBINAR] Kinh nghiệm thực tế trong quản lý và kinh doanh
+                  .calendar__time.col-auto
+                    div 12/06/2022
+                    div 08:00 - 12:00
 
   nav.project-nav
     a.active(href="#!") CÔNG NGHỆ & CÔNG NGHIỆP
@@ -16,7 +36,7 @@ block content
     .row.g-30.gy-xl-50
       - for(let i = 0; i < 6; i++)
         .col-lg-4
-          +project
+          +project(`./images/brand-${i}.png`)
 
     nav.mt-40.mt-xl-50
       +pagination

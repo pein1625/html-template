@@ -21,6 +21,12 @@
         color: $secondary;
       }
     }
+
+    span {
+      display: inline-block;
+      border-bottom: 1px solid $white;
+      line-height: 1.2;
+    }
   }
 
   &--white .breadcrumb-item,

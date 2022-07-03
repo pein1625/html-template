@@ -125,11 +125,11 @@
   &__btn {
     display: inline-block;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     color: $white;
     background-color: $primary;
-    padding: 10px 1em;
+    padding: 10px 1.5em;
   }
 
   &:hover &__frame img {
@@ -175,15 +175,24 @@
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
     color: $primary;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    font-size: 14px;
+
+    & + & {
+      margin-top: 4px;
+    }
   }
 
   .button {
-    padding: 10px 20px;
+    padding: 7px 16px;
+    font-size: 14px;
   }
 
   &:hover &__title {
@@ -194,23 +203,9 @@
     background-color: $secondary;
   }
 
-  &:hover &__frame img {
-    transform: scale(1.1);
-  }
-
-  @include media-breakpoint-up(md) {
-    &__frame {
-      @include frame('rect', 75%);
-      width: 150px;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    font-size: 16px;
-    padding: 30px;
-
+  @include media-breakpoint-down(md) {
     &__title {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 }
@@ -257,8 +252,16 @@
     font-weight: 500;
     color: $primary;
 
+    i {
+      transition: 0.3s;
+    }
+
     &:hover {
       color: $secondary;
+
+      i {
+        transform: translateX(5px);
+      }
     }
   }
 
@@ -410,8 +413,16 @@
     color: $primary;
     transition: 0.4s;
 
+    i {
+      transition: 0.3s;
+    }
+
     &:hover {
       color: $secondary;
+
+      i {
+        transform: translateX(5px);
+      }
     }
   }
 
@@ -464,6 +475,14 @@
     line-height: 1.2;
     color: $primary;
     margin-top: 1em;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
   }
 
   &__desc {
@@ -475,8 +494,16 @@
     font-weight: 500;
     color: $primary;
 
+    i {
+      transition: 0.3s;
+    }
+
     &:hover {
       color: $secondary;
+
+      i {
+        transform: translateX(5px);
+      }
     }
   }
 

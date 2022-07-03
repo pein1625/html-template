@@ -12,7 +12,7 @@
     font-size: 20px;
     font-weight: 700;
     color: $primary;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 
     &:not(:first-child) {
       margin-top: 30px;
@@ -22,12 +22,6 @@
   @include media-breakpoint-up(lg) {
     &__box {
       display: block !important;
-    }
-  }
-
-  @include media-breakpoint-up(xl) {
-    &__box {
-      padding: 30px;
     }
   }
 
@@ -78,8 +72,8 @@
   font-size: 14px;
 
   &__title {
+    font-size: 24px;
     font-weight: 700;
-    text-transform: uppercase;
     line-height: 1.2;
     color: $primary;
     margin-bottom: 16px;
@@ -99,6 +93,11 @@
     }
   }
 
+  .button {
+    font-size: 15px;
+    padding: 14px 30px;
+  }
+
   @include media-breakpoint-up(xl) {
     &__title {
       font-size: 24px;
@@ -114,7 +113,7 @@
     font-size: 16px;
 
     &__title {
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 30px;
     }
 

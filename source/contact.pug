@@ -5,45 +5,35 @@ block content
 
   .container.py-60.py-xl-80
     article.section
-      h2.section__title LIÊN HỆ VỚI CHÚNG TÔI
+      h2.section__title.fw-700 LIÊN HỆ VỚI CHÚNG TÔI
 
-      .row.g-30.gx-xl-60.gx-xl-80
-        .col-lg-6
-          form.form
-            .row.gy-3.gx-30
-              .col-12
-                input.form-control(type="text", placeholder="Họ và tên*", required)
-              .col-md-7
-                input.form-control(type="email", placeholder="Địa chỉ email*", required)
-              .col-md-5
-                input.form-control(type="text", placeholder="Số điện thoại*", required)
-              .col-12
-                textarea.form-control(rows="5", placeholder="Ghi chú*", required)
+      .ratio.mb-40.mb-xxl-50(style="height: 460px")
+        iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
 
-        .col-lg-6
-          section.contact-info
-            h2.contact-info__title CÔNG TY TNHH THƯƠNG MẠI VÀ ĐẦU TƯ BIG HOLDING
-
-            ul.f-contact.mt-3.mt-xl-4
-              li.f-contact__item
-                .row.g-3
-                  .col-auto
-                    i.fas.fa-lg.fa-fw.fa-phone-square.text-primary
-                  .col
-                    a(href="tel:+84981045948") + 84 981 045 948
-
-              li.f-contact__item
-                .row.g-3
-                  .col-auto
-                    i.fas.fa-lg.fa-fw.fa-envelope.text-primary
-                  .col
-                    a(href="mailto:info@bigholding.vn") info@bigholding.vn
-
-              li.f-contact__item
-                .row.g-3
-                  .col-auto
-                    i.fas.fa-lg.fa-fw.fa-home.text-primary
-                  .col Lô số 22, tầng 1 tòa R4 Royal City, số 72 Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam.
-
-  .ratio(style="height: 500px")
-    iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+      .overflow-hidden
+        .row.g-30.gx-xl-80.gx-xl-100
+          .col-lg-5.border-end
+            .contact-info
+              .contact-info__label ADDRESS
+              .contact-info__content Lô số 22, tầng 1 tòa R4 Royal City, số 72 Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Tp. Hà Nội
+            .contact-info
+              .contact-info__label PHONE
+              .contact-info__content
+                a(href="tel:+84981045948") + 84 981 045 948
+            .contact-info
+              .contact-info__label EMAIL
+              .contact-info__content
+                a(href="mailto:info@bigholding.vn") info@bigholding.vn
+          .col-lg-7
+            form.form
+              .row.gy-3.gx-30
+                .col-12
+                  input.form-control(type="text", placeholder="Họ và tên*", required)
+                .col-md-7
+                  input.form-control(type="email", placeholder="Địa chỉ email*", required)
+                .col-md-5
+                  input.form-control(type="text", placeholder="Số điện thoại*", required)
+                .col-12
+                  textarea.form-control(rows="5", placeholder="Ghi chú*", required)
+                .col-12
+                  button.button(type="submit") Gửi câu hỏi
