@@ -380,6 +380,24 @@
   box-shadow: 0 1px 10px rgba(#000, 0.16);
   transition: 0.4s;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s ease-out;
+    transform: translate(-50%, -50%);
+  }
 
   &__title {
     font-size: 28px;
@@ -427,8 +445,13 @@
   }
 
   &:hover {
-    background-color: $primary;
     color: $white;
+
+    &::before {
+      width: 200%;
+      height: 200%;
+      transform: translate(-25%, -25%);
+    }
   }
 
   &:hover &__title,

@@ -3,7 +3,7 @@ extends layout/page
 block content
   +banner('Tin tức - Sự kiện', './images/banner-news.jpg', 'Trang chủ', 'Tin tức')
 
-  .container.py-60.py-xl-80
+  .container.py-60.py-xl-80.wow.fadeInUp(data-wow-delay="0.15s")
     ul.news-category.mb-4.mb-xl-40
       li
         a.active(href="#!") TẤT CẢ
@@ -23,7 +23,7 @@ block content
 
     .row.g-4.mb-4.mb-xl-40
       - for(let i = 0; i < 9; i++)
-        .col-lg-4
+        .col-lg-4.wow.fadeInUp(data-wow-delay=`${i % 3 * 0.1 + 0.1}s`)
           +news
 
     +pagination
