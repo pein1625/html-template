@@ -1,0 +1,17 @@
+extends layout/page
+
+block content
+  mixin popup-list
+    #popup-list.popup.popup--list.modal.fade.popup-auto-show(tabindex='-1')
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-header
+            a.close.close--list(href="./list.html")
+              i.fal.fa-times
+          .modal-body
+            .popup__frame.ratio.ratio-16x9
+              iframe(src="./list.html", frameborder="0")
+  article.search-page
+    img.search-page__bg(src="./images/search-page-bg.jpg", alt="")
+
+  +popup-list
