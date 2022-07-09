@@ -41,7 +41,7 @@
     min-height: 200vh;
     transform: translateY(-62%);
     transition: 0.3s;
-    position: fixed;
+    position: absolute;
     z-index: 101;
     top: 50%;
     right: 0;
@@ -171,21 +171,33 @@
 
   @include media-breakpoint-down(sm) {
     &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       width: 100vw;
+      height: 100vh;
+      min-height: 100vh;
       top: 100%;
       transform: translate(0, -50%);
       padding-left: 40vw;
       padding-right: 6px;
+      overflow: hidden;
+      top: 0;
+      transform: unset;
+
+      &-bg {
+        height: 200%;
+      }
 
       &-title {
         font-size: 12px;
-        padding-left: 10vw;
+        padding-left: 14vw;
       }
 
       &-body {
         max-height: 100px;
-        margin-bottom: 120px;
         text-align: right;
+        margin-bottom: 0;
       }
     }
   }
