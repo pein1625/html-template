@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+  article.banner
+    img(src="./images/banner-1.jpg", alt="")
+
+  nav.news-nav
+    .container
+      .news-nav__list
+        a.news-nav__item.active(href="./news.html")
+          .news-nav__icon
+            img(src="./images/icon-news.png", alt="")
+          .news-nav__label Tin IPN
+        a.news-nav__item(href="./recruit.html")
+          .news-nav__icon
+            img(src="./images/icon-recruit.png", alt="")
+          .news-nav__label Tin tuyển dụng
+
+  section.section
+    .container
+      h2.section__title Tin mới
+
+      .row.g-30
+        .col-12
+          +news-2
+        - for(let i = 0; i < 6; i++)
+          .col-lg-4
+            +news
+
+      nav.d-flex.justify-content-center.mt-30
+        +pagination

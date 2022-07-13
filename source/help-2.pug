@@ -1,0 +1,67 @@
+extends layout/page
+
+block content
+  article.banner
+    img(src="./images/banner-1.jpg", alt="")
+    .banner__footer
+      .container
+        nav.banner__nav
+          a(href="./help.html") HỖ TRỢ THÔNG TIN
+          a.active(href="./help-2.html") HỖ TRỢ KỸ THUẬT
+          a(href="./contact.html") LIÊN HỆ 24/7
+
+  section.section.bg-light
+    .container
+      +category-slider
+
+  section.section
+    .container
+      ul.nav.help-tabs
+        li.nav-item.wow.fadeInRight(data-wow-delay="0.1s")
+          a.nav-link.active(href='#help-tab-1', data-bs-toggle='tab')
+            img.help-tabs__icon(src="./images/help-tab-1.png", alt="")
+            img.help-tabs__icon-2(src="./images/help-tab-1-2.png", alt="")
+            .help-tabs__name TRUYỀN HÌNH FPT
+        li.nav-item.wow.fadeInRight(data-wow-delay="0.2s")
+          a.nav-link(href='#help-tab-2', data-bs-toggle='tab')
+            img.help-tabs__icon(src="./images/help-tab-2.png", alt="")
+            img.help-tabs__icon-2(src="./images/help-tab-2-2.png", alt="")
+            .help-tabs__name CAMERA
+        li.nav-item.wow.fadeInRight(data-wow-delay="0.3s")
+          a.nav-link(href='#help-tab-3', data-bs-toggle='tab')
+            img.help-tabs__icon(src="./images/help-tab-3.png", alt="")
+            img.help-tabs__icon-2(src="./images/help-tab-3-2.png", alt="")
+            .help-tabs__name FPT PLAY BOX
+        li.nav-item.wow.fadeInRight(data-wow-delay="0.4s")
+          a.nav-link(href='#help-tab-4', data-bs-toggle='tab')
+            img.help-tabs__icon(src="./images/help-tab-4.png", alt="")
+            img.help-tabs__icon-2(src="./images/help-tab-4-2.png", alt="")
+            .help-tabs__name FSHARE
+        li.nav-item.wow.fadeInRight(data-wow-delay="0.5s")
+          a.nav-link(href='#help-tab-5', data-bs-toggle='tab')
+            img.help-tabs__icon(src="./images/help-tab-5.png", alt="")
+            img.help-tabs__icon-2(src="./images/help-tab-5-2.png", alt="")
+            .help-tabs__name FPT PLAY APP
+      .tab-content.wow.fadeInUp(data-wow-delay="0.6s")
+        - for(let i = 0; i < 5; i++)
+          .tab-pane.fade(id=`help-tab-${i + 1}`, class=i?'':'show active')
+            .custom-table.table-responsive
+              table.table.table-striped
+                thead
+                  tr
+                    th Tên tài liệu
+                    th.text-center Video
+                    th.text-center Tài liệu
+                    th.text-center Ngày đăng
+                tbody
+                  - for(let i = 0; i < 10; i++)
+                    tr
+                      td
+                        a.custom-table__title(href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/ho-tro-thong-tin/huong-dan-su-dung/truyen-hinh-fpt/2-sao-chep-dieu-kien-tivi--1203.html") #{i + 1} - Hướng dẫn sử dụng Truyền hình FPT - Phiên bản Lucas Onca
+                      td.text-center.ps-0
+                        a.custom-table__btn(href="https://www.youtube.com/watch?v=Mr04W1VjsE4", data-fancybox="video")
+                          i.fal.fa-fw.fa-2x.fa-play-circle
+                      td.text-center.ps-0
+                        a.custom-table__btn(href="https://fpt.vn/vi/khach-hang-ca-nhan/ho-tro/ho-tro-thong-tin/huong-dan-su-dung/truyen-hinh-fpt/2-sao-chep-dieu-kien-tivi--1203.html")
+                          i.fal.fa-fw.fa-2x.fa-file-search
+                      td.text-center.ps-0 25-09-2017

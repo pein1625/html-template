@@ -6,16 +6,16 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
-      },
-      {
         "title": "Sản phẩm",
-        "url": "products"
+        "url": "product"
       },
       {
-        "title": "Chi tiết sản phẩm",
-        "url": "product-detail"
+        "title": "Sản phẩm 2",
+        "url": "product-2"
+      },
+      {
+        "title": "Sản phẩm 3",
+        "url": "product-3"
       },
       {
         "title": "Tin tức",
@@ -24,6 +24,22 @@
       {
         "title": "Chi tiết tin tức",
         "url": "news-detail"
+      },
+      {
+        "title": "Tuyển dụng",
+        "url": "recruit"
+      },
+      {
+        "title": "Chi tiết tuyển dụng",
+        "url": "recruit-detail"
+      },
+      {
+        "title": "Hỗ trợ",
+        "url": "help"
+      },
+      {
+        "title": "Hỗ trợ 2",
+        "url": "help-2"
       },
       {
         "title": "Liên hệ",

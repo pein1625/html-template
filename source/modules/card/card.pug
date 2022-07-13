@@ -1,0 +1,44 @@
+mixin img(width='640', height='360', className='')
+  img(src=`https://fakeimg.pl/${width}x${height}/`, alt="", class=className)
+
+mixin news()
+  .news
+    a.news__frame(href="./news-detail.html")
+      +img(350, 197)
+    h3.news__title
+      a(href="./news-detail.html") Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum exercitationem sint dolor enim repudiandae excepturi hic quae sapiente minus autem distinctio repellat corrupti beatae veniam porro, a aut itaque perferendis.
+    .news__info
+      i.fas.fa-fw.fa-calendar-alt.me-2
+      | 2022-03-07 09:22:21. Người đăng: Admin
+
+mixin news-2
+  .news-2
+    .row
+      .col-md-6
+        a.news-2__frame(href="./news-detail.html")
+          +img(540, 304)
+      .col-md-6
+        h3.news-2__title
+          a(href="./news-detail.html") Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsam distinctio et molestias quaerat repudiandae, officiis tenetur harum doloribus excepturi atque eveniet ullam earum itaque nulla? Hic exercitationem minima fuga?
+        .news-2__info
+          i.fas.fa-fw.fa-calendar-alt.me-2
+          | 2022-03-07 09:22:21. Người đăng: Admin
+
+mixin product(title='icloud')
+  .product
+    .product__frame
+      +img(410,310)
+    .product__title= title
+    .product__link Chi tiết...
+
+mixin recruit
+  .recruit
+    h3.recruit__title
+      a(href="./recruit-detail.html") Nhân viên content marketing
+    .recruit__info
+      i.fas.fa-fw.fa-briefcase.me-2
+      | FISA VIETNAM STOCK COMPANY #[a.btn.btn-primary.text-white.py-1.ms-1(href="#!") Cơ hội nghề nghiệp]
+    .recruit__info
+      i.fal.fa-fw.fa-map.me-2
+      | Lô 9, liền kề 10, repudiandae pariatur sint eius possimus accusantium aut nulla provident!
+    .recruit__info Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, deserunt voluptatum nesciunt, alias saepe, nam unde eaque suscipit cumque expedita fugiat ducimus blanditiis voluptates illo eveniet rem ipsum libero corrupti!

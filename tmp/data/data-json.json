@@ -128,8 +128,8 @@
 			"hasIcon": false
 		},
 		{
-			"text": "Giới thiệu",
-			"url": "./about.html",
+			"text": "Sản phẩm, dịch vụ",
+			"url": "./product.html",
 			"submenu": [
 				{
 					"text": "Dropdown",
@@ -164,20 +164,86 @@
 			]
 		},
 		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
+			"text": "Tin tức & Sự kiện",
+			"url": "./news.html",
+			"submenu": [
+				{
+					"text": "Tin IPN",
+					"url": "./news.html"
+				},
+				{
+					"text": "Tin tuyển dụng",
+					"url": "./news.html"
+				}
+			]
 		},
 		{
-			"text": "Dự án",
-			"url": "./projects.html"
-		},
-		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
-		},
-		{
-			"text": "Tin tức",
-			"url": "./news.html"
+			"text": "Hỗ trợ",
+			"url": "./help.html",
+			"isMega": true,
+			"submenu": [
+				{
+					"text": "Hỗ trợ thông tin",
+					"url": "#!",
+					"icon": "fal fa-lg fa-file-alt",
+					"submenu": [
+						{
+							"text": "Câu hỏi thường gặp",
+							"url": "#!"
+						},
+						{
+							"text": "Hướng dẫn sử dụng",
+							"url": "#!"
+						},
+						{
+							"text": "Hướng dẫn thủ tục",
+							"url": "#!"
+						},
+						{
+							"text": "Điều khoản bảo mật",
+							"url": "#!"
+						}
+					]
+				},
+				{
+					"text": "Hỗ trợ kỹ thuật",
+					"icon": "fal fa-lg fa-cog",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Hướng dẫn cài đặt",
+							"url": "#!"
+						},
+						{
+							"text": "Xử lý sự cố",
+							"url": "#!"
+						}
+					]
+				},
+				{
+					"text": "Liên hệ",
+					"icon": "fal fa-lg fa-headphones",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Tổng đài",
+							"url": "#!"
+						},
+						{
+							"text": "Email",
+							"url": "#!"
+						},
+						{
+							"text": "Live Chat",
+							"url": "#!"
+						},
+						{
+							"text": "Facebook",
+							"url": "#!"
+						}
+					]
+				}
+			]
 		},
 		{
 			"text": "Liên hệ",
@@ -191,16 +257,16 @@
 				"url": "index"
 			},
 			{
-				"title": "Giới thiệu",
-				"url": "about"
-			},
-			{
 				"title": "Sản phẩm",
-				"url": "products"
+				"url": "product"
 			},
 			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
+				"title": "Sản phẩm 2",
+				"url": "product-2"
+			},
+			{
+				"title": "Sản phẩm 3",
+				"url": "product-3"
 			},
 			{
 				"title": "Tin tức",
@@ -209,6 +275,22 @@
 			{
 				"title": "Chi tiết tin tức",
 				"url": "news-detail"
+			},
+			{
+				"title": "Tuyển dụng",
+				"url": "recruit"
+			},
+			{
+				"title": "Chi tiết tuyển dụng",
+				"url": "recruit-detail"
+			},
+			{
+				"title": "Hỗ trợ",
+				"url": "help"
+			},
+			{
+				"title": "Hỗ trợ 2",
+				"url": "help-2"
 			},
 			{
 				"title": "Liên hệ",

@@ -1,0 +1,95 @@
+mixin s-specification
+  section.section.bg-light
+    .container
+      h2.section__title.text-info Thông số kỹ thuật
+      .specification.table-responsive.mx-auto.wow.fadeInUp(data-wow-delay="0.1s")
+        table.table
+          thead
+            tr
+              th(width="50%") Nội dung
+              th Đáp ứng
+          tbody
+            - for(let i = 0; i < 10; i++)
+              tr
+                td Băng thông quốc tế
+                td Nihil porro qui numquam id itaque facere quos, voluptas, corporis laborum illo iure! Sed perspiciatis quaerat veniam.
+
+mixin s-pros(title='Lợi thế của dịch vụ kênh thuê riêng')
+  section.section
+    .container
+      h2.section__title.text-info= title
+      .row.g-3.g-lg-30
+        .col-md-6.wow.zoomIn(data-wow-delay="0.1s")
+          .pros
+            .row.gy-0.gx-3.gx-lg-30.align-items-center
+              .col-auto
+                .pros__img
+                  img(src="./images/pros-icon-1.png", alt="")
+              .col
+                .pros__text Molestias atque itaque error aliquid perferendis quod, esse dolore at quo, sequi voluptatum rem quae! Similique cum libero saepe ex, distinctio repellat?
+        .col-md-6.wow.zoomIn(data-wow-delay="0.2s")
+          .pros
+            .row.gy-0.gx-3.gx-lg-30.align-items-center
+              .col-auto
+                .pros__img
+                  img(src="./images/pros-icon-2.png", alt="")
+              .col
+                .pros__text Explicabo voluptatibus quidem placeat ducimus praesentium, recusandae eius minima adipisci provident quisquam ipsam esse blanditiis ullam at quaerat corporis beatae soluta fugit.
+        .col-md-6.wow.zoomIn(data-wow-delay="0.3s")
+          .pros
+            .row.gy-0.gx-3.gx-lg-30.align-items-center
+              .col-auto
+                .pros__img
+                  img(src="./images/pros-icon-3.png", alt="")
+              .col
+                .pros__text Voluptatibus ab aliquam esse, iusto commodi at ad cum impedit, quam eos nobis quasi? Voluptatibus debitis ipsum, et temporibus sint optio iure?
+        .col-md-6.wow.zoomIn(data-wow-delay="0.4s")
+          .pros
+            .row.gy-0.gx-3.gx-lg-30.align-items-center
+              .col-auto
+                .pros__img
+                  img(src="./images/pros-icon-4.png", alt="")
+              .col
+                .pros__text Impedit aspernatur, repellat ex maiores aut perspiciatis ratione, nam officia ipsum autem odit a, nihil accusamus aperiam rem eum error? Nobis, excepturi.
+
+mixin addons
+  section.section.bg-light
+    .container
+      h2.section__title.text-info Các dịch vụ Add on
+      .row.g-30
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.1s")
+          .addon
+            .addon__icon
+              img(src="./images/addon-icon-1.png", alt="")
+            .addon__title Dịch vụ Thuê chỗ đặt máy chủ
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.2s")
+          .addon
+            .addon__icon
+              img(src="./images/addon-icon-2.png", alt="")
+            .addon__title Dịch vụ cho điện toán đám mây: Cloud Server, Camera Cloud
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.3s")
+          .addon
+            .addon__icon
+              img(src="./images/addon-icon-3.png", alt="")
+            .addon__title Dịch vụ Voice
+
+mixin contact-boxes
+  section.section
+    .container
+      h2.section__title.text-info Liên hệ với chúng tôi
+      .row.g-3.g-md-30
+        .col-md-4.wow.fadeInRight(data-wow-delay="0.1s")
+          a.ct-box.ct-box--1(href="tel:024 123456789")
+            img.ct-box__bg(src="./images/ct-box-1.jpg", alt="")
+            .ct-box__label Tư vấn kinh doanh
+            .ct-box__number 024 123456789 (EXT 11)
+        .col-md-4.wow.fadeInRight(data-wow-delay="0.2s")
+          a.ct-box.ct-box--2(href="tel:024 123456789")
+            img.ct-box__bg(src="./images/ct-box-2.jpg", alt="")
+            .ct-box__label Tư vấn giải pháp
+            .ct-box__number 024 123456789 (EXT 33)
+        .col-md-4.wow.fadeInRight(data-wow-delay="0.3s")
+          a.ct-box.ct-box--3(href="tel:024 123456789")
+            img.ct-box__bg(src="./images/ct-box-3.jpg", alt="")
+            .ct-box__label Tư vấn sau bán hàng
+            .ct-box__number 024 123456789 (EXT 01)

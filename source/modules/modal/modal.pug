@@ -1,0 +1,29 @@
+mixin md-register
+  .md-register.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      form.modal-content
+        .modal-header
+          h5.modal-title.fw-700.text-uppercase Đăng ký tư vấn
+          button.btn-close(type="button" data-bs-dismiss="modal")
+        .modal-body
+          .mb-2
+            label.fw-700.mb-0
+              i.fal.fa-fw.fa-info-circle.me-2.text-primary
+              | Thông tin cá nhân
+          .mb-3
+            label.mb-1 Họ và tên #[span.text-danger *]
+            input.form-control(type='text', placeholder='', required)
+          .mb-3
+            label.mb-1 Số điện thoại #[span.text-danger *]
+            input.form-control(type='text', placeholder='', required)
+          .mb-3
+            label.mb-1 Địa chỉ email #[span.text-danger *]
+            input.form-control(type='email', placeholder='', required)
+          div
+            label.mb-1.fw-700
+              i.fal.fa-fw.fa-map-marker-alt.me-2.text-primary
+              | Địa chỉ lắp đặt
+            textarea.form-control(rows='2', placeholder='Số nhà(Toà, tầng, căn), Tên đường, Phường (xã), Thành phố')
+        .modal-footer
+          button.btn.btn-light.px-30.me-2(type="button", data-bs-dismiss="modal") Huỷ
+          button.btn.btn-primary.text-white.px-30(type="submit") Đăng ký

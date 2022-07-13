@@ -1,2 +1,36 @@
 mixin footer
   footer.footer
+    .container
+      a.footer__logo(href="./index.html")
+        img(src="./images/logo.png", alt="")
+      .row.g-30
+        .col-lg-4.pe-xl-40
+          .footer__name Công Ty TNHH Viễn Thông IPN
+          ul.f-contact
+            li
+              i.fal.fa-fw.fa-map-marker-alt.me-2.text-primary
+              | Tầng 2 toà nhà Hacisco, số 15/107 Nguyễn Chí Thanh, Hà Nội
+            li
+              i.fal.fa-fw.fa-phone.me-2.text-primary
+              a(href="tel:(84) 1234 567890") (84) 1234 567890
+            li
+              i.fal.fa-fw.fa-envelope.me-2.text-primary
+              | Email: #[a(href="mailto:support@ipn.vn") support@ipn.vn]
+        .col-lg-3
+          h3.footer__heading Hỗ trợ thông tin
+          ul.f-menu
+            each item in ['Chính sách dịch chuyển dịch vụ', 'Tạm ngưng và khôi phục dịch vụ']
+              li
+                a(href="#!")= item
+        .col-lg-3
+          h3.footer__heading Hỗ trợ kỹ thuật
+          ul.f-menu
+            each item in ['Hướng dẫn cài đặt', 'Xử lý sự cố']
+              li
+                a(href="#!")= item
+        .col-lg-2
+          h3.footer__heading Menu
+          ul.f-menu
+            each item in ['Tin tức', 'Liên hệ', 'Tuyển dụng', 'Giới thiệu']
+              li
+                a(href="#!")= item

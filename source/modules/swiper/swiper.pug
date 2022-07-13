@@ -44,23 +44,65 @@ mixin swiper(el, number, hasNav, hasPaging)
 
 mixin banner-slider
   .banner-slider
+    .banner-slider__prev
+      i.fal.fa-angle-left
+    .banner-slider__next
+      i.fal.fa-angle-right
     .banner-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 3; i++)
           .swiper-slide
             a.banner-slider__frame(href="#!")
-              img(src="./images/banner-slide.jpg", alt="")
+              +img(1920, 650)
 
 mixin partner-slider
   .partner-slider
     .partner-slider__prev
-      i.fa.fa-angle-left
+      i.fal.fa-angle-left
     .partner-slider__next
-      i.fa.fa-angle-right
+      i.fal.fa-angle-right
     .partner-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide
             a.partner-slider__frame(href="#!")
-              //- img(src=`./images/partner-${i + 1}.png`, alt="")
-              +img
+              img(src=`./images/partner-${i + 1}.png`, alt="")
+
+mixin category-slider
+  .category-slider
+    .category-slider__prev
+      i.fal.fa-angle-left
+    .category-slider__next
+      i.fal.fa-angle-right
+    .category-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          a.category-slider__item.active(href="#!")
+            .category-slider__icon
+              img(src="./images/cat-icon-1.png", alt="")
+            .category-slider__label CÂU HỎI THƯỜNG GẶP
+        .swiper-slide
+          a.category-slider__item(href="#!")
+            .category-slider__icon
+              img(src="./images/cat-icon-2.png", alt="")
+            .category-slider__label HƯỚNG DẪN SỬ DỤNG
+        .swiper-slide
+          a.category-slider__item(href="#!")
+            .category-slider__icon
+              img(src="./images/cat-icon-3.png", alt="")
+            .category-slider__label LỊCH PHÁT SÓNG
+        .swiper-slide
+          a.category-slider__item(href="#!")
+            .category-slider__icon
+              img(src="./images/cat-icon-4.png", alt="")
+            .category-slider__label HƯỚNG DẪN THỦ TỤC
+        .swiper-slide
+          a.category-slider__item(href="#!")
+            .category-slider__icon
+              img(src="./images/cat-icon-5.png", alt="")
+            .category-slider__label QUẢN LÝ CHẤT LƯỢNG DỊCH VỤ
+        .swiper-slide
+          a.category-slider__item(href="#!")
+            .category-slider__icon
+              img(src="./images/cat-icon-6.png", alt="")
+            .category-slider__label ĐIỀU KHOẢN BẢO MẬT

@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+  article.banner
+    img(src="./images/banner-1.jpg", alt="")
+
+  section.section
+    .container
+      h2.section__title Dịch vụ Internet Leased Line
+      .section__desc Eligendi doloribus recusandae architecto quisquam consequuntur animi soluta at?
+      .row.g-30.g-xxl-40
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.1s")
+          .service
+            img.service__icon(src="./images/service-icon-4.png", alt="")
+            .service__label Tốc độ
+            .service__desc Accusamus corporis tenetur eligendi voluptatem veniam quam vitae, expedita accusantium culpa ullam provident delectus necessitatibus iste voluptatibus voluptas ducimus molestiae ratione temporibus!
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.2s")
+          .service
+            img.service__icon(src="./images/service-icon-5.png", alt="")
+            .service__label Sự linh hoạt
+            .service__desc Accusamus corporis tenetur eligendi voluptatem veniam quam vitae, expedita accusantium culpa ullam provident delectus necessitatibus iste voluptatibus voluptas ducimus molestiae ratione temporibus!
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.3s")
+          .service
+            img.service__icon(src="./images/service-icon-6.png", alt="")
+            .service__label Hỗ trợ kỹ thuật
+            .service__desc Quae sit aperiam autem magnam, sint error dolore in natus saepe doloremque molestiae mollitia provident deleniti sunt, voluptates, sapiente iste nesciunt nihil?
+
+  +s-specification
+  +s-pros('Lợi thế của dịch vụ kênh thuê riêng')
+  +addons
+  +contact-boxes

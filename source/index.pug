@@ -1,3 +1,82 @@
 extends layout/page
 
 block content
+  // banner slider
+  +banner-slider
+
+  // products
+  section.section
+    .container
+      h2.section__title Sản phẩm dịch vụ
+      .row
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.1s")
+          +product('FTTH (Fibe to the home)')
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.2s")
+          +product('icloud')
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.3s")
+          +product('Hạ Tầng CNTT')
+
+  // intro
+  section.section
+    +img(1920, 300, 'section__bg')
+    .container
+      h2.section__title.text-white Mở lối tiên phong
+        br
+        | Vì một cuộc sống đơn giản, hài hoà hơn
+
+      .row.g-3.g-md-30
+        .col-4.wow.fadeInUp(data-wow-delay="0.1s")
+          .intro
+            .intro__icon
+              img(src="./images/icon-list.png", alt="")
+            .intro__number 20
+            .intro__label Khối chính phủ
+        .col-4.wow.fadeInUp(data-wow-delay="0.2s")
+          .intro
+            .intro__icon
+              img(src="./images/icon-growth.png", alt="")
+            .intro__number 61
+            .intro__label Khối doanh nghiệp
+        .col-4.wow.fadeInUp(data-wow-delay="0.3s")
+          .intro
+            .intro__icon
+              img(src="./images/icon-building.png", alt="")
+            .intro__number 135
+            .intro__label Dự án đã thực hiện
+
+  // customers
+  section.section
+    .container
+      nav.partner-tabs
+        .partner-tabs__wrapper
+          .partner-tabs__label
+            i.fas.fa-th.me-2
+            | Khách hàng & đối tác
+          ul.nav
+            li.nav-item
+              a.nav-link.active(href='#partner-tab-1', data-bs-toggle='tab') Tài chính ngân hàng
+            li.nav-item
+              a.nav-link(href='#partner-tab-2', data-bs-toggle='tab') Tập đoàn - tổng công ty
+            li.nav-item
+              a.nav-link(href='#partner-tab-3', data-bs-toggle='tab') Tổ chức chính phủ
+            li.nav-item
+              a.nav-link(href='#partner-tab-4', data-bs-toggle='tab') Doanh nghiệp SME
+
+      .tab-content
+        #partner-tab-1.tab-pane.fade.show.active
+          +partner-slider
+        #partner-tab-2.tab-pane.fade
+          +partner-slider
+        #partner-tab-3.tab-pane.fade
+          +partner-slider
+        #partner-tab-4.tab-pane.fade
+          +partner-slider
+
+  // news
+  section.section
+    .container
+      h2.section__title Tin tức khuyến mãi
+      .row.g-30
+        - for(let i = 0; i < 3; i++)
+          .col-lg-4.col-md-6.wow.fadeInRight(data-wow-delay=`${0.1 * i + 0.1}s`)
+            +news

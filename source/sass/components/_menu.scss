@@ -90,8 +90,7 @@
   }
 
   &-root > &-item > &-link {
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 600;
   }
 
   @include media-breakpoint-up(xl) {
@@ -161,18 +160,30 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 50px;
       }
     }
 
     &-root > &-item > &-link {
-      font-size: 14px;
-      padding: 12px 0;
+      font-size: 16px;
+      line-height: 72px;
+      height: 72px;
+      padding: 0;
       transition: 0.3s;
     }
 
     &-root > &-item > &-toggle {
       display: none;
+    }
+
+    &-root > &-item-mega > &-link,
+    &-root > &-item-group > &-link {
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;
+        margin-left: 8px;
+      }
     }
 
     &-root > &-item-group > &-sub {
@@ -186,6 +197,104 @@
       display: block;
       animation: menu-float-show 0.2s ease-out;
     }
+
+
+    // menu mega
+    &-item-mega {
+      position: static;
+    }
+
+    &-item-mega:hover &-mega {
+      display: block;
+      animation: fade-in 0.2s ease-out;
+    }
+
+    &-mega {
+      display: none;
+      width: 100%;
+      background-color: $white;
+      z-index: 50;
+      box-shadow: 0 1px 3px rgba(#000, 0.16);
+      padding: 30px;
+      transform-origin: top left;
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      &.show {
+        display: block;
+        animation: fade-in 0.2s ease-out;
+      }
+    }
+
+    &-mega &-sub {
+      display: block;
+      position: static;
+      box-shadow: unset;
+      border-radius: 0;
+      background: 0;
+      min-width: unset;
+      top: auto;
+      left: auto;
+    }
+
+    &-mega &-link {
+      white-space: normal;
+      padding: 0;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    &-mega &-link:hover {
+      color: $primary;
+    }
+
+    &-mega &-toggle {
+      display: none;
+    }
+
+    &-mega &-sub &-sub {
+      display: block;
+      margin-top: 4px;
+    }
+
+    &-mega &-sub &-sub &-link {
+      padding: 8px 0 8px 20px;
+      position: relative;
+      left: 0;
+      transition: 0.3s;
+
+      &:hover {
+        left: 5px;
+      }
+
+      &::before {
+        content: "\f105";
+        font-family: 'Font Awesome 5 Pro';
+        position: absolute;
+        top: 8px;
+        left: 4px;
+      }
+    }
+
+    &-mega > &-sub {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    &-mega > &-sub > &-item > &-link {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &-mega > &-sub > &-item:hover > &-link {
+      background: 0;
+    }
   }
 
   @include media-breakpoint-up(xxl) {
@@ -197,7 +306,6 @@
 
     &-root > &-item > &-link {
       font-size: 16px;
-      padding: 20px 0;
     }
   }
 }

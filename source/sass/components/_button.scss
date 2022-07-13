@@ -79,3 +79,36 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.button {
+  display: inline-block;
+  padding: 10px 24px 10px 70px;
+  background-color: $primary;
+  color: $white;
+  position: relative;
+  border-radius: 22px 4px 4px 22px;
+
+  &:hover {
+    color: $white;
+    background-color: darken($primary, 5%);
+  }
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    border: 1px solid $white;
+    background-color: $primary;
+    border-radius: 50%;
+  }
+
+  &:hover i {
+    background-color: darken($primary, 5%);
+  }
+}

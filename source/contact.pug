@@ -1,0 +1,38 @@
+extends layout/page
+
+block content
+  article.banner
+    img(src="./images/banner-1.jpg", alt="")
+    .banner__footer
+      .container
+        nav.banner__nav
+          a(href="./help.html") HỖ TRỢ THÔNG TIN
+          a(href="./help-2.html") HỖ TRỢ KỸ THUẬT
+          a.active(href="./contact.html") LIÊN HỆ 24/7
+
+  section.section.pb-3
+    .container
+      .row.g-30
+        .col-lg-7.wow.fadeInLeft(data-wow-delay="0.1s")
+          .ct-title
+            i.fa.fa-lg.fa-map-marker-alt.me-3.text-primary
+            | Địa chỉ công ty
+          .ratio(style="height: 300px")
+            iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+        .col-lg-5.wow.fadeInRight(data-wow-delay="0.1s")
+          .ct-logo
+            img(src="./images/logo.png", alt="")
+          .border-bottom.mb-30
+          .footer__name Công Ty TNHH Viễn Thông IPN
+          ul.f-contact
+            li
+              i.fal.fa-fw.fa-map-marker-alt.me-2.text-primary
+              | Tầng 2 toà nhà Hacisco, số 15/107 Nguyễn Chí Thanh, Hà Nội
+            li
+              i.fal.fa-fw.fa-phone.me-2.text-primary
+              a(href="tel:(84) 1234 567890") (84) 1234 567890
+            li
+              i.fal.fa-fw.fa-envelope.me-2.text-primary
+              | Email: #[a(href="mailto:support@ipn.vn") support@ipn.vn]
+
+  +contact-boxes

@@ -1,0 +1,37 @@
+extends layout/page
+
+block content
+  article.banner
+    img(src="./images/banner-1.jpg", alt="")
+
+  section.section.bg-light
+    .container
+      h2.section__title Dịch vụ Kênh cáp quang - FTTH
+      .section__desc Cumque error voluptatibus incidunt minima aperiam vitae ab quaerat saepe accusantium tempore. Iusto?
+      .row.g-30.g-xxl-40
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.1s")
+          .service
+            img.service__icon(src="./images/service-icon-1.png", alt="")
+            .service__label Tốc độ
+            .service__desc Consectetur adipisicing elit. Accusamus corporis tenetur eligendi voluptatem veniam quam vitae, expedita accusantium culpa ullam provident delectus necessitatibus iste voluptatibus voluptas ducimus molestiae ratione temporibus!
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.2s")
+          .service
+            img.service__icon(src="./images/service-icon-2.png", alt="")
+            .service__label Sự linh hoạt
+            .service__desc Accusamus corporis tenetur eligendi voluptatem veniam quam vitae, expedita accusantium culpa ullam provident delectus necessitatibus iste voluptatibus voluptas ducimus molestiae ratione temporibus!
+        .col-md-4.wow.fadeInUp(data-wow-delay="0.3s")
+          .service
+            img.service__icon(src="./images/service-icon-3.png", alt="")
+            .service__label Hỗ trợ kỹ thuật
+            .service__desc Hệ thống giám sát 24/7
+      .mt-30.text-center
+        a.btn.btn-success.text-white.py-10.px-30.my-2.mx-3(href="#!") Xem báo giá
+        a.button.my-2.mx-3(href=".md-register", data-bs-toggle="modal")
+          i.fal.fa-lg.fa-money-check-edit
+          | Đăng ký tư vấn ngay
+
+  +s-pros('Lợi thế của dịch vụ kênh cáp quang - FTTH')
+  +addons
+  +contact-boxes
+
+  +md-register
