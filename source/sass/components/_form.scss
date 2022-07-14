@@ -554,16 +554,21 @@
   &__title {
     color: $primary;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
   }
 
   @include media-breakpoint-up(xl) {
     &__title {
       font-size: 28px;
-      margin-bottom: 30px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &__title {
+      font-size: 32px;
     }
   }
 }

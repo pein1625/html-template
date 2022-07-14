@@ -3,7 +3,7 @@
 
   &__title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     text-transform: uppercase;
     color: $primary;
@@ -53,7 +53,7 @@
 
   @include media-breakpoint-up(xl) {
     &__title {
-      font-size: 30px;
+      font-size: 36px;
     }
   }
 
@@ -61,7 +61,7 @@
     font-size: 16px;
 
     &__title {
-      font-size: 40px;
+      font-size: 48px;
       margin-bottom: 30px;
     }
 

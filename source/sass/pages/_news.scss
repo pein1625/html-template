@@ -46,9 +46,15 @@
 
     a {
       display: block;
-      padding: 16px 24px;
+      padding: 16px 20px;
       font-size: 16px;
       text-align: center;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    a {
+      font-size: 20px;
     }
   }
 }

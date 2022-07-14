@@ -44,6 +44,10 @@
     font-weight: 700;
   }
 
+  &--recruit &__title {
+    font-weight: 600;
+  }
+
   @include media-breakpoint-up(xl) {
     &__title {
       font-size: 30px;
@@ -51,6 +55,10 @@
 
     &__subtitle {
       font-size: 20px;
+    }
+
+    &--recruit &__title {
+      font-size: 36px;
     }
   }
 
@@ -63,6 +71,10 @@
 
     &__subtitle {
       font-size: 24px;
+    }
+
+    &--recruit &__title {
+      font-size: 48px;
     }
   }
 }

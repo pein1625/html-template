@@ -324,7 +324,7 @@
   }
 
   &__title {
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -340,7 +340,7 @@
     }
 
     &__title {
-      font-size: 30px;
+      font-size: 36px;
     }
 
     &__desc {
@@ -511,6 +511,7 @@
   &__desc {
     margin-top: 0.5em;
     margin-bottom: 1em;
+    text-align: justify;
   }
 
   &__link {
