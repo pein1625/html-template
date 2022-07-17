@@ -82,16 +82,22 @@
   }
 
   @include media-breakpoint-up(xl) {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     // width: 260px;
+    min-width: 240px;
     position: relative;
     top: auto;
     right: auto;
     left: auto;
     bottom: auto;
     padding: 0;
-    margin-left: 40px;
+    margin-left: 24px;
     overflow: hidden;
+
+    .input-group {
+      width: auto;
+    }
 
     .form-control {
       height: 40px;
@@ -107,7 +113,7 @@
     }
 
     &:hover .form-control {
-      width: 240px;
+      width: 200px;
       margin-right: 0;
     }
 
@@ -135,5 +141,10 @@
 
   @include media-breakpoint-up(xxl) {
     margin-left: 50px;
+    min-width: 280px;
+
+    &:hover .form-control {
+      width: 240px;
+    }
   }
 }

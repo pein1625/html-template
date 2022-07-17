@@ -172,7 +172,7 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 50px;
+        margin-right: 40px;
       }
     }
 
@@ -212,6 +212,12 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    &-root > &-item {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+
     &-root > &-item > &-link {
       font-size: 16px;
     }
