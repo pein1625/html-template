@@ -10,45 +10,63 @@ block content
               i.fal.fa-times
           .modal-body
             .popup__frame.ratio.ratio-16x9
-              iframe(src="./list.html", frameborder="0")
+              .list
+                img.list__bg-1(src="./images/layout-bg-1.png", alt="")
+                img.list__bg-2(src="./images/layout-bg-2.png", alt="")
+                form.list__search
+                  .input-group
+                    span.input-group-text
+                      i.fal.fa-search
+                    input.form-control(type="text")
+                    button.input-group-text Tìm kiếm
+                .list__body
+                  .list__content
+                    - for(let i = 0; i < 12; i++)
+                      .list__item
+                        .list__name #{i + 1}. Mã căn tương ứng
+                        a.list__btn(href="#!") Vị trí
 
-  .intro
-    .intro__header
-      a.intro__logo(href="#!")
-        img(src="./images/logo.png", alt="")
-    img.intro__img(src="./images/intro-bg.jpg", alt="")
-    img.intro__img(src="./images/search-page-bg.jpg", alt="")
-    .intro__content
-      img.intro__content-bg(src="./images/content-path.png", alt="")
-      .intro__content-header
-        button.intro__content-close(type="button")
+                nav.custom-pagination.d-flex.justify-content-center.mt-3
+                  +pagination
+
+  .intro-wrapper
+    .intro
+      .intro__header
+        a.intro__logo(href="#!")
+          img(src="./images/logo.png", alt="")
+      img.intro__img(src="./images/intro-bg.jpg", alt="")
+      img.intro__img(src="./images/search-page-bg.jpg", alt="")
+      .intro__content
+        img.intro__content-bg(src="./images/content-path.png", alt="")
+        .intro__content-header
+          button.intro__content-close(type="button")
+            img(src="./images/button-icon.png", alt="")
+        .intro__content-body
+          .intro__content-title VINHOMES OCEAN PARK 2 - THE CROWN
+          .intro__content-desc
+            p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
+            p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
+
+    form.n-search(action="#!")
+      .input-group
+        span.input-group-text
+          i.fal.fa-fw.fa-search
+        input.form-control(type="text", placeholder="Tìm kiếm")
+      .n-search__dropdown
+        button.n-search__close(type="button")
           img(src="./images/button-icon.png", alt="")
-      .intro__content-body
-        .intro__content-title VINHOMES OCEAN PARK 2 - THE CROWN
-        .intro__content-desc
-          p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
-          p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
+        .subtitle
+          .subtitle__title Subtitle
+          .subtitle__desc Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
+          .subtitle__footer.mt-3
+            label.subtitle__switcher
+              input(type="checkbox")
+              span
+                img.subtitle__sun(src="./images/icon-sun.png", alt="")
+                img.subtitle__moon(src="./images/icon-moon.png", alt="")
 
-  form.n-search(action="#!")
-    .input-group
-      span.input-group-text
-        i.fal.fa-fw.fa-search
-      input.form-control(type="text", placeholder="Tìm kiếm")
-    .n-search__dropdown
-      button.n-search__close(type="button")
-        img(src="./images/button-icon.png", alt="")
-      .subtitle
-        .subtitle__title Subtitle
-        .subtitle__desc Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
-        .subtitle__footer.mt-3
-          label.subtitle__switcher
-            input(type="checkbox")
-            span
-              img.subtitle__sun(src="./images/icon-sun.png", alt="")
-              img.subtitle__moon(src="./images/icon-moon.png", alt="")
-
-          .subtitle__btns.mt-3
-            a.subtitle__btn(href="#!") Tổng mặt bằng
-            a.subtitle__btn.subtitle__btn--white(href="#!") Layout điển hình
+            .subtitle__btns.mt-3
+              a.subtitle__btn(href="#!") Tổng mặt bằng
+              a.subtitle__btn.subtitle__btn--white(href="#!") Layout điển hình
 
   +popup-list

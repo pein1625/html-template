@@ -10,7 +10,25 @@ block content
               i.fal.fa-times
           .modal-body
             .popup__frame.ratio.ratio-16x9
-              iframe(src="./list.html", frameborder="0")
+              .list
+                img.list__bg-1(src="./images/layout-bg-1.png", alt="")
+                img.list__bg-2(src="./images/layout-bg-2.png", alt="")
+                form.list__search
+                  .input-group
+                    span.input-group-text
+                      i.fal.fa-search
+                    input.form-control(type="text")
+                    button.input-group-text Tìm kiếm
+                .list__body
+                  .list__content
+                    - for(let i = 0; i < 12; i++)
+                      .list__item
+                        .list__name #{i + 1}. Mã căn tương ứng
+                        a.list__btn(href="#!") Vị trí
+
+                nav.custom-pagination.d-flex.justify-content-center.mt-3
+                  +pagination
+
   article.search-page
     img.search-page__bg(src="./images/search-page-bg.jpg", alt="")
 

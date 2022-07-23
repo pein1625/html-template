@@ -1,3 +1,14 @@
+.intro-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .intro {
   &__header {
     height: 6px;
@@ -42,7 +53,7 @@
     transform: translateY(-62%);
     transition: 0.3s;
     position: absolute;
-    z-index: 101;
+    z-index: 1001;
     top: 50%;
     right: 0;
 
