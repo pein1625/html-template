@@ -1,22 +1,30 @@
 .breadcrumb {
+  color: #000000;
+
   &-item {
     &,
     & + &::before,
     &.active,
-    &.active::before,
-    a,
-    a:hover {
+    &.active::before {
       color: $gray-800;
+    }
+
+    &::before {
+      font-family: 'Font Awesome 5 Pro';
+      transform: translateY(1px);
+    }
+
+    a {
+      color: #686868;
+    }
+
+    a:hover {
+      color: $secondary;
     }
   }
 
-  &--white .breadcrumb-item,
-  &--white .breadcrumb-item + .breadcrumb-item::before,
-  &--white .breadcrumb-item + .breadcrumb-item.active,
-  &--white .breadcrumb-item + .breadcrumb-item.active::before,
-  &--white .breadcrumb-item a,
-  &--white .breadcrumb-item a:hover {
-    color: $white;
+  @include media-breakpoint-down(xxl) {
+    font-size: 14px;
   }
 }
 
@@ -25,14 +33,36 @@
 
   .page-item {
     &:not(:last-child) {
-      margin-right: 4px;
+      margin-right: 8px;
     }
   }
 
   .page-link {
-    color: $gray-800;
-    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
     border-radius: 4px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 30px;
+    border: 0 !important;
+    background: #D9D9D9;
+    color: $white;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $secondary !important;
+  }
+
+  .page-item.disabled .page-link {
+    background-color: #f6f6f6;
   }
 
   @media (max-width: 767px) {

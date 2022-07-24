@@ -1,0 +1,45 @@
+extends layout/page
+
+block content
+  section.my-40.my-lg-80
+    .container
+      nav.mb-40
+        +breadcrumb('Trang chủ', 'Sản phẩm', 'Băng xoá')
+
+      .row.g-40.g-xxl-60
+        .col-lg-8.col-xl-9.order-lg-1
+          section.pd-detail
+            .row.g-40.g-xxl-60
+              .col-md-6
+                .pd-detail__frame.wow.zoomIn
+                  img(src="./images/product-1.png", alt="")
+              .col-md-6.wow.fadeInRight(data-wow-delay="0.3s")
+                .pd-detail__code Mã sản phẩm: 100 - V012
+                .pd-detail__title Băng xóa Mini Premium
+                .pd-detail__info
+                  p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum non consectetur a erat nam at. Sed arcu non odio euismod lacinia at quis risus.
+                  p
+                    | Thương hiệu: Plus - Nhật Bản
+                    br
+                    | Quy cách đóng gói: Thùng 100 chiếc
+                    br
+                    | Thông số kỹ thuật khác:
+                    br
+                    | Kích cỡ:
+                    br
+                    | Trọng lượng:
+                  p Tình trạng: #[span(style="color: #1ED700") Còn hàng]
+                a.pd-detail__btn.btn.btn-primary(href="#!") LIÊN HỆ TƯ VẤN
+
+          section.section-2.border-top.pt-60.mt-60.pt-lg-80.mt-lg-80
+            h2.section-2__title Sản phẩm liên quan
+            +product-grid(6)
+
+        .col-lg-4.col-xl-3
+          nav.aside.wow.fadeInUp(data-wow-delay="0.3s")
+            h3.aside__heading Danh mục sản phẩm
+            .aside__body
+              +menu-product
+
+          a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+            img(src="./images/banner-aside.jpg", alt="")

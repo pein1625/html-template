@@ -15,10 +15,51 @@ mixin news(img="")
         a.news__link(href="#!") Xem tiếp
           i.fal.fa-angle-right.ms-2
 
+mixin news-2(img='./images/news-1.jpg')
+  .news-2
+    .row.g-3.align-items-center
+      .col-auto
+        a.news-2__frame(href="./news-detail.html")
+          img(src=img, alt="")
+      .col
+        .news-2__info Tin tức | June 10, 2022
+        h3.news-2__title
+          a(href="./news-detail.html") Tiêu đề của bài viết tin tức được rút gọn Tiêu đề của bài viết tin tức được rút gọn
+
+mixin news-3(img='./images/news-1.jpg')
+  .news-3
+    a.news-3__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    .news-3__info Tin tức | June 10, 2022
+    h3.news-3__title
+      a(href="./news-detail.html") Tiêu đề của bài viết tin tức được rút gọn Tiêu đề của bài viết tin tức được rút gọn
+    a.news-3__link(href="#!") Xem tiếp
+      i.fal.fa-angle-right.ms-2
+
 mixin product(img='./images/product-1.png', name='Bìa còng bật 9cm')
   .product
-    a.product__frame(href="#!")
+    a.product__frame(href="./product-detail.html")
       img(src=img, alt="")
     h3.product__name
-      a(href="#!")= name
+      a(href="./product-detail.html")= name
     .product__desc Lorem ipsum dolor sit amet, con sec tetur adipiscing elit.
+
+mixin product-2(img='./images/product-1.png', name='Bìa còng bật 9cm')
+  .product
+    a.product__frame(href="./product-detail.html")
+      img(src=img, alt="")
+    h3.product__name.text-center
+      a(href="./product-detail.html")= name
+
+mixin recruit(img='./images/recruit-1.jpg')
+  .recruit
+    .row.align-items-center
+      .col-sm-auto
+        a.recruit__frame(href="#!")
+          img(src=img, alt="")
+      .col-sm
+        h3.recruit__title
+          a(href="#!") Tiêu đề của bài viết tin tuyển dụng tiêu đề của bài viết tin tuyển dụng tiêu đề của bài viết tin tuyển dụng
+        .recruit__desc Lorem ipsum dolor sit amet, con sec tetur adipiscing elit. Lorem ipsum dolor sit amet, con sec tetur adipiscing elit.
+        a.recruit__link(href="#!") Xem tiếp
+          i.fas.fa-angle-right.ms-2

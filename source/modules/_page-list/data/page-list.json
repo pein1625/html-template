@@ -6,10 +6,6 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
-      },
-      {
         "title": "Sản phẩm",
         "url": "products"
       },
@@ -18,12 +14,16 @@
         "url": "product-detail"
       },
       {
-        "title": "Tin tức",
+        "title": "Tin tức - Sự kiện",
         "url": "news"
       },
       {
-        "title": "Chi tiết tin tức",
+        "title": "Chi tiết bài viết",
         "url": "news-detail"
+      },
+      {
+        "title": "Tuyển dụng - Liên hệ",
+        "url": "recruit"
       },
       {
         "title": "Liên hệ",

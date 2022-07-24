@@ -1,0 +1,29 @@
+extends layout/page
+
+block content
+  +banner('./images/banner-news.jpg', 'Tin tức - Sự kiện')
+
+  section.my-40.mt-lg-50.mb-lg-80
+    .container
+      nav.mb-40
+        +breadcrumb('Trang chủ', 'Tin tức - Sự kiện')
+
+      .row.g-40.g-xxl-60
+        .col-lg-8.col-xl-9.order-lg-1
+          .row.g-3.g-md-40.g-xxl-60
+            - for(let i = 0; i < 9; i++)
+              .col-6.col-xl-4.wow.fadeInUp(data-wow-delay=`${i % 3 * 0.1 + 0.1}s`)
+                +news-3(`./images/news-${i % 6 + 1}.jpg`)
+
+          nav.d-flex.justify-content-center.mt-40.mt-xxl-60
+            +pagination
+
+        .col-lg-4.col-xl-3
+          nav.aside
+            h3.aside__heading Tin nổi bật
+            - for(let i = 0; i < 4; i++)
+              .mb-20.m-last-0.wow.fadeInLeft(data-wow-delay=`${i * 0.1}s`)
+                +news-2
+
+          a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+            img(src="./images/banner-aside-2.jpg", alt="")

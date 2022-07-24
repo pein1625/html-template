@@ -1,0 +1,29 @@
+mixin banner(bg='', title='')
+  article.banner
+    img.banner__bg(src=bg, alt="")
+    .container
+      .banner__title.wow.fadeInRight(data-wow-delay="0.1s")= title
+
+mixin menu-product
+  ul.menu-product
+    each item in ["Băng xóa","Băng dán","Bấm kim","File bìa nhựa lưu hồ sơ","File giấy","Dao rọc giấy","Kéo văn phòng","Kẹp từ","Bút chì","Bút bi","Bút nhớ dòng","Gôm, tẩy"]
+      li
+        a(href="#!")= item
+
+mixin product-grid(number=9)
+  .row.g-3.g-md-40.g-xxl-60
+    - for(let i = 0; i < number; i++)
+      .col-6.col-xl-4.wow.fadeInUp(data-wow-delay=`${i % 3 * 0.1 + 0.1}s`)
+        +product-2(`./images/product-${i % 15 + 6}.png`)
+
+mixin pd-bar
+  .pd-bar
+    .pd-bar__btns
+      a.pd-bar__btn(href="#!")
+        i.fas.fa-fw.fa-lg.fa-th
+      a.pd-bar__btn(href="#!")
+        i.fas.fa-fw.fa-lg.fa-th-list
+    select.pd-bar__sort.form-select
+      option Sắp xếp theo
+      option Giá tăng dần
+      option Giá giảm dần

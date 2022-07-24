@@ -1,0 +1,47 @@
+extends layout/page
+
+block content
+  section.my-40.my-lg-80
+    .container
+      nav.mb-40
+        +breadcrumb('Trang chủ', 'Tin tức - Sự kiện', 'Tiêu đề của bài viết')
+
+      .row.g-40.g-xxl-60
+        .col-lg-8.col-xl-9.order-lg-1
+          article.post
+            .post__category Tin tức
+            h1.post__title Tiêu đề của bài viết
+            .post__time Date: 24/06/2022
+            .post__content
+              p.text-center
+                img(src="./images/post-img.jpg", alt="")
+              h2 Tiêu đề cấp 2
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nam dicta illo recusandae neque facilis ullam adipisci at tempore voluptatum animi porro placeat esse, atque tempora consequatur doloremque quia exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, illum ipsa praesentium impedit quasi, enim error, necessitatibus molestiae voluptates sint facere asperiores unde placeat id tempora inventore saepe optio repellat?
+              h3 Tiêu đề cấp 3
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, tempora excepturi repudiandae itaque iusto saepe soluta fugit aliquid explicabo sit dicta autem ad beatae magni voluptas provident dolor magnam ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. At ullam laboriosam illo labore distinctio non et cupiditate voluptatem quis eaque amet inventore ipsum nam itaque fuga architecto doloribus, repellendus error!
+            .post__footer
+              span Chia sẻ bài viết:
+              a.d-inline-flex.ms-3(href="#!")
+                img(src="./images/icon-facebook.png", alt="")
+              a.d-inline-flex.ms-3(href="#!")
+                img(src="./images/icon-google-plus.png", alt="")
+              a.d-inline-flex.ms-3(href="#!")
+                img(src="./images/icon-twitter.png", alt="")
+
+
+        .col-lg-4.col-xl-3
+          nav.aside
+            h3.aside__heading Tin nổi bật
+            - for(let i = 0; i < 4; i++)
+              .mb-20.m-last-0.wow.fadeInLeft(data-wow-delay=`${i * 0.1}s`)
+                +news-2
+
+          a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+            img(src="./images/banner-aside-2.jpg", alt="")

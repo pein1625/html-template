@@ -1,0 +1,79 @@
+extends layout/page
+
+block content
+  +banner('./images/banner-recruit.jpg', 'Tuyển dụng - Liên hệ')
+
+  section.my-40.mt-lg-50.mb-lg-80
+    .container
+      nav.mb-40
+        +breadcrumb('Trang chủ', 'Tuyển dụng - Liên hệ')
+
+      .row.g-40.g-xxl-60
+        .col-lg-8.col-xl-9
+          - for(let i = 0; i < 3; i++)
+            .mb-30.m-last-0.wow.fadeInLeft(data-wow-delay=`${i * 0.1}s`)
+              +recruit(`./images/recruit-${i % 3 + 1}.jpg`)
+
+          nav.d-flex.justify-content-center.mt-30.mt-xl-60.mt-xxl-80
+            +pagination
+
+        .col-lg-4.col-xl-3
+          a.as-banner.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+            img(src="./images/recruit-banner-2.jpg", alt="")
+
+          a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+            img(src="./images/recruit-banner-3.jpg", alt="")
+
+  section.section.py-0.my-80
+    .container
+      h2.section__title.text-start.text-primary Liên hệ với chúng tôi
+      .row.g-40.g-xxl-60
+        .col-lg-6.wow.fadeInLeft(data-wow-delay="0.3s")
+          form.contact-form(action="")
+            .row.g-20
+              .col-md-4
+                input.form-control(type="text", placeholder="Họ và tên*", required)
+              .col-md-4
+                input.form-control(type="text", placeholder="Số điện thoại*", required)
+              .col-md-4
+                input.form-control(type="text", placeholder="Địa chỉ email*", required)
+              .col-12
+                textarea.form-control(rows='4', placeholder='Ghi chú *', required)
+              .col-12.text-end
+                button.btn.btn-primary(type="submit") Gửi câu hỏi
+
+        .col-lg-6.wow.fadeInRight(data-wow-delay="0.3s")
+          section.contact-info
+            h3.contact-info__title Công ty Cổ phần Thương mại và Thiết bị văn phòng Minh Nam
+            ul.f-menu
+              li
+                .row.g-2
+                  .col-auto
+                    i.fas.fa-fw.fa-lg.fa-home.text-primary
+                  .col Lô VP số 1, Tầng 5 Tòa nhà Luxury Park Views, Đường Phạm Văn Bạch, Phường Yên Hòa, Quận Cầu Giấy, Thành phố Hà Nội
+              li
+                .row.g-2
+                  .col-auto
+                    i.fas.fa-fw.fa-lg.fa-envelope.text-primary
+                  .col #[a(href="mailto:minhnam@minhnamhn.com.vn") minhnam@minhnamhn.com.vn]
+              li
+                .row.g-2
+                  .col-auto
+                    i.fas.fa-fw.fa-lg.fa-phone-square-alt.text-primary
+                  .col.d-flex.flex-wrap.justify-content-between #[span.d-inline-block #[a(href="tel:(+84) 08 3939 5568") (+84) 08 3939 5568]] &nbsp;&nbsp; #[span.d-inline-block #[a(href="tel:(+84) 0243 2272 111") (+84) 0243 2272 111]] &nbsp;&nbsp; #[span.d-inline-block Fax: #[a(href="tel:(+84) 0243 2272 777") (+84) 0243 2272 777]]
+
+            .d-flex.flex-wrap.align-items-center.mt-4
+              span.me-3 Kết nối với chúng tôi:
+
+              nav.f-social
+                a(href="#!")
+                  img(src="./images/icon-facebook.png", alt="")
+                a(href="#!")
+                  img(src="./images/icon-zalo.png", alt="")
+                a(href="#!")
+                  img(src="./images/icon-youtube.png", alt="")
+
+  section.my-80.wow.fadeInUp(data-wow-delay="0.3s")
+    .container
+      .ratio(style="height: 450px;")
+        iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
