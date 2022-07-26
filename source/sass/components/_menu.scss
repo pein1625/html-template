@@ -161,14 +161,42 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 1px;
       }
     }
 
     &-root > &-item > &-link {
-      font-size: 14px;
-      padding: 12px 0;
+      font-size: 12px;
+      color: $white;
+      padding: 0 10px;
       transition: 0.3s;
+      line-height: 54px;
+      position: relative;
+      z-index: 1;
+      overflow: visible;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: $primary;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transform: skewX(-20deg) rotateY(90deg);
+        transition: 0.4s;
+        opacity: 0;
+      }
+
+      &:hover,
+      &.active {
+        &::before {
+          opacity: 1;
+          transform: skewX(-20deg) rotateY(0);
+        }
+      }
     }
 
     &-root > &-item > &-toggle {
@@ -189,15 +217,17 @@
   }
 
   @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
     &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
+      font-size: 14px;
+      line-height: 70px;
+    }
+  }
+
+  @media (min-width: 1599px) {
+    &-root > &-item > &-link {
+      font-size: 14px;
+      padding: 0 16px;
+      line-height: 70px;
     }
   }
 }

@@ -1,14 +1,29 @@
 mixin product
   .product
     .product__frame
-      img(src="./images/product-1.jpg", alt="")
-      img(src="./images/product-1-2.jpg", alt="")
+      img.product__img-1(src="./images/product-1-1.webp", alt="")
+      img.product__img-2(src="./images/product-1-2.webp", alt="")
+      .product__sale -36%
     .product__body
-      .product__name Thớt nghiến đá cao bằng 29 x 2,5 - TN2925 / HTX DAO PHÚC SEN
-      .product__desc DAO THÁI KIỂU 03 - GT03M Dao thái kiểu 03 - GT03M là một Một sản phẩm thuộc dòng dao chuyên thái. Lưỡi dao được rèn thủ công từ thép nhíp xe ô tô với ưu điểm của loại thép carbo...
+      h3.product__name
+        a(href="#!")  Thớt nghiến đá cao bằng 29 x 2,5 - TN2925 / HTX DAO PHÚC SEN
+      .product__desc-wrap
+        .product__desc DAO THÁI KIỂU 03 - GT03M Dao thái kiểu 03 - GT03M là một Một sản phẩm thuộc dòng dao chuyên thái. Lưỡi dao được rèn thủ công từ thép nhíp xe ô tô với ưu điểm của loại thép carbo...
       .product__price
-        span 190,000₫
-        del 190,000₫
+        span 1,190,000₫
+        del 1,190,000₫
       a.product__btn(href="#!")
         i.fal.fa-cart-plus.me-2
         | Thêm vào giỏ
+
+mixin product-2
+  .product-2
+    .row.g-2
+      .col-auto
+        a.product-2__frame(href="./product-detail.html")
+          img(src="./images/product-1-1.webp", alt="")
+      .col
+        h3.product-2__name
+          a(href="./product-detail.html") Dao thái kiểu 03 cán mun
+        .product-2__info Số lượng: 1
+        .product-2__info Giá/sp: 229,000₫

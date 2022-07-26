@@ -43,23 +43,37 @@
 }
 
 .search {
-  padding: 16px 20px;
-  border-top: 1px solid #aaa;
-  background-color: $light;
+  display: none;
+  padding: 8px 16px;
+  background-color: rgba(#000, 0.75);
+  box-shadow: 0 1px 10px rgba(#000, 0.3);
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  width: calc(100% + 30px);
 
   .form-control {
     border-right: 0;
+    border: 0;
 
     &:focus {
       box-shadow: unset;
     }
   }
 
-  .form-control:focus ~ .input-group-text {
-    border-color: $input-focus-border-color;
+  .input-group-text {
+    border: 0;
+    background-color: $primary;
+    color: $white;
+    border-radius: 4px !important;
+    margin-left: 0;
   }
 
-  @media (min-width: 1200px) {
-    display: none;
+  @include media-breakpoint-up(xl) {
+    width: 300px;
+    top: calc(100% + 2px);
+    left: auto;
+    right: 0;
+    padding: 0;
   }
 }

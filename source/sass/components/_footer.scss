@@ -1,0 +1,105 @@
+.footer {
+  padding: 100px 0 0;
+  border-top: 2px solid $primary;
+
+  &__logo {
+    display: inline-flex;
+    margin-bottom: 24px;
+
+    img {
+      height: 45px;
+    }
+  }
+
+  &__heading {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $primary;
+    margin-bottom: 24px;
+  }
+
+  &__end {
+    padding: 50px 0;
+    margin-top: 30px;
+    border-top: 1px solid $border-color;
+    color: $white;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding-top: 50px;
+  }
+}
+
+.f-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: $white;
+  font-weight: 400;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.f-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    &:not(:last-child) {
+      position: relative;
+      margin-right: 20px;
+    }
+  }
+
+  a {
+    color: $primary;
+  }
+}
+
+.f-youtube {
+  color: #555;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &__frame {
+    @include frame('rect', 100%);
+    width: 50px;
+  }
+
+  &__title {
+    height: 100%;
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      max-width: 100px;
+      border-bottom: 1px solid $primary;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

@@ -5,40 +5,45 @@ block content
   +banner-slider
 
   // pros
-  section.section
+  section.section.section--light
     .container
       .row.g-30
         .col-md-4
           .pros
             .pros__title BẢO VỆ KHÁCH HÀNG, AN TOÀN MUA BÁN
             .pros__content HTX DAO PHÚC SEN “Nói không với hàng kém chất lượng" , hoạt động bền vững, lâu dài, tuân thủ pháp luật và duy nhất dưới tên thương hiệu HTX DAO PHÚC SEN đã được pháp luật bảo hộ, Tư vấn hỗ trợ khách hàng duy nhất qua số điện thoại: 0987.240.733 . Mọi hoạt động khác xưng danh HTX DAO PHÚC SEN được coi là giả mạo.
-            img.pros__icon(src="./images/pros-icon-1.png", alt="")
+            img.pros__icon(src="./images/pros-icon-1.webp", alt="")
         .col-md-4
           .pros
             .pros__title MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC
             .pros__content Miễn cước vận chuyển TOÀN QUỐC cho đơn hàng có giá trị từ 250.000đ trở lên ( Tối đa 40.000đ ). Quý khách hàng lưu ý: Không áp dụng đồng thời .Không áp dụng đồng thời cùng lúc hai chương trình khuyến mãi. Khách hàng được kiểm tra hàng trước khi thanh toán cho đơn vị vận chuyển.
-            img.pros__icon(src="./images/pros-icon-2.png", alt="")
+            img.pros__icon(src="./images/pros-icon-2.webp", alt="")
         .col-md-4
           .pros
             .pros__title HỖ TRỢ ĐỔI TRẢ BẢO HÀNH TOÀN QUỐC
             .pros__content Đổi trả sản phẩm trong vòng 7 ngày đầu tiên kể từ khi nhận hàng nếu không ưng ý, Áp dụng các sản phẩm phải còn nguyên tem,  nguyên hóa đơn và chưa qua sử dụng. Các sản phẩm đã qua sử dụng thực hiện theo chính sách bảo hành sửa chữa của HTX DAO PHÚC SEN.
-            img.pros__icon(src="./images/pros-icon-3.png", alt="")
+            img.pros__icon(src="./images/pros-icon-3.webp", alt="")
 
   // products
-  each item in ["Khuyến mãi hot trong ngày","Bộ dao đủ món cho mọi nhà","Dao thái, lọc sắc bén","Dao chặt gà, vịt ngọt lịm","Dao chặt xương bền chắc","Dao mèo, dao đi rừng, nông cụ","Đá mài, thớt, phụ kiện"]
-    section.section
+  each item, index in ["Khuyến mãi hot trong ngày","Bộ dao đủ món cho mọi nhà","Dao thái, lọc sắc bén","Dao chặt gà, vịt ngọt lịm","Dao chặt xương bền chắc","Dao mèo, dao đi rừng, nông cụ","Đá mài, thớt, phụ kiện"]
+    section.section(class=index?'pt-0':'')
       .container
-        h2.section__title= item
-        .section__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum nihil in consectetur vero maxime! Corrupti, corporis reiciendis sit, beatae quidem possimus illum quasi iusto, tempore illo odit. Harum, labore iusto.
-        .row.g-30
+        .section__header
+          .section__title-wrap
+            h2.section__title
+              span= item
+          .section__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum nihil in consectetur vero maxime! Corrupti, corporis reiciendis sit, beatae quidem possimus illum quasi iusto, tempore illo odit. Harum, labore iusto.
+        .row.g-3.g-lg-30
           - for(let i = 0; i < 6; i++)
             .col-6.col-md-4
               +product
-
         .text-center.mt-30
           a.button(href="./products.html") Xem thêm
 
-  section.section
+  section.section.section--light
     .container
-      h2.section__title Thương hiệu
-      .section__desc Các thương hiệu mà cửa hàng chúng tôi đang cung cấp
+      .section__header
+        .section__title-wrap
+          h2.section__title
+            span Thương hiệu
+        .section__desc Các thương hiệu mà cửa hàng chúng tôi đang cung cấp

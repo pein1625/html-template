@@ -4,11 +4,34 @@ include ../menu/menu
 mixin header
   header.header
     .header__wrapper
-      .container
+      .container-fluid
         .header__inner
           a.header__logo(href="./index.html")
             img(src="./images/logo.webp", alt="")
           .header__elements
             +navbar
               +menu(menu)
-            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+            .h-dropdown.ms-2
+              button.h-dropdown__toggle.js-search-toggle
+                i.fal.fa-fw.fa-search
+            +search
+            .h-dropdown.ms-2
+              button.h-dropdown__toggle
+                i.fal.fa-fw.fa-user
+              .h-dropdown__menu
+                a.h-dropdown__link(href="#!") Đăng nhập
+                a.h-dropdown__link(href="#!") Đăng ký
+            .h-dropdown.ms-2
+              button.h-dropdown__toggle
+                i.fal.fa-fw.fa-shopping-cart
+              .h-dropdown__menu
+                .h-dropdown__list
+                  - for(let i = 0; i < 4; i++)
+                    +product-2
+                .h-dropdown__subtotal
+                  span Tạm tính:
+                  span xxx,xxx₫
+                .h-dropdown__btns
+                  a.h-dropdown__btn(href="#!") Xem giỏ hàng
+                  a.h-dropdown__btn(href="#!") Thanh toán
+            button.btn-toggle.text-white.d-xl-none.js-navbar-toggle.ms-3

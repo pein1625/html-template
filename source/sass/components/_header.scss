@@ -1,6 +1,8 @@
 .header {
   position: relative;
   z-index: $zindex-fixed;
+  background-color: #000000;
+  border-bottom: 2px solid $primary;
 
   &__inner {
     display: flex;
@@ -10,10 +12,10 @@
 
   &__logo {
     display: inline-flex;
-    margin: 16px 0;
+    margin: 12px 0;
 
     img {
-      height: 40px;
+      height: 30px;
     }
   }
 
@@ -21,5 +23,131 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__logo {
+      margin: 15px 0;
+
+      img {
+        height: 40px;
+      }
+    }
+  }
+
+  @media (min-width: 1599px) {
+    &__logo {
+      img {
+        height: 46px;
+      }
+    }
+  }
+}
+
+.h-dropdown {
+  position: relative;
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 54px;
+    color: $white;
+    background: 0;
+    border: 0;
+  }
+
+  &__menu {
+    display: none;
+    min-width: 160px;
+    max-width: 100vw;
+    position: absolute;
+    top: 100%;
+    right: -15px;
+    background-color: $primary;
+    border-radius: 4px;
+    padding: 6px 0;
+    box-shadow: 0 1px 10px rgba(#000, 0.3);
+
+    &::before {
+      content: '';
+      border: 10px solid transparent;
+      border-bottom-color: $primary;
+      position: absolute;
+      bottom: 100%;
+      right: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $white;
+    padding: 8px 20px;
+
+    &:hover {
+      color: rgba(#fff, 0.8);
+      text-decoration: none;
+      background-color: rgba(#fff, 0.15);
+    }
+  }
+
+  &__subtotal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $white;
+    padding: 8px 12px;
+    border: 2px solid $white;
+    margin: 6px;
+  }
+
+  &__list {
+    max-height: 250px;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 3px;
+      background-color: #f9f9f9;
+    }
+
+    &::-webkit-scrollbar
+    {
+      width: 4px;
+      background-color: #f9f9f9;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 3px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #aaa;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    padding: 0 6px;
+    margin-top: 6px;
+  }
+
+  &__btn {
+    flex: 1;
+    padding: 8px 16px;
+    text-align: center;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover {
+      color: $white;
+      background-color: rgba(#000, 0.3);
+    }
   }
 }

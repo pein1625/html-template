@@ -1,2 +1,48 @@
 mixin footer
   footer.footer
+    .container
+      .row.g-40.g-xxl-60
+        .col-lg-4
+          a.footer__logo(href="./index.html")
+            img(src="./images/logo-footer.webp", alt="")
+          ul.f-contact
+            li
+              .row.g-3
+                .col-auto
+                  i.fas.fa-fw.fa-map-marker-alt.text-primary
+                .col Địa chỉ: Trụ Sở: Phố cũ, thị trấn Quảng Uyên, Huyện Quảng Uyên, Cao Bằng
+            li
+              .row.g-3
+                .col-auto
+                  i.fas.fa-fw.fa-phone.text-primary
+                .col Số điện thoại: #[a(href="tel:0987.240.733") 0987.240.733]
+            li
+              .row.g-3
+                .col-auto
+                  i.fas.fa-fw.fa-envelope.text-primary
+                .col Email: #[a(href="mailto:htxdaophucsen@gmail.com") htxdaophucsen@gmail.com]
+        .col-lg-4
+          h3.footer__heading Fanpage
+          img(src="./images/fanpage.png", alt="")
+        .col-lg-4
+          h3.footer__heading Youtube
+          a.f-youtube(href="https://youtube.com")
+            .row.g-3.align-items-center
+              .col-auto
+                .f-youtube__frame
+                  img(src="./images/logo-sm.webp", alt="")
+              .col
+                .f-youtube__title HTX DAO PHÚC SEN
+
+
+      .footer__end
+        .row.justify-content-between.align-items-center.g-4
+          .col-auto Copyright by HTX DAO PHÚC SEN
+          .col-auto
+            ul.f-nav
+              li
+                a(href="#!") Chính sách đổi trả bảo hành
+              li
+                a(href="#!") Chính sách thanh toán
+              li
+                a(href="#!") Chính sách vận chuyển
