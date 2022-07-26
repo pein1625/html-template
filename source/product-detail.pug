@@ -35,11 +35,12 @@ block content
             h2.section-2__title Sản phẩm liên quan
             +product-grid(6)
 
-        .col-lg-4.col-xl-3
-          nav.aside.wow.fadeInUp(data-wow-delay="0.3s")
-            h3.aside__heading Danh mục sản phẩm
-            .aside__body
-              +menu-product
+        .col-lg-4.col-xl-3.floating-container
+          .floating(data-top="100")
+            nav.aside.wow.fadeInUp(data-wow-delay="0.3s")
+              h3.aside__heading Danh mục sản phẩm
+              .aside__body
+                +menu-product
 
-          a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
-            img(src="./images/banner-aside.jpg", alt="")
+            a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+              img(src="./images/banner-aside.jpg", alt="")

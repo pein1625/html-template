@@ -35,13 +35,13 @@ block content
               a.d-inline-flex.ms-3(href="#!")
                 img(src="./images/icon-twitter.png", alt="")
 
+        .col-lg-4.col-xl-3.floating-container
+          .floating(data-top="100")
+            nav.aside
+              h3.aside__heading Tin nổi bật
+              - for(let i = 0; i < 4; i++)
+                .mb-20.m-last-0.wow.fadeInLeft(data-wow-delay=`${i * 0.1}s`)
+                  +news-2
 
-        .col-lg-4.col-xl-3
-          nav.aside
-            h3.aside__heading Tin nổi bật
-            - for(let i = 0; i < 4; i++)
-              .mb-20.m-last-0.wow.fadeInLeft(data-wow-delay=`${i * 0.1}s`)
-                +news-2
-
-          a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
-            img(src="./images/banner-aside-2.jpg", alt="")
+            a.as-banner.mt-30.wow.fadeInUp(href="#!", data-wow-delay="0.3s")
+              img(src="./images/banner-aside-2.jpg", alt="")
