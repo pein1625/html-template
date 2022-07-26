@@ -2,18 +2,18 @@ extends layout/page
 
 block content
   // banner
-  +banner('./images/banner-about.jpg', 'Trang chủ', 'BỘ DAO BẾP ĐỦ MÓN CHO MỌI NHÀ')
+  +banner('./images/banner-about.jpg', 'BỘ DAO BẾP ĐỦ MÓN CHO MỌI NHÀ', 'Trang chủ', 'BỘ DAO BẾP ĐỦ MÓN CHO MỌI NHÀ')
 
   // content
   section.section
     .container
-      .row.g-30
+      .row.g-30.g-xl-60
         .col-lg-8.col-xl-9.order-lg-1
           section.section-2
             .section-2__header
               h1.section-2__title BỘ DAO BẾP ĐỦ MÓN CHO MỌI NHÀ
-              .form-inline
-                label.me-2 Sắp xếp
+              .d-flex.align-items-center
+                label.text-nowrap.me-2 Sắp xếp
                 select.form-select
                   option Tuỳ chọn
                   option Sản phẩm bán chạy
@@ -24,32 +24,35 @@ block content
                   option Mới nhất
                   option Cũ nhất
 
-            .row.g-30
+            .row.g-3.g-lg-30
               - for(let i = 0; i < 18; i++)
                 .col-6.col-md-4
-                  +product
+                  +product('product--light')
 
-            nav.d-flex.justify-content-center
+            nav.d-flex.justify-content-center.mt-30.mt-xl-50
               +pagination
 
         .col-lg-4.col-xl-3
           section.aside
             h2.aside__title Danh mục
-            ul.as-menu
-              each item in ["TRANG CHỦ","VỀ CHÚNG TÔI","BỘ DAO BẾP","DAO ĐI RỪNG","DAO CHẶT XƯƠNG","DAO THÁI, DAO LỌC","DAO CHẶT GÀ","KHUYẾN MÃI","ĐÁ MÀI, THỚT, ĐẶC SẢN"]
-                li
-                  a(href="#!")= item
+            .aside__body
+              ul.as-menu
+                each item in ["TRANG CHỦ","VỀ CHÚNG TÔI","BỘ DAO BẾP","DAO ĐI RỪNG","DAO CHẶT XƯƠNG","DAO THÁI, DAO LỌC","DAO CHẶT GÀ","KHUYẾN MÃI","ĐÁ MÀI, THỚT, ĐẶC SẢN"]
+                  li
+                    a(href="#!")= item
 
           section.aside
             h2.aside__title Khoảng giá
-            each item in ["Tất cả", "Nhỏ hơn 250,000₫", "Từ 250,000₫ - 300,000₫", "Từ 300,000₫ - 4,000,000₫", "Từ 4,000,000₫ - 6,000,000₫", "Từ 6,000,000₫ - 3,000,000₫", "Lớn hơn 3,000,000₫"]
-              .mb-1.m-last-0
-                +checkbox
-                  = item
+            .aside__body
+              each item in ["Tất cả", "Nhỏ hơn 250,000₫", "Từ 250,000₫ - 300,000₫", "Từ 300,000₫ - 4,000,000₫", "Từ 4,000,000₫ - 6,000,000₫", "Từ 6,000,000₫ - 3,000,000₫", "Lớn hơn 3,000,000₫"]
+                .mb-1.m-last-0
+                  +checkbox
+                    span= item
 
           section.aside
             h2.aside__title Loại sản phẩm
-            each item in ["Dao đi rừng", "BỘ DAO BẾP"]
-              .mb-1.m-last-0
-                +checkbox
-                  = item
+            .aside__body
+              each item in ["Dao đi rừng", "BỘ DAO BẾP"]
+                .mb-1.m-last-0
+                  +checkbox
+                    span= item

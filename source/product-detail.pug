@@ -14,10 +14,8 @@ block content
           .col-lg-6
             // product detail
 
-  section.section
+  section.section.pt-0
     .container
-      h2.section__title
-      .section__desc
       .section__content
         p Bộ dao gồm 4 loại dao khác nhau đáp ứng mọi nhu cầu chế biến cũng như nấu ăn hàng ngày:
           br
@@ -28,24 +26,39 @@ block content
           | - G03TDD dao thái: chuyên thái mỏng thịt, cá , rau củ...
           br
           | - G09TDD dao chuyên lọc bản mỏng nhẹ mũi nhọn giúp cho việc lọc thịt, cá dễ dàng
+        p.text-center
+          img(src="./images/post-img-1.webp", alt="")
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi aspernatur consequuntur consequatur eum alias necessitatibus, explicabo laborum rem magni, excepturi eos voluptas, ut dignissimos vero itaque at! Blanditiis, numquam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorem impedit architecto doloribus error nesciunt a odio iusto sit. Perferendis dolor deserunt maxime libero iusto laudantium mollitia eveniet ex corrupti.
+        p.text-center
+          img(src="./images/post-img-2.jpg", alt="")
+        p.text-center
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi aspernatur consequuntur consequatur eum alias necessitatibus, explicabo laborum rem magni, excepturi eos voluptas, ut dignissimos vero itaque at! Blanditiis, numquam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorem impedit architecto doloribus error nesciunt a odio iusto sit. Perferendis dolor deserunt maxime libero iusto laudantium mollitia eveniet ex corrupti.
+          img(src="./images/post-img-3.jpg", alt="")
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi aspernatur consequuntur consequatur eum alias necessitatibus, explicabo laborum rem magni, excepturi eos voluptas, ut dignissimos vero itaque at! Blanditiis, numquam accusamus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorem impedit architecto doloribus error nesciunt a odio iusto sit. Perferendis dolor deserunt maxime libero iusto laudantium mollitia eveniet ex corrupti.
         p.text-center VIDEO CHI TIẾT SẢN PHẨM:
         .ratio.ratio-16x9
           iframe(width='560' height='315' src='https://www.youtube.com/embed/tYzvbbP0xM0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
 
-  section.section
+  section.section.section--red.pt-0
     .container
-      h2.section__title SẢN PHẨM TƯƠNG TỰ
+      .section__header
+        .section__title-wrap
+          h2.section__title
+            span SẢN PHẨM TƯƠNG TỰ
       .section__desc Các sản phẩm có tính năng tương tự
       .row.g-30
         - for(let i = 0; i < 4; i++)
           .col-6.col-lg-3
-            +product
+            +product('product--light')
 
-  section.section
+  section.section.section--red.pt-0
     .container
-      h2.section__title SẢN PHẨM ĐÃ XEM
+      .section__header
+        .section__title-wrap
+          h2.section__title
+            span SẢN PHẨM ĐÃ XEM
       .section__desc Những sản phẩm của chúng tôi mà bạn đã xem
       .row.g-30
         - for(let i = 0; i < 4; i++)
           .col-6.col-lg-3
-            +product
+            +product('product--light')

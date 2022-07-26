@@ -20,3 +20,9 @@ $(function() {
     $('.h-dropdown__menu').fadeOut('fast');
   });
 });
+
+$(function() {
+  $('.aside__title').on('click', function() {
+    $(this).toggleClass('active').siblings('.aside__body').slideToggle('fast');
+  })
+});

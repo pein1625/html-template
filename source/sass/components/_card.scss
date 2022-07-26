@@ -81,6 +81,7 @@
   &__name {
     @include max-line(2);
     font-size: 12px;
+    font-weight: 700;
     text-transform: uppercase;
     color: $primary;
     margin-bottom: 0;
@@ -109,6 +110,7 @@
 
   &__price {
     font-size: 18px;
+    font-weight: 700;
     padding-top: 15px;
     margin-top: 15px;
     border-top: 1px solid $border-color;
@@ -139,6 +141,31 @@
     &:hover {
       background-color: darken($primary, 10%);
       color: $white;
+    }
+  }
+
+  &--light {
+    border: 0;
+  }
+
+  &--light &__body {
+    border: 1px solid #e9e9e9;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &--light &__desc {
+    color: #5a6069;
+  }
+
+  &--light &__desc-wrap {
+    border-color: #e9e9e9;
+  }
+
+  &--light &__price {
+    border-color: #e9e9e9;
+
+    del {
+      color: #8D939D;
     }
   }
 

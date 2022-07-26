@@ -231,3 +231,25 @@
     }
   }
 }
+
+.as-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  a {
+    color: #5a6069;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
