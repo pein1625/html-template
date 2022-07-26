@@ -1,6 +1,7 @@
 .footer {
   padding: 100px 0 0;
   border-top: 2px solid $primary;
+  background: url('../images/footer-bg.webp') center/cover no-repeat;
 
   &__logo {
     display: inline-flex;

@@ -1,2 +1,6 @@
-mixin banner
+mixin banner(bg='', title='', ...list)
   article.banner
+    .container
+      .banner__title= title
+      .banner__breadcrumb
+        +breadcrumb(...list)

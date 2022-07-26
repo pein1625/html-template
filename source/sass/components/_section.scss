@@ -156,3 +156,22 @@
     }
   }
 }
+
+.about {
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    color: #5a6069;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      font-size: 24px;
+    }
+  }
+}
