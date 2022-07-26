@@ -23,3 +23,17 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.banner-slider', {
+    effect: 'fade',
+    navigation: true,
+    pagination: true,
+    speed: 800,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  });
+});

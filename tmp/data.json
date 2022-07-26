@@ -128,60 +128,36 @@
 			"hasIcon": false
 		},
 		{
-			"text": "Giới thiệu",
-			"url": "./about.html",
-			"submenu": [
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
-				}
-			]
+			"text": "Về chúng tôi",
+			"url": "./about.html"
 		},
 		{
-			"text": "Sản phẩm",
+			"text": "Bộ dao bếp",
 			"url": "./products.html"
 		},
 		{
-			"text": "Dự án",
-			"url": "./projects.html"
+			"text": "Dao đi rừng",
+			"url": "./products.html"
 		},
 		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
+			"text": "Dao chặt xương",
+			"url": "./products.html"
 		},
 		{
-			"text": "Tin tức",
-			"url": "./news.html"
+			"text": "Dao thái, dao lọc",
+			"url": "./products.html"
 		},
 		{
-			"text": "Liên hệ",
-			"url": "./contact.html"
+			"text": "Dao chặt gà",
+			"url": "./products.html"
+		},
+		{
+			"text": "Khuyến mãi",
+			"url": "#!"
+		},
+		{
+			"text": "Đá mài, thớt, đặc sản",
+			"url": "./products.html"
 		}
 	],
 	"pageList": {
@@ -201,18 +177,6 @@
 			{
 				"title": "Chi tiết sản phẩm",
 				"url": "product-detail"
-			},
-			{
-				"title": "Tin tức",
-				"url": "news"
-			},
-			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
-			},
-			{
-				"title": "Liên hệ",
-				"url": "contact"
 			}
 		]
 	}

@@ -16,18 +16,6 @@
       {
         "title": "Chi tiết sản phẩm",
         "url": "product-detail"
-      },
-      {
-        "title": "Tin tức",
-        "url": "news"
-      },
-      {
-        "title": "Chi tiết tin tức",
-        "url": "news-detail"
-      },
-      {
-        "title": "Liên hệ",
-        "url": "contact"
       }
     ]
   }

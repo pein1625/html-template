@@ -1,0 +1,51 @@
+extends layout/page
+
+block content
+  // banner
+  +banner('./images/banner-about.jpg', 'Trang chủ', 'BỘ DAO BẾP ĐỦ MÓN CHO MỌI NHÀ', 'Bộ dao bếp cao cấp - Thép nhíp ô tô - Cán cẩm khâu đồng - CBC / HTX DAO PHÚC SEN')
+
+  // content
+  section.section
+    .container
+      section.pd-detail
+        .row.g-30
+          .col-lg-6
+            // preview
+          .col-lg-6
+            // product detail
+
+  section.section
+    .container
+      h2.section__title
+      .section__desc
+      .section__content
+        p Bộ dao gồm 4 loại dao khác nhau đáp ứng mọi nhu cầu chế biến cũng như nấu ăn hàng ngày:
+          br
+          | - G06TDD dao chặt xương cứng: như xương ống, chân giò, thủ lợn...
+          br
+          | - G05TDD dao chặt xương mềm: như gà , vịt, sườn, băm thịt....
+          br
+          | - G03TDD dao thái: chuyên thái mỏng thịt, cá , rau củ...
+          br
+          | - G09TDD dao chuyên lọc bản mỏng nhẹ mũi nhọn giúp cho việc lọc thịt, cá dễ dàng
+        p.text-center VIDEO CHI TIẾT SẢN PHẨM:
+        .ratio.ratio-16x9
+          iframe(width='560' height='315' src='https://www.youtube.com/embed/tYzvbbP0xM0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+  section.section
+    .container
+      h2.section__title SẢN PHẨM TƯƠNG TỰ
+      .section__desc Các sản phẩm có tính năng tương tự
+      .row.g-30
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-lg-3
+            +product
+
+  section.section
+    .container
+      h2.section__title SẢN PHẨM ĐÃ XEM
+      .section__desc Những sản phẩm của chúng tôi mà bạn đã xem
+      .row.g-30
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-lg-3
+            +product
