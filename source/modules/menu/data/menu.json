@@ -2,7 +2,7 @@
   "menu": [
     {
       "text": "Giới thiệu",
-      "url": "./about.html",
+      "url": "./index.html",
       "active": true
     },
     {
