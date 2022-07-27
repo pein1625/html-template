@@ -7,15 +7,39 @@ block content
   // content
   section.section
     .container
-      section.pd-detail
-        .row.g-30
-          .col-lg-6
-            // preview
-          .col-lg-6
-            // product detail
+      section.pd-detail.mb-50
+        .row.g-30.g-xl-60
+          .col-lg-5
+            +preview
+          .col-lg-7
+            section.pd-detail
+              h1.pd-detail__name Rìu đi rừng R05ATB
+              .pd-detail__info
+                div Mã SP: #[span.text-primary R05ATB]
+                div Thương hiệu: #[span.text-primary HTX DAO PHÚC SEN]
+                div Loại: #[span.text-primary RÌU ĐI RỪNG]
+                div Tình trạng: #[span.text-primary Còn hàng]
+              .pd-detail__price 460,000₫
+              .pd-detail__title
+                span.me-10 Tiêu đề
 
-  section.section.pt-0
-    .container
+                .title-picker
+                  label.title-picker__item
+                    input(type="radio", name="title-picker")
+                    span Default title
+                  label.title-picker__item
+                    input(type="radio", name="title-picker")
+                    span Other title
+
+              .pd-detail__contact
+              .d-flex.flex-wrap.align-items-center
+                .pd-detail__quantity.me-3
+                  +quantity
+                .pd-detail__btns
+                  a.pd-detail__btn(href="#!") Thêm vào giỏ
+                  a.pd-detail__btn(href="#!") Mua ngay
+
+      .pd-label Mô tả sản phẩm
       .section__content
         p Bộ dao gồm 4 loại dao khác nhau đáp ứng mọi nhu cầu chế biến cũng như nấu ăn hàng ngày:
           br

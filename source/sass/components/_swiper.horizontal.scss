@@ -4,9 +4,18 @@
   }
 }
 
+.preview-slider {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .thumb-slider {
   @include slider-nav-2;
   position: relative;
-  max-width: 350px;
   margin: 0 auto;
+
+  .swiper-slide {
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }

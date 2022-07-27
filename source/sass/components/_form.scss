@@ -416,6 +416,39 @@
   }
 }
 
+.title-picker {
+  &__item {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 5px 16px 3px;
+      border-radius: 15px;
+      color: #999;
+      border: 1px solid #e6e6e6;
+    }
+
+    input:checked + span {
+      border-color: $primary;
+      color: $primary;
+    }
+  }
+}
 .form-control,
 .form-select {
   &:focus {
