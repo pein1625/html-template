@@ -144,6 +144,13 @@
     }
   }
 
+  &__toggle-modal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+  }
+
   &--light {
     border: 0;
   }

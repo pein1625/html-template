@@ -65,4 +65,41 @@ $(function () {
       swiper: thumbSlider,
     },
   });
+
+  if (!thumbSlider) return;
+
+  if (window.innerWidth < 992) return;
+
+  $(".js-zoom").ezPlus({
+    borderSize: 1,
+    scrollZoom: true,
+    zoomWindowWidth: 500,
+    zoomWindowHeight: 500,
+  });
+});
+
+$(function() {
+  const imgSliders = addSwiper('.img-slider', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    navigation: true,
+  });
+  if (!(imgSliders && imgSliders.length)) return;
+
+
+  $(document).on('click', '.img-slider__frame', function() {
+    let url = $(this).find('img').attr('src');
+    $(this).closest('.modal-content').find('.md-product__frame img').attr('src', url);
+});
+
+  $('.md-product').on('shown.bs.modal', function() {
+    imgSliders.forEach(slider => {
+      slider.update();
+    });
+    // $(this).on('click', '.img-slider__frame img', function() {
+    //   let url = $(this).attr('src');
+    //   console.log(url);
+    //   $(this).closest('.modal-content').find('.md-product__frame img').attr('src', url);
+    // });
+  });
 });

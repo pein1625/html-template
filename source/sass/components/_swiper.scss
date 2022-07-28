@@ -254,3 +254,15 @@
     }
   }
 }
+
+.img-slider {
+  position: relative;
+  z-index: 1;
+  @include slider-nav-2();
+
+  &__frame {
+    @include frame('rect', 56.25%);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}

@@ -2,10 +2,10 @@ mixin preview-slider
   .preview-slider
     .preview-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 6; i++)
+        - for(let i = 0; i < 5; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
-              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+            .ratio.ratio-3x2.js-zoom(data-zoom-image=`./images/detail-${i + 1}.webp`)
+              img(src=`./images/detail-${i + 1}.webp`, alt="")
 
 mixin thumb-slider
   .thumb-slider
@@ -15,10 +15,10 @@ mixin thumb-slider
       i.fa.fa-angle-right
     .thumb-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 6; i++)
+        - for(let i = 0; i < 5; i++)
           .swiper-slide.bg-white
             .ratio.ratio-3x2
-              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+              img(src=`./images/detail-${i + 1}.webp`, alt="")
 
 mixin preview
   article.preview
@@ -69,3 +69,16 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin img-slider
+  .img-slider
+    .img-slider__prev
+      i.fal.fa-angle-left
+    .img-slider__next
+      i.fal.fa-angle-right
+    .img-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 5; i++)
+          .swiper-slide
+            .img-slider__frame
+              img(src=`./images/detail-${i + 1}.webp`, alt="")

@@ -1,0 +1,26 @@
+mixin md-product
+  #product-1.md-product.modal.fade(tabindex='-1')
+    .modal-dialog.modal-lg.modal-dialog-centered
+      .modal-content
+        .modal-body.position-relative
+          button.md-product__close(type="button", data-dismiss="modal")
+            i.fal.fa-times
+          .row.g-30
+            .col-lg-6
+              .md-product__frame
+                img(src="./images/detail-1.webp", alt="")
+              +img-slider
+            .col-lg-6
+              .md-product__title Thớt nghiến đá cao bằng 29 x 2,5 - TN2925 / HTX DAO PHÚC SEN
+              .md-product__code Mã sản phẩm: TN2925
+              .mt-3
+                .md-product__price
+                  span 190,000₫
+                  del.ms-3 290,000₫
+                div (Bạn đã tích kiệm được 109,000₫)
+              .mt-3
+                .mb-1 Số lượng
+                +quantity
+              .mt-3
+                a.btn.btn-primary.text-white(href="#!") Thêm vào giỏ
+              .mt-1 Hoặc #[a(href="#!") Xem chi tiết]

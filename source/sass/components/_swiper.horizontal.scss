@@ -17,5 +17,10 @@
   .swiper-slide {
     border-radius: 10px;
     overflow: hidden;
+    opacity: 0.5;
+
+    &-thumb-active {
+      opacity: 1;
+    }
   }
 }

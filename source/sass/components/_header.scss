@@ -150,4 +150,10 @@
       background-color: rgba(#000, 0.3);
     }
   }
+
+  &__empty {
+    min-width: 200px;
+    padding: 24px;
+    color: $white;
+  }
 }
