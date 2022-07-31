@@ -14,7 +14,7 @@ mixin head(data)
       if (cssList = data[item].css)
         each css in cssList
           link(rel="stylesheet", href=css)
-    link(rel="stylesheet", type="text/css", href="./css/app.css?v=1.1")
+    link(rel="stylesheet", type="text/css", href="./css/app.css?v=1.2")
 
     // Scripts
     script(src="./js/libs.js", defer)
@@ -23,4 +23,4 @@ mixin head(data)
         each js in jsList
           script(src=js, defer)
     script(src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js", defer)
-    script(src="./js/app.js?v=1.1", defer)
+    script(src="./js/app.js?v=1.2", defer)
