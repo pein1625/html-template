@@ -26,3 +26,13 @@ $(function() {
     $(this).toggleClass('active').siblings('.aside__body').slideToggle('fast');
   })
 });
+
+$(function() {
+  $('.product__toggle-modal').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var target = $(this).data('target');
+    $(target).modal('show');
+  });
+});

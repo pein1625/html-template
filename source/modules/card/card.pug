@@ -3,8 +3,8 @@ mixin product(className='')
     a.product__frame(href="./product-detail.html")
       img.product__img-1(src="./images/product-1-1.webp", alt="")
       img.product__img-2(src="./images/product-1-2.webp", alt="")
-      //- button.product__toggle-modal
-      //-   i.far.fa-search-plus
+      button.product__toggle-modal(type="button", data-target="#md-product-1")
+        i.far.fa-search-plus
       .product__sale -36%
     .product__body
       h3.product__name

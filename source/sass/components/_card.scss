@@ -145,10 +145,30 @@
   }
 
   &__toggle-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: rgba(#fff, 0.9);
+    cursor: pointer;
+    font-size: 20px;
+    background: 0;
+    border: 0;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 4px;
+    left: 4px;
     z-index: 10;
+    transform: translateX(-60px);
+    transition: 0.4s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__frame:hover &__toggle-modal {
+    transform: translateX(0);
   }
 
   &--light {
