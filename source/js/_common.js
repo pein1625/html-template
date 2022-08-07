@@ -108,3 +108,19 @@ $(function() {
     $('#popup-list').modal('show');
   });
 });
+
+$(function() {
+  $('.popup-menu__link').on('click', function(e) {
+    const $link = $(this);
+    const $submenu = $link.siblings('.popup-menu__sublist');
+
+    if (!$submenu.length) return;
+
+    e.preventDefault();
+
+    $link.toggleClass('active');
+    $submenu.slideToggle();
+    $link.parent().siblings('.popup-menu__item').find('.popup-menu__link').removeClass('active');
+    $link.parent().siblings('.popup-menu__item').find('.popup-menu__sublist').slideUp();
+  });
+});

@@ -62,11 +62,15 @@ block content
     button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-layout") Open Layout
     button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-share") Open Share
     button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-list") Open List
-    +popup
-    +popup-share
-    +popup-layout
-    +popup-list
-    +popup-frame
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-intro") Open Intro (mobile)
+    button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-menu") Open Menu
 
     .mt-5
       iframe.rounded.shadow(src="./subtitle.html", frameborder="0", style="width: 230px; height: 320px;")
+
+  +popup
+  +popup-share
+  +popup-layout
+  +popup-list
+  +popup-frame
+  +popup-menu

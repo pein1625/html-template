@@ -180,6 +180,12 @@
     }
   }
 
+  @include media-breakpoint-down(lg) {
+    &__content {
+      display: none;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     &__content {
       display: flex;

@@ -1,0 +1,66 @@
+mixin popup-intro
+  #popup-intro.popup-intro.popup.popup-template.popup-auto-show.modal.fade(tabindex='-1', data-bs-backdrop="false")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        button.popup__close.close(type="button", data-bs-dismiss="modal")
+          i.fal.fa-times
+        .modal-body
+          img.popup-intro__bg(src="./images/content-path.png", alt="")
+          .popup-intro__title VINHOMES OCEAN PARK 2 - THE CROWN
+          .popup-intro__content
+            p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+              br
+              | Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+              br
+              | Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+              br
+              | Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+            p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+              br
+              | Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+              br
+              | Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+
+mixin popup-menu
+  #popup-menu.popup-menu.popup.popup-template.modal.fade(tabindex='-1', data-bs-backdrop="false")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        button.popup__close.close(type="button", data-bs-dismiss="modal")
+          i.fal.fa-times
+        .modal-body.p-0
+          ul.popup-menu__list
+            each item in ['Siêu quần thể đô thị biển', 'VShop2 - The Crown', 'Đại tiện ích', 'Phân khu', 'Tour nội thất']
+              li.popup-menu__item
+                a.popup-menu__link(href="#!")= item
+                ul.popup-menu__sublist
+                  each item2 in ['Phổ biến', 'Vịnh thiên đường', 'Thời đại', 'Vịnh tây', 'Đảo ngọc', 'Vịnh xanh', 'Hải đăng', 'Ánh dương']
+                    li.popup-menu__item
+                      a.popup-menu__link(href="#!")= item2
+
+mixin popup-list
+  #popup-list.popup.popup--list.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          a.close.close--list(href="./list.html")
+            i.fal.fa-times
+        .modal-body
+          .popup__frame.ratio.ratio-16x9
+            .list
+              img.list__bg-1(src="./images/layout-bg-1.png", alt="")
+              img.list__bg-2(src="./images/layout-bg-2.png", alt="")
+              form.list__search
+                .input-group
+                  span.input-group-text
+                    i.fal.fa-search
+                  input.form-control(type="text")
+                  button.input-group-text Tìm kiếm
+              .list__body
+                .list__content
+                  - for(let i = 0; i < 12; i++)
+                    .list__item
+                      .list__name #{i + 1}. Mã căn tương ứng
+                      a.list__btn(href="#!") Vị trí
+
+              nav.custom-pagination.d-flex.justify-content-center.mt-3
+                +pagination

@@ -137,6 +137,7 @@
     padding: 16px;
 
     &__search {
+      border-radius: 4px;
       margin-bottom: 10px;
 
       .form-control {
@@ -146,11 +147,14 @@
       .input-group-text {
         &:first-child {
           font-size: 16px;
+          display: none;
         }
 
         &:last-child {
           font-size: 12px;
           padding: 2px 12px;
+          background-color: $orange-mobile;
+          border-radius: 4px !important;
         }
       }
     }
@@ -162,6 +166,16 @@
     &__btn {
       font-size: 12px;
       padding: 6px 12px;
+      border-radius: 4px;
+      background-color: $orange-mobile;
+    }
+
+    &__bg-1 {
+      display: none;
+    }
+
+    &__bg-2 {
+      width: 40%;
     }
   }
 }
