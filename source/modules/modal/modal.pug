@@ -1,5 +1,5 @@
 mixin popup-intro
-  #popup-intro.popup-intro.popup.popup-auto-show.modal.fade(tabindex='-1', data-bs-backdrop="false")
+  #popup-intro.popup-intro.popup.modal.fade(tabindex='-1', data-bs-backdrop="false")
     .modal-dialog.modal-dialog-centered
       .modal-content
         button.popup__close.close(type="button", data-bs-dismiss="modal")
@@ -23,7 +23,7 @@ mixin popup-intro
 
 mixin popup-menu
   #popup-menu.popup-menu.popup.modal.fade(tabindex='-1', data-bs-backdrop="false")
-    .modal-dialog.modal-dialog-centered
+    .modal-dialog.my-30
       .modal-content
         button.popup__close.close(type="button", data-bs-dismiss="modal")
           i.fal.fa-times
@@ -37,32 +37,32 @@ mixin popup-menu
                     li.popup-menu__item
                       a.popup-menu__link(href="#!")= item2
 
-mixin popup-list
-  #popup-list.popup.popup-list.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        button.popup__close.close(type="button", data-bs-dismiss="modal")
-          i.fal.fa-times
-        .modal-body
-          .popup__frame.ratio.ratio-16x9
-            .list
-              img.list__bg-1(src="./images/layout-bg-1.png", alt="")
-              img.list__bg-2(src="./images/layout-bg-2.png", alt="")
-              form.list__search
-                .input-group
-                  span.input-group-text
-                    i.fal.fa-search
-                  input.form-control(type="text")
-                  button.input-group-text Tìm kiếm
-              .list__body
-                .list__content
-                  - for(let i = 0; i < 12; i++)
-                    .list__item
-                      .list__name #{i + 1}. Mã căn tương ứng
-                      a.list__btn(href="#!") Vị trí
+//- mixin popup-list
+//-   #popup-list.popup.popup-list.modal.fade(tabindex='-1')
+//-     .modal-dialog.modal-dialog-centered
+//-       .modal-content
+//-         button.popup__close.close(type="button", data-bs-dismiss="modal")
+//-           i.fal.fa-times
+//-         .modal-body
+//-           .popup__frame.ratio.ratio-16x9
+//-             .list
+//-               img.list__bg-1(src="./images/layout-bg-1.png", alt="")
+//-               img.list__bg-2(src="./images/layout-bg-2.png", alt="")
+//-               form.list__search
+//-                 .input-group
+//-                   span.input-group-text
+//-                     i.fal.fa-search
+//-                   input.form-control(type="text")
+//-                   button.input-group-text Tìm kiếm
+//-               .list__body
+//-                 .list__content
+//-                   - for(let i = 0; i < 12; i++)
+//-                     .list__item
+//-                       .list__name #{i + 1}. Mã căn tương ứng
+//-                       a.list__btn(href="#!") Vị trí
 
-              nav.custom-pagination.d-flex.justify-content-center.mt-3
-                +pagination
+//-               nav.custom-pagination.d-flex.justify-content-center.mt-3
+//-                 +pagination
 
 mixin popup-layout
   #popup-layout.popup.popup-layout.modal.fade(tabindex='-1')
@@ -110,6 +110,41 @@ mixin popup
         .modal-body.p-0
           .popup__frame.ratio.ratio-16x9
             iframe(src="./post.html", frameborder="0")
+
+mixin popup-text-1
+  #popup-text-1.popup.popup-text.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        button.popup__close.close(type="button", data-bs-dismiss="modal")
+          i.fal.fa-times
+        .modal-body.text-white.text-justify
+          .popup__content
+            p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai.
+            p.mb-2
+              a.popup__btn(href="#!") Tổng mặt bằng
+            p
+              a.popup__btn(href="#!") Layout điển hình
+
+mixin popup-text-2
+  #popup-text-2.popup.popup-text.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        button.popup__close.close(type="button", data-bs-dismiss="modal")
+          i.fal.fa-times
+        .modal-body.text-white.text-justify
+          .popup__content
+            p
+              | Mã căn: XYZ
+              br
+              | Loại nhà: Biệt thự
+              br
+              | Hướng nhà:
+              br
+              | Số tầng
+              br
+              | Diện tích đất
+              br
+              | Diện tích xây dựng:
 
 mixin popup-frame
   #popup-frame.popup.popup-frame.modal.fade(tabindex='-1')

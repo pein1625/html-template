@@ -5,9 +5,26 @@ block content
     .intro
       .intro__header
         a.intro__logo(href="#!")
-          img(src="./images/logo.png", alt="")
-      img.intro__img(src="./images/intro-bg.jpg", alt="")
-      img.intro__img(src="./images/search-page-bg.jpg", alt="")
+          img.intro__logo-pc(src="./images/logo.png", alt="")
+          img.intro__logo-mb(src="./images/logo-mobile.png", alt="")
+      img.intro__img.intro__img--1(src="./images/intro-bg.jpg", alt="")
+      .intro__body.d-lg-none
+        .intro__title VINHOMES OCEAN PARK 2 - THE CROWN
+        .intro__desc
+          p Sở hữu siêu kết nối "Song hành quốc lộ" chưa từng có, tâm mạch chiến lược của Thành phố phía Đông nơi tâm điểm của hệ siêu hạ tầng giao thông kết nối nghìn tỉ: cao tốc Hà Nội - Hải Phòng, QL 5A, đường vành đai 3.5 và các cây cầu, vành đai chiến lược trong tương lai.
+            | - Kết nối nhanh chóng ttcao tốc Hà Nội - Hải Phòng (QL5B) trục đường xương sống huyết mạch của tam giác kinh tế vàng Hà Nội - Hải Phòng - Hạ Long giúp kết nối từ VHOP2 - The Crown đến Hải Phòng chỉ 45 phút, đến Hạ Long chỉ 90 phút
+            br
+            | - Gần kề QL5A, tuyến giao thông huyết mạch kết nối các vùng cư đân thịnh vượng trù phú lâu đời
+            br
+            | - Kế cận đường vành đai 3.5 nổi liền đại dự án đến các khu vực khác của thủ đỏ HN (theo QH nhà nước)
+            br
+            | - Trục kết nối siêu tốc từ trung tâm đến dự án chỉ khoảng 20 phút: Trung tâm Hà Nội => Các cây cầu nghìn tỷ bắc qua sông Hồng => nút giao Cổ Linh => cao tốc Hà Nội - Hải
+          p
+            | Phòng => VHOP2 - The Crown.
+            br
+            | - Vinhomes Ocean Park 2 - The Crown thừa hưởng hạ tầng giao thông siêu kết nối hoàn hảo của siêu quần thể VHOcean Park nói riêng và Thành phố phía Đông nói chung, với các công trình trọng điểm đã và đang được Nhà nướchoàn thiện sẵn sàng, chào đón cư dân về nhà chỉ sau vài cú đạp chân ga.
+
+      img.intro__img.intro__img--2(src="./images/search-page-bg.jpg", alt="")
       .intro__content
         img.intro__content-bg(src="./images/content-path.png", alt="")
         .intro__content-header
@@ -19,7 +36,15 @@ block content
             p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
             p Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai
 
-    form.n-search(action="#!")
+    .intro__btns
+      button.intro__btn(type="button", data-bs-toggle="modal", data-bs-target="#popup-list")
+        i.fal.fa-search
+      button.intro__btn(type="button", data-bs-toggle="modal", data-bs-target="#popup-intro")
+        i.fal.fa-info
+      button.intro__btn(type="button", data-bs-toggle="modal", data-bs-target="#popup-menu")
+        i.fal.fa-bars
+
+    form.n-search.d-none.d-sm-block(action="#!")
       .input-group
         span.input-group-text
           i.fal.fa-fw.fa-search
