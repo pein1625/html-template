@@ -30,4 +30,24 @@
       left: 0;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 12px;
+    font-style: normal;
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba(#fff, 0.8);
+    }
+
+    span {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 }

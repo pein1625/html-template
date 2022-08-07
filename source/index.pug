@@ -1,60 +1,5 @@
 extends layout/page
 
-mixin popup
-  #popup-post.popup.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-header
-          button.close(type="button", data-bs-dismiss="modal")
-            i.fal.fa-times
-        .modal-body
-          .popup__frame.ratio.ratio-16x9
-            iframe(src="./post.html", frameborder="0")
-
-mixin popup-share
-  #popup-share.popup.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered.popup-share
-      .modal-content
-        .modal-header
-          button.close.close--sm(type="button", data-bs-dismiss="modal")
-            i.fal.fa-times
-        .modal-body
-          .popup__frame.ratio.ratio-16x9
-            iframe(src="./share.html", frameborder="0")
-
-mixin popup-layout
-  #popup-layout.popup.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-header
-          button.close(type="button", data-bs-dismiss="modal")
-            i.fal.fa-times
-        .modal-body
-          .popup__frame.ratio.ratio-16x9
-            iframe(src="./layout.html", frameborder="0")
-
-mixin popup-list
-  #popup-list.popup.popup--list.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-header
-          a.close.close--list(href="./list.html")
-            i.fal.fa-times
-        .modal-body
-          .popup__frame.ratio.ratio-16x9
-            iframe(src="./list.html", frameborder="0")
-
-mixin popup-frame
-  #popup-frame.popup.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-header
-          button.close(type="button", data-bs-dismiss="modal")
-            i.fal.fa-times
-        .modal-body
-          .popup__frame.ratio.ratio-16x9
-            iframe(src="./frame.html", frameborder="0")
-
 block content
   .container.py-5
     button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target="#popup-post") Open Post
@@ -73,4 +18,5 @@ block content
   +popup-layout
   +popup-list
   +popup-frame
+  +popup-intro
   +popup-menu

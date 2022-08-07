@@ -1,5 +1,6 @@
 .popup {
   padding: 60px 0;
+  overflow-y: hidden;
 
   &__close {
     background: 0;
@@ -12,11 +13,35 @@
     text-shadow: 0 1px 1px rgba(#000, 0.6);
   }
 
+  .modal-dialog {
+    height: 100%;
+    max-height: 100%;
+  }
+
   .modal-content {
     background: rgba($purple, 0.8);
     border: 0 !important;
     outline: 0 !important;
-    overflow: hidden;
+    max-height: 100%;
+    overflow: visible;
+    background: 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      background: linear-gradient(to right, #E76338, #EB8F57);
+      border-radius: 4px;
+      box-shadow: inset 0 3px 2px rgba(#fff, 0.5);
+      opacity: 0.9;
+    }
   }
 
   .modal-header {
@@ -45,26 +70,23 @@
     .close--sm {
       top: 20px;
     }
-
-    .close--list {
-      top: 60px;
-      right: 8px;
-      font-size: 24px;
-      color: $orange;
-    }
   }
 
   .modal-body {
-    padding: 0 !important;
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto;
+  }
+
+  &__frame {
+    height: calc(100vh - 120px);
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   @include media-breakpoint-up(sm) {
     .modal-dialog {
       max-width: calc(100% - 40px);
-    }
-
-    .modal-content {
-      border-radius: 12px;
     }
 
     .popup-share.modal-dialog {
@@ -77,13 +99,19 @@
   }
 
   @include media-breakpoint-up(lg) {
-    &__close {
-      color: $orange-darker
+    .modal-content {
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    &--list .modal-content {
-      border-radius: 20px;
-      overflow: hidden;
+    &__close {
+      top: 8px;
+      right: 10px;
+      z-index: 100;
+    }
+
+    &__frame {
+      height: auto;
     }
   }
 
@@ -100,63 +128,9 @@
   }
 
   @media (max-width: 991px) {
-    .modal-header {
-      .close {
-        top: 20px;
-        right: 4px;
-      }
-
-      .close--list {
-        top: 12px;
-        right: 0;
-      }
-    }
-
-    &__frame {
-      height: calc(100vh - 80px);
-    }
-
     .popup-share &__frame {
       height: 200px;
     }
-  }
-}
-
-.popup-template {
-  overflow-y: hidden;
-
-  .modal-dialog {
-    height: 100%;
-    max-height: 100%;
-  }
-
-  .modal-content {
-    max-height: 100%;
-    overflow: visible;
-    background: 0;
-    position: relative;
-    z-index: 1;
-
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      top: 0;
-      background: linear-gradient(to right, #E76338, #EB8F57);
-      border-radius: 4px;
-      box-shadow: inset 0 3px 2px rgba(#fff, 0.5);
-      opacity: 0.9;
-    }
-  }
-
-  .modal-body {
-    flex-grow: 1;
-    padding: 20px !important;
-    overflow: auto;
   }
 }
 
@@ -185,10 +159,6 @@
 }
 
 .popup-menu {
-  .modal-body {
-    padding: 0 !important;
-  }
-
   &__list {
     list-style: none;
     margin: 0;
@@ -245,5 +215,29 @@
 
   &__sublist &__link {
     color: $orange-mobile;
+  }
+}
+
+.popup-list {
+  @include media-breakpoint-up(lg) {
+    .popup__close {
+      color: $orange-mobile;
+      top: 42px;
+    }
+  }
+}
+
+.popup-menu,
+.popup-frame {
+  @include media-breakpoint-up(lg) {
+    .modal-content {
+      overflow: visible;
+    }
+
+    .popup__close {
+      color: $orange-mobile;
+      top: -30px;
+      right: 0;
+    }
   }
 }
