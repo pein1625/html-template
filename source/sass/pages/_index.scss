@@ -23,7 +23,7 @@
 
   &__body {
     width: 100%;
-    border: 10px solid rgba($orange-darker, 0.8);
+    border: 10px solid $orange-darker;//rgba($orange-darker, 0.8);
     border-top: 0 !important;
     position: relative;
     background-color: $orange;
@@ -62,7 +62,7 @@
     }
 
     &__body {
-      border-width: 0 4px 4px 0;
+      border-width: 4px;
     }
   }
 
@@ -101,7 +101,6 @@
     background: rgba($purple, 0.8);
     border: 0 !important;
     outline: 0 !important;
-    border-radius: 12px;
     overflow: hidden;
   }
 
@@ -149,6 +148,10 @@
       max-width: calc(100% - 40px);
     }
 
+    .modal-content {
+      border-radius: 12px;
+    }
+
     .popup-share.modal-dialog {
       max-width: 500px !important;
     }
@@ -172,7 +175,7 @@
 
   @media (max-width: 991px) {
     .modal-content {
-      border-radius: 8px;
+      border-radius: 4px;
     }
 
     .modal-header {

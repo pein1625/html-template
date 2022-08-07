@@ -23,7 +23,7 @@
     }
 
     .input-group-text {
-      background-color: $orange;
+      background-color: $orange-darker;
       color: $white;
       border: 0;
       border-radius: 0;
@@ -87,8 +87,9 @@
 
     .input-group {
       .form-control {
+        height: 35px;
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 7px 8px;
       }
 
       .input-group-text {
@@ -96,14 +97,19 @@
       }
     }
 
+    &__btns {
+      gap: 16px;
+    }
+
     &__btn {
-      padding: 4px 8px;
+      padding: 7px 8px;
       font-size: 14px;
       min-width: unset;
+      flex-grow: 1;
 
       img {
         height: 16px;
-        margin-right: 8px;
+        margin-right: 4px;
       }
     }
   }

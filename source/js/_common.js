@@ -58,10 +58,16 @@ $(function() {
 
   if (!btnElement) return false;
 
+  let timeout = null;
+
   btnElement.addEventListener('click', function() {
+    clearTimeout(timeout);
     btnElement.innerText = 'Đã sao chép!' // step 3
     ipnElement.select()              // step 4
     document.execCommand('copy')     // step 5
+    setTimeout(() => {
+      btnElement.innerText = 'Sao chép'
+    }, 1000);
   })
 });
 
