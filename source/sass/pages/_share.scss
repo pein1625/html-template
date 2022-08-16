@@ -102,14 +102,15 @@
     }
 
     &__btn {
-      padding: 7px 8px;
-      font-size: 14px;
+      padding: 7px 4px;
+      font-size: 12px;
       min-width: unset;
-      flex-grow: 1;
+      flex: 1;
 
       img {
         height: 16px;
-        margin-right: 4px;
+        margin-left: 2px;
+        margin-right: 2px;
       }
     }
   }

@@ -106,6 +106,10 @@
     }
   }
 
+  .popup-share &__frame {
+    height: 225px;
+  }
+
   @include media-breakpoint-up(sm) {
     .modal-dialog {
       max-width: calc(100% - 40px);
@@ -113,10 +117,6 @@
 
     .popup-share.modal-dialog {
       max-width: 500px !important;
-    }
-
-    .popup-share &__frame {
-      height: 200px;
     }
   }
 
@@ -149,9 +149,9 @@
     }
   }
 
-  @media (max-width: 991px) {
+  @include media-breakpoint-down(md) {
     .popup-share &__frame {
-      height: 200px;
+      height: 210px;
     }
   }
 }
@@ -270,5 +270,16 @@
       top: -30px;
       right: 0;
     }
+  }
+}
+
+.popup-menu,
+.popup-layout,
+.popup-list,
+.popup-post,
+.popup-frame,
+.popup-share {
+  .modal-body {
+    padding: 0;
   }
 }
