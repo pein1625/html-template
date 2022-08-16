@@ -1,3 +1,77 @@
 extends layout/page
 
 block content
+  style.
+    .svg-path-draw {
+      stroke: #000 !important;
+      fill: rgba(0,0,0,0.2) !important;
+    }
+  .container-fluid.py-5
+    .row
+      .col-lg-9
+        .box
+          svg.n-svg.js-svg(viewBox="0 0 4001 2251", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
+            defs
+              filter#f1(x='0' y='0')
+                fegaussianblur(in='SourceGraphic' stddeviation='10' result="blur")
+            //- image(href="./images/svg-img.png" width="4001", height="2251")
+          style.
+            .n-svg {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .svg-path-color {
+              opacity: 0;
+              transition: 0.6s ease;
+              filter: url(#f1);
+              animation-delay: .3s;
+            }
+            .svg-path-thumbnail {
+              opacity: 0;
+              transform: translateY(10%);
+              transition: 0.6s ease;
+            }
+            .svg-path:hover .svg-path-color {
+              opacity: 1;
+            }
+            .svg-path:hover .svg-path-thumbnail {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          script.
+            let $nSvg = $('.js-svg');
+            let [svgHeight = height, svgWidth = width] = nSvg[0].getBoundingClientRect();
+            let viewBox = $nSvg.attr('viewBox');
+            let [viewX, viewY, viewWidth, viewHeight] = viewBox.split(' ');
+
+            if (viewWidth / viewHeight > svgWidth / svgHeight) {
+              let newHeight = viewHeight * svgWidth / viewWidth;
+              let viewY = (svgHeight - newHeight) / 2;
+            } else {
+              let newWidth = viewWidth * svgHeight / viewHeight;
+              let viewX = (svgWidth - newWidth) / 2;
+            }
+
+            $nSvg.attr('viewBox', `${viewX} ${viewY} ${viewWidth} ${viewHeight}`);
+
+      .col-lg-3
+        .sidebar.border.h-100.p-2
+          .mb-3
+            input.form-control.js-map-img(type="text", placeholder="Map Image Url")
+          //- .mb-3
+          //-   label.checkbox-styled
+          //-     input.checkbox-styled__input(type="checkbox", checked)
+          //-     span.checkbox-styled__icon
+          //-     | Show path stroke
+          button.btn.btn-block.btn-info.mb-2.js-add-path Vẽ path
+          button.btn.btn-block.btn-primary.mb-2.js-add-dot Thêm dấu
+          button.btn.btn-block.btn-success.mb-2.js-export Xuất data
+
+  .md-result.modal.fade(tabindex="-1" role="dialog")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-body
+          textarea.js-result.form-control(rows="10")
