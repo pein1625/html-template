@@ -13,8 +13,9 @@ block content
           svg.n-svg.js-svg(viewBox="0 0 4001 2251", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
             defs
               filter#f1(x='0' y='0')
-                fegaussianblur(in='SourceGraphic' stddeviation='10' result="blur")
+                fegaussianblur(in='SourceGraphic' stddeviation='6' result="blur")
             //- image(href="./images/svg-img.png" width="4001", height="2251")
+            g#zoom-scene
           style.
             .n-svg {
               width: 100%;
@@ -41,21 +42,6 @@ block content
               opacity: 1;
               transform: translateY(0);
             }
-          script.
-            let $nSvg = $('.js-svg');
-            let [svgHeight = height, svgWidth = width] = nSvg[0].getBoundingClientRect();
-            let viewBox = $nSvg.attr('viewBox');
-            let [viewX, viewY, viewWidth, viewHeight] = viewBox.split(' ');
-
-            if (viewWidth / viewHeight > svgWidth / svgHeight) {
-              let newHeight = viewHeight * svgWidth / viewWidth;
-              let viewY = (svgHeight - newHeight) / 2;
-            } else {
-              let newWidth = viewWidth * svgHeight / viewHeight;
-              let viewX = (svgWidth - newWidth) / 2;
-            }
-
-            $nSvg.attr('viewBox', `${viewX} ${viewY} ${viewWidth} ${viewHeight}`);
 
       .col-lg-3
         .sidebar.border.h-100.p-2

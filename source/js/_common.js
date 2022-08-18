@@ -17,6 +17,7 @@ var coin = false;
 var count = 0;
 
 SVG.el = $svg[0];
+SVG.group = $svg.find('#zoom-scene')[0];
 
 if (SVG.img) {
   getMeta(SVG.img, function({w, h}) {
@@ -130,7 +131,7 @@ function buildSvg({src, width, height}) {
   svgImg.setAttribute('width', width);
   svgImg.setAttribute('height', height);
 
-  $svg.append(svgImg);
+  $(SVG.group).append(svgImg);
 
   Object.keys(SVG.objects).forEach((key) => {
     svgAddPath(key);
@@ -192,10 +193,10 @@ function svgPathRender(key) {
   colorPath.setAttribute('data-role', 'color-path');
   colorPath.setAttribute('fill', 'transparent');
   colorPath.setAttribute('stroke', SVG.objects[key].color || 'rgba(0, 0, 0, 1)');
-  colorPath.setAttribute('stroke-width', Math.round(SVG.viewWidth / 150));
+  colorPath.setAttribute('stroke-width', Math.round(SVG.viewWidth / 200));
   colorPath.classList.add('svg-path-color');
 
-  $(SVG.el).append(group);
+  $(SVG.group).append(group);
   $(group).append(path);
   $(group).append(colorPath);
 
@@ -268,7 +269,7 @@ function svgPointRender(key, {x, y}) {
   rect.setAttribute('stroke', 'rgb(0,0,0)');
   rect.setAttribute('stroke-width', Math.ceil(SVG.viewWidth / 500));
 
-  $(SVG.el).append(rect);
+  $(SVG.group).append(rect);
 }
 
 function svgPointDelete() {
