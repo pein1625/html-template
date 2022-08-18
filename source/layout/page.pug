@@ -16,19 +16,5 @@ doctype html
 html(lang="vi")
   +head(head)
   body(class=addBodyClass?addBodyClass:'')
-    .page
-      block header
-        // header
-        +header
-
-      .page__content
-
-        // main content
-        block content
-
-      block footer
-        // footer
-        +footer
-
-    // modals + sticky widgets
-    +btn-movetop
+    // main content
+    block content
