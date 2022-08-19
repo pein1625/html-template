@@ -101,6 +101,36 @@ $(function() {
         localSave();
       });
     })
+    .on('change', '.js-path-thumbnail-size', function() {
+      const key = $(this).closest('[data-object]').data('object');
+      SVG.objects[key].size = $(this).val();
+      svgPathRender(key);
+      localSave();
+    })
+    .on('change', '.js-path-thumbnail-x', function() {
+      const key = $(this).closest('[data-object]').data('object');
+      SVG.objects[key].x = $(this).val();
+      svgPathRender(key);
+      localSave();
+    })
+    .on('change', '.js-path-thumbnail-y', function() {
+      const key = $(this).closest('[data-object]').data('object');
+      SVG.objects[key].y = $(this).val();
+      svgPathRender(key);
+      localSave();
+    })
+    .on('change', '.js-path-bg', function() {
+      const key = $(this).closest('[data-object]').data('object');
+      SVG.objects[key].bg = $(this).val();
+      svgPathRender(key);
+      localSave();
+    })
+    .on('change', '.js-path-opacity', function() {
+      const key = $(this).closest('[data-object]').data('object');
+      SVG.objects[key].opacity = $(this).val();
+      svgPathRender(key);
+      localSave();
+    })
     .on('change', '.js-path-color', function() {
       const key = $(this).closest('[data-object]').data('object');
       SVG.objects[key].color = $(this).val();
@@ -189,11 +219,14 @@ function svgPathRender(key) {
   path.classList.add('svg-path-draw');
 
   const colorPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  const opacity = SVG.objects[key].opacity || 0.3;
+  const bgRgb = hexToRgb(SVG.objects[key].bg || '#000');
+  const bg = `rgba(${bgRgb.r},${bgRgb.g},${bgRgb.b},${opacity})`;
   colorPath.setAttribute('d', path_d);
   colorPath.setAttribute('data-role', 'color-path');
-  colorPath.setAttribute('fill', 'transparent');
-  colorPath.setAttribute('stroke', SVG.objects[key].color || 'rgba(0, 0, 0, 1)');
-  colorPath.setAttribute('stroke-width', Math.round(SVG.viewWidth / 200));
+  colorPath.setAttribute('fill', bg);
+  colorPath.setAttribute('stroke', SVG.objects[key].color || '#000');
+  colorPath.setAttribute('stroke-width', Math.round(SVG.viewWidth / 1000));
   colorPath.classList.add('svg-path-color');
 
   $(SVG.group).append(group);
@@ -203,12 +236,15 @@ function svgPathRender(key) {
   if (SVG.objects[key].thumbnail && SVG.objects[key].thumbnail.url) {
     const pathBBox = path.getBBox();
     const thumbnail = SVG.objects[key].thumbnail;
-    const width = Math.round(SVG.viewWidth / 10);
+    const size = parseInt(SVG.objects[key].size) || 10;
+    const width = Math.round(SVG.viewWidth * size / 100);
     const height = Math.round(
       width * thumbnail.height / thumbnail.width
     );
-    const x = Math.round(pathBBox.x + pathBBox.width / 2 - width / 2);
-    const y = Math.round(pathBBox.y - height * 0.9);
+    const sizeX = parseInt(SVG.objects[key].x) || 0;
+    const sizeY = parseInt(SVG.objects[key].y) || 0;
+    const x = Math.round(pathBBox.x + pathBBox.width / 2 - width / 2 + sizeX);
+    const y = Math.round(pathBBox.y - height * 0.9 + sizeY);
     const svgThumbnail = document.createElementNS('http://www.w3.org/2000/svg', 'image');
 
     svgThumbnail.setAttribute('href', SVG.objects[key].thumbnail.url);
@@ -288,16 +324,36 @@ function sidebarAddObject(key) {
     <button class="btn btn-sm btn-danger js-path-delete">Delete</button>
   </div>
   <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Link:</label>
+    <label class="form-label mb-1 fw-700 fs-12">Thumbnail URL:</label>
+    <input type="text" value="${object.thumbnail && object.thumbnail.url || ''}" class="form-control form-control-sm js-path-thumbnail", placeholder="" />
+  </div>
+  <div class="mt-2">
+    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Size (%, default: 10):</label>
+    <input type="text" value="${object.size || ''}" class="form-control form-control-sm js-path-thumbnail-size", placeholder="" />
+  </div>
+  <div class="mt-2">
+    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Horizontal Position (default: 0):</label>
+    <input type="text" value="${object.x || ''}" class="form-control form-control-sm js-path-thumbnail-x", placeholder="" />
+  </div>
+  <div class="mt-2">
+    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Vertical Position (default: 0):</label>
+    <input type="text" value="${object.y || ''}" class="form-control form-control-sm js-path-thumbnail-y", placeholder="" />
+  </div>
+  <div class="mt-2">
+    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Link:</label>
     <input type="text" value="${object.link || ''}" class="form-control form-control-sm js-path-link", placeholder="" />
   </div>
   <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Color (HEX, ex: #ff0000):</label>
+    <label class="form-label mb-1 fw-700 fs-12">Stroke Color (HEX, default: #000):</label>
     <input type="text" value="${object.color || ''}" class="form-control form-control-sm js-path-color", placeholder="" />
   </div>
   <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Thumbnail URL:</label>
-    <input type="text" value="${object.thumbnail && object.thumbnail.url || ''}" class="form-control form-control-sm js-path-thumbnail", placeholder="" />
+    <label class="form-label mb-1 fw-700 fs-12">Background Color (HEX, default: #000):</label>
+    <input type="text" value="${object.bg || ''}" class="form-control form-control-sm js-path-bg", placeholder="" />
+  </div>
+  <div class="mt-2">
+    <label class="form-label mb-1 fw-700 fs-12">Background Opacity (Default: 0.3):</label>
+    <input type="text" value="${object.opacity || ''}" class="form-control form-control-sm js-path-opacity", placeholder="" />
   </div>
 </div>
   `;

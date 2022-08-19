@@ -13,8 +13,7 @@ block content
           svg.n-svg.js-svg(viewBox="0 0 4001 2251", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
             defs
               filter#f1(x='0' y='0')
-                fegaussianblur(in='SourceGraphic' stddeviation='6' result="blur")
-            //- image(href="./images/svg-img.png" width="4001", height="2251")
+                fegaussianblur(in='SourceGraphic' stddeviation='2' result="blur")
             g#zoom-scene
           style.
             .n-svg {
@@ -35,13 +34,43 @@ block content
               transform: translateY(10%);
               transition: 0.6s ease;
             }
-            .svg-path:hover .svg-path-color {
+            .svg-path a {
+              pointer-events: none;
+            }
+            .svg-path.active .svg-path-color {
               opacity: 1;
             }
-            .svg-path:hover .svg-path-thumbnail {
+            .svg-path.active .svg-path-thumbnail {
               opacity: 1;
               transform: translateY(0);
             }
+            .svg-path.active a {
+              pointer-events: unset;
+            }
+            @media (min-width: 992px) {
+              .svg-path:hover .svg-path-color {
+                opacity: 1;
+              }
+              .svg-path:hover .svg-path-thumbnail {
+                opacity: 1;
+                transform: translateY(0);
+              }
+              .svg-path:hover a {
+                pointer-events: unset;
+              }
+            }
+          script.
+            document.addEventListener('DOMContentLoaded', function() {
+              console.log('dom content loaded', $('.js-svg'));
+              $('.js-svg').on('click', function() {
+                $('.svg-path.active').removeClass('active');
+              });
+              $('.js-svg').on('click', '.svg-path', function(e) {
+                e.stopPropagation();
+                $('.svg-path').not($(this)).removeClass('active');
+                $(this).addClass('active');
+              });
+            });
 
       .col-lg-3
         .sidebar.border.h-100.p-2
