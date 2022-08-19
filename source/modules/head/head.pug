@@ -16,11 +16,12 @@ mixin head(data)
           link(rel="stylesheet", href=css)
     link(rel="stylesheet", type="text/css", href="./css/app.css")
 
-    // Scripts
-    script(src="./js/libs.js", defer)
-    each item in rest
-      if (jsList = data[item].js)
-        each js in jsList
-          script(src=js, defer)
-    script(src="./js/panzoom.min.js", defer)
-    script(src="./js/app.js", defer)
+mixin script
+  // Scripts
+  script(src="./js/libs.js")
+  each item in rest
+    if (jsList = data[item].js)
+      each js in jsList
+        script(src=js)
+  script(src="./js/panzoom.min.js")
+  script(src="./js/app.js?v=1.2")
