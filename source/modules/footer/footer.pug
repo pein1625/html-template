@@ -1,2 +1,52 @@
 mixin footer
   footer.footer
+    .footer__wrapper
+      .container
+        a.footer__logo.mb-20(href="./index.html")
+          img(src="./images/logo-white.png", alt="")
+        .footer__grid
+          .footer__col
+            ul.f-contact
+              li.media.align-items-baseline
+                i.fa.fa-fw.fa-home.mr-2
+                .media-body.text-700.text-uppercase CÔNG TY CỔ PHẦN NHÂN LỰC NHẬT VƯỢNG
+              li.media.align-items-baseline
+                i.fa.fa-fw.fa-map-marker.mr-2
+                .media-body Số 15, ngõ 251 phố Mai Dịch, Phường Mai Dịch, Q. Cầu Giấy, Hà Nội
+              li.media.align-items-baseline
+                i.fa.fa-fw.fa-globe.mr-2
+                .media-body #[a(href="nhatvuongjp.com.vn") nhatvuongjp.com.vn]
+              li.media.align-items-baseline
+                i.fa.fa-fw.fa-envelope.mr-2
+                .media-body #[a(href="mailto:info@nhatvuong.vn") info@nhatvuong.vn]
+              li.media.align-items-baseline
+                i.fa.fa-fw.fa-phone.mr-2
+                .media-body #[a(href="tel:(+84) 833-560-888") (+84) 833-560-888]
+
+          .footer__col
+            .footer__title
+              span Danh mục
+            ul.f-menu
+              each item in ['Trang chủ', 'Giới thiệu', 'Dịch vụ', 'Đơn hàng', 'Đào tạo', 'Thư viện', 'Tin tức', 'Cẩm nang XKLĐ', 'Liên hệ']
+                li
+                  a(href="#!")= item
+
+          .footer__col
+            .footer__title
+              span Fanpage NHẬT VƯỢNG
+
+            a(href="#!")
+              img.w-100(src="./images/footer-map.jpg", alt="")
+
+            nav.social.mt-20
+              a(href="#!")
+                i.fa.fa-facebook
+              a(href="#!")
+                i.fa.fa-google-plus
+              a(href="#!")
+                i.fa.fa-instagram
+              a(href="#!")
+                i.fa.fa-youtube-play
+
+    .footer__copyright
+      .container Bản quyền thuốc về Công ty cổ phần nhân lực Nhật Vượng
