@@ -11,17 +11,15 @@ const SVG = {
 const $container = $('.box');
 const $sidebar = $('.sidebar');
 const $svg = $('.js-svg');
-const $btnAddPath = $('.js-add-path');
 
-var coin = false;
-var count = 0;
+window.SVG = SVG;
 
 SVG.el = $svg[0];
 SVG.group = $svg.find('#zoom-scene')[0];
 
 if (SVG.img) {
   getMeta(SVG.img, function({w, h}) {
-    buildSvg({src:SVG.img, width: w, height: h});
+    svgBuild({src:SVG.img, width: w, height: h});
   });
 
   $('.js-map-img').val(SVG.img);
@@ -30,9 +28,7 @@ if (SVG.img) {
 // EVENTS FIRE
 $(function() {
   $(SVG.el).on('mousedown', function(e) {
-    if (!SVG.currentKey) {
-      return;
-    };
+    if (!SVG.currentKey) return;
 
     var p = SVG.el.createSVGPoint();
     p.x = e.clientX;
@@ -40,7 +36,20 @@ $(function() {
     var ctm = SVG.el.getScreenCTM().inverse();
     var p =  p.matrixTransform(ctm);
 
-    svgAddPoint(p);
+    const { x, y } = p;
+    const key = SVG.currentKey;
+
+    if (SVG.objects[key].type === 'dot') {
+      SVG.objects[key].x = x;
+      SVG.objects[key].y = y;
+      drawingFinish();
+    }
+
+    if (SVG.objects[key].type === 'path') {
+      SVG.objects[key].points.push({x, y});
+    }
+
+    svgObjectRender(key);
   });
 
   $(document)
@@ -53,99 +62,65 @@ $(function() {
         drawingUndo();
       }
     })
-    .on('click', '.js-path-delete', function() {
+    .on('click', '.js-object-add', function() {
+      const $this = $(this);
+      const type = $this.data('type');
+      const key = getUniqId();
+
+      $this.removeClass('btn-info').addClass('btn-danger').attr('disabled', true);
+
+      SVG.objects[key] = { type };
+
+      if (type === 'path') {
+        SVG.objects[key]['points'] = [];
+      }
+
+      svgObjectAdd(key);
+    })
+    .on('click', '.js-object-delete', function() {
       const key = $(this).closest('[data-object]').data('object');
-      svgPathDelete(key);
+      svgObjectDelete(key);
       localSave();
     })
-    .on('click', '.js-path-select', function() {
+    .on('change', '.js-object-field', function() {
       const key = $(this).closest('[data-object]').data('object');
-      svgPathSelect(key);
-    })
-    .on('click', '.js-add-path', function() {
-      $(this).removeClass('btn-info').addClass('btn-danger').attr('disabled', true);
-      const key = getUniqId();
-      SVG.objects[key] = {
-        points: []
-      };
+      const role = $(this).data('role');
 
-      svgAddPath(key);
-      svgPathSelect(key);
-    })
-    .on('click', '.js-export', function() {
-      var html = $container.html();
-      $('.js-result').val(html);
-      $('.md-result').modal('show');
+      if (role === undefined) {
+        return;
+      } else if (role === 'thumbnail') {
+        const imageUrl = $(this).val();
+        getMeta(imageUrl, function({w, h}) {
+          SVG.objects[key].thumbnail = {
+            url: imageUrl,
+            width: w,
+            height: h,
+          };
+          svgObjectRender(key);
+        });
+      } else {
+        SVG.objects[key][role] = $(this).val();
+        svgObjectRender(key);
+      }
     })
     .on('change', '.js-map-img', function() {
       const imageUrl = $(this).val();
       getMeta(imageUrl, function({w, h}) {
-        buildSvg({
+        svgBuild({
           src: imageUrl,
           width: w,
           height: h,
         })
       });
     })
-    .on('change', '.js-path-thumbnail', function() {
-      const imageUrl = $(this).val();
-      const key = $(this).closest('[data-object]').data('object');
-
-      getMeta(imageUrl, function({w, h}) {
-        SVG.objects[key].thumbnail = {
-          url: imageUrl,
-          width: w,
-          height: h,
-        };
-        svgPathRender(key);
-        localSave();
-      });
-    })
-    .on('change', '.js-path-thumbnail-size', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].size = $(this).val();
-      svgPathRender(key);
-      localSave();
-    })
-    .on('change', '.js-path-thumbnail-x', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].x = $(this).val();
-      svgPathRender(key);
-      localSave();
-    })
-    .on('change', '.js-path-thumbnail-y', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].y = $(this).val();
-      svgPathRender(key);
-      localSave();
-    })
-    .on('change', '.js-path-bg', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].bg = $(this).val();
-      svgPathRender(key);
-      localSave();
-    })
-    .on('change', '.js-path-opacity', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].opacity = $(this).val();
-      svgPathRender(key);
-      localSave();
-    })
-    .on('change', '.js-path-color', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].color = $(this).val();
-      svgPathRender(key);
-      localSave();
-    })
-    .on('change', '.js-path-link', function() {
-      const key = $(this).closest('[data-object]').data('object');
-      SVG.objects[key].link = $(this).val();
-      svgPathRender(key);
-      localSave();
+    .on('click', '.js-export', function() {
+      var html = $container.html();
+      $('.js-result').val(html);
+      $('.md-result').modal('show');
     });
 });
 
-function buildSvg({src, width, height}) {
+function svgBuild({src, width, height}) {
   SVG.img = src;
   SVG.viewWidth = width;
   SVG.viewHeight = height;
@@ -164,23 +139,20 @@ function buildSvg({src, width, height}) {
   $(SVG.group).append(svgImg);
 
   Object.keys(SVG.objects).forEach((key) => {
-    svgAddPath(key);
+    svgObjectAdd(key);
   });
-}
 
-function svgAddPath(key) {
-  svgPathRender(key);
-  sidebarAddObject(key);
+  svgObjectUnSelect();
 }
 
 function drawingFinish() {
-  $btnAddPath.removeClass('btn-danger').addClass('btn-info').attr('disabled', false);
-  unSelectObject();
+  $('.js-object-add').removeClass('btn-danger').addClass('btn-info').attr('disabled', false);
+  svgObjectUnSelect();
   localSave();
 }
 
 function drawingCancel() {
-  svgPathDelete();
+  svgObjectDelete();
   drawingFinish();
 }
 
@@ -189,6 +161,137 @@ function drawingUndo() {
   if (!key || !SVG.objects[key].points.length) return;
 
   SVG.objects[key].points = SVG.objects[key].points.slice(0, -1);
+}
+
+function svgObjectAdd(key) {
+  svgObjectRender(key);
+  svgObjectAddSidebar(key);
+  svgObjectSelect(key);
+}
+
+function svgObjectRender(key) {
+  if (!SVG.objects[key]) return;
+  $(SVG.el).find(`g[data-object="${key}"]`).remove();
+
+  if (SVG.objects[key].type === 'dot') {
+    svgDotRender(key);
+  } else if (SVG.objects[key].type === 'path') {
+    svgPathRender(key);
+  }
+  localSave();
+}
+
+function svgObjectSelect(key) {
+  SVG.currentKey = key;
+}
+
+function svgObjectUnSelect() {
+  if (!SVG.currentKey) return;
+  SVG.currentKey = null;
+  $container.find('rect[data-object]').remove();
+}
+
+function svgObjectDelete(key) {
+  if (!SVG.objects[key]) return;
+
+  delete SVG.objects[key];
+  SVG.currentKey = null;
+
+  $container.find(`[data-object="${key}"]`).remove();
+  $sidebar.find(`[data-object="${key}"]`).remove();
+}
+
+function svgObjectAddSidebar(key) {
+  const object = SVG.objects[key];
+  if (!object) return;
+
+  if (object.type === 'path') {
+    html = `
+  <div class="mt-3 p-2 border bg-light" data-object="${key}">
+    <div class="d-flex flex-wrap align-items-center">
+      <span class="me-auto">Path: ${key}</span>
+      <button class="btn btn-sm btn-danger js-object-delete">Delete</button>
+    </div>
+    <div class="row g-3">
+      <div class="col-12">
+        <label class="form-label mb-1 fw-700 fs-12">Thumbnail URL:</label>
+        <input type="text" value="${object.thumbnail && object.thumbnail.url || ''}" class="form-control form-control-sm js-object-field", placeholder="", data-role="thumbnail" />
+      </div>
+      <div class="col-12">
+        <label class="form-label mb-1 fw-700 fs-12">Thumbnail Link:</label>
+        <input type="text" value="${object.link || ''}" class="form-control form-control-sm js-object-field", data-role="link" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Horizontal Pos (default: 0):</label>
+        <input type="text" value="${object.x || ''}" class="form-control form-control-sm js-object-field", data-role="x" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Vertical Pos (default: 0):</label>
+        <input type="text" value="${object.y || ''}" class="form-control form-control-sm js-object-field", data-role="y" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Thumbnail Size (default: 10%):</label>
+        <input type="text" value="${object.size || ''}" class="form-control form-control-sm js-object-field", data-role="size" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Stroke (default: #000):</label>
+        <input type="text" value="${object.color || ''}" class="form-control form-control-sm js-object-field", data-role="color" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Background (default: #000):</label>
+        <input type="text" value="${object.bg || ''}" class="form-control form-control-sm js-object-field", data-role="bg" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Opacity (Default: 0.3):</label>
+        <input type="text" value="${object.opacity || ''}" class="form-control form-control-sm js-object-field", data-role="opacity" />
+      </div>
+    </div>
+  </div>
+    `;
+  }
+
+  if (object.type === 'dot') {
+    html = `
+  <div class="mt-3 p-2 border bg-light" data-object="${key}">
+    <div class="d-flex flex-wrap align-items-center">
+      <span class="me-auto">Dot: ${key}</span>
+      <button class="btn btn-sm btn-danger js-object-delete">Delete</button>
+    </div>
+    <div class="row g-3">
+      <div class="col-12">
+        <label class="form-label mb-1 fw-700 fs-12">Thumbnail URL:</label>
+        <input type="text" value="${object.thumbnail && object.thumbnail.url || ''}" class="form-control form-control-sm js-object-field", placeholder="", data-role="thumbnail" />
+      </div>
+      <div class="col-12">
+        <label class="form-label mb-1 fw-700 fs-12">Thumbnail Link:</label>
+        <input type="text" value="${object.link || ''}" class="form-control form-control-sm js-object-field", data-role="link" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Horizontal Pos (default: 0):</label>
+        <input type="text" value="${object.x || ''}" class="form-control form-control-sm js-object-field", data-role="x" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Vertical Pos (default: 0):</label>
+        <input type="text" value="${object.y || ''}" class="form-control form-control-sm js-object-field", data-role="y" />
+      </div>
+      <div class="col-lg-12">
+        <label class="form-label mb-1 fw-700 fs-12">Thumbnail Size (default: 10%):</label>
+        <input type="text" value="${object.size || ''}" class="form-control form-control-sm js-object-field", data-role="size" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Duration (default: 2000ms)</label>
+        <input type="text" value="${object.duration || ''}" class="form-control form-control-sm js-object-field", data-role="duration" />
+      </div>
+      <div class="col-lg-6">
+        <label class="form-label mb-1 fw-700 fs-12">Delay (default: 0ms)</label>
+        <input type="text" value="${object.delay || ''}" class="form-control form-control-sm js-object-field", data-role="delay" />
+      </div>
+    </div>
+  </div>
+    `;
+  }
+
+  $sidebar.append($(html));
 }
 
 function svgPathRender(key) {
@@ -200,6 +303,7 @@ function svgPathRender(key) {
 
   SVG.objects[key].points.forEach((point) => {
     path_d += `${point.x},${point.y} `;
+    svgPointRender(key, {x: point.x, y: point.y});
   });
 
   if (SVG.objects[key].points.length < 3) return;
@@ -233,64 +337,22 @@ function svgPathRender(key) {
   $(group).append(path);
   $(group).append(colorPath);
 
-  if (SVG.objects[key].thumbnail && SVG.objects[key].thumbnail.url) {
+  if (
+    SVG.objects[key].thumbnail &&
+    SVG.objects[key].thumbnail.url && (
+      !SVG.objects[key].x ||
+      !SVG.objects[key].y
+    )
+  ) {
     const pathBBox = path.getBBox();
-    const thumbnail = SVG.objects[key].thumbnail;
-    const size = parseInt(SVG.objects[key].size) || 10;
-    const width = Math.round(SVG.viewWidth * size / 100);
-    const height = Math.round(
-      width * thumbnail.height / thumbnail.width
-    );
-    const sizeX = parseInt(SVG.objects[key].x) || 0;
-    const sizeY = parseInt(SVG.objects[key].y) || 0;
-    const x = Math.round(pathBBox.x + pathBBox.width / 2 - width / 2 + sizeX);
-    const y = Math.round(pathBBox.y - height * 0.9 + sizeY);
-    const svgThumbnail = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+    const x = Math.round(pathBBox.x + pathBBox.width / 2 - width / 2);
+    const y = Math.round(pathBBox.y - height * 0.9);
 
-    svgThumbnail.setAttribute('href', SVG.objects[key].thumbnail.url);
-    svgThumbnail.setAttribute('width', width);
-    svgThumbnail.setAttribute('height', height);
-    svgThumbnail.setAttribute('x', x > 0 ? x : 0);
-    svgThumbnail.setAttribute('y', y > 0 ? y : 0);
-    svgThumbnail.classList.add('svg-path-thumbnail');
-
-    if (SVG.objects[key].link) {
-      const link = document.createElementNS('http://www.w3.org/2000/svg', 'a');
-      link.setAttribute('href', SVG.objects[key].link);
-      link.setAttribute('target', '_blank');
-
-      $(link).append(svgThumbnail);
-      $(group).append(link);
-    } else {
-      $(group).append(svgThumbnail);
-    }
+    SVG.objects[key].x = x > 0 ? x : 0;
+    SVG.objects[key].y = y > 0 ? y : 0;
   }
-}
 
-function svgPathSelect(key) {
-  SVG.currentKey = key;
-  $sidebar.find(`[data-object="${key}"]`).find('.js-btn-select').attr('disabled', true).text('Selected');
-}
-
-function svgPathDelete(key) {
-  if (!SVG.objects[key]) return;
-
-  delete SVG.objects[key];
-  SVG.currentKey = null;
-
-  $container.find(`[data-object="${key}"]`).remove();
-  $sidebar.find(`[data-object="${key}"]`).remove();
-}
-
-function svgAddPoint({x, y}) {
-  if (!SVG.currentKey) return;
-
-  const key = SVG.currentKey;
-
-  SVG.objects[key].points.push({x, y});
-
-  svgPathRender(key);
-  svgPointRender(key, {x, y});
+  svgThumbnailAdd(group, key);
 }
 
 function svgPointRender(key, {x, y}) {
@@ -308,67 +370,72 @@ function svgPointRender(key, {x, y}) {
   $(SVG.group).append(rect);
 }
 
-function svgPointDelete() {
-  $container.find('rect[data-object]').remove();
+function svgDotRender(key) {
+  if (!SVG.objects[key]) return;
+
+  const { x, y, type } = SVG.objects[key];
+
+  if (type !== 'dot' || x === undefined || y === undefined) return;
+
+  const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  circle.setAttribute('data-object', key);
+  circle.setAttribute('cx', x);
+  circle.setAttribute('cy', y);
+  circle.setAttribute('r', Math.ceil(SVG.viewWidth / 400));
+  circle.setAttribute('fill', 'rgb(0,0,0)');
+
+  $(SVG.group).append(circle);
+
+  svgThumbnailAdd(SVG.group, key, 'svg-icon');
 }
 
-function sidebarAddObject(key) {
+function svgThumbnailAdd(el, key, className='svg-thumbnail') {
   const object = SVG.objects[key];
-  if (!object) return;
+  if (
+    !object ||
+    !object.thumbnail ||
+    !object.thumbnail.url ||
+    object.x === undefined ||
+    object.y === undefined
+  ) return;
 
-  html = `
-<div class="mt-3 p-2 border bg-light" data-object="${key}">
-  <div class="d-flex flex-wrap align-items-center">
-    <span class="me-auto">${key}</span>
-    <button class="btn btn-sm btn-primary js-path-select me-3">Select</button>
-    <button class="btn btn-sm btn-danger js-path-delete">Delete</button>
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Thumbnail URL:</label>
-    <input type="text" value="${object.thumbnail && object.thumbnail.url || ''}" class="form-control form-control-sm js-path-thumbnail", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Size (%, default: 10):</label>
-    <input type="text" value="${object.size || ''}" class="form-control form-control-sm js-path-thumbnail-size", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Horizontal Position (default: 0):</label>
-    <input type="text" value="${object.x || ''}" class="form-control form-control-sm js-path-thumbnail-x", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Vertical Position (default: 0):</label>
-    <input type="text" value="${object.y || ''}" class="form-control form-control-sm js-path-thumbnail-y", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Thumbnail Link:</label>
-    <input type="text" value="${object.link || ''}" class="form-control form-control-sm js-path-link", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Stroke Color (HEX, default: #000):</label>
-    <input type="text" value="${object.color || ''}" class="form-control form-control-sm js-path-color", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Background Color (HEX, default: #000):</label>
-    <input type="text" value="${object.bg || ''}" class="form-control form-control-sm js-path-bg", placeholder="" />
-  </div>
-  <div class="mt-2">
-    <label class="form-label mb-1 fw-700 fs-12">Background Opacity (Default: 0.3):</label>
-    <input type="text" value="${object.opacity || ''}" class="form-control form-control-sm js-path-opacity", placeholder="" />
-  </div>
-</div>
-  `;
+  const thumbnail = object.thumbnail;
+  const size = parseInt(object.size) || 10;
+  const width = Math.round(SVG.viewWidth * size / 100);
+  const height = Math.round(
+    width * thumbnail.height / thumbnail.width
+  );
 
-  $sidebar.append($(html));
-}
+  const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-function unSelectObject() {
-  if (!SVG.currentKey) return;
+  group.setAttribute('data-width', width);
+  group.setAttribute('data-height', height);
+  group.setAttribute('data-x', object.x - width / 2);
+  group.setAttribute('data-y', object.y - height / 2);
+  group.setAttribute('data-duration', object.duration || 0);
+  group.setAttribute('data-delay', object.delay || 0);
+  group.classList.add(className);
 
-  const key = SVG.currentKey;
-  $sidebar.find(`[data-object="${key}"]`).find('.js-btn-select').attr('disabled', false).text('Select');
+  const svgThumbnail = document.createElementNS('http://www.w3.org/2000/svg', 'image');
 
-  SVG.currentKey = null;
-  svgPointDelete();
+  svgThumbnail.setAttribute('href', object.thumbnail.url);
+  svgThumbnail.setAttribute('width', width);
+  svgThumbnail.setAttribute('height', height);
+  svgThumbnail.setAttribute('x', object.x - width / 2);
+  svgThumbnail.setAttribute('y', object.y - height / 2);
+
+  if (object.link) {
+    const link = document.createElementNS('http://www.w3.org/2000/svg', 'a');
+    link.setAttribute('href', object.link);
+    link.setAttribute('target', '_blank');
+
+    $(link).append(svgThumbnail);
+    $(group).append(link);
+  } else {
+    $(group).append(svgThumbnail);
+  }
+
+  $(el).append(group);
 }
 
 function localSave() {

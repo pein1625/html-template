@@ -29,7 +29,7 @@ block content
               filter: url(#f1);
               animation-delay: .3s;
             }
-            .svg-path-thumbnail {
+            .svg-thumbnail {
               opacity: 0;
               transform: translateY(10%);
               transition: 0.6s ease;
@@ -40,7 +40,7 @@ block content
             .svg-path.active .svg-path-color {
               opacity: 1;
             }
-            .svg-path.active .svg-path-thumbnail {
+            .svg-path.active .svg-thumbnail {
               opacity: 1;
               transform: translateY(0);
             }
@@ -51,7 +51,7 @@ block content
               .svg-path:hover .svg-path-color {
                 opacity: 1;
               }
-              .svg-path:hover .svg-path-thumbnail {
+              .svg-path:hover .svg-thumbnail {
                 opacity: 1;
                 transform: translateY(0);
               }
@@ -70,6 +70,33 @@ block content
                 $('.svg-path').not($(this)).removeClass('active');
                 $(this).addClass('active');
               });
+
+              // 0 - 1000
+              // 0.5 - 1.5
+              // 0.5 + 1 * timestamp / 2000
+              window.requestAnimationFrame(step);
+
+              function step(timestamp) {
+                $('.js-svg').find('.svg-icon').each(function() {
+                  const $group = $(this);
+                  const duration = parseInt($group.data('duration') || 2000);
+                  const delay = parseInt($group.data('duration') || 0);
+                  let x = $group.data('x');
+                  let y = $group.data('y');
+                  let width = $group.data('width');
+                  let height = $group.data('height');
+
+                  let time = (timestamp - delay) % (2 * duration);
+                  let scale = 0.5 + Math.abs(1 * (time - duration) / duration);
+
+                  let newWidth = (1 - scale) * x + (1 - scale) * width / 2;
+                  let newHeight = (1 - scale) * y + (1 - scale) * height / 2;
+                  let matrix = `matrix(${scale} 0 0 ${scale} ${newWidth} ${newHeight})`;
+                  $group.attr('transform', matrix);
+                });
+
+                window.requestAnimationFrame(step);
+              }
             });
 
       .col-lg-3
@@ -81,8 +108,8 @@ block content
           //-     input.checkbox-styled__input(type="checkbox", checked)
           //-     span.checkbox-styled__icon
           //-     | Show path stroke
-          button.btn.btn-block.btn-info.mb-2.js-add-path Vẽ path
-          button.btn.btn-block.btn-primary.mb-2.js-add-dot Thêm dấu
+          button.btn.btn-block.btn-info.mb-2.js-object-add(data-type="path") Vẽ path
+          button.btn.btn-block.btn-info.mb-2.js-object-add(data-type="dot") Thêm dấu
           button.btn.btn-block.btn-success.mb-2.js-export Xuất data
 
   .md-result.modal.fade(tabindex="-1" role="dialog")
