@@ -382,7 +382,8 @@ function svgDotRender(key) {
   circle.setAttribute('cx', x);
   circle.setAttribute('cy', y);
   circle.setAttribute('r', Math.ceil(SVG.viewWidth / 400));
-  circle.setAttribute('fill', 'rgb(0,0,0)');
+  circle.setAttribute('fill', 'transparent');
+  circle.classList.add('dot-circle');
 
   $(SVG.group).append(circle);
 
