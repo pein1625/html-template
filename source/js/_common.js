@@ -15,7 +15,7 @@ const $svg = $('.js-svg');
 window.SVG = SVG;
 
 SVG.el = $svg[0];
-SVG.group = $svg.find('#zoom-scene')[0];
+SVG.group = $svg.find('.zoom-scene')[0];
 
 if (SVG.img) {
   getMeta(SVG.img, function({w, h}) {
