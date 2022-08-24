@@ -75,8 +75,8 @@ block content
               });
 
               // 0 - 1000
-              // 0.5 - 1.5
-              // 0.5 + 1 * timestamp / 2000
+              // 0.8 - 1.2
+              // 0.8 + 0.4 * timestamp / 2000
               window.requestAnimationFrame(step);
 
               function step(timestamp) {
@@ -90,7 +90,7 @@ block content
                   let height = $group.data('height');
 
                   let time = (timestamp - delay) % (2 * duration);
-                  let scale = 0.5 + Math.abs(1 * (time - duration) / duration);
+                  let scale = 0.8 + Math.abs(0.4 * (time - duration) / duration);
 
                   let newWidth = (1 - scale) * x + (1 - scale) * width / 2;
                   let newHeight = (1 - scale) * y + (1 - scale) * height / 2;

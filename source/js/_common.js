@@ -409,6 +409,7 @@ function svgThumbnailAdd(el, key, className='svg-thumbnail') {
 
   const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
+  group.setAttribute('data-object', key);
   group.setAttribute('data-width', width);
   group.setAttribute('data-height', height);
   group.setAttribute('data-x', object.x - width / 2);
