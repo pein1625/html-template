@@ -13,7 +13,9 @@ $(function() {// just grab a DOM element
         // `e` - is current touch event.
 
         return false; // tells the library to not preventDefault.
-      }
+      },
+      maxZoom: 3,
+      minZoom: 0.3,
     })
 
   });
