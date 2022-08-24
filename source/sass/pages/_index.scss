@@ -11,4 +11,16 @@
     top: 0;
     left: 0;
   }
+
+  &--portrait {
+    display: none;
+  }
+
+  @media (orientation: portrait) {
+    display: none;
+
+    &--portrait {
+      display: block;
+    }
+  }
 }
