@@ -4,6 +4,13 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 991px) {
+  html,
+  body {
+      overscroll-behavior-y: contain;
+  }
+}
+
 img {
   max-width: 100%;
 }
