@@ -1,0 +1,8 @@
+.about {
+  font-size: 16px;
+  text-align: justify;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
+  }
+}
