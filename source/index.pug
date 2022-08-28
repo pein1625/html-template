@@ -13,15 +13,15 @@ block content
         span Tin tức mới
 
       .row.g-40
-        .col-lg-6
+        .col-lg-6.wow.fadeInUp
           +news-2('./images/news-4.jpg', true, 'news-2__link--bottom')
         .col-lg-6
           .row.g-40
-            .col-12
+            .col-12.wow.fadeInRight(data-wow-delay=`0.3s`)
               +news('./images/news-1.jpg')
-            .col-12
+            .col-12.wow.fadeInRight(data-wow-delay=`0.5s`)
               +news('./images/news-2.jpg')
-            .col-12
+            .col-12.wow.fadeInRight(data-wow-delay=`0.7s`)
               +news('./images/news-3.jpg')
 
       .text-end.mt-30
@@ -35,7 +35,7 @@ block content
         span Dịch vụ
 
       .row.gx-40.gy-60
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInRight(data-wow-delay=`0.1s`)
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-1.jpg", alt="")
@@ -47,7 +47,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInRight(data-wow-delay=`0.2s`)
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-2.jpg", alt="")
@@ -59,7 +59,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInRight(data-wow-delay=`0.3s`)
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-3.jpg", alt="")
@@ -82,11 +82,11 @@ block content
         span Sản phẩm
 
       .row.gx-40.gy-60.pb-20
-        .col-lg-6
+        .col-lg-6.wow.zoomIn(data-wow-delay=`0.1s`)
           +product('./images/service-1.jpg', 'EKIP')
-        .col-lg-6
+        .col-lg-6.wow.zoomIn(data-wow-delay=`0.2s`)
           +product('./images/service-2.jpg', 'ECVN')
-        .col-lg-6
+        .col-lg-6.wow.zoomIn(data-wow-delay=`0.3s`)
           +product('./images/service-3.jpg', 'VIETNAM EXPORT')
 
   section.section.section--bg
@@ -94,7 +94,8 @@ block content
       .section__subtitle.text-center Sự kiện của ecomviet
       h1.section__title.text-center
         span Sự kiện sắp diễn ra
-      +event-slider
+      .wow.fadeInUp
+        +event-slider
 
   section.section
     .container
@@ -104,7 +105,7 @@ block content
 
       .row.gy-40.gx-3.gx-md-40
         - for(let i = 0; i < 4; i++)
-          .col-6.col-xl-3
+          .col-6.col-xl-3.wow.fadeInRight(data-wow-delay=`${0.1 * i}s`)
             +news-2(`./images/news-${ i % 6 + 1 }.jpg`, true)
 
   section.section.s-partner

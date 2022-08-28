@@ -10,7 +10,7 @@ block content
         span Dịch vụ
 
       .row.gx-40.gy-60
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.1s")
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-1.jpg", alt="")
@@ -22,7 +22,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.2s")
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-2.jpg", alt="")
@@ -34,7 +34,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.3s")
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-3.jpg", alt="")
@@ -46,7 +46,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.1s")
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-1.jpg", alt="")
@@ -58,7 +58,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.2s")
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-2.jpg", alt="")
@@ -70,7 +70,7 @@ block content
               a.service__link(href="./service-detail.html")
                 i.fal.fa-arrow-right
 
-        .col-lg-4.col-md-6
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay="0.3s")
           .service
             a.service__frame(href="./service-detail.html")
               img(src="./images/service-3.jpg", alt="")
@@ -90,11 +90,11 @@ block content
 
       .row.gx-40.gy-60.pb-20
         - for(let i = 0; i < 2; i++)
-          .col-lg-6
+          .col-lg-6.wow.zoomIn(data-wow-delay=`${i * 0.1 + 0.1}s`)
             +product('./images/service-1.jpg', 'EKIP')
-          .col-lg-6
+          .col-lg-6.wow.zoomIn(data-wow-delay=`${i * 0.1 + 0.2}s`)
             +product('./images/service-2.jpg', 'ECVN')
-          .col-lg-6
+          .col-lg-6.wow.zoomIn(data-wow-delay=`${i * 0.1 + 0.3}s`)
             +product('./images/service-3.jpg', 'VIETNAM EXPORT')
 
   section.section.s-partner

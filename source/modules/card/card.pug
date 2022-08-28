@@ -39,12 +39,11 @@ mixin doc(id='01')
       .col-sm-auto
         .doc__number= id
       .col
-        a.doc__title(href=`#md-doc-${id}`, data-bs-toggle="modal")  Nghị định 55/2022/NĐ-CP của Chính phủ về việc quy định Cơ sở dữ liệu quốc gia về công tác tiếp công dân, xử lý đơn, giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh
+        a.doc__title(href=`javascript:void(0);`, data-bs-toggle="modal", data-bs-target=`#md-doc-${id}`) Nghị định 55/2022/NĐ-CP của Chính phủ về việc quy định Cơ sở dữ liệu quốc gia về công tác tiếp công dân, xử lý đơn, giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh
       .col-sm-auto.ps-xl-40
         a.doc__btn(href="#!")
           i.fas.fa-fw.fa-download.me-2
           span Tải về
-    +md-doc(id)
 
 mixin product(img='', label='')
   .product
@@ -62,10 +61,10 @@ mixin product(img='', label='')
 mixin event(img='', time='10/2022')
   .event
     .row.gy-0.gx-20.gx-sm-30.gx-xl-50
-      .col-auto
+      .col-auto.wow.fadeInUp
         .event__frame
           img(src=img, alt="")
-      .col
+      .col.wow.fadeInRight(data-wow-delay="0.15s")
         .event__time= time
         .event__desc Lễ ra mắt giải pháp hóa đơn thương mại điện tử
         .event__info

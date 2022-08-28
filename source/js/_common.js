@@ -28,4 +28,8 @@ $(function() {
     $search.addClass('active');
     $search.find('input').focus();
   });
-})
+});
+
+$(function() {
+  new WOW().init();
+});

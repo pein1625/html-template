@@ -10,7 +10,7 @@ block content
           h2.section__title
             span Tin tức mới
           - for(let i = 0; i < 10; i++)
-            .mb-30.mb-xl-40
+            .mb-30.mb-xl-40.wow.fadeInUp(data-wow-delay='0.2s')
               +news(`./images/news-${i % 3 + 1}.jpg`)
 
           nav.border-top.mt-30.pt-30(style="border-color:#ACD6FF !important;")
