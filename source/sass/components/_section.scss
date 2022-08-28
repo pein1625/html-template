@@ -1,24 +1,53 @@
 .section {
   padding: 50px 0;
 
+  &__subtitle {
+    font-size: 16px;
+    color: $primary;
+    margin-bottom: 8px;
+  }
+
   &__title {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
-    position: relative;
-    padding-left: 16px;
     margin-bottom: 1em;
 
+    span {
+      display: inline-block;
+      position: relative;
+      padding-left: 16px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 0.8em;
+        background-color: $primary;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--sm span {
+      font-size: 0.8em;
+    }
+  }
+
+  &--bg {
+    background: url('../images/section-bg.jpg') center/cover no-repeat;
+  }
+
+  &--primary {
+    background: url('../images/world-map-bg.png') center/cover no-repeat;
+    background-color: #3764B6;
+  }
+
+  &--primary &__title span {
     &::before {
-      content: '';
-      display: block;
-      width: 4px;
-      height: 0.8em;
-      background-color: $primary;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
+      background-color: $white;
     }
   }
 

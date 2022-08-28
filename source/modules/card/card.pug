@@ -38,3 +38,17 @@ mixin doc(id='01')
           i.fas.fa-fw.fa-download.me-2
           span Tải về
     +md-doc(id)
+
+mixin product(img='', label='')
+  .product
+    .row.g-0
+      .col-sm-6
+        a.product__frame(href="#!")
+          img(src=img, alt="")
+      .col-sm-6
+        .product__body
+          .product__label= label
+          h3.product__name
+            a(href="#!") Thiết kế website  chuyên nghiệp
+          a.product__link(href="#!")
+            i.fal.fa-arrow-right

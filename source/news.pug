@@ -7,7 +7,8 @@ block content
     .container
       .row.g-40
         .col-lg-8.order-lg-1
-          h2.section__title Tin tức mới
+          h2.section__title
+            span Tin tức mới
           - for(let i = 0; i < 10; i++)
             +news(`./images/news-${i % 3 + 1}.jpg`)
 
