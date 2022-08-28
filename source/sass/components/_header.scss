@@ -1,6 +1,14 @@
 .header {
   position: relative;
+  background-color: #fff;
   z-index: $zindex-fixed;
+
+  &__top {
+    background-color: $primary-dark;
+    color: $white;
+    padding: 12px 0;
+    font-size: 12px;
+  }
 
   &__inner {
     display: flex;
@@ -10,16 +18,119 @@
 
   &__logo {
     display: inline-flex;
-    margin: 16px 0;
+    margin: 15px 0;
 
     img {
       height: 40px;
     }
   }
 
+  &__name {
+    display: none;
+  }
+
   &__elements {
     display: flex;
     align-items: center;
     margin-left: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__top {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 15px 0;
+    }
+
+    &__logo {
+      margin: 27px 0;
+
+      img {
+        height: 46px;
+      }
+    }
+
+    &__name {
+      display: block;
+      margin-left: 20px;
+      padding: 10px 0 10px 20px;
+      border-left: 1px solid $primary;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.h-contact {
+  font-size: 13px;
+  background-color: $light;
+
+  &__item {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    background: 0;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 10;
+
+    &__item {
+      border: 0;
+      color: $white;
+      padding: 15px 0;
+      position: relative;
+
+      &:hover {
+        color: $white;
+      }
+
+      &:not(:last-child) {
+        margin-right: 35px;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 16px;
+          border-right: 1px solid rgba(#fff, 0.5);
+          position: absolute;
+          top: 50%;
+          right: -18px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.h-hotline {
+  display: block;
+  padding: 16px 20px;
+  color: #333;
+  line-height: 20px;
+
+  img {
+    height: 40px;
+  }
+
+  &__number {
+    font-size: 1.25em;
+    font-weight: 700;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
   }
 }

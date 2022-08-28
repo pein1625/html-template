@@ -92,6 +92,23 @@
   &-root > &-item > &-link {
     font-weight: 700;
     text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 100%;
+      background-color: $primary;
+      transform: rotateY(90deg);
+      transition: 0.4s;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &.active::before {
+      transform: rotateY(0);
+    }
   }
 
   @include media-breakpoint-up(xl) {
@@ -102,7 +119,16 @@
     // menu root
     &-root {
       display: flex;
+      width: 100%;
       border: 0;
+      background-color: #0071DC;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 3px 6px rgba(#000, 0.16);
+      padding: 0 130px 0 30px;
+      justify-content: space-between;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
 
     &-root &-item {
@@ -118,11 +144,12 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       position: absolute;
       z-index: 2;
-      top: 0;
+      top: -6px;
       left: 100%;
       border-radius: 4px;
       transform-origin: 0 4px;
       background-color: $white;
+      padding: 6px 0;
 
       &-right {
         left: auto;
@@ -143,32 +170,68 @@
     }
 
     &-root &-sub &-toggle {
-      width: 30px;
+      width: 40px;
       border-left: 0;
+      color: $primary;
+
+      &::before {
+        color: inherit;
+      }
     }
 
     &-root &-sub &-link {
-      padding-left: 20px;
-    }
-
-    &-root &-sub &-item-group > &-link {
-      padding-right: 30px;
+      padding-left: 30px;
+      padding-right: 45px;
     }
 
     &-root &-sub &-item:hover > &-link {
       background-color: $light;
     }
 
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
-    }
+    // &-root > &-item {
+    //   flex-grow: 1;
+    // }
 
     &-root > &-item > &-link {
       font-size: 14px;
-      padding: 12px 0;
+      line-height: 20px;
+      padding: 15px 0;
+      font-weight: 400;
       transition: 0.3s;
+      text-align: center;
+      color: $white;
+
+      &::before {
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        top: auto;
+        bottom: 5px;
+      }
+
+      &.active {
+        font-weight: 700;
+
+        &::before {
+          transform: rotateY(90deg);
+        }
+      }
+    }
+
+    &-root > &-item-group > &-link {
+
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;
+        margin-left: 8px;
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      &::before {
+        transform: rotateY(0deg) !important;
+      }
     }
 
     &-root > &-item > &-toggle {
@@ -186,18 +249,14 @@
       display: block;
       animation: menu-float-show 0.2s ease-out;
     }
-  }
 
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
+    &-root &-sub &-item:hover > &-link {
+      background-color: $primary;
+      color: $white;
     }
 
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
+    &-root &-sub &-item:hover > &-toggle {
+      color: $white;
     }
   }
 }

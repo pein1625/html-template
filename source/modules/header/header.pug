@@ -3,12 +3,32 @@ include ../menu/menu
 
 mixin header
   header.header
+    .header__top
+      .container Bộ Công Thương | Cục Thương mại điện tử và Kinh tế số
     .header__wrapper
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
+          .header__name Trung tâm phát triển thương mại điện tử
           .header__elements
             +navbar
               +menu(menu)
+
+              .h-contact
+                a.h-contact__item(href="mailto:daotao@ecomviet.vn")
+                  i.fal.fa-fw.fa-envelope.me-2
+                  span daotao@ecomviet.vn
+                .h-contact__item
+                  i.fal.fa-fw.fa-map-marker-alt.me-2
+                  span 25 Ngô Quyền - Quận Hoàn Kiếm - Hà Nội
+
+              a.h-hotline(href="tel:024 2220 5365")
+                .row.g-2
+                  .col-auto
+                    img(src="./images/icon-phone.png", alt="")
+                  .col
+                    div Hotline
+                    .h-hotline__number 024 2220 5365
+
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
