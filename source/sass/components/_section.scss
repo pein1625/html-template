@@ -7,7 +7,7 @@
     line-height: 1.2;
     position: relative;
     padding-left: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
 
     &::before {
       content: '';
@@ -27,7 +27,6 @@
 
     &__title {
       font-size: 30px;
-      margin-bottom: 40px;
     }
   }
 }

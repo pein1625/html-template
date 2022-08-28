@@ -1,3 +1,31 @@
+mixin news(img='./images/news-1.jpg')
+  .news
+    .row.g-0
+      .col-md-4
+        a.news__frame(href="./news-detail.html")
+          img(src=img, alt="")
+      .col-md-8
+        .news__body
+          .news__info
+            i.fal.fa-clock.me-2.text-primary
+            span.me-2 03/07/2022
+            a.text-uppercase.text-primary(href="#!") Tin tức Ecomviet
+          h3.news__title
+            a(href="./news-detail.html") Bình Định: Nâng cao giá trị các sản phẩm địa phương qua các sàn thương mại điện tử
+          a.news__link(href="./news-detail.html")
+            i.fal.fa-arrow-right
+
+mixin news-2(img='./images/news-1.jpg')
+  .news-2
+    a.news-2__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    .news-2__body
+      h3.news-2__title
+        a(href="./news-detail.html") Hội nghị tập huấn phổ biến kiến thức phát triển nguồn nhân lực thương mại điện tử năm 2022
+      .news-2__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolor illo similique, iste voluptatum necessitatibus labore ab dolores sapiente facere odit porro deleniti ea perferendis laborum quibusdam numquam, at cum.
+      a.news-2__link(href="./news-detail.html")
+        i.fal.fa-arrow-right
+
 mixin doc(id='01')
   .doc
     .row.gx-3.gy-0

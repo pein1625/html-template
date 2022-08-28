@@ -1,19 +1,36 @@
 .post {
   &__title {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #072F60;
     text-transform: uppercase;
     margin-bottom: 16px;
   }
 
   &__info {
-    color: #999;
-    margin-bottom: 16px;
+    font-size: 12px;
+    color: #848484;
+    margin-bottom: 40px;
   }
 
-  &__sapo {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 16px;
+  &__content {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4F4F4F;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__info {
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      font-size: 14px;
+    }
   }
 }

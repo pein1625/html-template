@@ -1,0 +1,32 @@
+extends layout/page
+
+block content
+  +banner('Tin tức', 'Trang chủ', 'Tin tức')
+
+  section.section.pb-0
+    .container
+      .row.g-40
+        .col-lg-8.order-lg-1
+          h2.section__title Tin tức mới
+          - for(let i = 0; i < 10; i++)
+            +news(`./images/news-${i % 3 + 1}.jpg`)
+
+          nav.border-top.mt-30.pt-30(style="border-color:#ACD6FF !important;")
+            +pagination
+
+        .col-lg-4
+          section.aside
+            h2.aside__title
+              img(src="./images/icon-menu.png", alt="")
+              span Tin tức
+
+            .aside__list
+              a.aside__item(href="#!") Tin tức sự kiện
+              a.aside__item(href="#!") Tin tức thị trường
+              a.aside__item(href="#!") Tin tức chuyên ngành
+
+          .mt-4
+            img(src="./images/aside-page.jpg", alt="")
+
+          a.d-block.mt-4(href="#!")
+            img(src="./images/aside-img.jpg", alt="")

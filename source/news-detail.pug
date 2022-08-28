@@ -1,0 +1,58 @@
+extends layout/page
+
+block content
+  +banner('Tin tức', 'Trang chủ', 'Tin tức')
+
+  section.section
+    .container
+      .row.g-40
+        .col-lg-8.order-lg-1
+          article.post
+            h1.post__title Bình Định: Nâng cao giá trị các sản phẩm địa phương qua các sàn thương mại điện tử
+            .post__info
+              i.fal.fa-clock.me-2.text-primary
+              span.me-2 03/07/2022
+              a.text-uppercase.text-primary(href="#!") Tin tức chuyên nghành
+            .post__content
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
+              .row.g-30.mb-30
+                .col-lg-6
+                  p
+                    img.w-100(src="./images/news-3.jpg", alt="")
+                .col-lg-6
+                  p Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
+                .col-lg-6
+                  p Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
+                .col-lg-6
+                  p
+                    img.w-100(src="./images/aside-img.jpg", alt="")
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
+
+        .col-lg-4
+          section.aside
+            h2.aside__title
+              img(src="./images/icon-menu.png", alt="")
+              span Tin tức
+
+            .aside__list
+              a.aside__item(href="#!") Tin tức sự kiện
+              a.aside__item(href="#!") Tin tức thị trường
+              a.aside__item(href="#!") Tin tức chuyên ngành
+
+          .mt-4
+            img(src="./images/aside-page.jpg", alt="")
+
+          a.d-block.mt-4(href="#!")
+            img(src="./images/aside-img.jpg", alt="")
+
+  section.section.pt-10.pb-0
+    .container
+      h2.section__title Tin tức khác
+
+      .row.g-30
+        .col-lg-4
+          +news-2('./images/news-4.jpg')
+        .col-lg-4
+          +news-2('./images/news-5.jpg')
+        .col-lg-4
+          +news-2('./images/news-6.jpg')
