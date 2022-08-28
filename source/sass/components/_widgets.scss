@@ -61,3 +61,58 @@
     }
   }
 }
+
+.aside {
+  border-radius: 4px;
+
+  &__title {
+    background-color: $primary;
+    color: $white;
+    padding: 15px 20px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-bottom: 0;
+
+    img {
+      height: 20px;
+      margin-right: 16px;
+    }
+  }
+
+  &__list {
+    border-radius: 0 0 4px 4px;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-top: 0;
+    padding: 10px 0;
+  }
+
+  &__item {
+    display: block;
+    padding: 8px 20px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: '\f105';
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 300;
+      font-size: 1.5em;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    &.active,
+    &:hover {
+      color: $primary;
+    }
+  }
+}

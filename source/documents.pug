@@ -1,0 +1,32 @@
+extends layout/page
+
+block content
+  +banner('Văn bản pháp luật', 'Trang chủ', 'Văn bản pháp luật')
+
+  section.section
+    .container
+      .row
+        .col-lg-8.order-lg-1
+          h2.section__title Văn bản pháp luật
+          each item in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+            +doc(item)
+
+          nav.mt-30
+            +pagination
+
+        .col-lg-4
+          section.aside
+            h2.aside__title
+              img(src="./images/icon-menu.png", alt="")
+              span Văn bản pháp luật
+
+            .aside__list
+              a.aside__item(href="#!") Văn bản nghành 1
+              a.aside__item.active(href="#!") Văn bản nghành 2
+              a.aside__item(href="#!") Văn bản nghành 3
+
+          .mt-4
+            img(src="./images/aside-page.jpg", alt="")
+
+          a.d-block.mt-4(href="#!")
+            img(src="./images/aside-img.jpg", alt="")

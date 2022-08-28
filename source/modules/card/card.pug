@@ -1,0 +1,12 @@
+mixin doc(id='01')
+  .doc
+    .row.gx-3.gy-0
+      .col-sm-auto
+        .doc__number= id
+      .col
+        a.doc__title(href=`#md-doc-${id}`, data-bs-toggle="modal")  Nghị định 55/2022/NĐ-CP của Chính phủ về việc quy định Cơ sở dữ liệu quốc gia về công tác tiếp công dân, xử lý đơn, giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh
+      .col-sm-auto.ps-xl-40
+        a.doc__btn(href="#!")
+          i.fas.fa-fw.fa-download.me-2
+          span Tải về
+    +md-doc(id)

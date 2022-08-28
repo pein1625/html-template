@@ -1,0 +1,80 @@
+.md-doc {
+  font-family: $montserrat;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 15px 30px;
+    text-align: center;
+    min-width: 210px;
+    background-color: $primary;
+    color: $white;
+    border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      color: $white;
+    }
+  }
+
+  .modal-body {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: relative;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__title {
+      font-size: 20px;
+    }
+
+    .modal-dialog {
+      max-width: 700px;
+    }
+
+    .modal-body {
+      padding: 40px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__content {
+      margin-bottom: 50px;
+    }
+
+    .modal-dialog {
+      max-width: 900px;
+    }
+
+    .modal-body {
+      padding: 70px;
+    }
+  }
+}
