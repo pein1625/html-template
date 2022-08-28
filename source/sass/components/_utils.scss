@@ -8,6 +8,11 @@
     a:hover {
       color: $gray-800;
     }
+
+    & + &::before {
+      content: '\f105';
+      font-family: 'Font Awesome 5 Pro';
+    }
   }
 
   &--white .breadcrumb-item,

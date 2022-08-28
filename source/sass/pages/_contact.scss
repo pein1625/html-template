@@ -1,0 +1,79 @@
+.ct-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__map {
+    flex-grow: 1;
+    min-height: 250px;
+    margin-top: 20px;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.ct-form {
+  &__btn {
+    display: inline-block;
+    min-width: 200px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    border: 1px solid $primary;
+    padding: 13px 16px;
+    background: #fff;
+    text-align: center;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $light;
+    }
+
+    &--primary {
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: 0;
+    padding: 8px 12px;
+  }
+
+  input.form-control {
+    height: 40px;
+  }
+
+  .col-form-label {
+    padding:  9px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__btn {
+      min-width: 120px;
+      padding: 8px 20px;
+    }
+
+    .col-form-label {
+      padding: 0;
+    }
+  }
+}

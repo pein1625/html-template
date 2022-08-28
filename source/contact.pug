@@ -1,0 +1,73 @@
+extends layout/page
+
+block content
+  +banner('Liên hệ', 'Trang chủ', 'Liên hệ')
+
+  section.section
+    .container
+      .row.g-40
+        .col-lg-5
+        .col-lg-7
+          h1.section__title.mb-0 Liên hệ
+        .col-lg-5
+          section.ct-info
+            h2.ct-info__title Ecomviet
+            .row.g-2.mt-1
+              .col-auto
+                i.fal.fa-fw.fa-map-marker-alt
+              .col 25 Ngô Quyền - Quận Hoàn Kiếm - Hà Nội
+            .row.g-2.mt-1
+              .col-auto
+                i.fal.fa-fw.fa-envelope
+              .col
+                a(href="mailto:daotao@ecomviet.vn") daotao@ecomviet.vn
+            .row.g-2.mt-1
+              .col-auto
+                i.fal.fa-fw.fa-phone
+              .col
+                a(href="tel:024 2220 5365") 024 2220 5365
+            .row.g-2.mt-1
+              .col-auto
+                i.fal.fa-fw.fa-globe
+              .col
+                a(href="daotao.ecomviet.vn") daotao.ecomviet.vn
+
+            .ct-info__map.ratio
+              iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+
+        .col-lg-7
+          form.ct-form(action="#!")
+            .row.gx-3.gy-2.mb-20
+              .col-md-3
+                label.col-form-label * Họ tên
+              .col-md-9
+                input.form-control(type="text")
+            .row.gx-3.gy-2.mb-20
+              .col-md-3
+                label.col-form-label * Địa chỉ
+              .col-md-9
+                input.form-control(type="text")
+            .row.gx-3.gy-2.mb-20
+              .col-md-3
+                label.col-form-label * Hòm thư
+              .col-md-9
+                input.form-control(type="text")
+            .row.gx-3.gy-2.mb-20
+              .col-md-3
+                label.col-form-label * Số điện thoại
+              .col-md-9
+                input.form-control(type="text")
+            .row.gx-3.gy-2.mb-20
+              .col-md-3
+                label.col-form-label * Tiêu đề
+              .col-md-9
+                input.form-control(type="text")
+            .row.gx-3.gy-2.mb-20
+              .col-md-3
+                label.col-form-label * Nội dung
+              .col-md-9
+                textarea.form-control(rows="4")
+            div
+              button.ct-form__btn.me-3(type="reset") Nhập lại
+              button.ct-form__btn.ct-form__btn--primary(type="submit") Gửi
+                i.fal.fa-angle-double-right.ms-2

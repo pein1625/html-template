@@ -1,0 +1,7 @@
+mixin banner(title='', ...list)
+  .banner
+    .container
+      .banner__inner
+        +breadcrumb(...list)
+        .banner__title= title
+        img.banner__img(src="./images/banner-img.png", alt="")

@@ -7,7 +7,7 @@ mixin img(type = 'any', w = 600, h = 400, addClass='')
 
 mixin breadcrumb(...list)
   - var lastItem = list.pop()
-  ol.breadcrumb
+  ol.breadcrumb.breadcrumb--white
     each item in list
       li.breadcrumb-item
         a.link-unstyled(href="#!")= item
