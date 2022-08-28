@@ -1,10 +1,14 @@
+mixin n-link(href='#!', addClass='')
+  a.n-link(href=href, class=addClass)
+    i.fal.fa-arrow-right
+
 mixin news(img='./images/news-1.jpg')
   .news
     .row.g-0
-      .col-md-4
+      .col-md-auto
         a.news__frame(href="./news-detail.html")
           img(src=img, alt="")
-      .col-md-8
+      .col-md
         .news__body
           .news__info
             i.fal.fa-clock.me-2.text-primary
@@ -12,19 +16,22 @@ mixin news(img='./images/news-1.jpg')
             a.text-uppercase.text-primary(href="#!") Tin tức Ecomviet
           h3.news__title
             a(href="./news-detail.html") Bình Định: Nâng cao giá trị các sản phẩm địa phương qua các sàn thương mại điện tử
-          a.news__link(href="./news-detail.html")
-            i.fal.fa-arrow-right
+      +n-link('./news-detail.html', 'news__link')
 
-mixin news-2(img='./images/news-1.jpg')
+mixin news-2(img='./images/news-1.jpg', showInfo=false, linkClass='')
   .news-2
     a.news-2__frame(href="./news-detail.html")
       img(src=img, alt="")
     .news-2__body
+      if (showInfo)
+        .news-2__info
+          i.fal.fa-clock.me-1.text-primary
+          span.me-1 03/07/2022
+          a.text-uppercase.text-primary(href="#!") Tin tức Ecomviet
       h3.news-2__title
         a(href="./news-detail.html") Hội nghị tập huấn phổ biến kiến thức phát triển nguồn nhân lực thương mại điện tử năm 2022
       .news-2__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolor illo similique, iste voluptatum necessitatibus labore ab dolores sapiente facere odit porro deleniti ea perferendis laborum quibusdam numquam, at cum.
-      a.news-2__link(href="./news-detail.html")
-        i.fal.fa-arrow-right
+      +n-link('./news-detail.html', 'news-2__link ' + linkClass)
 
 mixin doc(id='01')
   .doc
@@ -43,15 +50,14 @@ mixin product(img='', label='')
   .product
     .row.g-0
       .col-sm-6
-        a.product__frame(href="#!")
+        a.product__frame(href="./service-detail.html")
           img(src=img, alt="")
       .col-sm-6
         .product__body
           .product__label= label
           h3.product__name
-            a(href="#!") Thiết kế website  chuyên nghiệp
-          a.product__link(href="#!")
-            i.fal.fa-arrow-right
+            a(href="./service-detail.html") Thiết kế website  chuyên nghiệp
+          +n-link('./service-detail.html', 'product__link')
 
 mixin event(img='', time='10/2022')
   .event

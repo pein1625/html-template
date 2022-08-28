@@ -1,3 +1,118 @@
 extends layout/page
 
 block content
+  // Banner slider
+  +banner-slider
+
+  // Tin tức mới
+  section.section
+    img.section__texture.section__texture--right(src="./images/section-texture.png", alt="")
+    .container
+      .section__subtitle.text-center Tin tức Ecomviet
+      h1.section__title.text-center
+        span Tin tức mới
+
+      .row.g-40
+        .col-lg-6
+          +news-2('./images/news-4.jpg', true, 'news-2__link--bottom')
+        .col-lg-6
+          .row.g-40
+            .col-12
+              +news('./images/news-1.jpg')
+            .col-12
+              +news('./images/news-2.jpg')
+            .col-12
+              +news('./images/news-3.jpg')
+
+      .text-end.mt-30
+        a.section__link(href="./news.html") Xem tất cả
+          i.fal.fa-arrow-right.ms-2
+
+  section.section.section--bg
+    .container
+      .section__subtitle.text-center Dịch vụ Ecomviet cung cấp
+      h1.section__title.text-center
+        span Dịch vụ
+
+      .row.gx-40.gy-60
+        .col-lg-4.col-md-6
+          .service
+            a.service__frame(href="./service-detail.html")
+              img(src="./images/service-1.jpg", alt="")
+            .service__body
+              img.service__icon(src="./images/icon-puzzle.png", alt="")
+              h3.service__title
+                a(href="./service-detail.html") Dịch vụ đào tạo
+              .service__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officiis hic modi, atque ea beatae tempora. Laboriosam maiores tenetur deleniti vel doloremque libero nesciunt earum vitae quo pariatur, quae id!
+              a.service__link(href="./service-detail.html")
+                i.fal.fa-arrow-right
+
+        .col-lg-4.col-md-6
+          .service
+            a.service__frame(href="./service-detail.html")
+              img(src="./images/service-2.jpg", alt="")
+            .service__body
+              img.service__icon(src="./images/icon-advise.png", alt="")
+              h3.service__title
+                a(href="./service-detail.html") Dịch vụ tư vấn (tư vấn liên quan đến TMĐT)
+              .service__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officiis hic modi, atque ea beatae tempora. Laboriosam maiores tenetur deleniti vel doloremque libero nesciunt earum vitae quo pariatur, quae id!
+              a.service__link(href="./service-detail.html")
+                i.fal.fa-arrow-right
+
+        .col-lg-4.col-md-6
+          .service
+            a.service__frame(href="./service-detail.html")
+              img(src="./images/service-3.jpg", alt="")
+            .service__body
+              img.service__icon(src="./images/icon-trans.png", alt="")
+              h3.service__title
+                a(href="./service-detail.html") Dịch vụ hỗ trợ khai báo xuất xứ hàng hóa (C/O)
+              .service__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet officiis hic modi, atque ea beatae tempora. Laboriosam maiores tenetur deleniti vel doloremque libero nesciunt earum vitae quo pariatur, quae id!
+              a.service__link(href="./service-detail.html")
+                i.fal.fa-arrow-right
+
+      .text-end.mt-30
+        a.section__link(href="./services.html") Xem tất cả
+          i.fal.fa-arrow-right.ms-2
+
+  section.section.section--primary
+    .container
+      .section__subtitle.text-center.text-white Sản phẩm của Ecomviet
+      h1.section__title.text-center.text-white
+        span Sản phẩm
+
+      .row.gx-40.gy-60.pb-20
+        .col-lg-6
+          +product('./images/service-1.jpg', 'EKIP')
+        .col-lg-6
+          +product('./images/service-2.jpg', 'ECVN')
+        .col-lg-6
+          +product('./images/service-3.jpg', 'VIETNAM EXPORT')
+
+  section.section.section--bg
+    .container
+      .section__subtitle.text-center Sự kiện của ecomviet
+      h1.section__title.text-center
+        span Sự kiện sắp diễn ra
+      +event-slider
+
+  section.section
+    .container
+      .section__subtitle.text-center Chia sẻ của chuyên gia
+      h1.section__title.text-center
+        span Chuyên gia TMĐT
+
+      .row.gy-40.gx-3.gx-md-40
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-xl-3
+            +news-2(`./images/news-${ i % 6 + 1 }.jpg`, true)
+
+  section.section.s-partner
+    img.section__texture(src="./images/section-texture.png", alt="")
+    .container
+      .section__subtitle.text-center Đối tác của Ecomviet
+      h1.section__title.text-center
+        span Đối tác
+
+      .position-relative
+        +partner-slider

@@ -1,9 +1,9 @@
 extends layout/page
 
 block content
-  +banner('Tin tức - Sự kiện', 'Trang chủ', 'Tin tức - Sự kiện')
+  +banner('Sự kiện', 'Trang chủ', 'Tin tức - Sự kiện')
 
-  section.section.pb-0
+  section.section
     .container
       .row.gx-3.gx-md-40.gx-xl-60.gy-30.gy-md-60
         - for(let i = 0; i < 4; i++)
@@ -16,3 +16,8 @@ block content
 
       nav.border-top.mt-30.pt-30(style="border-color:#ACD6FF !important;")
         +pagination
+
+  section.section.s-partner
+    .container
+      .position-relative
+        +partner-slider

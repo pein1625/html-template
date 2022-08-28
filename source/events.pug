@@ -1,9 +1,9 @@
 extends layout/page
 
 block content
-  +banner('Tin tức - Sự kiện', 'Trang chủ', 'Tin tức - Sự kiện')
+  +banner('Sự kiện', 'Trang chủ', 'Tin tức - Sự kiện')
 
-  section.section.pb-0
+  section.section
     .container
       h1.section__title.text-center
         span Sự kiện
@@ -13,3 +13,8 @@ block content
           +event('./images/event-1.jpg', '10/2022')
           +event('./images/event-2.jpg', '06/2022')
           +event('./images/event-3.jpg', '09/2022')
+
+  section.section.s-partner
+    .container
+      .position-relative
+        +partner-slider

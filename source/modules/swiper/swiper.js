@@ -49,3 +49,32 @@ $(function() {
     }
   })
 });
+
+$(function() {
+  addSwiper('.event-slider', {
+    navigation: true,
+    loop: true,
+    speed: 400,
+    slidesPerView: 2,
+    spaceBetween: 24,
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 60
+      }
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.banner-slider', {
+    pagination: true,
+    navigation: true,
+    loop: true,
+    speed: 800,
+  });
+});

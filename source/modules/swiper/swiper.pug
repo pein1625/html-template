@@ -44,12 +44,21 @@ mixin swiper(el, number, hasNav, hasPaging)
 
 mixin banner-slider
   .banner-slider
+    .banner-slider__widgets
+      .container
+        .banner-slider__pagination
     .banner-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 3; i++)
-          .swiper-slide
-            a.banner-slider__frame(href="#!")
-              img(src="./images/banner-slide.jpg", alt="")
+          .swiper-slide.banner-slider__slide
+            .container
+              .banner-slider__inner
+                .banner-slider__title TRUNG TÂM phát triển thương mại điện tử
+                .banner-slider__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hendrerit id tincidunt diam quis cursus ultricies facilisis urna, arcu.
+                a.banner-slider__btn.n-btn(href="#!")
+                  | Chi tiết
+                  i.fal.fa-arrow-right.ms-2
+                img.banner-slider__img(src="./images/banner-img.png", alt="")
 
 mixin partner-slider
   .partner-slider
@@ -63,3 +72,19 @@ mixin partner-slider
           .swiper-slide
             a.partner-slider__frame(href="#!")
               img(src=`./images/partner-${i + 1}.png`, alt="")
+
+mixin event-slider
+  .event-slider
+    .event-slider__prev
+      i.fal.fa-arrow-left
+    .event-slider__next
+      i.fal.fa-arrow-right
+    .event-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 2; i++)
+          .swiper-slide
+            +event-2('./images/event-1.jpg', '10/2022')
+          .swiper-slide
+            +event-2('./images/event-2.jpg', '09/2022')
+          .swiper-slide
+            +event-2('./images/event-3.jpg', '06/2022')

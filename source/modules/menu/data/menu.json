@@ -167,16 +167,16 @@
       "url": "./news.html",
       "submenu": [
         {
-          "text": "Lorem ipsum dolor sit amet",
-          "url": "#!"
+          "text": "Tin tức",
+          "url": "./news.html"
         },
         {
-          "text": "Vonsectetur adipiscing elit",
-          "url": "#!"
+          "text": "Sự kiện 1",
+          "url": "./events.html"
         },
         {
-          "text": "Sed integer metus sit ultrices",
-          "url": "#!"
+          "text": "Sự kiện 2",
+          "url": "./events-2.html"
         },
         {
           "text": "Nec nisi quis faucibus",

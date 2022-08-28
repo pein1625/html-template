@@ -2,12 +2,23 @@
   position: relative;
   background-color: #fff;
   z-index: $zindex-fixed;
+  height: 110px;
+
+  &.is-fixed  &__wrapper {
+    background-color: $white;
+    box-shadow: 0 1px 3px rgba(#000, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
 
   &__top {
     background-color: $primary-dark;
     color: $white;
-    padding: 12px 0;
+    padding: 10px 0;
     font-size: 12px;
+    line-height: 20px;
   }
 
   &__inner {
@@ -36,6 +47,13 @@
   }
 
   @include media-breakpoint-up(xl) {
+    height: 150px;
+
+    &.is-fixed  &__wrapper {
+      top: -100px;
+      box-shadow: unset;
+    }
+
     &__top {
       font-size: 14px;
       line-height: 20px;
