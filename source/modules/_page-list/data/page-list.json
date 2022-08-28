@@ -10,12 +10,20 @@
         "url": "about"
       },
       {
-        "title": "Sản phẩm",
-        "url": "products"
+        "title": "Dịch vụ",
+        "url": "services"
       },
       {
-        "title": "Chi tiết sản phẩm",
-        "url": "product-detail"
+        "title": "Chi tiết dịch vụ",
+        "url": "service-detail"
+      },
+      {
+        "title": "Sự kiện",
+        "url": "events"
+      },
+      {
+        "title": "Sự kiện 2",
+        "url": "events-2"
       },
       {
         "title": "Tin tức",
@@ -24,6 +32,10 @@
       {
         "title": "Chi tiết tin tức",
         "url": "news-detail"
+      },
+      {
+        "title": "Văn bản",
+        "url": "documents"
       },
       {
         "title": "Liên hệ",

@@ -54,13 +54,12 @@ mixin banner-slider
 mixin partner-slider
   .partner-slider
     .partner-slider__prev
-      i.fa.fa-angle-left
+      i.fal.fa-angle-left
     .partner-slider__next
-      i.fa.fa-angle-right
+      i.fal.fa-angle-right
     .partner-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 6; i++)
+        - for(let i = 0; i < 8; i++)
           .swiper-slide
             a.partner-slider__frame(href="#!")
-              //- img(src=`./images/partner-${i + 1}.png`, alt="")
-              +img
+              img(src=`./images/partner-${i + 1}.png`, alt="")

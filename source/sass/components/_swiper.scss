@@ -161,3 +161,27 @@
     }
   }
 }
+
+.partner-slider {
+  width: 100%;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(#000, 0.16);
+  background-color: $white;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transform: translateY(-70%);
+
+  @include slider-nav-2();
+
+  &__prev,
+  &__next {
+    color: #333;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 30px;
+  }
+}

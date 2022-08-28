@@ -1,2 +1,62 @@
 mixin footer
   footer.footer
+    .container
+      .position-relative
+        +partner-slider
+      .footer__wrapper
+        .footer__title TRUNG TÂM PHÁT TRIỂN THƯƠNG MẠI ĐIỆN TỬ
+        .footer__subtitle Ecomviet.vn
+        .footer__grid
+          .footer__col
+            ul.f-contact
+              li
+                .row.g-2
+                  .col-auto
+                    i.fal.fa-fw.fa-map-marker-alt
+                  .col 25 Ngô Quyền - Quận Hoàn Kiếm - Hà Nội
+              li
+                .row.g-2
+                  .col-auto
+                    i.fal.fa-fw.fa-envelope
+                  .col
+                    a(href="mailto:daotao@ecomviet.vn") daotao@ecomviet.vn
+              li
+                .row.g-2
+                  .col-auto
+                    i.fal.fa-fw.fa-phone
+                  .col
+                    a(href="tel:024 2220 5365") 024 2220 5365
+
+            .f-social
+              span Kết nối với chúng tôi
+              a.f-social__item(href="#!")
+                i.fab.fa-facebook-f
+              a.f-social__item(href="#!")
+                i.fab.fa-youtube
+
+          .footer__col
+            .footer__heading Giới thiệu
+            ul.f-menu
+              each item in ['Giới thiệu Ecomviet','Giới thiệu Ecomviet','Cơ cấu tổ chức','Sứ mệnh, nhiệm vụ']
+                li
+                  a(href="#!")= item
+          .footer__col
+            .footer__heading Giải pháp
+            ul.f-menu
+              each item in ['Sản phẩm','Sản phẩm','Dịch vụ','Dịch vụ']
+                li
+                  a(href="#!")= item
+          .footer__col
+            .footer__heading Tin tức
+            ul.f-menu
+              each item in ['Tin tức Ecomviet','Tin tức Ecomviet','Tin tức đào tạo','Tin tức đào tạo']
+                li
+                  a(href="#!")= item
+          .footer__col
+            .footer__heading Văn bản
+            ul.f-menu
+              each item in ['Văn bản hành chính','Văn bản hành chính','Văn bản kỹ thuật','Văn bản kỹ thuật']
+                li
+                  a(href="#!")= item
+
+        .footer__copyright Copyright 2022 © TRUNG TÂM phát triển thương mại điện tử
