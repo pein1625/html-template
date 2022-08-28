@@ -1,0 +1,9 @@
+@include font-face('BeVietnam', 'BeVietnam-Light', 300);
+@include font-face('BeVietnam', 'BeVietnam-Medium', 400);
+@include font-face('BeVietnam', 'BeVietnam-Medium', 500);
+@include font-face('SVN-ClashGrotesk', 'SVN-ClashGrotesk-Regular', 400);
+@include font-face('SVN-ClashGrotesk', 'SVN-ClashGrotesk-Semibold', 600);
+@include font-face('SVN-ClashGrotesk', 'SVN-ClashGrotesk-Semibold', 700);
+
+$be-vietnam: 'BeVietnam', sans-serif;
+$clash-grotesk: 'SVN-ClashGrotesk', sans-serif;
