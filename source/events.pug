@@ -1,0 +1,15 @@
+extends layout/page
+
+block content
+  +banner('Tin tức - Sự kiện', 'Trang chủ', 'Tin tức - Sự kiện')
+
+  section.section.pb-0
+    .container
+      h1.section__title.text-center
+        span Sự kiện
+
+      .event-list
+        - for(let i = 0; i < 2; i++)
+          +event('./images/event-1.jpg', '10/2022')
+          +event('./images/event-2.jpg', '06/2022')
+          +event('./images/event-3.jpg', '09/2022')

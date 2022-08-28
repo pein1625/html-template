@@ -52,3 +52,32 @@ mixin product(img='', label='')
             a(href="#!") Thiết kế website  chuyên nghiệp
           a.product__link(href="#!")
             i.fal.fa-arrow-right
+
+mixin event(img='', time='10/2022')
+  .event
+    .row.gy-0.gx-20.gx-sm-30.gx-xl-50
+      .col-auto
+        .event__frame
+          img(src=img, alt="")
+      .col
+        .event__time= time
+        .event__desc Lễ ra mắt giải pháp hóa đơn thương mại điện tử
+        .event__info
+          i.fal.fa-fw.fa-map-marker-alt.me-2
+          span Địa điểm: 25 Ngô Quyền
+        .event__info
+          i.fal.fa-fw.fa-clock.me-2
+          span Thời gian: 9h00 ngày 02/09/2022
+
+mixin event-2(img='', time='10/2022')
+  .event.event--2
+    .event__frame
+      img(src=img, alt="")
+    .event__time= time
+    .event__desc Lễ ra mắt giải pháp hóa đơn thương mại điện tử
+    .event__info
+      i.fal.fa-fw.fa-map-marker-alt.me-2
+      span Địa điểm: 25 Ngô Quyền
+    .event__info
+      i.fal.fa-fw.fa-clock.me-2
+      span Thời gian: 9h00 ngày 02/09/2022

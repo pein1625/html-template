@@ -1,0 +1,18 @@
+extends layout/page
+
+block content
+  +banner('Tin tức - Sự kiện', 'Trang chủ', 'Tin tức - Sự kiện')
+
+  section.section.pb-0
+    .container
+      .row.gx-3.gx-md-40.gx-xl-60.gy-30.gy-md-60
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-md-4
+            +event-2('./images/event-1.jpg', '10/2022')
+          .col-6.col-md-4
+            +event-2('./images/event-2.jpg', '09/2022')
+          .col-6.col-md-4
+            +event-2('./images/event-3.jpg', '06/2022')
+
+      nav.border-top.mt-30.pt-30(style="border-color:#ACD6FF !important;")
+        +pagination
