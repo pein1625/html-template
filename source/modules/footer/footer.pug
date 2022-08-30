@@ -4,11 +4,23 @@ mixin footer
       //- .position-relative
       //-   +partner-slider
       .footer__wrapper
-        .footer__title TRUNG TÂM PHÁT TRIỂN THƯƠNG MẠI ĐIỆN TỬ
-        .footer__subtitle Ecomviet.vn
+        .row.g-3.align-items-baseline.justify-content-between
+          .col-auto
+            .footer__title TRUNG TÂM PHÁT TRIỂN THƯƠNG MẠI ĐIỆN TỬ
+            .footer__subtitle Ecomviet.vn
+          .col-auto
+            .f-social
+              span Kết nối với chúng tôi
+              a.f-social__item(href="#!")
+                i.fab.fa-facebook-f
+              a.f-social__item(href="#!")
+                i.fab.fa-youtube
+          .col-auto
+            .footer__copyright Copyright 2022 © TRUNG TÂM phát triển thương mại điện tử
+
         .footer__grid
           .footer__col
-            ul.f-contact
+            ul.f-contact.mb-20
               li
                 .row.g-2
                   .col-auto
@@ -27,12 +39,8 @@ mixin footer
                   .col
                     a(href="tel:024 2220 5365") 024 2220 5365
 
-            .f-social
-              span Kết nối với chúng tôi
-              a.f-social__item(href="#!")
-                i.fab.fa-facebook-f
-              a.f-social__item(href="#!")
-                i.fab.fa-youtube
+            .footer__page
+              img.w-100(src="./images/facebook-page.jpg", alt="")
 
           .footer__col
             .footer__heading Giới thiệu
@@ -58,5 +66,3 @@ mixin footer
               each item in ['Văn bản hành chính','Văn bản hành chính','Văn bản kỹ thuật','Văn bản kỹ thuật']
                 li
                   a(href="#!")= item
-
-        .footer__copyright Copyright 2022 © TRUNG TÂM phát triển thương mại điện tử

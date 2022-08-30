@@ -24,11 +24,9 @@
   }
 
   @include media-breakpoint-down(xl) {
-    &__link {
-      width: 30px;
-      height: 30px;
-      font-size: 14px;
-    }
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 }
 
@@ -84,26 +82,12 @@
   }
 
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $primary;
-    color: $white;
-    text-align: center;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    border-radius: 50%;
+    @extend .n-link;
     position: absolute;
     z-index: 10;
     top: 0;
     right: 30px;
     transform: translate(0, -50%);
-
-    &:hover {
-      background-color: darken($primary, 10%);
-      color: $white;
-    }
   }
 
   @include media-breakpoint-down(xl) {
@@ -117,10 +101,7 @@
     }
 
     &__link {
-      width: 30px;
-      height: 30px;
       right: 20px;
-      font-size: 14px;
     }
   }
 }
@@ -187,12 +168,6 @@
     &__title {
       font-size: 16px;
     }
-
-    &__link {
-      width: 30px;
-      height: 30px;
-      font-size: 14px;
-    }
   }
 
   @include media-breakpoint-down(lg) {
@@ -210,12 +185,14 @@
 
     &__body {
       border-radius: 0 0 4px 4px;
+      position: relative;
+      padding: 16px;
     }
 
     &__link {
       left: auto;
       right: 20px;
-      top: 0;
+      top: 100%;
       transform: translate(0, -50%);
       z-index: 10;
     }
@@ -297,6 +274,12 @@
       height: 30px;
       right: 20px;
       font-size: 14px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__body {
+      padding: 16px;
     }
   }
 }
@@ -411,6 +394,25 @@
     &:hover {
       background-color: darken($primary, 10%);
       color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__body {
+      padding: 16px;
+    }
+
+    &__label {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__link {
+      top: 0;
     }
   }
 }
