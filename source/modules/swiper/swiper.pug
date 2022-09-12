@@ -64,3 +64,12 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin news-slider
+  .news-slider
+    .news-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            +news-2
+    .news-slider__pagination

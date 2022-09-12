@@ -1,0 +1,50 @@
+extends layout/page
+
+block content
+  .container.pb-50
+    a.d-block.mb-35(href="#!")
+      img.d-block.w-100(src="./images/banner-horizontal.jpg", alt="")
+
+    .row.g-30.g-xxl-50
+      .col-lg-8.col-xl-9
+        .border-bottom.border-gray.mb-30.pb-30
+          .row.g-30
+            .col-md-7
+              +news-3
+            .col-md-5
+              section.section-3
+                h2.section-3__title Bài viết xem nhiều
+                ul.news-list
+                  li
+                    a(href="#!") Thay đổi thói quen để thành công - bí quyết của các triệu phú
+                  li
+                    a(href="#!") Sách dạy viết nội dung hay - Kim chỉ nam cho nghề viết lách
+                  li
+                    a(href="#!") Đàn ông sao hỏa đàn bà sao kim - sách hay về thấu hiểu người khác giới
+                  li
+                    a(href="#!") Làm thế nào để tăng sức mạnh content? Tìm hiểu ngay 5 cuốn bí kíp tại đây
+                  li
+                    a(href="#!") America Shark Tank – Bộ sách yêu thích của doanh nhân Việt
+
+        - for(let i = 0; i < 4; i++)
+          .border-bottom.border-gray.mb-30.pb-30
+            +news
+
+        .border-bottom.border-gray.mb-30.pb-30
+          section.section-2
+            h2.section-2__title
+              span Sự kiện nổi bật
+
+            +news-slider
+
+        - for(let i = 0; i < 4; i++)
+          .border-bottom.border-gray.mb-30.pb-30
+            +news
+        .text-center
+          a.n-btn(href="#!") XEM THÊM NHIỀU BÀI VIẾT
+            i.fal.fa-angle-down.ms-2
+
+      .col-lg-4.col-xl-3.floating-container.text-center
+        .floating(data-top='30')
+          a(href="#!")
+            img(src="./images/aside-banner.jpg", alt="")

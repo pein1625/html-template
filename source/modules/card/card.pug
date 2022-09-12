@@ -1,0 +1,31 @@
+mixin news(img='./images/news-1.jpg')
+  .news
+    .row.gy-3.gx-30
+      .col-md-4
+        a.news__frame(href="./news-detail.html")
+          img(src=img, alt="")
+      .col-md-8
+        h3.news__title
+          a(href="./news-detail.html") America Shark Tank – Bộ sách yêu thích của doanh nhân Việt
+        .news__desc Bộ sách America Shark Tank huấn luyện kinh doanh được hàng triệu những doanh nhân cũng những bạn trẻ bắt đầu khởi nghiệp đặc biệt yêu thích. Bởi đây chính là bộ cẩm nang toàn diện nhất về kinh doanh khởi nghiệp và lãnh đạo duy nhất tại Việt Nam[…]
+        .news__info
+          a.news__btn.me-3(href="#!") Kiến Thức Học Tập
+          span Cập nhật 6 giờ trước
+
+mixin news-2(img='./images/news-2.jpg')
+  .news-2
+    a.news-2__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    h3.news-2__title
+      a(href="./news-detail.html") Các bước tạo dựng thương hiệu cá nhân thành công nhất
+
+mixin news-3
+  .news-3
+    a.news__frame(href="./news-detail.html")
+      img(src="./images/news-3.jpg", alt="")
+    h3.news__title
+      a(href="./news-detail.html") Làm thế nào để tăng sức mạnh content?
+    .news__desc Ngày ngay, sức khỏe đã trở thành mối quan tâm hàng đầu của con người. Lý do tại sao ư? Đó là vì “Sức khỏe là vàng là bạc”. Có thể trong vòng quay bận rộn của […]
+    .news__info
+      a.news__btn.me-3(href="./news-detail.html") Kiến Thức Học Tập
+      span Cập nhật 6 giờ trước

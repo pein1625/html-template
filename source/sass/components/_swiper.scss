@@ -161,3 +161,30 @@
     }
   }
 }
+
+.news-slider {
+  position: relative;
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $white;
+      background: 0;
+      opacity: 1;
+
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+
+      &-active {
+        background-color: $white;
+      }
+    }
+  }
+}

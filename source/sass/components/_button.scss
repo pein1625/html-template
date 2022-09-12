@@ -79,3 +79,20 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.n-btn {
+  display: inline-block;
+  color: $primary;
+  text-transform: uppercase;
+  color: #333;
+  border: 1px solid $primary;
+  border-radius: 8px;
+  padding: 14px 40px 10px;
+  transition: 0.4s;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background-color: $primary;
+  }
+}
