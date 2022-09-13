@@ -47,3 +47,39 @@
     margin-bottom: 20px;
   }
 }
+
+.section-4 {
+  border-top: 5px solid $primary;
+  padding-top: 30px;
+  margin-top: 30px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 80%;
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}

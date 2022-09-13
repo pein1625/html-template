@@ -84,6 +84,37 @@
   }
 }
 
+.news-4 {
+  &__frame {
+    @include frame('rect', 56.25%);
+    @include frame('zoom');
+  }
+
+  &__title {
+    @include max-line(3);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 1em 0;
+
+    a:hover {
+      color: $primary;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 10px;
+    border-radius: 2px;
+    background-color: #D2D2D2;
+
+    &:hover {
+      background-color: #aaa;
+    }
+  }
+}
+
 .news-list {
   list-style: none;
   margin: 0;
