@@ -142,46 +142,16 @@
 				{
 					"text": "Dropdown",
 					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
 				}
 			]
 		},
 		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
+			"text": "Dịch vụ",
+			"url": "./services.html"
 		},
 		{
-			"text": "Dự án",
-			"url": "./projects.html"
-		},
-		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
-		},
-		{
-			"text": "Tin tức",
-			"url": "./news.html"
-		},
-		{
-			"text": "Liên hệ",
-			"url": "./contact.html"
+			"text": "Dự án nổi bật",
+			"url": "./services.html"
 		}
 	],
 	"pageList": {

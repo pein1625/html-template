@@ -1,3 +1,59 @@
 extends layout/page
 
 block content
+  +banner-slider
+
+  section.section
+    .container
+      h2.section__title DỊCH VỤ CỦA CHÚNG TÔI
+      .row.gx-3.gy-30
+        - for(let i = 0; i < 6; i++)
+          .col-sm-6.col-lg-4
+            +service
+
+  section.section
+    img.section__bg(src="./images/section-bg-1.png", alt="")
+    .container
+      h2.section__title THƯƠNG HIỆU CÁ NHÂN
+      .row.g-3.g-md-40.g-lg-3.g-xl-40
+        - for(let i = 0; i < 8; i++)
+          .col-6.col-lg-3
+            +personal
+
+      .text-end.mt-30
+        a.n-btn-2(href="#!") Xem thêm
+
+  section.section
+    .container
+      h2.section__title Tin tức nổi bật
+
+      .row.gx-50.gy-30
+        - for(let i = 0; i < 6; i++)
+          .col-md-6.col-lg-4
+            +news-5
+
+      .text-end.mt-30
+        a.n-btn-2(href="./news.html") Xem chi tiết
+
+  section.section.h-about
+    img.section__bg(src="./images/section-bg-2.png", alt="")
+    .container
+      .row.g-30.g-xl-60.align-items-center
+        .col-lg-6
+          h3.h-about__subtitle GIỚI THIỆU
+          h2.h-about__title VỀ CHÚNG TÔI !
+          .h-about__content
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc risus, fringilla mattis metus a, faucibus fringilla ligula. Praesent tortor ex, suscipit quis quam vel, congue finibus lacus. Pellentesque blandit fermentum vestibulum. Ut sit amet felis lectus. Nunc eu justo egestas, aliquam augue vel, sodales erat. Donec placerat ultricies elit. Vivamus a nisl consectetur, blandit urna ut, placerat quam. In hac habitasse platea dictumst.
+            p Phasellus ultricies nunc a tellus tincidunt, et vestibulum eros varius. Sed fermentum felis quis nisl aliquam, quis gravida leo consequat. In venenatis neque ac nisi ultricies dictum. Nunc tincidunt tortor sed eleifend placerat. Sed id placerat enim. Suspendisse blandit non nunc in imperdiet.
+            p Curabitur aliquam placerat dolor, quis venenatis lorem rutrum quis. Aenean pellentesque, ante sed ultricies efficitur, tortor ex suscipit mi, non hendrerit purus purus a orci. Nam ac metus dapibus, porttitor leo id, posuere mauris.
+          .mt-40.mt-xxl-60
+            a.n-btn-2(href="#") Xem chi tiết
+        .col-lg-6
+          .h-about__frame
+            img.h-about__img-1(src="./images/h-about-1.jpg", alt="")
+            img.h-about__img-2(src="./images/h-about-2.jpg", alt="")
+
+  section.section
+    .container
+      h2.section__title Đối tác của Bizbooks
+      +partner-slider

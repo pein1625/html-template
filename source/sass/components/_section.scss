@@ -1,3 +1,41 @@
+.section {
+  padding: 50px 0;
+  position: relative;
+  z-index: 1;
+
+  &__bg {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: -50px;
+    left: 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    color: $primary;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: $bebas;
+    margin-bottom: 40px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 305px;
+      height: 30px;
+      background: url('../images/icon-title-underline.png') center/contain no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 .section-2 {
   padding: 35px 40px;
   background-color: $primary;

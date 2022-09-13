@@ -25,6 +25,18 @@ function addSwiper(selector, options = {}) {
 }
 
 $(function() {
+  addSwiper('.banner-slider', {
+    pagination: true,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    }
+  });
+});
+
+$(function() {
   addSwiper('.news-slider', {
     loop: true,
     pagination: true,
@@ -36,6 +48,23 @@ $(function() {
       1200: {
         slidesPerView: 2,
         spaceBetween: 30
+      }
+    }
+  })
+});
+
+$(function() {
+  addSwiper('.partner-slider', {
+    loop: true,
+    navigation: true,
+    spaceBetween: 16,
+    slidesPerView: 3,
+    breakpoints: {
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
       }
     }
   })

@@ -44,6 +44,7 @@ mixin swiper(el, number, hasNav, hasPaging)
 
 mixin banner-slider
   .banner-slider
+    .banner-slider__pagination
     .banner-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 3; i++)
@@ -54,17 +55,16 @@ mixin banner-slider
 mixin partner-slider
   .partner-slider
     .partner-slider__prev
-      i.fa.fa-angle-left
+      i.fal.fa-arrow-left
     .partner-slider__next
-      i.fa.fa-angle-right
+      i.fal.fa-arrow-right
     .partner-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide
             a.partner-slider__frame(href="#!")
-              //- img(src=`./images/partner-${i + 1}.png`, alt="")
-              +img
-
+              img(src=`./images/partner-${i + 1}.png`, alt="")
+v
 mixin news-slider
   .news-slider
     .news-slider__container.swiper-container

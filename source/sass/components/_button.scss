@@ -96,3 +96,24 @@
     background-color: $primary;
   }
 }
+
+.n-btn-2 {
+  @include btn('shine');
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $primary;
+  padding: 15px 40px;
+  border-right: 5px solid #3F9AD4;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+}
