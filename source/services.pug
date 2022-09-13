@@ -1,3 +1,14 @@
 extends layout/page
 
 block content
+  .container.pb-50
+    a.d-block.mb-35(href="#!")
+      img.d-block.w-100(src="./images/banner-horizontal.jpg", alt="")
+
+    .row.gx-3.gy-30
+      - for(let i = 0; i < 9; i++)
+        .col-sm-6.col-lg-4
+          +service
+
+    nav.d-flex.justify-content-center.mt-30
+      +pagination
