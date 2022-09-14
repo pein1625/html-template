@@ -1,4 +1,167 @@
 extends layout/page
 
 block content
-  +banner-slider
+  .container
+    a.d-block(href="#!")
+      img.d-block.w-100(src="./images/banner-horizontal.jpg", alt="")
+
+  // Lịch sử hình thành
+  section.section-5.history
+    .container
+      .history__name CÔNG TY CỔ PHẦN SÁCH BIZBOOKS
+      .history__desc “Doanh nhân và sách luôn đi cùng nhau. Không phải ai đọc sách cũng có thể trở thành doanh nhân, nhưng doanh nhân chắc chắn phải đọc sách”
+      .row.g-30.align-items-center
+        .col-lg-6
+          .history__frame
+            img(src="./images/history-img.jpg", alt="")
+        .col-lg-6
+          .history__title Lịch sử hình thành
+          .history__content
+            p Xuất phát từ khát vọng đồng hành cùng doanh nhân phát triển để nâng tầm vị thế doanh nghiệp Việt Nam. Giúp độc giả trên chặng đường xây dựng thành công, đem những tri thức quý báu tới gần bạn đọc Việt, BIZbooks – Chuyên sách doanh nhân đã ra đời và chính thức đi vào hoạt động từ năm 2018.
+            p Công ty cổ phần sách BIZbooks luôn mong muốn giúp bạn phát triển, doanh nghiệp của bạn thịnh vượng và trường tồn hơn nữa cùng những cuốn sách mà BIZbooks phát hành.
+            p Qua những trang sách BIZbooks, độc giả sẽ được tiếp cận một cách chân thật và sống động với những câu chuyện làm giàu của các doanh nhân nổi tiếng khắp thế giới, đón nhận những lời khuyên về thành công của các tỷ phú hàng đầu.
+
+  // ”Kính thưa các nhà đầu tư, các đối tác và các độc giả của Bizbooks !
+  section.section-5.bg-light.fs-14.text-primary
+    .container
+      p.fs-20.fw-700.text-center.text-uppercase.text-primary ”Kính thưa các nhà đầu tư, các đối tác và các độc giả của Bizbooks !
+      p.text-center.text-primary.text-italic.mb-30 Có câu nói: “Doanh nhân và sách luôn đi cùng nhau. Không phải ai đọc sách cũng có thể trở thành doanh nhân, nhưng doanh nhân chắc chắn phải đọc sách.
+
+      .row.g-30.g-xl-60.justify-content-center.mb-30
+        .col-lg-5.col-xl-4
+          .about-card-2
+            .about-card-2__frame
+              img(src="./images/about-card-1.jpg", alt="")
+            .about-card-2__quote “ Trong nhà mỗi doanh nhân đều có hai tủ sách “
+            .about-card-2__name Ông Nguyễn Văn Cường
+            .about-card-2__pos NHÀ SÁNG LẬP - CHỦ TỊCH HỘI ĐỒNG QUẢN TRỊ
+        .col-lg-5.col-xl-4
+          .about-card-2
+            .about-card-2__frame
+              img(src="./images/about-card-2.jpg", alt="")
+            .about-card-2__quote “ Mỗi cuốn sách đều chứa vàng “
+            .about-card-2__name Bà Đỗ Thị Hương
+            .about-card-2__pos GIÁM ĐỐC CÔNG TY CỔ PHẦN SÁCH BIZBOOKS
+
+      p Nhà đầu tư huyền thoại Warren Buffett đọc 600 trang sách mỗi ngày, tỷ phú Bill Gates luôn dành sự ưu tiên cho việc đọc sách và thực hiện rất nghiêm túc thói quen này. Ông chủ Facebook Mark Zuckerberg đã lập riêng một fanpage để kêu gọi cả thế giới đọc ít nhất một quyển sách mỗi hai tuần. Tỷ phú Mark Cuban dành khoảng 3 tiếng để đọc sách mỗi ngày. Diễn giả hàng đầu Tony Robbins chia sẻ rằng chính những cuốn sách là thứ đã cứu rỗi cuộc đời ông, mang lại thành công cho sự nghiệp của ông.
+      p Như vậy đã đủ thấy thói quen đọc sách có vai trò quan trọng như thế nào trong thành công của mỗi người – không chỉ riêng doanh nhân mà với bất cứ ai muốn trở nên thành công, giàu có và hạnh phúc. Để thành công, nhất định phải không ngừng học tập. Mà cách tiếp cận tinh hoa tri thức dễ dàng nhất chính là SÁCH.
+      p Với mong muốn đồng hành cùng các độc giả trên chặng đường xây dựng thành công, đem những tri thức quý báu tới gần bạn đọc Việt, Công ty cổ phần sách BIZbooks đã ra đời. Là một thương hiệu sách dành riêng cho doanh nhân. Chúng tôi cam kết sẽ giúp bạn phát triển, doanh nghiệp của bạn thịnh vượng và trường tồn hơn nữa cùng những cuốn sách mà BIZbooks phát hành.
+      p Qua những trang sách BIZbooks, độc giả sẽ được tiếp cận một cách chân thật và sống động với những câu chuyện làm giàu của các doanh nhân nổi tiếng khắp thế giới, đón nhận những lời khuyên về thành công của các tỷ phú hàng đầu.
+      p Mong rằng tuyển tập những cuốn sách về doanh nhân của BIZbooks sẽ giúp những nhà quản trị, doanh nhân và bạn có thêm nhiều kiến thức hơn nữa phục vụ cho mục tiêu của bản thân mình. Sự ủng hộ và tin tưởng của các bạn sẽ trở thành nguồn cảm hứng lớn lao cho BIZbooks trong quá trình nghiên cứu và xuất bản ra những cuốn sách chất lượng.
+      p BIZbooks trân trọng cảm ơn!
+
+  // HỆ THỐNG PHÂN PHỐI
+  section.section-5
+    .container
+      .row.g-60.align-items-center
+        .col-lg-6.text-center
+          img(src="./images/distribution-map.png", alt="")
+        .col-lg-6
+          h2.section-5__title-2.mb-10 HỆ THỐNG PHÂN PHỐI
+          .mb-30
+            img(src="./images/distribution-year.png", alt="")
+          .fs-14
+            p Hiện nay Bizbooks đang hợp tác gần 100 đại lý phát hành sách với hơn 2000 chi nhánh trên khắp 63 tỉnh thành trong cả nước.
+            p.text-primary BIZBOOKS ĐANG TIẾP TỤC ĐẦU TƯ PHÁT TRIỂN THỊ TRƯỜNG ĐỂ ĐƯA NHỮNG CUỐN SÁCH CỦA MÌNH ĐẾN GẦN HƠN VỚI NHỮNG ĐỘC GIẢ Ở VÙNG SÂU, VÙNG XA VÀ NHỮNG KIỀU BÀO ĐANG Ở NƯỚC NGOÀI.
+            p Ngoài những kênh phân phối là hệ thống các nhà sách, các trung tâm thương mại, các chuỗi cửa hàng sáchtrên toàn quốc, Bizbooks còn phân phối qua các kênh như kênh bán hàng qua mạng, kênh bán hàng trực tiếp, kênh thương mại điện tử, trường học, doanh nghiệp,…
+
+
+  // Thành tựu nổi bật
+  section.achievement
+    .container
+      h2.achievement__title Thành tựu nổi bật
+
+      .row.gy-30.gx-30.gx-xl-60.gx-xxl-80
+        .col-md-6
+          .achievement__block
+            h3.achievement__subtitle Phục dựng tủ sách Nguyễn Hiến Lê
+            .text-center
+              img(src="./images/achievement-1.png", alt="")
+            .achievement__content
+              p BIZBooks giới thiệu tới độc giả cả nước những cuốn sách đầu tiên nằm trong 120 tựa sách của học giả Nguyễn Hiến Lê mà Công ty đã nỗ lực đàm phán bản quyền, tiến hành sản xuất Trong đó, phải kể đến những cuốn sách đặc biệt như “Đắc nhân tâm”, “Quẳng gánh lo đi và vui sống”…
+
+        .col-md-6
+          .achievement__block
+            h3.achievement__subtitle WORK SHOP: Nghề môi giới bất động sản Thách thức hay cơ hội 2020
+            .text-center
+              img(src="./images/achievement-2.png", alt="")
+            .achievement__content
+              p Vào ngày 18/8/2020 ra mắt cuốn sách Hành trình 28 ngày trở thành môi giới bất động sản chuyên nghiệp đồng thời tổ chức Workshop Thách thức và cơ hội 2020 cho nghề môi giới bất động sản do Meha Academy phối hợp với công ty Cổ phần sách Bizbooks. Buổi Workshop với chủ đề chính là những thách thức và cơ hội của nghề Môi giới bất động sản trong bối cảnh đại dịch.
+
+        .col-md-6
+          .achievement__block
+            h3.achievement__subtitle Họp báo ra mắt sách "TRIỆU PHÚ MÔI GIỚI BẤT ĐỘNG SẢN"
+            .text-center
+              img(src="./images/achievement-3.png", alt="")
+            .achievement__content
+              p Sáng ngày 26/9, tại TP Hồ Chí Minh đã diễn ra họp báo ra mắt cuốn sách: Triệu phú môi giới bất động sản. Cuốn sách là dự án được hợp tác bởi Tập đoàn Keller Williams Việt Nam và thương hiệu sách BIZBooks. Đây là cuốn sách chuyên sâu duy nhất về môi giới bất động sản tại Việt Nam dành cho sale bất động sản nhưng không bàn chuyện kiếm tiền, mà bàn cách giúp bạn phát huy tối đa khả năng của mình.
+
+        .col-md-6
+          .achievement__block
+            h3.achievement__subtitle WORKSHOP: Xây dựng doanh nghiệp để trường tồn
+            .text-center
+              img(src="./images/achievement-4.png", alt="")
+            .achievement__content
+              p Ngày 31/7/2020 tại Hà Nội Bizbooks cùng Success Business đã phối hợp tổ chức hội thảo với chủ đề "Xây dựng doanh nghiệp để trường tồn". Tại chương trình tọa đàm, các chuyên gia và các chủ doanh nghiệp hàng đầu chia sẻ kinh nghiệm về vận hành và phát triển doanh nghiệp một cách bền vững.
+                br
+                | Tại đây, cuốn sách "100 chìa khóa vàng dành cho CEO và chủ doanh nghiệp" của tác giả Tiến sĩ Tô Nhật đã được ra mắt.
+
+  // Giá trị cốt lõi
+  section.section-5
+    .container
+      h2.section-5__title Giá trị cốt lõi
+      .mx-auto(style="max-width: 1110px")
+        .row.g-3.g-sm-30.justify-content-center
+          .col-6.col-lg-4
+            .about-card
+              .about-card__title
+                span UY TÍN
+                  br
+                  | CHẤT LƯỢNG
+              .about-card__subtitle Luôn làm đúng những gì đã nói và vượt sự mong đợi
+              .about-card__desc
+                p #[strong Đối với khách hàng:] Chúng tôi luôn thực hiện đúng cam kết và mang lại cho khách hàng những trải nghiệm tốt nhất và khác biệt nhất.
+                p #[strong Đối với nhân viên:] Luôn hoàn thành tốt nhất công việc trong khả năng và nguồn lực mình có.
+
+          .col-6.col-lg-4
+            .about-card
+              .about-card__title
+                span MINH BẠCH
+                  br
+                  | TRUNG THÀNH
+              .about-card__subtitle Luôn lấy TÂM làm GỐC
+              .about-card__desc
+                p #[strong Đối với khách hàng:] Chúng tôi trung thực trong lời nói, trách nhiệm trong hành động và tạo sự gắn kết lâu dài với khách hàng đối tác.
+                p #[strong Đối với nhân viên:] Luôn giữ trọn niềm tin và đưa ra những chính sách rõ ràng, lộ trình cụ thể, quy trình chuẩn xác.
+
+          .col-6.col-lg-4
+            .about-card
+              .about-card__title
+                span HỌC TẬP
+                  br
+                  | ĐÀO TẠO
+              .about-card__subtitle Luôn tốt hơn mỗi ngày
+              .about-card__desc
+                p #[strong Đối với khách hàng:] Chúng tôi đồng hành với khách hàng để trở thành người dẫn đầu xu hướng.
+                p #[strong Đối với nhân viên:] Luôn không ngừng học hỏi và Kaizen mỗi ngày theo hướng tích cực
+
+          .col-6.col-lg-4
+            .about-card
+              .about-card__title
+                span HỢP TÁC
+                  br
+                  | PHÁT TRIỂN
+              .about-card__subtitle Luôn nói “ Tôi có thể giúp gì cho bạn”
+              .about-card__desc
+                p #[strong Đối với khách hàng:] Chúng tôi hướng tới sự bình đẳng cùng có lợi.
+                p #[strong Đối với nhân viên:]  Luôn hướng đến mục tiêu chung, cùng hành động và tạo ra kết quả.
+
+          .col-6.col-lg-4
+            .about-card
+              .about-card__title
+                span TRÁCH NHIỆM
+                  br
+                  | XÃ HỘI
+              .about-card__subtitle Đặt vấn đề trách nhiệm xã hội lên hàng đầu
+              .about-card__desc
+                p Luôn vì cộng đồng và trao giá trị cho cộng đồng ngày càng nhiều hơn.
