@@ -1,4 +1,21 @@
 $(function() {
+  const $window = $(window);
+  const $header = $('.header');
+
+  $window.on('scroll', function() {
+    let height = 35;
+    if ($window.width() > 1500) height = 40;
+    console.log('height:', height);
+
+    if ($window.scrollTop() > height) {
+      $header.addClass('is-fixed');
+    } else {
+      $header.removeClass('is-fixed');
+    }
+  });
+});
+
+$(function() {
   $('.js-copy-link').on('click', function(e) {
     e.preventDefault();
     const url = $(this).attr('href');

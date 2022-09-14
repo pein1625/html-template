@@ -108,13 +108,13 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      padding-right: 140px;
+      padding-right: 120px;
       justify-content: space-around;
 
       &-right {
         left: 50%;
-        padding-left: 150px;
-        padding-right: 130px;
+        padding-left: 120px;
+        padding-right: 120px;
       }
     }
 
@@ -179,7 +179,7 @@
     }
 
     &-root > &-item > &-link {
-      font-size: 14px;
+      font-size: 16px;
       padding: 12px 0;
       transition: 0.3s;
       text-transform: unset;
@@ -204,6 +204,15 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    &-root {
+      padding-right: 150px;
+
+      &-right {
+        padding-right: 130px;
+        padding-left: 150px;
+      }
+    }
+
     &-root > &-item > &-link {
       font-size: 20px;
     }

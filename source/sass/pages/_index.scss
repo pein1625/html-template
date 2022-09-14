@@ -75,4 +75,14 @@
       margin-bottom: 10px;
     }
   }
+
+  @include media-breakpoint-down(lg) {
+    &__title {
+      font-size: 30px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
 }

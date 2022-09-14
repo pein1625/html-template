@@ -12,7 +12,7 @@
   }
 
   &__title {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     color: $primary;
     text-transform: uppercase;
@@ -32,6 +32,27 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      font-size: 45px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 30px;
+      padding-bottom: 24px;
+      margin-bottom: 30px;
+
+      &::after {
+        width: 240px;
+        height: 20px;
+      }
     }
   }
 }
