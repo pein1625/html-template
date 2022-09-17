@@ -8,6 +8,17 @@
     a:hover {
       color: $gray-800;
     }
+
+    & + & {
+      padding-left: 10px;
+
+      &::before {
+        content: '\f105';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 300;
+        padding-right: 10px;
+      }
+    }
   }
 
   &--white .breadcrumb-item,

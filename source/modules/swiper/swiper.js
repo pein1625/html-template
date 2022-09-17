@@ -23,3 +23,28 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.product-slider', {
+    navigation: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    speed: 500,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 30
+      }
+    }
+  });
+});

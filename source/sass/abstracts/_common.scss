@@ -8,3 +8,12 @@
     flex-grow: 1;
   }
 }
+
+.navigation {
+  background-color: $primary;
+  padding: 20px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 12px 0;
+  }
+}

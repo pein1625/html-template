@@ -161,3 +161,16 @@
     }
   }
 }
+
+.product-slider {
+  position: relative;
+
+  @include slider-nav-2;
+
+  &__prev,
+  &__next {
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+}

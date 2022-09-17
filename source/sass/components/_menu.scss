@@ -66,6 +66,9 @@
     display: none;
     background-color: rgba(#15191e, 0.08);
     background-color: $gray-200;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     .menu-link {
       padding-left: 35px;
@@ -103,6 +106,18 @@
     &-root {
       display: flex;
       border: 0;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translateY(-50%);
+      padding-right: 200px;
+
+      &-right {
+        padding-right: 0;
+        padding-left: 200px;
+        right: auto;
+        left: 50%;
+      }
     }
 
     &-root &-item {
@@ -123,6 +138,7 @@
       border-radius: 4px;
       transform-origin: 0 4px;
       background-color: $white;
+      background: linear-gradient(to right bottom, rgba($primary, 0.8), rgba(darken($primary, 10%), 0.8));
 
       &-right {
         left: auto;
@@ -145,10 +161,12 @@
     &-root &-sub &-toggle {
       width: 30px;
       border-left: 0;
+      color: $white;
     }
 
     &-root &-sub &-link {
       padding-left: 20px;
+      color: $white;
     }
 
     &-root &-sub &-item-group > &-link {
@@ -156,7 +174,7 @@
     }
 
     &-root &-sub &-item:hover > &-link {
-      background-color: $light;
+      background-color: rgba(#000, 0.3);
     }
 
     &-root > &-item {
@@ -167,8 +185,33 @@
 
     &-root > &-item > &-link {
       font-size: 14px;
-      padding: 12px 0;
+      line-height: 20px;
+      font-weight: 400;
+      padding: 25px 10px;
       transition: 0.3s;
+      text-transform: unset;
+      position: relative;
+      transition: unset;
+
+      &::before {
+        content: attr(title);
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary;
+        display: none;
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      color: $primary;
+      color: transparent;
+
+      &::before {
+        display: block;
+      }
     }
 
     &-root > &-item > &-toggle {
@@ -189,6 +232,15 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    &-root {
+      padding-right: 240px;
+
+      &-right {
+        padding-right: 0;
+        padding-left: 240px;
+      }
+    }
+
     &-root > &-item {
       &:not(:last-child) {
         margin-right: 40px;
@@ -196,8 +248,8 @@
     }
 
     &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
+      line-height: 25px;
+      padding: 30px 10px;
     }
   }
 }

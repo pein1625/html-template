@@ -64,3 +64,22 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin product-slider
+  .product-slider
+    .product-slider__prev
+      i.fal.fa-angle-left
+    .product-slider__next
+      i.fal.fa-angle-right
+    .product-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +product('./images/product-1.png', 'TYPE P-MAX / MODEL MDI DN15~20')
+        .swiper-slide
+          +product('./images/product-1.png', 'TYPE P-MAX / MODEL MDB-B DN15')
+        .swiper-slide
+          +product('./images/product-1.png', 'TYPE P-MAX / MODEL MDB-B DN20')
+        .swiper-slide
+          +product('./images/product-1.png', 'TYPE P-MAX / MODEL MDB-B DN32')
+        .swiper-slide
+          +product('./images/product-1.png', 'TYPE P-MAX / MODEL MDB-B DN40')

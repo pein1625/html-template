@@ -7,8 +7,30 @@ mixin header
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
+          .header__name FARTON MITEX
           .header__elements
             +navbar
-              +menu(menu)
+              ul.menu.menu-root
+                li.menu-item
+                  a.menu-link(href="#!", title="Home") Home
+                li.menu-item.menu-item-group
+                  a.menu-link(href="#!", title="Products") Products
+                  span.menu-toggle
+                  ul.menu-sub
+                    li.menu-item
+                      a.menu-link(href="#!") Product 1
+                    li.menu-item
+                      a.menu-link(href="#!") Product 2
+                    li.menu-item
+                      a.menu-link(href="#!") Product 3
+                    li.menu-item
+                      a.menu-link(href="#!") Product 4
+                li.menu-item
+                  a.menu-link(href="#!", title="Support") Support
+              ul.menu.menu-root.menu-root-right
+                li.menu-item
+                  a.menu-link(href="#!", title="About Us") About Us
+                li.menu-item
+                  a.menu-link(href="#!", title="Contact Us") Contact Us
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3

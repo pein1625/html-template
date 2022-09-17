@@ -1,3 +1,35 @@
 extends layout/page
 
 block content
+  article.banner
+    img.banner__img(src="./images/banner-img.jpg", alt="")
+    .banner__content
+      .container-fluid
+        .row
+          .col-sm-6.ms-auto
+            h2.banner__title Water Meters
+            .banner__desc Because  water meters are a utility’s cash registers, the solution begins with measurement integrity at each water meter
+
+  nav.navigation
+    .container
+      +breadcrumb('Home', 'Products')
+
+  section.section
+    .container
+      h2.section__title Residential
+      .section__desc Residential water meters are lead free and measure of water efficiency.
+      +product-slider
+
+  section.section.bg-light
+    .container
+      h2.section__title Commercial/Industrial
+      .section__desc Get maximum results from your largest-revenue water meters.
+      .row.g-3.g-md-30
+        .col-6.col-md-3
+          +product('./images/product-2.png', 'TYPE P-MAX / MODEL WHB DN50~300')
+        .col-6.col-md-3
+          +product('./images/product-3.png', 'TYPE P-MAX / MODEL WHB DN350~600')
+        .col-6.col-md-3
+          +product('./images/product-4.png', 'TYPE P-MAX / MODEL WPD DN50~200')
+        .col-6.col-md-3
+          +product('./images/product-5.png', 'TYPE P-MAX / MODEL WI DN50~300')

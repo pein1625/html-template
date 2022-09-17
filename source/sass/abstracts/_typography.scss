@@ -1,0 +1,6 @@
+@include font-face('Swiss721BT', 'Swiss721BT-Black');
+@include font-face('Tahoma', 'Tahoma');
+@include font-face('Tahoma', 'Tahoma-Bold', 700);
+
+$tahoma: 'Tahoma', sans-serif;
+$swiss: 'Swiss721BT', sans-serif;
