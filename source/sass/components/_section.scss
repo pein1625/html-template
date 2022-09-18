@@ -15,6 +15,10 @@
     margin-bottom: 40px;
   }
 
+  &--border {
+    border-bottom: 20px solid $primary;
+  }
+
   @include media-breakpoint-down(xl) {
     padding: 50px 0;
 
@@ -37,6 +41,37 @@
 
     &__desc {
       margin-top: -16px;
+    }
+  }
+}
+
+.section-2 {
+  font-size: 18px;
+
+  &__title {
+    font-size: 1em;
+    color: $text-gray;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    font-size: 1em;
+    line-height: 1.8;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 16px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
+
+    &__title {
+      margin-bottom: 30px;
     }
   }
 }

@@ -1,0 +1,48 @@
+extends layout/page
+
+block content
+  article.banner
+    img.banner__img(src="./images/banner-about.jpg", alt="")
+    .banner__content
+      .container-fluid
+        h2.banner__title.text-center.border-0.mb-0 About Us
+        .banner__desc.text-center.mx-auto.border-0(style="max-width: 720px;") With a passion for excellence that is unwavering, we are specifically focused on the critical work of water. The tools and resources to win your day are provided by Neptune®, your most valued partner.
+
+  nav.navigation
+    .container
+      +breadcrumb('About Us')
+  nav.navigation-2
+    .container
+      ul
+        li
+          a(href="./about.html") About Us
+        li
+          a(href="./about.html") Mission - Vision
+        li
+          a(href="./about.html") History
+        li
+          a(href="./about-2.html") Notification
+
+  section.section
+    .container
+      article.section-2
+        h1.section-2__title About Us
+        .section-2__content
+          .row.align-items-center
+            .col-lg-6.mb-30
+              p(style="max-width: 550px;") As a world-class manufacturer, supplier and distributor of water meter products in Malaysia and the region, FARTON MITEX SDN. BHD., carries an extensive portfolio of water meters ranging from industrial, commercial to residential products. Now our company has developed into an enterprise integrated research and development , production, sales, after sale service, technical training as one of the specialized production.
+            .col-lg-6.mb-30
+              img(src="./images/about-1.jpg", alt="")
+
+          p Our factory covers an area of more than 4000 square meters with advanced production equipment, process equipment, testing equipment and modern production workshop a long with staff members of more than 100 people. We are now capable of producing more than 2 million pieces watermeters annually.
+          p The company has successively passed the certificate of ISO9001:2015 Quality System Certification, the certificate of ISO14001:2015 ISO45001:2020 Environmental Management System Certification. With a market reach that spans more than 40 countries in different continents, our metering products have attained the highest standards recognized by the relevant authorities, as accorded through local and international certifications.
+            br
+            | Our P-MAX water meters have received wide acceptance by our customers and continues to be well-regarded forinnovativeness and value for money.
+          p
+            .row.justify-content-between.g-3
+              .col-auto
+                img(src="./images/about-2.jpg", alt="")
+              .col-auto
+                img(src="./images/about-3.jpg", alt="")
+              .col-auto
+                img(src="./images/about-4.jpg", alt="")

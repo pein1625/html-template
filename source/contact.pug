@@ -1,0 +1,71 @@
+extends layout/page
+
+block content
+  article.banner
+    img.banner__img(src="./images/banner-contact.jpg", alt="")
+    .banner__content
+      .container-fluid
+        h2.banner__title.text-center.m-0.p-0.border-0 Contact Us
+
+  nav.navigation
+    .container
+      +breadcrumb('Contact Us')
+
+  section.section
+    .container
+      .sm-container
+        h2.section__title Contact Us
+        p For more information about Farton Mitex, fill out the contact form below and one of our representatives will call or email you.
+        p To schedule a water meter installation appointment, please visit our online booking site : #[a(href='https://www.pmaxwatermetter.com') https://www.pmaxwatermetter.com]
+        p(style="color: #666;") * Required fields
+
+        form.ct-form(action="#!")
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Message Purpose*
+            .col-md-8
+              select.form-select
+                option Select
+                option Select
+                option Select
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Description*
+            .col-md-8
+              select.form-select
+                option Select
+                option Select
+                option Select
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Name*
+            .col-md-8
+              input.form-control(type="text", required)
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Utility / Company Name*
+            .col-md-8
+              input.form-control(type="text", required)
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Email*
+            .col-md-8
+              input.form-control(type="email", required)
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Phone
+            .col-md-8
+              input.form-control(type="text")
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label City*
+            .col-md-8
+              input.form-control(type="text", required)
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label State/Province*
+            .col-md-8
+              input.form-control(type="text", required)
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Country*
+            .col-md-8
+              input.form-control(type="text", required)
+          .row.mb-3.gx-3
+            .col-md-4.col-form-label Comments / Questions
+            .col-md-8
+              textarea.form-control(rows='4', placeholder='')
+          .row.g-3
+            .col-md-8.ms-auto
+              button.btn.btn-primary.text-white(type="submit") Submit

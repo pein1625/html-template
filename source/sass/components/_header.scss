@@ -24,6 +24,8 @@
   &__logo {
     display: inline-flex;
     margin: 15px 0;
+    position: relative;
+    z-index: 100;
 
     img {
       height: 40px;
@@ -36,6 +38,12 @@
     color: $primary;
     font-family: $swiss;
     text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__elements {

@@ -187,31 +187,23 @@
 	"pageList": {
 		"data": [
 			{
-				"title": "Trang chủ",
+				"title": "Home / Products",
 				"url": "index"
 			},
 			{
-				"title": "Giới thiệu",
-				"url": "about"
-			},
-			{
-				"title": "Sản phẩm",
-				"url": "products"
-			},
-			{
-				"title": "Chi tiết sản phẩm",
+				"title": "Product Detail",
 				"url": "product-detail"
 			},
 			{
-				"title": "Tin tức",
-				"url": "news"
+				"title": "About Us - Giới thiệu",
+				"url": "about"
 			},
 			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
+				"title": "About Us - Notification",
+				"url": "about-2"
 			},
 			{
-				"title": "Liên hệ",
+				"title": "Contact Us",
 				"url": "contact"
 			}
 		]

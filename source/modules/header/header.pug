@@ -8,29 +8,39 @@ mixin header
         .header__inner
           a.header__logo(href="./index.html")
             img(src="./images/logo.png", alt="")
-          .header__name FARTON MITEX
+          a.header__name(href="./index.html")  FARTON MITEX
           .header__elements
             +navbar
               ul.menu.menu-root
                 li.menu-item
-                  a.menu-link(href="#!", title="Home") Home
+                  a.menu-link(href="./index.html", title="Home") Home
                 li.menu-item.menu-item-group
-                  a.menu-link(href="#!", title="Products") Products
+                  a.menu-link(href="./index.html", title="Products") Products
                   span.menu-toggle
                   ul.menu-sub
                     li.menu-item
-                      a.menu-link(href="#!") Product 1
+                      a.menu-link(href="./index.html") Product 1
                     li.menu-item
-                      a.menu-link(href="#!") Product 2
+                      a.menu-link(href="./index.html") Product 2
                     li.menu-item
-                      a.menu-link(href="#!") Product 3
+                      a.menu-link(href="./index.html") Product 3
                     li.menu-item
-                      a.menu-link(href="#!") Product 4
+                      a.menu-link(href="./index.html") Product 4
                 li.menu-item
                   a.menu-link(href="#!", title="Support") Support
               ul.menu.menu-root.menu-root-right
+                li.menu-item.menu-item-group
+                  a.menu-link(href="./about.html", title="About Us") About Us
+                  span.menu-toggle
+                  ul.menu-sub
+                    li.menu-item
+                      a.menu-link(href="./about.html") About Us
+                    li.menu-item
+                      a.menu-link(href="./about.html") Mission - Vision
+                    li.menu-item
+                      a.menu-link(href="./about.html") History
+                    li.menu-item
+                      a.menu-link(href="./about-2.html") Notification
                 li.menu-item
-                  a.menu-link(href="#!", title="About Us") About Us
-                li.menu-item
-                  a.menu-link(href="#!", title="Contact Us") Contact Us
+                  a.menu-link(href="./contact.html", title="Contact Us") Contact Us
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3

@@ -1,0 +1,32 @@
+extends layout/page
+
+block content
+  article.banner
+    img.banner__img(src="./images/banner-img.jpg", alt="")
+    .banner__content
+      .container-fluid
+        .row
+          .col-sm-6.ms-auto
+            h2.banner__title Water Meters
+            .banner__desc Because  water meters are a utility’s cash registers, the solution begins with measurement integrity at each water meter
+
+  nav.navigation
+    .container
+      +breadcrumb('Products', 'Water Meters', 'Residential')
+
+  section.section.section--border
+    .container
+      .row.align-items-center
+        .col-lg-6.mb-30.mb-lg-0
+          .product-frame
+            img(src="./images/product-0.png", alt="")
+        .col-lg-6
+          p No moving parts. High resolution for extremely low flows. Sustained accuracy. The state-of-the art ultrasonic technology of Neptune’s MACH 10® water meter ensures precise measurement from the first drop to the last.
+          div
+            a.btn.btn-info.rounded-0.text-white(href="#!") VIEW CATALOG
+
+  section.section
+    .container
+      h2.section__title Residential
+      .section__desc Residential water meters are lead free and measure of water efficiency.
+      +product-slider
