@@ -1,0 +1,74 @@
+mixin news(img='https://via.placeholder.com/1000', title='Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do')
+  .news.news--1
+    a.news__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    .news__body
+      .news__info
+        span.text-uppercase.text-primary.me-3 Tin tức
+        span
+          i.fal.fa-clock.me-1
+          | 2/9/2022
+      h3.news__title
+        a(href="./news-detail.html")= title
+      .news__desc Sáng ngày 11/11/2019, tại trụ sở Bộ Công Thương, Bộ trưởng Trần Tuấn Anh đã có buổi tiếp ông Kwon Pyung-oh-Chủ tịch Cơ quan xúc tiến Thương mại và Đầu tư Hàn quốc (KOTRA).
+      .text-end
+        a.news__link(href="./news-detail.html")
+          | Chi tiết
+          i.fal.fa-arrow-right.ms-2
+
+mixin news-2(img='https://via.placeholder.com/1000', title='Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do')
+  .news.news--2
+    a.news__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    .news__body
+      .news__info
+        span.text-uppercase.text-primary.me-3 Tin tức
+        span
+          i.fal.fa-clock.me-1
+          | 2/9/2022
+      h3.news__title
+        a(href="./news-detail.html")= title
+
+mixin news-2-2(img='https://via.placeholder.com/1000', title='Cơ sở sản xuất dưa lưới Lộc Phúc')
+  .news.news--2
+    a.news__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    .news__body.news__body--no-border
+      h3.news__title
+        a(href="./news-detail.html")= title
+
+mixin news-x2(title='Hướng dẫn quy định truy xuất nguồn gốc, thu hồi và xử lý...')
+  .news-2
+    h3.news-2__title
+      a(href="./news-detail.html")= title
+    .news-2__info
+      i.fal.fa-clock.me-2
+      | 2/9/2021
+
+mixin news-3(img='https://via.placeholder.com/1000', title='Hệ thống QUẢN LÝ truy xuất nguồn gốc', addClass='')
+  .news-3(class=addClass)
+    a.news-3__frame(href="#!")
+      img(src=img, alt="")
+    .news-3__overlay
+      h3.news-3__title
+        a(href="#!")= title
+
+mixin source(img='https://via.placeholder.com/1000', url='#!')
+  .source
+    a.source__frame(href=url)
+      img.source__img(src=img, alt="")
+      img.source__qrcode(src="./images/qrcode.png", alt="")
+    h3.source__title
+      a(href=url) Tiêu đen đóng lọ
+      i.fal.fa-arrow-right
+    .source__info CSSX: Phạm Thị Vân - Thôn Hương Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati corporis nulla ipsum atque
+    .source__price Giá tham khảo:
+      br
+      strong.fw-600 560.000đ
+
+mixin video(img='https://via.placeholder.com/1000')
+  .video
+    .video__frame
+      img(src=img, alt="")
+    a.video__overlay(href="https://www.youtube.com/watch?v=3OHIhSVwM0E", data-fancybox="video")
+      i.fal.fa-3x.fa-play-circle

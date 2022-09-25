@@ -105,6 +105,16 @@
   &__next {
     left: 100%;
   }
+
+  @include media-breakpoint-up(xl) {
+    &__prev {
+      left: -40px;
+    }
+
+    &__next {
+      left: calc(100% + 40px);
+    }
+  }
 }
 
 @mixin slider-nav-3 {
@@ -159,5 +169,65 @@
     &__next {
       right: -15px;
     }
+  }
+}
+
+.source-slider {
+  position: relative;
+  z-index: 1;
+
+  @include slider-nav-2();
+}
+
+.video-slider {
+  flex-grow: 1;
+
+  &__container {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .video {
+    height: 100%;
+  }
+}
+
+.video-thumb-slider {
+  position: relative;
+  z-index: 1;
+  padding: 20px 40px;
+  background-color: #c2dcff;
+
+  @include slider-nav-2();
+
+  &__prev,
+  &__next {
+    color: $primary;
+    border: 0 !important;
+    background: 0 !important;
+
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+
+  &__prev {
+    left: 21px !important;
+  }
+
+  &__next {
+    left: calc(100% - 17px) !important;
+  }
+
+  &__frame {
+    @include frame('rect', 66.66%);
+    cursor: pointer;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px 36px;
   }
 }

@@ -79,3 +79,27 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.n-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: inherit;
+  transition: 0.3s;
+
+  i {
+    transition: 0.3s;
+    color: $primary;
+  }
+
+  &:hover {
+    color: $primary;
+
+    i {
+      transform: translateX(5px);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+}

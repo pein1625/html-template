@@ -64,3 +64,36 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin source-slider
+  .source-slider
+    .source-slider__prev
+      i.fal.fa-lg.fa-angle-left
+    .source-slider__next
+      i.fal.fa-lg.fa-angle-right
+    .source-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 10; i++)
+          .swiper-slide
+            +source
+
+mixin video-slider
+  .video-slider
+    .video-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            +video
+
+mixin video-thumb-slider
+  .video-thumb-slider
+    .video-thumb-slider__prev
+      i.fal.fa-lg.fa-arrow-left
+    .video-thumb-slider__next
+      i.fal.fa-lg.fa-arrow-right
+    .video-thumb-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            .video-thumb-slider__frame
+              img(src="https://via.placeholder.com/1000", alt="")
