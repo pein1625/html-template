@@ -198,3 +198,22 @@
     }
   }
 }
+
+.menu-aside {
+  .menu-item {
+    border-color: $border-color;
+  }
+
+  .menu-toggle {
+    border-left: 0;
+  }
+
+  & > .menu-item > .menu-link {
+    font-size: 18px;
+    padding-left: 0;
+
+    &.active {
+      color: $primary;
+    }
+  }
+}

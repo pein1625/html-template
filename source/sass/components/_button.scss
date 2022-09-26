@@ -103,3 +103,22 @@
     font-size: 12px;
   }
 }
+
+.n-link-2 {
+  font-weight: 600;
+  color: inherit;
+  transition: 0.3s;
+
+  i {
+    color: $primary;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    color: $primary;
+
+    i {
+      transform: translateX(5px);
+    }
+  }
+}

@@ -240,6 +240,54 @@
   }
 }
 
+.news-4 {
+  &__frame {
+    @include frame('rect', 60%);
+    @include frame('zoom');
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    @include max-line(2);
+    color: $text-light;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: inherit;
+    transition: 0.3s;
+
+    i {
+      color: $primary;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: $primary;
+
+      i {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      margin-bottom: 12px;
+    }
+
+    &__desc {
+      margin-bottom: 12px;
+    }
+  }
+}
+
 .source {
   background-color: $white;
   padding: 16px;

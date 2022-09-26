@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+  // Banner
+  +banner
+
+  // Content
+  .container
+    .row
+      .col-lg-8.col-xl-9.order-lg-1
+        .section.pb-0
+          article.post
+            h1.post__title Hàn Quốc thúc đẩy giao thương trực tuyến tại Vietnam Expo 2021
+            .post__content
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Quisque imperdiet massa id turpis varius semper. Proin non ipsum vel orci imperdiet interdum vel sit amet ante. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare.
+              p.text-center
+                img(src="./images/post.jpg", alt="")
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Quisque imperdiet massa id turpis varius semper. Proin non ipsum vel orci imperdiet interdum vel sit amet ante. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare.
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Quisque imperdiet massa id turpis varius semper. Proin non ipsum vel orci imperdiet interdum vel sit amet ante. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Quisque imperdiet massa id turpis varius semper. Proin non ipsum vel orci imperdiet interdum vel sit amet ante. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Quisque imperdiet massa id turpis varius semper. Proin non ipsum vel orci imperdiet interdum vel sit amet ante. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare. Quisque imperdiet massa id turpis varius semper. Proin non ipsum vel orci imperdiet interdum vel sit amet ante. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id malesuada leo. Aenean id sapien sollicitudin, tempor justo et, vehicula tortor. Nunc et pulvinar eros. Quisque nec sapien ut ligula sollicitudin ornare.
+
+      .col-lg-4.col-xl-3
+        +aside
+
+  section.section
+    .container
+      .section__header
+        h2.section__title Tin tức khác
+      .row.g-30
+        - for(let i = 0; i < 3; i++)
+          .col-sm-6.col-lg-4
+            +news-4-2(`./images/news-${i % 3 + 1}.jpg`)

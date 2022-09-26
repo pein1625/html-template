@@ -1,3 +1,8 @@
+mixin link-2(url='./news-detail.html')
+  a.n-link-2(href="./news-detail.html")
+    | Chi tiết
+    i.fal.fa-arrow-right.ms-2
+
 mixin news(img='https://via.placeholder.com/1000', title='Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do')
   .news.news--1
     a.news__frame(href="./news-detail.html")
@@ -12,9 +17,7 @@ mixin news(img='https://via.placeholder.com/1000', title='Quy định về quy t
         a(href="./news-detail.html")= title
       .news__desc Sáng ngày 11/11/2019, tại trụ sở Bộ Công Thương, Bộ trưởng Trần Tuấn Anh đã có buổi tiếp ông Kwon Pyung-oh-Chủ tịch Cơ quan xúc tiến Thương mại và Đầu tư Hàn quốc (KOTRA).
       .text-end
-        a.news__link(href="./news-detail.html")
-          | Chi tiết
-          i.fal.fa-arrow-right.ms-2
+        +link-2
 
 mixin news-2(img='https://via.placeholder.com/1000', title='Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do')
   .news.news--2
@@ -52,6 +55,27 @@ mixin news-3(img='https://via.placeholder.com/1000', title='Hệ thống QUẢN 
     .news-3__overlay
       h3.news-3__title
         a(href="#!")= title
+
+mixin news-4(img='https://via.placeholder.com/1000', title='Hàn Quốc thúc đẩy giao thương trực tuyến tại Vietnam Expo 2021')
+  .news-4
+    .row.gx-4.gy-3
+      .col-md-5
+        a.news-4__frame(href="./news-detail.html")
+          img(src=img, alt="")
+      .col-md-7
+        h3.news-4__title
+          a(href="./news-detail.html")= title
+        .news-4__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum
+        +link-2
+
+mixin news-4-2(img='./images/news-1.jpg')
+  .news-4
+    a.news-4__frame.mb-3.mb-xl-20(href="./news-detail.html")
+      img(src=img, alt="")
+    h3.news-4__title
+      a(href="./news-detail.html") Hàn Quốc thúc đẩy giao thương trực tuyến tại Vietnam Expo 2021
+    .news-4__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum
+    +link-2
 
 mixin source(img='https://via.placeholder.com/1000', url='#!')
   .source

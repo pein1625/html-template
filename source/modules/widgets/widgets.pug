@@ -1,0 +1,25 @@
+mixin aside
+  section.section
+    .section__header
+      h2.section__title.text-primary Tin tức
+
+    ul.menu.menu-aside
+      each item,i in ['Tin tức công ty', 'Tin tức thị trường', 'Tin tức chuyên ngành', 'Tin tức khác']
+        li.menu-item.menu-item-group
+          a.menu-link(href="#!", class=i===2?'active':'')= item
+          span.menu-toggle
+          ul.menu.menu-sub
+            - for(let i = 0; i < 4; i++)
+              li.menu-item
+                a.menu-link(href="#!") Submenu
+    .mt-30
+      a(href="#!")
+        img(src="./images/banner-aside.jpg", alt="")
+
+mixin banner
+  // Banner
+  article.banner
+    img.banner__bg(src="./images/banner-slide.jpg", alt="")
+    .banner__title Hệ thống quản lý
+      br
+      | Truy xuất nguồn gốc

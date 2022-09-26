@@ -1,6 +1,7 @@
 .header {
   position: relative;
   z-index: $zindex-fixed;
+  height: 105px;
 
   &__wrapper {
     width: 100%;
@@ -86,6 +87,8 @@
   }
 
   @include media-breakpoint-up(xl) {
+    height: 191px;
+
     &__logo {
       font-size: 16px;
       margin: 24px 0;

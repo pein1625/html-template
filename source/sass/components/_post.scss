@@ -1,19 +1,16 @@
 .post {
   &__title {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
-  &__info {
-    color: #999;
-    margin-bottom: 16px;
-  }
-
-  &__sapo {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 16px;
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
   }
 }

@@ -1,0 +1,22 @@
+extends layout/page
+
+block content
+  // Banner
+  +banner
+
+  // Content
+  .container
+    .row
+      .col-lg-8.col-xl-9.order-lg-1
+        section.section
+          .section__header
+            h2.section__title Tin tức công ty
+
+          - for(let i = 0; i < 8; i++)
+            .mb-4.mb-xl-40.pb-4.pb-xl-40.border-bottom
+              +news-4(`./images/news-${i % 3 + 1}.jpg`)
+
+          +pagination
+
+      .col-lg-4.col-xl-3
+        +aside
