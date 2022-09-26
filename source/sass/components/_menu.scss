@@ -102,7 +102,10 @@
     // menu root
     &-root {
       display: flex;
+      flex: 1;
       border: 0;
+      justify-content: space-between;
+      order: -1;
     }
 
     &-root &-item {
@@ -159,15 +162,22 @@
       background-color: $light;
     }
 
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 30px;
+    &-root > &-item-group > &-link {
+      &::after {
+        content: '\f107';
+        font-weight: 400;
+        font-family: 'Font Awesome 5 Pro';
+        margin-left: 8px;
       }
     }
 
     &-root > &-item > &-link {
+      color: $white;
       font-size: 14px;
-      padding: 12px 0;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      padding: 20px 20px;
       transition: 0.3s;
     }
 
@@ -185,19 +195,6 @@
     &-root > &-item-group &-item-group:hover > &-sub {
       display: block;
       animation: menu-float-show 0.2s ease-out;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
     }
   }
 }

@@ -3,12 +3,32 @@ include ../menu/menu
 
 mixin header
   header.header
+    .header__top
+      .container
+        .d-flex.flex-wrap.justify-content-end.align-items-center
+          a.header__info(href="tel:02422202108")
+            i.fal.fa-phone.me-2
+            | (024) 22202108
+          .header__dropdown.dropdown
+            button.dropdown-toggle(type="button", data-bs-toggle="dropdown") Tài khoản
+              i.fal.fa-angle-down.ms-2
+            ul.dropdown-menu
+              li
+                a.dropdown-item(href="#!") Action
+                a.dropdown-item(href="#!") Other action
+                a.dropdown-item(href="#!") Something else here
+
     .header__wrapper
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            .header__name Bộ công thương Việt Nam
+            .header__name-2 HỆ THỐNG QUẢN LÝ TRUY XUẤT NGUỒN GỐC
           .header__elements
-            +navbar
-              +menu(menu)
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+    nav.navigation
+      .container
+        +navbar
+          +search
+          +menu(menu)

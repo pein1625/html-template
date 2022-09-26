@@ -1,0 +1,163 @@
+.footer {
+  background-color: #2b2b2b;
+  position: relative;
+  z-index: 1;
+  padding: 0 0 50px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/footer-bg.png') center/contain no-repeat;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 30px;
+    gap: 24px;
+  }
+
+  &__copyright {
+    color: $white;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr 3fr 3fr;
+    grid-gap: 30px;
+  }
+
+  &__heading {
+    font-size: 16px;
+    color: $white;
+    margin-bottom: 16px;
+  }
+
+  &__redirect {
+    background: 0;
+    border: 1px solid $white;
+    color: $white;
+
+    option {
+      color: #000;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.f-info {
+  display: flex;
+  flex-wrap: wrap;
+  color: $white;
+
+  &__item {
+    font-size: 16px;
+    line-height: 1.2;
+
+    small {
+      font-size: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 2px solid $white;
+    border-radius: 50%;
+  }
+
+  a,
+  a:hover {
+    color: $white;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.f-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #979797;
+  line-height: 1.86;
+
+  a {
+    color: inherit;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.f-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: $white;
+    transition: 0.3s;
+
+    img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      object-position: 50% 50%;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $dark;
+
+      img {
+        filter: brightness(0);
+      }
+    }
+  }
+}

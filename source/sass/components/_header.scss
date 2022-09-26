@@ -2,6 +2,26 @@
   position: relative;
   z-index: $zindex-fixed;
 
+  &__wrapper {
+    width: 100%;
+    background-color: $white;
+  }
+
+  &.is-fixed &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 2px rgba(#000, 0.3);
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    background-color: #184b6d;
+    justify-content: center;
+    height: 35px;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -9,12 +29,26 @@
   }
 
   &__logo {
-    display: inline-flex;
+    display: block;
+    font-family: $helvetica;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 12px;
+    color: #343434;
     margin: 16px 0;
+
+    &:hover {
+      color: #343434;
+    }
 
     img {
       height: 40px;
     }
+  }
+
+  &__name {
+    color: $primary;
+    font-size: 1.5em;
   }
 
   &__elements {
@@ -22,4 +56,56 @@
     align-items: center;
     margin-left: auto;
   }
+
+  &__info {
+    display: inline-block;
+    font-size: 14px;
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__dropdown {
+    .dropdown-toggle {
+      background: 0;
+      color: $white;
+      border: 0;
+      font-size: 14px;
+      padding: 7px 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__logo {
+      font-size: 16px;
+      margin: 24px 0;
+    }
+
+    &.is-fixed &__wrapper {
+      position: static;
+    }
+
+    &.is-fixed .navigation {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      box-shadow: 0 1px 2px rgba(#000, 0.3);
+    }
+  }
+}
+
+.navigation {
+  min-height: 2px;
+  background-color: $primary;
 }

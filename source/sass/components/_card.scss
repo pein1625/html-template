@@ -227,6 +227,17 @@
       padding-bottom: 40%;
     }
   }
+
+  @include media-breakpoint-down(lg) {
+    &__overlay {
+      transform: unset;
+      padding: 8px 10px;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+  }
 }
 
 .source {

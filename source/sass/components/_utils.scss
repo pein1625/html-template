@@ -60,6 +60,26 @@
   }
 
   @media (min-width: 1200px) {
-    display: none;
+    width: 260px;
+    margin-left: 80px;
+    background: 0;
+    padding: 0;
+    border: 0;
+
+    .form-control {
+      color: $white;
+      background: 0;
+      border: 0;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    .input-group-text {
+      background: 0;
+      border: 0;
+      color: $white;
+    }
   }
 }

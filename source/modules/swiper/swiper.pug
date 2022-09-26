@@ -43,13 +43,36 @@ mixin swiper(el, number, hasNav, hasPaging)
             block
 
 mixin banner-slider
-  .banner-slider
+  section.banner-slider
+    .banner-slider__nav
+      .container
+        .banner-slider__nav-inner
+          .banner-slider__pagination
     .banner-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 3; i++)
+        - for(let i = 0; i < 2; i++)
           .swiper-slide
-            a.banner-slider__frame(href="#!")
-              img(src="./images/banner-slide.jpg", alt="")
+            .banner-slider__frame
+              img(src="./images/banner-slide.png", alt="")
+            .banner-slider__body
+              .container
+                .banner-slider__content
+                  .banner-slider__title Hệ thống quản lý
+                    br
+                    | truy xuất nguồn gốc
+                  .banner-slider__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel.
+                  a.banner-slider__btn(href="#!") Chi tiết
+          .swiper-slide
+            .banner-slider__frame
+              img(src="https://via.placeholder.com/1900x500", alt="")
+            .banner-slider__body
+              .container
+                .banner-slider__content
+                  .banner-slider__title Lorem ipsum dolor
+                    br
+                    | amet consectetur
+                  .banner-slider__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel.
+                  a.banner-slider__btn(href="#!") Chi tiết
 
 mixin partner-slider
   .partner-slider

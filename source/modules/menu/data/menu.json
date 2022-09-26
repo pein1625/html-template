@@ -4,10 +4,10 @@
       "text": "Trang chủ",
       "url": "./index.html",
       "active": true,
-      "hasIcon": false
+      "hasIcon": true
     },
     {
-      "text": "Giới thiệu",
+      "text": "Thông tin điều hành",
       "url": "./about.html",
       "submenu": [
         {
@@ -43,16 +43,8 @@
       ]
     },
     {
-      "text": "Sản phẩm",
+      "text": "Truy xuất nguồn gốc",
       "url": "./products.html"
-    },
-    {
-      "text": "Dự án",
-      "url": "./projects.html"
-    },
-    {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
     },
     {
       "text": "Tin tức",

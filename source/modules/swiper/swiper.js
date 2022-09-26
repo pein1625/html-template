@@ -69,3 +69,17 @@ $(function() {
     },
   })[0];
 });
+
+$(function() {
+  addSwiper('.banner-slider', {
+    effect: 'fade',
+    speed: 800,
+    pagination: true,
+    navigation: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  });
+});

@@ -4,7 +4,10 @@ mixin navbar
     .navbar__wrapper
       .navbar__header
         a.navbar__logo(href="./index.html")
-          img(src="./images/logo.png", alt="")
+          .header__name Bộ công thương
+            br
+            | Việt Nam
+          //- .header__name-2 HỆ THỐNG QUẢN LÝ TRUY XUẤT NGUỒN GỐC
         button.btn-toggle.js-navbar-toggle.ms-auto
       .navbar__body
         block

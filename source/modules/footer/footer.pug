@@ -1,2 +1,69 @@
 mixin footer
   footer.footer
+    .container
+      .footer__top
+        .f-info.me-auto
+          .f-info__item
+            .row.g-2.align-items-center
+              .col-auto
+                .f-info__icon
+                  i.fas.fa-phone
+              .col
+                div
+                  small Đường dây nóng
+                .fw-700
+                  a(href="tel:02422202108") (024) 22202108
+          .f-info__item
+            .row.g-2.align-items-center
+              .col-auto
+                .f-info__icon
+                  i.fas.fa-envelope
+              .col
+                div
+                  small Email
+                .fw-700
+                  a(href="mailto:bbt@moit.gov.vn") bbt@moit.gov.vn
+
+        .footer__copyright Copyright 2022 © Hệ thống quản lý truy xuất nguồn gốc
+
+      .footer__grid
+        .footer__col
+          .footer__heading Hệ thống quản lý truy xuất nguồn gốc
+          ul.f-menu
+            li Địa chỉ: 54 Hai Bà Trưng, Hoàn Kiếm, Hà Nội
+            li Điện thoại: #[a(href="tel:02422202108") (024) 22202108]
+            li Email: #[a(href="mailto:bbt@moit.gov.vn") bbt@moit.gov.vn]
+
+        .footer__col
+          .footer__heading Truy xuất nguồn gốc
+          ul.f-menu
+            each item in ['Danh sách sản phẩm','Danh sách cơ sở sản xuất']
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading Thông tin điều hành
+          ul.f-menu
+            each item in ['Thông báo','Kế hoạch','Văn bản pháp luật','Thủ tục hành chính','Báo cáo công khai','Thông tin quản lý chất lượng','Quy trình quy định']
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading Thông tin điều hành
+          nav.f-social.mb-30
+            a(href="#!")
+              i.fab.fa-fw.fa-facebook-f
+            a(href="#!")
+              i.fab.fa-fw.fa-youtube
+            a(href="#!")
+              img(src="./images/icon-zalo.png", alt="")
+            a(href="#!")
+              i.fab.fa-fw.fa-instagram
+            a(href="#!")
+              i.fab.fa-fw.fa-blogger
+
+          .footer__heading Liên kết website
+          select.footer__redirect.form-select
+            option(value="") -- Chọn liên kết website --
+            option(value="https://www.google.com/") Google
+            option(value="https://www.facebook.com/") Facebook
