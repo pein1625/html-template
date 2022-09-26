@@ -1,12 +1,60 @@
 .preview {
   &__thumbs {
-    margin-top: 10px;
+    margin-top: 12px;
+  }
+}
+
+.preview-slider {
+  position: relative;
+  z-index: 1;
+  border: 1px solid $border-color;
+
+  .swiper-slide {
+    background-color: $white;
+  }
+
+  &__qr {
+    width: 30%;
+    height: 30%;
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__frame {
+    @include frame('square');
+
+    img {
+      object-fit: contain;
+    }
   }
 }
 
 .thumb-slider {
   @include slider-nav-2;
   position: relative;
-  max-width: 350px;
   margin: 0 auto;
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    left: 100%;
+  }
+
+  &__frame {
+    @include frame('square');
+    border: 1px solid $border-color;
+    cursor: pointer;
+
+    img {
+      object-fit: contain;
+    }
+  }
 }

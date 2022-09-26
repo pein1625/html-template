@@ -1,0 +1,65 @@
+extends layout/page
+
+block content
+  // banner
+  +banner
+
+  section.section
+    .container
+      .section__header.justify-content-center
+        h2.section__title.text-primary Truy xuất nguồn gốc
+
+      form(action="")
+        .text-center.mb-4.text-center.fs-18.fw-500 TÌM KIẾM
+        .row.gy-3.gx-30
+          .col-md-6
+            input.form-control(type="text", placeholder="Nhập tên sản phẩm")
+          .col-md-6
+            select.form-select
+              option Chọn tỉnh/thành phố
+              option Chọn tỉnh/thành phố
+              option Chọn tỉnh/thành phố
+              option Chọn tỉnh/thành phố
+          .col-md-6
+            select.form-select
+              option Chọn Quận/huyện
+              option Chọn Quận/huyện
+              option Chọn Quận/huyện
+              option Chọn Quận/huyện
+          .col-md-6
+            select.form-select
+              option Chọn Cơ sở sản xuất
+              option Chọn Cơ sở sản xuất
+              option Chọn Cơ sở sản xuất
+              option Chọn Cơ sở sản xuất
+          .col-md-6
+            select.form-select
+              option Chọn nhóm sản phẩm
+              option Chọn nhóm sản phẩm
+              option Chọn nhóm sản phẩm
+              option Chọn nhóm sản phẩm
+          .col-md-6
+            button.btn.btn-primary.text-white.px-30(type="submit")
+              i.fal.fa-search.me-2
+              span Tìm kiếm
+
+  section.section.pt-3
+    .container
+      .section__header
+        h2.section__title.text-primary Danh sách sản phẩm
+        .d-flex.align-items-center
+          span.me-3
+            i.fal.fa-sort-alt.me-2
+            | Sắp xếp theo
+          select.form-select.w-auto
+            option Tên sản phẩm
+            option Tên sản phẩm
+            option Tên sản phẩm
+
+      .row.gx-3.gy-4.g-xl-30
+        - for(let i = 0; i < 24; i++)
+          .col-6.col-lg-3
+            +product(`./images/product-${i % 4 + 1}.jpg`)
+
+      .border-top.pt-30.mt-30
+        +pagination

@@ -1,24 +1,25 @@
 mixin preview-slider
   .preview-slider
+    img.preview-slider__qr(src="./images/qrcode.png", alt="")
     .preview-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
-              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+            .preview-slider__frame
+              img(src=`./images/product-${i % 4 + 1}.jpg`, alt="")
 
 mixin thumb-slider
   .thumb-slider
     .thumb-slider__prev
-      i.fa.fa-angle-left
+      i.fal.fa-angle-left
     .thumb-slider__next
-      i.fa.fa-angle-right
+      i.fal.fa-angle-right
     .thumb-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
-              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+            .thumb-slider__frame
+              img(src=`./images/product-${i % 4 + 1}.jpg`, alt="")
 
 mixin preview
   article.preview

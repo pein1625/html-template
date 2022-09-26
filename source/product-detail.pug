@@ -1,0 +1,39 @@
+extends layout/page
+
+block content
+  +banner
+
+  section.section
+    .container
+      .row.gx-30.gy-4
+        .col-md-5.col-xl-4
+          +preview
+        .col-md-7.col-xl-8
+          section.pd-info
+            h1.pd-info__title Sữa bột vinamilk organic gold 4 -hộp 850g
+            .pd-info__info CSSX: Phạm Thị vân - thôn hướng giang xã lộc yên huyện hương khê
+            .pd-info__label Giá tham khảo
+            .pd-info__price 20.0000đ
+            a.pd-info__btn.btn.btn-primary(href="#!") Liên hệ
+
+  section.section.pt-0
+    .container
+      .section__header
+        h2.section__title Thông tin sản phẩm
+      div
+        p Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel. Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel. Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa
+        p Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien
+        p.text-center
+          img(src="./images/product-detail-img.jpg", alt="")
+        p Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel. Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel. Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa
+        p Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien
+
+  section.section.pt-3
+    .container
+      .section__header
+        h2.section__title.text-primary Sản phẩm cùng cơ sở sản xuất
+
+      .row.gx-3.gy-4.g-xl-30
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-lg-3
+            +product(`./images/product-${i % 4 + 1}.jpg`)
