@@ -45,6 +45,10 @@ mixin swiper(el, number, hasNav, hasPaging)
 
 mixin banner-slider
   section.banner-slider
+    .banner-slider__prev
+      i.fal.fa-angle-left
+    .banner-slider__next
+      i.fal.fa-angle-right
     .banner-slider__nav
       .container
         .banner-slider__nav-inner
@@ -54,7 +58,7 @@ mixin banner-slider
         - for(let i = 0; i < 2; i++)
           .swiper-slide
             .banner-slider__frame
-              img(src="./images/banner-slide.png", alt="")
+              img(src="./images/banner-slide.jpg", alt="")
             .banner-slider__body
               .container
                 .banner-slider__content
@@ -99,7 +103,7 @@ mixin source-slider
       .swiper-wrapper
         - for(let i = 0; i < 10; i++)
           .swiper-slide
-            +source
+            +source(`./images/product-${i%4 + 1}.jpg`)
 
 mixin video-slider
   .video-slider
@@ -107,7 +111,7 @@ mixin video-slider
       .swiper-wrapper
         - for(let i = 0; i < 4; i++)
           .swiper-slide
-            +video
+            +video(`./images/video-${i % 4 + 1}.jpg`)
 
 mixin video-thumb-slider
   .video-thumb-slider
@@ -120,4 +124,4 @@ mixin video-thumb-slider
         - for(let i = 0; i < 4; i++)
           .swiper-slide
             .video-thumb-slider__frame
-              img(src="https://via.placeholder.com/1000", alt="")
+              img(src=`./images/video-${i % 4 + 1}.jpg`, alt="")

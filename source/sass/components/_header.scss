@@ -5,6 +5,8 @@
 
   &__wrapper {
     width: 100%;
+    background: url('../images/header-bg.png') center/contain no-repeat;
+    background-position: 100% 50%;
     background-color: $white;
   }
 

@@ -225,6 +225,11 @@
   &__frame {
     @include frame('rect', 66.66%);
     cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   @include media-breakpoint-down(sm) {
@@ -235,6 +240,33 @@
 .banner-slider {
   position: relative;
   z-index: 1;
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    width: 55px;
+    height: 65px;
+    background-color: rgba(#000, 0.5);
+    transition: 0.4s;
+    position: absolute;
+    font-size: 40px;
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    &:hover {
+      background-color: rgba($primary, 0.5);
+    }
+  }
+
+  &__next {
+    left: auto;
+    right: 0;
+  }
 
   &__body {
     padding: 60px  0;
@@ -334,6 +366,13 @@
   }
 
   @include media-breakpoint-down(lg) {
+    &__prev,
+    &__next {
+      width: 30px;
+      height: 40px;
+      font-size: 30px;
+    }
+
     &__title {
       font-size: 24px;
       margin-bottom: 16px;

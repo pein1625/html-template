@@ -6,10 +6,6 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
-      },
-      {
         "title": "Sản phẩm",
         "url": "products"
       },
@@ -26,8 +22,8 @@
         "url": "news-detail"
       },
       {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Cơ sở sản xuất",
+        "url": "factory"
       }
     ]
   }
