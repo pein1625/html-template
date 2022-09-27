@@ -1,0 +1,131 @@
+extends layout/page
+
+block content
+  .container
+    section.section.py-30
+      .row.align-items-center.gx-4
+        .col-auto
+          img(src="./images/qrcode.png", alt="", style="width: 125px")
+        .col.fs-24.fw-600.text-uppercase(style="color: #434343") Cơ sở sản xuất Vinamilk
+
+    section.section.pt-0
+      .section__header
+        h2.section__title Thông tin
+
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Số điện thoại:
+          .col 09897867567
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Địa chỉ
+          .col
+            p Thôn Tân Lập, xã Lộc Yên
+            .ratio(style="height: 320px;")
+              iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Website
+          .col #[a(href="htxthontanlap.com") htxthontanlap.com]
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Video
+          .col
+            .row.g-3
+              .col-md-4
+                +media('./images/img-1.jpg', 'Video 01', 'https://www.youtube.com/watch?v=VBuRWddI_Zw')
+              .col-md-4
+                +media('./images/img-2.jpg', 'Video 02', 'https://www.youtube.com/watch?v=VBuRWddI_Zw')
+              .col-md-4
+                +media('./images/img-1.jpg', 'Video 03', 'https://www.youtube.com/watch?v=VBuRWddI_Zw')
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Hình ảnh
+          .col
+            .row.g-3
+              - for(let i = 0; i < 4; i++)
+                .col-6.col-md-3
+                  +media(`./images/img-${i % 2 + 1}.jpg`, `Ảnh 0${i+1}`)
+
+    section.section.pt-0
+      .section__header
+        h2.section__title Sản phẩm
+        .d-flex.align-items-center
+          span.me-3
+            i.fal.fa-sort-alt.me-2
+            | Sắp xếp theo
+          select.form-select.w-auto
+            option Tên sản phẩm
+            option Tên sản phẩm
+            option Tên sản phẩm
+
+      .row.gx-3.gy-4.g-xl-30
+        - for(let i = 0; i < 8; i++)
+          .col-6.col-lg-3
+            +product(`./images/product-${i % 4 + 1}.jpg`)
+
+      nav.border-top.d-flex.justify-content-end.pt-30.mt-30
+        +pagination
+
+    section.section.pt-0
+      .section__header
+        h2.section__title Nhà xưởng
+
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Số điện thoại:
+          .col 09897867567
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Địa chỉ
+          .col Thôn Tân Lập, xã Lộc Yên
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Diện tích
+          .col 1000m2
+
+    section.section.border-top
+      .section__header
+        h2.section__title Vật tư
+        .d-flex.align-items-center
+          span.me-3
+            i.fal.fa-sort-alt.me-2
+            | Sắp xếp theo
+          select.form-select.w-auto
+            option Tên sản phẩm
+            option Tên sản phẩm
+            option Tên sản phẩm
+
+      .row.gx-3.gy-4.g-xl-30
+        - for(let i = 0; i < 8; i++)
+          .col-6.col-lg-3
+            +product(`./images/product-${i % 4 + 1}.jpg`)
+
+      nav.border-top.d-flex.justify-content-end.pt-30.mt-30
+        +pagination
+
+    section.section.border-top
+      .row
+        .col-xl-3
+          .section__header
+            h2.section__title Thành viên
+        .col-xl-9
+          .row.g-3.g-lg-30
+            - for(let i = 0; i < 4; i++)
+              .col-6.col-md-3
+                +member(`./images/member-${i + 1}.jpg`)
+
+    section.section.border-top
+      .section__header
+        h2.section__title Nhật ký
+      div
+        - for(let i = 0; i < 3; i++)
+          +history

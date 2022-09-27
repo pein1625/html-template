@@ -108,3 +108,35 @@ mixin product(img='./images/product-1.jpg', title='Sản phẩm 01')
     .product__price Giá tham khảo
       br
       strong 560.000đ
+
+mixin history
+  .history
+    .row
+      .col-lg-auto
+        .history__time
+          span 9/9/2022
+          span 17h:00
+          span 17h:00
+      .col-md-auto.mb-3.mb-md-0
+        .history__frame
+          img(src="./images/history-1.jpg", alt="")
+      .col-md
+        h3.history__title Vận chuyên lô hàng bưởi Phúc Trạch
+        .history__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel. Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa.
+
+mixin member(img='./images/member-1.jpg', title='', url='')
+  .member
+    a.member__frame(href="#!")
+      img(src=img, alt="")
+    h3.member__title Nguyễn Mạnh Đoàn
+    .member__info Mã số: 123456
+
+mixin media(img='', title = '', url='')
+  .media
+    .media__frame
+      img(src=img, alt="")
+      if (url)
+        a.media__overlay(href=url, data-fancybox='video')
+          i.fal.fa-play-circle
+
+    .media__title= title
