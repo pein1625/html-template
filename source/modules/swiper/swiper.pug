@@ -79,6 +79,18 @@ mixin banner-slider
                   .banner-slider__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel.
                   a.banner-slider__btn(href="#!") Chi tiết
 
+mixin banner-slider-2
+  section.banner-slider-2
+    .container
+      .banner-slider-2__inner
+        .banner-slider-2__prev
+        .banner-slider-2__next
+        .banner-slider-2__container.swiper-container
+          .swiper-wrapper
+            - for(let i = 0; i < 4; i++)
+              .swiper-slide
+                img.d-block.w-100(src="./images/banner-slide-2.jpg", alt="")
+
 mixin partner-slider
   .partner-slider
     .partner-slider__prev
@@ -125,3 +137,43 @@ mixin video-thumb-slider
           .swiper-slide
             .video-thumb-slider__frame
               img(src=`./images/video-${i % 4 + 1}.jpg`, alt="")
+
+mixin product-slider
+  .product-slider
+    .product-slider__prev
+      i.fal.fa-angle-left
+    .product-slider__next
+      i.fal.fa-angle-right
+    .product-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +product-2(`./images/product-${i % 4 + 1}.jpg`, 'Sản phẩm 01', 'product--2')
+
+mixin news-slider
+  .news-slider
+    .news-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +news(`./images/news-${i % 4 + 1}.jpg`, 'Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do', '')
+    .news-slider__nav
+      .news-slider__prev
+        i.fal.fa-angle-left
+      .news-slider__next
+        i.fal.fa-angle-right
+      +n-link('#!', 'ms-auto')
+
+mixin news-slider-2
+  .news-slider-2
+    .news-slider-2__container.swiper-container
+      .swiper-wrapper
+        each item, i in ['Cơ sở sản xuất dưa lưới Lộc Phúc', 'HTX Rau An toàn Hà Nam', 'HTX chế biến nông sản Lụa Vy', 'HTX môi trường và DVTH xã Đức Liên']
+          .swiper-slide
+            +news-2-2(`./images/coso-${i + 1}.jpg`, item)
+    .news-slider-2__nav
+      .news-slider-2__prev
+        i.fal.fa-angle-left
+      .news-slider-2__next
+        i.fal.fa-angle-right
+      +n-link('#!', 'ms-auto')

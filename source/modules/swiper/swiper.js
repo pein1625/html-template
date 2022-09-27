@@ -84,6 +84,18 @@ $(function() {
   });
 });
 
+$(function() {
+  addSwiper('.banner-slider-2', {
+    speed: 800,
+    pagination: true,
+    navigation: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  });
+});
 
 // horizontal preview sync slider
 $(function () {
@@ -112,4 +124,69 @@ $(function () {
       swiper: thumbSlider,
     },
   });
+});
+
+$(function() {
+  addSwiper('.product-slider', {
+    navigation: true,
+    loop: true,
+    speed: 400,
+    slidesPerView: 2,
+    breakpoints: {
+      768: {
+        slidesPerView: 3
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 14,
+      }
+    }
+  })
+});
+
+$(function() {
+  addSwiper('.news-slider', {
+    navigation: true,
+    spaceBetween: 16,
+    speed: 400,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    }
+  })
+});
+
+$(function() {
+  addSwiper('.news-slider-2', {
+    navigation: true,
+    spaceBetween: 16,
+    speed: 400,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      }
+    }
+  })
 });

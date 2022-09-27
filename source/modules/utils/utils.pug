@@ -1,3 +1,7 @@
+mixin n-link(url='#!', addClass='')
+  a.n-link(href=url, class=addClass) Xem tất cả
+    i.fal.fa-arrow-right.ms-2
+
 mixin img(type = 'any', w = 600, h = 400, addClass='')
   - i = Math.floor(Math.random() * 89 + 10)
   if (type === 'avatar')

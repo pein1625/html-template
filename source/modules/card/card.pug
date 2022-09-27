@@ -3,8 +3,8 @@ mixin link-2(url='./news-detail.html')
     | Chi tiết
     i.fal.fa-arrow-right.ms-2
 
-mixin news(img='https://via.placeholder.com/1000', title='Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do')
-  .news.news--1
+mixin news(img='https://via.placeholder.com/1000', title='Quy định về quy tắc xuất xứ hàng hóa trong Hiệp định Thương mại tự do', addClass='news--1')
+  .news(class=addClass)
     a.news__frame(href="./news-detail.html")
       img(src=img, alt="")
     .news__body
@@ -40,10 +40,10 @@ mixin news-2-2(img='https://via.placeholder.com/1000', title='Cơ sở sản xu�
       h3.news__title
         a(href="./news-detail.html")= title
 
-mixin news-x2(title='Hướng dẫn quy định truy xuất nguồn gốc, thu hồi và xử lý...')
-  .news-2
+mixin news-x2(title='Hướng dẫn quy định truy xuất nguồn gốc, thu hồi và xử lý...', url='./news-detail.html', addClass='')
+  .news-2(class=addClass)
     h3.news-2__title
-      a(href="./news-detail.html")= title
+      a(href=url)= title
     .news-2__info
       i.fal.fa-clock.me-2
       | 2/9/2021
@@ -97,8 +97,8 @@ mixin video(img='https://via.placeholder.com/1000')
     a.video__overlay(href="https://www.youtube.com/watch?v=3OHIhSVwM0E", data-fancybox="video")
       i.fal.fa-3x.fa-play-circle
 
-mixin product(img='./images/product-1.jpg', title='Sản phẩm 01')
-  .product
+mixin product(img='./images/product-1.jpg', title='Sản phẩm 01', addClass='')
+  .product(class=addClass)
     a.product__frame(href="./product-detail.html")
       img.product__img(src=img, alt="")
       img.product__qr(src="./images/qrcode.png", alt="")
@@ -106,6 +106,19 @@ mixin product(img='./images/product-1.jpg', title='Sản phẩm 01')
       a(href="./product-detail.html")= title
     .product__info CSSX: Phạm Thị vân - thôn hướng giang xã lộc yên huyện hương khê
     .product__price Giá tham khảo
+      br
+      strong 560.000đ
+
+mixin product-2(img='./images/product-1.jpg', title='Sản phẩm 01')
+  .product-2
+    a.product-2__frame(href="./product-detail.html")
+      img.product-2__img(src=img, alt="")
+      img.product-2__qr(src="./images/qrcode.png", alt="")
+    h3.product-2__title
+      a(href="./product-detail.html")= title
+      i.fal.fa-arrow-right
+    .product-2__info CSSX: Phạm Thị vân - thôn hướng giang xã lộc yên huyện hương khê
+    .product-2__price Giá tham khảo
       br
       strong 560.000đ
 
