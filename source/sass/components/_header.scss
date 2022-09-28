@@ -8,6 +8,7 @@
     background: url('../images/header-bg.png') center/contain no-repeat;
     background-position: 100% 50%;
     background-color: $white;
+    transition: 0.4s;
   }
 
   &.is-fixed &__wrapper {
@@ -38,6 +39,7 @@
     line-height: 1.2;
     font-size: 12px;
     color: #343434;
+    transition: 0.3s;
     margin: 16px 0;
 
     &:hover {
@@ -88,12 +90,22 @@
     }
   }
 
+  &--2 {
+    height: 103px;
+  }
+
   @include media-breakpoint-up(xl) {
     height: 191px;
 
     &__logo {
+      white-space: nowrap;
       font-size: 16px;
+      color: $white;
       margin: 24px 0;
+    }
+
+    &__wrapper {
+      background-color: transparent;
     }
 
     &.is-fixed &__wrapper {
@@ -107,10 +119,87 @@
       left: 0;
       box-shadow: 0 1px 2px rgba(#000, 0.3);
     }
+
+    &--2 {
+      height: 131px;
+    }
+
+    &--2 &__logo {
+      font-size: 15px;
+    }
+
+    &--2 &__name {
+      font-size: 24px;
+      color: inherit;
+    }
+
+    &--2 {
+      .search {
+        display: none;
+      }
+
+      .menu-root > .menu-item {
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+
+      .menu-root > .menu-item > .menu-link {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #212121;
+        padding: 16px;
+
+        &::before {
+          background-color: $primary;
+          height: 3px;
+        }
+
+        &.active {
+          color: $primary;
+        }
+      }
+
+      .menu-root > .menu-item:hover > .menu-link {
+        color: $primary;
+      }
+    }
+
+    &--2.is-fixed &__wrapper {
+      position: fixed;
+      background-color: $white;
+    }
+
+    &--2.is-fixed &__logo {
+      color: #333;
+      margin: 16px 0;
+    }
+
+    &--2.is-fixed &__name {
+      color: $primary;
+    }
   }
 }
 
 .navigation {
   min-height: 2px;
   background-color: $primary;
+}
+
+.btn-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+  border: 0;
+  background-color: $primary;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
 }
