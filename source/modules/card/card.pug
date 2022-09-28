@@ -32,8 +32,8 @@ mixin news-2(img='https://via.placeholder.com/1000', title='Quy định về quy
       h3.news__title
         a(href="./news-detail.html")= title
 
-mixin news-2-2(img='https://via.placeholder.com/1000', title='Cơ sở sản xuất dưa lưới Lộc Phúc')
-  .news.news--2
+mixin news-2-2(img='https://via.placeholder.com/1000', title='Cơ sở sản xuất dưa lưới Lộc Phúc', addClass='')
+  .news.news--2(class=addClass)
     a.news__frame(href="./news-detail.html")
       img(src=img, alt="")
     .news__body.news__body--no-border
@@ -77,8 +77,37 @@ mixin news-4-2(img='./images/news-1.jpg')
     .news-4__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum
     +link-2
 
-mixin source(img='https://via.placeholder.com/1000', url='#!')
-  .source
+mixin news-5(img='./images/news-1.jpg', title='Vai trò ISO 22000 trong lĩnh vực thực phẩm')
+  .news-5
+    a.news-5__frame(href="./news-detail.html")
+      img(src=img, alt="")
+    .news-5__info
+      span.text-uppercase.text-primary.me-3 Tin tức
+      span
+        i.fal.fa-clock.me-1
+        | 2/9/2022
+    h3.news-5__title
+      a(href="./news-detail.html")= title
+    .news-5__desc Cras eu elit dictum, vestibulum orci in, commodo nulla. Maecenas ac pellentesque massa. Aliquam dictum aliquam sapien, ac placerat turpis accumsan vel.
+    .text-end
+      +link-2
+
+mixin news-6(img='./images/news-1.jpg', title='Vai trò ISO 22000 trong lĩnh vực thực phẩm')
+  .news-6
+    .row.g-4
+      .col-4
+        a.news-6__frame(href="./news-detail.html")
+          img(src=img, alt="")
+      .col-8
+        .news-6__info
+          span
+            i.fal.fa-clock.me-1
+            | 2/9/2022
+        h3.news-6__title
+          a(href="./news-detail.html")= title
+
+mixin source(img='https://via.placeholder.com/1000', url='./product-detail.html', addClass='')
+  .source(class=addClass)
     a.source__frame(href=url)
       img.source__img(src=img, alt="")
       img.source__qrcode(src="./images/qrcode.png", alt="")

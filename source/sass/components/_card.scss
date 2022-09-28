@@ -115,6 +115,14 @@
     padding: 16px 20px;
   }
 
+  &--2sm &__body {
+    padding: 8px 12px;
+  }
+
+  &--2sm &__title {
+    font-size: 14px;
+  }
+
   @include media-breakpoint-down(xl) {
     &__body {
       &::before {
@@ -287,6 +295,43 @@
     &__desc {
       margin-bottom: 12px;
     }
+  }
+}
+
+.news-5 {
+  &__frame {
+    @extend .news__frame;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    @extend .news__title;
+  }
+
+  &__info {
+    @extend .news__info;
+  }
+
+  &__desc {
+    @extend .news__desc;
+  }
+}
+
+.news-6 {
+  &__frame {
+    @extend .news__frame;
+  }
+
+  &__title {
+    @extend .news__title;
+  }
+
+  &__info {
+    @extend .news__info;
+  }
+
+  &__desc {
+    @extend .news__desc;
   }
 }
 

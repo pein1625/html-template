@@ -6,6 +6,14 @@
         "url": "index"
       },
       {
+        "title": "Trang chủ 2",
+        "url": "index-2"
+      },
+      {
+        "title": "Trang chủ 3",
+        "url": "index-3"
+      },
+      {
         "title": "Sản phẩm",
         "url": "products"
       },

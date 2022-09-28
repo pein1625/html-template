@@ -97,6 +97,19 @@ $(function() {
   });
 });
 
+$(function() {
+  addSwiper('.banner-slider-3', {
+    speed: 800,
+    pagination: true,
+    navigation: true,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    }
+  });
+});
+
 // horizontal preview sync slider
 $(function () {
   if (!$(".preview-slider, .thumb-slider").length) {

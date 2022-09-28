@@ -91,6 +91,16 @@ mixin banner-slider-2
               .swiper-slide
                 img.d-block.w-100(src="./images/banner-slide-2.jpg", alt="")
 
+mixin banner-slider-3
+  section.banner-slider-3
+    .banner-slider-3__prev
+    .banner-slider-3__next
+    .banner-slider-3__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            img.d-block.w-100(src="./images/banner-slide-3.png", alt="")
+
 mixin partner-slider
   .partner-slider
     .partner-slider__prev

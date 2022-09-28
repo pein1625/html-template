@@ -1,4 +1,60 @@
 {
+	"menu": [
+		{
+			"text": "Trang chủ",
+			"url": "./index.html",
+			"active": true,
+			"hasIcon": true
+		},
+		{
+			"text": "Thông tin điều hành",
+			"url": "./about.html",
+			"submenu": [
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						},
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						},
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"text": "Truy xuất nguồn gốc",
+			"url": "./products.html"
+		},
+		{
+			"text": "Tin tức",
+			"url": "./news.html"
+		},
+		{
+			"text": "Liên hệ",
+			"url": "./contact.html"
+		}
+	],
 	"head": {
 		"jquery": {
 			"js": [
@@ -120,67 +176,19 @@
 			]
 		}
 	},
-	"menu": [
-		{
-			"text": "Trang chủ",
-			"url": "./index.html",
-			"active": true,
-			"hasIcon": true
-		},
-		{
-			"text": "Thông tin điều hành",
-			"url": "./about.html",
-			"submenu": [
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
-				}
-			]
-		},
-		{
-			"text": "Truy xuất nguồn gốc",
-			"url": "./products.html"
-		},
-		{
-			"text": "Tin tức",
-			"url": "./news.html"
-		},
-		{
-			"text": "Liên hệ",
-			"url": "./contact.html"
-		}
-	],
 	"pageList": {
 		"data": [
 			{
 				"title": "Trang chủ",
 				"url": "index"
+			},
+			{
+				"title": "Trang chủ 2",
+				"url": "index-2"
+			},
+			{
+				"title": "Trang chủ 3",
+				"url": "index-3"
 			},
 			{
 				"title": "Sản phẩm",
