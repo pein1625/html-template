@@ -306,12 +306,4 @@
       }
     }
   }
-
-  @include media-breakpoint-up(xl) {
-    margin-top: -70px;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    margin-top: -84px;
-  }
 }

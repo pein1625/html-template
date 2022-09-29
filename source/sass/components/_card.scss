@@ -229,6 +229,9 @@
 }
 
 .service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 30px;
   border-radius: 20px;
   background-color: #F8F8FA;
