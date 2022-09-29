@@ -1,0 +1,92 @@
+extends layout/page
+
+block define
+  - addBodyClass= 'page--green'
+
+block header
+  +header-3
+
+block content
+  // banner slider
+  +banner-slider
+
+  // Tin tức mới
+  section.section.section--gray
+    .container
+      .section__header
+        h2.section__title Tin tức mới
+        a.n-link.ms-auto(href="#!") Xem tất cả
+          i.fal.fa-arrow-right.ms-2
+      .row.g-3.g-md-30
+        .col-lg-6
+          +news('./images/news-4.jpg')
+        .col-lg-6
+          .row.g-3.g-md-30
+            - for(let i = 0; i < 4; i++)
+              .col-6
+                +news-2(`./images/news-${i + 5}.jpg`)
+
+  // Truy xuất nguồn gốc
+  section.section.section--primary
+    img.section__bg(src="./images/section-bg.png", alt="")
+    .container
+      .section__header
+        h2.section__title Truy xuất nguồn gốc
+        a.n-link.ms-auto(href="#!") Xem tất cả
+          i.fal.fa-arrow-right.ms-2
+      +source-slider
+
+  // Cơ sở sản xuất kinh doanh tiêu biểu
+  section.section.section--gray
+    img.section__bg--bottom(src="./images/full-width-dots.png", alt="")
+    .container
+      .section__header
+        h2.section__title Cơ sở sản xuất kinh doanh tiêu biểu
+        a.n-link.ms-auto(href="#!") Xem tất cả
+          i.fal.fa-arrow-right.ms-2
+      .row.g-3.g-md-30
+        each item, i in ['Cơ sở sản xuất dưa lưới Lộc Phúc', 'HTX Rau An toàn Hà Nam', 'HTX chế biến nông sản Lụa Vy', 'HTX môi trường và DVTH xã Đức Liên']
+          .col-lg-3.col-6
+            +news-2-2(`./images/coso-${i + 1}.jpg`, item)
+
+  // Grid
+  section.section.pt-50
+    .container
+      a.d-block.mb-50(href="#!")
+        img.d-block.w-100(src="./images/banner-home-1.jpg", alt="")
+
+      .row
+        each item in ['Văn bản pháp luật', 'Thông tin quản lý chất lượng', 'Thủ tục hành chính']
+          .col-lg-4.mb-50
+            section.section-2
+              h2.section-2__title Văn bản pháp luật
+              each title in ['Hướng dẫn quy định truy xuất nguồn gốc, thu hồi và xử lý...', 'Vai trò ISO 22000 trong lĩnh vực thực phẩm', 'Vietnam expo 2021', 'Hướng dẫn quy định truy xuất nguồn gốc, thu hồi và xử lý...']
+                .mb-12.pb-12.border-bottom
+                  +news-x2(title)
+              .text-end.mt-20.mt-xl-4
+                a.n-link(href="#!") Xem tất cả
+                  i.fal.fa-arrow-right.ms-2
+
+      a.d-block(href="#!")
+        img.d-block.w-100(src="./images/banner-home-4.jpg", alt="")
+
+  // Video
+  section.section.pt-0
+    .container
+      .row.g-3.g-md-30
+        .col-lg-6.d-flex.flex-column
+          .section__header
+            h2.section__title Video
+            a.n-link.ms-auto(href="#!") Xem tất cả
+              i.fal.fa-arrow-right.ms-2
+          +video-slider
+          +video-thumb-slider
+
+        .col-lg-6
+          .row.g-3.g-md-30
+            .col-12
+              +news-3('./images/card-1.jpg', 'Hệ thống QUẢN LÝ truy xuất nguồn gốc', 'news-3--horizontal')
+            .col-6
+              +news-3('./images/card-2.jpg')
+            .col-6
+              +news-3('./images/card-3.jpg')

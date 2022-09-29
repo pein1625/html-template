@@ -88,11 +88,11 @@
 
   i {
     transition: 0.3s;
-    color: $primary;
+    color: var(--bs-primary);
   }
 
   &:hover {
-    color: $primary;
+    color: var(--bs-primary);
 
     i {
       transform: translateX(5px);
@@ -110,12 +110,12 @@
   transition: 0.3s;
 
   i {
-    color: $primary;
+    color: var(--bs-primary);
     transition: 0.3s;
   }
 
   &:hover {
-    color: $primary;
+    color: var(--bs-primary);
 
     i {
       transform: translateX(5px);

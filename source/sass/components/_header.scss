@@ -52,7 +52,7 @@
   }
 
   &__name {
-    color: $primary;
+    color: var(--bs-primary);
     font-size: 1.5em;
   }
 
@@ -161,17 +161,17 @@
         padding: 16px;
 
         &::before {
-          background-color: $primary;
+          background-color: var(--bs-primary);
           height: 3px;
         }
 
         &.active {
-          color: $primary;
+          color: var(--bs-primary);
         }
       }
 
       .menu-root > .menu-item:hover > .menu-link {
-        color: $primary;
+        color: var(--bs-primary);
       }
     }
 
@@ -189,14 +189,14 @@
 
     &--2.is-fixed &__name,
     &--3.is-fixed &__name {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 }
 
 .navigation {
   min-height: 2px;
-  background-color: $primary;
+  background-color: var(--bs-primary);
 }
 
 .btn-search {
@@ -209,9 +209,9 @@
   color: $white;
   cursor: pointer;
   border: 0;
-  background-color: $primary;
+  background-color: var(--bs-primary);
 
   &:hover {
-    background-color: darken($primary, 10%);
+    background-color: var(--bs-primary-darker);
   }
 }

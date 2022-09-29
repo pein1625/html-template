@@ -290,7 +290,7 @@
   position: relative;
   z-index: 1;
   padding: 20px 40px;
-  background-color: #c2dcff;
+  background-color: var(--bg-video-slider-thumb);
 
   @include slider-nav-2();
 
