@@ -1,0 +1,51 @@
+.register {
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--bs-primary);
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      background-color: var(--bs-primary);
+      color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .form-label {
+    font-weight: 500;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: #e9f2f6;
+    border-color: #bae1f2;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__subtitle {
+      font-size: 14px;
+
+      span {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8em;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+extends layout/page
+block header
+block footer
+
+block content
+  .login
+    .position-relative.d-none.d-lg-block
+      img.login__banner(src="./images/login-banner.jpg", alt="")
+    .position-relative
+      .login__content
+        .login__name Bộ công thương việt nam
+        .login__subname HỆ THỐNG QUẢN LÝ TRUY XUẤT NGUỒN GỐC
+
+        form.login__form(action="#!")
+          .mb-3
+            label.form-label Email
+            input.form-control(type="email")
+          .mb-4
+            label.form-label Mật khẩu
+            input.form-control(type="password")
+          .mb-4.text-center
+            button.btn.btn-primary.text-white.px-4(type="submit") Đăng nhập
+          .login__delimiter.mb-3 Hoặc đăng ký bằng
+          .row.g-2
+            .col-6
+              a.login__social(href="#!")
+                i.fab.fa-lg.fa-google.me-2
+                | Google
+            .col-6
+              a.login__social.login__social--facebook(href="#!")
+                i.fab.fa-lg.fa-facebook-f.me-2
+                | Facebook

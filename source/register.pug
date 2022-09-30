@@ -1,0 +1,90 @@
+extends layout/page
+
+block header
+
+block footer
+
+block content
+  form.register.py-60(action="")
+    .container
+      img.d-block.w-100.mb-50(src="./images/banner-home-1.jpg", alt="")
+      h1.register__title Đăng ký
+
+      .row.gx-30.gy-4
+        .col-lg-12
+          h2.register__subtitle
+            span.me-2 1
+            | Thông tin doanh nghiệp/ Đơn vị
+        .col-lg-12
+          label.form-label Tên
+          input.form-control(type="text", placeholder="")
+        .col-lg-6
+          label.form-label Loại hình kinh doanh
+          input.form-control(type="text", placeholder="")
+        .col-lg-6
+          label.form-label Mã số thuế/ Đăng ký kinh doanh
+          input.form-control(type="text", placeholder="")
+        .col-lg-6
+          +file-input
+        .col-lg-6.d-none.d-lg-block
+        .col-lg-6
+          label.form-label Ngày cấp
+          input.form-control(type="text", placeholder="")
+        .col-lg-6
+          label.form-label Ngày hết hạn
+          input.form-control(type="text", placeholder="")
+        .col-lg-6
+          label.form-label Trường 1
+          input.form-control(type="text", placeholder="")
+        .col-lg-6
+          label.form-label Trường 2
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 1
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 2
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 3
+          input.form-control(type="text", placeholder="")
+        .col-lg-12.pt-3
+          h2.register__subtitle
+            span.me-2 2
+            | Thông tin người đại diện
+        .col-lg-12
+          label.form-label Tên
+          input.form-control(type="text", placeholder="")
+        .col-lg-12
+          label.form-label Tên
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 1
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 2
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 3
+          input.form-control(type="text", placeholder="")
+        .col-lg-12.pt-3
+          h2.register__subtitle
+            span.me-2 3
+            | Thông tin tài khoản
+        .col-lg-12
+          label.form-label Tên
+          input.form-control(type="text", placeholder="")
+        .col-lg-12
+          label.form-label Tên
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 1
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 2
+          input.form-control(type="text", placeholder="")
+        .col-lg-4
+          label.form-label Trường 3
+          input.form-control(type="text", placeholder="")
+        .col-lg-4.mx-auto.pt-30.d-grid
+          a.btn.btn-primary.text-white(href="#!") Đăng ký
