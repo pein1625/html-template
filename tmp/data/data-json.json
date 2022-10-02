@@ -217,6 +217,18 @@
 			{
 				"title": "Cơ sở sản xuất",
 				"url": "factory"
+			},
+			{
+				"title": "Đăng nhập",
+				"url": "login"
+			},
+			{
+				"title": "Đăng ký",
+				"url": "register"
+			},
+			{
+				"title": "Trang mobile",
+				"url": "index-mobile"
 			}
 		]
 	}

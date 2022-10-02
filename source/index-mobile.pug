@@ -1,3 +1,79 @@
 extends layout/page
 
+//- block header
+//-   +header-4
+
 block content
+  section.section.pt-4
+    .container
+      .row.gx-30.gy-4
+        .col-md-5.col-xl-4
+          +preview
+        .col-md-7.col-xl-8
+          section.pd-info
+            .pd-info__lo Lô hàng: TX12356
+            h1.pd-info__title Sữa bột vinamilk organic gold 4 -hộp 850g
+            .pd-info__info
+              p.mb-2 CSSX: Phạm Thị vân - thôn hướng giang xã lộc yên huyện hương khê
+              p.mb-2 Ngày sản xuất:    19/5/2022
+              p Hạn sử dụng:      19/5/2023
+            .pd-info__label Giá tham khảo
+            .pd-info__price 20.0000đ
+            a.pd-info__btn.btn.btn-primary(href="#!") Liên hệ
+
+  section.section.pt-0
+    .container
+      .section__header
+        h2.section__title.text-primary Vùng sản xuất
+
+      .n-info
+        .row
+          .col-5
+            .n-info__title Tên vùng:
+          .col-7 Vùng sản xuất Hà Đông
+      .n-info
+        .row
+          .col-5
+            .n-info__title Diện tích:
+          .col-7 T1000m2
+      .n-info
+        .row
+          .col-5
+            .n-info__title Sản lượng:
+          .col-7 200 tấn/ tháng
+
+  section.section.pt-0
+    .container
+      .section__header
+        h2.section__title.text-primary Nhà sản xuất
+
+      .n-info
+        .row
+          .col-5
+            .n-info__title Tên vùng:
+          .col-7 Vùng sản xuất Hà Đông
+      .n-info
+        .row
+          .col-5
+            .n-info__title Địa chỉ:
+          .col-7 Xã Thanh Oai, Thanh Oai Hà Nội
+      .n-info
+        .row
+          .col-5
+            .n-info__title Điện thoại:
+          .col-7 0987654321
+      .n-info
+        .row
+          .col-5
+            .n-info__title Email:
+          .col-7 0987654321
+      .n-info
+        .row
+          .col-sm-auto.mb-2.mb-sm-0
+            .n-info__title Giấy chứng nhận:
+          .col-12
+            .row.g-2.mt-1
+              .col-6
+                img.d-block.w-100(src="./images/certificate.jpg", alt="")
+              .col-6
+                img.d-block.w-100(src="./images/certificate.jpg", alt="")
