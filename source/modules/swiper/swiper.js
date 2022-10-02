@@ -23,3 +23,16 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.product-slider', {
+    effect: 'fade',
+    loop: true,
+    pagination: true,
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true,
+    },
+  });
+});

@@ -1,3 +1,103 @@
 extends layout/page
-
+block header
 block content
+  // Cảm ơn lời muốn nói
+  section.s-banner
+    .s-banner__left
+      img.s-banner__thanks.wow.zoomIn(src="./images/thanks.png", alt="")
+      //- img.s-banner__bubbles(src="./images/bubbles.png", alt="")
+    .s-banner__right
+      img.s-banner__flower.wow.fadeInRight(data-wow-delay="600ms" src="./images/banner-flower.png", alt="")
+      img.s-banner__red-texture.wow.fadeInRight(data-wow-delay="300ms" src="./images/banner-red-texture.png", alt="")
+      img.s-banner__product.wow.fadeInRight(data-wow-delay="1200ms" src="./images/banner-product.png", alt="")
+
+
+  // Happy new year
+  section.s-intro
+    .container-fluid
+      img.s-intro__texture.wow.fadeInLeft(data-wow-delay="500ms", src="./images/intro-texture.png", alt="")
+      img.s-intro__img.wow.fadeInUp(data-wow-delay="100ms" src="./images/intro-img.png", alt="")
+      .s-intro__text.wow.fadeInUp(data-wow-delay="600ms") Tết là lời cảm ơn chân thành, là trao yêu thương, thắt chặt tình tri kỷ, lời chúc An Khang - Thịnh Vượng.
+        br
+        | Hãy để những chiếc phích Tết bắc nhịp cầu CẢM ƠN thay lời muốn nói.
+
+  // Products
+  section.s-product
+    .s-product__container
+      .row
+        .col-lg-6.mb-4.mb-lg-0.wow.fadeInLeft(data-wow-delay="100ms")
+          .s-product__header
+            .s-product__text-1 Trao
+            .s-product__text-2 yêu thương
+            .s-product__text-3 Cám ơn bố mẹ đã cho con cuộc sống
+          +product-slider
+
+        .col-lg-6.wow.fadeInRight(data-wow-delay="300ms")
+          .s-product__frame
+            img(src="./images/img-1.png", alt="")
+          .text-center
+            a.s-product__btn(href="#!") Khám phá thêm
+              i.fal.fa-angle-right.ms-2
+
+  // Products
+  section.s-product
+    .s-product__container
+      .row
+        .col-lg-6.mb-4.mb-lg-0.wow.fadeInLeft(data-wow-delay="100ms")
+          .s-product__header
+            .s-product__text-1 Thắt chặt
+            .s-product__text-2 tình tri kỷ
+            .s-product__text-3 Cảm ơn bạn vì đã giúp tôi vượt qua khó khăn
+          +product-slider('product-slider--green')
+
+        .col-lg-6.wow.fadeInRight(data-wow-delay="300ms")
+          .s-product__frame
+            img(src="./images/img-1.png", alt="")
+          .text-center
+            a.s-product__btn(href="#!") Khám phá thêm
+              i.fal.fa-angle-right.ms-2
+
+  // Products
+  section.s-product
+    .s-product__container
+      .row
+        .col-lg-6.mb-4.mb-lg-0.wow.fadeInLeft(data-wow-delay="100ms")
+          .s-product__header
+            .s-product__text-1 Hợp tác
+            .s-product__text-2(style="padding-left: 2.6em;") thành công
+            .s-product__text-3 Cảm ơn đối tác vì đã đồng hành
+          +product-slider('product-slider--green')
+
+        .col-lg-6.wow.fadeInRight(data-wow-delay="300ms")
+          .s-product__frame
+            img(src="./images/img-1.png", alt="")
+          .text-center
+            a.s-product__btn(href="#!") Khám phá thêm
+              i.fal.fa-angle-right.ms-2
+
+  // Blank section
+  section.s-blank
+    .container
+      .ratio.ratio-16x9
+        iframe(width='560' height='315' src='https://www.youtube.com/embed/QcllUiSOd0c' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+  // Form đăng ký
+  form.s-register
+    img.s-register__banner.wow.fadeInRight(data-wow-delay="150ms", src="./images/register-banner.jpg", alt="")
+    .container
+      .s-register__content
+        h2.s-register__title Đăng ký mua sản phẩm phích Tết tại đây để nhận ưu đãi giảm giá …% sản phẩm
+        .mb-2
+          label.form-label Họ tên (*)
+          input.form-control(type="text", required)
+        .mb-2
+          label.form-label Số điện thoại (*)
+          input.form-control(type="text", required)
+        .mb-2
+          label.form-label Email (*)
+          input.form-control(type="email", required)
+        .mb-2
+          label.form-label Ghi chú
+          textarea.form-control(rows='5', placeholder='')
+        .mt-4.mt-lg-30
+          button.s-register__btn(type="button") Đăng ký ngay

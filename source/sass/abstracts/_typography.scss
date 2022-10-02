@@ -1,0 +1,8 @@
+@include font-face('SVN-Angellife', 'SVN-Angellife');
+@include font-face('UTMAvo', 'UTMAvo');
+@include font-face('UTMAvo', 'UTMAvoBold', 700);
+@include font-face('UTMAvo', 'UTMAvo-Italic', 400, italic);
+@include font-face('UTMAvo', 'UTMAvo-BoldItalic', 700, italic);
+
+$avo: 'UTMAvo', sans-serif;
+$angel: 'SVN-Angellife', sans-serif;
