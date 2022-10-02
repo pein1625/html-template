@@ -1,3 +1,39 @@
 mixin footer
   footer.footer
-    img.d-block.w-100(src="./images/footer.jpg", alt="")
+    .container
+      .row.g-3
+        .col-lg-4.order-lg-1.text-center
+          a.footer__logo(href="#!")
+            img(src="./images/logo-white.png", alt="")
+        .col-sm.col-lg-4
+          .footer__title Thông tin liên hệ
+          .footer__name Công ty cổ phần bóng đèn phích nước Rạng ĐÔNG
+          .footer__contact Địa chỉ: Số 87-89, phố Hạ Đình
+            div Phường Thanh Xuân Trung, Quận Thanh Xuân, Hà Nội
+            div
+              a(href="#!")
+                i.fas.fa-fw.fa-phone.me-2
+                | (+84 - 24) 3 858 5038 / 3 858 4165
+            div
+              a(href="#!")
+                i.fas.fa-fw.fa-envelope.me-2
+                | (+84 - 24) 3 858 5038
+        .col-sm-auto.col-lg-4.order-lg-1
+          .footer__bct
+            a(href="#!")
+              img(src="./images/dathongbao.png", alt="", height="52")
+
+          nav.rd-social.mt-3
+            .rd-social__label Theo dõi chúng tôi
+            .rd-social__list
+              a(href="#!")
+                i.fab.fa-facebook-f
+              a(href="#!")
+                i.fab.fa-youtube
+              a(href="#!")
+                img(src="./images/icon-zalo.svg", alt="")
+
+    .footer__copyright
+      .container
+        div GPĐKKD SỐ: 0103004893 DO SỔ KHĐT TP HÀ NỘI CẤP NGÀY 15/07/2004
+        div.fw-700 COPYRIGHT ©2021 - CÔNG TY CP BÓNG ĐÈN PHÍCH NƯỚC RẠNG ĐÔNG
