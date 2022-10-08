@@ -59,6 +59,10 @@
     border-color: $input-focus-border-color;
   }
 
+  @include media-breakpoint-down(xl) {
+    display: block !important;
+  }
+
   @media (min-width: 1200px) {
     width: 260px;
     margin-left: 80px;

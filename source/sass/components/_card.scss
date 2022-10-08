@@ -349,8 +349,14 @@
 }
 
 .source {
+  display: flex;
+  flex-direction: column;
   background-color: $white;
   padding: 16px;
+
+  &:only-child {
+    height: 100%;
+  }
 
   &__frame {
     display: block;
@@ -422,6 +428,10 @@
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+  }
+
+  &__price {
+    margin-top: auto;
   }
 }
 
@@ -529,9 +539,15 @@
 }
 
 .product-2 {
+  display: flex;
+  flex-direction: column;
   padding: 16px;
   background-color: $white;
   box-shadow: 0 1px 8px rgba(#000, 0.3);
+
+  &:only-child {
+    height: 100%;
+  }
 
   &__frame {
     display: block;
@@ -603,6 +619,10 @@
 
   &__info {
     margin-bottom: 8px;
+  }
+
+  &__price {
+    margin-top: auto;
   }
 
   @include media-breakpoint-down(sm) {

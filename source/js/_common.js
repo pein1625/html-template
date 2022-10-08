@@ -1,4 +1,22 @@
 $(function() {
+  $('.btn-search').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.search').fadeToggle();
+  })
+
+  $('.search').on('click', function(e) {
+    e.stopPropagation();
+  });
+
+  $('html, body').on('click', function() {
+    if (window.innerWidth >= 1200) {
+      $('.search').hide();
+    }
+  });
+});
+
+$(function() {
   $('.footer__redirect').on('change', function() {
     let val = $(this).val();
 

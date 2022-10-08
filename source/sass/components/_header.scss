@@ -33,11 +33,12 @@
   }
 
   &__logo {
-    display: block;
+    display: flex;
+    align-items: center;
     font-family: $helvetica;
     text-transform: uppercase;
     line-height: 1.2;
-    font-size: 12px;
+    font-size: 10px;
     color: #343434;
     transition: 0.3s;
     margin: 16px 0;
@@ -48,6 +49,7 @@
 
     img {
       height: 40px;
+      margin-right: 8px;
     }
   }
 
@@ -96,12 +98,17 @@
   }
 
   @include media-breakpoint-up(xl) {
-    height: 191px;
+    height: 195px;
 
     &__logo {
       white-space: nowrap;
-      font-size: 16px;
-      margin: 24px 0;
+      font-size: 15px;
+      margin: 15px 0;
+
+      img {
+        height: 70px;
+        margin-right: 12px;
+      }
     }
 
     &__wrapper {
@@ -122,7 +129,7 @@
 
     &--2,
     &--3 {
-      height: 131px;
+      height: 135px;
     }
 
     &--2 &__logo {
@@ -134,17 +141,38 @@
     }
 
     &--2 &__logo {
-      font-size: 15px;
+      font-size: 14px;
     }
 
     &--2 &__name {
-      font-size: 24px;
+      font-size: 22px;
     }
 
     &--2,
     &--3 {
       .search {
         display: none;
+        width: 300px;
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        right: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 6px rgba(#000, 0.3);
+        background-color: #fff;
+        padding: 4px;
+
+        .form-control {
+          color: #444;
+          border: 1px solid #ccc !important;
+        }
+
+        .input-group-text {
+          background-color: $primary;
+          color: $white;
+          border: 1px solid $primary !important;
+          border-left: 0;
+        }
       }
 
       .menu-root > .menu-item {
@@ -158,7 +186,7 @@
         font-weight: 700;
         text-transform: uppercase;
         color: #212121;
-        padding: 16px;
+        padding: 12px;
 
         &::before {
           background-color: var(--bs-primary);
@@ -184,12 +212,31 @@
     &--2.is-fixed &__logo,
     &--3.is-fixed &__logo {
       color: #333;
-      margin: 16px 0;
+      margin: 10px 0;
     }
 
     &--2.is-fixed &__name,
     &--3.is-fixed &__name {
       color: var(--bs-primary);
+    }
+  }
+
+  @media (min-width: 1500px) {
+    &__logo {
+      font-size: 16px;
+      margin: 10px 0;
+
+      img {
+        height: 80px;
+      }
+    }
+
+    &--2 &__logo {
+      font-size: 15px;
+    }
+
+    &--2 &__name {
+      font-size: 24px;
     }
   }
 }
