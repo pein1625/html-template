@@ -42,6 +42,7 @@
     color: #343434;
     transition: 0.3s;
     margin: 16px 0;
+    min-height: 40px;
 
     &:hover {
       color: #343434;
@@ -104,6 +105,7 @@
       white-space: nowrap;
       font-size: 15px;
       margin: 15px 0;
+      min-height: 70px;
 
       img {
         height: 70px;
@@ -225,6 +227,7 @@
     &__logo {
       font-size: 16px;
       margin: 10px 0;
+      min-height: 80px;
 
       img {
         height: 80px;
