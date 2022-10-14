@@ -10,7 +10,7 @@ $(function() {
   });
 
   $('html, body').on('click', function() {
-    if (window.innerWidth >= 1200) {
+    if (window.innerWidth >= 1200 && $('.header--2, .header--3').length) {
       $('.search').hide();
     }
   });
