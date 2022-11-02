@@ -582,8 +582,28 @@
   position: relative;
   z-index: 100;
   @include slider-nav-4();
+
+  .swiper-slide .news__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & > .text-end:last-child {
+      margin-top: auto;
+    }
+  }
 }
 
 .news-slider-2 {
   @include slider-nav-4();
+
+  .swiper-slide .news__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    & > .text-end:last-child {
+      margin-top: auto;
+    }
+  }
 }

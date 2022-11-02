@@ -618,6 +618,7 @@
   }
 
   &__info {
+    @include max-line(2);
     margin-bottom: 8px;
   }
 
