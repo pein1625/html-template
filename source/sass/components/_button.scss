@@ -79,3 +79,25 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.n-btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 13px 64px;
+  background-color: $primary;
+  color: $white;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: darken($primary, 5%);
+    color: $white;
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    padding: 12px 50px;
+    font-size: 16px;
+  }
+}

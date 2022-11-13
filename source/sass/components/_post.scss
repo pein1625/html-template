@@ -1,19 +1,89 @@
 .post {
   &__title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   &__info {
+    font-size: 12px;
     color: #999;
     margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   &__sapo {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 16px;
+  }
+
+  &__content {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__content {
+      font-size: 16px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      font-size: 14px;
+    }
+  }
+}
+
+.post-relate {
+  font-size: 18px;
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    padding-left: 17px;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 16px;
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
   }
 }
