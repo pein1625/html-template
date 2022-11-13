@@ -7,8 +7,8 @@
       "hasIcon": false
     },
     {
-      "text": "Giới thiệu",
-      "url": "./about.html",
+      "text": "Thông báo",
+      "url": "./news.html",
       "submenu": [
         {
           "text": "Dropdown",
@@ -43,20 +43,12 @@
       ]
     },
     {
-      "text": "Sản phẩm",
+      "text": "Văn bản",
       "url": "./products.html"
     },
     {
-      "text": "Dự án",
+      "text": "Bản đồ số",
       "url": "./projects.html"
-    },
-    {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
-    },
-    {
-      "text": "Tin tức",
-      "url": "./news.html"
     },
     {
       "text": "Liên hệ",

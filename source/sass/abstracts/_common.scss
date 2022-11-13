@@ -6,11 +6,14 @@
 
   &__content {
     flex-grow: 1;
-    padding: 35px 0 64px;
-    background-color: #E8F0F5;
   }
 }
 
 .text-gray {
   color: #848484 !important;
+}
+
+.body-contents {
+  padding: 35px 0 64px;
+  background-color: #E8F0F5;
 }

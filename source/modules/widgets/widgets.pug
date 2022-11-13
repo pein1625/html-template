@@ -1,0 +1,6 @@
+mixin banner(title='', ...list)
+  .banner
+    .container
+      .banner__breadcrumb
+        +breadcrumb(...list)
+      .banner__title= title
