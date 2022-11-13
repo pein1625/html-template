@@ -1,3 +1,76 @@
 extends layout/page
 
 block content
+  +banner('Liên hệ', 'Trang chủ', 'Liên hệ')
+
+  section.body-contents.bg-transparent
+    .container
+
+      form.ct-form.pt-xl-2(action="#!")
+        .row.mb-20
+          .col-auto.ct-form__label * Họ tên
+          .col-lg
+            input.form-control(type="text", required)
+        .row.mb-20
+          .col-auto.ct-form__label * Địa chỉ
+          .col-lg
+            input.form-control(type="text", required)
+        .row.mb-20
+          .col-auto.ct-form__label * Hòm thư
+          .col-lg
+            input.form-control(type="email", required)
+        .row.mb-20
+          .col-auto.ct-form__label * Số điện thoại
+          .col-lg
+            input.form-control(type="text", required)
+        .row.mb-20
+          .col-auto.ct-form__label * Tiêu đề
+          .col-lg
+            input.form-control(type="text", required)
+        .row.mb-20
+          .col-auto.ct-form__label * Nội dung
+          .col-lg
+            textarea.form-control(rows="6")
+        .row
+          .col-auto.ct-form__label.d-none.d-lg-block
+          .col-lg.ms-auto
+            button.ct-form__btn(type="reset") Nhập lại
+            button.ct-form__btn.ct-form__btn--primary.ms-3(type="submit") Gửi
+              i.fal.fa-lg.fa-angle-double-right.ms-3
+
+      section.ct-search
+        form.ct-search__form(action="#!")
+          .row
+            .col-lg-5.mb-3.mb-lg-0
+              .input-group
+                input.form-control(type="text", placeholder="Tìm kiếm")
+                button.input-group-text
+                  i.fal.fa-search.text-primary
+
+            .col-lg-7
+              select.form-select
+                option Chọn Quận/ Huyện
+                option Chọn Quận/ Huyện
+                option Chọn Quận/ Huyện
+                option Chọn Quận/ Huyện
+                option Chọn Quận/ Huyện
+
+        each item in ['Quận Long Biên', 'Quận Thanh Xuân', 'Quận Thanh Xuân']
+          .ct-search__block
+            h2.ct-search__label= item
+
+            .ct-search__table
+              table.table.table-bordered
+                thead
+                  tr
+                    th.text-center.px-4(width="1%") STT
+                    th Cây xăng
+                    th Thông tin liên hệ
+                body
+                  - for(let i = 0; i < 3; i++)
+                    tr
+                      td.text-center= i+1
+                      td Cây xăng Long Biên 0#{i + 1}
+                      td Địa chỉ: 48 Ngô Gia Tự, P. Đức Giang, Quận Long Biên, Hà Nội
+                        br
+                        | Điện thoại: 0987654321
