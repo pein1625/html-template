@@ -12,7 +12,6 @@ block content
         a.h-banner__btn(href="#!") Xem chi tiết
           i.fal.fa-angle-right.ms-2
 
-
   section.section.section--light
     img.section__bg(src="./images/world-map.png", alt="")
     .container
@@ -48,8 +47,44 @@ block content
       h2.section__title Giá xăng dầu hiện tại
 
       .row
-        .col-lg-6
-          img.w-100(src="./images/chart-3.jpg", alt="")
+        .col-lg-6.col-md-8
+          .pricing
+            table.table
+              thead
+                tr
+                  th(width="50%") Mặt hàng
+                  th Giá điều chỉnh lúc 15:00 ngày 01/11/2022
+              tbody
+                tr
+                  td.pricing__title Xăng RON 95-III
+                  td.pricing__value
+                    span.pricing__price 22.750
+                    span.pricing__change.text-success 410
+                      i.fal.fa-arrow-up.ms-2
+                tr
+                  td.pricing__title Xăng RON 92-III
+                  td.pricing__value
+                    span.pricing__price 21.870
+                    span.pricing__change.text-danger 410
+                      i.fal.fa-arrow-down.ms-2
+                tr
+                  td.pricing__title Dầu Diesel
+                  td.pricing__value
+                    span.pricing__price 25.070
+                    span.pricing__change.text-success 410
+                      i.fal.fa-arrow-up.ms-2
+                tr
+                  td.pricing__title Dầu Mazut
+                  td.pricing__value
+                    span.pricing__price 19.870
+                    span.pricing__change.text-success 410
+                      i.fal.fa-arrow-up.ms-2
+                tr
+                  td.pricing__title Xăng E5
+                  td.pricing__value
+                    span.pricing__price 21.870
+                    span.pricing__change.text-success 410
+                      i.fal.fa-arrow-up.ms-2
 
   section.section.section--light
     img.section__bg(src="./images/world-map.png", alt="")
