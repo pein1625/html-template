@@ -7,3 +7,14 @@ mixin news(title='Giá xăng dầu hôm nay 5.11.2022: Tăng sốc phiên cuối
         i.fal.fa-clock.me-2.text-primary
         | 03/07/2022
       a.news__link(href="./news-detail.html") Chi tiết
+
+mixin doc(id='#md-doc-1')
+  .doc
+    .row
+      .col-sm
+        .doc__title
+          a(href="#!", data-bs-toggle="modal", data-bs-target=id) Nghị định 55/2022/NĐ-CP của Chính phủ về việc quy định Cơ sở dữ liệu quốc gia về công tác tiếp công dân, xử lý đơn, giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh
+      .col-sm-auto
+        a.doc__btn(href="./images/sample.pdf" download)
+          i.fas.fa-download.me-2
+          | Tải về

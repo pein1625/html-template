@@ -1,3 +1,28 @@
 extends layout/page
 
 block content
+  +banner('Văn bản', 'Trang chủ', 'Văn bản')
+
+  section.body-contents
+    .container
+      img.w-100.mb-3.mb-lg-30.mb-xxl-40(src="https://via.placeholder.com/1140x174", alt="")
+
+      .row.gx-xxl-40
+        .col-lg-9.mb-40.mb-lg-0
+          .bg-white.p-3.p-lg-4.p-xxl-30
+            - for(let i = 0; i < 8; i++)
+              .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom
+                +doc(`#md-doc-${i}`)
+                +md-doc(`md-doc-${i}`)
+            .pt-xl-3
+              a.n-btn.n-btn--rounded(href="#!") Xem thêm
+
+        .col-lg-3.col-md-6
+          a.d-block.mb-4.ml-0(href="#!")
+            img.w-100(src="./images/as-banner-1.jpg", alt="")
+          a.d-block.mb-4.ml-0(href="#!")
+            img.w-100(src="./images/as-banner-2.jpg", alt="")
+          a.d-block.mb-4.ml-0(href="./map.html")
+            img.w-100(src="./images/as-banner-3.jpg", alt="")
+          a.d-block.mb-4.ml-0(href="#!")
+            img.w-100(src="https://via.placeholder.com/250x250", alt="")
