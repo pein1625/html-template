@@ -90,3 +90,42 @@
     }
   }
 }
+
+.stat {
+  color: $white;
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  font-weight: 500;
+  font-size: 18px;
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    font-size: 3.333em;
+    line-height: 1.3;
+
+    img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      object-position: 50% 50%;
+    }
+  }
+
+  &--sm {
+    padding: 20px 50% 20px 24px;
+    font-size: 14px;
+  }
+}

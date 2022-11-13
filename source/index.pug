@@ -1,3 +1,82 @@
 extends layout/page
 
 block content
+  article.h-banner
+    img.h-banner__img(src="./images/home-banner-img.png", alt="")
+    .container
+      .h-banner__subtitle Bộ công thương Việt Nam
+      .h-banner__title Hệ thống  cơ sở dữ liệu
+        br
+        | quản lý & điều hành xăng dầu
+      div
+        a.h-banner__btn(href="#!") Xem chi tiết
+          i.fal.fa-angle-right.ms-2
+
+
+  section.section.section--light
+    img.section__bg(src="./images/world-map.png", alt="")
+    .container
+      h2.section__title Thông báo
+      +news-slider
+
+  section.section
+    .container
+      a.d-block.mb-4.mb-lg-30.mb-xxl-40(href="#!")
+        img.w-100(src="https://via.placeholder.com/1140x174", alt="")
+
+      h2.section__title Thống kê
+
+      .row.g-30
+        .col-lg-6
+          .stat
+            img.stat__bg(src="./images/stat-bg-1.jpg", alt="")
+            .stat__number
+              img(src="./images/stat-icon-1.png", alt="")
+              span.ms-2.js-count-to(data-count-to="123") 123
+            .start__label Đại lý xăng dầu trên địa bàn
+        .col-lg-6
+          .stat
+            img.stat__bg(src="./images/stat-bg-2.jpg", alt="")
+            .stat__number
+              img(src="./images/stat-icon-2.png", alt="")
+              span.ms-2.js-count-to(data-count-to="456") 456
+            .start__label Đại lý xăng dầu trên địa bàn
+
+  section.section.section--primary
+    img.section__bg(src="./images/section-bg-1.png", alt="")
+    .container
+      h2.section__title Giá xăng dầu hiện tại
+
+      .row
+        .col-lg-6
+          img.w-100(src="./images/chart-3.jpg", alt="")
+
+  section.section.section--light
+    img.section__bg(src="./images/world-map.png", alt="")
+    .container
+      h2.section__title Biểu đồ biến động giá xăng dầu
+
+      .row
+        .col-lg-6.mb-4.mb-lg-0
+          img.w-100(src="./images/chart-1.jpg", alt="")
+        .col-lg-6
+          img.w-100(src="./images/chart-2.jpg", alt="")
+
+  section.section
+    .container
+      .row
+        .col-lg-4.mb-3.mb-lg-40
+          a.d-block(href="./map.html")
+            img.w-100(src="./images/as-banner-3.jpg", alt="")
+        .col-lg-8.mb-3.mb-lg-40
+          h2.section__title Văn bản
+          - for(let i = 0; i < 4; i++)
+            .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom
+              +doc(`#md-doc-${i}`)
+              +md-doc(`md-doc-${i}`)
+          .text-end
+            a.n-link(href="./documents.html") Xem tất cả
+              i.fal.fa-arrow-right.ms-2
+
+      a.d-block(href="#!")
+        img.w-100(src="https://via.placeholder.com/1140x174", alt="")

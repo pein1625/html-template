@@ -23,3 +23,22 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.news-slider', {
+    navigation: true,
+    pagination: true,
+    loop: true,
+    slidesPerView: 1,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 14,
+      }
+    }
+  })
+});

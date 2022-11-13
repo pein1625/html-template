@@ -1,0 +1,53 @@
+.h-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $condensed;
+  color: $white;
+  background: url('../images/banner-home.jpg') center/cover no-repeat;
+  padding: 160px 0;
+  position: relative;
+  z-index: 1;
+
+  &__img {
+    width: 40%;
+    height: 85%;
+    object-fit: cover;
+    object-position: 0 50%;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 13px 24px;
+    background-color: $primary;
+    color: $white;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $white;
+      background-color: darken($primary, 5%);
+    }
+  }
+}

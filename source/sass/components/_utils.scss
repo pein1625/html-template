@@ -73,6 +73,34 @@
   }
 
   @media (min-width: 1200px) {
-    display: none;
+    flex: 1;
+    order: 1;
+    background: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    margin: 0;
+    flex: 0 0 0;
+    transition: 0.4s;
+
+    .input-group {
+      overflow: hidden;
+      min-width: 150px;
+    }
+
+    .form-control {
+      border: 0;
+      font-size: 14px;
+    }
+
+    .input-group-text {
+      border: 0;
+    }
+
+    &.active {
+      margin-left: 20px;
+      margin-right: -20px;
+      flex: 1 0 0;
+    }
   }
 }

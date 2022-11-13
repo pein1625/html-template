@@ -8,7 +8,38 @@ mixin header
         .header__inner
           a.header__logo(href="./index.html")
             img(src="./images/logo.svg", alt="")
+          div
+            .header__text-1 Bộ công thương Việt Nam
+            .header__text-2 Hệ thống CSDL quản lý &
+              <br class="d-md-none" /> điều hành xăng dầu
           .header__elements
-            +navbar
-              +menu(menu)
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+    nav.navigation
+      .navigation__wrapper
+        .container
+          .navigation__inner
+            +navbar
+              +search
+              +menu(menu)
+              button.btn-search(type="button")
+                i.fal.fa-lg.fa-search
+                i.fal.fa-lg.fa-times
+
+              .h-info
+                .h-info__item
+                  .row.align-items-center.g-0
+                    .col-auto
+                      img(src="./images/icon-envelope.png", alt="")
+                    .col
+                      .text-uppercase.fw-500H.fw-500 Email
+                      .text-black.fs-16.fw-600
+                        a(href="mailto:xangdau@csdlpetro.vn") xangdau@csdlpetro.vn
+                .h-info__item
+                  .row.align-items-center.g-0
+                    .col-auto
+                      img(src="./images/icon-phone-call.png", alt="")
+                    .col
+                      .text-uppercase.fw-500 Hotline
+                      .text-black.fs-16.fw-600
+                        a(href="tel:0912345678") 0912345678
