@@ -1,0 +1,145 @@
+.footer {
+  background-color: #074D83;
+  padding: 0 0 64px;
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #5990BA;
+  }
+
+  &__logo {
+    display: inline-flex;
+    margin-right: 16px;
+    flex: 0 0 auto;
+
+    img {
+      height: 78px;
+    }
+  }
+
+  &__name {
+    font-family: $condensed;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__title {
+    font-family: $condensed;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: 24px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      border-bottom: 2px solid #57B7FF;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding-bottom: 40px;
+
+    &__top {
+      padding: 24px 0;
+      margin-bottom: 24px;
+    }
+
+    &__logo {
+      img {
+        height: 60px;
+      }
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__name {
+      font-size: 16px;
+    }
+  }
+}
+
+.f-contact {
+  color: $white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
+  }
+}
+
+.f-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: $white;
+  font-size: 16px;
+
+  li {
+    padding-left: 16px;
+    position: relative;
+    transition: 0.4s;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    &::before {
+      content: '\f105';
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 300;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
+  }
+}

@@ -1,2 +1,52 @@
 mixin footer
   footer.footer
+    .container
+      .footer__top
+        a.footer__logo(href="#!")
+          img(src="./images/logo-footer.svg", alt="")
+        .footer__name Hệ thống CSDL
+          br
+          | quản lý & điều hành xăng dầu
+      .row.g-30
+        .col-lg-5
+          ul.f-contact
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-map-marker-alt
+                .col Địa chỉ: 23 Ngô Quyền, Hoàn Kiếm, Hà Nội
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-envelope
+                .col #[a(href="mailto:trav@moit.gov.vn") trav@moit.gov.vn]
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-phone
+                .col Điện thoại: #[a(href="tel:(024) 73037898") (024) 73037898] - Fax: #[a(href="tel:(024) 73037897") (024) 73037897]
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-copyright
+                .col Bản quyền thuộc Cục Phòng vệ thương mại
+
+        .col-lg
+          .footer__title Giới thiệu
+          ul.f-menu
+            li
+              a(href="#!") Giới thiệu chung
+            li
+              a(href="#!") Chức năng nhiệm vụ
+            li
+              a(href="#!") Sơ đồ tổ chức
+
+        .col-lg
+          .footer__title Văn bản
+          ul.f-menu
+            li
+              a(href="#!") Giới thiệu chung
+            li
+              a(href="#!") Chức năng nhiệm vụ
+            li
+              a(href="#!") Sơ đồ tổ chức
