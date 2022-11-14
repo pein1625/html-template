@@ -1,3 +1,40 @@
 extends layout/page
 
 block content
+  .map
+    .map__aside
+      .map__heading Danh sách tỉnh / thành phố
+      .map__search
+        .input-group
+          input.form-control(type="text", placeholder="Tìm kiếm")
+          button.input-group-text
+            i.fal.fa-lg.fa-search.text-primary
+
+      ul.map-list
+        - for(let i = 0; i < 20; i++)
+          li.map-list__item
+            a.map-list__toggle(href="#!") Tp. Hồ Chí Minh
+            ul.map-sub-list
+              li
+                a(href="#!")
+                  i.fal.fa-map-marker-alt.me-2.text-primary
+                  | Cơ sở Mỹ Đình
+              li
+                a(href="#!")
+                  i.fal.fa-map-marker-alt.me-2.text-primary
+                  | Cơ sở Cầu Giấy
+              li
+                a(href="#!")
+                  i.fal.fa-map-marker-alt.me-2.text-primary
+                  | Cơ sở Thanh Niên
+              li
+                a(href="#!")
+                  i.fal.fa-map-marker-alt.me-2.text-primary
+                  | Cơ sở Tuyết Giang
+              li
+                a(href="#!")
+                  i.fal.fa-map-marker-alt.me-2.text-primary
+                  | Cơ sở Miễn Phí
+
+    .map__body.ratio
+      iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3724.276132266639!2d105.78908421533202!3d21.021634493396395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1587606986563!5m2!1svi!2s' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')

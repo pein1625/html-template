@@ -6,24 +6,20 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
-      },
-      {
-        "title": "Sản phẩm",
-        "url": "products"
-      },
-      {
-        "title": "Chi tiết sản phẩm",
-        "url": "product-detail"
-      },
-      {
-        "title": "Tin tức",
+        "title": "Thông báo",
         "url": "news"
       },
       {
-        "title": "Chi tiết tin tức",
+        "title": "Chi tiết thông báo",
         "url": "news-detail"
+      },
+      {
+        "title": "Văn bản",
+        "url": "documents"
+      },
+      {
+        "title": "Bản đồ số",
+        "url": "map"
       },
       {
         "title": "Liên hệ",

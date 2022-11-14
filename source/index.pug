@@ -4,11 +4,11 @@ block content
   article.h-banner
     img.h-banner__img(src="./images/home-banner-img.png", alt="")
     .container
-      .h-banner__subtitle Bộ công thương Việt Nam
-      .h-banner__title Hệ thống  cơ sở dữ liệu
+      .h-banner__subtitle.wow.fadeInUp(data-wow-delay="0.1s") Bộ công thương Việt Nam
+      .h-banner__title.wow.fadeInUp(data-wow-delay="0.3s") Hệ thống  cơ sở dữ liệu
         br
         | quản lý & điều hành xăng dầu
-      div
+      div.wow.fadeInUp(data-wow-delay="0.5s")
         a.h-banner__btn(href="#!") Xem chi tiết
           i.fal.fa-angle-right.ms-2
 
@@ -48,7 +48,7 @@ block content
 
       .row
         .col-lg-6.col-md-8
-          .pricing
+          .pricing.wow.fadeInUp(data-wow-delay="0.2s")
             table.table
               thead
                 tr
@@ -92,26 +92,26 @@ block content
       h2.section__title Biểu đồ biến động giá xăng dầu
 
       .row
-        .col-lg-6.mb-4.mb-lg-0
+        .col-lg-6.mb-4.mb-lg-0.wow.fadeInRight(data-wow-delay="0.1s")
           img.w-100(src="./images/chart-1.jpg", alt="")
-        .col-lg-6
+        .col-lg-6.wow.fadeInRight(data-wow-delay="0.3s")
           img.w-100(src="./images/chart-2.jpg", alt="")
 
   section.section
     .container
       .row
         .col-lg-4.mb-3.mb-lg-40
-          a.d-block(href="./map.html")
+          a.d-block.wow.fadeInLeft(href="./map.html")
             img.w-100(src="./images/as-banner-3.jpg", alt="")
         .col-lg-8.mb-3.mb-lg-40
           h2.section__title Văn bản
           - for(let i = 0; i < 4; i++)
-            .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom
+            .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom.wow.fadeIn(data-wow-delay=`${i * 0.15 + 0.4}s`)
               +doc(`#md-doc-${i}`)
               +md-doc(`md-doc-${i}`)
-          .text-end
+          .text-end.wow.fadeIn(data-wow-delay=`1s`)
             a.n-link(href="./documents.html") Xem tất cả
               i.fal.fa-arrow-right.ms-2
 
-      a.d-block(href="#!")
+      a.d-block
         img.w-100(src="https://via.placeholder.com/1140x174", alt="")

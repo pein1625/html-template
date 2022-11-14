@@ -1,3 +1,7 @@
+$(function() {
+  new WOW().init();
+});
+
 // Check is on screen
 (function ($) {
   const $window = $(window);
@@ -95,7 +99,7 @@ jQuery(function ($) {
         $el.addClass("actived").countTo({
           from: 0,
           to: count,
-          speed: 2000,
+          speed: 1000,
           refreshInterval: 5,
         });
       }
@@ -128,5 +132,14 @@ $(function() {
     } else {
       $nav.removeClass('is-fixed');
     }
+  });
+});
+
+$(function() {
+  $('.map-list__toggle').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).toggleClass('active');
+    $(this).siblings('.map-sub-list').slideToggle();
   });
 });

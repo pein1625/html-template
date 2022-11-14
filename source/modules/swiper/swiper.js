@@ -30,6 +30,11 @@ $(function() {
     pagination: true,
     loop: true,
     slidesPerView: 1,
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       992: {
         slidesPerView: 2,

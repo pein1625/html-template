@@ -1,0 +1,118 @@
+.map {
+  display: flex;
+  height: calc(100vh - 150px);
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 240px;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__heading {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 1px solid $border-color;
+    background-color: #FBF7F7;
+  }
+
+  &__search {
+    border: 1px solid $border-color;
+    border-top: 0;
+
+    .form-control {
+      border: 0;
+      background: 0;
+      font-size: 14px;
+    }
+
+    .input-group-text {
+      border: 0;
+      background: 0;
+      font-size: 14px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    height: calc(100vh - 70px);
+  }
+}
+
+.map-list {
+  flex: 1;
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  & > li {
+    border: 1px solid $border-color;
+    border-top: 0;
+  }
+
+  & > li > a {
+    display: block;
+    padding: 8px 30px 8px 10px;
+    position: relative;
+    transition: 0.3s;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover,
+    &.active {
+      background-color: rgba($primary, 0.3);
+    }
+
+    &::after {
+      content: '\f105';
+      font-family: 'Font Awesome 5 Pro';
+      font-weight: 400;
+      color: $primary;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      transition: 0.3s;
+    }
+
+    &.active::after {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}
+
+.map-sub-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 16px;
+
+  li {
+    border-top: 1px dashed $border-color;
+  }
+
+  a {
+    display: block;
+    padding: 8px 0;
+    font-size: 13px;
+    font-style: italic;
+    color: #777;
+    transition: 0.4s;
+    padding-right: 10px;
+
+    &:hover,
+    &.active {
+      color: $primary;
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+}

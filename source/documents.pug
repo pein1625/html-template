@@ -11,7 +11,7 @@ block content
         .col-lg-9.mb-40.mb-lg-0
           .bg-white.p-3.p-lg-4.p-xxl-30
             - for(let i = 0; i < 8; i++)
-              .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom
+              .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom.wow.fadeInUp(data-wow-delay=`${idx * 0.15}s`)
                 +doc(`#md-doc-${i}`)
                 +md-doc(`md-doc-${i}`)
             .pt-xl-3

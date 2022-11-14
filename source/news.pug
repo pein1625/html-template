@@ -9,8 +9,8 @@ block content
 
       .row.gx-xxl-40
         .col-lg-9.mb-40.mb-lg-0
-          each item in [`Giá xăng dầu hôm nay 5.11.2022: Tăng sốc phiên cuối tuần lên 5%`,`Bộ Công Thương gửi văn bản đến nhiều cơ quan, đơn vị đề nghị 'chung tay' gỡ khó xăng dầu`,`Giá xăng dầu hôm nay 5.11.2022: Tăng sốc phiên cuối tuần lên 5%`,`'Đại gia' xăng dầu công bố báo cáo tài chính, có thoát lỗ lớn?`,`Bộ Công Thương gửi văn bản đến nhiều cơ quan, đơn vị đề nghị 'chung tay' gỡ khó xăng dầu`,`Đại biểu truy cấp phép xăng dầu tràn lan, bộ trưởng thừa nhận 'đa tầng nấc làm tăng chi phí'`,`'Đại gia' xăng dầu công bố báo cáo tài chính, có thoát lỗ lớn?`,`Đại biểu truy cấp phép xăng dầu tràn lan, bộ trưởng thừa nhận 'đa tầng nấc làm tăng chi phí'`]
-            .mb-3.mb-lg-4
+          each item, idx in [`Giá xăng dầu hôm nay 5.11.2022: Tăng sốc phiên cuối tuần lên 5%`,`Bộ Công Thương gửi văn bản đến nhiều cơ quan, đơn vị đề nghị 'chung tay' gỡ khó xăng dầu`,`Giá xăng dầu hôm nay 5.11.2022: Tăng sốc phiên cuối tuần lên 5%`,`'Đại gia' xăng dầu công bố báo cáo tài chính, có thoát lỗ lớn?`,`Bộ Công Thương gửi văn bản đến nhiều cơ quan, đơn vị đề nghị 'chung tay' gỡ khó xăng dầu`,`Đại biểu truy cấp phép xăng dầu tràn lan, bộ trưởng thừa nhận 'đa tầng nấc làm tăng chi phí'`,`'Đại gia' xăng dầu công bố báo cáo tài chính, có thoát lỗ lớn?`,`Đại biểu truy cấp phép xăng dầu tràn lan, bộ trưởng thừa nhận 'đa tầng nấc làm tăng chi phí'`]
+            .mb-3.mb-lg-4.wow.fadeInUp(data-wow-delay=`${idx * 0.15}s`)
               +news(item)
           .pt-xl-3
             a.n-btn.n-btn--rounded(href="#!") Xem thêm
