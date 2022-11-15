@@ -47,12 +47,12 @@ block content
           i.fal.fa-arrow-right.ms-2
       .row.g-3.g-sm-4
         .col-lg-5
-          +news-2-2(`./images/coso-1.jpg`, item)
+          +news-2-2(`./images/coso-1.jpg`, item, 'news--fill')
         .col-lg-7
           .row.g-3.g-sm-4
             - for(let i = 0; i < 6; i++)
               .col-6.col-md-4
-                +news-2-2(`./images/coso-${i % 4 + 1}.jpg`, 'HTX Rau An toàn Hà Nam', 'news--2sm')
+                +news-2-2(`./images/coso-${i % 4 + 1}.jpg`, 'HTX Rau An toàn Hà Nam', 'news--2sm news--fill')
       .mt-30.text-end
         +n-link
 

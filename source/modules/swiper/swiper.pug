@@ -180,7 +180,7 @@ mixin news-slider-2
       .swiper-wrapper
         each item, i in ['Cơ sở sản xuất dưa lưới Lộc Phúc', 'HTX Rau An toàn Hà Nam', 'HTX chế biến nông sản Lụa Vy', 'HTX môi trường và DVTH xã Đức Liên']
           .swiper-slide
-            +news-2-2(`./images/coso-${i + 1}.jpg`, item)
+            +news-2-2(`./images/coso-${i + 1}.jpg`, item, 'news--fill')
     .news-slider-2__nav
       .news-slider-2__prev
         i.fal.fa-angle-left

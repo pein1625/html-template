@@ -123,6 +123,15 @@
     font-size: 14px;
   }
 
+  &--fill &__frame {
+    background-color: $white;
+
+    img {
+      object-fit: contain;
+      object-position: 50% 50%;
+    }
+  }
+
   @include media-breakpoint-down(xl) {
     &__body {
       &::before {
