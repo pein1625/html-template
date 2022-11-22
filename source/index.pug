@@ -108,10 +108,12 @@ block content
           - for(let i = 0; i < 4; i++)
             .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom.wow.fadeIn(data-wow-delay=`${i * 0.15 + 0.4}s`)
               +doc(`#md-doc-${i}`)
-              +md-doc(`md-doc-${i}`)
           .text-end.wow.fadeIn(data-wow-delay=`1s`)
             a.n-link(href="./documents.html") Xem tất cả
               i.fal.fa-arrow-right.ms-2
 
       a.d-block
         img.w-100(src="https://via.placeholder.com/1140x174", alt="")
+
+  - for(let i = 0; i < 4; i++)
+    +md-doc(`md-doc-${i}`)
