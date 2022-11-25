@@ -13,7 +13,6 @@ block content
             - for(let i = 0; i < 8; i++)
               .mb-3.pb-3.mb-lg-4.pb-lg-4.border-bottom.wow.fadeInUp(data-wow-delay=`${idx * 0.15}s`)
                 +doc(`#md-doc-${i}`)
-                +md-doc(`md-doc-${i}`)
             .pt-xl-3
               a.n-btn.n-btn--rounded(href="#!") Xem thêm
 
@@ -34,3 +33,6 @@ block content
             img.w-100(src="./images/as-banner-3.jpg", alt="")
           a.d-block.mb-4.ml-0(href="#!")
             img.w-100(src="https://via.placeholder.com/250x250", alt="")
+
+  - for(let i = 0; i < 8; i++)
+      +md-doc(`md-doc-${i}`)
