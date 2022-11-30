@@ -364,18 +364,30 @@
   }
 
   &__body {
+    width: 100%;
     padding: 60px  0;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translateY(-50%);
   }
 
   &__frame {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    max-height: calc(100vh - 195px);
+    // height: 100%;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: -1;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 56.25%;
+    }
 
     img {
       width: 100%;
@@ -392,7 +404,7 @@
     background-color: rgba(#184b6d, 0.8);
     max-width: 430px;
     width: 100%;
-    padding: 40px 30px 64px;
+    padding: 40px;
   }
 
   &__title {
@@ -407,7 +419,7 @@
     font-size: 16px;
     color: $white;
     min-height: 4.5em;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
   &__btn {
@@ -429,16 +441,13 @@
     width: 100%;
     position: absolute;
     z-index: 20;
-    bottom: 80px;
-    left: 0;
+    bottom: 30px;
   }
 
   &__nav-inner {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
-    max-width: 430px;
-    padding-right: 30px;
   }
 
   &__pagination {
@@ -461,6 +470,15 @@
   }
 
   @include media-breakpoint-down(lg) {
+    &__frame {
+      max-height: unset;
+    }
+
+    &__content {
+      padding: 30px;
+      max-width: 400px;
+    }
+
     &__prev,
     &__next {
       width: 30px;
@@ -480,12 +498,16 @@
   }
 
   @include media-breakpoint-down(md) {
+    &__frame {
+      height: calc(60vh - 105px);
+    }
+
     &__body {
       padding: 20px 0;
     }
 
     &__nav {
-      bottom: 34px;
+      bottom: 20px;
     }
 
     &__content {
