@@ -1,2 +1,35 @@
 mixin footer
   footer.footer
+    .container
+      .footer__inner
+        +brand-slider
+
+        .row.align-items-center.justify-content-between.g-3
+          .col-auto
+            .logo
+              .row.align-items-center.g-0.flex-nowrap
+                .col-auto.logo__left
+                  a(href="./index.html")
+                    img(src="./images/logo.png", alt="")
+                .col
+                  .logo__text-1 Bộ công thương Việt Nam
+                  .logo__text-2 CỤC THƯƠNG MẠI ĐIỆN TỬ <br class="d-md-none" />VÀ KINH TẾ SỐ
+          .col-auto
+            .footer__copyright © Bản quyền thuộc Cục Phòng vệ thương mại
+
+        ul.f-contact
+          li
+            .row.g-2
+              .col-auto
+                i.fal.fa-lg.fa-fw.fa-map-marker-alt
+              .col Địa chỉ: 23 Ngô Quyền, Hoàn Kiếm, Hà Nội
+          li
+            .row.g-2
+              .col-auto
+                i.fal.fa-lg.fa-fw.fa-envelope
+              .col #[a(href="mailto:trav@moit.gov.vn") trav@moit.gov.vn]
+          li
+            .row.g-2
+              .col-auto
+                i.fal.fa-lg.fa-fw.fa-phone
+              .col Điện thoại: #[a(href="tel:(024) 73037898") (024) 73037898] - Fax: #[a(href="tel:(024) 73037897") (024) 73037897]

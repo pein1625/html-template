@@ -6,9 +6,41 @@ mixin header
     .header__wrapper
       .container
         .header__inner
-          a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+          .header__logo.logo
+            .row.align-items-center.g-0.flex-nowrap
+              .col-auto.logo__left
+                a(href="./index.html")
+                  img(src="./images/logo.png", alt="")
+              .col
+                .logo__text-1 Bộ công thương Việt Nam
+                .logo__text-2 CỤC THƯƠNG MẠI ĐIỆN TỬ <br class="d-md-none" />VÀ KINH TẾ SỐ
+
           .header__elements
-            +navbar
-              +menu(menu)
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+    nav.navigation
+      .navigation__wrapper
+        .container
+          .navigation__inner
+            +navbar
+              +search
+
+              +menu(menu)
+
+              .h-info
+                .h-info__item
+                  .row.g-2.align-items-center
+                    .col-auto
+                      img(src="./images/icon-envelope.png", alt="")
+                    .col
+                      .text-uppercase Email
+                      div
+                        a(href="mailto:tuyendung@cuctmdt.vn") tuyendung@cuctmdt.vn
+                .h-info__item
+                  .row.g-2.align-items-center
+                    .col-auto
+                      img(src="./images/icon-phone-call.png", alt="")
+                    .col
+                      .text-uppercase Hotline
+                      div
+                        a(href="tel:0912345678") 0912345678

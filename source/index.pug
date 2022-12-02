@@ -1,3 +1,92 @@
 extends layout/page
 
 block content
+  // banner
+  section.banner
+    .container
+      .banner__inner
+        img.banner__img-1(src="./images/banner-icon-1.svg", alt="")
+        img.banner__img-2(src="./images/banner-icon-2.svg", alt="")
+        img.banner__img-3(src="./images/banner-icon-3.svg", alt="")
+        .row
+          .col-lg-7
+            .banner__title Tìm việc phù hợp với bạn
+            form.banner__form
+              .input-group
+                span.input-group-text
+                  i.fal.fa-search
+                input.form-control(type="text", placeholder="Tên công việc, vị trí bạn muốn ứng tuyển,,,")
+                button.input-group-text Tìm kiếm
+            .row.g-3.g-xl-30
+              .col-6.col-md-4
+                .banner__number <span class="js-count-to" data-count-to="30000">30.000</span>+
+                .banner__desc Ứng viên đang bật tìm việc trung bình/thời điểm
+              .col-6.col-md-4
+                .banner__number <span class="js-count-to" data-count-to="90000">90.000</span>+
+                .banner__desc Ứng viên đang bật tìm việc trung bình/thời điểm
+              .col-6.col-md-4
+                .banner__number <span class="js-count-to" data-count-to="90000">90.000</span>+
+                .banner__desc Ứng viên đang bật tìm việc trung bình/thời điểm
+              .col-6.col-md-4
+                .banner__number <span class="js-count-to" data-count-to="3000000">3.000.000</span>+
+                .banner__desc Lượt ứng viên truy cập hàng tháng
+              .col-6.col-md-4
+                .banner__number <span class="js-count-to" data-count-to="4000000">4.000.000</span>+
+                .banner__desc Ứng viên tiềm năng
+
+          .col-lg-5.wow.fadeInRight(data-wow-delay="0.3s")
+            .banner__frame
+              img(src="./images/banner-img.png", alt="")
+
+  // tin tức
+  section.section
+    .container
+      .section__header
+        h2.section__title Tin tức mới
+
+      +news-slider
+
+      a.d-block.mt-4.mt-xl-30(href="#!")
+        img.w-100(src="./images/banner-hoz.png", alt="")
+
+  // tuyển dụng
+  section.section.section--light
+    .container
+      .section__header
+        h2.section__title Tin tuyển dụng, việc làm tốt nhất
+        a.section__link(href="#!") Xem tất cả
+          i.fal.fa-lg.fa-angle-right.ms-2
+
+      ul.nav.recruit-tabs
+        li.nav-item
+          a.nav-link.active(href='#recruit-tab-1', data-bs-toggle='tab') Ngẫu nhiên
+        li.nav-item
+          a.nav-link(href='#recruit-tab-2', data-bs-toggle='tab') Hà Nội
+        li.nav-item
+          a.nav-link(href='#recruit-tab-3', data-bs-toggle='tab') Hồ Chí Minh
+        li.nav-item
+          a.nav-link(href='#recruit-tab-4', data-bs-toggle='tab') Miền Bắc
+        li.nav-item
+          a.nav-link(href='#recruit-tab-5', data-bs-toggle='tab') Miền Nam
+
+      .tab-content
+        - for(let i = 0; i < 5; i++)
+          .tab-pane.fade(class=i?'':'show active', id=`recruit-tab-${i+1}`)
+            +recruit-slider
+
+  // văn bản
+  section.section
+    .container
+      .section__header
+        h2.section__title Văn bản pháp luật
+
+      +doc-slider
+
+      a.d-block.mt-4.mt-xl-30(href="#!")
+        img.w-100(src="./images/banner-hoz.png", alt="")
+
+  - for(let i = 0; i < 16; i++)
+    +md-doc(i)
+
+  - for(let i = 0; i < 10; i++)
+    +md-post(i)

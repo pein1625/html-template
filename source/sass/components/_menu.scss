@@ -103,6 +103,7 @@
     &-root {
       display: flex;
       border: 0;
+      padding: 0 30px;
     }
 
     &-root &-item {
@@ -161,14 +162,48 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 45px;
       }
     }
 
     &-root > &-item > &-link {
       font-size: 14px;
-      padding: 12px 0;
+      font-weight: 700;
+      padding: 13px 0;
       transition: 0.3s;
+      color: $white;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #E3592E;
+        transform: rotateY(90deg);
+        transition: 0.3s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      &.active::before {
+        transform: rotateY(0);
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      &::before {
+        transform: rotateY(0);
+      }
+    }
+
+    &-root > &-item-group > &-link {
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Pro';
+        margin-left: 10px;
+      }
     }
 
     &-root > &-item > &-toggle {
@@ -185,19 +220,6 @@
     &-root > &-item-group &-item-group:hover > &-sub {
       display: block;
       animation: menu-float-show 0.2s ease-out;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
     }
   }
 }

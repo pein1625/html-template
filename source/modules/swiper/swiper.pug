@@ -64,3 +64,58 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin doc-slider
+  .doc-slider
+    .doc-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +doc(i * 2)
+            +doc(i * 2 + 1)
+    .doc-slider__prev
+      i.fal.fa-angle-left
+    .doc-slider__next
+      i.fal.fa-angle-right
+    .doc-slider__pagination
+
+mixin recruit-slider
+  .recruit-slider
+    .recruit-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 10; i++)
+          .swiper-slide
+            +recruit(`./images/recruit-${i%2+1}.png`)
+            +recruit(`./images/recruit-${i%2+1}.png`)
+            +recruit(`./images/recruit-${i%2+1}.png`)
+            +recruit(`./images/recruit-${i%2+1}.png`)
+    .recruit-slider__prev
+      i.fal.fa-angle-left
+    .recruit-slider__next
+      i.fal.fa-angle-right
+    .recruit-slider__pagination
+
+mixin news-slider
+  .news-slider
+    .news-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 10; i++)
+          .swiper-slide
+            +news(`./images/news-${i % 3 + 1}.jpg`, i)
+    .news-slider__prev
+      i.fal.fa-angle-left
+    .news-slider__next
+      i.fal.fa-angle-right
+
+mixin brand-slider
+  .brand-slider
+    .brand-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 9; i++)
+          .swiper-slide
+            .banner-slider__frame
+              img(src=`./images/brand-${i + 1}.png`, alt="")
+    .brand-slider__prev
+      i.fal.fa-lg.fa-angle-left
+    .brand-slider__next
+      i.fal.fa-lg.fa-angle-right

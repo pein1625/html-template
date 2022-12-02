@@ -93,6 +93,8 @@
     }
 
     &__body {
+      display: flex;
+      align-items: center;
       padding: 0;
       overflow: visible;
     }

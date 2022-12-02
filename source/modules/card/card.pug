@@ -1,0 +1,46 @@
+mixin doc(id=1)
+  .doc
+    .row.align-items-center
+      .col
+        h3.doc__title
+          a(href="#!", data-bs-toggle="modal", data-bs-target=`#md-doc-id-${id}`)  Quyết định ban hành Chương trình chuyển đổi số tại Bộ Công Thương giai đoạn 2022-2025
+        .row.g-2.doc__info
+          .col-6
+            div Số hiệu
+            div 823/QĐ-BCT
+          .col-6
+            div Ngày ban hành
+            div 05/07/2022
+
+      .col-auto
+        a.btn.btn-primary(href="./images/sample.pdf", download)
+          i.fal.fa-arrow-to-bottom.me-2
+          | Tải về
+
+mixin recruit(img='./images/recruit-1.jpg')
+  .recruit
+    .row.g-3
+      .col-auto
+        a.recruit__frame(href="#!")
+          img(src=img, alt="")
+      .col
+        .recruit__title
+          a(href="#!") Nhân Viên Xuất Nhập Khẩu
+        .recruit__desc Công ty TNHH Tofflon
+    .recruit__tags
+      a.recruit__tag(href="#!") 700-1.500 USD
+      a.recruit__tag(href="#!") Hồ Chí Minh, Hà Nội
+
+mixin news(img='./images/news-1.jpg', id=1)
+  .news
+    a.news__frame(href="#!", data-bs-toggle="modal", data-bs-target=`#md-post-id-${id}`)
+      img(src=img, alt="")
+    h3.news__title
+      a(href="#!", data-bs-toggle="modal", data-bs-target=`#md-post-id-${id}`) Cuộc thi Kinh doanh số “thực chiến” đầu tiên của sinh viên!
+    .news__time
+      i.fal.fa-clock.me-2.text-primary
+      span 03/07/2022
+    .news__desc Ngày đầu tiên của tháng 11 năm 2022, ngày bắt đầu Cuộc thi Sinh viên Tài năng Kinh doanh số, đánh dấu bước ngoặt của hoạt động đào tạo chính quy tại các trường đại học về thương mại điện tử và kinh doanh số ở nước ta.
+    .text-end.mt-auto
+      a.news__link(href="#!", data-bs-toggle="modal", data-bs-target=`#md-post-id-${id}`) Chi tiết
+        i.fal.fa-lg.fa-angle-right.ms-2
