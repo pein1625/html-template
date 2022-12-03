@@ -2,13 +2,13 @@
   "menu": [
     {
       "text": "Trang chủ",
-      "url": "./index.html",
+      "url": "#banner",
       "active": true,
       "hasIcon": false
     },
     {
       "text": "Tin tức mới",
-      "url": "#!",
+      "url": "#section-news",
       "submenu": [
         {
           "text": "Dropdown",
@@ -44,11 +44,11 @@
     },
     {
       "text": "Tin tuyển dụng, việc làm tốt nhất",
-      "url": "#!"
+      "url": "#section-recruit"
     },
     {
       "text": "Văn bản pháp luật",
-      "url": "#!"
+      "url": "#section-documents"
     }
   ]
 }

@@ -2,7 +2,7 @@ extends layout/page
 
 block content
   // banner
-  section.banner
+  section.banner#banner.js-section(data-target="#banner")
     .container
       .banner__inner
         img.banner__img-1(src="./images/banner-icon-1.svg", alt="")
@@ -39,7 +39,7 @@ block content
               img(src="./images/banner-img.png", alt="")
 
   // tin tức
-  section.section
+  section.section#section-news.js-section(data-target="#section-news")
     .container
       .section__header
         h2.section__title Tin tức mới
@@ -50,7 +50,7 @@ block content
         img.w-100(src="./images/banner-hoz.png", alt="")
 
   // tuyển dụng
-  section.section.section--light
+  section.section.section--light#section-recruit.js-section(data-target="#section-recruit")
     .container
       .section__header
         h2.section__title Tin tuyển dụng, việc làm tốt nhất
@@ -75,7 +75,7 @@ block content
             +recruit-slider
 
   // văn bản
-  section.section
+  section.section#section-documents.js-section(data-target="#section-documents")
     .container
       .section__header
         h2.section__title Văn bản pháp luật
