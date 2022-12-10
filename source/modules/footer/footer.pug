@@ -1,2 +1,50 @@
 mixin footer
   footer.footer
+    .container
+      .footer__header
+        a.footer__logo(href="./index.html")
+          img(src="./images/logo.svg", alt="")
+
+        nav.social
+          a(href="#!")
+            img(src="./images/icon-linkedin.svg" alt='')
+          a(href="#!")
+            img(src="./images/icon-tiktok.svg" alt='')
+          a(href="#!")
+            img(src="./images/icon-youtube.svg" alt='')
+          a(href="#!")
+            img(src="./images/icon-facebook.svg" alt='')
+
+      .row.g-30
+        .col-md-6.col-xl-3
+          .footer__heading Bộ giải pháp
+          ul.f-menu
+            each item in ["Ads check by SMIT","Ads Manager","Find Facebook ID","SMIT Cookies","SMIT Translator"]
+              li
+                a(href="#!")= item
+        .col-md-6.col-xl-3
+          .footer__heading Chính sách
+          ul.f-menu
+            each item in ["Cookie Policy","Privacy Policy","Terms of Service"]
+              li
+                a(href="#!")= item
+        .col-md-6.col-xl-3
+          .footer__heading Công ty
+          ul.f-menu
+            each item in ["Hợp tác Affiliate","Liên hệ với chúng tôi"]
+              li
+                a(href="#!")= item
+        .col-md-6.col-xl-3
+          .footer__heading Tài nguyên
+          ul.f-menu
+            each item in ["Blogs","Cộng đồng","Trợ giúp"]
+              li
+                a(href="#!")= item
+
+      .footer__bottom
+        .footer__copyright © SMIT 2022 All rights reserved
+        .footer__widgets
+          img(src="./images/dmca.png", alt="")
+          nav.f-lang
+            a.active(href="#!") Tiếng Việt
+            a(href="#!") English

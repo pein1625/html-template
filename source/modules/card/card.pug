@@ -1,0 +1,64 @@
+mixin n-btn(text="", url="#!")
+  a.n-btn(href=url)
+    span= text
+      i.fal.fa-arrow-right.ms-2
+
+mixin n-btn-disabled(text="", url="#!")
+  a.n-btn.n-btn--disabled(href=url)
+    span= text
+
+mixin pros(img='', title='', desc='')
+  .n-card
+    .n-card__icon
+      img(src=img, alt="")
+    .n-card__title= title
+    .n-card__desc= desc
+
+mixin solution(img='', title='', desc='')
+  .n-card
+    .n-card__icon
+      img(src=img, alt="")
+    .n-card__title= title
+    .n-card__desc= desc
+    .mt-auto.pt-3.pt-md-20.pt-xl-30
+      +n-btn('Dùng thử')
+
+mixin expert(img='', title='', subtitle='', desc='')
+  .n-card
+    .n-card__avatar
+      img(src=img, alt="")
+    .n-card__title.n-card__title--gradient
+      span= title
+    .n-card__subtitle= subtitle
+    .n-card__desc= desc
+
+mixin subscribe
+  .subscribe
+    .subscribe__content
+      .subscribe__title Với hơn 30.000+ lượt cài đặt & sử dụng hàng ngày
+      .subscribe__desc Đăng ký tài khoản và tham gia ngay để tối ưu hoá quảng cáo
+      form.subscribe__form
+        .input-group
+          input.form-control(type="text", placeholder='Điền địa chỉ email của bạn...')
+          .input-group-text
+            button.n-btn(type="submit")
+              span Đăng ký tài khoản
+
+mixin follow
+  ul.follow
+    li.follow__item
+      a.follow__link(href="#!")
+        img(src="./images/icon-facebook-circle.svg", alt="")
+        span Cộng đồng SMIT
+    li.follow__item
+      a.follow__link(href="#!")
+        img(src="./images/icon-youtube-circle.svg", alt="")
+        span Kênh youtube chính thức
+    li.follow__item
+      a.follow__link(href="#!")
+        img(src="./images/icon-facebook-circle.svg", alt="")
+        span Fanpage chính thức
+    li.follow__item
+      a.follow__link(href="#!")
+        img(src="./images/icon-support.svg", alt="")
+        span Kênh hỗ trợ chính thức

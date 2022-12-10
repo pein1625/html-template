@@ -79,3 +79,50 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.n-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1;
+  padding: 13px 16px;
+  border-radius: 6px;
+  gap: 4px;
+  background-image: $gradient;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+  }
+
+  &:hover {
+    &::before {
+      background: #fff;
+    }
+
+    span {
+      @include text-gradient();
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background: rgb(230, 232, 236);
+  }
+
+  @include media-breakpoint-down(xxl) {
+    font-size: 14px;
+  }
+}

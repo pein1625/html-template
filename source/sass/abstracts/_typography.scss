@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap');
+
+@include font-face('SFUIDisplay', 'SFUIDisplay-Medium', 400);
+@include font-face('SFUIDisplay', 'SFUIDisplay-Light', 300);
+@include font-face('SFUIDisplay', 'SFUIDisplay-Semibold', 600);
+@include font-face('SFUIDisplay', 'SFUIDisplay-Bold', 700);
+
+$sfuidisplay: 'SFUIDisplay', sans-serif;
+$space: 'Space Grotesk', sans-serif;

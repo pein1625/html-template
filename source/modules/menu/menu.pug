@@ -15,7 +15,22 @@ mixin menu(menu)
           a.menu-link(href=item.url, class=item.active?'active':'')= item.text
           span.menu-toggle
           .menu-mega
-            +menu-sub(item.submenu)
+            .mega.menu.menu-sub
+              each item in ['Quản lý và báo cáo', 'Quản lý hỗ trợ']
+                .mega__group
+                  .mega__label= item
+                  .row.g-20
+                    - for(let i = 0; i < 4; i++)
+                      .col-xl-4
+                        a.mega__item(href="#!", data-img=`./images/menu-img-${i + 1}.png`)
+                          .row.align-items-center.g-2
+                            .col-auto
+                              img.mega__icon(src="./images/icon-ads-search.svg", alt="")
+                            .col
+                              .mega__title Ads Check by SMIT
+                              .mega__subtitle Xem & quản lý TKQC
+              img.mega__img(src="./images/menu-img-1.png", alt="")
+
       else
         li.menu-item(class=item.submenu?'menu-item-group':'')
           a.menu-link(href=item.url, class=item.active?'active':'')
@@ -35,7 +50,21 @@ mixin menu-float
           a.menu-link(href=item.url, class=item.active?'active':'')= item.text
           span.menu-toggle
           .menu-mega
-            +menu-sub(item.submenu)
+            .mega
+              each item in ['Quản lý và báo cáo', 'Quản lý hỗ trợ']
+                .mega__group
+                  .mega__label Quản lý và báo cáo
+                  .row.g-20
+                    - for(let i = 0; i < 4; i++)
+                      .col-xl-4
+                        a.mega__item(href="#!")
+                          .row.align-items-center
+                            .col-auto
+                              img.mega__icon(src="./images/icon-abc.svg", alt="")
+                            .col
+                              .mega__title Ads Check by SMIT
+                              .mega__subtitle Xem & quản lý TKQC
+
       else
         li.menu-item(class=item.submenu?'menu-item-group':'')
           a.menu-link(href=item.url, class=item.active?'active':'')

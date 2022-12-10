@@ -7,8 +7,9 @@
       "hasIcon": false
     },
     {
-      "text": "Giới thiệu",
-      "url": "./about.html",
+      "text": "Bộ giải pháp",
+      "url": "#!",
+      "isMega": true,
       "submenu": [
         {
           "text": "Dropdown",
@@ -43,24 +44,16 @@
       ]
     },
     {
-      "text": "Sản phẩm",
-      "url": "./products.html"
+      "text": "Về chúng tôi",
+      "url": "#!"
     },
     {
-      "text": "Dự án",
-      "url": "./projects.html"
+      "text": "Hướng dẫn",
+      "url": "#!"
     },
     {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
-    },
-    {
-      "text": "Tin tức",
-      "url": "./news.html"
-    },
-    {
-      "text": "Liên hệ",
-      "url": "./contact.html"
+      "text": "Hỗ trợ",
+      "url": "#!"
     }
   ]
 }
