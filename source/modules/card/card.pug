@@ -14,6 +14,15 @@ mixin pros(img='', title='', desc='')
     .n-card__title= title
     .n-card__desc= desc
 
+mixin cause(img='', title='', title2='', desc='')
+  .n-card
+    img.n-card__img(src=img, alt="")
+    .n-card__title
+      span.text-gradient= title
+      br
+      span=title2
+    .n-card__desc= desc
+
 mixin solution(img='', title='', desc='')
   .n-card
     .n-card__icon
@@ -34,6 +43,23 @@ mixin expert(img='', title='', subtitle='', desc='')
 
 mixin subscribe
   .subscribe
+    img.subscribe__bg(src="./images/subscribe-bg.png", alt="")
+    .subscribe__content
+      .subscribe__title Với hơn 30.000+ lượt cài đặt & sử dụng hàng ngày
+      .subscribe__desc Đăng ký tài khoản và tham gia ngay để tối ưu hoá quảng cáo
+      form.subscribe__form
+        .input-group
+          input.form-control(type="text", placeholder='Điền địa chỉ email của bạn...')
+          .input-group-text
+            button.n-btn(type="submit")
+              span Đăng ký tài khoản
+
+mixin subscribe-2
+  .subscribe.subscribe--2
+    img.subscribe__icon-1(src="./images/subscribe-icon-1.svg", alt="")
+    img.subscribe__icon-2(src="./images/subscribe-icon-2.svg", alt="")
+    img.subscribe__icon-3(src="./images/subscribe-icon-3.svg", alt="")
+    img.subscribe__icon-4(src="./images/subscribe-icon-4.svg", alt="")
     .subscribe__content
       .subscribe__title Với hơn 30.000+ lượt cài đặt & sử dụng hàng ngày
       .subscribe__desc Đăng ký tài khoản và tham gia ngay để tối ưu hoá quảng cáo
