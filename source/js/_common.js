@@ -8,3 +8,9 @@ $(function() {
     $(this).closest('.mega').find('.mega__img').attr('src', imageUrl);
   });
 });
+
+$(function() {
+  $('.accor__header').on('click', function() {
+    $(this).toggleClass('active').siblings('.accor__body').slideToggle('fast');
+  });
+});

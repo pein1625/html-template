@@ -88,3 +88,14 @@ mixin follow
       a.follow__link(href="#!")
         img(src="./images/icon-support.svg", alt="")
         span Kênh hỗ trợ chính thức
+
+mixin feature(img='', title='', desc='')
+  .n-card
+    .n-card__icon
+      img(src=img, alt="")
+    .n-card__title= title
+    .n-card__desc= desc
+    .mt-auto.pt-3.pt-xl-30
+      a.n-card__link(href="#!")
+        span.text-gradient Tìm hiểu thêm
+        img.ms-2(src="./images/icon-arrow-gradient.svg", alt="")

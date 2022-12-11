@@ -221,6 +221,21 @@
     }
   }
 
+  &--white &__title,
+  &--white &__subtitle,
+  &--white &__desc {
+    color: $white;
+  }
+
+  &--white &__btn {
+    background: #fff;
+    color: #5FC1F7;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     &__title {
       font-size: 24px;
@@ -256,6 +271,11 @@
 
     &--trans &__bg {
       height: 70vh;
+    }
+
+    &--white &__content {
+      justify-content: flex-start;
+      padding-top: 80px;
     }
   }
 }
