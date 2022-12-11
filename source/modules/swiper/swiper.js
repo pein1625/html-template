@@ -1,4 +1,4 @@
-// swiper template
+// Swiper template
 function addSwiper(selector, options = {}) {
   return Array.from(document.querySelectorAll(selector), function (item) {
     var $sliderContainer = $(item),
@@ -23,3 +23,33 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+// partner slider
+$(function () {
+  addSwiper(".partner-slider", {
+    navigation: true,
+    loop: true,
+    speed: 400,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      },
+      1200: {
+        spaceBetween: 24,
+        slidesPerView: 6,
+      },
+    },
+  });
+});

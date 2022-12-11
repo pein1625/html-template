@@ -1,10 +1,5 @@
 /*
-Check is on screen
-Usage: $el.isOnScreen(percentage)
-Params:
-- percentage: % of element's height is on screen
-+ percentage === 1 => entire div is on screen
-+ percentage === 0 => an edge of div is on screen
+Check is on screen.
 */
 (function ($) {
   const $window = $(window);
