@@ -89,79 +89,79 @@ block content
   // Lý do bạn cần Cookies Manager ngay bây giờ
   section.section.pt-0
     .container
-      .section__header.section__header--dashed
+      .section__header.section__header--dashed.wow.sliceInUp(data-wow-delay="0.3s")
         h2.section__title Lý do bạn cần Cookies Manager ngay bây giờ
 
       .row.g-3.g-md-20
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.sliceInUp(data-wow-delay="0.3s")
           +cause('./images/cause-1.png', 'Bảo mật', 'dữ liệu người dùng', 'Mỗi dữ liệu của bạn đều được mã hoá và chỉ bạn có thể giải mã, đồng thời SMIT cũng sẽ không lưu trữ bất kỳ dữ liệu nào của người dùng. Vì vậy, bạn có thể yên tâm sử dụng Cookie Manager để hỗ trợ quá trình làm việc.')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.sliceInUp(data-wow-delay="0.3s")
           +cause('./images/cause-2.png', 'Tiết kiệm', 'thời gian làm việc', 'Không còn tốn thời gian nhập thông tin đăng nhập, người dùng có thể chuyển đổi giữa các tài khoản Facebook nhanh chóng bằng một click trên Cookie Manager.')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.sliceInUp(data-wow-delay="0.3s")
           +cause('./images/cause-3.png', 'Quản lý', 'nhiều cookies', 'Dễ dàng quản lý và theo dõi nhiều cookie trên cùng một trang. Người dùng có thể lưu, xuất hay nhập các file cookie tuỳ theo mục đích sử dụng.')
 
   // Các tính năng chính
   section.section.bg-white
     .container
-      .section__header.section__header--dashed
+      .section__header.section__header--dashed.wow.sliceInUp(data-wow-delay="0.3s")
         h2.section__title Các tính năng chính
 
       .mb-20.ml-0
-        .n-card-2.n-card-2--light
+        .n-card-2.n-card-2--light.wow.slideInUp(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.n-card-2__body.order-lg-1
               img.n-card-2__icon(src="./images/icon-list-square.svg", alt="")
               .n-card-2__title-2 Lấy danh sách Acess Token
               .n-card-2__content
                 p Hiển thị và lựa chọn giữa mọi loại Token mà Facebook đang cung cấp
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="0.8s")
               img.w-100(src="./images/card-2-0.png", alt="")
 
       .mb-20.ml-0
-        .n-card-2.n-card-2--light
+        .n-card-2.n-card-2--light.wow.slideInUp(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.n-card-2__body
               img.n-card-2__icon(src="./images/icon-login-square.svg", alt="")
               .n-card-2__title-2 Đăng nhập nhanh
               .n-card-2__content
                 p Thay đổi Cookie mặc định đang sử dụng trên trình duyệt để đăng nhập Facebook nhanh chóng
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="0.8s")
               img.w-100(src="./images/card-2-1.png", alt="")
 
       .mb-20.ml-0
-        .n-card-2.n-card-2--light
+        .n-card-2.n-card-2--light.wow.slideInUp(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.n-card-2__body.order-lg-1
               img.n-card-2__icon(src="./images/icon-file-square.svg", alt="")
               .n-card-2__title-2 Import & Export Cookies
               .n-card-2__content
                 p Nhập và Xuất file cookie dưới định dạng .txt
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="0.8s")
               img.w-100(src="./images/card-2-2.png", alt="")
 
       .mb-20.ml-0
-        .n-card-2.n-card-2--light
+        .n-card-2.n-card-2--light.wow.slideInUp(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.n-card-2__body
               img.n-card-2__icon(src="./images/icon-upload-square.svg", alt="")
               .n-card-2__title-2 Đồng bộ dữ liệu lên hệ thống đám mây
               .n-card-2__content
                 p Cho phép đồng nhất dữ liệu giữa các máy tính hay trình duyệt khác nhau cùng tính năng đồng bộ đám mây
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="0.8s")
               img.w-100(src="./images/card-2-3.png", alt="")
 
       .mb-20.ml-0
-        .n-card-2.n-card-2--light
+        .n-card-2.n-card-2--light.wow.slideInUp(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.n-card-2__body.order-lg-1
               img.n-card-2__icon(src="./images/icon-lock-square.svg", alt="")
               .n-card-2__title-2 Mã hóa dữ liệu
               .n-card-2__content
                 p Mã hoá dữ liệu trước khi lưu trữ lên đám mây và mã hoá dữ liệu trước khi Export/Import
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="0.8s")
               img.w-100(src="./images/card-2-4.png", alt="")
 
   // Với hơn 30.000+ lượt cài đặt & sử dụng hàng ngày
-  section.section.pb-30
+  section.section.pb-30.wow.slideInUp(data-wow-delay="0.3s")
     .container
       +subscribe-2

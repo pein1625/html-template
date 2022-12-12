@@ -3,7 +3,7 @@ extends layout/page
 block content
   // banner: Bộ giải pháp quảng cáo chuyên nghiệp
   section.banner
-    .banner__content.text-center
+    .banner__content.text-center.wow.slideInUp(data-wow-delay="0.3s")
       .container
         .banner__tag #1 Vietnam
         .banner__title Bộ giải pháp quảng cáo
@@ -159,7 +159,7 @@ block content
   // Tại sao các nhà quảng cáo nên sử dụng bộ giải pháp của SMIT?
   section.section
     .container
-      .section__header.section__header--dashed
+      .section__header.section__header--dashed.wow.slideInUp(data-wow-delay="0.3s")
         .row.justify-content-between.g-3
           .col-lg-8
             h2.section__title Tại sao các nhà quảng cáo nên sử dụng bộ giải pháp của SMIT?
@@ -169,23 +169,23 @@ block content
               img.ms-2(src="./images/icon-arrow-gradient.svg", alt="")
 
       .row.g-3.g-md-20
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +pros('./images/icon-clock-square.svg', 'Tiết kiệm thời gian', 'Chỉ với 1 click hay thực hiện mọi thao tác cùng lúc, đó đều là lợi thế giúp các nhà quảng cáo tiết kiệm thời gian')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +pros('./images/icon-user-square.svg', 'Tối ưu nguồn lực', 'Không cần quá nhiều nguồn lực để vận hành, với SMIT doanh nghiệp sẽ tối ưu được rất nhiều chi phí để theo dõi hiệu quả quảng cáo.')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +pros('./images/icon-lock-square.svg', 'Mức độ bảo mật cao', 'Cam kết không mua bán, trao đổi hay sử dụng vào mục đích thương mại với bất kỳ dữ liệu nào của người dùng.')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +pros('./images/icon-wallet-square.svg', 'Miễn phí trải nghiệm', 'Tất cả các sản phẩm của SMIT đều hỗ trợ trải nghiệm miễn phí một phần.')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +pros('./images/icon-upgrade-square.svg', 'Luôn luôn cập nhật', 'Đội ngũ kỹ thuật luôn theo dõi và cập nhật kịp thời để đảm bảo trải nghiệm tốt nhất cho người dùng sản phẩm')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +pros('./images/icon-headphone-square.svg', 'Hỗ trợ & Tư vấn', 'Luôn sẵn sàng và nhiệt tình là những tiêu chí ưu tiên hàng đầu của đội ngũ CSKH')
 
       section.section-2.border-top.pt-60.mt-100
-        h3.section-2__title Giải pháp quản lý
+        h3.section-2__title.wow.slideInUp(data-wow-delay="0.3s") Giải pháp quản lý
 
-        .n-card-2
+        .n-card-2.wow.fadeInLeft(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.n-card-2__body
               .n-card-2__title Ads check by SMIT
@@ -199,7 +199,7 @@ block content
                   li Đổi thông tin TKQC
               .pt-20.pt-xxl-30
                 +n-btn('Dùng thử')
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="1s")
               svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 563 417", width="563", height="417", preserveAspectRatio="xMidYMid meet", style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;")
                 defs
                   clippath(id="__lottie_element_137")
@@ -226,7 +226,7 @@ block content
                   g(style="display: block;", transform="matrix(1,0,0,1,18.50799560546875,108.0780029296875)", opacity="1")
                     image(width="531px", height="39px", preserveAspectRatio="xMidYMid slice", xlink:href="./images/index/table-2/img_0.png")
 
-        .n-card-2.mt-4
+        .n-card-2.mt-4.wow.fadeInRight(data-wow-delay="0.3s")
           .row.g-0.justify-content-between
             .col-lg-5.d-flex.flex-column.justify-content-center.order-lg-1.n-card-2__body
               .n-card-2__title Ads Manager
@@ -236,7 +236,7 @@ block content
               .pt-20.pt-xxl-30
                 +n-btn-disabled('Comming Soon ...')
 
-            .col-lg-6.n-card-2__frame
+            .col-lg-6.n-card-2__frame.wow.slideInUp(data-wow-delay="1s")
               svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 563 417", width="563", height="417", preserveAspectRatio="xMidYMid meet", style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;")
                 defs
                   clippath(id="__lottie_element_137")
@@ -264,37 +264,37 @@ block content
                     image(width="531px", height="39px", preserveAspectRatio="xMidYMid slice", xlink:href="./images/index/table-2/img_0.png")
 
       section.section-2.mt-60
-        h3.section-2__title Giải pháp hỗ trợ
+        h3.section-2__title.wow.slideInUp(data-wow-delay="0.3s") Giải pháp hỗ trợ
         .row.g-3.g-md-20
-          .col-6.col-lg-4
+          .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
             +solution('./images/icon-translator.svg', 'SMIT Translator', 'Tự động dịch trực tiếp ngay trên đoạn hội thoại. Hỗ trợ đa ngôn ngữ và đa nền tảng: Pancake, Nobita hoặc Smax')
-          .col-6.col-lg-4
+          .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
             +solution('./images/icon-cookies.svg', 'SMIT Cookies', 'Quản lý nhiều cookies trên cùng 1 trình duyệt và trên nhiều thiết bị thông qua tính năng đồng bộ dữ liệu qua đám mây')
-          .col-6.col-lg-4
+          .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
             +solution('./images/icon-profile.svg', 'Find Facebook ID', 'Công cụ tra cứu ID thông qua đường dẫn tài khoản Facebook')
 
   // Các chuyên gia hàng đầu trong ngành nói gì về SMIT
   // Với hơn 30.000+ lượt cài đặt & sử dụng hàng ngày
   section.section.pt-0
     .container
-      .section__header.section__header--dashed
+      .section__header.section__header--dashed.wow.slideInUp(data-wow-delay="0.3s")
         h2.section__title Các chuyên gia hàng đầu trong ngành
           br.d-none.d-lg-inline
           |  nói gì về SMIT
 
       .row.g-3.g-md-20
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +expert('./images/avatar-1.png', 'Dương Mạnh Kiên', 'PGĐ Theanh28 Entertainment', 'Trong cộng đồng các nhà quảng cáo Facebook Ads, SMIT luôn cho chúng tôi thấy sự nhiệt tình và chuyên nghiệp trong từng dịch vụ hay sản phẩm mà SMIT đang cung cấp. Qua những điều đó, chúng tôi hiểu rằng, SMIT đã và đang có 1 đội ngũ nhân sự trẻ trung, nhiệt huyết và đầy đam mê trong lĩnh vực công nghệ phần mềm.')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +expert('./images/avatar-2.png', 'Tình Nguyễn', 'Co-Founder Ladipage Việt Nam', 'Sau thời gian trải nghiệm Ads Check by SMIT, tôi khẳng định đây là công cụ ưu việt được anh em Ads thủ tin tưởng tin dùng. Dù cá nhân hay doanh nghiệp nên lựa chọn sản phẩm bởi tính toàn diện hỗ trợ quá trình chạy quảng cáo hiệu quả. Anh em dễ dàng xây dựng chiến dịch chạy Ads thông minh hơn với các chức năng vượt trội!')
-        .col-6.col-lg-4
+        .col-6.col-lg-4.wow.slideInUp(data-wow-delay="0.3s")
           +expert('./images/avatar-3.png', 'Lưu Thiên Ân', 'Founder HAS Agency', 'Từ khi sử dụng Ads Check by SMIT, tôi nhận thấy sự hiểu quả rõ ràng khi kiểm tra mọi thông tin đơn giản, nhanh chóng và dễ dàng. Các tài khoản quảng cáo cũng được bảo vệ và đưa ra nguyên nhân vô hiệu hoá hiển thị hoàn toàn miễn phí.')
 
       .mt-60
         +subscribe
 
   // Theo dõi chúng tôi
-  section.section.s-follow
+  section.section.s-follow.wow.slideInUp(data-wow-delay="0.3s")
     img.s-follow__bg(src="./images/follow-background.png", alt="")
     .container
       .row.g-3.g-md-20

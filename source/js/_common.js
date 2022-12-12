@@ -14,3 +14,7 @@ $(function() {
     $(this).toggleClass('active').siblings('.accor__body').slideToggle('fast');
   });
 });
+
+$(function() {
+  new WOW().init();
+});

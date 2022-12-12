@@ -105,24 +105,24 @@ block content
   // Các tính năng chính
   section.section
     .container
-      .section__header.section__header--dashed
+      .section__header.section__header--dashed.wow.slideInUp(data-wow-delay="0.3s")
         h2.section__title Các tính năng chính
       .feature-grid
-        .feature-grid__col.feature-grid__frame
+        .feature-grid__col.feature-grid__frame.wow.slideInUp(data-wow-delay="0.3s")
           img(src="./images/feature-image.svg", alt="")
 
         each item in [1,2,3,4,5,6,7]
-          .feature-grid__col
+          .feature-grid__col.wow.slideInUp(data-wow-delay="0.3s")
             +feature(`./images/feature-icon-1.svg`, 'Ads Check Pro', 'Xem nhanh mọi chỉ số của TKQC chỉ với 1 click duy nhất: số dư, ngưỡng, limit ẩn, ID,...và cả thông tin về các tài khoản BM bạn đang sở hữu.')
 
   // Ads check by SMIT có thể giúp bạn
   section.section.pt-0
     .container
-      .section__header.section__header--dashed
+      .section__header.section__header--dashed.wow.slideInUp(data-wow-delay="0.3s")
         h2.section__title Ads check by SMIT có thể giúp bạn
 
       each item, index in ["Tiết kiệm thời gian","Bảo vệ tài sản quảng cáo","Xóa tan nỗi lo hạn chế quảng cáo","Dễ dàng theo dõi thông tin","Tăng ROAS","Chia sẻ Pixel dễ dàng","Tăng hiệu quả quảng cáo"]
-        .accor
+        .accor.wow.slideInUp(data-wow-delay="0.3s")
           .accor__header
             .row.g-3.align-items-center
               .col-auto
@@ -159,6 +159,6 @@ block content
                           | Xem hướng dẫn
 
   // Với hơn 30.000+ lượt cài đặt & sử dụng hàng ngày
-  section.section.pt-0.pb-30
+  section.section.pt-0.pb-30.wow.slideInUp(data-wow-delay="0.3s")
     .container
       +subscribe-2
