@@ -1,0 +1,69 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          +breadcrumb('Trang chủ', 'Văn bản pháp luật', 'Hiệp định WTO')
+
+          section.section.py-0.mt-30
+            h2.section__title Hiệp định WTO
+
+            form.doc-search.mb-30(action="#!")
+              .doc-search__label Tìm kiếm
+              .doc-search__group
+                .input-group
+                  .input-group-text
+                    i.fal.fa-lg.fa-search
+                  input.form-control(type="text", placeholder="Tìm kiếm")
+                  .input-group-text.p-0.border-0
+                    button.doc-search__btn(type="submit") Tìm kiếm
+
+            .doc-table.table-responsive
+              table.table.border-gray
+                thead
+                  tr
+                    th.text-nowrap Số ký hiệu
+                    th.text-nowrap Trích yếu
+                    th.text-center.text-nowrap Ngày ban hành
+                    th.text-center.text-nowrap Ngày hết hiệu lực
+                    th.text-center.text-nowrap Tải về
+                tbody
+                  each item, index in ["Quyết định về việc miễn trừ áp dụn Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC","Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC","Quyết định về việc miễn trừ áp dụn Công ty","Thương mại và sản xuất Đông Dương JSC","Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC","Áp dụng Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC","Cổ phần Thương mại và sản xuất Đông Dương JSC","Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC","Miễn trừ áp dụn Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC","Quyết định về việc miễn trừ áp dụn Công ty Cổ phần Thương mại và sản xuất Đông Dương JSC"]
+                    tr
+                      td.text-nowrap 1471/QĐ-BCT
+                      td
+                        a.doc-table__title(href="#!", data-bs-toggle="modal", data-bs-target=`#md-doc-id-${index}`)= item
+                        +md-doc(index)
+                      td.text-center.text-nowrap 26/07/2022
+                      td.text-center.text-nowrap 26/07/2022
+                      td.text-center.text-nowrap
+                        a.doc-table__download(href="./images/sample.pdf", download)
+                          i.fas.fa-arrow-to-bottom.me-2
+                          | Tải về
+
+            nav.mt-20.mt-lg-30
+              +pagination
+
+        .col-lg-3
+          nav.as-menu
+            h3.as-menu__title Văn bản pháp luật
+            ul.as-menu__list
+              li.as-menu__item
+                a.as-menu__link(href="#!") Văn bản pháp luật
+              li.as-menu__item
+                a.as-menu__link.active(href="#!") Hiệp định WTO
+              li.as-menu__item
+                a.as-menu__link(href="#!") Hiệp định FTA
+              li.as-menu__item
+                a.as-menu__link(href="#!") Pháp luật một số nước khác
+              li.as-menu__item
+                a.as-menu__link(href="#!") Quyết định miễn trừ
+
+          a.d-block.mt-4(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2
