@@ -3,16 +3,16 @@ extends layout/page
 block content
   nav
     .container
-      +breadcrumb('Trang chủ', 'Videos')
+      +breadcrumb('Trang chủ', 'Ấn phẩm')
 
   section.section
     .container
-      h2.section__title Video
+      h2.section__title Ấn phẩm
 
-      .row.g-3.g-lg-20.g-xl-30
+      .row.g-3.g-lg-20.g-xl-4
         - for(let i = 0; i < 12; i++)
-          .col-6.col-lg-4
-            +video
+          .col-md-6
+            +publication
 
       nav.mt-20.mt-lg-30.mt-xl-40
         +pagination

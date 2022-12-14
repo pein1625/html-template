@@ -7,3 +7,15 @@ mixin video
       img.video__img(src=`./images/video-${count % 2 + 1}.jpg`, alt="")
     .video__body
       .video__title Nulla viverra orci et nisl congue lobortis molestie felis dapibus ulla viverra orci et nis
+
+mixin publication
+  - count++
+  .publication
+    .publication__frame
+      img(src=`./images/publication-${count % 2 + 1}.jpg`, alt="")
+    .publication__body
+      h3.publication__title= (count % 2 ? 'Hệ Thống PVTM' : 'Báo cáo Phòng vệ thương mại năm 2021')
+      .publication__footer
+        a.publication__btn(href="./images/sample.pdf", download)
+          i.fas.fa-download.me-2
+          | Tải về

@@ -4,6 +4,7 @@
   border-radius: 4px;
   overflow: hidden;
   background-color: $white;
+  box-shadow: 0 1px 4px rgba(#000, 0.15);
   transition: 0.4s ease-out;
 
   &:hover {
@@ -63,6 +64,87 @@
 
     &__title {
       font-size: 12px;
+    }
+  }
+}
+
+.publication {
+  display: grid;
+  background-color: $white;
+  grid-template-columns: auto 1fr;
+  transition: 0.3s ease-out;
+  box-shadow: 0 1px 4px rgba(#000, 0.15);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 10px rgba(#000, 0.2);
+  }
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__frame {
+    @include frame('rect', 157%);
+    width: 100px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  &__title {
+    @include max-line(3);
+    font-size: 18px;
+    line-height: 1.2;
+    max-height: 3.6em;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 8px;
+    margin-top: auto;
+  }
+
+  &__btn {
+    color: $primary;
+
+    &:hover {
+      color: darken($primary, 8%);
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__body {
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__body {
+      padding: 16px;
+    }
+
+    &__btn {
+      font-size: 12px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__frame {
+      width: 70px;
+    }
+
+    &__title {
+      font-size: 14px;
     }
   }
 }
