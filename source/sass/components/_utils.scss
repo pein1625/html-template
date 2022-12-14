@@ -25,19 +25,42 @@
 
   .page-item {
     &:not(:last-child) {
-      margin-right: 4px;
+      margin-right: 8px;
     }
   }
 
   .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0 !important;
+    border-radius: 2px;
     color: $gray-800;
-    padding: 8px 16px;
-    border-radius: 4px;
+    font-size: 14px;
   }
 
-  @media (max-width: 767px) {
+  @include media-breakpoint-down(lg) {
     .page-link {
-      padding: 4px 10px;
+      font-size: 12px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .page-item {
+      &:not(:last-child) {
+        margin-right: 1px;
+        border-right: 1px dashed $border-color !important;
+      }
+    }
+
+    .page-link {
+      width: 28px;
+      height: 28px;
     }
   }
 }

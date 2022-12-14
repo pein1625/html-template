@@ -187,20 +187,24 @@
 	"pageList": {
 		"data": [
 			{
-				"title": "Trang chủ",
+				"title": "Trang chủ 2",
 				"url": "index"
+			},
+			{
+				"title": "Trang chủ 3",
+				"url": "index2"
 			},
 			{
 				"title": "Giới thiệu",
 				"url": "about"
 			},
 			{
-				"title": "Sản phẩm",
-				"url": "products"
+				"title": "Cơ cấu tổ chức",
+				"url": "structure"
 			},
 			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
+				"title": "Sự kiện",
+				"url": "events"
 			},
 			{
 				"title": "Tin tức",
@@ -209,6 +213,26 @@
 			{
 				"title": "Chi tiết tin tức",
 				"url": "news-detail"
+			},
+			{
+				"title": "Hồ sơ khởi kiện",
+				"url": "brief"
+			},
+			{
+				"title": "Chi tiết hồ sơ khởi kiện",
+				"url": "brief-detail"
+			},
+			{
+				"title": "Văn bản pháp luật",
+				"url": "documents"
+			},
+			{
+				"title": "Ấn phẩm",
+				"url": "publications"
+			},
+			{
+				"title": "Videos",
+				"url": "videos"
 			},
 			{
 				"title": "Liên hệ",

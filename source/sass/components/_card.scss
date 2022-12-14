@@ -1,0 +1,68 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: $white;
+  transition: 0.4s ease-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 2px 10px rgba(#000, 0.2);
+  }
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__frame {
+    @include frame('rect', 56.25%);
+
+    &::before {
+      z-index: 10;
+      transition: 0.3s;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 46px;
+      height: 46px;
+      background: url('../images/icon-play-white.svg') center/contain no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+    }
+
+    &:hover {
+      &::before {
+        background-color: rgba(#000, 0.3);
+      }
+    }
+  }
+
+  &__body {
+    padding: 8px 12px;
+    flex-grow: 1;
+  }
+
+  &__title {
+    @include max-line(3);
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__frame {
+      &::after {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+  }
+}
