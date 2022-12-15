@@ -1,0 +1,48 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          +breadcrumb('Trang chủ', 'Tin tức', 'Tin điều tra')
+
+          section.section.py-0.mt-30
+            h2.section__title Tin điều tra
+
+            .row.g-3.g-xl-30
+              .col-lg-8
+                +news-2
+
+              .col-lg-4
+                +news-group
+
+            .mt-3.mt-xl-30
+              - for(let i = 0; i < 8; i++)
+                .mb-3.mb-lg-4.ml-0
+                  +news
+
+            nav.mt-20.mt-lg-30
+              +pagination
+
+        .col-lg-3
+          nav.as-menu
+            h3.as-menu__title Tin tức
+            ul.as-menu__list
+              li.as-menu__item
+                a.as-menu__link(href="#!") Tin WTO
+              li.as-menu__item
+                a.as-menu__link.active(href="#!") Tin điều tra
+              li.as-menu__item
+                a.as-menu__link(href="#!") Tin cảnh báo sớm
+              li.as-menu__item
+                a.as-menu__link(href="#!") Tin hoạt động
+              li.as-menu__item
+                a.as-menu__link(href="#!") Tin WTO
+
+          a.d-block.mt-4(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2

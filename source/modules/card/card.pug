@@ -27,3 +27,61 @@ mixin publication
         a.publication__btn(href="./images/sample.pdf", download)
           i.fas.fa-download.me-2
           | Tải về
+
+mixin news
+  - count++
+  .news
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 7 + 1}.jpg`, alt="")
+    .news__body
+      .d-flex
+        a.news__tag(href="#!") Tin kháng kiện
+      h3.news__title
+        a(href="./news-detail.html") Phi-líp-pin quyết định không áp dụng thuế tự vệ đối với hạt nhựa HDPE của Việt Nam
+      .news__info
+        i.fal.fa-clock.me-2.text-primary
+        | 03/07/2022
+
+mixin news-2
+  - count++
+  .news.news--2
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 7 + 1}.jpg`, alt="")
+    .news__body
+      .d-flex
+        a.news__tag(href="#!") Tin kháng kiện
+      h3.news__title
+        a(href="./news-detail.html") Phi-líp-pin quyết định không áp dụng thuế tự vệ đối với hạt nhựa HDPE của Việt Nam
+      .news__info
+        i.fal.fa-clock.me-2.text-primary
+        | 03/07/2022
+      .news__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
+
+mixin news-group
+  .news-group
+    .news-group__item
+      a.news-group__frame(href="./news-detail.html")
+        img(src="./images/news-2.jpg", alt="")
+      .news-group__body
+        h3.news-group__title
+          a(href="./news-detail.html") Ấn Độ khởi xướng điều tra tự vệ đối với một số sản phẩm nhựa PVC
+        .news-group__info
+          i.fal.fa-clock.me-2.text-primary
+          | 03/07/2022
+    .news-group__item
+      .news-group__body
+        h3.news-group__title
+          a(href="./news-detail.html") Ấn Độ khởi xướng điều tra tự vệ đối với một số sản phẩm nhựa PVC
+        .news-group__info
+          i.fal.fa-clock.me-2.text-primary
+          | 03/07/2022
+    .news-group__item
+      .news-group__body
+        h3.news-group__title
+          a(href="./news-detail.html") Ấn Độ khởi xướng điều tra tự vệ đối với một số sản phẩm nhựa PVC
+        .news-group__info
+          i.fal.fa-clock.me-2.text-primary
+          | 03/07/2022
+    .news-group__footer
+      a.news-group__link(href="#!") Xem tất cả
+        i.fal.fa-lg.fa-arrow-right.ms-2
