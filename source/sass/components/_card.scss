@@ -204,7 +204,7 @@
   }
 
   &__title {
-    @include max-line(3);
+    @include max-line(2);
     font-size: 18px;
     line-height: 1.2;
     max-height: 3.6em;
@@ -226,17 +226,33 @@
     margin-top: 6px;
   }
 
-  &--2 {
+  &--2,
+  &--3 {
     display: block;
     height: 100%;
+    position: relative;
   }
 
-  &--2 &__frame {
+  &--2 &__frame,
+  &--3 &__frame {
     width: 100% !important;
   }
 
   &--2 &__title {
     font-size: 20px;
+  }
+
+  &--3 &__title {
+    margin-top: 0;
+  }
+
+  &--3 &__tag {
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    right: auto;
+    z-index: 10;
   }
 
   @include media-breakpoint-down(lg) {

@@ -85,3 +85,16 @@ mixin news-group
     .news-group__footer
       a.news-group__link(href="#!") Xem tất cả
         i.fal.fa-lg.fa-arrow-right.ms-2
+
+mixin news-3
+  - count++
+  .news.news--3
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 7 + 1}.jpg`, alt="")
+    .news__body
+      a.news__tag(href="#!") Tin kháng kiện
+      h3.news__title
+        a(href="./news-detail.html") Những vụ việc giải quyết tranh chấp đầu tiên sử dụng cơ chế phúc thẩm trọng tài tạm thời (MPIA)
+      .news__info
+        i.fal.fa-clock.me-2.text-primary
+        | 03/07/2022
