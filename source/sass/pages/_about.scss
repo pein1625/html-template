@@ -1,0 +1,171 @@
+.profile {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  background-color: #F0F7FF;
+
+  &__frame {
+    @include frame('rect', 117%);
+  }
+
+  &__body {
+    padding: 24px;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary;
+  }
+
+  &__pos {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    font-size: 16px;
+    margin-top: 8px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 120px 1fr;
+
+    &__body {
+      padding: 16px;
+    }
+
+    &__name {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    &__pos {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    &__info {
+      font-size: 14px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 80px 1fr;
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__info {
+      margin-top: 0;
+    }
+  }
+}
+
+.departure {
+  & + & {
+    margin-top: 8px;
+  }
+
+  &__header {
+    background-color: rgba(20, 128, 209, 0.1);
+    padding: 16px 40px 16px 24px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: 0.3s;
+    color: $primary;
+
+    &::after {
+      content: '\f107';
+      font-family: 'Font Awesome 5 Pro';
+      font-size: 24px;
+      font-weight: 300;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      background-color: $primary;
+      color: $white;
+      border-radius: 4px 4px 0 0;
+      text-decoration: none;
+
+      &::after {
+        transform: translateY(-50%) rotateX(180deg);
+      }
+    }
+  }
+
+  &__body {
+    display: none;
+
+    table {
+      tbody {
+        border-top: 0 !important;
+      }
+
+      th {
+        background-color: rgba(20, 128, 209, 0.1);
+        text-align: center;
+        border: 0;
+        white-space: nowrap;
+      }
+
+      td {
+        padding: 16px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__header {
+      padding: 12px 30px 12px 12px;
+      font-size: 12px;
+
+      &::after {
+        right: 12px;
+      }
+    }
+
+    &__body {
+      table {
+        font-size: 12px;
+
+        th,
+        td {
+          padding: 12px 6px;
+          min-width: 160px;
+
+          &:first-child {
+            padding-left: 12px;
+          }
+
+          &:last-child {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+}

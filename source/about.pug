@@ -1,0 +1,41 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          article.post
+            nav.mb-30
+              +breadcrumb('Trang chủ', 'Giới thiệu', 'Chức năng nhiệm vụ')
+
+            h1.post__title Chức năng nhiệm vụ
+            .post__content
+              p Phi-líp-pin quyết định không gia hạn biện pháp tự vệ đối với xi măng nhập khẩu
+              p 11/11/2022 - Ngày 05 tháng 10 năm 2022, Ủy ban Thuế quan Phi-líp-pin (TC) ban hành kết luận cuối cùng về vụ việc gia hạn áp dụng biện pháp tự vệ toàn cầu đối với xi măng Type 1 (mã AHTN 2523.29.90) và xi măng Type 1P (mã AHTN 2523.90.00). Theo đó, TC kết luận trong thời kỳ rà soát, xi măng nhập khẩu từ các nước, trong đó có Việt Nam, không gây thiệt hại nghiêm trọng hoặc đe dọa gây ra thiệt hại nghiêm trọng cho ngành sản xuất xi măng của Phi-líp-pin.
+              p Căn cứ kết luận điều tra và kiến nghị của TC, Bộ trưởng Bộ Công Thương Phi-líp-pin quyết định không gia hạn biện pháp tự vệ. Thuế tự vệ đối với xi măng nhập khẩu vào Phi-líp-pin sẽ hết hạn vào 22 tháng 10 năm 2022.
+              p Thông tin chi tiết về vụ việc xin liên hệ: Phòng Xử lý phòng vệ thương mại nước ngoài, Cục Phòng vệ thương mại, Bộ Công Thương, 23 Ngô Quyền, Hoàn Kiếm, Hà Nội (Chuyên viên phụ trách: Nguyễn Hoàng Kiên  gia hạn biện pháp tự vệ. Thuế tự vệ đối với xi măng nhập khẩu vào Phi-líp-pin sẽ hết hạn vào 22 tháng 10 năm 2022.
+              p.text-center
+                img(src="./images/news-1.jpg", alt="")
+              p Phi-líp-pin quyết định không gia hạn biện pháp tự vệ đối với xi măng nhập khẩu
+              p 11/11/2022 - Ngày 05 tháng 10 năm 2022, Ủy ban Thuế quan Phi-líp-pin (TC) ban hành kết luận cuối cùng về vụ việc gia hạn áp dụng biện pháp tự vệ toàn cầu đối với xi măng Type 1 (mã AHTN 2523.29.90) và xi măng Type 1P (mã AHTN 2523.90.00). Theo đó, TC kết luận trong thời kỳ rà soát, xi măng nhập khẩu từ các nước, trong đó có Việt Nam, không gây thiệt hại nghiêm trọng hoặc đe dọa gây ra thiệt hại nghiêm trọng cho ngành sản xuất xi măng của Phi-líp-pin.
+              p Căn cứ kết luận điều tra và kiến nghị của TC, Bộ trưởng Bộ Công Thương Phi-líp-pin quyết định không gia hạn biện pháp tự vệ. Thuế tự vệ đối với xi măng nhập khẩu vào Phi-líp-pin sẽ hết hạn vào 22 tháng 10 năm 2022.
+              p Thông tin chi tiết về vụ việc xin liên hệ: Phòng Xử lý phòng vệ thương mại nước ngoài, Cục Phòng vệ thương mại, Bộ Công Thương, 23 Ngô Quyền, Hoàn Kiếm, Hà Nội (Chuyên viên phụ trách: Nguyễn Hoàng Kiên, di động: 0942.613.889, email: kiennh@moit.gov.vn; ducpg@moit.gov.vn)./.
+
+        .col-lg-3
+          nav.as-menu
+            h3.as-menu__title Tin tức
+            ul.as-menu__list
+              li.as-menu__item
+                a.as-menu__link(href="./about.html") Giới thiệu chung
+              li.as-menu__item
+                a.as-menu__link.active(href="./about.html") Chức năng nhiệm vụ
+              li.as-menu__item
+                a.as-menu__link(href="./structure.html") Sơ đồ tổ chức
+
+          a.d-block.mt-4(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2
