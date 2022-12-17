@@ -1,0 +1,91 @@
+.s-form {
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    background: $primary;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 46px;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+
+  .form-select,
+  .form-control {
+    padding: 16px;
+    border: 0;
+  }
+}
+
+.brief-content {
+  table {
+    thead:first-child th {
+      &:first-child {
+        border-radius: 4px 0 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 4px 0 0;
+      }
+    }
+
+    &.table>:not(:first-child) {
+      border-top-width: 1px !important;
+    }
+
+    th,
+    td {
+      padding: 16px 20px;
+    }
+
+    th {
+      background-color: $primary;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: $white;
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        border-right: 1px solid rgba(#fff, 0.2);
+      }
+    }
+
+    td {
+      background-color: $white;
+
+      a {
+        color: $primary;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    table {
+      font-size: 12px;
+
+      th,
+      td {
+        padding: 8px 12px;
+      }
+
+      th {
+        font-size: 10px;
+      }
+    }
+  }
+}

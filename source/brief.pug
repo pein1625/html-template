@@ -1,0 +1,70 @@
+extends layout/page
+
+block content
+  nav
+    .container
+      +breadcrumb('Trang chủ', 'Tổng hợp các vụ việc', 'Hồ sơ khởi kiện')
+
+  section.section
+    .container
+      h2.section__title Hồ sơ khởi kiện
+
+      form.s-form(action="")
+        .s-form__title Tìm kiếm
+        .row.gx-20.gy-4
+          .col-lg-3
+            select.form-select
+              option Năm
+              option 1990
+              option 1991
+              option 1992
+              option 1993
+              option 1994
+              option 1995
+              option 1996
+          .col-lg-3
+            select.form-select
+              option Danh mục
+              option Danh mục 1
+              option Danh mục 2
+              option Danh mục 3
+              option Danh mục 4
+          .col-lg-6
+            select.form-select
+              option Loại hình biện pháp
+              option Loại hình biện pháp 1
+              option Loại hình biện pháp 2
+              option Loại hình biện pháp 3
+          .col-lg-6
+            input.form-control(type="text", placeholder="Nước/ vùng lãnh thổ điều tra")
+          .col-lg-6
+            input.form-control(type="text", placeholder="Nước/ vùng lãnh thổ điều tra")
+          .col-12
+            button.s-form__btn(type="submit") Tìm kiếm
+
+      article.brief-content.mt-30
+        .table-responsive
+          table.table
+            thead
+              tr
+                th Tên vụ việc
+                th Loại hình biện pháp
+                th Hàng hóa bị điều tra
+                th
+                  div Nước/Vùng lãnh
+                  div thổ điều tra
+                th Quyết định sơ bộ
+                th Quyết định cuối cùng
+            tbody
+              - for(let i = 0; i < 8; i++)
+                tr
+                  td
+                    a(href="./brief-detail.html") Sắt, thép hợp kim và không hợp mạ kẽm
+                  td Chống bán phá giá
+                  td Sắt, thép hợp kim và không hợp mạ kẽm (Galvanized steel coils/sheets)
+                  td Ấn Độ
+                  td
+                  td
+
+      nav.mt-20.mt-lg-30
+        +pagination
