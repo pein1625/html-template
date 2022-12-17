@@ -1,0 +1,49 @@
+extends layout/page
+
+block content
+  nav
+    .container
+      +breadcrumb('Trang chủ', 'Liên hệ')
+
+  section.section
+    .container
+      h2.section__title.mb-4 Liên hệ
+
+      .row.g-30
+        .col-lg-4
+          .contact-info
+            .contact-info__item
+              .row.g-3.align-items-center
+                .col-auto
+                  .contact-info__icon
+                    i.fal.fa-map-marker-alt
+                .col Địa chỉ: 23 Ngô Quyền, Hoàn Kiếm, Hà Nội
+            .contact-info__item
+              .row.g-3.align-items-center
+                .col-auto
+                  .contact-info__icon
+                    i.fal.fa-envelope
+                .col
+                  a(href="mailto:trav@moit.gov.vn") trav@moit.gov.vn
+            .contact-info__item
+              .row.g-3.align-items-center
+                .col-auto
+                  .contact-info__icon
+                    i.fal.fa-phone
+                .col Điện thoại: #[a(href="tel:(024) 73037898") (024) 73037898] - Fax: #[a(href="tel:(024) 73037897") (024) 73037897]
+
+        .col-lg-8
+          form.contact-form(action="#!")
+            .row.gx-2.gy-20
+              .col-lg-4
+                input.form-control(type="text", placeholder="Họ và tên")
+              .col-lg-4
+                input.form-control(type="text", placeholder="Hộp thư")
+              .col-lg-4
+                input.form-control(type="text", placeholder="Điện thoại")
+              .col-12
+                input.form-control(type="text", placeholder="Địa chỉ")
+              .col-12
+                textarea.form-control(rows="4", placeholder="Ý kiến")
+              .col-12
+                button.contact-form__btn(type="submit") Gửi

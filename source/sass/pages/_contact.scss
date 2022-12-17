@@ -1,0 +1,55 @@
+.contact-info {
+  font-size: 16px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $primary;
+    color: $white;
+    border-radius: 4px;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 14px;
+  }
+}
+
+.contact-form {
+  &__btn {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    background: $primary;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 46px;
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+
+  .form-control {
+    padding: 16px;
+    border: 0;
+  }
+}
