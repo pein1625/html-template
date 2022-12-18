@@ -63,3 +63,27 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  addSwiper('.brand-slider', {
+    slidesPerView: 3,
+    spaceBetween: 16,
+    pagination: true,
+    navigation: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 4
+      },
+      768: {
+        slidesPerView: 5
+      },
+      992: {
+        slidesPerView: 7,
+      },
+      1200: {
+        slidesPerView: 9,
+        spaceBetween: 20,
+      }
+    }
+  });
+});

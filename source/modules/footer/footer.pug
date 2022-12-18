@@ -1,2 +1,64 @@
 mixin footer
   footer.footer
+    .container
+      .footer__inner
+        +brand-slider
+
+        .row.g-30
+          .col-lg-6
+            .footer__name CỤC PHÒNG VỆ THƯƠNG MẠI
+
+            ul.f-contact.mt-4.mt-lg-60
+              li.f-contact__item
+                .row.g-2
+                  .col-auto
+                    i.fal.fa-fw.fa-map-marker-alt
+                  .col Địa chỉ: 23 Ngô Quyền, Hoàn Kiếm, Hà Nội
+              li.f-contact__item
+                .row.g-2
+                  .col-auto
+                    i.fal.fa-fw.fa-envelope
+                  .col
+                    a(href="mailto:trav@moit.gov.vn") trav@moit.gov.vn
+              li.f-contact__item
+                .row.g-2
+                  .col-auto
+                    i.fal.fa-fw.fa-phone
+                  .col Điện thoại: #[a(href="tel:(024) 73037898") (024) 73037898] - Fax: #[a(href="tel:(024) 73037897") (024) 73037897]
+
+            nav.f-social.mt-4.mt-lg-60
+              span.f-social__label Kết nối với chúng tôi
+              a.f-social__btn(href="#!")
+                i.fab.fa-facebook-f
+              a.f-social__btn(href="#!")
+                i.fab.fa-youtube
+
+            .footer__copyright.mt-4 © Bản quyền thuộc Cục Phòng vệ thương mại
+
+          .col-lg-6
+            .row.gy-30.gx-3.gx-lg-30
+              .col-md-6
+                .footer__heading Giới thiệu
+                ul.f-menu
+                  each item in ["Giới thiệu chung","Chức năng nhiệm vụ","Sơ đồ tổ chức"]
+                    li
+                      a(href="#!")= item
+              .col-md-6
+                .footer__heading Liên kết website
+                ul.f-menu
+                  each item in ["Bộ Công Thương","Hệ thống quản lý điều hành","Thư điện tử"]
+                    li
+                      a(href="#!")= item
+              .col-12
+                .footer__heading Tin tức
+                .row.g-3.g-lg-30
+                  .col-6
+                    ul.f-menu
+                      each item in ["Tin kháng kiện","Tin điều tra","Tin cảnh báo sớm","Tin hoạt động"]
+                        li
+                          a(href="#!")= item
+                  .col-6
+                    ul.f-menu
+                      each item in ["Tin WTO","Tin khác","Thông báo","Doanh nghiệp cần biết"]
+                        li
+                          a(href="#!")= item

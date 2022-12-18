@@ -156,7 +156,7 @@
 
   @include media-breakpoint-down(sm) {
     &__frame {
-      width: 70px;
+      width: 90px;
     }
 
     &__title {
@@ -227,7 +227,7 @@
   }
 
   @include media-breakpoint-down(sm) {
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 90px 1fr;
 
     &__title {
       font-size: 14px;

@@ -88,3 +88,16 @@ mixin event-slider
         each item, index in ["10/2022","06/2022","09/2022","06/2022","09/2022","09/2022"]
           .swiper-slide
             +event-2(item)
+
+mixin brand-slider
+  .brand-slider
+    .brand-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 9; i++)
+          .swiper-slide
+            .banner-slider__frame
+              img(src=`./images/brand-${i + 1}.png`, alt="")
+    .brand-slider__prev
+      i.fal.fa-lg.fa-angle-left
+    .brand-slider__next
+      i.fal.fa-lg.fa-angle-right

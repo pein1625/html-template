@@ -279,3 +279,39 @@
     }
   }
 }
+
+.brand-slider {
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: $white;
+  padding: 45px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include slider-nav-2();
+
+  &__frame {
+    @include frame('rect', 60%);
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__prev,
+  &__next {
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding: 24px;
+    border-radius: 8px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 16px;
+  }
+}
