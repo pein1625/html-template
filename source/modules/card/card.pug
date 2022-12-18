@@ -28,6 +28,18 @@ mixin publication
           i.fas.fa-download.me-2
           | Tải về
 
+mixin publication-2
+  - count++
+  .publication-2
+    a.publication-2__frame(href="#!")
+      img(src=`./images/publication-${count % 2 + 1}.jpg`, alt="")
+    .publication-2__body
+      h3.publication-2__title
+        a(href="#!")= (count % 2 ? 'Hệ Thống PVTM' : 'Báo cáo Phòng vệ thương mại năm 2021')
+      .publication-2__info
+        i.fal.fa-clock.me-2
+        | 03/07/2022
+
 mixin news
   - count++
   .news
@@ -57,11 +69,14 @@ mixin news-2
         | 03/07/2022
       .news__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
 
-mixin news-group
-  .news-group
+mixin news-group(tag='')
+  - count++
+  section.news-group
     .news-group__item
+      if (tag)
+        .news-group__tag= tag
       a.news-group__frame(href="./news-detail.html")
-        img(src="./images/news-2.jpg", alt="")
+        img(src=`./images/news-${count % 7 + 1}.jpg`, alt="")
       .news-group__body
         h3.news-group__title
           a(href="./news-detail.html") Ấn Độ khởi xướng điều tra tự vệ đối với một số sản phẩm nhựa PVC
@@ -86,6 +101,19 @@ mixin news-group
       a.news-group__link(href="#!") Xem tất cả
         i.fal.fa-lg.fa-arrow-right.ms-2
 
+mixin news-group-2(addClass='')
+  section.news-group-2(class=addClass)
+    h3.news-group-2__heading Doanh nghiệp
+      br
+      | cần biết
+    each item in ["Thay đổi trong quy định điều tra chống lẩn tránh biện pháp phòng vệ thương mại của Mỹ","Ca-na-đa sửa đổi một số quy định về phòng vệ thương mại","Yêu cầu để khởi xướng điều tra áp dụng biện pháp tự vệ","Danh sách các mặt hàng xuất khẩu bị điều tra và áp dụng biện pháp chống bán phá giá tại Việt Nam"]
+      .news-group-2__item
+        h3.news-group-2__title
+          a(href="./news-detail.html") Thay đổi trong quy định điều tra chống lẩn tránh biện pháp phòng vệ thương mại của Mỹ
+    .news-group-2__footer
+      a.news-group-2__link(href="#!") Xem tất cả
+        i.fal.fa-lg.fa-arrow-right.ms-2
+
 mixin news-3
   - count++
   .news.news--3
@@ -98,3 +126,35 @@ mixin news-3
       .news__info
         i.fal.fa-clock.me-2.text-primary
         | 03/07/2022
+
+mixin event(title='')
+  - count++
+  .event
+    div
+      .event__frame
+        img(src=`./images/event-${count % 3 + 1}.jpg`, alt="")
+    .event__body
+      .event__title= title
+      .event__desc Lễ ra mắt giải pháp hóa đơn thương mại điện tử
+      .event__info
+        i.fal.fa-fw.fa-map-marker-alt.me-2
+        | Địa điểm: 25 Ngô Quyền
+      .event__info
+        i.fal.fa-fw.fa-clock.me-2.text-primary
+        | Thời gian: 9h00 ngày 02/09/2022
+
+mixin event-2(title='')
+  - count++
+  .event.event--2
+    div
+      .event__frame
+        img(src=`./images/event-${count % 3 + 1}.jpg`, alt="")
+    .event__body
+      .event__title= title
+      .event__desc Lễ ra mắt giải pháp hóa đơn thương mại điện tử
+      .event__info
+        i.fal.fa-fw.fa-map-marker-alt.me-2
+        | Địa điểm: 25 Ngô Quyền
+      .event__info
+        i.fal.fa-fw.fa-clock.me-2.text-primary
+        | Thời gian: 9h00 ngày 02/09/2022

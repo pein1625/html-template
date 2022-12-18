@@ -1,3 +1,66 @@
 extends layout/page
 
 block content
+  section.section
+    .container
+      h2.section__title Tin mới
+
+      .row.g-3.g-xl-30
+        .col-lg-6
+          +news-2
+        .col-lg-6
+          .row.g-3.g-xl-30.h-lg-100
+            .col-md-6.h-md-100
+              +news-group('Tin kháng kiện')
+            .col-md-6.h-md-100
+              +news-group('Tin điều tra')
+
+  section.section.pt-3
+    .container
+      h2.section__title Sự kiện sắp diễn ra
+      +event-slider
+
+  section.section.section--light-blue
+    .container
+      .section__header
+        h2.section__title Cảnh báo sớm
+        a.section__link(href="#!") Xem tất cả
+          i.fal.fa-lg.fa-arrow-right.ms-2
+
+      +news-slider
+
+  section.section
+    .container
+      .row
+        .col-lg-8.col-xl-9
+          a.d-block(href="#!")
+            img.w-100(src="./images/home-banner-hoz.jpg", alt="")
+
+          section.section
+            h2.section__title Tin khác
+
+            .row.g-3.g-xl-30
+              - for(let i = 0; i < 6; i++)
+                .col-sm-6.col-xl-4
+                  +news-3
+
+          section.section.pt-2
+            .section__header
+              h2.section__title Ấn phẩm
+              a.section__link(href="./publications.html") Xem tất cả
+                i.fal.fa-lg.fa-arrow-right.ms-2
+
+            .row.g-3.g-xl-30
+              - for(let i = 0; i < 3; i++)
+                .col-lg-4.col-md-6
+                  +publication-2
+
+        .col-lg-4.col-xl-3
+          a.d-block(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2
+
+          +news-group-2('mt-30')

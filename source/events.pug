@@ -7,15 +7,4 @@ block content
 
       .events
         each item, index in ["10/2022","06/2022","09/2022","06/2022","09/2022","09/2022"]
-          .event
-            .event__frame
-              img(src=`./images/event-${index % 3 + 1}.jpg`, alt="")
-            .event__body
-              .event__title= item
-              .event__desc Lễ ra mắt giải pháp hóa đơn thương mại điện tử
-              .event__info
-                i.fal.fa-fw.fa-map-marker-alt.me-2
-                | Địa điểm: 25 Ngô Quyền
-              .event__info
-                i.fal.fa-fw.fa-clock.me-2
-                | Thời gian: 9h00 ngày 02/09/2022
+          +event(item)

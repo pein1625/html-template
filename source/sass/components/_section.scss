@@ -1,6 +1,18 @@
 .section {
   padding: 40px 0;
 
+  &--light-blue {
+    background-color: #CCDEED;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
   &__title {
     font-size: 32px;
     font-weight: 400;
@@ -22,15 +34,45 @@
     }
   }
 
+  &__header &__title {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: $primary;
+
+    i {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: darken($primary, 8%);
+
+      i {
+        transform: translateX(4px);
+      }
+    }
+  }
+
   @include media-breakpoint-down(xl) {
     &__title {
       font-size: 30px;
+    }
+
+    &__link {
+      font-size: 14px;
     }
   }
 
   @include media-breakpoint-down(lg) {
     &__title {
       font-size: 28px;
+    }
+
+    &__link {
+      font-size: 12px;
     }
   }
 }

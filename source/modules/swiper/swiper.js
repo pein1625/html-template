@@ -23,3 +23,43 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.news-slider', {
+    loop: true,
+    navigation: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 14
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 14,
+      }
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.event-slider', {
+    loop: true,
+    navigation: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 14
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 14,
+      }
+    }
+  });
+});
