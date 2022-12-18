@@ -15,11 +15,6 @@ block content
             .col-md-6.h-md-100
               +news-group('Tin điều tra')
 
-  section.section.pt-3
-    .container
-      h2.section__title Sự kiện sắp diễn ra
-      +event-slider
-
   section.section.section--light-blue
     .container
       .section__header
@@ -29,7 +24,8 @@ block content
 
       +news-slider
 
-  section.section
+  section.section.section--relative
+    img.section__texture(src="./images/section-texture.png", alt="")
     .container
       .row
         .col-lg-8.col-xl-9
@@ -44,7 +40,7 @@ block content
                 .col-sm-6.col-xl-4
                   +news-3
 
-          section.section.pt-2
+          section.section.pt-2.pb-0
             .section__header
               h2.section__title Ấn phẩm
               a.section__link(href="./publications.html") Xem tất cả
@@ -64,3 +60,8 @@ block content
             +video-2
 
           +news-group-2('mt-30')
+
+  section.section.pt-3
+    .container
+      h2.section__title Sự kiện sắp diễn ra
+      +event-slider

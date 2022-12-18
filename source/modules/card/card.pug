@@ -69,6 +69,7 @@ mixin news-2
         | 03/07/2022
       .news__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed integer metus sit ultrices porttitor dictum proin sagittis. Malesuada eget faucibus lacinia enim venenatis convallis. Nec nisi quis faucibus vulputate est, dictumst molestie nibh. A, posuere leo etiam cras felis diam nunc.
 
+
 mixin news-group(tag='')
   - count++
   section.news-group
@@ -123,6 +124,20 @@ mixin news-3
       a.news__tag(href="#!") Tin kháng kiện
       h3.news__title
         a(href="./news-detail.html") Những vụ việc giải quyết tranh chấp đầu tiên sử dụng cơ chế phúc thẩm trọng tài tạm thời (MPIA)
+      .news__info
+        i.fal.fa-clock.me-2.text-primary
+        | 03/07/2022
+
+mixin news-4
+  - count++
+  .news.news--4
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 7 + 1}.jpg`, alt="")
+    .news__body
+      .d-flex
+        a.news__tag(href="#!") Tin kháng kiện
+      h3.news__title
+        a(href="./news-detail.html") Phi-líp-pin quyết định không áp dụng thuế tự vệ đối với hạt nhựa HDPE của Việt Nam
       .news__info
         i.fal.fa-clock.me-2.text-primary
         | 03/07/2022

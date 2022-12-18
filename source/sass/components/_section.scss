@@ -5,6 +5,19 @@
     background-color: #CCDEED;
   }
 
+  &--relative {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__texture {
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
   &__header {
     display: flex;
     flex-wrap: wrap;
@@ -57,6 +70,10 @@
   }
 
   @include media-breakpoint-down(xl) {
+    &__texture {
+      display: none;
+    }
+
     &__title {
       font-size: 30px;
     }

@@ -219,6 +219,63 @@
   }
 }
 
+.news-slider-2 {
+  position: relative;
+  margin: -16px -8px;
+
+  .swiper-slide {
+    height: auto;
+    padding: 16px 8px;
+  }
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    background-color: $primary;
+    color: $white;
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-out;
+
+    &:hover {
+      @include shadow("");
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+
+  &__next {
+    left: calc(100% - 8px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__prev {
+      left: -30px;
+    }
+
+    &__next {
+      left: calc(100% + 30px);
+    }
+  }
+}
+
 .event-slider {
   position: relative;
   background-color: $white;
@@ -313,5 +370,83 @@
 
   @include media-breakpoint-down(md) {
     padding: 16px;
+  }
+}
+
+.noti-slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 5px 70px 5px 0;
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    color: $white;
+    background-color: $primary;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    &:hover {
+      background-color: darken($primary, 8%);
+    }
+  }
+
+  &__prev {
+    right: 30px;
+  }
+
+  &__container {
+    flex: 0 0 calc(100% - 110px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 36px;
+
+    a {
+      @include max-line(2);
+      font-size: 14px;
+      line-height: 18px;
+      max-height: 36px;
+      font-weight: 500;
+      color: #666666;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-right: 60px;
+
+    &__title {
+      font-size: 12px;
+    }
+
+    &__container {
+      flex: 0 0 calc(100% - 90px);
+    }
+
+    &__item {
+      a {
+        font-size: 12px;
+      }
+    }
   }
 }

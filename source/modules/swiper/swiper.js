@@ -45,6 +45,22 @@ $(function() {
 });
 
 $(function() {
+  addSwiper('.news-slider-2', {
+    loop: true,
+    navigation: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 14,
+      }
+    }
+  });
+});
+
+$(function() {
   addSwiper('.event-slider', {
     loop: true,
     navigation: true,
@@ -84,6 +100,17 @@ $(function() {
         slidesPerView: 9,
         spaceBetween: 20,
       }
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.noti-slider', {
+    navigation: true,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 4000,
     }
   });
 });

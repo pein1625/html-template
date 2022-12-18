@@ -1,12 +1,11 @@
 include ../navbar/navbar
 include ../menu/menu
 
-mixin header
-  header.header
+mixin header(addClass='')
+  header.header(class=addClass)
     .header__wrapper
       .container
         .header__inner
-          img.header__bg(src="./images/header-bg.png", alt="")
           a.header__logo(href="./index.html")
             img(src="./images/logo.png", alt="")
             div
@@ -14,6 +13,7 @@ mixin header
               .header__text-2 Cục phòng vệ thương mại
               .header__text-3 Trade remedies authority of Viet Nam
           .header__elements
+            img.header__bg(src=addClass ? "./images/header-bg-2.png" : "./images/header-bg.png", alt="")
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
 
     nav.navigation
@@ -22,3 +22,7 @@ mixin header
           +navbar
             +search
             +menu(menu)
+
+  nav.bg-white
+    .container
+      +noti-slider

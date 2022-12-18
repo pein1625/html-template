@@ -77,6 +77,22 @@ mixin news-slider
           .swiper-slide
             +news-3
 
+mixin news-slider-2
+  .news-slider-2
+    .news-slider-2__prev
+      i.fal.fa-arrow-left
+    .news-slider-2__next
+      i.fal.fa-arrow-right
+    .news-slider-2__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            .row.g-3.g-lg-30
+              .col-12
+                +news-4
+              .col-12
+                +news-4
+
 mixin event-slider
   .event-slider
     .event-slider__prev
@@ -101,3 +117,17 @@ mixin brand-slider
       i.fal.fa-lg.fa-angle-left
     .brand-slider__next
       i.fal.fa-lg.fa-angle-right
+
+mixin noti-slider
+  .noti-slider
+    .noti-slider__title Thông báo
+    .noti-slider__prev
+      i.fal.fa-arrow-left
+    .noti-slider__next
+      i.fal.fa-arrow-right
+    .noti-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            .noti-slider__item
+              a(href="#!") Phi-líp-pin quyết định không áp dụng thuế tự vệ đối với hạt nhựa HDPE của Việt Nam
