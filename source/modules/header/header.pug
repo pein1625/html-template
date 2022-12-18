@@ -6,9 +6,19 @@ mixin header
     .header__wrapper
       .container
         .header__inner
+          img.header__bg(src="./images/header-bg.png", alt="")
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
+            div
+              .header__text-1 Bộ công thương Việt Nam
+              .header__text-2 Cục phòng vệ thương mại
+              .header__text-3 Trade remedies authority of Viet Nam
           .header__elements
-            +navbar
-              +menu(menu)
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+    nav.navigation
+      .container
+        .navigation__inner
+          +navbar
+            +search
+            +menu(menu)

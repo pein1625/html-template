@@ -125,59 +125,67 @@
 			"text": "Trang chủ",
 			"url": "./index.html",
 			"active": true,
-			"hasIcon": false
+			"hasIcon": true
+		},
+		{
+			"text": "Tin tức",
+			"url": "./news.html",
+			"submenu": [
+				{
+					"text": "Tin WTO",
+					"url": "#!"
+				},
+				{
+					"text": "Tin điều tra",
+					"url": "#!"
+				},
+				{
+					"text": "Tin cảnh báo sớm",
+					"url": "#!"
+				},
+				{
+					"text": "Tin hoạt động",
+					"url": "#!"
+				},
+				{
+					"text": "Tin WTO",
+					"url": "#!"
+				}
+			]
 		},
 		{
 			"text": "Giới thiệu",
 			"url": "./about.html",
 			"submenu": [
 				{
-					"text": "Dropdown",
+					"text": "Giới thiệu chung",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Chức năng nhiệm vụ",
 					"url": "#!"
 				},
 				{
-					"text": "Dropdown",
+					"text": "Sơ đồ tổ chức",
 					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
 				}
 			]
 		},
 		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
+			"text": "Tổng hợp các vụ việc",
+			"url": "./brief.html"
 		},
 		{
-			"text": "Dự án",
-			"url": "./projects.html"
+			"text": "Văn bản pháp luật",
+			"url": "./documents.html"
 		},
 		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
+			"text": "Quy trình thủ tục",
+			"url": "#!"
 		},
 		{
-			"text": "Tin tức",
-			"url": "./news.html"
+			"text": "Ấn phẩm",
+			"url": "./publications.html"
 		},
 		{
 			"text": "Liên hệ",

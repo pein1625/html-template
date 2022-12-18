@@ -160,19 +160,37 @@
     }
 
     &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
+      flex-grow: 1;
     }
 
     &-root > &-item > &-link {
       font-size: 14px;
-      padding: 12px 0;
+      font-weight: 400;
+      padding: 16px 8px;
       transition: 0.3s;
+      color: $white;
+      text-align: center;
+
+      &.active {
+        background-color: #2A99EC;
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      background-color: #2A99EC;
     }
 
     &-root > &-item > &-toggle {
       display: none;
+    }
+
+    &-root > &-item-group > &-link {
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 400;
+        margin-left: 8px;
+      }
     }
 
     &-root > &-item-group > &-sub {
@@ -185,19 +203,6 @@
     &-root > &-item-group &-item-group:hover > &-sub {
       display: block;
       animation: menu-float-show 0.2s ease-out;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
     }
   }
 }

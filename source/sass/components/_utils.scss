@@ -83,7 +83,26 @@
     border-color: $input-focus-border-color;
   }
 
-  @media (min-width: 1200px) {
-    display: none;
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+    border: 0;
+    background: 0;
+    width: 280px;
+    position: absolute;
+    z-index: 10;
+    top: -66px;
+    right: 0;
+    transform: translateY(-50%);
+
+    .form-control {
+      height: 36px;
+      border-radius: 0 !important;
+      border: 0;
+    }
+
+    .input-group-text {
+      border-radius: 0 !important;
+      border: 0;
+    }
   }
 }
