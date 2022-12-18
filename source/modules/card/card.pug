@@ -144,7 +144,7 @@ mixin news-4
 
 mixin event(title='')
   - count++
-  .event
+  .event.wow.fadeInUp(data-wow-delay="0.2s")
     div
       .event__frame
         img(src=`./images/event-${count % 3 + 1}.jpg`, alt="")

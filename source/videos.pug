@@ -11,7 +11,7 @@ block content
 
       .row.g-3.g-lg-20.g-xl-30
         - for(let i = 0; i < 12; i++)
-          .col-6.col-lg-4
+          .col-6.col-lg-4.wow.fadeInUp(data-wow-delay=`${i % 3 * 0.1}s`)
             +video
 
       nav.mt-20.mt-lg-30

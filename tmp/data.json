@@ -159,15 +159,15 @@
 			"submenu": [
 				{
 					"text": "Giới thiệu chung",
-					"url": "#!"
+					"url": "./about.html"
 				},
 				{
 					"text": "Chức năng nhiệm vụ",
-					"url": "#!"
+					"url": "./about.html"
 				},
 				{
 					"text": "Sơ đồ tổ chức",
-					"url": "#!"
+					"url": "./structure.html"
 				}
 			]
 		},
@@ -200,7 +200,7 @@
 			},
 			{
 				"title": "Trang chủ 3",
-				"url": "index2"
+				"url": "index-2"
 			},
 			{
 				"title": "Giới thiệu",

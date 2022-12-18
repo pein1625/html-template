@@ -23,11 +23,11 @@ block content
               p Thông tin chi tiết về vụ việc xin liên hệ: Phòng Xử lý phòng vệ thương mại nước ngoài, Cục Phòng vệ thương mại, Bộ Công Thương, 23 Ngô Quyền, Hoàn Kiếm, Hà Nội (Chuyên viên phụ trách: Nguyễn Hoàng Kiên, di động: 0942.613.889, email: kiennh@moit.gov.vn; ducpg@moit.gov.vn)./.
 
           section.section.py-0.mt-30
-            h2.section__title Tin tức khác
+            h2.section__title.wow.fadeInUp(data-wow-delay=`0.1s`) Tin tức khác
 
             .row.g-3.g-xl-30
               - for(let i = 0; i < 3; i++)
-                .col-sm-6.col-xl-4
+                .col-sm-6.col-xl-4.wow.fadeInUp(data-wow-delay=`${i % 3 * 0.1}s`)
                   +news-3
 
         .col-lg-3
