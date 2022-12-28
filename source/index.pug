@@ -3,12 +3,14 @@ extends layout/page
 block content
   section.section
     .container
-      h2.section__title Tin mới
 
       .row.g-3.g-xl-30
         .col-lg-6.wow.fadeInUp(data-wow-delay="0.1s")
-          +news-2
+          h2.section__title Tin mới
+          +news-slider-3
+          //- +news-2
         .col-lg-6
+          h2.section__title.section__title--empty.d-none.d-lg-block &nbsp;
           .row.g-3.g-xl-30.h-lg-100
             .col-md-6.h-md-100.wow.fadeInUp(data-wow-delay="0.2s")
               +news-group('Tin kháng kiện')

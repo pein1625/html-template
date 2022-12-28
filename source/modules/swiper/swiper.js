@@ -61,6 +61,18 @@ $(function() {
 });
 
 $(function() {
+  addSwiper('.news-slider-3', {
+    loop: true,
+    navigation: true,
+    speed: 600,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    }
+  });
+});
+
+$(function() {
   addSwiper('.event-slider', {
     loop: true,
     navigation: true,

@@ -45,6 +45,12 @@
       left: 0;
       transform: translateY(-50%);
     }
+
+    &--empty {
+      &::before {
+        display: none;
+      }
+    }
   }
 
   &__header &__title {

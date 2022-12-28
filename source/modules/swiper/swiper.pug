@@ -93,6 +93,18 @@ mixin news-slider-2
               .col-12
                 +news-4
 
+mixin news-slider-3
+  .news-slider-3
+    .news-slider-3__prev
+      i.fal.fa-arrow-left
+    .news-slider-3__next
+      i.fal.fa-arrow-right
+    .news-slider-3__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 3; i++)
+          .swiper-slide
+            +news-2
+
 mixin event-slider
   .event-slider
     .event-slider__prev

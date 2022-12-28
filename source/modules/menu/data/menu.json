@@ -38,15 +38,81 @@
       "submenu": [
         {
           "text": "Giới thiệu chung",
-          "url": "./about.html"
+          "url": "./about.html",
+          "submenu": [
+            {
+              "text": "Tin WTO",
+              "url": "#!"
+            },
+            {
+              "text": "Tin điều tra",
+              "url": "#!"
+            },
+            {
+              "text": "Tin cảnh báo sớm",
+              "url": "#!"
+            },
+            {
+              "text": "Tin hoạt động",
+              "url": "#!"
+            },
+            {
+              "text": "Tin WTO",
+              "url": "#!"
+            }
+          ]
         },
         {
           "text": "Chức năng nhiệm vụ",
-          "url": "./about.html"
+          "url": "./about.html",
+          "submenu": [
+            {
+              "text": "Tin WTO",
+              "url": "#!"
+            },
+            {
+              "text": "Tin điều tra",
+              "url": "#!"
+            },
+            {
+              "text": "Tin cảnh báo sớm",
+              "url": "#!"
+            },
+            {
+              "text": "Tin hoạt động",
+              "url": "#!"
+            },
+            {
+              "text": "Tin WTO",
+              "url": "#!"
+            }
+          ]
         },
         {
           "text": "Sơ đồ tổ chức",
-          "url": "./structure.html"
+          "url": "./structure.html",
+          "submenu": [
+            {
+              "text": "Tin WTO",
+              "url": "#!"
+            },
+            {
+              "text": "Tin điều tra",
+              "url": "#!"
+            },
+            {
+              "text": "Tin cảnh báo sớm",
+              "url": "#!"
+            },
+            {
+              "text": "Tin hoạt động",
+              "url": "#!"
+            },
+            {
+              "text": "Tin WTO",
+              "url": "#!"
+            }
+          ]
         }
       ]
     },
