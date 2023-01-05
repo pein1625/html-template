@@ -59,7 +59,21 @@
     border-color: $input-focus-border-color;
   }
 
-  @media (min-width: 1200px) {
+  @include media-breakpoint-up(xl) {
     display: none;
+    width: 100%;
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 0 0 4px 4px;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+
+    .form-control {
+      height: 40px;
+      padding-left: 20px;
+    }
   }
 }

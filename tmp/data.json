@@ -122,14 +122,12 @@
 	},
 	"menu": [
 		{
-			"text": "Trang chủ",
-			"url": "./index.html",
-			"active": true,
-			"hasIcon": false
+			"text": "Về HMG",
+			"url": "./about.html"
 		},
 		{
-			"text": "Giới thiệu",
-			"url": "./about.html",
+			"text": "Dịch vụ",
+			"url": "./products.html",
 			"submenu": [
 				{
 					"text": "Dropdown",
@@ -164,20 +162,12 @@
 			]
 		},
 		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
-		},
-		{
-			"text": "Dự án",
-			"url": "./projects.html"
-		},
-		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
-		},
-		{
 			"text": "Tin tức",
 			"url": "./news.html"
+		},
+		{
+			"text": "Tuyển dụng",
+			"url": "./recruit.html"
 		},
 		{
 			"text": "Liên hệ",
@@ -191,16 +181,28 @@
 				"url": "index"
 			},
 			{
-				"title": "Giới thiệu",
+				"title": " ",
 				"url": "about"
 			},
 			{
-				"title": "Sản phẩm",
-				"url": "products"
+				"title": "Công nghệ VR 360",
+				"url": "vr-360"
 			},
 			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
+				"title": "Thiết kế website",
+				"url": "web-design"
+			},
+			{
+				"title": "Production",
+				"url": "production"
+			},
+			{
+				"title": "Branding",
+				"url": "branding"
+			},
+			{
+				"title": "Employer Branding",
+				"url": "employer-branding"
 			},
 			{
 				"title": "Tin tức",
@@ -209,6 +211,14 @@
 			{
 				"title": "Chi tiết tin tức",
 				"url": "news-detail"
+			},
+			{
+				"title": "Tuyển dụng",
+				"url": "recruit"
+			},
+			{
+				"title": "Chi tiết tuyển dụng",
+				"url": "recruit-detail"
 			},
 			{
 				"title": "Liên hệ",

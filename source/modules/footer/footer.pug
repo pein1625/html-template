@@ -1,2 +1,66 @@
 mixin footer
   footer.footer
+    .container-fluid
+      .row.gx-xxl-80.gy-30
+        .col-lg-6.col-xl-7
+          .footer__name
+            | OUR PASSION IS
+            br
+            strong BRINGING BRANDS TO LIFE
+
+          .mt-4.mt-xxl-40
+            a.n-btn.n-btn--lg(href="./contact.html") Contact Us
+
+        .col-lg-6.col-xl-5
+          .f-contact
+            .f-contact__item
+              .row.g-0
+                .col-auto.f-contact__label a.
+                .col 93A Thụy Khuê, Tây Hồ, Hà Nội
+                  br
+                  | 22-24 Ung Văn Khiêm, Bình Thạnh, TP. Hồ Chí Minh
+            .f-contact__item
+              .row.g-0
+                .col-auto.f-contact__label e.
+                .col #[a(href="mailto:hello@hmg.vn") hello@hmg.vn]
+            .f-contact__item
+              .row.g-0
+                .col-auto.f-contact__label m.
+                .col #[a(href="tel:(+84) 963.186.388") (+84) 963.186.388]
+
+      .border-top.border-white.my-30.my-xl-40.my-xxl-50
+
+      .row.g-3
+        .col-6.col-lg-3
+          ul.f-menu
+            each item in ['Về HMG', 'Hệ sinh thái HMG', 'Hồ sơ năng lực']
+              li
+                a(href="#!")= item
+
+        .col-6.col-lg-3
+          ul.f-menu
+            each item in ['Công nghệ VR 360', 'Thiết kế WEB/WEB 360', 'Production']
+              li
+                a(href="#!")= item
+
+        .col-6.col-lg-3
+          ul.f-menu
+            each item in ['Thiết kế branding', 'Employee branding']
+              li
+                a(href="#!")= item
+
+        .col-6.col-lg-3
+          ul.f-menu
+            each item in ['Tin tức', 'Tuyển dụng', 'Liên hệ']
+              li
+                a(href="#!")= item
+
+    .footer__end.mt-30.mt-xl-40.mt-xxl-80
+      .container-fluid
+        .row.align-items-center.justify-content-between.g-2
+          .col-auto
+            nav.f-nav
+              each item in ['Privacy Policy', 'Cookie Policy', 'Sitemap']
+                a(href="#!")= item
+          .col-auto
+            .footer__copyright © HMG 2022. All rights reserved.

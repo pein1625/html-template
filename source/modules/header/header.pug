@@ -4,11 +4,20 @@ include ../menu/menu
 mixin header
   header.header
     .header__wrapper
-      .container
+      .container-fluid
         .header__inner
           a.header__logo(href="./index.html")
             img(src="./images/logo.svg", alt="")
           .header__elements
             +navbar
+              +search
               +menu(menu)
-            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+            button.btn-search(type="button")
+              i.fal.fa-lg.fa-search
+
+          a.btn-hotline(href="tel:(+84) 963.186.388")
+            img(src="./images/icon-phone-call-red.svg", alt="")
+            span.ms-3 (+84) 963.186.388
+
+          button.btn-toggle.d-xl-none.js-navbar-toggle.ms-4

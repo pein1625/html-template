@@ -1,6 +1,13 @@
 // COMMON USES VARIABLES
 
 // main colors
+$primary: #343693;
+$danger: #D72128;
+
+$gray: #7F7F7F;
+$gray-light: #FAFAFF;
+$gray-lighter: #F2F2FF;
+$ping-light: #F5C1C3;
 
 // $grid-breakpoints: (
 //   xs: 0,
@@ -18,6 +25,11 @@
 //   xl: 1140px,
 //   xxl: 1320px
 // );
+
+$border-radius:               5px;
+$border-radius-sm:            10px;
+$border-radius-lg:            15px;
+$border-radius-pill:          20px;
 
 $spacer: 1rem;
 $spacers: (
@@ -100,6 +112,6 @@ $gradient: linear-gradient(
 );
 
 // $font-size-base: 0.875rem;
-$font-family-sans-serif: Arial, system-ui, -apple-system, "Segoe UI", Roboto,
+$font-family-sans-serif: 'Montserrat', Arial, system-ui, -apple-system, "Segoe UI", Roboto,
   "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

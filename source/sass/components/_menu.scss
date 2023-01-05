@@ -161,14 +161,16 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 50px;
       }
     }
 
     &-root > &-item > &-link {
-      font-size: 14px;
+      font-size: 16px;
       padding: 12px 0;
       transition: 0.3s;
+      text-transform: unset;
+      color: $primary;
     }
 
     &-root > &-item > &-toggle {
@@ -191,13 +193,12 @@
   @include media-breakpoint-up(xxl) {
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 66px;
       }
     }
 
     &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
+      font-size: 20px;
     }
   }
 }

@@ -1,14 +1,12 @@
 {
   "menu": [
     {
-      "text": "Trang chủ",
-      "url": "./index.html",
-      "active": true,
-      "hasIcon": false
+      "text": "Về HMG",
+      "url": "./about.html"
     },
     {
-      "text": "Giới thiệu",
-      "url": "./about.html",
+      "text": "Dịch vụ",
+      "url": "./products.html",
       "submenu": [
         {
           "text": "Dropdown",
@@ -43,20 +41,12 @@
       ]
     },
     {
-      "text": "Sản phẩm",
-      "url": "./products.html"
-    },
-    {
-      "text": "Dự án",
-      "url": "./projects.html"
-    },
-    {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
-    },
-    {
       "text": "Tin tức",
       "url": "./news.html"
+    },
+    {
+      "text": "Tuyển dụng",
+      "url": "./recruit.html"
     },
     {
       "text": "Liên hệ",
