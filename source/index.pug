@@ -1,3 +1,111 @@
 extends layout/page
 
 block content
+  section.banner
+    svg.banner__circle-1(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner__circle-2(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner__circle-3(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    img.banner__img(src="./images/banner-img.png", alt="")
+    .container
+      .row
+        .col-lg-6
+          .banner__subtitle XIN CHÀO, CHÚNG TÔI LÀ
+          .banner__title HMG
+          .banner__desc Được thành lập từ năm 2015, là một trong những agency hàng đầu trong lĩnh vực Marketing. Chúng tôi cung cấp chiến lược và các giải pháp đổi mới đáp ứng tốt nhất nhu cầu, đem lại giá trị và hơn thế nữa cho từng doanh nghiệp.
+    .banner__social
+      .container
+        nav.n-social
+          a.n-social__item.n-social__item--facebook(href="#!")
+            img.n-social__icon(src="./images/icon-facebook.svg", alt="")
+            img.n-social__icon-white(src="./images/icon-facebook-white.svg", alt="")
+            span FACEBOOK
+          a.n-social__item.n-social__item--youtube(href="#!")
+            img.n-social__icon(src="./images/icon-youtube.svg", alt="")
+            img.n-social__icon-white(src="./images/icon-youtube-white.svg", alt="")
+            span YOUTUBE
+          a.n-social__item.n-social__item--linkedin(href="#!")
+            img.n-social__icon(src="./images/icon-linkedin.svg", alt="")
+            img.n-social__icon-white(src="./images/icon-linkedin-white.svg", alt="")
+            span LINKEDIN
+
+  section.section.overflow-hidden.bg-light.pb-40
+    svg.position-absolute.top-50.start-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(-50%, -80%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-50.start-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(-85%, -25%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .h-about
+        .h-about__bg
+        .row.g-30.align-items-center.mb-30.mb-xl-40.mb-xxl-50
+          .col-lg-5
+            .section__subtitle.text-start
+              span VỀ CHÚNG TÔI
+            h2.section__title.text-start.mb-0 HỆ SINH THÁI
+              br
+              | CỦA HMG
+          .col-lg-7
+            .h-about__content Được thành lập từ năm 2015, là một trong những agency hàng đầu trong lĩnh vực Marketing. Chúng tôi cung cấp chiến lược và các giải pháp đổi mới đáp ứng tốt nhất nhu cầu, đem lại giá trị và hơn thế nữa cho từng doanh nghiệp.
+        .row.g-30
+          .col-lg-4
+            +ecosystem('./images/logo-hmn.svg', 'Đơn vị tổ chức sự kiện, các giải pháp Truyền thông & Marketing, Thiết kế sáng tạo')
+          .col-lg-4
+            +ecosystem('./images/logo-vr-plus.svg', 'Đơn vị nghiên cứu và cung cấp các giải pháp thực tế ảo (VR) và thực tế ảo tăng cường (AR)')
+          .col-lg-4
+            +ecosystem('./images/logo-meta-plus.svg', 'Đơn vị nghiên cứu và cung cấp các ứng dụng metaverse')
+
+  section.section
+    svg.position-absolute.top-0.end-0(viewBox="0 0 100 100", style="z-index: -1; width: 26.3vw; transform: translate(50%, -25%); color: #F4F4FF")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .section__subtitle
+        span DỊCH VỤ
+      h2.section__title DỊCH VỤ CHÚNG TÔI CUNG CẤP
+
+      +service-slider
+
+  section.section.overflow-hidden.bg-light
+    svg.position-absolute.top-0.start-0(viewBox="0 0 100 100", style="z-index: -1; width: 26.3vw; transform: translate(-30%, -30%); color: #F4F4FF")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-50.end-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(50%, -80%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-50.end-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(85%, -25%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .review-slider
+        .row.g-0
+          .col-lg-6.mb-30.mb-lg-0
+            .section__subtitle.text-start
+              span ĐÁNH GIÁ TỪ ĐỐI TÁC
+            h2.section__title.text-start.mb-0 KHÁCH HÀNG
+              br
+              | NÓI VỀ HMG
+
+            .review-slider__nav
+              .review-slider__prev
+                i.fal.fa-arrow-left
+              .review-slider__next
+                i.fal.fa-arrow-right
+
+          .col-lg-6
+            .review-slider__body
+              .swiper-container.review-slider__container
+                .swiper-wrapper
+                  - for(let i = 0; i < 3; i++)
+                    .swiper-slide
+                      +review
+            .review-slider__pagination
+
+  section.section.overflow-hidden
+    svg.position-absolute.bottom-0.start-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(-60%, -35%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.bottom-0.start-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(-30%, 50%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .section__subtitle
+        span KHÁCH HÀNG CỦA CHÚNG TÔI
+      h2.section__title ĐƯỢC TIN TƯỞNG BỞI 100+ DOANH NGHIỆP
+
+      +partner-slider

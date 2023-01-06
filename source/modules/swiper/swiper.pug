@@ -64,3 +64,45 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin partner-slider
+  .partner-slider
+    .partner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 30; i++)
+          .swiper-slide
+            a.partner(href="#!")
+              img(src=`./images/partner-${i%15+1}.png`, alt="")
+    .partner-slider__pagination
+
+mixin service-slider
+  .service-slider
+    .service-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +service
+            | CÔNG NGHỆ
+            br
+            | VR 360
+        .swiper-slide
+          +service
+            | THIẾT KẾ WEB/
+            br
+            | WEB 360
+        .swiper-slide
+          +service
+            | PRODUCTION
+        .swiper-slide
+          +service
+            | PRODUCTION
+        .swiper-slide
+          +service
+            | EMPLOYER
+            br
+            | BRANDING
+        .swiper-slide
+          +service
+            | CÔNG NGHỆ
+            br
+            | VR 360
+    .service-slider__pagination

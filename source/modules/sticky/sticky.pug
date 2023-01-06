@@ -9,25 +9,11 @@ mixin phone-ring
     span.phone-ring__text 0123.456.789
 
 mixin sticky-btns
-  .sticky-btns
-    .sticky-btns__wrapper
-      a.sticky-btns__item(href="tel:0987.654.321")
-        .sticky-btns__icon
-          i.fa.fa-phone.fa-lg.text-white
-        span Kinh doanh 1
-      a.sticky-btns__item(href="tel:0987.654.321")
-        .sticky-btns__icon
-          i.fa.fa-phone.fa-lg.text-white
-        span Kinh doanh 2
-      a.sticky-btns__item(href="tel:0987.654.321")
-        .sticky-btns__icon
-          i.fa.fa-facebook.fa-lg.text-white
-        span Facebook
-      a.sticky-btns__item(href="tel:0987.654.321")
-        .sticky-btns__icon.sticky-btns__icon--zalo
-          img(src="./images/icon-zalo-chat-white.png", alt="")
-        span Zalo
-    a.sticky-btns__toggle(href="#!")
-      .sticky-btns__icon
-        img(src="./images/icon-grid.png", alt="")
-      span Liên hệ
+  nav.sticky-btns
+    a.sticky-btns__item(href="#!")
+      img(src="./images/icon-envelope-white.svg", alt="")
+    a.sticky-btns__item.sticky-btns__item--red(href="#!")
+      img(src="./images/icon-phone-call-white.svg", alt="")
+
+mixin btn-download
+  a.btn-download(href="#!") Tải hồ sơ năng lực

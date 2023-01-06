@@ -23,3 +23,62 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.partner-slider', {
+    slidesPerView: 3,
+    slidesPerColumn: 3,
+    slidesPerColumnFill: 'row',
+    pagination: true,
+    spaceBetween: 8,
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 16,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 16,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.review-slider', {
+    spaceBetween: 20,
+    pagination: true,
+    navigation: true,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.service-slider', {
+    loop: true,
+    pagination: true,
+    navigation: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 60,
+      }
+    }
+  });
+});

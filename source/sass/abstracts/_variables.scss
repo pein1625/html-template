@@ -3,28 +3,28 @@
 // main colors
 $primary: #343693;
 $danger: #D72128;
-
+$light: #FAFAFF;
 $gray: #7F7F7F;
 $gray-light: #FAFAFF;
 $gray-lighter: #F2F2FF;
 $ping-light: #F5C1C3;
 
-// $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-// );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1320px
-// );
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1350px
+);
 
 $border-radius:               5px;
 $border-radius-sm:            10px;
