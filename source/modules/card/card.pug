@@ -48,3 +48,13 @@ mixin research(icon='', title='')
     .research__overlay
       .research__title= title
     img.research__icon(src=icon, alt="")
+
+mixin n-media(icon="./images/icon-globe-vr.svg", title='Thiết kế Web 360')
+  .n-media
+    .row.g-20.g-xxl-30
+      .col-auto
+        .n-media__icon
+          img(src=icon, alt="")
+      .col
+        .n-media__title=title
+        .n-media__desc Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Phasellus interdum nunc a viverra auctor.

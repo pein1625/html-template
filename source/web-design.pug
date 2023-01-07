@@ -1,3 +1,68 @@
 extends layout/page
 
 block content
+  section.section.bg-light.overflow-hidden.banner-2
+    svg.banner-2__circle-1(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-2__circle-2(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-2__circle-3(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    img.banner-2__img(src="./images/web-design.png", alt="")
+    .container
+      .section__subtitle.text-start.mb-2
+        span THIẾT KẾ WEB/WEB 360
+      h2.section__title.text-start.mb-0 diện mạo mới cho
+        br
+        | website
+      .banner-2__desc.mt-3.mt-lg-20 Website là kênh tiếp xúc với khách hàng đầu tiên cũng như là bộ mặt của mỗi doanh nghiệp, thương hiệu. Vì vậy, đây là kênh mà bạn cần phải chú trọng và đầu tư nhất về cả nội dung và hình ảnh. HMG sẽ cung cấp những thông tin tư vấn tốt nhất và thiết kế cho bạn một website thực sự chuyên nghiệp – ấn tượng phù hợp với yêu cầu của doanh nghiệp của mình.
+      .mt-3.mt-lg-20
+        a.banner-2__link(href="#!") Xem thêm
+
+  section.section.overflow-hidden
+    svg.position-absolute.top-50.start-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(-50%, -80%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-50.start-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(-85%, -25%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.bottom-0.end-0(viewBox="0 0 100 100", style="z-index: -1; width: 32vw; transform: translate(25%, 25%); color: #F2F3FF;")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .section__subtitle
+        span GIẢI PHÁP THIẾT KẾ WEBSITE/WEBSITE 360
+      h2.section__title SẢN PHẨM CỦA CHÚNG TÔI
+
+      .row.g-4.g-xxl-60
+        .col-lg-9.order-lg-1
+          .row.g-3.g-xl-4
+            - for(let i = 0; i < 9; i++)
+              .col-6.col-md-4
+                +product
+
+          .mt-4.mt-xl-40.text-center
+            a.n-btn.n-btn--light(href="#!") Load more
+
+        .col-lg-3
+          ul.as-menu
+            each item, index in ["TẤT CẢ","THIẾT KẾ WEBSITE","THIẾT KẾ WEBSITE 360"]
+              li
+                a(class=index?'':'active', href="#!")= item
+
+  section.section.overflow-hidden.bg-light
+    svg.position-absolute.bottom-0.end-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(60%, -35%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.bottom-0.end-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(30%, 50%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .row.g-30.align-items-center
+        .col-lg-7
+          .section__subtitle.text-start
+            span GIẢI PHÁP PRODUCTION
+          h2.section__title.text-start.mb-0 CHÚNG TÔI
+            br
+            | CUNG CẤP GIẢI PHÁP
+          .mt-4.mt-xl-40
+            a.n-btn(href="#!") Yêu cầu báo giá
+
+        .col-lg-5
+          +n-media('./images/icon-globe-design.svg', 'Thiết kế Website')
+          +n-media('./images/icon-globe-vr.svg', 'Thiết kế Web 360')
