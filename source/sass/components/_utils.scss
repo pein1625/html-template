@@ -1,5 +1,6 @@
 .breadcrumb {
   margin-bottom: 0;
+  color: $primary;
 
   &-item {
     &,
@@ -8,7 +9,7 @@
     &.active::before,
     a,
     a:hover {
-      color: $primary;
+      color: inherit;
     }
 
     & + &::before {

@@ -1,3 +1,61 @@
 extends layout/page
 
 block content
+  section.section
+    .container
+      .row.g-30.g-xxl-60
+        .col-lg-8.col-xl-9
+          .mb-4
+            +breadcrumb-2('Trang chủ', 'Tin tức', 'Category')
+
+          article.post
+            h1.post__title TẠI SAO BẠN NÊN QUAN TÂM CHUYỂN ĐỔI KỸ THUẬT SỐ DOANH NGHIỆP?
+            .post__info
+              a(href="./news-detail.html") Tin tức
+              |&nbsp;|&nbsp;
+              | 28.12.2022
+
+            .post__content
+              p
+                img.w-100(src="./images/post-img.jpg", alt="")
+              h2.text-primary.fw-700.mb-3.mt-40 Lợi ích của chuyển đổi số là gì?
+              p Hãy cho chúng tôi biết cách thức chuyển đổi số của doanh nghiệp và lý do bạn nên quan tâm. Theo các chuyên gia Chuyển đổi số, dưới đây là một số điểm cần xem xét:
+              h4.text-primary.fw-600.mb-3.mt-30 Tăng hiệu quả trong quá trình kinh doanh
+              p Vì quy trình chuyển đổi kỹ thuật số được tự động hóa nên hiệu quả của công ty bạn có thể tăng lên. Bạn có thể sử dụng phương pháp kỹ thuật số này để truy cập các công cụ tiên tiến như ML và AI. Do đó, bạn có thể chỉ cần phân tích dữ liệu và cung cấp thông tin chuyên sâu hơn. Bạn có thể sử dụng nó để cung cấp cho khách hàng của mình những dịch vụ hiệu quả hơn.
+              h4.text-primary.fw-600.mb-3.mt-30 Trao quyền cho nhân viên của bạn
+              p Điều quan trọng là phải dạy cho nhân viên của bạn trong khi bạn triển khai chuyển đổi kỹ thuật số doanh nghiệp trong doanh nghiệp của mình .Nâng cao bộ kỹ năng của nhóm của bạn là thuận lợi.Kết quả là họ có thể cảm thấy được truyền cảm hứng để nâng cao hiệu suất của mình.
+              p Bạn có thể cung cấp cho nhân viên của mình cơ hội thể hiện sự sáng tạo và ý tưởng của họ bằng cách cung cấp trải nghiệm kỹ thuật số cho họ.Khả năng của nhóm bạn trong việc cung cấp cơ sở vật chất tốt hơn và tăng sự hài lòng của khách hàng sẽ tăng lên nếu bạn hướng dẫn họ về chuyển đổi kỹ thuật số.
+
+              .row.mb-3
+                .col-lg-6
+                  img.w-100(src="./images/post-img.jpg", alt="")
+                .col-lg-6
+                  img.w-100(src="./images/post-img.jpg", alt="")
+
+              p Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+            .share
+              .share__label Chia sẻ bài viết:
+              a.share__link(href="#!")
+                img(src="./images/icon-facebook.svg", alt="")
+              a.share__link(href="#!")
+                img(src="./images/icon-google-plus.svg", alt="")
+              a.share__link(href="#!")
+                img(src="./images/icon-twitter.svg", alt="")
+
+          section.section.pb-0
+            h2.section__title.text-start.mb-30 BÀI VIẾT LIÊN QUAN
+
+            .row.g-3.g-lg-4
+              - for(let i = 0; i < 3; i++)
+                .col-6.col-lg-4
+                  +news
+
+        .col-lg-4.col-xl-3.floating-container.position-relative
+          .floating(data-top='30')
+            section.recent-posts
+              h2.recent-posts__title Bài viết gần đây
+              - for(let i = 0; i < 5; i++)
+                .mt-20
+                  +news-2

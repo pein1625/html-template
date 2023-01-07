@@ -13,6 +13,14 @@ mixin breadcrumb(...list)
         a.link-unstyled(href="#!")= item
     li.breadcrumb-item.active= lastItem
 
+mixin breadcrumb-2(...list)
+  - var lastItem = list.pop()
+  ol.breadcrumb.text-danger
+    each item in list
+      li.breadcrumb-item
+        a.link-unstyled(href="#!")= item
+    li.breadcrumb-item.active= lastItem
+
 mixin pagination
   ul.pagination
     li.page-item.active

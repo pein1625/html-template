@@ -638,3 +638,20 @@
     }
   }
 }
+
+.news-2 {
+  &__frame {
+    @include frame('rect', 100%);
+    @include frame('zoom');
+    width: 60px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    @include max-line(3);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    max-height: 3.6em;
+  }
+}
