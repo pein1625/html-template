@@ -85,8 +85,9 @@
   color: $white;
   font-size: 16px;
   font-weight: 600;
+  border: 0;
   background-color: $danger;
-  padding: 13px 20px;
+  padding: 13px 24px;
   border-radius: 25px;
   transition: 0.3s;
 
@@ -105,6 +106,12 @@
     }
   }
 
+  &--md {
+    font-size: 18px;
+    padding: 14px 26px;
+    border-radius: 28px;
+  }
+
   &--lg {
     font-size: 24px;
     padding: 12px 28px;
@@ -116,6 +123,24 @@
 
     &--lg {
       font-size: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 12px;
+    padding: 8px 16px;
+
+    &--md {
+      font-size: 14px;
+    }
+
+    &--lg {
+      font-size: 16px;
     }
   }
 }

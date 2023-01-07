@@ -81,3 +81,35 @@ mixin news-2
       .col
         h3.news-2__title
           a(href="./news-detail.html") ACG: Bổ sung CBTT về hồ sơ của chứng khoán mới niêm yết
+
+mixin recruit(title='')
+  .recruit
+    .row.align-items-center
+      .col-sm.mb-3.mb-sm-0
+        h3.recruit__title
+          a(href="./recruit-detail.html")= title
+        .d-flex.flex-wrap.gap-2
+          .recruit__info
+            i.fas.fa-fw.fa-map-marker-alt.me-2
+            | Hà Nội
+          .recruit__info
+            i.fas.fa-fw.fa-clock.me-2
+            | Full-time
+          .recruit__info
+            i.fas.fa-fw.fa-usd-circle.me-2
+            | Thỏa thuận
+
+      .col-sm-auto
+        a.n-btn(href="./recruit-detail.html") Xem chi tiết
+
+mixin recruit-2(title='Account Manager')
+  .recruit-2
+    h3.recruit-2__title
+      a(href="#!")= title
+    .d-flex.flex-wrap
+      .recruit-2__info
+        i.fas.fa-fw.fa-map-marker-alt.me-2
+        | Hà Nội
+      .recruit-2__info
+        i.fas.fa-fw.fa-clock.me-2
+        | Full-time

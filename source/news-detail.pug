@@ -1,7 +1,11 @@
 extends layout/page
 
 block content
-  section.section
+  section.section.overflow-hidden
+    svg.position-absolute.top-0.start-0(viewBox="0 0 100 100", style="z-index: -1; width: 30vw; transform: translate(-30%, -55%); color:#D2D3F9;")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-0.start-0(viewBox="0 0 100 100", style="z-index: -1; width: 13.6vw; transform: translate(70%, 8%); color:#F5C1C3")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
     .container
       .row.g-30.g-xxl-60
         .col-lg-8.col-xl-9

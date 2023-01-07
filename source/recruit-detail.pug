@@ -1,3 +1,95 @@
 extends layout/page
 
 block content
+  section.section.overflow-hidden
+    svg.position-absolute.top-0.start-0(viewBox="0 0 100 100", style="z-index: -1; width: 30vw; transform: translate(-30%, -55%); color:#D2D3F9;")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-0.start-0(viewBox="0 0 100 100", style="z-index: -1; width: 13.6vw; transform: translate(70%, 8%); color:#F5C1C3")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .row.g-30.g-xxl-60
+        .col-lg-8.col-xl-9
+          .mb-4
+            +breadcrumb-2('Trang chủ', 'TUYỂN DỤNG', 'BUSINESS DEVELOPMENT MANAGER')
+
+          article.post
+            h1.post__title BUSINESS DEVELOPMENT MANAGER
+
+            .row.g-3.mt-lg-40.mt-xl-60
+              .col-6.col-xl-3
+                .job-info
+                  .job-info__label Yêu cầu kinh nghiệm
+                  .job-info__content Chưa có kinh nghiệm
+              .col-6.col-xl-3
+                .job-info
+                  .job-info__label Mức lương
+                  .job-info__content 10 - 15 triệu
+              .col-6.col-xl-3
+                .job-info
+                  .job-info__label Hình thức làm việc
+                  .job-info__content Toàn thời gian
+              .col-6.col-xl-3
+                .job-info
+                  .job-info__label Địa điểm làm việc
+                  .job-info__content Hà Nội
+
+            h2.post__subtitle Mô tả công việc
+            .post__content
+              ul
+                li Tìm kiếm thông tin về khách hàng, xác định nhu cầu khách hàng và triển khai tiếp cận khách hàng trên data được cung cấp sẵn.
+                li Tư vấn và giới thiệu cho khách hàng về dịch vụ của Công ty.
+                li Đàm phán, thương lượng, xúc tiến và thực hiện các thủ tục ký kết hợp đồng với khách hàng.
+                li Thiết lập lịch làm việc, gặp gỡ đàm phán trực tiếp với khách hàng.
+                li Phối hợp với các phòng ban chức năng của Công ty để phối hợp triển khai và hoàn thành các mục tiêu của dự án.
+                li Hỗ trợ điều phối dự án nhằm đạt được sự hài lòng của KH.
+                li Thực hiện các công việc khác theo sự phân công của Ban lãnh đạo Công ty.
+
+            h2.post__subtitle Kinh nghiệm & Kỹ năng
+            .post__content
+              ul
+                li Tốt nghiệp Đại học trở lên, có Laptop.
+                li Thành thạo vi tính văn phòng.
+                li Kỹ năng giao tiếp, thuyết trình và đàm phán tốt.
+                li Giao tiếp tốt, tự tin, sẵn sàng làm việc với cường độ cao.
+                li Nhanh nhẹn, chịu được áp lực công việc và có trách nhiệm.
+                li SV mới ra trường, không yêu cầu kinh nghiệm, sẽ được đào tạo và định hướng nghề nghiệp.
+
+            h2.post__subtitle Quyền lợi
+            .post__content
+              ul
+                li Được đào tạo và hướng dẫn nghiệp vụ để đáp ứng yêu cầu của công việc.
+                li Lương cứng + commission + performance bonus (Fresher từ 6 triệu trở lên).
+                li Môi trường làm việc năng động, độc lập, chuyên nghiệp và sáng tạo.
+                li Cơ hội được làm việc với những dự án với thương hiệu lớn.
+                li Cơ hội được học hỏi và phát triển cùng với các xu thế công nghệ mới, đi trước tương lai.
+
+            h2.post__subtitle Nộp đơn ứng tuyển
+
+            form.recruit-form(action="#!")
+              .row.gx-30.gy-20
+                .col-lg-6
+                  input.form-control(type="text", placeholder="Họ và tên*", required)
+                .col-lg-6
+                  input.form-control(type="text", placeholder="Số điện thoại*", required)
+                .col-lg-6
+                  input.form-control(type="email", placeholder="Địa chỉ email*", required)
+                .col-lg-6
+                  select.form-select
+                    option Business Development Manager
+                    option Business Development Manager
+                    option Business Development Manager
+                    option Business Development Manager
+                .col-12
+                  textarea.form-control(rows='5', placeholder='Thư ứng tuyển')
+                .col-12
+                  +file-input
+                .col-12.text-center.pt-2.pt-lg-20
+                  button.n-btn.n-btn--md(type="submit") Nộp đơn ứng tuyển
+
+        .col-lg-4.col-xl-3.floating-container.position-relative
+          .floating(data-top='30')
+            section.recent-posts
+              h2.recent-posts__title Công việc tương tự
+              each item in ['Account Manager','Creative Designer','Event Planner','Copy Writer','Marketing Executive']
+                .mt-4
+                  +recruit-2(item)

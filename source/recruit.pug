@@ -1,3 +1,23 @@
 extends layout/page
 
 block content
+  section.section.bg-light.overflow-hidden.banner-3
+    svg.banner-3__circle-1(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-3__circle-2(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-3__circle-3(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      h2.section__title.text-start.mb-0 Tuyển dụng
+      .mt-2.mt-md-3.mt-xl-20
+        +breadcrumb('Trang chủ', 'Tuyển dụng')
+
+  section.section
+    .container
+      h2.section__title CÁC VỊ TRÍ ĐANG TUYỂN DỤNG
+      each item in ["Business Development Manager","Account Manager","Creative Designer","Event Planner","Copy Writer","Marketing Executive"]
+        +recruit(item)
+
+      nav.d-flex.justify-content-center.mt-4.mt-lg-30.mt-xl-60
+        +pagination

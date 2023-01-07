@@ -77,10 +77,67 @@
   padding: 20px;
 
   &__title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.2;
     border-bottom: 1px solid $gray;
     padding-bottom: 10px;
+  }
+}
+
+.recruit-form {
+  .form-select,
+  .form-control {
+    background-color: #FAFAFF;
+    border: 0;
+    padding: 20px;
+
+    &::placeholder {
+      color: #828282;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .form-control,
+    .form-select {
+      font-size: 14px;
+      padding: 16px;
+    }
+  }
+}
+
+.job-info {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $gray-light;
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: $gray;
+  }
+
+  &__content {
+    font-size: 16px;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    padding: 16px;
+
+    &__label {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    &__content {
+      font-size: 14px;
+    }
   }
 }
