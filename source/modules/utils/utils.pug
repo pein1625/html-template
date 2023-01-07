@@ -15,9 +15,6 @@ mixin breadcrumb(...list)
 
 mixin pagination
   ul.pagination
-    li.page-item.disabled
-      a.page-link(href="#!")
-        i.fal.fa-angle-left
     li.page-item.active
       a.page-link(href="#!") 1
     li.page-item
@@ -27,10 +24,9 @@ mixin pagination
     li.page-item
       a.page-link(href="#!") 4
     li.page-item
-      a.page-link(href="#!") 5
+      a.page-link(href="#!") ...
     li.page-item
-      a.page-link(href="#!")
-        i.fal.fa-angle-right
+      a.page-link(href="#!") 100
 
 mixin search
   form.search

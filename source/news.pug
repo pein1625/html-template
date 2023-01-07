@@ -1,3 +1,28 @@
 extends layout/page
 
 block content
+  section.section.bg-light.overflow-hidden.banner-3
+    svg.banner-3__circle-1(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-3__circle-2(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-3__circle-3(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      h2.section__title.text-start.mb-0 TIN TỨC
+      .mt-2.mt-md-3.mt-xl-20
+        +breadcrumb('Trang chủ', 'Tin tức')
+
+  section.section
+    .container
+      nav.news-category
+        each item,index in ['Tất cả', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 6', 'Category 7']
+          a.news-category__item(class=index?'':'active', href="#!")= item
+
+      .row.g-3.g-lg-4.g-xl-30
+        - for(let i = 0; i < 12; i++)
+          .col-6.col-lg-4
+            +news
+
+      nav.d-flex.justify-content-center.mt-4.mt-lg-30.mt-xl-60
+        +pagination

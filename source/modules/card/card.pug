@@ -58,3 +58,16 @@ mixin n-media(icon="./images/icon-globe-vr.svg", title='Thiết kế Web 360')
       .col
         .n-media__title=title
         .n-media__desc Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Phasellus interdum nunc a viverra auctor.
+
+mixin news
+  .news
+    a.news__frame(href="./news-detail.html")
+      img(src="./images/news-1.jpg", alt="")
+    .news__info
+      a(href="./news-detail.html") Tin tức
+      |&nbsp;|&nbsp;
+      | 28.12.2022
+    h3.news__title
+      a(href="./news-detail.html") Lorem ipsum simply free text dolor sited amet cons cing elit.
+    a.news__link(href="./news-detail.html") Đọc thêm
+      i.fal.fa-arrow-right.ms-2
