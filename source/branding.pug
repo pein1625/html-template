@@ -1,3 +1,48 @@
 extends layout/page
 
 block content
+  section.section.bg-light.overflow-hidden.banner-2
+    svg.banner-2__circle-1(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-2__circle-2(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-2__circle-3(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    img.banner-2__img(src="./images/branding.png", alt="")
+    .container
+      .section__subtitle.text-start.mb-2
+        span THIẾT KẾ BRANDING
+      h2.section__title.text-start.mb-0 HÌNH ẢNH THƯƠNG HIỆU
+        br
+        | CHUYÊN NGHIỆP
+      .banner-2__desc.mt-3.mt-lg-20 Trong một doanh nghiệp, dù là doanh nghiệp mới thành lập hay các công ty lâu năm, bộ nhận diện thương hiệu chính là sản phẩm cực kì quan trọng giúp khách hàng nhận biết & nhớ về thương hiệu, sản phẩm. Bộ nhận diện thương hiệu cũng là phương tiện giao tiếp giữa khác hàng và doanh nghiệp, giúp tăng năng suất bán hàng và thể hiện tính chuyên nghiệp hiệu quả.
+      .mt-3.mt-lg-20
+        a.banner-2__link(href="#!") Xem thêm
+
+  section.section.overflow-hidden
+    svg.position-absolute.top-50.start-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(-50%, -80%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-50.start-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(-85%, -25%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.bottom-0.end-0(viewBox="0 0 100 100", style="z-index: -1; width: 32vw; transform: translate(25%, 25%); color: #F2F3FF;")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    .container
+      .section__subtitle
+        span GIẢI PHÁP VR 360
+      h2.section__title SẢN PHẨM CỦA CHÚNG TÔI
+
+      .row.g-4.g-xxl-60
+        .col-lg-9.order-lg-1
+          .row.g-3.g-xl-4
+            - for(let i = 0; i < 9; i++)
+              .col-6.col-md-4
+                +product
+
+          .mt-4.mt-xl-40.text-center
+            a.n-btn.n-btn--light(href="#!") Load more
+
+        .col-lg-3
+          ul.as-menu
+            each item, index in ["TẤT CẢ","THIẾT KẾ LOGO","NHẬN DIỆN VĂN PHÒNG","BROCHURE","HỒ SƠ NĂNG LỰC","BÁO CÁO THƯỜNG NIÊN","RE-BRANDING"]
+              li
+                a(class=index?'':'active', href="#!")= item

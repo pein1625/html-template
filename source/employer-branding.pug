@@ -1,3 +1,28 @@
 extends layout/page
 
 block content
+  section.section.bg-light.overflow-hidden.banner-2
+    svg.banner-2__circle-1(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-2__circle-2(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.banner-2__circle-3(viewBox="0 0 100 100")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    img.banner-2__img(src="./images/employer-branding.png", alt="")
+    .container
+      .section__subtitle.text-start.mb-2
+        span EMPLOYER BRANDING
+      h2.section__title.text-start.mb-0 XÂY DỰNG THƯƠNG HIỆU
+        br
+        | NHÀ TUYỂN DỤNG
+      .banner-2__desc.mt-3.mt-lg-20 Employer Branding là xây dựng thương hiệu nhà tuyển dụng, xác định dựa trên cảm nhận của mọi người và quan điểm, nhận định của ứng viên về doanh nghiệp. Ứng viên cảm nhận về doanh nghiệp thông qua tầm nhìn của doanh nghiệp trong tương lai, thông điệp doanh nghiệp muốn gửi gắm đến ứng viên cũng như khách hàng.
+      .mt-3.mt-lg-20
+        a.banner-2__link(href="#!") Xem thêm
+
+  section.section.overflow-hidden
+    svg.position-absolute.top-50.start-0.text-danger(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(-50%, -80%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.top-50.start-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 18vw; transform: translate(-85%, -25%);")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
+    svg.position-absolute.bottom-0.end-0(viewBox="0 0 100 100", style="z-index: -1; width: 32vw; transform: translate(25%, 25%); color: #F2F3FF;")
+      circle(cx="50" cy="50" r="50" fill="currentColor")
