@@ -88,9 +88,21 @@
   background-color: $danger;
   padding: 13px 20px;
   border-radius: 25px;
+  transition: 0.3s;
 
   &:hover {
     color: $white;
+    background-color: darken($danger, 5%);
+  }
+
+  &--light {
+    background-color: #F2EFF6;
+    color: #68666E;
+
+    &:hover {
+      color: #68666E;
+      background-color: #dddddd;
+    }
   }
 
   &--lg {

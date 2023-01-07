@@ -82,3 +82,28 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  addSwiper('.research-slider', {
+    loop: true,
+    pagination: true,
+    navigation: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    breakpoints: {
+      576: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      }
+    }
+  });
+});

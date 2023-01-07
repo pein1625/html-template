@@ -106,3 +106,25 @@ mixin service-slider
             br
             | VR 360
     .service-slider__pagination
+
+mixin research-slider
+  .research-slider
+    .research-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +research('./images/icon-showroom-white.svg', 'Showroom 360')
+        .swiper-slide
+          +research('./images/icon-edu-white.svg', 'Giáo dục')
+        .swiper-slide
+          +research('./images/icon-hospital-white.svg', 'Y tế')
+        .swiper-slide
+          +research('./images/icon-cart-white.svg', 'Bán lẻ')
+        .swiper-slide
+          +research('./images/icon-restaurant-white.svg', 'Khách sạn & Nhà hàng')
+        .swiper-slide
+          +research('./images/icon-industry-white.svg', 'Khu Công nghiệp')
+        .swiper-slide
+          +research('./images/icon-real-estate-white.svg', 'Bất động sản')
+        .swiper-slide
+          +research('./images/icon-calendar-white.svg', 'Sự kiện ảo')
+    .research-slider__pagination
