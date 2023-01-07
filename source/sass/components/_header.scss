@@ -74,6 +74,7 @@
     background: 0;
     margin-left: 50px;
     font-size: 16px;
+    color: $primary;
   }
 
   @include media-breakpoint-up(xxl) {

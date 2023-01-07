@@ -2,27 +2,31 @@
   "menu": [
     {
       "text": "Về HMG",
-      "url": "./about.html"
+      "url": "./index.html"
     },
     {
       "text": "Dịch vụ",
-      "url": "./products.html",
+      "url": "#!",
       "submenu": [
         {
-          "text": "Dropdown",
-          "url": "#!"
+          "text": "Công nghệ VR 360",
+          "url": "./vr-360.html"
         },
         {
-          "text": "Dropdown",
-          "url": "#!"
+          "text": "Thiết kế website",
+          "url": "./web-design.html"
         },
         {
-          "text": "Dropdown",
-          "url": "#!"
+          "text": "Production",
+          "url": "./production.html"
         },
         {
-          "text": "Dropdown",
-          "url": "#!",
+          "text": "Branding",
+          "url": "./branding.html"
+        },
+        {
+          "text": "Employer Branding",
+          "url": "./employer-branding.html",
           "submenu": [
             {
               "text": "Dropdown",

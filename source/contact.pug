@@ -1,3 +1,49 @@
 extends layout/page
 
 block content
+  section.section.overflow-hidden.contact.bg-light
+    .container
+    .container
+      .contact__body
+        svg.position-absolute.bottom-0.start-0.text-danger(viewBox="0 0 100 100", style="z-index: -2; width: 9.3vw; transform: translate(-60%, -35%);")
+          circle(cx="50" cy="50" r="50" fill="currentColor")
+        svg.position-absolute.top-0.end-0.text-primary(viewBox="0 0 100 100", style="z-index: -2; width: 17.2vw; transform: translate(75%, 20%);")
+          circle(cx="50" cy="50" r="50" fill="currentColor")
+        .row.g-30
+          .col-lg-7
+            .section__subtitle.text-start
+              span LIÊN HỆ
+            h2.section__title.text-start.mb-0 LIÊN HỆ VỚI
+              br
+              | CHÚNG TÔI
+            .contact__desc Chúng tôi luôn sẵn sàng lắng nghe và đưa ra giải pháp phù hợp nhất cho bạn.
+
+            .contact-info
+              .contact-info__item
+                .row.g-3
+                  .col-auto
+                    i.fas.fa-lg.fa-fw.fa-envelope.text-danger
+                  .col
+                    a(href="mailto:hello@hmg.vn") hello@hmg.vn
+              .contact-info__item
+                .row.g-3
+                  .col-auto
+                    i.fas.fa-lg.fa-fw.fa-phone.text-danger
+                  .col
+                    a(href="tel:(+84) 963.186.388") (+84) 963.186.388
+              .contact-info__item
+                .row.g-3
+                  .col-auto
+                    i.fas.fa-lg.fa-fw.fa-map-marker-alt.text-danger
+                  .col 93A Thụy Khuê, Tây Hồ, Hà Nội
+                    br
+                    | 22-24 Ung Văn Khiêm, Bình Thạnh, TP. Hồ Chí Minh
+
+          .col-lg-5
+            form.contact-form(action="#!")
+              input.form-control.mb-3.mb-xl-4(type="text", placeholder='Họ và tên')
+              input.form-control.mb-3.mb-xl-4(type="text", placeholder='Số điện thoại')
+              input.form-control.mb-3.mb-xl-4(type="text", placeholder='Địa chỉ email')
+              textarea.form-control.mb-3.mb-xl-4(rows="6", placeholder="Nội dung yêu cầu")
+              .text-end
+                button.n-btn.n-btn--md(type="submit") Gửi yêu cầu
