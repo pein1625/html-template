@@ -71,6 +71,11 @@ $(function() {
     navigation: true,
     slidesPerView: 2,
     spaceBetween: 16,
+    speed: 600,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       992: {
         slidesPerView: 3,

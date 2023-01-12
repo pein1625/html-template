@@ -27,17 +27,6 @@
     margin-top: 20px;
   }
 
-  .form-control,
-  .form-select {
-    padding: 18px 20px;
-    border-radius: 10px;
-    line-height: 1.2;
-
-    &::placeholder {
-      color: #A7A7A7;
-    }
-  }
-
   @include media-breakpoint-down(xxl) {
     &__desc {
       font-size: 16px;
@@ -51,18 +40,6 @@
 
     &__desc {
       font-size: 14px;
-    }
-
-    .form-control,
-    .form-select {
-      padding: 14px 16px;
-      border-radius: 8px;
-      line-height: 1.2;
-      font-size: 14px;
-
-      &::placeholder {
-        color: #A7A7A7;
-      }
     }
   }
 
@@ -110,5 +87,45 @@
   @include media-breakpoint-down(xl) {
     font-size: 14px;
     margin-top: 20px;
+  }
+}
+
+.contact-form {
+  .form-control,
+  .form-select {
+    padding: 18px 20px;
+    border-radius: 10px;
+    line-height: 1.2;
+
+    &::placeholder {
+      color: #A7A7A7;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    .form-control,
+    .form-select {
+      padding: 14px 20px;
+      border-radius: 10px;
+      line-height: 1.2;
+
+      &::placeholder {
+        color: #A7A7A7;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .form-control,
+    .form-select {
+      padding: 14px 16px;
+      border-radius: 8px;
+      line-height: 1.2;
+      font-size: 14px;
+
+      &::placeholder {
+        color: #A7A7A7;
+      }
+    }
   }
 }

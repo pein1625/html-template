@@ -11,16 +11,24 @@
 
 .container-fluid {
   @include media-breakpoint-up(sm) {
-    padding-left: 24px;
-    padding-right: 24px;
+    max-width: 540px;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 720px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 960px;
   }
 
   @include media-breakpoint-up(xl) {
-    padding-left: 60px;
-    padding-right: 60px;
+    max-width: 1140px;
   }
 
   @include media-breakpoint-up(xxl) {
+    padding-left: 60px;
+    padding-right: 60px;
     max-width: 1800px;
   }
 }
