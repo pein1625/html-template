@@ -12,7 +12,7 @@ $(function() {
   });
 
   $('html, body').on('click', function() {
-    if ($window.width() < 1200) return false;
+    if ($window.width() < 1200) return;
 
     $search.hide();
   });
