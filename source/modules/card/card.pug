@@ -34,12 +34,19 @@ mixin ecosystem(img='', desc='Đơn vị tổ chức sự kiện, các giải ph
       img(src=img, alt="")
     .ecosystem__desc=desc
 
-mixin product
-  a.product(href="#!")
-    .product__frame
-      img(src="./images/product-1.jpg", alt="")
-    .product__overlay
-      .product__title Lorem ipsum simply free text dolor sited amet.
+mixin product(href="#!", type = null)
+  if (type)
+    a.product(href=href, data-fancybox)
+      .product__frame
+        img(src="./images/product-1.jpg", alt="")
+      .product__overlay
+        .product__title Lorem ipsum simply free text dolor sited amet.
+  else
+    a.product(href=href)
+      .product__frame
+        img(src="./images/product-1.jpg", alt="")
+      .product__overlay
+        .product__title Lorem ipsum simply free text dolor sited amet.
 
 mixin research(icon='', title='')
   a.research(href="#!")
