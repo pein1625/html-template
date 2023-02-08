@@ -103,6 +103,8 @@
     &-root {
       display: flex;
       border: 0;
+      position: relative;
+      z-index: 100;
     }
 
     &-root &-item {

@@ -13,7 +13,7 @@ mixin review
           .review__pos Designer
 
 mixin service(url='#!')
-  .service
+  a.service(href="#!")
     .service__frame
       img(src="./images/service-1.png", alt="")
     .service__background
@@ -25,28 +25,34 @@ mixin service(url='#!')
           block
         else
           | CÔNG NGHỆ VR 360
-      a.service__link(href=url) Tìm hiểu thêm
+      .service__link Tìm hiểu thêm
         i.fal.fa-arrow-right.ms-2
 
 mixin ecosystem(img='', desc='Đơn vị tổ chức sự kiện, các giải pháp Truyền thông & Marketing, Thiết kế sáng tạo')
-  .ecosystem
+  a.ecosystem(href="#!")
     .ecosystem__frame
       img(src=img, alt="")
     .ecosystem__desc=desc
 
 mixin product(href="#!", type = null)
-  if (type)
-    a.product(href=href, data-fancybox)
+  if (type === 'image')
+    a.product(href=href, data-fancybox="image", data-popup-url="./index.html")
       .product__frame
         img(src="./images/product-1.jpg", alt="")
       .product__overlay
-        .product__title Lorem ipsum simply free text dolor sited amet.
+        .product__title KĐT The Trident city
+  else if (type === 'video')
+    a.product(href=href, data-fancybox="video")
+      .product__frame
+        img(src="./images/product-1.jpg", alt="")
+      .product__overlay
+        .product__title KĐT The Trident city
   else
     a.product(href=href)
       .product__frame
         img(src="./images/product-1.jpg", alt="")
       .product__overlay
-        .product__title Lorem ipsum simply free text dolor sited amet.
+        .product__title KĐT The Trident city
 
 mixin research(icon='', title='')
   a.research(href="#!")

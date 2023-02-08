@@ -5,6 +5,7 @@ $(function() {
   $('.btn-search').on('click', function(e) {
     e.stopPropagation();
     $search.fadeToggle();
+    $search.find('input').focus();
   });
 
   $search.on('click', function(e) {
@@ -15,6 +16,19 @@ $(function() {
     if ($window.width() < 1200) return;
 
     $search.hide();
+  });
+});
+
+$(function() {
+  const $window = $(window);
+  const $header = $('.header');
+
+  $window.on('scroll', function() {
+    if ($window.scrollTop() > 10) {
+      $header.addClass('is-fixed');
+    } else {
+      $header.removeClass('is-fixed');
+    }
   });
 });
 
@@ -84,3 +98,17 @@ function floating() {
     });
   });
 }
+
+$(function() {
+  $('[data-popup-url]').fancybox({
+    afterShow: function(instance) {
+      const url = instance['$trigger'].data('popup-url');
+
+      if (url) {
+        instance.current.$image.wrap(`<a href="${url}"></a>`);
+      }
+
+      console.log('trigger', instance, instance['$trigger']);
+    }
+  });
+});

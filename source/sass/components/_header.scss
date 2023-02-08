@@ -6,6 +6,10 @@
   &__wrapper {
     width: 100%;
     background-color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 10px rgba(#000, 0.08);
   }
 
   &__header.is-fixed &__wrapper {
@@ -39,16 +43,34 @@
   @include media-breakpoint-up(xl) {
     height: 90px;
 
+    &__wrapper {
+      box-shadow: 0 0 0 rgba(#000, 0);
+    }
+
     &__logo {
       margin: 20px 0;
+      transition: 0.2s ease-out;
 
       img {
         height: 50px;
+        transition: 0.2s ease-out;
       }
     }
 
     &__elements {
       margin-right: auto;
+    }
+
+    &.is-fixed &__wrapper {
+      box-shadow: 0 1px 10px rgba(#000, 0.16);
+    }
+
+    &.is-fixed &__logo {
+      margin: 10px 0;
+
+      img {
+        height: 50px;
+      }
     }
   }
 
@@ -60,6 +82,14 @@
 
       img {
         height: 65px;
+      }
+    }
+
+    &.is-fixed &__logo {
+      margin: 16px 0;
+
+      img {
+        height: 60px;
       }
     }
   }
