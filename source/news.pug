@@ -15,14 +15,19 @@ block content
 
   section.section
     .container
-      nav.news-category
+      ul.nav.news-category
         each item,index in ['Tất cả', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 6', 'Category 7']
-          a.news-category__item(class=index?'':'active', href="#!")= item
+          li.nav-item
+            a.nav-link(href=`#news-tab-${index}`, class=index?'':'active', data-bs-toggle='tab')= item
 
-      .row.g-3.g-lg-4.g-xl-30
-        - for(let i = 0; i < 12; i++)
-          .col-6.col-lg-4
-            +news
+      .tab-content
+        each item,index in ['Tất cả', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 6', 'Category 7']
+          .tab-pane.fade(id=`news-tab-${index}`, class=index?'':'show active')
+            h1= index
+            .row.g-3.g-lg-4.g-xl-30
+              - for(let i = 0; i < 12; i++)
+                .col-6.col-lg-4
+                  +news
 
-      nav.d-flex.justify-content-center.mt-4.mt-lg-30.mt-xl-60
-        +pagination
+            nav.d-flex.justify-content-center.mt-4.mt-lg-30.mt-xl-60
+              +pagination
