@@ -33,19 +33,29 @@ block content
 
       .row.g-4.g-xxl-60
         .col-lg-9.order-lg-1
-          .row.g-3.g-xl-4
-            - for(let i = 0; i < 9; i++)
-              .col-6.col-md-4
-                +product
+          .tab-content
+            each item, index in ["TẤT CẢ","TVC","PHIM DOANH NGHIỆP"]
+              .tab-pane.fade(id=`sidebar-tab-${index}`, class=index?'':'show active')
+                .row.g-3.g-xl-4
+                  - for(let i = 0; i < 3; i++)
+                    .col-6.col-md-4
+                      +product
+                    .col-6.col-md-4
+                      +product('https://nld.mediacdn.vn/2017/photo-1-1502239793492.jpg', 'image')
+                    .col-6.col-md-4
+                      +product('https://www.youtube.com/watch?v=9oG77ol_KGU', 'video')
+
+                .mt-4.mt-xl-40.text-center
+                  a.n-btn.n-btn--light(href="#!") Load more
 
           .mt-4.mt-xl-40.text-center
             a.n-btn.n-btn--light(href="#!") Load more
 
         .col-lg-3
-          ul.as-menu
+          ul.as-menu.nav
             each item, index in ["TẤT CẢ","TVC","PHIM DOANH NGHIỆP"]
-              li
-                a(class=index?'':'active', href="#!")= item
+              li.nav-item
+                a.nav-link(href=`#sidebar-tab-${index}`, class=index?'':'active', data-bs-toggle='tab')= item
 
   section.section.overflow-hidden.bg-light
     svg.position-absolute.bottom-0.end-0.text-primary(viewBox="0 0 100 100", style="z-index: -1; width: 12vw; transform: translate(60%, -35%);")
