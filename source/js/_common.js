@@ -53,13 +53,14 @@ function floating() {
     return;
   }
 
-  $(window).on("scroll", function () {
-    const paddingLeft = $(window).width() > 1440 ? '30px' : '15px';
+  $(window).on("scroll resize", function () {
+    const $container = $('.floating-container');
+    const paddingLeft = Number($container.css('padding-left').replaceAll(/\D/g, ''));
+    const offsetLeft = $container.offset().left + paddingLeft;
+    const offsetTop = $container.offset().top;
 
     $(".floating").each(function () {
       var $floating = $(this),
-        offsetTop = $floating.data("offsetTop"),
-        offsetLeft = $floating.data("offsetLeft"),
         height = $floating.outerHeight(),
         outerHeight = $floating.outerHeight(true),
         $container = $floating.closest(".floating-container"),
@@ -109,6 +110,14 @@ $(function() {
       }
 
       console.log('trigger', instance, instance['$trigger']);
+    }
+  });
+});
+
+$(function () {
+  $(window).on('resize', function() {
+    if ($(window).width() >= 1200) {
+      $('html, body').removeClass('overflow-hidden');
     }
   });
 });
