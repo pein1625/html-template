@@ -55,7 +55,7 @@ function floating() {
 
   $(window).on("scroll resize", function () {
     const $container = $('.floating-container');
-    const paddingLeft = Number($container.css('padding-left').replaceAll(/\D/g, ''));
+    const paddingLeft = Number($container.css('padding-left')?.replaceAll(/\D/g, '') || 15);
     const offsetLeft = $container.offset().left + paddingLeft;
     const offsetTop = $container.offset().top;
 
