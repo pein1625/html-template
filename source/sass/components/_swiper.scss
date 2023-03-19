@@ -244,3 +244,21 @@
     }
   }
 }
+
+.partner-slider {
+  background-color: $white;
+  box-shadow: 0 1px 10px rgba(#000, 0.16);
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+
+  @include slider-nav-2();
+
+  &__frame {
+    @include frame("rect", 42%);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding: 0 20px;
+  }
+}

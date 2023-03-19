@@ -47,3 +47,25 @@ $(function() {
     }
   })
 });
+
+// partner-slider
+$(function () {
+  addSwiper(".partner-slider", {
+    navigation: true,
+    loop: true,
+    slidesPerView: 2,
+    speed: 600,
+    spaceBetween: 8,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5
+      }
+    }
+  });
+});
