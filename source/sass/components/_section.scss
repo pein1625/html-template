@@ -1,0 +1,11 @@
+.section {
+  padding: 50px 0;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $secondary;
+    margin-bottom: 30px;
+  }
+}

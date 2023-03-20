@@ -1,0 +1,93 @@
+.login {
+  &__body {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $primary;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $secondary;
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 50px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__body {
+      margin: 0 auto
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__subtitle {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+}
+
+.login-form {
+  height: 100%;
+  background-color: $white;
+  border-radius: 4px;
+  padding: 40px 20px;
+  width: 440px;
+  max-width: 100%;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $secondary;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.18), 0px 1px 4px -1px rgba(0, 0, 0, 0.18);
+  }
+
+  &__text {
+    font-size: 14px;
+    color: #1A2F36;
+  }
+
+  &__link {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .form-select,
+  .form-control {
+    border-radius: 8px;
+  }
+
+  input.form-control {
+    height: 48px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    margin: 0 auto
+  }
+}

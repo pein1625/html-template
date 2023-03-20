@@ -1,0 +1,56 @@
+- count = 1
+mixin news(img='./news-1.jpg')
+  - count++
+  .news.news--1
+    .row.g-3.g-md-20.g-xl-30
+      .col-sm-auto
+        a.news__frame(href="./news-detail.html")
+          img(src=`./images/news-${count % 9 + 1}.jpg`, alt="")
+      .col-sm
+        h3.news__title
+          a(href="./news-detail.html") Jorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .news__info
+          i.fal.fa-clock.text-primary.me-2
+          | 03/07/2022
+        .news__desc Với mong muốn mang lại cho khách hàng những trải nghiệm tốt nhất, Vietlife không ngừng đẩy mạnh chương trình đào tạo nâng cao trải nghiệm khách ...
+
+mixin news-2(img='./news-1.jpg')
+  - count++
+  .news.news--2
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 9 + 1}.jpg`, alt="")
+    h3.news__title
+      a(href="./news-detail.html") Jorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .news__info
+      i.fal.fa-clock.text-primary.me-2
+      | 03/07/2022
+    .news__desc Với mong muốn mang lại cho khách hàng những trải nghiệm tốt nhất, Vietlife không ngừng đẩy mạnh chương trình đào tạo nâng cao trải nghiệm khách ...
+
+mixin news-3(img='./news-1.jpg')
+  - count++
+  .news.news--3
+    .row.g-3
+      .col-auto
+        a.news__frame(href="./news-detail.html")
+          img(src=`./images/news-${count % 9 + 1}.jpg`, alt="")
+      .col
+        h3.news__title
+          a(href="./news-detail.html") Jorem ipsum dolor sit amet, consectetur adipiscing elit.
+        .news__info
+          i.fal.fa-clock.text-primary.me-2
+          | 03/07/2022
+
+mixin doc(number='01', id='#md-doc-1')
+  .doc
+    .row.g-3
+      .col-auto
+        .doc__number= number
+      .col
+        .row.g-3
+          .col
+            .doc__title
+              a(href="#!", data-bs-toggle="modal", data-bs-target=id) Cơ sở dữ liệu quốc gia về công tác tiếp công dân, xử lý đơn, giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh
+          .col-sm-auto
+            a.doc__btn(href="./images/sample.pdf" download)
+              i.fas.fa-download.me-2
+              | Tải về

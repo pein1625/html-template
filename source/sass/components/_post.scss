@@ -1,19 +1,18 @@
 .post {
   &__title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   &__info {
-    color: #999;
-    margin-bottom: 16px;
+    color: $text-gray;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 
-  &__sapo {
+  &__content {
     font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 16px;
   }
 }
