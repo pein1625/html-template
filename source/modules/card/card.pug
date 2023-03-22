@@ -54,3 +54,52 @@ mixin doc(number='01', id='#md-doc-1')
             a.doc__btn(href="./images/sample.pdf" download)
               i.fas.fa-download.me-2
               | Tải về
+
+mixin product
+  - count++
+  .product
+    a.product__frame(href="./product-detail.html")
+      img(src=`./images/product-${count % 6 + 1}.jpg`, alt="")
+    .product__saleoff
+      span 30%
+      span.text-white GIẢM
+    .product__body
+      h3.product__title
+        a(href="./product-detail.html") Cao cà gai leo Thanh Bình
+      .product__price 90.000 ₫
+      .product__old-price 120.000đ
+      .product__stars
+        span.stars.stars--5
+        span (23)
+      .product__location
+        i.fal.fa-map-marker-alt.me-2
+        | Thành phố Hà Nội
+
+mixin product-2(img='', title='Chương trình khuyến mại...')
+  .product-2
+    a.product-2__frame(href="#!")
+      img(src=img, alt="")
+    h3.product-2__title
+      a(href="#!")= title
+
+mixin product-3
+  - count++
+  a.product-3(href="#!")
+    .product-3__frame
+      img(src=`./images/product-${count % 6 + 1}.jpg`, alt="")
+    h2.product-3__title Đặc sản Yên Bái
+
+mixin cate(img='', title='')
+ a.cate(href="#!")
+  .cate__frame
+    img(src=img, alt="")
+  .cate__title
+    if (title)
+      = title
+    else
+      block
+
+mixin card
+  - count++
+  a.card(href="#!")
+    img(src=`./images/card-${count % 4 + 1}.jpg`, alt="")

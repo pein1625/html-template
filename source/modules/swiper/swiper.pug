@@ -64,3 +64,161 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin product-slider
+  .product-slider
+    .product-slider__prev
+      i.fal.fa-angle-left
+    .product-slider__next
+      i.fal.fa-angle-right
+    .product-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +product
+
+mixin product-slider-3
+  .product-slider-3
+    .product-slider-3__pagination
+    .product-slider-3__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +product-3
+
+mixin cate-slider
+  .cate-slider
+    .cate-slider__prev
+      i.fal.fa-angle-left
+    .cate-slider__next
+      i.fal.fa-angle-right
+    .cate-slider__container.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          +cate('./images/cate-1.png')
+            | Đồ nội thất
+        .swiper-slide
+          +cate('./images/cate-2.png')
+            | Thời trang
+            br
+            | Phụ kiện nữ
+        .swiper-slide
+          +cate('./images/cate-3.png')
+            | Thời trang
+            br
+            | Phụ kiện nam
+        .swiper-slide
+          +cate('./images/cate-4.png')
+            | Sách & Nhạc cụ
+        .swiper-slide
+          +cate('./images/cate-5.png')
+            | Văn phòng phẩm
+            br
+            | & Thủ công
+        .swiper-slide
+          +cate('./images/cate-6.png')
+            | Phụ kiện
+            br
+            | điện tử
+        .swiper-slide
+          +cate('./images/cate-7.png')
+            | Sức khỏe
+            br
+            | làm đẹp
+        .swiper-slide
+          +cate('./images/cate-8.png')
+            | Đồ chơi
+            br
+            | giáo dục
+        .swiper-slide
+          +cate('./images/cate-1.png')
+            | Sức khỏe
+            br
+            | làm đẹp
+        .swiper-slide
+          +cate('./images/cate-2.png')
+            | Đồ nội thất
+        .swiper-slide
+          +cate('./images/cate-3.png')
+            | Phụ kiện
+            br
+            | điện tử
+        .swiper-slide
+          +cate('./images/cate-4.png')
+            | Đồ chơi
+            br
+            | giáo dục
+        .swiper-slide
+          +cate('./images/cate-5.png')
+            | Thời trang
+            br
+            | Phụ kiện nữ
+        .swiper-slide
+          +cate('./images/cate-6.png')
+            | Sách & Nhạc cụ
+        .swiper-slide
+          +cate('./images/cate-7.png')
+            | Văn phòng phẩm
+            br
+            | & Thủ công
+        .swiper-slide
+          +cate('./images/cate-8.png')
+            | Thời trang
+            br
+            | Phụ kiện nam
+        .swiper-slide
+          +cate('./images/cate-3.png')
+            | Phụ kiện
+            br
+            | điện tử
+        .swiper-slide
+          +cate('./images/cate-4.png')
+            | Đồ chơi
+            br
+            | giáo dục
+        .swiper-slide
+          +cate('./images/cate-5.png')
+            | Thời trang
+            br
+            | Phụ kiện nữ
+        .swiper-slide
+          +cate('./images/cate-6.png')
+            | Sách & Nhạc cụ
+        .swiper-slide
+          +cate('./images/cate-7.png')
+            | Văn phòng phẩm
+            br
+            | & Thủ công
+        .swiper-slide
+          +cate('./images/cate-8.png')
+            | Thời trang
+            br
+            | Phụ kiện nam
+
+mixin card-slider
+  .card-slider
+    .card-slider__pagination
+    .card-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +card
+
+mixin card-slider-2
+  .card-slider-2
+    .card-slider-2__pagination
+    .card-slider-2__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +card
+
+mixin banner-slider
+  .banner-slider
+    .banner-slider__pagination
+    .banner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            a.banner-slider__frame(href="#!")
+              img(src="./images/banner-slide.jpg", alt="")

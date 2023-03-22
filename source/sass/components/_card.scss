@@ -110,3 +110,196 @@
     }
   }
 }
+
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__frame {
+    @include frame('square');
+    @include frame('zoom');
+  }
+
+  &__body {
+    padding: 10px;
+  }
+
+  &__title {
+    @include max-line(2);
+    font-size: 14px;
+    margin-bottom: 6px;
+
+    a {
+      color: #585858;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 4px;
+  }
+
+  &__old-price {
+    font-size: 12px;
+    color: #7B7B7B;
+    text-decoration: line-through;
+  }
+
+  &__stars {
+    font-size: 12px;
+    padding-top: 12px;
+    color: #7B7B7B;
+    margin-top: auto;
+  }
+
+  &__location {
+    font-size: 12px;
+    color: #7B7B7B;
+    margin-top: 8px;
+  }
+
+  &__saleoff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    background-color: #F9A41E;
+    color: #BE1117;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 700;
+
+    &::before,
+    &::after {
+      content: '';
+      border-style: solid;
+      border-width: 2px 12px;
+      border-color: #F9A41E transparent transparent #F9A41E;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
+    &::after {
+      left: 50%;
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.product-2 {
+  &__frame {
+    @include frame('rect', 75%);
+    @include frame('zoom');
+  }
+
+  &__title {
+    @include max-line(1);
+    font-size: 14px;
+    color: $primary;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+  }
+}
+
+.product-3 {
+  display: block;
+  position: relative;
+
+  &__frame {
+    @include frame('square');
+  }
+
+  &__title {
+    background-color: rgba(#8B1100, 0.7);
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    z-index: 10;
+    font-size: 24px;
+    padding: 0.875em 0.75em;
+    font-weight: 600;
+    color: $white;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      font-size: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 24px;
+    }
+  }
+}
+
+.cate {
+  display: block;
+  background-color: $white;
+  padding: 16px 8px;
+  transition: 0.3s;
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__frame {
+    display: block;
+    width: 100%;
+    height: 64px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: 50% 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #585858;
+    margin: 8px 0 0;
+  }
+}
+
+.card {
+  @include frame('rect', 43%);
+  border-radius: 4px;
+}

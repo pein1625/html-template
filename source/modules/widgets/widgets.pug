@@ -2,3 +2,11 @@ mixin as-banners
   - for(let i = 0; i < 4; i++)
     a.d-block.mb-4.m-last-0(href="#!")
       img.w-100(src=`./images/as-banner-${i + 1}.jpg`, alt="")
+
+mixin product-grid
+  .product-grid
+    - for(let i = 0; i < 20; i++)
+      +product
+
+  nav.d-flex.justify-content-center.mt-40
+    +pagination

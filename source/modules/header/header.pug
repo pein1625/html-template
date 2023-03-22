@@ -8,7 +8,15 @@ mixin header
         .header__inner
           a.header__logo(href="./index.html")
             img(src="./images/logo.svg", alt="")
+
           .header__elements
             +navbar
               +menu(menu)
+
+            .h-contact
+
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+    nav.navigation
+      .container
+        .navigation__inner

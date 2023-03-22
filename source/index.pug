@@ -1,3 +1,62 @@
 extends layout/page
 
 block content
+  section.section-3
+    .container
+      // banners
+      section.section-2.mb-3
+        .banner-grid.row.g-3
+          .banner-grid__col.col
+            +banner-slider
+          .banner-grid__col.col-auto
+            .row.g-3
+              .col-6.col-lg-12
+                +card-slider-2
+              .col-6.col-lg-12.mt-lg-3
+                +card-slider-2
+
+      // category
+      section.section-2.pt-0
+        .section-2__body.section-2__body--category
+          h2.section-2__title Danh mục
+          +cate-slider
+
+      section.section-2
+        +card-slider
+
+  .container
+    section.section-2
+      .section-2__body.section-2__body--dark-pink
+        h2.section-2__custom-title
+          img.section-2__texture-1(src="./images/texture-1.png", alt="")
+          span.mx-3 Sản phẩm&nbsp;
+            strong SIÊU SALE
+          img.section-2__texture-2(src="./images/texture-2.png", alt="")
+          img.section-2__texture-3(src="./images/texture-3.png", alt="")
+          img.section-2__texture-4(src="./images/texture-4.png", alt="")
+        .product-grid-2
+          - for(let i = 0; i < 6; i++)
+            +product
+
+    section.section-2
+      .section-2__body.bg-secondary
+        h2.section-2__title.text-white.mb-3 Sản phẩm tiêu biểu
+        +product-slider
+
+    section.section-2.pt-0
+      h2.section-2__title Nhóm sản phẩm hot
+      .section-2__body.bg-white.shadow
+        .product-grid-3
+          .product-grid-3__col
+            +product-slider-3
+          each title, i in ['Chương trình khuyến mại...','Big sale up to 70%','Siêu sale cuối tháng','Sale off 50%','Big sale up to 70%','Siêu sale cuối tháng','Chương trình khuyến mại...','Big sale up to 70%']
+            .product-grid-3__col
+              +product-2(`./images/cat-${i % 8 + 1}.jpg`, title)
+
+    section.section-2.pt-0
+      h2.section-2__title Gợi ý cho bạn
+      .product-grid-2
+        - for(let i = 0; i < 24; i++)
+          +product
+      .d-flex.justify-content-center.mt-4
+        a.button(href="#!") Xem thêm

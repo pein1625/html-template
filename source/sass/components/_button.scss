@@ -79,3 +79,21 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.button {
+  display: inline-block;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 250px;
+  max-width: 100%;
+  transition: 0.3s;
+  background: 0;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+    text-decoration: none;
+  }
+}
