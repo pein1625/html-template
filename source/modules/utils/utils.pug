@@ -33,7 +33,13 @@ mixin pagination
         i.fal.fa-angle-right
 
 mixin search
-  form.search.input-group
-    input.form-control(type='text', placeholder='Tìm kiếm...')
-    button.input-group-text
-      i.far.fa-search
+  form.search
+    .input-group
+      input.form-control(type='text', placeholder='Tìm kiếm sản phẩm...')
+      button.input-group-text
+        i.far.fa-search
+    .search__suggestions
+      a(href="#!") Đặc sản Sóc Trăng
+      a(href="#!") Gạo ngon
+      a(href="#!") Điện thoại di động
+      a(href="#!") Vải thiều

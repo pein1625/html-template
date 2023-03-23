@@ -3,20 +3,66 @@ include ../menu/menu
 
 mixin header
   header.header
+    .toppage
+      .container
+        .toppage__inner
+          .toppage__title.d-none.d-lg-block Sàn thương mại điện tử Hợp nhất
+          nav.toppage__nav
+            a(href="#!") Trang chủ
+            a(href="#!") Giới thiệu
+            a.me-lg-50(href="#!") Liên hệ
+            a.ms-auto.ms-lg-0(href="#!")
+              i.fal.fa-sign-in.me-2
+              | Đăng nhập
+            a(href="#!")
+              i.fal.fa-user-plus.me-2
+              | Đăng ký
     .header__wrapper
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
 
           .header__elements
-            +navbar
-              +menu(menu)
-
-            .h-contact
+            a.h-contact(href="tel:0826273888")
+              .row.align-items-center.g-2
+                .col-auto
+                  .h-contact__icon
+                    i.fal.fa-phone
+                .col
+                  div Hỗ trợ
+                  strong 0826273888
 
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
 
     nav.navigation
       .container
         .navigation__inner
+          +navbar
+            +search
+
+            nav.menu-nav
+              .menu-product-wrapper
+                .menu-nav__title
+                  i.fal.fa-bars.me-2
+                  | Danh mục
+
+                ul.menu.menu-product
+                  each item in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
+                    li.menu-item.menu-item-group
+                      a.menu-link(href="#!")= item
+                      span.menu-toggle
+                      ul.menu.menu-sub(data-title=item)
+                        each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                          li.menu-item
+                            a.menu-link(href="#!")= item2
+
+              ul.menu.menu-root
+                each item in ['Sản phẩm OCOP', 'Sản phẩm HOT', 'Sản phẩm khác']
+                    li.menu-item.menu-item-group
+                      a.menu-link(href="#!")= item
+                      span.menu-toggle
+                      ul.menu.menu-sub(data-title=item)
+                        each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                          li.menu-item
+                            a.menu-link(href="#!")= item2

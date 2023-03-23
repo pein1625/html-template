@@ -6,15 +6,15 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
-      },
-      {
-        "title": "Sản phẩm",
+        "title": "Sản phẩm - chưa xong",
         "url": "products"
       },
       {
-        "title": "Chi tiết sản phẩm",
+        "title": "Sản phẩm 2 - chưa xong",
+        "url": "products-2"
+      },
+      {
+        "title": "Chi tiết sản phẩm - Chưa xong",
         "url": "product-detail"
       },
       {
@@ -26,8 +26,12 @@
         "url": "news-detail"
       },
       {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Văn bản",
+        "url": "documents"
+      },
+      {
+        "title": "Đăng nhập",
+        "url": "login"
       }
     ]
   }

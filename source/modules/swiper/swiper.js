@@ -131,3 +131,25 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  addSwiper('.branding-slider', {
+    navigation: true,
+    pagination: true,
+    spaceBetween: 16,
+    slidesPerView: 2,
+    speed: 500,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+    }
+  });
+});

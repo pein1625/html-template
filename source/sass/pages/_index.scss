@@ -34,6 +34,18 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 24px 12px;
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .product-grid-2 {

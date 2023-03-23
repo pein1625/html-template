@@ -59,7 +59,52 @@
     border-color: $input-focus-border-color;
   }
 
+  .input-group-text {
+    background-color: $primary;
+    color: $white;
+    border-color: $primary;
+  }
+
+  &__suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    margin-top: 8px;
+
+    a {
+      display: inline-block;
+      font-size: 12px;
+      color: #7B7B7B;
+      margin-right: 6px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
   @media (min-width: 1200px) {
-    display: none;
+    width: 630px;
+    padding: 0;
+    background: 0;
+    border: 0;
+    position: absolute;
+    top: -80px;
+    left: 236px;
+
+    input {
+      background: #F0F0F0;
+      border: 0;
+      height: 44px;
+      padding-left: 12px;
+
+      &:focus {
+        background-color: #e6e6e6;
+      }
+    }
+
+    .input-group-text {
+      padding: 6px 16px;
+    }
   }
 }

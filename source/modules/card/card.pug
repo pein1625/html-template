@@ -89,6 +89,12 @@ mixin product-3
       img(src=`./images/product-${count % 6 + 1}.jpg`, alt="")
     h2.product-3__title Đặc sản Yên Bái
 
+mixin branding
+  - count++
+  .branding
+    a.branding__frame(href="#!")
+      img(src=`./images/cat-${count % 8 + 1}.jpg`, alt="")
+
 mixin cate(img='', title='')
  a.cate(href="#!")
   .cate__frame
@@ -99,7 +105,8 @@ mixin cate(img='', title='')
     else
       block
 
-mixin card
+mixin card(img='')
   - count++
+  - img = img ? img : `./images/card-${count % 4 + 1}.jpg`
   a.card(href="#!")
-    img(src=`./images/card-${count % 4 + 1}.jpg`, alt="")
+    img(src=img, alt="")

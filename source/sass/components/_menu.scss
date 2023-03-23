@@ -94,6 +94,11 @@
     text-transform: uppercase;
   }
 
+  &-extra {
+    margin-top: 16px;
+    background-color: #f2f2f2;
+  }
+
   @include media-breakpoint-up(xl) {
     &:not(.menu-sub) {
       border: 0;
@@ -148,7 +153,9 @@
     }
 
     &-root &-sub &-link {
-      padding-left: 20px;
+      padding-left: 16px;
+      padding-top: 6px;
+      padding-bottom: 6px;
     }
 
     &-root &-sub &-item-group > &-link {
@@ -156,19 +163,27 @@
     }
 
     &-root &-sub &-item:hover > &-link {
-      background-color: $light;
-    }
-
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
+      background-color: #FFECF9;
     }
 
     &-root > &-item > &-link {
       font-size: 14px;
-      padding: 12px 0;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $white;
       transition: 0.3s;
+    }
+
+    &-root > &-item-group > &-link {
+      &::after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Pro';
+        margin-left: 6px;
+        font-weight: 300;
+      }
     }
 
     &-root > &-item > &-toggle {
@@ -185,19 +200,6 @@
     &-root > &-item-group &-item-group:hover > &-sub {
       display: block;
       animation: menu-float-show 0.2s ease-out;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
     }
   }
 }

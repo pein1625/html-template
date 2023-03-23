@@ -303,3 +303,25 @@
   @include frame('rect', 43%);
   border-radius: 4px;
 }
+
+.branding {
+  &__frame {
+    @include frame('rect', 66.66%);
+    @include frame('zoom');
+  }
+
+  &__title {
+    @include max-line(1);
+    font-size: 14px;
+    color: $primary;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+  }
+}

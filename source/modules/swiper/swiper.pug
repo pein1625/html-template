@@ -218,7 +218,22 @@ mixin banner-slider
     .banner-slider__pagination
     .banner-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 4; i++)
+        - for(let i = 0; i < 2; i++)
           .swiper-slide
             a.banner-slider__frame(href="#!")
               img(src="./images/banner-slide.jpg", alt="")
+          .swiper-slide
+            a.banner-slider__frame(href="#!")
+              img(src="./images/banner-slide-2.jpg", alt="")
+
+mixin branding-slider
+  .branding-slider
+    .branding-slider__prev
+      i.fal.fa-angle-left
+    .branding-slider__next
+      i.fal.fa-angle-right
+    .branding-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +branding(`./images/cat-${i % 8 + 1}.jpg`)

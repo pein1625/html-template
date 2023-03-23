@@ -1,15 +1,47 @@
 extends layout/page
 
 block content
-  section.section
+  section.section.pt-4
     .container
       // banner
+      section.section-2.mb-3.pt-0
+        .banner-grid.row.g-3
+          .banner-grid__col.col
+            +banner-slider
+          .banner-grid__col.col-auto
+            .row.g-3
+              .col-6.col-lg-12
+                +card('./images/card-5.jpg')
+              .col-6.col-lg-12.mt-lg-3
+                +card('./images/card-6.jpg')
 
-      // Thương hiệu nổi bật
+      section.section-2.pt-0
+        h2.section-2__title Thương hiệu nổi bật
+        .section-2__body.bg-white.shadow
+          +branding-slider
 
-      // Danh mục sản phẩm
       .row.g-12
-        .col-auto
+        .col-lg.order-lg-1
+          // nav tab
+          nav.pd-nav
+            .pd-nav__wrapper
+              a.pd-nav__item.active(href="#!") Phổ biến
+              a.pd-nav__item(href="#!") Mới nhất
+              a.pd-nav__item(href="#!") Bán chạy
+              a.pd-nav__item(href="#!") Giá thấp đến cao
+              a.pd-nav__item(href="#!") Giá cao đến thấp
+
+            .pd-nav__paging.ms-auto
+              span.text-primary 1
+              span /20
+            .pd-nav__prev
+              i.fal.fa-angle-left
+            .pd-nav__next
+              i.fal.fa-angle-right
+
+          +product-grid
+
+        .col-lg-auto.mt-30.mt-lg-0
           .sidebar
             section.aside
               h3.aside__title.aside__title--lg Danh mục
@@ -65,9 +97,3 @@ block content
                   span.star-select__bg
                   span.stars.stars--1
                   span Từ 1 sao
-
-        .col
-          // nav tab
-
-          // product grid
-          +product-grid

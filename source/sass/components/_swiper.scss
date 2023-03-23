@@ -162,6 +162,27 @@
   }
 }
 
+@mixin slider-nav-4 {
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 32px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: $primary;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #F0E3F0;
+    }
+  }
+}
+
 @mixin pagination {
   display: flex;
 
@@ -198,17 +219,10 @@
   position: relative;
   z-index: 1;
 
+  @include slider-nav-4;
+
   &__prev,
   &__next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 28px;
-    height: 32px;
-    font-size: 20px;
-    background-color: #F0E3F0;
-    border-radius: 4px;
-    color: $primary;
     position: absolute;
     top: -44px;
     right: 0;
@@ -390,5 +404,27 @@
     &__pagination {
       bottom: -16px;
     }
+  }
+}
+
+.branding-slider {
+  position: relative;
+  z-index: 1;
+
+  @include slider-nav-4;
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: -60px;
+    right: -16px;
+
+    &:hover {
+      background-color: #F0E3F0;
+    }
+  }
+
+  &__prev {
+    right: 22px;
   }
 }
