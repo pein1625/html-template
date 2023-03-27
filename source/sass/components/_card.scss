@@ -1,0 +1,111 @@
+.news {
+  &__frame {
+    @include frame('rect', 66.66%);
+    @include frame('zoom');
+    border-radius: 10px;
+  }
+
+  &__title {
+    @include max-line(2);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+
+  &__time {
+    color: $text-gray;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  &__desc {
+    @include max-line(2);
+    color: $text-gray;
+    margin-top: 10px;
+  }
+
+  &--2 &__frame {
+    width: 200px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__title {
+      margin-top: 12px;
+    }
+
+    &__time {
+      margin-top: 8px;
+    }
+
+    &__desc {
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    &--2 &__frame {
+      width: 170px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__title {
+      font-size: 12px;
+    }
+
+    &__time {
+      font-size: 10px;
+    }
+
+    &--2 &__frame {
+      width: 160px;
+    }
+  }
+}
+
+.card {
+  @include frame('rect', 43%);
+  border-radius: 4px;
+}
+
+.doc {
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(43, 64, 154, 0.3);
+    font-size: 14px;
+    border-radius: 4px;
+    color: $primary;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: #585858;
+
+    &:hover {
+      color: $secondary;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__btn {
+    font-size: 14px;
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    padding: 6px 20px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      h1.section__title VĂN BẢN PHÁP LUẬT
+
+      .row
+        .col-lg-8
+          each item, i in ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10']
+            .mb-3.pb-3.border-bottom
+              +doc(item, `#md-doc-${i}`)
+              +md-doc(`md-doc-${i}`)
+
+          nav.d-flex.mt-30
+            +pagination
+
+        .col-lg-4.mt-30.mt-lg-0
+          - for(let i = 0; i < 4; i++)
+            .mb-4.ml-0
+              +card

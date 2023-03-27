@@ -1,0 +1,78 @@
+.md-doc {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    line-height: 2;
+  }
+
+  &__btn {
+    display: inline-block;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $primary;
+    padding: 15px 65px;
+    border-radius: 4px;
+
+    &:hover {
+      color: $white;
+      background-color: darken($primary, 5%);
+    }
+  }
+
+  .modal-body {
+    padding: 75px;
+    position: relative;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .modal-dialog {
+      max-width: 700px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .modal-dialog {
+      max-width: 772px;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      margin-bottom: 24px;
+    }
+
+    &__btn {
+      padding: 12px 50px;
+    }
+
+    .modal-body {
+      padding: 40px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .modal-body {
+      padding: 30px 20px;
+    }
+  }
+}

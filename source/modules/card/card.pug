@@ -1,0 +1,86 @@
+- count = 0;
+
+mixin shop
+  - count++
+  .shop
+    a.shop__frame(href="#!")
+      img(src=`./images/shop-${count % 6 + 1}.jpg`, alt="")
+
+mixin product
+  - count++
+  .product
+    a.product__frame(href="#!")
+      img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
+    .product__body
+      h3.product__title
+        a(href="#!") Nón cỏ bàng thời trang cho nữ
+      .product__stars
+        span.stars.stars--5
+        span (23)
+      .row.justify-content-between
+        .col-auto
+          .product__price 70.000 ₫
+          .product__old-price 120.000đ
+        .col-auto
+          a.product__add-cart(href="#!")
+            i.fal.fa-cart
+
+mixin news
+  - count++
+  .news
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
+    h3.news__title
+      a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+    .news__time
+      i.fal.fa-clock.me-2.text-primary
+      | 03/07/2022
+    .news__desc Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero e
+
+mixin news-2
+  - count++
+  .news.news--2
+    .row.g-3.g-xl-20
+      .col-auto
+        a.news__frame(href="./news-detail.html")
+          img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
+      .col
+        h3.news__title.mt-0
+          a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+        .news__time
+          i.fal.fa-clock.me-2.text-primary
+          | 03/07/2022
+        .news__desc Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero e
+
+mixin news-3
+  - count++
+  .news.news--3
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
+    h3.news__title
+      a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+    .news__time
+      i.fal.fa-clock.me-2.text-primary
+      | 03/07/2022
+    .news__desc Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero e
+
+mixin card(img='')
+  - count++
+  - img = img ? img : `./images/card-${count % 4 + 1}.jpg`
+  a.card(href="#!")
+    img(src=img, alt="")
+
+mixin doc(number='01', id='#md-doc-1')
+  .doc
+    .row.g-3
+      .col-auto
+        .doc__number= number
+      .col
+        .row.g-3
+          .col
+            .doc__title
+              a(href="#!", data-bs-toggle="modal", data-bs-target=id) Cơ sở dữ liệu quốc gia về công tác tiếp công dân, xử lý đơn, giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh
+          .col-sm-auto
+            a.doc__btn(href="./images/sample.pdf" download)
+              i.fas.fa-download.me-2
+              | Tải về
