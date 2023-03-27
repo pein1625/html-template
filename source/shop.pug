@@ -1,0 +1,90 @@
+extends layout/page
+
+block content
+  section.shop-banner
+    img.shop-banner__bg(src="./images/shop-banner-bg.jpg", alt="")
+    .container
+      .shop-banner__body
+        .row.g-4
+          .col-md-4
+            .row.g-12
+              .col-auto
+                .shop-banner__frame
+                  img(src="./images/shop.jpg", alt="")
+              .col
+                .shop-banner__name Tên shop
+                .shop-banner__location
+                  i.fal.fa-map-marker-alt.me-2
+                  | Thành phố Hà Nội
+                .shop-banner__stars
+                  i.fas.fa-star.me-1
+                  strong 4.9
+                  span /5
+
+          .col-md-8
+            table.w-100
+              tbody
+                tr
+                  td Đánh giá
+                  td.text-primary 2.000
+                  td Thời gian phản hồi
+                  td.text-primary Trong vài giờ
+                tr
+                  td Sản phẩm
+                  td.text-primary 123
+                  td Tham gia
+                  td.text-primary 1 năm trước
+                tr
+                  td Tỉ lệ phản hồi
+                  td.text-primary 95%
+                  td Người theo dõi
+                  td.text-primary 12345
+
+  section.section.pt-3
+    .container
+      section.section-2.mb-3.pt-0
+        .banner-grid.row.g-3
+          .banner-grid__col.col
+            +banner-slider
+          .banner-grid__col.col-auto
+            .row.g-12.g-lg-3
+              .col-6.col-lg-12
+                +card('./images/card-5.jpg')
+              .col-6.col-lg-12.mt-lg-3
+                +card('./images/card-6.jpg')
+
+      section.section-2.pt-0
+        h2.section-2__title Thương hiệu nổi bật
+        .section-2__body.bg-white.shadow
+          +branding-slider
+
+      .row.g-12
+        .col-lg.order-lg-1
+          // nav tab
+          nav.pd-nav
+            .pd-nav__wrapper
+              a.pd-nav__item.active(href="#!") Phổ biến
+              a.pd-nav__item(href="#!") Mới nhất
+              a.pd-nav__item(href="#!") Bán chạy
+              a.pd-nav__item(href="#!") Giá thấp đến cao
+              a.pd-nav__item(href="#!") Giá cao đến thấp
+
+            .pd-nav__paging.ms-auto
+              span.text-primary 1
+              span /20
+            .pd-nav__prev
+              i.fal.fa-angle-left
+            .pd-nav__next
+              i.fal.fa-angle-right
+
+          +product-grid
+
+        .col-lg-auto.mt-30.mt-lg-0
+          .sidebar
+            section.aside
+              h3.aside__title.aside__title--lg Danh mục
+
+              ul.pd-menu
+                each item, index in ['Sản phẩm khuyến mại','Rau sạch','Thịt tươi sạch','Thủy sản','Thịt tươi sạch','Rau sạch','Thịt tươi sạch']
+                  li.pd-menu__item
+                    a.pd-menu__link(class=index==1?'active':'', href="#!")= item

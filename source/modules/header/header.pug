@@ -29,28 +29,33 @@ mixin header
                 .col-auto
                   .h-contact__icon
                     i.fal.fa-phone
-                .col
+                .col.d-none.d-md-block
                   div Hỗ trợ
                   strong 0826273888
 
-            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+            button.search-btn.ms-12.d-xl-none(type="button")
+              i.fal.fa-search
+
+            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-12(type="button")
+
+            +search
 
     nav.navigation
       .container
         .navigation__inner
           +navbar
-            +search
-
             nav.menu-nav
               .menu-product-wrapper
                 .menu-nav__title
-                  i.fal.fa-bars.me-2
+                  i.fal.fa-fw.fa-bars.me-2
                   | Danh mục
 
                 ul.menu.menu-product
-                  each item in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
+                  each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
                     li.menu-item.menu-item-group
-                      a.menu-link(href="#!")= item
+                      a.menu-link(href="#!")
+                        img(src=`./images/menu-icon-${index + 1}.png`, alt="")
+                        = item
                       span.menu-toggle
                       ul.menu.menu-sub(data-title=item)
                         each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
@@ -64,5 +69,10 @@ mixin header
                       span.menu-toggle
                       ul.menu.menu-sub(data-title=item)
                         each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
-                          li.menu-item
+                          li.menu-item.menu-item-group
                             a.menu-link(href="#!")= item2
+                            span.menu-toggle
+                            ul.menu.menu-sub.menu-sub-2(data-title=item2)
+                              each item3 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                                li.menu-item
+                                  a.menu-link(href="#!")= item3

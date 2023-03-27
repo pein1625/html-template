@@ -48,6 +48,17 @@
     color: $white;
   }
 
+  .menu-product > .menu-item > .menu-link {
+    & > img,
+    & > svg {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      object-position: 50% 50%;
+      margin-right: 8px;
+    }
+  }
+
   @include media-breakpoint-up(xl) {
     display: flex;
     align-items: center;
@@ -249,4 +260,17 @@
     position: relative;
     z-index: 10;
   }
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: $primary;
+  font-size: 14px;
+  border: 1px solid rgba(193, 62, 151, 0.3);
+  border-radius: 50%;
+  background: 0;
 }

@@ -4,8 +4,8 @@ mixin preview-slider
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
-              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+            a.ratio.ratio-1x1(href=`./images/product-${i + 1}.jpg`, data-fancybox="product")
+              img(src=`./images/product-${i + 1}.jpg`, alt="")
 
 mixin thumb-slider
   .thumb-slider
@@ -17,8 +17,8 @@ mixin thumb-slider
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide.bg-white
-            .ratio.ratio-3x2
-              img(src=`http://placekitten.com/1000/75${i}`, alt="")
+            .ratio.ratio-1x1
+              img(src=`./images/product-${i + 1}.jpg`, alt="")
 
 mixin preview
   article.preview

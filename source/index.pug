@@ -9,7 +9,7 @@ block content
           .banner-grid__col.col
             +banner-slider
           .banner-grid__col.col-auto
-            .row.g-3
+            .row.g-12.g-lg-3
               .col-6.col-lg-12
                 +card-slider-2
               .col-6.col-lg-12.mt-lg-3
@@ -58,5 +58,9 @@ block content
       .product-grid-2
         - for(let i = 0; i < 24; i++)
           +product
-      .d-flex.justify-content-center.mt-4
-        a.button(href="#!") Xem thêm
+
+        - for(let i = 0; i < 24; i++)
+          +product('d-none js-hidden-product')
+
+      .d-flex.justify-content-center.mt-4.js-show-more-product-wrapper
+        a.button.js-show-more-products(href="#!") Xem thêm
