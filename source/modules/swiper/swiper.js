@@ -23,3 +23,18 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+
+$(function() {
+  addSwiper('.banner-slider', {
+    pagination: true,
+    spaceBetween: 16,
+    speed: 500,
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    }
+  });
+});

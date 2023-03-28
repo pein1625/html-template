@@ -44,12 +44,16 @@ mixin swiper(el, number, hasNav, hasPaging)
 
 mixin banner-slider
   .banner-slider
+    .banner-slider__pagination
     .banner-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 3; i++)
+        - for(let i = 0; i < 2; i++)
           .swiper-slide
             a.banner-slider__frame(href="#!")
               img(src="./images/banner-slide.jpg", alt="")
+          //- .swiper-slide
+          //-   a.banner-slider__frame(href="#!")
+          //-     img(src="./images/banner-slide-2.jpg", alt="")
 
 mixin partner-slider
   .partner-slider

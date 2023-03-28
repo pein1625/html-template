@@ -17,13 +17,14 @@ mixin product
       .product__stars
         span.stars.stars--5
         span (23)
-      .row.justify-content-between
+      .row.justify-content-between.g-2
         .col-auto
           .product__price 70.000 ₫
+            span.product__discount -30%
           .product__old-price 120.000đ
         .col-auto
           a.product__add-cart(href="#!")
-            i.fal.fa-cart
+            i.fal.fa-fw.fa-lg.fa-shopping-cart
 
 mixin news
   - count++

@@ -1,0 +1,31 @@
+.banner-grid {
+  &__col {
+    position: relative;
+
+    &:first-child {
+      width: 73.18%;
+    }
+
+    &:last-child {
+      width: 26.82%;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__col {
+      width: 100% !important;
+
+      &:first-child {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__col {
+      &:first-child {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

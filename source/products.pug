@@ -1,0 +1,103 @@
+extends layout/page
+
+block content
+  // banner
+  section.section.pt-3.pb-40
+    .container
+      .banner-grid.row.g-3
+        .banner-grid__col.col
+          +banner-slider
+        .banner-grid__col.col-auto
+          .row.g-12.g-lg-3
+            .col-6.col-lg-12
+              +card('./images/card-5.jpg')
+            .col-6.col-lg-12.mt-lg-3
+              +card('./images/card-6.jpg')
+
+  // products
+
+  section.py-3
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          section.section-2
+            h1.section-2__title Vật tư nông nghiệp
+            nav.pd-nav
+              .pd-nav__label Sắp xếp theo
+              select.form-select
+                option Phổ biến
+                option Mới nhất
+                option Bán chạy
+                option Giá cao tới thấp
+                option Giá thấp tới cao
+              .pd-nav__paging.ms-auto
+                span.text-primary 1
+                span /20
+              .pd-nav__prev
+                i.fal.fa-angle-left
+              .pd-nav__next
+                i.fal.fa-angle-right
+
+            .row.g-2.g-sm-3.g-xl-30
+              - for(let i = 0; i < 9; i++)
+                .col-6.col-md-4
+                  +product
+
+            nav.d-flex.mt-3
+              +pagination
+
+        .col-lg-3
+          section.aside
+            h3.aside__title.aside__title--lg Danh mục
+
+            ul.pd-menu
+              each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang – Phụ kiện','Sức khoẻ – Làm đẹp','Thể thao – Du lịch Mẹ và bé']
+                li.pd-menu__item
+                  a.pd-menu__link(class=index==1?'active':'', href="#!")= item
+
+          section.aside
+            h3.aside__title Khoảng giá
+
+            .row.g-2.align-items-center
+              .col
+                input.form-control.form-control-sm.js-number-input(type="text", placeholder="Từ")
+              .col-auto -
+              .col
+                input.form-control.form-control-sm.js-number-input(type="text", placeholder="Đến")
+              .col-auto
+                button.btn.btn-sm.btn-primary Áp dụng
+
+          section.aside
+            h3.aside__title Nơi bán
+            each item in ['Hà Nội','Hồ Chí Minh','Huế','Đà Nẵng','Yên Bái','Vũng Tàu','Quảng Ninh']
+              .mb-10.m-last-0
+                +checkbox
+                  span=item
+
+          section.aside
+            h3.aside__title Đánh giá
+            .d-flex.flex-column
+              label.star-select
+                input.js-star-rating-filter(type="checkbox")
+                span.star-select__bg
+                span.stars.stars--5
+              label.star-select
+                input.js-star-rating-filter(type="checkbox")
+                span.star-select__bg
+                span.stars.stars--4
+                span Từ 4 sao
+              label.star-select
+                input.js-star-rating-filter(type="checkbox")
+                span.star-select__bg
+                span.stars.stars--3
+                span Từ 3 sao
+              label.star-select
+                input.js-star-rating-filter(type="checkbox")
+                span.star-select__bg
+                span.stars.stars--2
+                span Từ 2 sao
+              label.star-select
+                input.js-star-rating-filter(type="checkbox")
+                span.star-select__bg
+                span.stars.stars--1
+                span Từ 1 sao

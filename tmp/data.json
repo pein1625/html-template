@@ -199,6 +199,10 @@
 				"url": "products"
 			},
 			{
+				"title": "Gian hàng",
+				"url": "shop"
+			},
+			{
 				"title": "Chi tiết sản phẩm",
 				"url": "product-detail"
 			},
@@ -207,8 +211,8 @@
 				"url": "news"
 			},
 			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
+				"title": "Văn bản pháp luật",
+				"url": "documents"
 			},
 			{
 				"title": "Liên hệ",

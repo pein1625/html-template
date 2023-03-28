@@ -3,6 +3,7 @@
 // main colors
 
 $text-gray: #898989;
+$title-color: #585858;
 
 // $grid-breakpoints: (
 //   xs: 0,
@@ -51,6 +52,8 @@ $gutters: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  10: 10px,
+  12: 12px,
   20: 20px,
   24: 24px,
   30: 30px,
