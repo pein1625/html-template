@@ -1,0 +1,69 @@
+.s-shop {
+  background: linear-gradient(33.39deg, #2B409A 33.03%, #5BC0F9 109.88%);
+  border-radius: 8px;
+  padding: 20px 50px 30px;
+  margin: 0 -50px;
+  position: relative;
+  z-index: 1;
+
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding-right: 100px;
+    margin-bottom: 1em;
+  }
+
+  &__texture-1,
+  &__texture-2,
+  &__texture-3,
+  &__texture-4,
+  &__texture-5 {
+    position: absolute;
+    top: 10px;
+    left: 22%;
+    z-index: -1;
+  }
+
+  &__texture-2 {
+    left: 23%;
+  }
+
+  &__texture-3 {
+    left: 33%;
+    top: 20px;
+  }
+
+  &__texture-4 {
+    left: 42%;
+  }
+
+  &__texture-5 {
+    left: 28%;
+    top: 20px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding: 20px 30px;
+    margin: 0 -30px;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__texture-1,
+    &__texture-2,
+    &__texture-3,
+    &__texture-4,
+    &__texture-5 {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    border-radius: 4px;
+    padding: 16px;
+    margin: 0;
+  }
+}

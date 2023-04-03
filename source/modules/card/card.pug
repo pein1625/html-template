@@ -1,16 +1,10 @@
 - count = 0;
-
-mixin shop
-  - count++
-  .shop
-    a.shop__frame(href="#!")
-      img(src=`./images/shop-${count % 6 + 1}.jpg`, alt="")
-
 mixin product
   - count++
   .product
     a.product__frame(href="#!")
       img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
+    span.product__label Sàn Việt
     .product__body
       h3.product__title
         a(href="#!") Nón cỏ bàng thời trang cho nữ
@@ -65,10 +59,16 @@ mixin news-3
       | 03/07/2022
     .news__desc Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero e
 
-mixin card(img='')
+mixin card(img='', url='', addClass='')
   - count++
   - img = img ? img : `./images/card-${count % 4 + 1}.jpg`
-  a.card(href="#!")
+  a.card(href="#!", class=addClass)
+    img(src=img, alt="")
+
+mixin card-square(url='#!', img="./images/card-2-1.jpg")
+  - count++
+  - img = img ? img : `./images/card-${count % 4 + 1}.jpg`
+  a.card.card--square(href=url)
     img(src=img, alt="")
 
 mixin doc(number='01', id='#md-doc-1')

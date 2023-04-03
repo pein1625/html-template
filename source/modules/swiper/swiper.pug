@@ -42,18 +42,23 @@ mixin swiper(el, number, hasNav, hasPaging)
           .swiper-slide
             block
 
-mixin banner-slider
-  .banner-slider
+mixin banner-slider(addClass='', hasNav = 0)
+  .banner-slider(class=addClass)
+    if (hasNav)
+      .banner-slider__prev
+        i.fal.fa-arrow-left
+      .banner-slider__next
+        i.fal.fa-arrow-right
     .banner-slider__pagination
     .banner-slider__container.swiper-container
       .swiper-wrapper
-        - for(let i = 0; i < 2; i++)
+        - for(let i = 0; i < 4; i++)
           .swiper-slide
-            a.banner-slider__frame(href="#!")
-              img(src="./images/banner-slide.jpg", alt="")
-          //- .swiper-slide
-          //-   a.banner-slider__frame(href="#!")
-          //-     img(src="./images/banner-slide-2.jpg", alt="")
+            if (block)
+              block
+            else
+              a.banner-slider__frame(href="#!")
+                img(src="./images/banner-slide.jpg", alt="")
 
 mixin partner-slider
   .partner-slider
@@ -68,3 +73,33 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+mixin card-slider
+  .card-slider
+    .card-slider__pagination
+    .card-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +card
+
+mixin card-slider-2
+  .card-slider-2
+    .card-slider-2__pagination
+    .card-slider-2__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            +card
+
+mixin shop-slider
+  .shop-slider
+    .shop-slider__prev
+      i.fal.fa-arrow-left
+    .shop-slider__next
+      i.fal.fa-arrow-right
+    .shop-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +card(`./images/shop-${i % 6 + 1}.jpg`, '#!', 'card--square')

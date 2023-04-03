@@ -1,0 +1,46 @@
+mixin s-shop
+  section.s-shop
+    img.s-shop__texture-1(src="./images/texture-1.png", alt="")
+    img.s-shop__texture-2(src="./images/texture-2.png", alt="")
+    img.s-shop__texture-3(src="./images/texture-3.png", alt="")
+    img.s-shop__texture-4(src="./images/texture-4.png", alt="")
+    img.s-shop__texture-5(src="./images/texture-1.png", alt="")
+    h2.s-shop__title Gian hàng tiêu biểu
+    +shop-slider
+
+mixin s-other-products
+  section.section-3.section-3--light-blue
+    .container
+      h2.section-3__title
+        span Sản phẩm từ sàn khác
+      .row.g-2.g-sm-20
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-lg-3
+            +product
+
+mixin s-featured-products
+  section.section-3
+    .container
+      h2.section-3__title
+        span Sản phẩm tiêu biểu
+      .row.g-2.g-sm-20
+        - for(let i = 0; i < 8; i++)
+          .col-6.col-lg-3
+            +product
+      .mt-30.text-center
+        a.button(href="./products.html") Xem thêm
+      .mt-30
+        +card-slider
+
+mixin s-news
+  section.section-3.section-3--light-blue
+    .container
+      h2.section-3__title-2 Tin tức mới
+
+      .row.g-30
+        - for(let i = 0; i < 3; i++)
+          .col-lg-4
+            +news
+
+      .text-center.mt-30
+        a.button(href="./news.html") Xem tất cả

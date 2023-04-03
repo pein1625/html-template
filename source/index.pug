@@ -1,3 +1,29 @@
 extends layout/page
 
 block content
+  section.section-3
+    .container
+      .banner-grid.row.g-3
+        .banner-grid__col.col
+          .position-relative.h-100
+            +banner-slider('banner-slider--absolute', 1)
+        .banner-grid__col.col-auto
+          .row.g-12
+            .col-6.col-lg-12
+              +card-slider-2
+            .col-6.col-lg-12
+              +card-slider-2
+
+      .cat-grid.pt-30.pt-lg-50
+        each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Đặc sản vùng miền','Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp']
+          a.cat-grid__item(href="#!")
+            img(src=`./images/cat-icon-${index % 6 + 1}.png`, alt="")
+            span= item
+
+  section.section-3.pt-0
+    .container
+      +s-shop
+
+  +s-other-products
+  +s-featured-products
+  +s-news

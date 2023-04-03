@@ -1,0 +1,27 @@
+extends layout/page
+
+block content
+  section.section-3
+    .container
+      .row.g-30
+        .col-lg-6.mb-3.mb-lg-0
+          .position-relative.h-100
+            +banner-slider('banner-slider--absolute', 1)
+              +card('./images/card-2-4.jpg', '#!', 'card--2')
+        .col-lg-6
+          .row.g-3.g-lg-30
+            .col-6
+              +card('./images/card-2-1.jpg', '#!', 'card--2')
+            .col-6
+              +card('./images/card-2-2.jpg', '#!', 'card--2')
+            .col-md-12
+              +banner-slider
+                +card('./images/card-2-3.jpg', '#!', '')
+
+  section.section-3
+    .container
+      +s-shop
+
+  +s-other-products
+  +s-featured-products
+  +s-news

@@ -15,14 +15,14 @@
   }
 
   &__time {
-    color: $text-gray;
+    color: $text-gray-8;
     font-size: 12px;
     margin-top: 10px;
   }
 
   &__desc {
     @include max-line(2);
-    color: $text-gray;
+    color: $text-gray-8;
     margin-top: 10px;
   }
 
@@ -66,6 +66,23 @@
 
 .card {
   @include frame('rect', 43%);
+  border-radius: 4px;
+
+  &--square {
+    &::before {
+      padding-bottom: 100%;
+    }
+  }
+
+  &--2 {
+    &::before {
+      padding-bottom: 82%;
+    }
+  }
+}
+
+.card-2 {
+  @include frame('rect', 100%);
   border-radius: 4px;
 }
 
@@ -113,11 +130,29 @@
 .product {
   background-color: $white;
   border: 1px solid $border-color;
-  color: $title-color;
+  color: $text-gray-5;
+  border-radius: 2px;
+  position: relative;
 
   &__frame {
     @include frame('square');
     @include frame('zoom');
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FFFFFF;
+    background-color: $primary;
+    border-radius: 4px;
+    padding: 0 6px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
   }
 
   &__body {
@@ -143,7 +178,7 @@
 
   &__stars {
     font-size: 12px;
-    color: $text-gray;
+    color: $text-gray-8;
     margin-top: auto;
     margin-bottom: 14px;
   }
@@ -161,7 +196,7 @@
     font-weight: 400;
     line-height: 16px;
     text-decoration-line: line-through;
-    color: $text-gray;
+    color: $text-gray-8;
     margin-top: 4px;
   }
 

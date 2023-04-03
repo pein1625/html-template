@@ -218,9 +218,6 @@
 .banner-slider {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   position: relative;
 
   &__pagination {
@@ -232,8 +229,33 @@
     z-index: 10;
   }
 
-  .swiper-container {
-    height: 100%;
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 0 4px 4px 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &__next {
+    left: auto;
+    right: 0;
+    border-radius: 4px 0 0 4px;
   }
 
   .swiper-slide {
@@ -243,6 +265,13 @@
   }
 
   &__frame {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      content: '';
+    }
+
     &, img {
       width: 100%;
       height: 100%;
@@ -257,14 +286,25 @@
     }
   }
 
-  @include media-breakpoint-down(lg) {
-    position: relative;
-    height: auto;
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    &__container {
-      height: auto;
+    .swiper-container {
+      height: 100%;
     }
 
+    .swiper-slide {
+      height: auto;
+
+      & > * {
+        height: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
     &__frame {
       position: relative;
       height: auto;
@@ -276,11 +316,79 @@
         padding-bottom: 32%;
       }
     }
+
+    &--absolute {
+      position: relative;
+      height: auto;
+
+      .swiper-container {
+        height: auto;
+      }
+    }
   }
 
   @include media-breakpoint-down(md) {
     &__pagination {
       bottom: -16px;
     }
+  }
+}
+
+.shop-slider {
+  position: relative;
+  z-index: 1;
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $white;
+    border-radius: 50%;
+    color: $white;
+    position: absolute;
+    top: -48px;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary;
+      background-color: $white;
+    }
+  }
+
+  &__prev {
+    right: 42px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__prev,
+    &__next {
+      width: 28px;
+      height: 28px;
+      top: -40px;
+    }
+
+    &__prev {
+      right: 36px;
+    }
+  }
+}
+
+.card-slider {
+  position: relative;
+  margin-bottom: 30px;
+
+  &__pagination {
+    @include pagination();
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
   }
 }

@@ -1,2 +1,64 @@
 mixin footer
   footer.footer
+    .container
+      .footer__grid
+        .footer__col
+          a.footer__logo(href="#!")
+            img(src="./images/logo.png", alt="")
+
+          ul.f-contact.mt-3
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-map-marker-alt
+                .col 112 Cách Mạng Tháng Tám, Phường 1, Tân An, Long An
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-envelope
+                .col
+                  a(href="mailto:sct@longan.gov.vn") sct@longan.gov.vn
+            li
+              .row.g-2
+                .col-auto
+                  i.fal.fa-fw.fa-phone
+                .col
+                  a(href="tel:(072) 3826 336") (072) 3826 336
+
+        .footer__col
+          .footer__heading HỖ TRỢ
+          ul.f-menu
+            each item in ['Hướng dẫn mua hàng','Chính sách đổi trả','Điều khoản- Quy định','Quy trình giải quyết khiếu nại','Quyền và nghĩa vụ các bên','Quy định hàng hóa cấm','Chính sách vận chuyển','Chính sách bảo mật','Quy định đóng gói hàng hoá']
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading ĐỐI TÁC
+          ul.f-menu
+            each item in ['Giới thiệu về SanViet','Điều khoản chung','Quy chế hoạt động','Quy định tham gia']
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading ĐỐI TÁC
+          ul.f-menu
+            each item in ['Đặc sản vùng miền','Sản phẩm khác','Sản phẩm OCOP']
+              li
+                a(href="#!")= item
+
+        .footer__col
+          .footer__heading KÊT NỐI VỚI CHÚNG TÔI
+
+          ul.f-social
+            li
+              a(href="#!")
+                span.f-social__icon
+                  i.fab.fa-facebook-f
+                span Facebook
+            li
+              a(href="#!")
+                span.f-social__icon
+                  i.fab.fa-youtube
+                span Youtube
+
+      .footer__copyright © Copyright 2022 Sàn TMĐT Long An - All Rights Reserved
