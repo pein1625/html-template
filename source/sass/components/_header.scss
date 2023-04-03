@@ -11,10 +11,10 @@
 
   &__logo {
     display: inline-flex;
-    margin: 22px 0;
+    margin: 20px 0;
 
     img {
-      height: 26px;
+      height: 40px;
     }
   }
 
@@ -26,10 +26,10 @@
 
   @include media-breakpoint-up(xl) {
     &__logo {
-      margin: 36px 0;
+      margin: 20px 0;
 
       img {
-        height: 35px;
+        height: 50px;
       }
     }
   }
@@ -44,7 +44,7 @@
     line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    background: #A3277B;
+    background: $primary;
     color: $white;
   }
 
@@ -63,11 +63,11 @@
     display: flex;
     align-items: center;
     position: relative;
-    background-color: #C13E97;
     border-radius: 4px 4px 0;
+    border-top: 0;
 
     &__title {
-      border-radius: 4px 0 0 0;
+      border-radius: 4px;
     }
 
     .menu-product-wrapper {
@@ -196,12 +196,13 @@
 }
 
 .toppage {
-  background-color: #2B409A;
+  background-color: $white;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   padding: 10px 0;
-  color: $white;
+  border-bottom: 1px solid $border-color;
+  color: $text-gray-5;
 
   &__inner {
     display: flex;
@@ -215,10 +216,10 @@
     margin-left: auto;
 
     a {
-      color: $white;
+      color: $text-gray-5;
 
       &:hover {
-        color: $white;
+        color: $primary;
         text-decoration: none;
         opacity: 0.8;
       }
@@ -256,21 +257,61 @@
 }
 
 .navigation {
+  background-color: #2B409A;
+
   &__inner {
+    display: block;
+    align-items: center;
     position: relative;
     z-index: 10;
+    padding: 8px 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__inner {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
   }
 }
 
-.search-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  color: $primary;
-  font-size: 14px;
-  border: 1px solid rgba(193, 62, 151, 0.3);
-  border-radius: 50%;
-  background: 0;
+.h-info {
+  padding: 20px;
+  color: $text-gray-7;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed $border-color;
+    }
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    position: absolute;
+    top: -45px;
+    right: 0;
+    transform: translateY(-50%);
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        margin-right: 60px;
+      }
+    }
+  }
 }

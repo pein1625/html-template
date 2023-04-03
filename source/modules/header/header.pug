@@ -6,7 +6,7 @@ mixin header
     .toppage
       .container
         .toppage__inner
-          .toppage__title.d-none.d-lg-block Sàn thương mại điện tử Hợp nhất
+          .toppage__title.d-none.d-lg-block Sàn thương mại điện tử Long An
           nav.toppage__nav
             a(href="#!") Trang chủ
             a(href="#!") Giới thiệu
@@ -21,24 +21,10 @@ mixin header
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.png", alt="")
+            img(src="./images/logo.svg", alt="")
 
           .header__elements
-            a.h-contact(href="tel:0826273888")
-              .row.align-items-center.g-2
-                .col-auto
-                  .h-contact__icon
-                    i.fal.fa-phone
-                .col.d-none.d-md-block
-                  div Hỗ trợ
-                  strong 0826273888
-
-            button.search-btn.ms-12.d-xl-none(type="button")
-              i.fal.fa-search
-
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-12(type="button")
-
-            +search
 
     nav.navigation
       .container
@@ -62,17 +48,27 @@ mixin header
                           li.menu-item
                             a.menu-link(href="#!")= item2
 
-              ul.menu.menu-root
-                each item in ['Sản phẩm OCOP', 'Sản phẩm HOT', 'Sản phẩm khác']
-                    li.menu-item.menu-item-group
-                      a.menu-link(href="#!")= item
-                      span.menu-toggle
-                      ul.menu.menu-sub(data-title=item)
-                        each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
-                          li.menu-item.menu-item-group
-                            a.menu-link(href="#!")= item2
-                            span.menu-toggle
-                            ul.menu.menu-sub.menu-sub-2(data-title=item2)
-                              each item3 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
-                                li.menu-item
-                                  a.menu-link(href="#!")= item3
+            .h-info
+              .h-info__item
+                .row.align-items-center.g-3
+                  .col-auto
+                    img(src="./images/icon-shield.png", alt="")
+                  .col
+                    div Thanh toán
+                    strong An toàn 100%
+              .h-info__item
+                .row.align-items-center.g-3
+                  .col-auto
+                    img(src="./images/icon-user.png", alt="")
+                  .col
+                    strong Kênh người bán
+                    div Đăng ký tại đây
+              .h-info__item
+                .row.align-items-center.g-3
+                  .col-auto
+                    img(src="./images/icon-phone.png", alt="")
+                  .col
+                    div Hỗ trợ
+                    a.fw-700(href="tel:(072) 3826 336") (072) 3826 336
+
+          +search
