@@ -1,8 +1,8 @@
 include ../navbar/navbar
 include ../menu/menu
 
-mixin header
-  header.header
+mixin header(addClass='')
+  header.header(class=addClass)
     .toppage
       .container
         .toppage__inner
@@ -72,3 +72,9 @@ mixin header
                     a.fw-700(href="tel:(072) 3826 336") (072) 3826 336
 
           +search
+
+          a.h-cart(href="./cart.html")
+            span.h-cart__text 0 sản phẩm
+            span.h-cart__icon
+              i.fal.fa-lg.fa-shopping-cart
+            span.h-cart__number 0

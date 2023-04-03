@@ -304,6 +304,33 @@
     }
   }
 
+  &--2 &__pagination {
+    bottom: 16px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &--2 &__frame {
+      position: relative;
+      height: auto;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 32%;
+      }
+    }
+
+    &--2 {
+      position: relative;
+      height: auto;
+
+      .swiper-container {
+        height: auto;
+      }
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     &__frame {
       position: relative;
