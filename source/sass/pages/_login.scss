@@ -1,0 +1,54 @@
+.login-form {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 20px;
+  height: 100%;
+  color: $text-gray-7;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: $secondary;
+    margin-bottom: 16px;
+  }
+
+  input.form-control {
+    height: 48px;
+  }
+
+  .btn {
+    box-shadow: 0 1px 6px rgba(#000, 0.08);
+  }
+}
+
+.sign-up-info {
+  color: $text-gray-5;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-top: 24px;
+  }
+
+  &__desc {
+    color: $text-gray-7;
+    margin-bottom: 16px;
+  }
+
+  &__btn {
+    display: inline-block;
+    border: 1px solid $primary;
+    padding: 6px 20px;
+    color: $primary;
+    transition: 0.3s;
+    border-radius: 4px;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+}

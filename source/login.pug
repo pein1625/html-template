@@ -1,0 +1,26 @@
+extends layout/page
+
+block content
+  section.section-3
+    .container
+      .row.g-30
+        .col-lg-4
+          form.login-form(action="#!")
+            h1.login-form__title Đăng nhập
+            .mb-3
+              input.form-control(type="text", placeholder="Tên đăng nhập")
+            .mb-3
+              input.form-control(type="password", placeholder="Mật khẩu")
+
+            .row.g-3.justify-content-between.align-items-center.login-form__text
+              .col-auto
+                +checkbox
+                  | &nbsp; Giữ tôi luôn đăng nhập
+              .col-auto
+                a.login-form__link(href="#!") Quên mật khẩu?
+            .d-grid.mt-4
+              button.btn.btn-primary.text-white.py-12(type="submit") Đăng nhập
+            .mt-4 Chưa có tài khoản? #[a(href="./sign-up.html") Đăng ký]
+
+        .col-lg-8
+          img.w-100.rounded(src="./images/login-banner.jpg", alt="")

@@ -1,0 +1,23 @@
+extends layout/page
+
+block content
+  section.section-3
+    .container
+      .row.g-30
+        .col-lg-6
+          .sign-up-info
+            img.w-100.rounded(src="./images/sign-up-banner-1.jpg", alt="")
+            .sign-up-info__title Bạn là chủ gian hàng?
+            .sign-up-info__desc Vui lòng đăng nhập để tiếp tục quản lý sản phẩm & đơn hàng
+            a.sign-up-info__btn(href="./login.html")
+              i.fal.fa-lg.fa-sign-in.me-2
+              | Đăng nhập
+
+        .col-lg-6
+          .sign-up-info
+            img.w-100.rounded(src="./images/sign-up-banner-2.jpg", alt="")
+            .sign-up-info__title Chưa có gian hàng?
+            .sign-up-info__desc Đăng ký ngay hôm nay để mở gian hàng dễ dàng trên Sàn Việt
+            a.sign-up-info__btn(href="./sign-up.html")
+              i.fal.fa-lg.fa-user-plus.me-2
+              | Đăng ký

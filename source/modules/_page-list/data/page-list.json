@@ -6,8 +6,12 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
+        "title": "Trang chủ 2",
+        "url": "index-2"
+      },
+      {
+        "title": "Trang chủ 3",
+        "url": "index-3"
       },
       {
         "title": "Sản phẩm",
@@ -30,8 +34,12 @@
         "url": "documents"
       },
       {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Đăng nhập",
+        "url": "login"
+      },
+      {
+        "title": "Đăng ký 1",
+        "url": "sign-in-1"
       }
     ]
   }
