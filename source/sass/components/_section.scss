@@ -76,6 +76,24 @@
   }
 }
 
+.section-4 {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 24px;
+
+  &__title {
+    font-size: 16px;
+    color: $secondary;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+  }
+}
+
 .aside {
   & + & {
     border-top: 1px solid $border-color;

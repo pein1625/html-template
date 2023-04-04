@@ -1,6 +1,45 @@
 extends layout/page
 
 block content
+  section.shop-banner
+    img.shop-banner__bg(src="./images/shop-banner-bg.jpg", alt="")
+    .container
+      .shop-banner__body
+        .row.g-4
+          .col-md-4
+            .row.g-12
+              .col-auto
+                .shop-banner__frame
+                  img(src="./images/shop.jpg", alt="")
+              .col
+                .shop-banner__name Tên shop
+                .shop-banner__location
+                  i.fal.fa-map-marker-alt.me-2
+                  | Thành phố Hà Nội
+                .shop-banner__stars
+                  i.fas.fa-star.me-1
+                  strong 4.9
+                  span /5
+
+          .col-md-8
+            table.w-100
+              tbody
+                tr
+                  td Đánh giá
+                  td.text-primary 2.000
+                  td Thời gian phản hồi
+                  td.text-primary Trong vài giờ
+                tr
+                  td Sản phẩm
+                  td.text-primary 123
+                  td Tham gia
+                  td.text-primary 1 năm trước
+                tr
+                  td Tỉ lệ phản hồi
+                  td.text-primary 95%
+                  td Người theo dõi
+                  td.text-primary 12345
+
   section.section-3.section-3--light-blue.pb-30.pb-xl-50
     .container
       .banner-grid.row.g-3

@@ -85,3 +85,19 @@ mixin doc(number='01', id='#md-doc-1')
             a.doc__btn(href="./images/sample.pdf" download)
               i.fas.fa-download.me-2
               | Tải về
+
+mixin feedback
+  .feedback
+    .row.g-12
+      .col-auto
+        .feedback__avatar
+          img(src="./images/avatar.jpg", alt="")
+      .col
+        .feedback__name Username
+        .stars.stars--5
+        .feedback__time 2021-05-12 09:01
+        .feedback__content Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
+        .feedback__images
+          - for(let i = 0; i < 4; i++)
+            a.feedback__image(href=`./images/feedback${i + 1}.jpg` data-fancybox="feedback")
+              img(src=`./images/feedback${i + 1}.jpg`, alt="")
