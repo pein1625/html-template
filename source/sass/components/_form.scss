@@ -7,13 +7,13 @@
 
   &__icon {
     display: inline-block;
-    width: 1.25em;
-    height: 1.25em;
+    width: 20px;
+    height: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     position: relative;
-    margin: 0 0 0.25em 0;
+    transform: translateY(1px);
 
     &:not(:last-child) {
       margin-right: 1em;
@@ -170,7 +170,7 @@
   &--lg &__input {
     height: 40px;
     max-width: 100px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   &--lg &__btn {
@@ -192,6 +192,22 @@
 
     &:last-child {
       border-radius: 0 4px 4px 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &--lg {
+      width: 100px;
+    }
+
+    &--lg &__input {
+      height: 30px;
+      max-width: 100px;
+      font-size: 14px;
+    }
+
+    &--lg &__btn {
+      width: 30px;
     }
   }
 }
