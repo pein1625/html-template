@@ -52,3 +52,69 @@
     }
   }
 }
+
+.sign-form {
+  max-width: 100%;
+  width: 578px;
+  margin: 0 auto;
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__step {
+    font-size: 14px;
+    line-height: 30px;;
+    color: $secondary;
+    border-radius: 4px;
+    border: 1px solid #A5D9FF;
+    padding: 12px;
+    text-align: center;
+    background-color: #E0F2FF;
+
+    &.active {
+      border-color: $primary;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &__btn {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .form-label {
+    color: $text-gray-7;
+    font-weight: 600;
+  }
+
+  select.form-select,
+  input.form-control {
+    height: 44px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__step {
+      padding: 8px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .form-label {
+      font-size: 13px;
+    }
+
+    select.form-select,
+    input.form-control {
+      height: 40px;
+    }
+  }
+}

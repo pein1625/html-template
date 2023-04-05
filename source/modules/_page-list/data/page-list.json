@@ -34,12 +34,36 @@
         "url": "documents"
       },
       {
+        "title": "Giỏ hàng",
+        "url": "cart"
+      },
+      {
+        "title": "Thanh toán 1",
+        "url": "checkout"
+      },
+      {
+        "title": "Thanh toán 2",
+        "url": "checkout-2"
+      },
+      {
         "title": "Đăng nhập",
         "url": "login"
       },
       {
         "title": "Đăng ký 1",
-        "url": "sign-in-1"
+        "url": "sign-in"
+      },
+      {
+        "title": "Đăng ký 2",
+        "url": "sign-in-2"
+      },
+      {
+        "title": "Đăng ký 3",
+        "url": "sign-in-3"
+      },
+      {
+        "title": "Đăng ký 4",
+        "url": "sign-in-4"
       }
     ]
   }

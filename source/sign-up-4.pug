@@ -1,3 +1,14 @@
 extends layout/page
 
 block content
+  section.py-30.py-lg-50
+    .container
+      form.sign-form(action="./sign-up-4.html")
+        .sign-form__steps
+          .sign-form__step 1. Thông tin gian hàng
+          .sign-form__step 2. Thông tin thanh toán
+          .sign-form__step.active 3. Hoàn thiện thông tin
+        .mb-4.text-center.mt-50
+          a.btn.btn-primary.text-white(href="#!") Bấm vào đây để Xác nhận biểu mẫu đăng ký
+        .d-flex.justify-content-center
+          a.sign-form__btn.btn.btn-outline-primary(href="./sign-up-3.html") Quay lại

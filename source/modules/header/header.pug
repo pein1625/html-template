@@ -78,3 +78,78 @@ mixin header(addClass='')
             span.h-cart__icon
               i.fal.fa-lg.fa-shopping-cart
             span.h-cart__number 0
+
+mixin header-1
+  header.header(class=addClass)
+    .toppage
+      .container
+        .toppage__inner
+          .toppage__title.d-none.d-lg-block Sàn thương mại điện tử Long An
+          nav.toppage__nav
+            a(href="./index.html") Trang chủ
+            a(href="#!") Giới thiệu
+            a.me-lg-50(href="#!") Liên hệ
+            a.ms-auto.ms-lg-0(href="./login.html")
+              i.fal.fa-sign-in.me-2
+              | Đăng nhập
+            a(href="./sign-in.html")
+              i.fal.fa-user-plus.me-2
+              | Đăng ký
+    .header__wrapper
+      .container
+        .header__inner
+          a.header__logo(href="./index.html")
+            img(src="./images/logo.svg", alt="")
+
+          .header__elements
+            +navbar
+              nav.menu-nav
+                .menu-product-wrapper
+                  .menu-nav__title
+                    i.fal.fa-fw.fa-bars.me-2
+                    | Danh mục
+
+                  ul.menu.menu-product
+                    each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
+                      li.menu-item.menu-item-group
+                        a.menu-link(href="#!")
+                          img(src=`./images/menu-icon-${index + 1}.png`, alt="")
+                          = item
+                        span.menu-toggle
+                        ul.menu.menu-sub(data-title=item)
+                          each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                            li.menu-item
+                              a.menu-link(href="#!")= item2
+
+              .h-info
+                .h-info__item
+                  .row.align-items-center.g-3
+                    .col-auto
+                      img(src="./images/icon-shield.png", alt="")
+                    .col
+                      div Thanh toán
+                      strong An toàn 100%
+                .h-info__item
+                  .row.align-items-center.g-3
+                    .col-auto
+                      img(src="./images/icon-user.png", alt="")
+                    .col
+                      strong Kênh người bán
+                      div Đăng ký tại đây
+                .h-info__item
+                  .row.align-items-center.g-3
+                    .col-auto
+                      img(src="./images/icon-phone.png", alt="")
+                    .col
+                      div Hỗ trợ
+                      a.fw-700(href="tel:(072) 3826 336") (072) 3826 336
+
+            +search
+
+            a.h-cart(href="./cart.html")
+              span.h-cart__text 0 sản phẩm
+              span.h-cart__icon
+                i.fal.fa-lg.fa-shopping-cart
+              span.h-cart__number 0
+
+            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-12(type="button")

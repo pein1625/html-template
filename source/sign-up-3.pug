@@ -1,3 +1,35 @@
 extends layout/page
 
 block content
+  section.py-30.py-lg-50
+    .container
+      form.sign-form(action="./sign-up-4.html")
+        .sign-form__steps
+          .sign-form__step 1. Thông tin gian hàng
+          .sign-form__step.active 2. Thông tin thanh toán
+          .sign-form__step 3. Hoàn thiện thông tin
+        .row.mb-3
+          .col-lg-6
+            select.form-select(required)
+              option Chọn ngân hàng
+              option Vietcombank
+              option Techcombank
+              option MB Bank
+              option ...
+        .mb-3
+          label.form-label Loại tài khoản
+          .mt-1
+            +radio('account-type')
+              span Cá nhân
+          .mt-1
+            +radio('account-type')
+              span Doanh nghiệp
+        .mb-3
+          label.form-label Số tài khoản #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3
+          label.form-label Tên chủ tài khoản #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3.d-flex.justify-content-between
+          a.sign-form__btn.btn.btn-outline-primary(href="./sign-up-2.html") Quay lại
+          a.sign-form__btn.btn.btn-outline-primary(href="./sign-up-4.html") Tiếp tục

@@ -1,3 +1,49 @@
 extends layout/page
 
 block content
+  section.py-30.py-lg-50
+    .container
+      form.sign-form(action="./sign-up-3.html")
+        .sign-form__steps
+          .sign-form__step.active 1. Thông tin gian hàng
+          .sign-form__step 2. Thông tin thanh toán
+          .sign-form__step 3. Hoàn thiện thông tin
+        .mb-3
+          label.form-label Họ #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3
+          label.form-label Tên #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3
+          label.form-label Email #[span.text-danger *]
+          input.form-control(type="email", placeholder="", required)
+        .mb-3
+          label.form-label Tên đăng nhập #[span.text-danger *]
+          input.form-control(type="text", placeholder="Từ 0-9 a-z / không dấu cách, tiếng việt có dấu hay ký tự đặc biệt", required)
+        .mb-3
+          label.form-label Url gian hàng #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3
+          label.form-label Số điện thoại #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3
+          label.form-label Mật khẩu #[span.text-danger *]
+          input.form-control(type="password", placeholder="", required)
+        .mb-3
+          label.form-label Xác nhận mật khẩu #[span.text-danger *]
+          input.form-control(type="password", placeholder="", required)
+        .mb-3
+          label.form-label Địa chỉ cửa hàng #[span.text-danger *]
+          input.form-control(type="text", placeholder="", required)
+        .mb-3
+          input.form-control(type="text", placeholder="Thành phố *", required)
+        .row.mb-3
+          .col-lg-6
+            select.form-select(required)
+              option Tỉnh *
+              option Hà Nội
+              option Hồ Chí Minh
+              option Đà Nẵng
+              option ...
+        .mb-3
+          button.sign-form__btn.btn.btn-outline-primary(type="submit") Tiếp tục

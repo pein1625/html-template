@@ -1,4 +1,4 @@
-.cart {
+.order {
   color: $text-gray-5;
 
   &__group {
@@ -12,9 +12,9 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 20px 1fr 150px 200px 150px 100px;
-    gap: 16px;
-    padding: 16px 20px;
+    grid-template-columns: 1fr 100px 80px 100px;
+    gap: 8px;
+    padding: 4px 16px;
     align-items: center;
     position: relative;
   }
@@ -52,11 +52,9 @@
     color: $white;
   }
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     &__row {
-      display: block;
-      padding-left: 60px;
-      position: relative;
+      grid-template-columns: 1fr 1fr 1fr;
 
       &:not(:last-child) {
         border-bottom: 1px dashed $border-color;
@@ -64,15 +62,18 @@
     }
 
     &__col {
-      &:first-child {
-        .checkbox-styled {
-          position: absolute;
-          top: 16px;
-          left: 20px;
-        }
+      &--item {
+        grid-column: span 3;
       }
+      // &:first-child {
+      //   .checkbox-styled {
+      //     position: absolute;
+      //     top: 16px;
+      //     left: 20px;
+      //   }
+      // }
 
-      text-align: left !important;
+      // text-align: left !important;
     }
 
     &__delete {
@@ -103,10 +104,10 @@
   }
 }
 
-.cart-item {
+.order-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   color: inherit;
 
   &:hover {
@@ -115,12 +116,17 @@
 
   &__frame {
     @include frame('square');
-    width: 90px;
+    width: 40px;
   }
 
-  @include media-breakpoint-down(sm) {
-    &__frame {
-      width: 70px;
-    }
+  &__title {
+    font-weight: 600;
   }
+}
+
+.payment-method-select {
+  height: 50px !important;
+  border: 1px solid #CAD8EF;
+  padding-left: 12px;
+  font-weight: 600;
 }
