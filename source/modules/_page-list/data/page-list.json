@@ -51,19 +51,19 @@
       },
       {
         "title": "Đăng ký 1",
-        "url": "sign-in"
+        "url": "sign-up"
       },
       {
         "title": "Đăng ký 2",
-        "url": "sign-in-2"
+        "url": "sign-up-2"
       },
       {
         "title": "Đăng ký 3",
-        "url": "sign-in-3"
+        "url": "sign-up-3"
       },
       {
         "title": "Đăng ký 4",
-        "url": "sign-in-4"
+        "url": "sign-up-4"
       }
     ]
   }

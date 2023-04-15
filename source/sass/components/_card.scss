@@ -128,11 +128,17 @@
 }
 
 .product {
+  display: flex;
+  flex-direction: column;
   background-color: $white;
   border: 1px solid $border-color;
   color: $text-gray-5;
   border-radius: 2px;
   position: relative;
+
+  &:only-child {
+    height: 100%;
+  }
 
   &__frame {
     @include frame('square');
@@ -159,6 +165,7 @@
     display: flex;
     flex-direction: column;
     padding: 16px;
+    flex-grow: 1;
   }
 
   &__title {

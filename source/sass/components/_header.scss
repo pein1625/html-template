@@ -164,8 +164,8 @@
       }
 
       .menu-item:hover > .menu-link {
-        color: $primary;
-        background-color: #FFECF9;
+        // color: $secondary;
+        background-color: rgba(40, 121, 254, 0.1);
       }
 
       .menu-item:hover > .menu-sub {
