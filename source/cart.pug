@@ -25,7 +25,7 @@ mixin cart-group-header(title="Gian hàng 01")
       span= title
 
 mixin cart-row
-  .cart__row.js-cart-item(data-unit-price="70000")
+  .cart__row.js-cart-item(data-unit-price="70000", data-discount="10000")
     .cart__col.text-center
       +checkbox('', '', 'js-cart-check-item')
     .cart__col
@@ -67,7 +67,7 @@ block content
                   .col-12.col-sm-auto.me-auto Tổng thanh toán (#[span.js-cart-item-count 4] sản phẩm):
                   .col-12.col-sm-auto.text-sm-end.mt-3.mt-sm-0
                     .cart__subtotal.js-cart-subtotal 0 ₫
-                    div Tiết kiệm 165.000đ
+                    div Tiết kiệm #[span.js-cart-total-discount 165.000đ]
                   .col-12.col-md-auto.mt-3.mt-md-0
                     .d-grid
                       button.cart__btn.btn.btn-primary.text-white.py-12.px-70(type="submit") MUA HÀNG

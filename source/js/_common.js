@@ -98,6 +98,7 @@ $(function() {
   function calcSubtotal() {
     let itemCount = 0;
     let subtotal = 0;
+    let totalDiscount = 0;
     let isAllChecked = true;
 
     $('.cart__group').each(function() {
@@ -107,14 +108,17 @@ $(function() {
 
       $items.each(function() {
         const unitPrice = Number($(this).data('unit-price'));
+        const unitDiscount = Number($(this).data('discount'));
         const quantity = $(this).find('.js-cart-quantity').val() || 1;
         const value = unitPrice * quantity;
+        const discount = unitDiscount * quantity;
 
         if (!$(this).find('.js-cart-check-item').prop('checked')) {
           isChecked = false;
           isAllChecked = false;
         }
 
+        totalDiscount += discount;
         subtotal += value;
         itemCount += 1;
 
@@ -127,5 +131,11 @@ $(function() {
     $('.js-cart-check-all').prop('checked', isAllChecked);
     $('.js-cart-item-count').text(itemCount);
     $('.js-cart-subtotal').text(`${subtotal.toLocaleString('en')} ₫`);
+
+    if (totalDiscount) {
+      $('.js-cart-total-discount').removeClass('d-none').text(`${totalDiscount.toLocaleString('en')} ₫`);
+    } else {
+      $('.js-cart-total-discount').addClass('d-none');
+    }
   }
 });
