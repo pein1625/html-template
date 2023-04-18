@@ -1,0 +1,132 @@
+.order {
+  color: $text-gray-5;
+
+  &__group {
+    background-color: $white;
+    border-radius: 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 100px 80px 100px;
+    gap: 8px;
+    padding: 4px 16px;
+    align-items: center;
+    position: relative;
+  }
+
+  &__col {
+    &--4 {
+      grid-column: span 4;
+    }
+  }
+
+  &__delete,
+  &__delete-selected {
+    color: inherit;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+
+  &__footer {
+    padding: 16px 20px;
+  }
+
+  &__subtotal {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $primary;
+  }
+
+  &__btn {
+    width: 220px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $white;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__row {
+      grid-template-columns: 1fr 1fr 1fr;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed $border-color;
+      }
+    }
+
+    &__col {
+      &--item {
+        grid-column: span 3;
+      }
+      // &:first-child {
+      //   .checkbox-styled {
+      //     position: absolute;
+      //     top: 16px;
+      //     left: 20px;
+      //   }
+      // }
+
+      // text-align: left !important;
+    }
+
+    &__delete {
+      position: absolute;
+      bottom: 21px;
+      right: 20px;
+    }
+
+    &__unit-value {
+      position: absolute;
+      bottom: 21px;
+      left: 172px;
+    }
+
+    &__value {
+      display: none;
+    }
+
+    &__quantity {
+      margin-top: 8px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: inherit;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &__frame {
+    @include frame('square');
+    width: 40px;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+}
+
+.payment-method-select {
+  height: 50px !important;
+  border: 1px solid #CAD8EF;
+  padding-left: 12px;
+  font-weight: 600;
+}

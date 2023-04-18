@@ -1,0 +1,118 @@
+extends layout/page
+
+mixin order-item
+  a.order-item(href="./product-detail.html")
+    .order-item__frame
+      img(src="./images/product-1.jpg", alt="")
+    .order-item__title Bột rửa bát Finish Classic Power
+
+mixin order-header
+  .order__row.py-3
+    .order__col Sản Phẩm
+    .order__col.text-center Đơn giá
+    .order__col.text-center Số lượng
+    .order__col.text-center Số tiền
+
+mixin order-group-header(title="Gian hàng 01")
+  .order__row.d-block.border-bottom.px-4.py-10
+    .order__col
+      i.fal.fa-store.me-2
+      span= title
+
+mixin order-group-footer(number="1", price="70.000 ₫")
+  .order__row.d-block.border-top.px-4.py-10
+    .order__col
+      .text-end
+        span Tổng số tiền (#{number} sản phẩm):
+        span.fw-600.text-primary.ms-2.fs-16= price
+
+mixin order-row
+  .order__row
+    .order__col.order__col--item
+      +order-item
+    .order__col.text-center 70.000 ₫
+    .order__col.text-center 1
+    .order__col.text-center.fw-600 70.000 ₫
+
+block content
+  section.section
+    .container
+      h1.section__title THANH TOÁN
+
+      form.sign-form.w-100(action="#!")
+        .row.g-30
+          .col-12
+            .cart
+              .cart__group.d-none.d-lg-block
+                +order-header
+              .cart__group
+                +order-group-header('Gian hàng 1')
+                +order-row
+                +order-row
+                +order-group-footer(2, '140.000 ₫')
+              .cart__group
+                +order-group-header('Gian hàng 2')
+                +order-row
+                +order-group-footer
+              .cart__group
+                +order-group-header('Gian hàng 3')
+                +order-row
+                +order-group-footer
+              .cart__group
+                .cart__footer
+                  .row.align-items-center.g-4
+                    .col-12.col-sm-auto.me-auto.d-flex.align-items-center.justify-content-between
+                      span.me-3 Phương thức thanh toán
+                      select.form-select.w-auto.payment-method-select
+                        option Thanh toán COD
+                        option Thanh toán COD
+                    .col-12.col-md-auto
+                      .row.align-items-center
+                        .col-auto.me-auto Tổng thanh toán
+                          br
+                          | (#[span 4] sản phẩm):
+                        .col-auto.text-end
+                          .cart__subtotal 280.000 ₫
+                          div Tiết kiệm 165.000đ
+
+          .col-12
+            .bg-white.rounded
+              .p-3.border-bottom
+                i.fal.fa-lg.fa-map-marker-alt.me-2.text-primary
+                span Địa chỉ nhận hàng
+              .p-3
+                .mb-3
+                  label.form-label Họ và tên #[span.text-danger *]
+                  input.form-control(type="text", placeholder="", required)
+                .mb-3
+                  label.form-label Số điện thoại #[span.text-danger *]
+                  input.form-control(type="text", placeholder="", required)
+                .mb-3
+                  label.form-label Địa chỉ #[span.text-danger *]
+                  input.form-control(type="text", placeholder="", required)
+                .mb-3
+                  select.form-select
+                    option Tỉnh/ Thành phố  *
+                    option Tỉnh/ Thành phố  *
+                    option Tỉnh/ Thành phố  *
+                    option Tỉnh/ Thành phố  *
+                .mb-3
+                  select.form-select
+                    option Quận/ Huyện  *
+                    option Quận/ Huyện  *
+                    option Quận/ Huyện  *
+                    option Quận/ Huyện  *
+                .mb-3
+                  select.form-select
+                    option Phường *
+                    option Phường *
+                    option Phường *
+                    option Phường *
+
+                .d-flex.gap-2
+                  button.btn.btn-primary.py-10.text-white.px-30(type="button") Lưu
+                  button.sign-form__btn.btn.btn-outline-primary.py-10(type="reset") Làm lại
+
+        .mt-4.mt-xl-5.p-3.bg-white.rounded.d-flex.align-items-center.justify-content-between
+          a.sign-form__btn.btn.btn-outline-primary.py-10(href="./cart.html") Quay lại
+          button.btn.btn-primary.py-10.text-white.px-30.px-xl-60(type="submit") Mua hàng

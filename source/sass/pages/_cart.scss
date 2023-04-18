@@ -1,0 +1,126 @@
+.cart {
+  color: $text-gray-5;
+
+  &__group {
+    background-color: $white;
+    border-radius: 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 20px 1fr 150px 200px 150px 100px;
+    gap: 16px;
+    padding: 16px 20px;
+    align-items: center;
+    position: relative;
+  }
+
+  &__col {
+    &--4 {
+      grid-column: span 4;
+    }
+  }
+
+  &__delete,
+  &__delete-selected {
+    color: inherit;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+
+  &__footer {
+    padding: 16px 20px;
+  }
+
+  &__subtotal {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $primary;
+  }
+
+  &__btn {
+    width: 220px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $white;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__row {
+      display: block;
+      padding-left: 60px;
+      position: relative;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed $border-color;
+      }
+    }
+
+    &__col {
+      &:first-child {
+        .checkbox-styled {
+          position: absolute;
+          top: 16px;
+          left: 20px;
+        }
+      }
+
+      text-align: left !important;
+    }
+
+    &__delete {
+      position: absolute;
+      bottom: 21px;
+      right: 20px;
+    }
+
+    &__unit-value {
+      position: absolute;
+      bottom: 21px;
+      left: 172px;
+    }
+
+    &__value {
+      display: none;
+    }
+
+    &__quantity {
+      margin-top: 8px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &__frame {
+    @include frame('square');
+    width: 90px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__frame {
+      width: 70px;
+    }
+  }
+}
