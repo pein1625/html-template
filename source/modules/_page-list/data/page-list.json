@@ -32,6 +32,18 @@
       {
         "title": "Đăng nhập",
         "url": "login"
+      },
+      {
+        "title": "Giỏ hàng",
+        "url": "cart"
+      },
+      {
+        "title": "Thanh toán 1",
+        "url": "checkout"
+      },
+      {
+        "title": "Thanh toán 2",
+        "url": "checkout-2"
       }
     ]
   }
