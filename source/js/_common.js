@@ -131,11 +131,6 @@ $(function() {
     $('.js-cart-check-all').prop('checked', isAllChecked);
     $('.js-cart-item-count').text(itemCount);
     $('.js-cart-subtotal').text(`${subtotal.toLocaleString('en')} ₫`);
-
-    if (totalDiscount) {
-      $('.js-cart-total-discount').removeClass('d-none').text(`${totalDiscount.toLocaleString('en')} ₫`);
-    } else {
-      $('.js-cart-total-discount').addClass('d-none');
-    }
+    $('.js-cart-total-discount').removeClass('d-none').text(`${totalDiscount.toLocaleString('en')} ₫`);
   }
 });
