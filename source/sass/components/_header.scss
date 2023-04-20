@@ -274,3 +274,70 @@
   border-radius: 50%;
   background: 0;
 }
+
+.h-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  color: $primary;
+  font-size: 14px;
+  border: 1px solid rgba(193, 62, 151, 0.3);
+  border-radius: 50%;
+  background: 0;
+  position: relative;
+
+  &__text {
+    display: none;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    color: $white;
+    background-color: $danger;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 1;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    margin-top: 6px;
+    z-index: 100;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 0 14px;
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+      opacity: 0.9;
+    }
+
+    &__text {
+      display: inline-block;
+      font-size: 13px;
+      margin-right: 8px;
+    }
+
+    &__number {
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      right: 2px;
+    }
+  }
+}

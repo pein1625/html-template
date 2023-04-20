@@ -124,6 +124,23 @@
     height: 100%;
   }
 
+  &__brands {
+    background-color: #EAEFFF;
+    border-radius: 0 4px 0 0;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    z-index: 10;
+  }
+
+  &__brand {
+    height: 24px;
+  }
+
   &__frame {
     @include frame('square');
     @include frame('zoom');
@@ -131,6 +148,7 @@
 
   &__body {
     padding: 10px;
+    position: relative;
   }
 
   &__title {
@@ -203,6 +221,17 @@
     &::after {
       left: 50%;
       transform: rotateY(180deg);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__brands {
+      padding: 4px;
+      gap: 4px;
+    }
+
+    &__brand {
+      height: 20px;
     }
   }
 }
