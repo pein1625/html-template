@@ -6,6 +6,9 @@ mixin product
       img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
     span.product__label Sàn Việt
     .product__body
+      .product__brands
+        img.product__brand.ocop(src="./images/brand-1.png", alt="")
+        img.product__brand.spcnnttb(src="./images/brand-2.png", alt="")
       h3.product__title
         a(href="#!") Nón cỏ bàng thời trang cho nữ
       .product__stars
