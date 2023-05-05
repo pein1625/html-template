@@ -25,9 +25,9 @@
     font-weight: 400;
     text-transform: uppercase;
     color: $white;
-    padding-bottom: 14px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #57B7FF;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
   @include media-breakpoint-down(xl) {
@@ -130,7 +130,7 @@
 
   li {
     &:not(:last-child) {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
   }
 

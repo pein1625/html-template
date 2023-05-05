@@ -34,11 +34,11 @@ $(function() {
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 14
+        spaceBetween: 4
       },
       992: {
         slidesPerView: 3,
-        spaceBetween: 14,
+        spaceBetween: 4,
       }
     }
   });
@@ -54,7 +54,7 @@ $(function() {
       },
       1200: {
         slidesPerView: 2,
-        spaceBetween: 14,
+        spaceBetween: 4,
       }
     }
   });

@@ -91,11 +91,18 @@
     height: 175px;
 
     &__wrapper {
-      position: static;
+      position: relative;
+      z-index: 1;
     }
 
     &__logo {
       margin: 16px 0;
+      color: $white;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
 
       img {
         height: 90px;

@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .p-structure
+        .text-center.mb-40
+          .p-structure__title
+            span SƠ ĐỒ TỔ CHỨC CỤC PHÒNG VỆ
+        .text-center.mb-40
+          a.p-structure__title-2(href="./structure-detail.html") LÃNH ĐẠO CỤC
+        .row.g-30
+          each group in ['Đơn vị 1', 'Đơn vị 2', 'Đơn vị 3']
+            .col-lg-4
+              .p-structure__group
+                .p-structure__header= group
+                .p-structure__body
+                  ul.menu
+                    - for(let i = 0; i < 10; i++)
+                      li.menu-item.menu-item-group
+                        a.menu-link(href="./structure-detail.html") Khối #{i}
+                        span.menu-toggle
+                        ul.menu.menu-sub
+                          - for(let j = 0; j < 5; j++)
+                            li.menu-item.menu-item-group
+                              a.menu-link(href="./structure-detail.html") Văn phòng #{j}
+                              span.menu-toggle
+                              ul.menu.menu-sub.menu-sub-2
+                                - for(let y = 0; y < 4; y++)
+                                  li.menu-item
+                                    a.menu-link(href="./structure-detail.html") Chi nhánh #{y}

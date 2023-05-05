@@ -261,6 +261,18 @@
 	"pageList": {
 		"data": [
 			{
+				"title": "Cơ cấu tổ chức - Mới",
+				"url": "structure-2"
+			},
+			{
+				"title": "Chi tiết cơ cấu tổ chức - Mới",
+				"url": "structure-detail"
+			},
+			{
+				"title": "Media - Mới",
+				"url": "media"
+			},
+			{
 				"title": "Trang chủ 2",
 				"url": "index"
 			},

@@ -4,14 +4,14 @@ block content
   section.section
     .container
 
-      .row.g-3.g-xl-30
+      .row.g-3.g-xl-20
         .col-lg-6.wow.fadeInUp(data-wow-delay="0.1s")
           h2.section__title Tin mới
           +news-slider-3
           //- +news-2
         .col-lg-6
           h2.section__title.section__title--empty.d-none.d-lg-block &nbsp;
-          .row.g-3.g-xl-30.h-lg-100
+          .row.g-3.g-xl-20.h-lg-100
             .col-md-6.h-md-100.wow.fadeInUp(data-wow-delay="0.2s")
               +news-group('Tin kháng kiện')
             .col-md-6.h-md-100.wow.fadeInUp(data-wow-delay="0.5s")
@@ -30,7 +30,7 @@ block content
   section.section.section--relative
     img.section__texture(src="./images/section-texture.png", alt="")
     .container
-      .row
+      .row.g-20
         .col-lg-8.col-xl-9
           a.d-block.wow.fadeInUp(data-wow-delay="0.1s", href="#!")
             img.w-100(src="./images/home-banner-hoz.jpg", alt="")
@@ -38,7 +38,7 @@ block content
           section.section
             h2.section__title.wow.fadeInUp(data-wow-delay="0.1s") Tin khác
 
-            .row.g-3.g-xl-30
+            .row.g-3.g-xl-20
               - for(let i = 0; i < 6; i++)
                 .col-sm-6.col-xl-4.wow.fadeInUp(data-wow-delay=`${i % 3 * 0.1}s`)
                   +news-3
@@ -49,7 +49,7 @@ block content
               a.section__link(href="./publications.html") Xem tất cả
                 i.fal.fa-lg.fa-arrow-right.ms-2
 
-            .row.g-3.g-xl-30
+            .row.g-3.g-xl-20
               - for(let i = 0; i < 3; i++)
                 .col-lg-4.col-md-6.wow.fadeInRight(data-wow-delay=`${i * 0.1}s`)
                   +publication-2
@@ -62,7 +62,7 @@ block content
             h3.section__title.mb-3 Video
             +video-2
 
-          +news-group-2('mt-30')
+          +news-group-2('mt-20')
 
   section.section.pt-3
     .container

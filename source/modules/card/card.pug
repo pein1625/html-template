@@ -173,3 +173,15 @@ mixin event-2(title='')
       .event__info
         i.fal.fa-fw.fa-clock.me-2.text-primary
         | Thời gian: 9h00 ngày 02/09/2022
+
+mixin profile-2(flag = false)
+  .profile-2(class=flag?'profile-2--custom':'')
+    .profile-2__title
+      i.fal.fa-user.me-2
+      span Chánh Thanh tra Lê Việt Long
+    .profile-2__body
+      a.profile-2__avatar(href="#!")
+        img(src="./images/profile-1.jpg", alt="")
+      .profile-2__info
+        div Điện thoại: #[a(href="tel:02422202205") 02422202205]
+        div Email: #[a(href="mailto:v") longlv@moit.gov.vn]

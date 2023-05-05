@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          .row.g-3.g-lg-4
+            .col-lg-12
+              +profile-2(true)
+            - for(let i = 0; i < 4; i++)
+              .col-sm-6
+                +profile-2
+
+        .col-lg-3
+          nav.as-menu
+            h3.as-menu__title Tin tức
+            ul.as-menu__list
+              li.as-menu__item
+                a.as-menu__link(href="./about.html") Giới thiệu chung
+              li.as-menu__item
+                a.as-menu__link(href="./about.html") Chức năng nhiệm vụ
+              li.as-menu__item
+                a.as-menu__link.active(href="./structure.html") Sơ đồ tổ chức
+
+          a.d-block.mt-4(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2

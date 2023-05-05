@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          .row.g-3.g-lg-20
+            - for(let i = 0; i < 12; i++)
+              .col-6.col-md-4
+                +video-2
+          nav.mt-20.mt-lg-30
+            +pagination
+
+        .col-lg-3
+          nav.as-menu
+            h3.as-menu__title Danh mục
+            ul.as-menu__list
+              li.as-menu__item
+                a.as-menu__link(href="#!") Videos
+              li.as-menu__item
+                a.as-menu__link(href="#!") Videos
+              li.as-menu__item
+                a.as-menu__link(href="#!") Videos
+
+          a.d-block.mt-4(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2

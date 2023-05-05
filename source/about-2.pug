@@ -1,0 +1,54 @@
+extends layout/page
+
+block content
+  section.section
+    .container
+      .row.g-30
+        .col-lg-9.order-lg-1
+          .n-about
+            .mb-5
+            .text-center.mb-3
+              img.n-about__img(src="./images/icon1.jpg", alt="")
+            .text-center.mb-4
+              a.n-about__link(href="#!")  LÃNH ĐẠO CỤC
+
+            .row.g-30
+              .col-md-6
+                .n-card
+                  .n-card__header PHÒNG BAN CHỨC NĂNG
+                  .n-card__body
+                    ul
+                      li Văn phòng
+                      li Phòng Điều tra vụ việc hạn chế cạnh tranh
+                      li Phòng Điều tra và xử lý các hành vi cạnh tranh không lành mạnh
+                      li Phòng Bảo vệ quyền lợi người tiêu dùng
+                      li Phòng Kiểm soát hợp đồng theo mẫu, điều kiện giao dịch chung
+                      li Phòng Kiểm soát tập trung kinh tế
+
+              .col-md-6
+                .n-card
+                  .n-card__header TRUNG TÂM
+                  .n-card__body.n-card__body--custom
+                    a.n-card__link(href="#!")  TRUNG TÂM THÔNG TIN,
+                      br
+                      | TƯ VẤN VÀ ĐÀO TẠO
+
+        .col-lg-3
+          nav.as-menu
+            h3.as-menu__title Danh mục
+            ul.as-menu__list
+              li.as-menu__item
+                a.as-menu__link(href="#!") Lịch sử hình thành và phát triển
+              li.as-menu__item
+                a.as-menu__link(href="#!") Chức năng, nhiệm vụ, quyền hạn
+              li.as-menu__item
+                a.as-menu__link(href="#!") Cơ cấu tổ chức
+              li.as-menu__item
+                a.as-menu__link(href="#!") Lãnh đạo Ủy ban
+
+          a.d-block.mt-4(href="#!")
+            img.w-100.rounded(src="./images/as-banner.jpg", alt="")
+
+          section.section.py-0.mt-4
+            h3.section__title.mb-3 Video
+            +video-2

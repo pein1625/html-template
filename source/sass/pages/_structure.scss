@@ -1,0 +1,271 @@
+.p-structure {
+  &__title {
+    display: inline-block;
+    padding: 16px 24px;
+    box-shadow: 0px 2px 5px 3px rgba(195,195,195,0.52);
+    background-color: #efefef;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $info;
+  }
+
+  &__title-2 {
+    display: inline-block;
+    background-color: $info;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 30px;
+    line-height: 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    width: 350px;
+    max-width: 100%;
+
+    &:hover {
+      background-color: darken($info, 5%);
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  &__col {
+    flex: 1 0 0;
+  }
+
+  &__header {
+    background-color: $info;
+    color: $white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 12px;
+    color: $white;
+    border-radius: 8px 8px 0 0;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    border: 1px solid $border-color;
+    border-radius: 0 0 8px 8px;
+    padding: 12px;
+    background-color: $white;
+  }
+
+  .menu {
+    &:not(.menu-sub) {
+      border-bottom: 0;
+    }
+  }
+
+  .menu-item {
+    border-top: 1px dashed $border-color;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  .menu-link {
+    padding: 8px 0 8px 24px;
+    white-space: unset;
+
+    &:hover {
+      color: $info;
+    }
+  }
+
+  .menu-toggle {
+    width: 24px;
+    height: 36px;
+    border: 0;
+    right: unset;
+    left: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 1px;
+      background-color: #444;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 10px;
+    }
+  }
+
+  .menu-sub {
+    background: 0;
+    padding-left: 16px;
+
+    .menu-item {
+      border: 0 !important;
+    }
+  }
+}
+
+.profile-2 {
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: $white;
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__title {
+    border-bottom: 1px solid $border-color;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__avatar {
+    @include frame('rect', 117%);
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  &--custom &__body {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &--custom &__avatar {
+    margin: 0;
+  }
+
+  &--custom &__avatar {
+    max-width: 160px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    &__body {
+      padding: 16px;
+    }
+  }
+}
+
+.n-card {
+  display: flex;
+  flex-direction: column;
+
+  &:only-child {
+    height: 100%;
+  }
+
+  &__header {
+    padding: 10px 12px;
+    border-radius: 4px 4px 0 0;
+    background-color: #cac9c9;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__body {
+    background-color: #ecedef;
+    padding: 16px;
+    border-radius: 0 0 4px 4px;
+    flex-grow: 1;
+
+    &--custom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #444;
+    transition: 0.3s;
+    padding-bottom: 6px;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 70%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $primary;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.n-about {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 20px;
+
+  &__link {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s;
+    background-color: $primary;
+    padding: 6px 16px;
+    border-radius: 4px;
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      background-color: darken($primary, 5%);
+    }
+  }
+}
