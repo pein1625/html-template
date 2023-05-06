@@ -5,6 +5,11 @@
   overflow: hidden;
 
   &__content {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
   }
 }

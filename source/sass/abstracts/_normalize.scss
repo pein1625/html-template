@@ -2,6 +2,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: url('../images/background.jpg') center/cover no-repeat;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 23, 23, 0.8) 0%, rgba(0, 23, 23, 0.11) 47.4%, #001717 100%);
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
 }
 
 img {
