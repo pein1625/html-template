@@ -1,0 +1,30 @@
+.file-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 4em;
+  border-radius: 20px;
+  border: 1px dashed $yellow;
+
+  &__icon {
+    height: 6.8em;
+  }
+
+  &__text {
+    text-align: center;
+    color: #828282;
+    margin-top: 0.5em;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+}

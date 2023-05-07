@@ -1,0 +1,167 @@
+mixin login(isError = false)
+  form.md-form(action="#!")
+      .md-form__title Đăng nhập
+      .d-flex.justify-content-center.mb-4
+        a.d-inline-flex.me-4.me-xl-40(href="#!")
+          img(src="./images/icon-facebook.png", height="56", alt="")
+        a.d-inline-flex(href="#!")
+          img(src="./images/icon-google.png", height="56", alt="")
+      .md-form__desc.mb-4 hoặc đăng nhập bằng email của bạn
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="email", placeholder="Email")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Email không tồn tại
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="password", placeholder="Mật khẩu")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Sai mật khẩu
+      .mb-3.text-center
+        a.md-form__link.js-switch-modal(href=".md-reset-password") Quên mật khẩu
+      .my-30.d-flex.justify-content-center
+        button.button(type="submit") Đăng nhập
+      .md-form__footer Bạn chưa có tài khoản? #[a.js-switch-modal(href=".md-register") Tạo tài khoản mới]
+
+mixin login-success
+  form.md-form(action="#!", style="max-width: 460px;")
+    .md-form__icon
+      i.fal.fa-lg.fa-check-circle
+    .md-form__title.mb-3 Bạn đã đăng nhập thành công!
+    .md-form__desc Điểm số của bạn sẽ được lưu trên hệ thống.
+    .my-30.d-flex.justify-content-center
+      button.button(type="submit") Tiếp tục khám phá
+
+mixin register(isError = false)
+  form.md-form(action="#!")
+      .md-form__title Tạo tài khoản mới
+      .md-form__group
+        input.form-control(type="text", placeholder="Tên")
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="email", placeholder="Email")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Email đã tồn tại
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="password", placeholder="Mật khẩu")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Mật khẩu không khớp
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="password", placeholder="Nhập lại mật khẩu")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Mật khẩu không khớp
+      .my-30.d-flex.justify-content-center
+        button.button(type="submit") Đăng ký
+      .md-form__footer Bạn đã có tài khoản? #[a.js-switch-modal(href=".md-login") Đăng nhập]
+
+mixin reset-password(isSuccess = false, isError = false)
+  form.md-form(action="#!")
+      .md-form__title Đặt lại mật khẩu
+      .md-form__desc Nhập email được liên kết với tài khoản của bạn và chúng tôi sẽ gửi email có hướng dẫn để đặt lại mật khẩu của bạn.
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="email", placeholder="Email", value=isSuccess?'xxxx@gmail.com':'')
+        if (isSuccess)
+          .md-form__success
+            i.fal.fa-check-circle.me-2
+            | Đã gửi
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Email không tồn tại
+      .my-30.d-flex.justify-content-center
+        button.button(type="submit") Gửi yêu cầu
+      if (isSuccess)
+        .md-form__footer Chưa nhận được email? #[a(href="#!") Gửi lại]
+
+mixin new-password(isError = false)
+  form.md-form(action="#!")
+      .md-form__title Tạo mật khẩu mới
+      .md-form__desc Mật khẩu mới của bạn phải khác với mật khẩu cũ.
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="password", placeholder="Mật khẩu mới")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Mật khẩu không khớp
+      .md-form__group(class=isError?'is-error':'')
+        input.form-control(type="password", placeholder="Nhập lại mật khẩu")
+        if (isError)
+          .md-form__error
+            i.fal.fa-times-circle.me-2
+            | Mật khẩu không khớp
+      .my-30.d-flex.justify-content-center
+        button.button(type="submit") Xác nhận
+
+mixin new-password-success
+  form.md-form(action="#!")
+      .md-form__icon
+        i.fal.fa-lg.fa-check-circle
+      .md-form__title Đặt lại mật khẩu thành công
+      .my-30.d-flex.justify-content-center
+        button.button(type="submit") Tiếp tục đăng nhập
+
+mixin quiz-begin
+  .modal-title.mb-4.mb-xl-40.mb-xxl-60 Minigame: Quiz
+  .row
+    .col-4
+      .quiz-info
+        .quiz-info__icon
+          img(src="./images/icon-question-square.svg", alt="")
+        .quiz-info__label Tìm & trả lời
+          br
+          | 11 câu hỏi
+    .col-4
+      .quiz-info
+        .quiz-info__icon
+          img(src="./images/icon-stopwatch.svg", alt="")
+        .quiz-info__label 10 phút
+          br
+          | trắc nghiệm
+    .col-4
+      .quiz-info
+        .quiz-info__icon
+          img(src="./images/icon-medal.svg", alt="")
+        .quiz-info__label Đúng 11/11
+          br
+          | để nhận quà
+  .modal-button-group
+    button.button(type="button", data-target=".md-login") Bắt đầu
+
+mixin quiz-question
+  .quiz
+    .modal-title.mb-4.mb-xl-40.mb-xxl-60 Câu hỏi số 1
+    .quiz__question Thẻ BIDV Visa Infinite được hoàn tiền tới bao nhiêu % tại lĩnh vực Golf/Spa/Resort nước ngoài?
+    .quiz__answers
+      label.quiz__answer.is-correct(data-key="A")
+        input(type="radio", name="quiz")
+        span A. 6%
+      label.quiz__answer(data-key="B")
+        input(type="radio", name="quiz")
+        span B. 5%
+      label.quiz__answer(data-key="C")
+        input(type="radio", name="quiz")
+        span C. 7%
+      label.quiz__answer.is-incorrect(data-key="D")
+        input(type="radio", name="quiz")
+        span D. 8%
+    .quiz__info
+      div Câu hỏi đã trả lời:&nbsp;
+        span.text-warning 0/11
+      div Thời gian:&nbsp;
+        span.text-wraning 1:17 /15 phút
+
+mixin quiz-result
+  .quiz-result
+    .modal-title Xin chúc mừng!
+      br
+      | Bạn đã trả lời đúng #[span.text-warning 11/11] câu hỏi
+    .quiz-result__score +30 điểm
+    .modal-button-group
+      button.button(type="button") Tiếp tục

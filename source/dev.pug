@@ -1,0 +1,95 @@
+extends layout/page
+
+block content
+  .container
+    .mb-5.d-flex.gap-3.flex-wrap
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Quiz điều hướng
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-form-info") Vui lòng cho biết độ tuổi của bạn
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-intro-1") Bạn phù hợp với thẻ BIDV Napas Smart
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-intro-2") Bạn phù hợp với thẻ BIDV Visa Platinum Cashback
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Interactive TVC
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-upload") Tải lên hình ảnh của bạn
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-upload-success") Tải lên thành công
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Popup hỏi login
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-login-suggest") Bạn có muốn đăng nhập để lưu kết quả chơi?
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-gift-form") Thông tin nhận thưởng
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Minigame 2: Quiz
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-begin") Quiz Begin
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-question") Quiz Question
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-result") Quiz Result
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Minigame 1: Ghép hình thẻ
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Minigame 3: Ghép hình thẻ
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Popup chơi lại
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-result") Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-play-again") Bạn có muốn chơi lại từ đầu không?
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Bảng xếp hạng
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-leaderboard") Leaderboard
+    .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Accounts
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-login") Đăng nhập
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-login-error") Đăng nhập lỗi
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-login-success") Đăng nhập thành công
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-register") Đăng ký
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-register-error") Đăng ký - Lỗi
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-reset-password") Đặt lại mật khẩu
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-reset-email-success") Đặt lại mật khẩu - Đã gửi email
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-reset-email-error") Đặt lại mật khẩu - Lỗi
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-new-password") Tạo mật khẩu mới
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-new-password-success") Đặt lại mật khẩu thành công
+    .mb-5.d-flex.gap-3.flex-wrap
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-new-password-error") Đặt lại mật khẩu - Lỗi
+
+  +md-form-info
+  +md-intro-1
+  +md-intro-2
+  +md-upload // TODO
+  +md-upload-success // TODO
+  +md-template('md-login')
+    +login
+  +md-template('md-login-error')
+    +login('error')
+  +md-template('md-login-success')
+    +login-success
+  +md-login-suggest
+  +md-template('md-register')
+    +register
+  +md-template('md-register-error')
+    +register(true)
+  +md-template('md-reset-password')
+    +reset-password
+  +md-template('md-reset-email-success')
+    +reset-password(true)
+  +md-template('md-reset-email-error')
+    +reset-password(false, true)
+  +md-template('md-new-password')
+    +new-password
+  +md-template('md-new-password-success')
+    +new-password-success
+  +md-template('md-new-password-error')
+    +new-password(true)
+  +md-play-again
+  +md-result
+  +md-leaderboard
+  +md-gift-form
+  +md-template('md-quiz-begin')
+    +quiz-begin
+  +md-template('md-quiz-question')
+    +quiz-question
+  +md-template('md-quiz-result')
+    +quiz-result

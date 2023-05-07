@@ -1,6 +1,21 @@
 // COMMON USES VARIABLES
 
 // main colors
+$success: #00FF66;
+$danger: #F84848;
+$warning: #FFC72F;
+
+$yellow: #FFC72F;
+
+$green1: #016B69;
+$green2: rgba(0, 23, 23, 1);
+$green3: #001717;
+$green4: #041B20;
+$green5: #002B2A;
+$green6: #13AE8E;
+$green7: #00FF66;
+$gradient1: linear-gradient(to right, $yellow, $green1);
+$gradient2: linear-gradient(to right, $green2, $green3);
 
 // $grid-breakpoints: (
 //   xs: 0,
@@ -100,6 +115,6 @@ $gradient: linear-gradient(
 );
 
 // $font-size-base: 0.875rem;
-$font-family-sans-serif: Arial, system-ui, -apple-system, "Segoe UI", Roboto,
+$font-family-sans-serif: 'Roboto', Arial, system-ui, -apple-system, "Segoe UI", Roboto,
   "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

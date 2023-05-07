@@ -1,0 +1,178 @@
+mixin md-form-info
+  .md-form-info.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .md-form-info__group
+            label.md-form-info__label Vui lòng cho biết độ tuổi của bạn
+            .md-form-info__radio-group
+              +radio
+                span 18 - 25 tuổi
+              +radio
+                span 25 - 45 tuổi
+              +radio
+                span Trên 45 tuổi
+          .md-form-info__group
+            label.md-form-info__label Chi tiêu trung bình hàng tháng của bạn
+            .md-form-info__radio-group
+              +radio
+                span 18 - 25 tuổi
+              +radio
+                span 25 - 45 tuổi
+              +radio
+                span Trên 45 tuổi
+          .modal-button-group
+            button.button(type="button") Xác nhận
+
+mixin md-intro-1
+  .md-intro-1.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .modal-card
+            img(src="./images/modal-card-1.png", alt="")
+          .modal-title Xin chúc mừng
+          .modal-subtitle Bạn phù hợp với thẻ BIDV Napas Smart
+          .modal-desc Vui lòng ấn nút bên dưới để xem thêm thông tin chi tiết
+          .modal-button-group
+            button.button(type="button") Xem chi tiết
+
+mixin md-intro-2
+  .md-intro-2.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .modal-card
+            img(src="./images/modal-card-2.png", alt="")
+          .modal-title Xin chúc mừng
+          .modal-subtitle Bạn phù hợp với thẻ BIDV Napas Smart
+          .modal-desc Bạn phù hợp với thẻ BIDV Visa Platinum Cashback
+          .modal-button-group
+            button.button(type="button") Xem chi tiết
+
+mixin md-upload
+  .md-upload.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .modal-title Tải lên hình ảnh của bạn
+          .mt-4.mt-xl-40.mt-xxl-60
+            +file-input
+
+mixin md-upload-success
+  .md-upload-success.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .modal-icon
+            i.fal.fa-lg.fa-check-circle
+          .modal-title Tải lên thành công
+          .modal-desc.mx-auto(style="max-width: 493px;") Bài thi của bạn đã được tải lên thành công. Chúng tôi sẽ thông báo kết quả sớm nhất cho bạn thông qua email.
+          .modal-button-group
+            button.button(type="button") Quay lại Sảnh chính
+
+mixin md-template(className='')
+  .modal.fade(class=className, tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          block
+
+mixin md-leaderboard
+  .md-leaderboard.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .md-leaderboard__title Leaderboard
+          .md-leaderboard__list
+            - for(let i = 0; i < 10; i++)
+              .md-leaderboard__item
+                .md-leaderboard__place
+                  if (i < 3)
+                    img(src="./images/medal-" + (i+1) + ".svg", alt="")
+                  else
+                    = i+1
+                .md-leaderboard__avatar
+                  img(src="./images/avatar.png", alt="")
+                .md-leaderboard__name Player Name
+                .md-leaderboard__point
+                  i.fal.fa-star.me-2
+                  span 60
+                .md-leaderboard__time
+                  i.fal.fa-stopwatch.me-2
+                  span 5p30s
+
+mixin md-result
+  .md-result.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .md-result__badge
+            img(src="./images/medal-badge.svg", alt="")
+          .md-result__title Total score
+          .md-result__score 60
+          .md-result__time
+            i.fal.fa-stopwatch.me-2
+            | 5p30s
+          .md-result__desc Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
+          .modal-button-group
+            button.button.js-switch-modal(type="button", data-target=".md-login") Đăng nhập
+
+mixin md-play-again
+  .md-play-again.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .modal-title Bạn có muốn chơi lại từ đầu không?
+          .modal-desc Lưu ý: Thời gian sẽ được cộng dần giữa các lần chơi lại
+          .modal-button-group
+            button.button.me-4.me-xl-40(type="button") Có
+            button.button(type="button") Không
+
+mixin md-login-suggest
+  .md-login-suggest.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .modal-title Bạn có muốn đăng nhập để lưu kết quả chơi?
+          .modal-button-group
+            button.button.js-switch-modal(type="button", data-target=".md-login") Đăng nhập
+            button.button(type="button") Tiếp tục chơi
+
+mixin md-gift-form
+  .md-gift-form.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-underlay
+        button.modal-close(type="button", data-bs-dismiss="modal")
+        .modal-body.md-form
+          .modal-title Thông tin nhận thưởng
+
+          .row
+            .col-lg-4.col-form-label.md-form-info__label Số CCCD/Hộ chiếu
+              span.text-danger *
+            .col-lg-8
+              input.form-control(type="text")
+
+          .modal-button-group
+            button.button(type="button", data-target=".md-login") Gửi thông tin

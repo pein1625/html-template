@@ -1,25 +1,43 @@
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  z-index: $zindex-fixed;
-
-  &__inner {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+  margin: 100px 0 50px;
 
   &__logo {
     display: inline-flex;
-    margin: 16px 0;
 
     img {
-      height: 40px;
+      height: 80px;
     }
   }
 
-  &__elements {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  @media (max-width: 1799px) {
+    margin: 60px 0 30px;
+
+    &__logo {
+      img {
+        height: 64px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__logo {
+      img {
+        height: 46px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) and (orientation: landscape) {
+    margin: 24px 0 16px;
+
+    &__logo {
+      img {
+        height: 36px;
+      }
+    }
   }
 }

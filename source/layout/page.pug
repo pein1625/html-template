@@ -5,6 +5,7 @@ include ../modules/form/form
 include ../modules/widgets/widgets
 include ../modules/header/header
 include ../modules/footer/footer
+include ../modules/file-input/file-input
 include ../modules/modal/modal
 include ../modules/swiper/swiper
 include ../modules/social/social
@@ -17,5 +18,11 @@ html(lang="vi")
   +head(head)
   body(class=addBodyClass?addBodyClass:'')
     .page
+      block header
+        // header
+        +header
+
       .page__content
+
+        // main content
         block content
