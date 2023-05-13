@@ -1,178 +1,5 @@
-const gameControl = {
-  arr: [0,1,2,3,4,5,6,7,8,9,10,11],
-  playing: false,
-  time: 60,
-  interval: null,
-  isCompleted: false,
-  currentStage: 1,
-  stageCount: 1,
-  stageTime: 0,
-  stagePoint: 0,
-  totalTime: 0,
-  totalPoint: 0,
-}
 
-const classesToRemove = gameControl.arr.reduce((carry, item, index) => {
-  return carry + ' ' + 'cell--' + index;
-}, '');
-
-$(function() {
-  const $game = $('.game');
-
-  gameControl.isCompleted = false;
-  gameControl.currentStage = 1;
-  gameControl.stageCount = Number($game.data('stage-count'));
-  gameControl.stageTime = Number($game.data('stage-time'));
-  gameControl.stagePoint = Number($game.data('stage-point'));
-  gameControl.totalTime = 0;
-  gameControl.totalPoint = 0;
-
-  $('.cell').on('click', function(e) {
-    e.preventDefault();
-
-    const index = Number($(this).data('index'));
-    const value = gameControl.arr[index];
-
-    if (value === 0 || value === 1 || value === 2) return false;
-
-    if (isSlideAble(index)) {
-      const zeroIndex = getZeroIndex();
-
-      gameControl.arr[zeroIndex] = value;
-      gameControl.arr[index] = 0;
-
-      reIndexing();
-
-      if (checkResult()) {
-        gameControl.isCompleted = true;
-        gameFinish();
-      }
-    }
-  });
-
-  $('.game__start').on('click', gameStart);
-});
-
-function gameStart() {
-  const $timeRemaining = $('.game__remaining');
-
-  $('.game').addClass('unlock');
-
-  shuffle();
-
-  clearInterval(gameControl.interval);
-
-  gameControl.isCompleted = false;
-  gameControl.playing = true;
-  gameControl.time = gameControl.stageTime;
-
-  gameControl.interval = setInterval(() => {
-    gameControl.time--;
-    $timeRemaining.text(gameControl.time + 's');
-
-    if (!gameControl.time) gameFinish();
-  }, 1000);
-}
-
-function gameFinish() {
-  gameControl.playing = false;
-  gameControl.totalPoint += gameControl.isCompleted ? gameControl.stagePoint : 0;
-  gameControl.totalTime += (gameControl.stageTime - gameControl.time);
-
-  let seconds = Math.floor(gameControl.totalTime % 60);
-  let minutes = Math.floor((gameControl.totalTime / 60) % 60);
-
-  let timeText = minutes + ':' + seconds;
-
-  clearInterval(gameControl.interval);
-
-  $('.summary__total-point').text(gameControl.totalPoint);
-  $('.summary__total-time').text(timeText);
-
-  if (gameControl.isCompleted && gameControl.currentStage < gameControl.stageCount) {
-    const $game = $('.game');
-
-    gameControl.currentStage++;
-
-    $game.removeClass('game--stage-1 game--stage-2 game--stage-3 game--stage-4 game--stage-5 game--stage-6 game--stage-7 game--stage-8 game--stage-9 game--stage-10');
-
-    $game.addClass('game--stage-' + gameControl.currentStage);
-
-    gameStart();
-  } else {
-    $('.game').removeClass('unlock').addClass('finish');
-
-    if (window.onFinishAllStages && typeof window.onFinishAllStages === 'function') {
-      window.onFinishAllStages(gameControl);
-    }
-  }
-}
-
-function reIndexing() {
-  const $cell = $('.cell');
-
-  $cell.removeClass(classesToRemove);
-
-  gameControl.arr.forEach((value, index) => {
-    $cell.eq(value).addClass('cell--' + index).data('index', index);
-  });
-}
-
-function isSlideAble(index) {
-  const sideBySide = getSideBySide(index);
-  const zeroIndex = getZeroIndex();
-
-  return sideBySide.includes(zeroIndex);
-}
-
-function getZeroIndex() {
-  for (let i = 0; i < gameControl.arr.length; i++) {
-    if (gameControl.arr[i] === 0) return i;
-  }
-
-  return 0;
-}
-
-function getSideBySide(index) {
-  const items = [];
-
-  if (index - 3 >= 0) items.push(index - 3);
-  if (index % 3 > 0) items.push(index - 1);
-  if (index % 3 < 2) items.push(index + 1);
-  if (index + 3 < 12) items.push(index + 3);
-
-  return items.filter(index => index !== 1 && index !== 2);
-}
-
-function checkResult() {
-  let maxValue = 0;
-  let errorIndex = gameControl.arr.findIndex((item) => {
-    if (item < maxValue) return true;
-
-    maxValue = item;
-    return false;
-  });
-
-  return errorIndex < 0;
-}
-
-function shuffle() {
-  for (let i = 0; i < 1000; i++) {
-    randomMove();
-  }
-
-  reIndexing();
-}
-
-function randomMove() {
-  const zeroIndex = getZeroIndex();
-  const sideBySide = getSideBySide(zeroIndex);
-
-  const randomIndex = sideBySide[Math.floor(Math.random() * sideBySide.length)];
-
-  gameControl.arr[zeroIndex] = gameControl.arr[randomIndex];
-  gameControl.arr[randomIndex] = 0;
-}
+let modalTimeout = null;
 
 $(function() {
   $('.js-switch-modal').on('click', function(e) {
@@ -184,8 +11,6 @@ $(function() {
       target = $(this).data('target');
     }
 
-    console.log('target', target);
-
     $(this).closest('.modal').modal('hide');
 
     if (target && $(target).length) {
@@ -194,7 +19,87 @@ $(function() {
       }, 300);
     }
   });
+
+  $('.js-survey-form').on('submit', onSurveySubmit);
 });
+
+async function onSurveySubmit(e) {
+  e.preventDefault();
+
+  const data = $(this).serializeArray().reduce((carry, item) => {
+    // const re = new RegExp(/^([a-zA-Z0-9_-]+)\[([a-zA-Z0-9_-]+)\]$/);
+
+    // if (re.test(item.name)) {
+    //   const match = item.name.match(re);
+    //   const key = match[1];
+    //   const subKey = match[2];
+
+    //   if (!carry[key]) carry[key] = {};
+
+    //   carry[key][subKey] = item.value;
+    // } else {
+    //   carry[item.name] = item.value;
+    // }
+
+    carry.push(item.value);
+
+    return carry;
+  }, []);
+
+  const surveyResult = await submitSurvey(data);
+
+  $('.js-survey-result').empty().append(`
+<div>
+  <div class="modal-card"><img src="${surveyResult.image}" alt=""></div>
+  <div class="modal-subtitle">${surveyResult.title}</div>
+  <div class="modal-desc">${surveyResult.description}</div>
+  <div class="modal-button-group"><a class="button" href="${surveyResult.url}">Xem chi tiết</a></div>
+</div>
+  `);
+
+  showModal('.md-survey-result');
+}
+
+function hideModal() {
+  const $modal = $('.modal.show');
+
+  if ($modal.length) {
+    $modal.modal('hide');
+  }
+}
+
+function showModal(modalSelector, cb) {
+  hideModal();
+
+  const $modal = $(modalSelector);
+
+  if ($modal.length) {
+    clearTimeout(modalTimeout);
+    modalTimeout = setTimeout(() => {
+      if (cb && typeof cb === 'function') cb();
+      $modal.modal('show');
+    }, 300);
+  }
+}
+
+function timeFormat(time, type = 1) {
+  let seconds = Math.floor(time % 60);
+  let minutes = Math.floor((time / 60) % 60);
+
+  if (type === 1) {
+    seconds = ('0' + seconds).slice(-2);
+    return minutes + ':' + seconds;
+  }
+
+  if (type === 2) {
+    minutes = minutes ? minutes + ' phút' : '';
+    seconds = seconds ? seconds + ' giây' : '';
+
+    return [minutes, seconds].filter(time => time).join(' ');
+  }
+
+  return '';
+}
 
 // file input
 $(function () {

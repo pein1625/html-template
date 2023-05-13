@@ -592,3 +592,15 @@
     }
   }
 }
+
+.md-slide-game {
+  @media (min-width: 1800px) {
+    .modal-dialog {
+      max-width: 520px;
+    }
+
+    .modal-body {
+      padding: 60px 110px 20px;
+    }
+  }
+}

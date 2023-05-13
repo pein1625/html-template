@@ -132,30 +132,31 @@ mixin quiz-begin
           br
           | để nhận quà
   .modal-button-group
-    button.button(type="button", data-target=".md-login") Bắt đầu
+    button.button.js-quiz-start(type="button", data-target=".md-login") Bắt đầu
 
 mixin quiz-question
-  .quiz
-    .modal-title.mb-4.mb-xl-40.mb-xxl-60 Câu hỏi số 1
-    .quiz__question Thẻ BIDV Visa Infinite được hoàn tiền tới bao nhiêu % tại lĩnh vực Golf/Spa/Resort nước ngoài?
-    .quiz__answers
-      label.quiz__answer.is-correct(data-key="A")
-        input(type="radio", name="quiz")
-        span A. 6%
-      label.quiz__answer(data-key="B")
-        input(type="radio", name="quiz")
-        span B. 5%
-      label.quiz__answer(data-key="C")
-        input(type="radio", name="quiz")
-        span C. 7%
-      label.quiz__answer.is-incorrect(data-key="D")
-        input(type="radio", name="quiz")
-        span D. 8%
-    .quiz__info
-      div Câu hỏi đã trả lời:&nbsp;
-        span.text-warning 0/11
-      div Thời gian:&nbsp;
-        span.text-wraning 1:17 /15 phút
+  .js-quiz(data-time-limit="10")
+    //- .quiz
+    //-   .quiz__title.modal-title Câu hỏi số 1
+    //-   .quiz__question Thẻ BIDV Visa Infinite được hoàn tiền tới bao nhiêu % tại lĩnh vực Golf/Spa/Resort nước ngoài?
+    //-   .quiz__answers
+    //-     label.quiz__answer.is-correct(data-key="A")
+    //-       input(type="radio", name="quiz")
+    //-       span A. 6%
+    //-     label.quiz__answer(data-key="B")
+    //-       input(type="radio", name="quiz")
+    //-       span B. 5%
+    //-     label.quiz__answer(data-key="C")
+    //-       input(type="radio", name="quiz")
+    //-       span C. 7%
+    //-     label.quiz__answer.is-incorrect(data-key="D")
+    //-       input(type="radio", name="quiz")
+    //-       span D. 8%
+    //-   .quiz__info
+    //-     div Câu hỏi đã trả lời:&nbsp;
+    //-       span.text-warning 0/11
+    //-     div Thời gian:&nbsp;
+    //-       span.text-wraning 1:17 /15 phút
 
 mixin quiz-result
   .quiz-result
@@ -165,3 +166,56 @@ mixin quiz-result
     .quiz-result__score +30 điểm
     .modal-button-group
       button.button(type="button") Tiếp tục
+
+mixin puzzle
+  .puzzle.js-puzzle
+    .puzzle__body
+      .puzzle__wrapper
+        .puzzle__inner
+          .cell.cell--empty(class=`cell--0`, data-index=0)
+            .cell-caret.cell-caret--top
+            .cell-caret.cell-caret--bottom
+            .cell-caret.cell-caret--left
+            .cell-caret.cell-caret--right
+          .cell(class=`cell--1`, data-index=1)
+          .cell(class=`cell--2`, data-index=2)
+          .cell(class=`cell--3`, data-index=3)
+          .cell(class=`cell--4`, data-index=4)
+          .cell(class=`cell--5`, data-index=5)
+          .cell(class=`cell--6`, data-index=6)
+          .cell(class=`cell--7`, data-index=7)
+          .cell(class=`cell--8`, data-index=8)
+          .cell(class=`cell--9`, data-index=9)
+          .cell(class=`cell--10`, data-index=10)
+          .cell(class=`cell--11`, data-index=11)
+          .puzzle__lock
+            .puzzle__lock-inner
+              button.button.puzzle__start.js-puzzle-start(type="button") Bắt đầu
+              button.button.puzzle__end(type="button") Kết thúc
+          .puzzle__board
+            .puzzle__type Minigame
+            .puzzle__name Ghép hình thẻ
+            .puzzle__time Còn lại:&nbsp;
+              span.puzzle__remaining
+                | 60s
+    .puzzle__footer
+      a.puzzle__link.js-switch-modal(href=".md-puzzle-guide")
+        i.fal.fa-question-circle.me-2
+        | Hướng dẫn
+
+mixin puzzle-result
+  .js-puzzle-result
+
+mixin puzzle-guide
+  .js-puzzle-guide
+    .modal-title Minigame Ghép hình thẻ
+    .modal-desc.text-start
+      ul
+        li.mt-3 Trong 60 giây, bạn phải di chuyển các mảnh ghép để xếp được đúng hình ảnh hoàn chỉnh của thẻ BIDV
+        li.mt-3 Nếu hoàn thành trong 60 giây, bạn sẽ có cơ hội mở khóa Game 2 & 3 để chơi và nhận những phần thưởng hấp dẫn.
+        li.mt-3 Nếu không hoàn thành trong 60 giây, bạn sẽ phải chơi lại
+      .modal-button-group
+        button.button.js-puzzle-continue(type="button") Quay lại
+
+mixin survey-result
+  .js-survey-result

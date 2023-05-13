@@ -1,4 +1,36 @@
+async function submitSurvey() {
+  return {
+    id: 1,
+    image: "./images/modal-card-1.png",
+    name: "Kết quả 1",
+    title: "Xin chúc mừng<br>Bạn phù hợp với thẻ BIDV Napas Smart",
+    description: "Vui lòng ấn nút bên dưới để xem thêm thông tin chi tiết",
+    url: "https://rangdong.com.vn",
+  };
+}
 
+async function getPuzzleData() {
+  return {
+    id: 1,
+    name: 'Hình Ghép 1',
+    piece_jigsaw: [
+      './images/cell-3.png',
+      './images/cell-4.png',
+      './images/cell-5.png',
+      './images/cell-6.png',
+      './images/cell-7.png',
+      './images/cell-8.png',
+      './images/cell-9.png',
+      './images/cell-10.png',
+      './images/cell-11.png',
+    ],
+    result: './images/modal-card-1.png',
+  }
+}
+
+function checkLoggedIn() {
+  return true;
+}
 
 function getQuizQuestions() {
   return [

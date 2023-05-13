@@ -4,27 +4,27 @@ mixin md-form-info
       .modal-content
         .modal-underlay
         button.modal-close(type="button", data-bs-dismiss="modal")
-        .modal-body
+        form.modal-body.js-survey-form(action="#!")
           .md-form-info__group
             label.md-form-info__label Vui lòng cho biết độ tuổi của bạn
             .md-form-info__radio-group
-              +radio
+              +radio("survey[1]", "", "", "a")
                 span 18 - 25 tuổi
-              +radio
+              +radio("survey[1]", "", "", "b")
                 span 25 - 45 tuổi
-              +radio
+              +radio("survey[1]", "", "", "c")
                 span Trên 45 tuổi
           .md-form-info__group
             label.md-form-info__label Chi tiêu trung bình hàng tháng của bạn
             .md-form-info__radio-group
-              +radio
+              +radio("survey[2]", "", "", "d")
                 span 18 - 25 tuổi
-              +radio
+              +radio("survey[2]", "", "", "e")
                 span 25 - 45 tuổi
-              +radio
+              +radio("survey[3]", "", "", "f")
                 span Trên 45 tuổi
           .modal-button-group
-            button.button(type="button") Xác nhận
+            button.button(type="submit") Xác nhận
 
 mixin md-intro-1
   .md-intro-1.modal.fade(tabindex='-1')

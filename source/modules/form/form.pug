@@ -6,11 +6,11 @@ mixin checkbox(name="checkbox", addClass="", addInputClass="")
     span.checkbox-styled__icon
     block
 
-mixin radio(name="radio", addClass="", addInputClass="")
+mixin radio(name="radio", addClass="", addInputClass="", value="")
   if (!block)
     - addClass = addClass += ' radio-styled--textless'
   label.radio-styled(class=addClass)
-    input.radio-styled__input(type="radio", name=name, class=addInputClass)
+    input.radio-styled__input(type="radio", name=name, value=value class=addInputClass)
     span.radio-styled__icon
     block
 

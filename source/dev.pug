@@ -3,10 +3,12 @@ extends layout/page
 block content
   .container
     .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 HƯỚNG DẪN CHƠI MINIGAME
+
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Quiz điều hướng
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-form-info") Vui lòng cho biết độ tuổi của bạn
-      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-intro-1") Bạn phù hợp với thẻ BIDV Napas Smart
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-survey-result") Bạn phù hợp với thẻ BIDV Napas Smart
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-intro-2") Bạn phù hợp với thẻ BIDV Visa Platinum Cashback
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Interactive TVC
@@ -19,10 +21,10 @@ block content
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 2: Quiz
       buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-begin") Quiz Begin
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-question") Quiz Question
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-result") Quiz Result
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 1: Ghép hình thẻ
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle") Puzzle
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle-guide") Puzzle Guide
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 3: Ghép hình thẻ
     .mb-5.d-flex.gap-3.flex-wrap
@@ -60,6 +62,8 @@ block content
   +md-intro-2
   +md-upload // TODO
   +md-upload-success // TODO
+  +md-template('md-survey-result')
+    +survey-result
   +md-template('md-login')
     +login
   +md-template('md-login-error')
@@ -91,5 +95,10 @@ block content
     +quiz-begin
   +md-template('md-quiz-question')
     +quiz-question
-  +md-template('md-quiz-result')
-    +quiz-result
+
+  +md-template('md-puzzle')
+    +puzzle
+  +md-template('md-puzzle-result')
+    +puzzle-result
+  +md-template('md-puzzle-guide')
+    +puzzle-guide

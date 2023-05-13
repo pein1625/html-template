@@ -9,6 +9,10 @@
   position: relative;
   z-index: 1;
 
+  &:hover {
+    color: $white;
+  }
+
   &::before {
     content: '';
     display: block;
