@@ -219,3 +219,121 @@ mixin puzzle-guide
 
 mixin survey-result
   .js-survey-result
+
+mixin card-game-intro
+  .card-game-intro
+    .modal-title Minigame: Tìm thẻ trong thành phố
+    .row.g-3
+      .col-lg-8
+        img(src="./images/card-game-map.svg", alt="")
+      .col-lg-4
+        .row.g-3
+          .col-auto
+          .col Tìm thẻ
+            br
+            | qua mật thư
+        .row.g-3.mb-30
+          .col-auto
+          .col 15 phút
+            br
+            | tìm kiếm
+        .row.g-3.mb-30
+          .col-auto
+          .col Tìm càng nhiều
+            br
+            | điểm càng cao
+
+    .modal-button-group
+      button.button.js-switch-modal(type="button", data-target=".md-card-game") Bắt đầu
+
+mixin card-game
+  .card-game
+    .modal-icon
+      img(src="./images/card-game-search-icon.svg", alt="")
+    .modal-title Câu hỏi mật thư thứ 1
+    .modal-desc Tôi ở tòa nhà có ưu đãi phí rút tiền chỉ từ 1%
+    .modal-button-group
+      button.button.js-switch-modal(type="button", data-target=".md-card-game-result") Bắt đầu tìm kiếm
+
+mixin card-game-result
+  .card-game
+    .modal-title Xin chúc mừng!
+    .modal-subtitle Bạn đã tìm được #[span.text-warning 11/11] tấm thẻ được ẩn giấu
+    .modal-point +60 điểm
+    .modal-button-group
+      button.button.js-card-game-finish(type="button") Tiếp tục
+
+mixin game-form
+  form.m-form
+    .modal-title Thông tin nhận thưởng
+    .md-form__group(class=isError?'is-error':'')
+      .md-form__label Số CCCD/Hộ chiếu
+        span.text-danger
+      input.form-control(type="text", placeholder="xxxxxxxxxxxx")
+    .md-form__group(class=isError?'is-error':'')
+      .md-form__label 6 số cuối tài khoản BIDV
+        span.text-danger
+      input.form-control(type="text", placeholder="xxxxxx")
+    .md-form__group(class=isError?'is-error':'')
+      .md-form__label Số điện thoại
+        span.text-danger
+      input.form-control(type="text", placeholder="0123456789")
+
+    .modal-button-group
+      button.button.js-switch-modal(type="button", data-target=".leaderboard") Gửi thông tin
+
+    div Nếu chưa có tài khoản vui lòng #[a(href="#!") tải ứng dụng SmartBanking] hoặc đến PGD BIDV gần nhất để mở tài khoản nhận thưởng
+
+mixin game-guide
+  .game
+    .game__header HƯỚNG DẪN CHƠI MINIGAME
+    .game__list
+      .game__guide
+        h3 Thời gian tham gia
+        p Từ ngày … đến ngày …. Chương trình được chia làm 4 đợt. Kết quả sẽ được công bố và 17h00 Chủ nhật hàng tuần
+        ul
+          li Đợt 1:
+          li Đợt 2:
+          li Đợt 3:
+          li Đợt 4:
+        h3 Thể lệ tham gia
+        ul
+          li Người chơi phải chơi lần lượt theo Game 1, 2, 3 để nhận quà
+          li Điều kiện để chơi tiếp Game 2 là phải thắng Game 1, trong trường hợp thua Game 1 sẽ phải chơi lại từ đầu
+          li Sau khi chơi Game 1, người chơi bắt buộc phải Login để chơi tiếp game 2 + 3.
+          li Sau khi chơi xong Game 3, người chơi để lại thông tin gồm SĐT, số CCCD, 6 số cuối tài khoản BIDV (trong trường hợp chưa vui lòng tải app SmartBanking hoặc ra PGD BIDV gần nhất để mở tài khoản)
+          li Trong trường hợp điểm chơi thấp, người chơi có thể chọn chế độ chơi lại từ Game 2 để có điểm số cao hơn
+        h3 Bảng xếp hạng
+        p Mỗi tuần BIDV sẽ trao thưởng cho 203 người chơi có điểm số và thời gian chơi nhanh nhất. Giải thưởng sẽ được gửi thẳng trực tiếp vào Tài khoản BIDV của người chơi. Cơ cấu giải thưởng gồm:
+        ul.fw-700
+          li 01 Giải Nhất trị giá 200.000 VNĐ
+          il 02 Giải Nhì trị giá 150.000 VNĐ
+          il 2000 Giải Ba trị giá 100.000 VNĐ
+        h3 Giới thiệu các trò chơi
+        h4.fw-700 Game 1 - Ghép hình thẻ BIDV
+        p 01 hình ảnh thẻ sẽ được cắt thành 9 bức ảnh và bị xáo trộn, người chơi phải di chuyển và xếp lại đúng vị trí để ra được bức ảnh thẻ trong vòng 60s.
+        h4.fw-700 Game 2 - Câu hỏi Quiz về thẻ BIDV
+        p Trong vòng 5 phút, người chơi phải trả lời đúng 5 câu hỏi với các nội dung xoay quanh các thẻ của BIDV.
+        h4.fw-700 Game 3 - Thu thập thẻ trong thành phố
+        p Trong vòng 15 phút, người dùng cần thu thập đủ các thẻ trong thành phố. Các mật thư sẽ được hiện lần lượt theo thứ tự và người chơi cần giải và tìm kiếm thẻ theo mật thư được cung cấp.
+
+mixin game-leaderboard
+  .game
+    .game__header Leaderboard
+    .game__list
+      - for(let i = 0; i < 10; i++)
+        .leaderboard
+          .leaderboard__place
+            if (i < 3)
+              img(src="./images/medal-" + (i+1) + ".svg", alt="")
+            else
+              = i+1
+          .leaderboard__avatar
+            img(src="./images/avatar.png", alt="")
+          .leaderboard__name Player Name
+          .leaderboard__point
+            i.fal.fa-star.me-2
+            span 60
+          .leaderboard__time
+            i.fal.fa-clock.me-2
+            span 5p30s

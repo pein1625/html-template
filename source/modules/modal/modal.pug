@@ -113,26 +113,26 @@ mixin md-leaderboard
                   i.fal.fa-star.me-2
                   span 60
                 .md-leaderboard__time
-                  i.fal.fa-stopwatch.me-2
+                  i.fal.fa-clock.me-2
                   span 5p30s
 
-mixin md-result
-  .md-result.modal.fade(tabindex='-1')
+mixin md-game-result
+  .md-game-result.modal.fade(tabindex='-1')
     .modal-dialog.modal-dialog-centered
       .modal-content
         .modal-underlay
         button.modal-close(type="button", data-bs-dismiss="modal")
         .modal-body
-          .md-result__badge
+          .md-game-result__badge
             img(src="./images/medal-badge.svg", alt="")
-          .md-result__title Total score
-          .md-result__score 60
-          .md-result__time
-            i.fal.fa-stopwatch.me-2
+          .md-game-result__title Total score
+          .md-game-result__score 60
+          .md-game-result__time
+            i.fal.fa-clock.me-2
             | 5p30s
-          .md-result__desc Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
+          .md-game-result__desc Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
           .modal-button-group
-            button.button.js-switch-modal(type="button", data-target=".md-login") Đăng nhập
+            button.button.js-switch-modal(type="button", data-target=".md-game-form") Điền thông tin nhận thưởng
 
 mixin md-play-again
   .md-play-again.modal.fade(tabindex='-1')
@@ -158,21 +158,3 @@ mixin md-login-suggest
           .modal-button-group
             button.button.js-switch-modal(type="button", data-target=".md-login") Đăng nhập
             button.button(type="button") Tiếp tục chơi
-
-mixin md-gift-form
-  .md-gift-form.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-underlay
-        button.modal-close(type="button", data-bs-dismiss="modal")
-        .modal-body.md-form
-          .modal-title Thông tin nhận thưởng
-
-          .row
-            .col-lg-4.col-form-label.md-form-info__label Số CCCD/Hộ chiếu
-              span.text-danger *
-            .col-lg-8
-              input.form-control(type="text")
-
-          .modal-button-group
-            button.button(type="button", data-target=".md-login") Gửi thông tin

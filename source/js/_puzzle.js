@@ -82,6 +82,13 @@ function puzzleContinue() {
   console.log('puzzleContinue');
 
   if (PUZZLE.isCompleted) {
+    if (checkLoggedIn()) {
+      showModal('.md-quiz-begin');
+    } else {
+      PUZZLE.loginRequired = true;
+      showModal('.md-login');
+    }
+
     return false;
   }
 
@@ -140,7 +147,7 @@ function puzzleMove(e) {
 
     reIndexing();
 
-    if (checkResult()) {
+    if (puzzleCheckResult()) {
       PUZZLE.isCompleted = true;
       puzzleFinish();
     }
@@ -183,7 +190,7 @@ function getSideBySide(index) {
   return items.filter(index => index !== 1 && index !== 2);
 }
 
-function checkResult() {
+function puzzleCheckResult() {
   let maxValue = 0;
   let errorIndex = PUZZLE.arr.findIndex((item) => {
     if (item < maxValue) return true;

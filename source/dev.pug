@@ -17,7 +17,7 @@ block content
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Popup hỏi login
       buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-login-suggest") Bạn có muốn đăng nhập để lưu kết quả chơi?
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-gift-form") Thông tin nhận thưởng
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-form") Thông tin nhận thưởng
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 2: Quiz
       buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-begin") Quiz Begin
@@ -27,13 +27,18 @@ block content
       buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle-guide") Puzzle Guide
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 3: Ghép hình thẻ
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game-intro") Card game intro
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game") Card game
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game-result") Card game result
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Popup chơi lại
-      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-result") Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-result") Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-play-again") Bạn có muốn chơi lại từ đầu không?
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Bảng xếp hạng
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-leaderboard") Leaderboard
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-leaderboard") Leaderboard
+      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-guide") Hướng dẫn
+
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Accounts
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-login") Đăng nhập
@@ -87,10 +92,7 @@ block content
     +new-password-success
   +md-template('md-new-password-error')
     +new-password(true)
-  +md-play-again
-  +md-result
-  +md-leaderboard
-  +md-gift-form
+
   +md-template('md-quiz-begin')
     +quiz-begin
   +md-template('md-quiz-question')
@@ -102,3 +104,25 @@ block content
     +puzzle-result
   +md-template('md-puzzle-guide')
     +puzzle-guide
+
+  +md-template('md-card-game-intro')
+    +card-game-intro
+  +md-template('md-card-game')
+    +card-game
+  +md-template('md-card-game-result')
+    +card-game-result
+
+  +md-game-result
+
+  +md-template('md-game-form')
+    +game-form
+
+  +md-play-again
+  +md-leaderboard
+
+  +md-template('md-game-guide')
+    +game-guide
+
+
+  +md-template('md-game-leaderboard')
+    +game-leaderboard
