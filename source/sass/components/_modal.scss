@@ -142,6 +142,26 @@
     margin-top: 2.5em;
   }
 
+  &-bottom {
+    margin-top: 1em;
+    margin-bottom: -2.75em;
+    color: $white;
+    text-align: center;
+
+    & > * {
+      font-size: 12px;
+    }
+
+    a {
+      color: #13AE8E;
+
+      &:hover {
+        color: #13AE8E;
+        text-decoration: underline;
+      }
+    }
+  }
+
   @include media-breakpoint-up(xl) {
     &-dialog {
       max-width: 600px;
@@ -175,11 +195,6 @@
 
     &-desc {
       font-size: 14px;
-    }
-
-    &-footer {
-      margin-top: -10px;
-      padding: 0 50px 50px;
     }
 
     &-button-group {
@@ -216,10 +231,6 @@
 
     &-desc {
       font-size: 16px;
-    }
-
-    &-footer {
-      padding: 0 60px 60px;
     }
   }
 }
@@ -278,61 +289,5 @@
 
   @media (min-width: 1800px) {
     font-size: 16px;
-  }
-}
-
-.md-game-result {
-  text-align: center;
-
-  &__badge {
-    margin-bottom: 2em;
-
-    img {
-      height: 8.75em;
-      object-fit: contain;
-      object-position: 50% 50%;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  &__title {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 1.2;
-    color: $white;
-    margin-bottom: 0;
-  }
-
-  &__score {
-    font-size: 6em;
-    font-weight: 700;
-    line-height: 1.2;
-    color: $yellow;
-  }
-
-  &__time {
-    font-size: 1.5em;
-    color: $yellow;
-    margin-bottom: 1.2em;
-  }
-
-  &__desc {
-    color: $white;
-    font-size: 1.5em;
-    margin-bottom: 1.2em;
-  }
-
-  @include media-breakpoint-down(xl) {
-    &__time {
-      font-size: 1em;
-    }
-
-    &__desc {
-      font-size: 1em;
-    }
   }
 }

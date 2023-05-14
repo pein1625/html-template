@@ -264,25 +264,24 @@ mixin card-game-result
       button.button.js-card-game-finish(type="button") Tiếp tục
 
 mixin game-form
-  form.m-form
+  form.md-form
     .modal-title Thông tin nhận thưởng
     .md-form__group(class=isError?'is-error':'')
       .md-form__label Số CCCD/Hộ chiếu
-        span.text-danger
-      input.form-control(type="text", placeholder="xxxxxxxxxxxx")
+        span.text-danger *
+      input.form-control(type="number", placeholder="xxxxxxxxxxxx", required)
     .md-form__group(class=isError?'is-error':'')
       .md-form__label 6 số cuối tài khoản BIDV
-        span.text-danger
-      input.form-control(type="text", placeholder="xxxxxx")
+        span.text-danger *
+      input.form-control(type="number", placeholder="xxxxxx", required)
     .md-form__group(class=isError?'is-error':'')
       .md-form__label Số điện thoại
-        span.text-danger
-      input.form-control(type="text", placeholder="0123456789")
-
+        span.text-danger *
+      input.form-control(type="number", placeholder="0123456789", required)
     .modal-button-group
-      button.button.js-switch-modal(type="button", data-target=".leaderboard") Gửi thông tin
-
-    div Nếu chưa có tài khoản vui lòng #[a(href="#!") tải ứng dụng SmartBanking] hoặc đến PGD BIDV gần nhất để mở tài khoản nhận thưởng
+      button.button.js-switch-modal(type="button", data-target=".md-game-leaderboard") Gửi thông tin
+  .modal-bottom
+    p Nếu chưa có tài khoản vui lòng #[a(href="#!") tải ứng dụng SmartBanking] hoặc đến PGD BIDV gần nhất để mở tài khoản nhận thưởng
 
 mixin game-guide
   .game
@@ -337,3 +336,24 @@ mixin game-leaderboard
           .leaderboard__time
             i.fal.fa-clock.me-2
             span 5p30s
+
+mixin play-again
+  .game-play-again
+    .modal-title Bạn có muốn chơi lại từ đầu không?
+    .modal-desc Lưu ý: Bạn sẽ được chơi lại game từ Game 2 & toàn bộ điểm và thời gian sẽ được reset về 0
+    .modal-button-group
+      button.button.me-4.me-xl-40(type="button") Có
+      button.button(type="button") Không
+
+mixin game-result
+  .game-result
+    .game-result__badge
+      img(src="./images/medal-badge.svg", alt="")
+    .game-result__title Total score
+    .game-result__score 60
+    .game-result__time
+      i.fal.fa-clock.me-2
+      | 5p30s
+    .game-result__desc Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
+    .modal-button-group
+      button.button.js-switch-modal(type="button", data-target=".md-game-form") Điền thông tin nhận thưởng

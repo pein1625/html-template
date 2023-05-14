@@ -33,7 +33,12 @@ async function quizStart() {
   QUIZ.current = 0;
   QUIZ.correct = 0;
   QUIZ.time = 0;
-  QUIZ.questions = await getQuizQuestions();
+
+  const quizQuestions = await getQuizQuestions();
+
+  for (const [, question] of Object.entries(quizQuestions)) {
+    QUIZ.questions.push(question);
+  }
 
   renderQuizQuestion();
 
@@ -95,9 +100,9 @@ function quizSelectOption(e) {
   const answerKey = $answer.data('key');
 
   QUIZ.el.find('.js-quiz-option').prop('disabled', true);
-  QUIZ.el.find(`.quiz__answer[data-key="${question.answer}"]`).addClass('is-correct');
+  QUIZ.el.find(`.quiz__answer[data-key="${question.true_option}"]`).addClass('is-correct');
 
-  if (answerKey !== question.answer) {
+  if (answerKey !== question.true_option) {
     QUIZ.el.find(`.quiz__answer[data-key="${answerKey}"]`).addClass('is-incorrect');
   } else {
     QUIZ.correct++;
