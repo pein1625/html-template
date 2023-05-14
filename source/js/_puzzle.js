@@ -17,26 +17,38 @@ const classesToRemove = PUZZLE.arr.reduce((carry, item, index) => {
 }, '');
 
 $(function() {
-  gameLoading();
+  puzzleLoading();
 });
 
-async function gameLoading() {
-  const data = await getPuzzleData();
+async function puzzleLoading() {
+  try {
+    const data = await getPuzzleData();
 
-  PUZZLE.images = data.piece_jigsaw;
-  PUZZLE.result = data.result;
+    if (!data) throw new Error('Puzzle data not found!');
 
-  PUZZLE.el = $('.js-puzzle');
+    if (data.error) {
+      throw new Error(data.error.message);
+    }
 
-  PUZZLE.timeEl = PUZZLE.el.find('.puzzle__remaining');
+    PUZZLE.images = data.piece_jigsaw;
+    PUZZLE.result = data.result;
 
-  PUZZLE.el.on('click', '.js-puzzle-start', puzzleStart);
+    PUZZLE.el = $('.js-puzzle');
 
-  PUZZLE.el.on('click', '.cell', puzzleMove);
+    PUZZLE.timeEl = PUZZLE.el.find('.puzzle__remaining');
 
-  puzzleReset();
+    PUZZLE.el.on('click', '.js-puzzle-start', puzzleStart);
 
-  $('.js-puzzle-result, .js-puzzle-guide').on('click', '.js-puzzle-continue', puzzleContinue);
+    PUZZLE.el.on('click', '.cell', puzzleMove);
+
+    puzzleReset();
+
+    $('.js-puzzle-result, .js-puzzle-guide').on('click', '.js-puzzle-continue', puzzleContinue);
+  } catch (error) {
+    $('.js-puzzle-error').find('.modal-desc').text(error.message);
+
+    showModal('.md-puzzle-error');
+  }
 }
 
 function puzzleReset() {

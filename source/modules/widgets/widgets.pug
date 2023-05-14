@@ -217,29 +217,39 @@ mixin puzzle-guide
       .modal-button-group
         button.button.js-puzzle-continue(type="button") Quay lại
 
+mixin puzzle-error
+  .js-puzzle-error
+    .modal-title Oops,
+    .modal-desc Bạn đã hết lượt chơi lại
+    .modal-button-group
+      button.button(type="button") Đóng
+
 mixin survey-result
   .js-survey-result
 
 mixin card-game-intro
   .card-game-intro
     .modal-title Minigame: Tìm thẻ trong thành phố
-    .row.g-3
+    .row.g-3.align-items-center.mt-4
       .col-lg-8
         img(src="./images/card-game-map.svg", alt="")
       .col-lg-4
-        .row.g-3
-          .col-auto
-          .col Tìm thẻ
+        .card-game-intro__item
+          .card-game-intro__icon
+            img(src="./images/icon-envelope.svg", alt="")
+          .card-game-intro__text Tìm thẻ
             br
             | qua mật thư
-        .row.g-3.mb-30
-          .col-auto
-          .col 15 phút
+        .card-game-intro__item
+          .card-game-intro__icon
+            img(src="./images/icon-stopwatch.svg", alt="")
+          .card-game-intro__text 15 phút
             br
             | tìm kiếm
-        .row.g-3.mb-30
-          .col-auto
-          .col Tìm càng nhiều
+        .card-game-intro__item
+          .card-game-intro__icon
+            img(src="./images/icon-medal.svg", alt="")
+          .card-game-intro__text Tìm càng nhiều
             br
             | điểm càng cao
 
@@ -357,3 +367,31 @@ mixin game-result
     .game-result__desc Xin chúc mừng, bạn đã hoàn thành tất cả trò chơi
     .modal-button-group
       button.button.js-switch-modal(type="button", data-target=".md-game-form") Điền thông tin nhận thưởng
+
+mixin upload
+  form.js-image-upload(action="#!")
+    .modal-title Tải lên hình ảnh của bạn
+    +file-input
+    .modal-button-group
+      button.button(type="submit") Gửi ảnh
+    .js-upload-file-alert.fs-12.text-danger.text-center.mt-3.d-none
+      i.fal.fa-times-circle.me-2
+      | Bạn chưa tải lên đủ 11 ảnh
+
+mixin upload-success
+  .modal-icon.text-success
+    i.fal.fa-lg.fa-check-circle
+  .modal-title Tải lên thành công
+  .modal-desc.mx-auto(style="max-width: 493px;") Bài thi của bạn đã được tải lên thành công. Chúng tôi sẽ thông báo kết quả sớm nhất cho bạn thông qua email.
+  .modal-button-group
+    a.button(href="/") Quay lại Sảnh chính
+
+mixin upload-failed
+  .modal-icon.text-danger
+    i.fal.fa-lg.fa-times-circle
+  .modal-title Tải lên không thành công
+  .modal-desc.mx-auto(style="max-width: 493px;") Bài thi của bạn không chưa đạt số lượng tối thiểu.
+    br
+    | Vui lòng kiểm tra và thử lại.
+  .modal-button-group
+    button.button.js-switch-modal(type="button", data-target=".md-upload") Thử lại

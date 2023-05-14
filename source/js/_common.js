@@ -103,27 +103,66 @@ function timeFormat(time, type = 1) {
 
 // file input
 $(function () {
-  $(".js-file-input").on("change", function () {
-    var fileName = $(this).val().split(/\\|\//).pop();
+  const $el = $('.js-file-upload');
+  const $list = $el.find('.file-input__list');
+  const $counter = $el.find('.file-input__counter');
+  const input = $el.find('.js-file-input').get(0);
 
-    $(this).closest(".js-file").find(".js-file-text").text(fileName);
+  $(input).on("change", renderFileList);
 
-    var target = $(this).data("target");
-    if (target) {
-      readURL(this, target);
+  $el.on('click', '.file-input__remove', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const index = $(this).data('index');
+
+    if (index === undefined) return false;
+
+    const dt = new DataTransfer();
+    const { files } = input;
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+      if (index !== i)
+        dt.items.add(file)
     }
+
+    input.files = dt.files
+
+    renderFileList();
   });
 
-  function readURL(input, target) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
+  function renderFileList() {
+    $list.empty();
 
-      reader.onload = function (e) {
-        $(target).show();
-        $(target).attr("src", e.target.result);
-      };
+    const { files } = input;
 
-      reader.readAsDataURL(input.files[0]);
+    if (files.length) {
+      $el.addClass('has-file');
+    } else {
+      $el.removeClass('has-file');
     }
+
+    if (files.length > 0 && files.length < 11) {
+      $('.js-upload-file-alert').removeClass('d-none');
+    } else {
+      $('.js-upload-file-alert').addClass('d-none');
+    }
+
+    $counter.text(`Đã tải lên ${files.length}/11`);
+
+    Array.from(files).forEach((file, index) => {
+      $list.append(`
+<div class="file-input__item">
+  <div class="file-input__small-icon">
+    <i class="fal fa-image"></i>
+  </div>
+  <div class="file-input__name">${file.name}</div>
+  <span class="file-input__remove ms-auto" data-index="${index}">
+    <i class="fal fa-times"></i>
+  </span>
+</div>
+      `);
+    });
   }
 });

@@ -1,29 +1,8 @@
 mixin file-input
-  label.file-input.js-file
-    input.js-file-input(type="file", data-target="#avatar-preview")
-    img.file-input__icon(src="./images/icon-cloud-upload.svg", alt="")
-    span.file-input__text.js-file-text Chấp nhận file .jpg, .png
-
-mixin file-input-2
-  label.file-input.js-file
-    input.js-file-input(type="file")
-    span.file-input__btn-2
-      i.fa.fa-paperclip.mr-2
-      | Chọn tệp
-    span.file-input__text.js-file-text (Định dạng file .doc, .docx, .pdf và dung lượng <= 2MB)
-
-mixin file-input-3
-  label.file-input.js-file
-    input.js-file-input(type="file")
-    span.file-input__btn-3
-      i.fa.fa-upload.fa-fw.mr-2
-      | Đăng tải hồ sơ lý lịch của bạn
-    span.file-input__text.js-file-text
-
-mixin file-input-4
-  label.file-input.js-file
-    input.js-file-input(type="file")
-    span.file-input__btn-3
-      i.fa.fa-upload.fa-fw.mr-2
-      | Up mẫu
-    span.file-input__text.js-file-text
+  .file-input.js-file-upload
+    label.file-input__wrapper
+      input.js-file-input(type="file", data-target="#avatar-preview", multiple)
+      img.file-input__icon(src="./images/icon-cloud-upload.svg", alt="")
+      span.file-input__text.js-file-text Chấp nhận file .jpg, .png
+    .file-input__list
+    .file-input__counter Đã tải lên 10/10

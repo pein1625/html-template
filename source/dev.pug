@@ -3,37 +3,34 @@ extends layout/page
 block content
   .container
     .mb-5.d-flex.gap-3.flex-wrap
-      h2.text-white.w-100 HƯỚNG DẪN CHƠI MINIGAME
-
-    .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Quiz điều hướng
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-form-info") Survey
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-survey-result") Survey result
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Interactive TVC
-      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-upload") Tải lên hình ảnh của bạn
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-upload") Tải lên hình ảnh
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-upload-success") Tải lên thành công
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-upload-failed") Tải lên thất bại
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 1: Ghép hình thẻ
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle") Puzzle
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle-guide") Puzzle Guide
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle") Puzzle
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle-guide") Puzzle Guide
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-puzzle-error") Puzzle Error
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 2: Quiz
       buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-quiz-begin") Quiz Begin
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Minigame 3: Ghép hình thẻ
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game-intro") Card game intro
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game") Card game
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game-result") Card game result
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game-intro") Card game intro
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game") Card game
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-card-game-result") Card game result
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Popup chơi lại
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-result") Game result
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-play-again") Play again
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-leaderboard") Leaderboard
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-form") Thông tin nhận thưởng
-    .mb-5.d-flex.gap-3.flex-wrap
-      h2.text-white.w-100 Bảng xếp hạng
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-leaderboard") Leaderboard
-      buton.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-guide") Hướng dẫn
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-game-guide") Hướng dẫn
 
     .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Accounts
@@ -59,8 +56,14 @@ block content
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-new-password-error") Đặt lại mật khẩu - Lỗi
 
   +md-form-info
-  +md-upload // TODO
-  +md-upload-success // TODO
+
+  +md-template('md-upload')
+    +upload
+  +md-template('md-upload-success')
+    +upload-success
+  +md-template('md-upload-failed')
+    +upload-failed
+
   +md-template('md-survey-result')
     +survey-result
   +md-template('md-login')
@@ -97,6 +100,8 @@ block content
     +puzzle-result
   +md-template('md-puzzle-guide')
     +puzzle-guide
+  +md-template('md-puzzle-error')
+    +puzzle-error
 
   +md-template('md-card-game-intro')
     +card-game-intro
@@ -107,10 +112,8 @@ block content
 
   +md-template('md-game-result')
     +game-result
-
   +md-template('md-game-form')
     +game-form
-
   +md-template('md-game-guide')
     +game-guide
 

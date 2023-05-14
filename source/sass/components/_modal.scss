@@ -162,6 +162,15 @@
     }
   }
 
+  &-point {
+    font-size: 4em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    color: $warning;
+    margin-top: 0.625em;
+  }
+
   @include media-breakpoint-up(xl) {
     &-dialog {
       max-width: 600px;

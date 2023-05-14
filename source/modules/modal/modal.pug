@@ -26,31 +26,6 @@ mixin md-form-info
           .modal-button-group
             button.button(type="submit") Xác nhận
 
-mixin md-upload
-  .md-upload.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-underlay
-        button.modal-close(type="button", data-bs-dismiss="modal")
-        .modal-body
-          .modal-title Tải lên hình ảnh của bạn
-          .mt-4.mt-xl-40.mt-xxl-60
-            +file-input
-
-mixin md-upload-success
-  .md-upload-success.modal.fade(tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-      .modal-content
-        .modal-underlay
-        button.modal-close(type="button", data-bs-dismiss="modal")
-        .modal-body
-          .modal-icon
-            i.fal.fa-lg.fa-check-circle
-          .modal-title Tải lên thành công
-          .modal-desc.mx-auto(style="max-width: 493px;") Bài thi của bạn đã được tải lên thành công. Chúng tôi sẽ thông báo kết quả sớm nhất cho bạn thông qua email.
-          .modal-button-group
-            button.button(type="button") Quay lại Sảnh chính
-
 mixin md-template(className='')
   .modal.fade(class=className, tabindex='-1')
     .modal-dialog.modal-dialog-centered
