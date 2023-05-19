@@ -20,13 +20,13 @@ $(function() {
 
   $('.js-quiz-start').on('click', quizStart);
 
-  $('.js-quiz').on('change', '.js-quiz-option', quizSelectOption);
-
-  $('.js-quiz').on('click', '.js-quiz-continue', function() {
-    if (window.cardGameLoading && typeof window.cardGameLoading === 'function') {
-      window.cardGameLoading();
-    }
-  });
+  QUIZ.el
+    .on('change', '.js-quiz-option', quizSelectOption)
+    .on('click', '.js-quiz-continue', function() {
+      if (window.cardGameLoading && typeof window.cardGameLoading === 'function') {
+        window.cardGameLoading();
+      }
+    });
 });
 
 async function quizStart() {
@@ -152,7 +152,7 @@ function quizShowResult() {
   <div class="modal-title">Xin chúc mừng!<br>Bạn đã trả lời đúng <span class="text-warning">${QUIZ.correct}/${QUIZ.questions.length}</span> câu hỏi</div>
   <div class="quiz-result__score">+${point} điểm</div>
   <div class="modal-button-group">
-      <button class="button" type="button js-quiz-continue">Tiếp tục</button>
+      <button class="button js-quiz-continue" type="button">Tiếp tục</button>
   </div>
 </div>
       `);

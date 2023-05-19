@@ -1,5 +1,5 @@
 mixin md-form-info
-  .md-form-info.modal.fade(tabindex='-1')
+  .md-form-info.modal.fade(tabindex='-1', data-bs-backdrop="static", data-bs-keyboard="false")
     .modal-dialog.modal-dialog-centered
       .modal-content
         .modal-underlay
@@ -27,7 +27,7 @@ mixin md-form-info
             button.button(type="submit") Xác nhận
 
 mixin md-template(className='')
-  .modal.fade(class=className, tabindex='-1')
+  .modal.fade(class=className, tabindex='-1', data-bs-backdrop="static", data-bs-keyboard="false")
     .modal-dialog.modal-dialog-centered
       .modal-content
         .modal-underlay

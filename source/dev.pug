@@ -3,6 +3,9 @@ extends layout/page
 block content
   .container
     .mb-5.d-flex.gap-3.flex-wrap
+      h2.text-white.w-100 Start
+      button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-start") Start
+    .mb-5.d-flex.gap-3.flex-wrap
       h2.text-white.w-100 Quiz điều hướng
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-form-info") Survey
       button.button(type="button", data-bs-toggle="modal", data-bs-target=".md-survey-result") Survey result
@@ -122,3 +125,6 @@ block content
 
   +md-template('md-play-again')
     +play-again
+
+  +md-template('md-start')
+    +start

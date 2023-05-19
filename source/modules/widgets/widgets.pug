@@ -136,27 +136,6 @@ mixin quiz-begin
 
 mixin quiz-question
   .js-quiz(data-time-limit="10")
-    //- .quiz
-    //-   .quiz__title.modal-title Câu hỏi số 1
-    //-   .quiz__question Thẻ BIDV Visa Infinite được hoàn tiền tới bao nhiêu % tại lĩnh vực Golf/Spa/Resort nước ngoài?
-    //-   .quiz__answers
-    //-     label.quiz__answer.is-correct(data-key="A")
-    //-       input(type="radio", name="quiz")
-    //-       span A. 6%
-    //-     label.quiz__answer(data-key="B")
-    //-       input(type="radio", name="quiz")
-    //-       span B. 5%
-    //-     label.quiz__answer(data-key="C")
-    //-       input(type="radio", name="quiz")
-    //-       span C. 7%
-    //-     label.quiz__answer.is-incorrect(data-key="D")
-    //-       input(type="radio", name="quiz")
-    //-       span D. 8%
-    //-   .quiz__info
-    //-     div Câu hỏi đã trả lời:&nbsp;
-    //-       span.text-warning 0/11
-    //-     div Thời gian:&nbsp;
-    //-       span.text-wraning 1:17 /15 phút
 
 mixin quiz-result
   .quiz-result
@@ -395,3 +374,24 @@ mixin upload-failed
     | Vui lòng kiểm tra và thử lại.
   .modal-button-group
     button.button.js-switch-modal(type="button", data-target=".md-upload") Thử lại
+
+mixin start
+  .start
+    .modal-title.mb-30 Bạn muốn tham quan khu vực nào?
+    .row.g-2.g-sm-3.g-xxl-4
+      .col-4
+        a.start__frame(href="#!")
+          img(src="./images/background.jpg", alt="")
+        .start__label Zone Info
+      .col-4
+        a.start__frame(href="#!")
+          img(src="./images/background.jpg", alt="")
+        .start__label Zone Media Center
+      .col-4
+        a.start__frame(href="#!")
+          img(src="./images/background.jpg", alt="")
+        .start__label Zone Game Center
+
+    .start__delivery hoặc
+    .start__footer
+      a(href="#!") Tham quan tự do
