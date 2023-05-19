@@ -134,3 +134,15 @@ $(function() {
     $('.js-cart-total-discount').removeClass('d-none').text(`${totalDiscount.toLocaleString('en')} ₫`);
   }
 });
+
+$(function() {
+  $('.js-open-sidebar').on('click', function(e) {
+    e.preventDefault();
+    $('.js-sidebar').addClass('is-show');
+  });
+
+  $('.js-close-sidebar').on('click', function(e) {
+    e.preventDefault();
+    $('.js-sidebar').removeClass('is-show');
+  });
+});
