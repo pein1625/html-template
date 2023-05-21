@@ -139,10 +139,19 @@ $(function() {
   $('.js-open-sidebar').on('click', function(e) {
     e.preventDefault();
     $('.js-sidebar').addClass('is-show');
+    $('body').addClass('overflow-hidden');
   });
 
   $('.js-close-sidebar').on('click', function(e) {
     e.preventDefault();
     $('.js-sidebar').removeClass('is-show');
+    $('body').removeClass('overflow-hidden');
+  });
+
+  $(window).on('resize', function() {
+    if ($(window).width() >= 992) {
+      $('.js-sidebar').removeClass('is-show');
+      $('body').removeClass('overflow-hidden');
+    }
   });
 });
