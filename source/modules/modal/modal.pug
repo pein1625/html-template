@@ -5,26 +5,45 @@ mixin md-form-info
         .modal-underlay
         button.modal-close(type="button", data-bs-dismiss="modal")
         form.modal-body.js-survey-form(action="#!")
-          .md-form-info__group
-            label.md-form-info__label Vui lòng cho biết độ tuổi của bạn
-            .md-form-info__radio-group
-              +radio("survey[1]", "", "", "a")
-                span 18 - 25 tuổi
-              +radio("survey[1]", "", "", "b")
-                span 25 - 45 tuổi
-              +radio("survey[1]", "", "", "c")
-                span Trên 45 tuổi
-          .md-form-info__group
-            label.md-form-info__label Chi tiêu trung bình hàng tháng của bạn
-            .md-form-info__radio-group
-              +radio("survey[2]", "", "", "d")
-                span 18 - 25 tuổi
-              +radio("survey[2]", "", "", "e")
-                span 25 - 45 tuổi
-              +radio("survey[3]", "", "", "f")
-                span Trên 45 tuổi
+          .md-form-info__wrapper
+            .md-form-info__group.md-form-info__group--2
+              label.md-form-info__label Vui lòng cho biết độ tuổi của bạn
+              .md-form-info__radio-group
+                +radio("survey[1]", "", "", "a")
+                  span Dưới 18 tuổi
+                +radio("survey[1]", "", "", "b")
+                  span 18 - 25 tuổi
+                +radio("survey[1]", "", "", "c")
+                  span 25 - 45 tuổi
+                +radio("survey[1]", "", "", "d")
+                  span Trên 45 tuổi
+            .md-form-info__group
+              label.md-form-info__label Chi tiêu trung bình hàng tháng của bạn
+              .md-form-info__radio-group
+                +radio("survey[2]", "", "", "e")
+                  span Dưới 3 triệu đồng/tháng
+                +radio("survey[2]", "", "", "f")
+                  span Từ 3- 5 triệu đồng/tháng
+                +radio("survey[3]", "", "", "g")
+                  span Từ 5-10 triệu đồng/tháng
+                +radio("survey[3]", "", "", "h")
+                  span Từ 10 triệu đồng/tháng trở lên
+            .md-form-info__group
+              label.md-form-info__label Bạn thường chi tiêu thẻ chủ yếu ở lĩnh vực nào?
+              .md-form-info__radio-group
+                +radio("survey[3]", "", "", "i")
+                  span Giao dịch thanh toán online
+                +radio("survey[2]", "", "", "k")
+                  span Giao dịch siêu thị hoặc các dịch vụ thiết yếu như y tế, giáo dục
+                +radio("survey[3]", "", "", "l")
+                  span Giao dịch tại các nhà hàng ăn uống, ẩm thực
+                +radio("survey[3]", "", "", "m")
+                  span Chi tiêu lĩnh vực du lịch, nghỉ dưỡng
+                +radio("survey[3]", "", "", "n")
+                  span Khác
           .modal-button-group
             button.button(type="submit") Xác nhận
+          .md-form-info__footer Bạn có thể bỏ qua bước này và tự do trải nghiệm thành phố
 
 mixin md-template(className='')
   .modal.fade(class=className, tabindex='-1', data-bs-backdrop="static", data-bs-keyboard="false")

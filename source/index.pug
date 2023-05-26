@@ -1,11 +1,17 @@
 extends layout/page
 
+block define
+  - addBodyClass = "home-page"
+
 block content
   .welcome
+    .welcome__text CHÀO MỪNG BẠN ĐẾN
+      br.d-sm-none
+      | THÀNH PHỐ THẺ
     .welcome__frame
       img.welcome__img(src="./images/welcome.png", alt="")
     .welcome__footer
-      button.button.button--lg(type="button", data-bs-toggle="modal", data-bs-target=".md-form") Enter
+      button.button.button--lg(type="button", data-bs-toggle="modal", data-bs-target=".md-form") TRẢI NGHIỆM NGAY
 
   //- .summary
   //-   .summary__info Tổng điểm: #[span.summary__total-point 0]
