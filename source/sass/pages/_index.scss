@@ -1,3 +1,78 @@
+.home-4-banner {
+  display: grid;
+  grid-template-columns: 236px calc(100% - 252px);
+  grid-template-rows: 350px 1fr;
+  gap: 16px;
+
+  &__main {
+    grid-column: 2 / span 1;
+    grid-row: span 2;
+  }
+
+  &__sidebar {
+    border-radius: 4px;
+    background-color: $white;
+    position: relative;
+    z-index: 1;
+    border: 10px solid transparent;
+
+    &-inner {
+      overflow: auto;
+      padding-right: 4px;
+      position: absolute;
+      width: calc(100% + 4px);
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      &::-webkit-scrollbar-track
+      {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+        border-radius: 4px;
+        background-color: #fafafa;
+      }
+
+      &::-webkit-scrollbar
+      {
+        width: 4px;
+        background-color: #fafafa;
+      }
+
+      &::-webkit-scrollbar-thumb
+      {
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+        background-color: #ccc;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+
+    &__sidebar {
+      border: 0;
+      padding: 16px;
+      margin-top: 16px;
+
+      &-inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        position: static;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__sidebar {
+      &-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
 .banner-grid {
   &__col {
     position: relative;

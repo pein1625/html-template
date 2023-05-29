@@ -94,6 +94,39 @@
   }
 }
 
+.section-5 {
+  padding: 16px;
+  border-radius: 4px;
+  background-color: $white;
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  &--gradient {
+    background: linear-gradient(to bottom, #9FD9FF, $white);
+  }
+
+  &--blue-light {
+    background-color: #BEF4FF;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 70px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary;
+    margin-bottom: 0;
+  }
+}
+
 .aside {
   & + & {
     border-top: 1px solid $border-color;

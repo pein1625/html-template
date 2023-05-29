@@ -95,11 +95,49 @@ mixin card-slider-2
 mixin shop-slider
   .shop-slider
     .shop-slider__prev
-      i.fal.fa-arrow-left
+      i.fal.fa-angle-left
     .shop-slider__next
-      i.fal.fa-arrow-right
+      i.fal.fa-angle-right
     .shop-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 8; i++)
           .swiper-slide
             +card(`./images/shop-${i % 6 + 1}.jpg`, '#!', 'card--square')
+
+mixin partner-slider
+  .partner-slider
+    .partner-slider__prev
+      i.fa.fa-angle-left
+    .partner-slider__next
+      i.fa.fa-angle-right
+    .partner-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            a.partner-slider__frame(href="#!")
+              //- img(src=`./images/partner-${i + 1}.png`, alt="")
+              +img
+
+mixin product-slider
+  .product-slider
+    .product-slider__prev
+      i.fal.fa-angle-left
+    .product-slider__next
+      i.fal.fa-angle-right
+    .product-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +product-2
+
+mixin product-slider-2
+  .product-slider-2
+    .product-slider-2__prev
+      i.fal.fa-angle-left
+    .product-slider-2__next
+      i.fal.fa-angle-right
+    .product-slider-2__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +product-2

@@ -370,10 +370,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
+    width: 28px;
     height: 32px;
     border: 1px solid $white;
-    border-radius: 50%;
+    border-radius: 4px;
     color: $white;
     position: absolute;
     top: -48px;
@@ -417,5 +417,71 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+  }
+}
+
+.card-slider-2 {
+  position: relative;
+
+  &__pagination {
+    @include pagination();
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+}
+
+.product-slider {
+  position: relative;
+  z-index: 1;
+
+  @include slider-nav-4;
+
+  &__prev,
+  &__next {
+    border-radius: 4px;
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: $white;
+    width: 28px;
+    position: absolute;
+    top: -44px;
+    right: 0;
+
+    &:hover {
+      color: $primary;
+      background-color: $white;
+    }
+  }
+
+  &__prev {
+    right: 38px;
+  }
+}
+
+.product-slider-2 {
+  @include slider-nav-4;
+
+  &__prev,
+  &__next {
+    border-radius: 4px;
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: $white;
+    width: 28px;
+    position: absolute;
+    top: -44px;
+    right: 0;
+
+    &:hover {
+      color: $primary;
+      background-color: $white;
+    }
+  }
+
+  &__prev {
+    right: 38px;
   }
 }

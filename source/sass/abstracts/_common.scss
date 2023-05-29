@@ -71,3 +71,43 @@
     }
   }
 }
+
+.home-4 {
+  .banner-slider {
+    &__pagination {
+      bottom: 8px;
+    }
+
+    &__prev,
+    &__next {
+      width: 28px;
+      height: 34px;
+      background-color: $white;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .menu-product {
+      display: block !important;
+    }
+
+    .banner-grid {
+      &__col {
+        position: relative;
+
+        &:first-child {
+          width: 66.66%;
+        }
+
+        &:last-child {
+          width: 33.33%;
+        }
+      }
+    }
+  }
+}

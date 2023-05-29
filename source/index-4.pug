@@ -1,0 +1,72 @@
+extends layout/page
+
+block define
+  - addBodyClass = 'home-4'
+
+block content
+  section.section-3.pt-3
+    .container
+      .home-4-banner
+        .home-4-banner__menu
+        .home-4-banner__main
+          .banner-grid.row.g-3
+            .banner-grid__col.col
+              .position-relative.h-100
+                +banner-slider('banner-slider--absolute', 1)
+            .banner-grid__col.col-auto
+              .row.g-12
+                .col-6.col-lg-12
+                  +card-slider-2
+                .col-6.col-lg-12
+                  +card-slider-2
+
+          section.section-5.section-5--blue-light.mt-20
+            .section-5__header
+              h2.section-5__title Sản phẩm tiêu biểu
+            .position-relative
+              +product-slider-2
+
+        .home-4-banner__sidebar
+          .home-4-banner__sidebar-inner
+            .mb-xl-3.ml-0
+              +card-2('./images/sidebar-card-1.png')
+            .mb-xl-3.ml-0
+              +card-2('./images/sidebar-card-2.png')
+
+  section.section-3.pt-0
+    .container
+      +s-shop(4)
+
+  .container.mb-40
+    section.section-5
+      .section-5__header
+        h2.section-5__title Sản phẩm OCOP
+
+      +product-slider
+
+    section.pb-30.mt-40
+      +card-slider
+
+    section.section-5
+      .section-5__header
+        h2.section-5__title Sản phẩm công nghiệp nông thôn tiêu biểu
+
+      +product-slider
+
+    section.section-5.section-5--gradient
+      .section-5__header
+        h2.section-5__title Sản phẩm khác
+
+      +product-slider
+
+    section.section-5
+      .section-5__header
+        h2.section-5__title Tin tức
+
+      .row.g-3
+        .col-lg-6
+          +news-5
+        .col-lg-6
+          - for(let i = 0; i < 4; i++)
+            .mb-3.ml-0
+              +news-4

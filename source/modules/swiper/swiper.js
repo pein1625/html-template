@@ -89,6 +89,19 @@ $(function() {
   });
 });
 
+$(function() {
+  addSwiper('.card-slider-2', {
+    pagination: true,
+    spaceBetween: 16,
+    speed: 500,
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    }
+  });
+});
 
 // vertical preview sync slider
 $(function () {
@@ -116,5 +129,50 @@ $(function () {
     thumbs: {
       swiper: thumbSlider,
     },
+  });
+});
+
+$(function() {
+  addSwiper('.product-slider', {
+    pagination: true,
+    navigation: true,
+    spaceBetween: 16,
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 5
+      },
+      1200: {
+        slidesPerView: 6,
+      }
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.product-slider-2', {
+    pagination: true,
+    navigation: true,
+    spaceBetween: 16,
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 5
+      },
+    }
   });
 });

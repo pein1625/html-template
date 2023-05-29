@@ -23,6 +23,27 @@ mixin product
           a.product__add-cart(href="#!")
             i.fal.fa-fw.fa-lg.fa-shopping-cart
 
+mixin product-2
+  - count++
+  .product-2
+    a.product-2__frame(href="#!")
+      img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
+    .product-2__discount -30%
+    .product-2__body
+      .product-2__brands
+        img.product-2__brand.ocop(src="./images/brand-1.png", alt="")
+        img.product-2__brand.spcnnttb(src="./images/brand-2.png", alt="")
+      h3.product-2__title
+        a(href="#!") Nón cỏ bàng thời trang cho nữ
+      .product-2__stars
+        span.stars.stars--5
+        span (23)
+      .product-2__info
+        .product-2__price 70.000 ₫
+        .product-2__old-price 120.000đ
+      a.product-2__add-cart(href="#!")
+        i.fal.fa-fw.fa-lg.fa-shopping-cart
+
 mixin news
   - count++
   .news
@@ -62,6 +83,28 @@ mixin news-3
       | 03/07/2022
     .news__desc Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero e
 
+mixin news-4
+  - count++
+  .news.news--4
+    .row.g-3.g-xl-20
+      .col-auto
+        a.news__frame(href="./news-detail.html")
+          img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
+      .col
+        h3.news__title.fw-700.mt-0
+          a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+        .news__time
+          i.fal.fa-clock.me-2.text-primary
+          | 03/07/2022
+
+mixin news-5
+  - count++
+  .news.news--5
+    a.news__frame(href="./news-detail.html")
+      img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
+    h3.news__title
+      a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+
 mixin card(img='', url='', addClass='')
   - count++
   - img = img ? img : `./images/card-${count % 4 + 1}.jpg`
@@ -72,6 +115,10 @@ mixin card-square(url='#!', img="./images/card-2-1.jpg")
   - count++
   - img = img ? img : `./images/card-${count % 4 + 1}.jpg`
   a.card.card--square(href=url)
+    img(src=img, alt="")
+
+mixin card-2(img='./images/sidebar-card-1.png')
+  a.card-2(href="#!")
     img(src=img, alt="")
 
 mixin doc(number='01', id='#md-doc-1')
