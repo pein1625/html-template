@@ -4,7 +4,7 @@
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    color: $primary;
+    color: var(--bs-primary);
     margin-bottom: 20px;
   }
 
@@ -58,7 +58,7 @@
     display: block;
     width: 100%;
     border-radius: 4px;
-    background: $primary;
+    background: var(--bs-primary);
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -155,7 +155,7 @@
 
     .input-group-text {
       border-radius: 4px;
-      background: $primary;
+      background: var(--bs-primary);
       font-weight: 700;
       color: #fff;
       border: 0;

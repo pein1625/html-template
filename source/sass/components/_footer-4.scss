@@ -1,12 +1,11 @@
-.footer {
-  background-color: $white;
-  padding: 35px 0 20px;
-  color: $text-gray-7;
-  font-size: 12px;
+.footer-4 {
+  background-color: #fff;
+  padding: 40px 0 80px;
+  color: #7B7B7B;
 
   &__grid {
     display: grid;
-    grid-template-columns: 7fr 4fr 3fr 3fr 3fr;
+    grid-template-columns: 6fr 4fr 3fr 3fr 3fr;
     grid-gap: 20px;
   }
 
@@ -15,18 +14,6 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 16px;
-  }
-
-  &__copyright {
-    margin-top: 30px;
-  }
-
-  &__logo {
-    display: inline-flex;
-
-    img {
-      height: 50px;
-    }
   }
 
   @include media-breakpoint-down(lg) {
@@ -49,11 +36,12 @@
   }
 }
 
-.f-contact,
-.f-menu {
+.f-contact-4,
+.f-menu-4 {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 12px;
   line-height: 24px;
 
   a {
@@ -66,7 +54,7 @@
   }
 }
 
-.f-social {
+.f-social-4 {
   list-style: none;
   margin: 0;
   padding: 0;

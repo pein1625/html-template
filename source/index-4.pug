@@ -3,6 +3,12 @@ extends layout/page
 block define
   - addBodyClass = 'home-4'
 
+block header
+  +header-4
+
+block footer
+  +footer-4
+
 block content
   section.section-3.pt-3
     .container
@@ -42,7 +48,11 @@ block content
       .section-5__header
         h2.section-5__title Sản phẩm OCOP
 
-      +product-slider
+      .grid-4
+        .grid-4__sidebar
+          +card-slider-3
+        .grid-4__main
+          +product-slider-2
 
     section.pb-30.mt-40
       +card-slider
@@ -51,7 +61,11 @@ block content
       .section-5__header
         h2.section-5__title Sản phẩm công nghiệp nông thôn tiêu biểu
 
-      +product-slider
+      .grid-4
+        .grid-4__main
+          +product-slider-2
+        .grid-4__sidebar
+          +card-slider-3
 
     section.section-5.section-5--gradient
       .section-5__header

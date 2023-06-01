@@ -18,13 +18,13 @@
     color: $white;
     font-size: 14px;
     font-weight: 500;
-    background-color: $primary;
+    background-color: var(--bs-primary);
     padding: 15px 65px;
     border-radius: 4px;
 
     &:hover {
       color: $white;
-      background-color: darken($primary, 5%);
+      opacity: 0.9;
     }
   }
 

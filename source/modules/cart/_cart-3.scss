@@ -58,7 +58,7 @@
     color: #333;
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 

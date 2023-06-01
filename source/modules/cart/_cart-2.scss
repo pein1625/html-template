@@ -15,7 +15,7 @@
     color: #333;
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 
@@ -38,10 +38,10 @@
 
   thead th {
     text-transform: uppercase;
-    background-color: $primary;
+    background-color: var(--bs-primary);
     color: $white;
     font-weight: 400;
-    border-color: $primary;
+    border-color: var(--bs-primary);
 
     &:not(:last-child) {
       border-right-color: $border-color;

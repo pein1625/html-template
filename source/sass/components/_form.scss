@@ -36,7 +36,7 @@
   }
 
   &:hover &__icon {
-    border-color: $primary;
+    border-color: var(--bs-primary);
   }
 
   &__input {
@@ -46,8 +46,8 @@
   }
 
   &__input:checked + &__icon {
-    border-color: $primary;
-    background-color: $primary;
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary);
     color: $white;
 
     &::before {
@@ -89,13 +89,13 @@
       top: 0;
       left: 0;
       transform: scale(0);
-      background-color: $primary;
+      background-color: var(--bs-primary);
       border-radius: 50%;
     }
   }
 
   &:hover &__icon {
-    border-color: $primary;
+    border-color: var(--bs-primary);
   }
 
   &__input {
@@ -105,7 +105,7 @@
   }
 
   &__input:checked + &__icon {
-    border-color: $primary;
+    border-color: var(--bs-primary);
 
     &::before {
       transform: scale(0.675);

@@ -103,6 +103,20 @@ $(function() {
   });
 });
 
+$(function() {
+  addSwiper('.card-slider-3', {
+    pagination: true,
+    spaceBetween: 16,
+    speed: 500,
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    }
+  });
+});
+
 // vertical preview sync slider
 $(function () {
   if (!$(".preview-slider, .thumb-slider").length) {

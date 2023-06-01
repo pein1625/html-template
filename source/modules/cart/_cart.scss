@@ -21,7 +21,7 @@
     transition: 0.3s;
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
       text-decoration: none;
       background-color: $gray-300;
     }

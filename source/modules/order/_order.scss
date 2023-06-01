@@ -7,7 +7,7 @@
     font-weight: 700;
     text-transform: uppercase;
     border-bottom: 1px solid $border-color;
-    color: $primary;
+    color: var(--bs-primary);
     margin-bottom: 16px;
     padding-bottom: 16px;
   }
@@ -17,8 +17,8 @@
     padding: 8px 20px;
     font-weight: 700;
     text-transform: uppercase;
-    border-left: 8px solid $primary;
-    background-color: rgba($primary, 0.2);
+    border-left: 8px solid var(--bs-primary);
+    background-color: rgba(var(--bs-primary), 0.2);
     margin-bottom: 20px;
   }
 

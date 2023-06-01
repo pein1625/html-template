@@ -92,6 +92,16 @@ mixin card-slider-2
           .swiper-slide
             +card
 
+mixin card-slider-3(img='./images/card-slider-3.png')
+  .card-slider-3
+    .card-slider-3__pagination
+    .card-slider-3__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            a.card-slider-3__frame(href="#!")
+              img(src=img, alt="")
+
 mixin shop-slider
   .shop-slider
     .shop-slider__prev

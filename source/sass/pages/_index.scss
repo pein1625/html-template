@@ -1,7 +1,7 @@
 .home-4-banner {
   display: grid;
   grid-template-columns: 236px calc(100% - 252px);
-  grid-template-rows: 350px 1fr;
+  grid-template-rows: 367px 1fr;
   gap: 16px;
 
   &__main {
@@ -73,6 +73,36 @@
   }
 }
 
+.grid-4 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &__main {
+    flex: 0 0 calc(100% - 252px);
+    max-width: calc(100% - 252px);
+  }
+
+  &__sidebar {
+    flex: 0 0 236px;
+    max-width: 236px;
+    position: relative;
+  }
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+
+    &__main {
+      flex: unset;
+      max-width: 100%;
+    }
+
+    &__sidebar {
+      display: none;
+    }
+  }
+}
+
 .banner-grid {
   &__col {
     position: relative;
@@ -112,7 +142,7 @@
 
   &__item {
     display: block;
-    color: $primary;
+    color: var(--bs-primary);
     background: #E0F2FF;
     border: 1px solid #A5D9FF;
     border-radius: 4px;
@@ -122,7 +152,7 @@
     transition: 0.3s;
 
     &:hover {
-      border-color: $primary;
+      border-color: var(--bs-primary);
       box-shadow: 0 1px 10px rgba(#000, 0.1);
     }
 

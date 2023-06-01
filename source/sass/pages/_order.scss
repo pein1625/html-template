@@ -42,7 +42,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 1.2;
-    color: $primary;
+    color: var(--bs-primary);
   }
 
   &__btn {
@@ -111,7 +111,7 @@
   color: inherit;
 
   &:hover {
-    color: $primary;
+    color: var(--bs-primary);
   }
 
   &__frame {

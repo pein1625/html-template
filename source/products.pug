@@ -22,12 +22,18 @@ block content
             h1.section-2__title Vật tư nông nghiệp
             nav.pd-nav
               .pd-nav__label Sắp xếp theo
+
+              button.pd-nav__filter.btn.btn-primary.btn-sm.js-open-sidebar.text-white.d-lg-none(type="button")
+                i.fal.fa-filter.me-2
+                | Filter
+
               select.form-select
                 option Phổ biến
                 option Mới nhất
                 option Bán chạy
                 option Giá cao tới thấp
                 option Giá thấp tới cao
+
               .pd-nav__paging.ms-auto
                 span.text-primary 1
                 span /20
@@ -35,11 +41,6 @@ block content
                 i.fal.fa-angle-left
               .pd-nav__next
                 i.fal.fa-angle-right
-
-            .mb-2.d-lg-none
-              button.btn.btn-primary.btn-sm.js-open-sidebar.text-white(type="button")
-                i.fal.fa-filter.me-2
-                | Filter products
 
             .row.g-2.g-sm-3.g-xl-30
               - for(let i = 0; i < 9; i++)

@@ -1,10 +1,10 @@
-mixin navbar
+mixin navbar(logo='./images/logo.svg')
   section.navbar.js-navbar
     .navbar__backdrop.js-navbar-toggle
     .navbar__wrapper
       .navbar__header
         a.navbar__logo(href="./index.html")
-          img(src="./images/logo.svg", alt="")
+          img(src=logo, alt="")
         button.btn-toggle.js-navbar-toggle.ms-auto
       .navbar__body
         block
