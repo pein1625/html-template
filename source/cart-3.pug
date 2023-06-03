@@ -1,0 +1,88 @@
+extends layout/page
+
+mixin order-item
+  a.order-item(href="./product-detail.html")
+    .order-item__frame
+      img(src="./images/product-1.jpg", alt="")
+    .order-item__title Bột rửa bát Finish Classic Power
+
+mixin order-header
+  .order__row.py-3
+    .order__col Sản Phẩm
+    .order__col.text-center Đơn giá
+    .order__col.text-center Số lượng
+    .order__col.text-center Số tiền
+
+mixin order-group-header(title="Gian hàng 01")
+  .order__row.d-block.border-bottom.px-4.py-10
+    .order__col
+      i.fal.fa-store.me-2
+      span= title
+
+mixin order-group-footer(number="1", price="70.000 ₫")
+  .order__row.d-block.border-top.px-4.py-10
+    .order__col
+      .text-end
+        span Tổng số tiền (#{number} sản phẩm):
+        span.fw-600.text-primary.ms-2.fs-16= price
+
+mixin order-row
+  .order__row
+    .order__col.order__col--item
+      +order-item
+    .order__col.text-center 70.000 ₫
+    .order__col.text-center 1
+    .order__col.text-center.fw-600 70.000 ₫
+
+block content
+  section.section.pb-4
+    .container
+      h1.section__title THANH TOÁN
+
+      form.sign-form.w-100(action="#!")
+        .cart__grid
+          .cart__col
+            .cart
+              .cart__group.d-none.d-lg-block
+                +order-header
+              .cart__group
+                +order-group-header('Gian hàng 1')
+                +order-row
+                +order-row
+                +order-group-footer(2, '140.000 ₫')
+              .cart__group
+                +order-group-header('Gian hàng 2')
+                +order-row
+                +order-group-footer
+              .cart__group
+                +order-group-header('Gian hàng 3')
+                +order-row
+                +order-group-footer
+
+          .cart__col
+            section.cart-summary
+              .cart-summary__header
+                i.fal.fa-fw.fa-lg.fa-map-marker-alt.me-2.text-primary
+                span Địa chỉ nhận hàng
+              .cart-summary__body
+                .fw-600 Nguyễn Thuỵ Dương
+                .fw-600.mt-1 0987654321
+                .mt-1 Số 2 Đ. Kim Giang, Kim Giang, Thanh Xuân, Hà Nội
+                .mt-2
+                  a.btn.btn-outline-primary(href="./cart-2.html") Sửa
+
+            section.cart-summary.mt-2
+              .cart-summary__body
+                .d-flex.justify-content-between
+                  span Tạm tính
+                  strong.fw-600 2.213.000đ
+                .d-flex.justify-content-between.mt-1
+                  span Giảm giá
+                  strong.fw-600 -#[span 117.000đ]
+                .d-flex.justify-content-between.border-top.mt-3.pt-3.align-items-center
+                  span Tổng tiền
+                  strong.cart-summary__total 2.380.000₫
+            .d-grid
+              button.cart__btn.w-100.btn.btn-primary.text-white.mt-2(type="submit")
+                div MUA HÀNG
+                .fs-12.fw-400(style="opacity: 0.9; text-transform: unset") (#[span 3] sản phẩm)

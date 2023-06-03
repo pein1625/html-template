@@ -109,7 +109,7 @@ $(function() {
       $items.each(function() {
         const unitPrice = Number($(this).data('unit-price'));
         const unitDiscount = Number($(this).data('discount'));
-        const quantity = $(this).find('.js-cart-quantity').val() || 1;
+        const quantity = Number($(this).find('.js-cart-quantity').val()) || 1;
         const value = unitPrice * quantity;
         const discount = unitDiscount * quantity;
 
@@ -120,7 +120,7 @@ $(function() {
 
         totalDiscount += discount;
         subtotal += value;
-        itemCount += 1;
+        itemCount += quantity;
 
         $(this).find('.js-cart-value').html(`${value.toLocaleString('en')} ₫`);
       });
@@ -131,6 +131,7 @@ $(function() {
     $('.js-cart-check-all').prop('checked', isAllChecked);
     $('.js-cart-item-count').text(itemCount);
     $('.js-cart-subtotal').text(`${subtotal.toLocaleString('en')} ₫`);
+    $('.js-cart-grandtotal').text(`${(subtotal - totalDiscount).toLocaleString('en')} ₫`);
     $('.js-cart-total-discount').removeClass('d-none').text(`${totalDiscount.toLocaleString('en')} ₫`);
   }
 });

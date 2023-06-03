@@ -187,20 +187,32 @@
 	"pageList": {
 		"data": [
 			{
-				"title": "Trang chủ",
+				"title": "Trang chủ - NEW",
 				"url": "index"
+			},
+			{
+				"title": "Gian hàng - NEW",
+				"url": "shop"
+			},
+			{
+				"title": "Chi tiết sản phẩm - NEW",
+				"url": "product-detail"
+			},
+			{
+				"title": "Giỏ hàng 1 - NEW",
+				"url": "cart-1"
+			},
+			{
+				"title": "Giỏ hàng 2 - NEW",
+				"url": "cart-2"
+			},
+			{
+				"title": "Giỏ hàng 3 - NEW",
+				"url": "cart-3"
 			},
 			{
 				"title": "Sản phẩm",
 				"url": "products"
-			},
-			{
-				"title": "Gian hàng",
-				"url": "shop"
-			},
-			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
 			},
 			{
 				"title": "Tin tức",

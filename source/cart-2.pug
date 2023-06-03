@@ -1,0 +1,122 @@
+extends layout/page
+
+mixin cart-item
+  a.cart-item(href="./product-detail.html")
+    .cart-item__frame
+      img(src="./images/product-1.jpg", alt="")
+    .cart__title Bột rửa bát Finish Classic Power
+
+mixin cart-header
+  .cart__row
+    .cart__col.text-center
+      +checkbox('', '', 'js-cart-check-all')
+    .cart__col Sản Phẩm
+    .cart__col.text-center Đơn giá
+    .cart__col.text-center Số lượng
+    .cart__col.text-center Số tiền
+    .cart__col.text-center Thao tác
+
+mixin cart-group-header(title="Gian hàng 01")
+  .cart__row.border-bottom
+    .cart__col
+      +checkbox('', '', 'js-cart-check-group')
+    .cart__col.cart__col--4
+      i.fal.fa-store.me-2
+      span= title
+
+mixin cart-row
+  .cart__row.js-cart-item(data-unit-price="70000", data-discount="10000")
+    .cart__col.text-center
+      +checkbox('', '', 'js-cart-check-item')
+    .cart__col
+      +cart-item
+    .cart__col.text-center.cart__unit-value 70.000 ₫
+    .cart__col.text-center.cart__quantity
+      +quantity('quantity--square quantity--lg', 'js-cart-quantity')
+    .cart__col.text-center.cart__value.js-cart-value 70.000 ₫
+    .cart__col.text-center
+      a.cart__delete.js-cart-delete-item(href="#!") Xoá
+
+block content
+  section.section
+    .container
+      h1.section__title Giỏ hàng
+
+      form.cart(action="./cart-3.html")
+        .cart__grid
+          .cart__col
+            .cart__group.d-none.d-lg-block
+              +cart-header
+            .cart__group
+              +cart-group-header('Gian hàng 1')
+              +cart-row
+              +cart-row
+            .cart__group
+              +cart-group-header('Gian hàng 2')
+              +cart-row
+            .cart__group
+              +cart-group-header('Gian hàng 3')
+              +cart-row
+
+          .cart__col
+            section.cart-summary
+              .cart-summary__header
+                i.fal.fa-fw.fa-lg.fa-map-marker-alt.me-2.text-primary
+                span Địa chỉ nhận hàng
+              .cart-summary__body
+                div
+                  .mb-3
+                    label.form-label Họ và tên
+                      span.ms-1.text-danger *
+                    input.form-control(type="text")
+                  .mb-3
+                    label.form-label Số điện thoại
+                      span.ms-1.text-danger *
+                    input.form-control(type="text")
+                  .mb-3
+                    label.form-label Địa chỉ
+                      span.ms-1.text-danger *
+                    input.form-control(type="text")
+                  .mb-3
+                    select.form-select
+                      option Tỉnh/ Thành phố *
+                      option Hà Nội
+                      option Hồ Chí Minh
+                      option Hà Nội
+                      option Hồ Chí Minh
+                      option Hà Nội
+                      option Hồ Chí Minh
+                  .mb-3
+                    select.form-select
+                      option Quận/ Huyện *
+                      option Đống Đa
+                      option Hai Bà Trưng
+                      option Ba Đình
+                      option Thanh Xuân
+                  .mb-3
+                    select.form-select
+                      option Phường *
+                      option Phường 1
+                      option Phường 2
+                      option Phường 3
+                      option Phường 4
+                      option Phường 5
+                  .d-flex.gap-2
+                    a.btn.btn-primary.text-white.px-4(href="./cart-1.html") Lưu
+                    button.btn.btn-outline-primary.px-4(type="reset") Làm lại
+
+            section.cart-summary.mt-2
+              .cart-summary__body
+                .d-flex.justify-content-between
+                  span Tạm tính
+                  strong.fw-600.js-cart-subtotal 0đ
+                .d-flex.justify-content-between.mt-1
+                  span Giảm giá
+                  strong.fw-600 -#[span.js-cart-total-discount 117.000đ]
+                .d-flex.justify-content-between.border-top.mt-3.pt-3.align-items-center
+                  span Tổng tiền
+                  strong.cart-summary__total.js-cart-grandtotal 0₫
+            .d-grid
+              button.cart__btn.w-100.btn.btn-primary.text-white.mt-2(type="submit")
+                div MUA HÀNG
+                .fs-12.fw-400(style="opacity: 0.9; text-transform: unset") (#[span.js-cart-item-count 3] sản phẩm)

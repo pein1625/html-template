@@ -14,13 +14,14 @@ mixin navigation
 
                 .menu-nav__dropdown
                   ul.menu.menu-product
-                    each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
+                    each item, index in [{title: 'Sản phẩm OCOP',icon: 'fas fa-fw fa-salad'},{title: 'Đặc sản vùng miền',icon: 'fal fa-fw fa-glass-martini-alt'},{title: 'Thời trang nữ',icon: 'fal fa-fw fa-clock'},{title: 'Thời trang nam',icon: 'fas fa-fw fa-tshirt'},{title: 'Vật tư nông nghiệp',icon: 'fas fa-fw fa-fish'},{title: 'Thiết bị điện tử',icon: 'fal fa-fw fa-gift'},{title: 'Gia dụng – Đời sống',icon: 'fas fa-fw fa-cow'},{title: 'Siêu thị – Tạp hoá',icon: 'fal fa-fw fa-clock'},{title: 'Thời trang trẻ em',icon: 'fas fa-fw fa-cassette-tape'},{title: 'Sức khoẻ – Làm đẹp',icon: 'fas fa-fw fa-cassette-tape'},{title: 'Thể thao – Du lịch',icon: 'fas fa-fw fa-tshirt'}]
                       li.menu-item.menu-item-group
                         a.menu-link(href="#!")
-                          img(src=`./images/menu-icon-${index + 1}.png`, alt="")
-                          = item
+                          i.me-2(class=item.icon)
+                          //- img(src=`./images/menu-icon-${index + 1}.png`, alt="")
+                          = item.title
                         span.menu-toggle
-                        ul.menu.menu-sub(data-title=item)
+                        ul.menu.menu-sub(data-title=item.title)
                           each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
                             li.menu-item
                               a.menu-link(href="#!")= item2
