@@ -3,7 +3,7 @@
   border-radius: 4px;
   padding: 20px;
   height: 100%;
-  color: $text-gray-7;
+  color: var(--text-gray);
 
   &__title {
     font-size: 18px;
@@ -24,7 +24,7 @@
 }
 
 .sign-up-info {
-  color: $text-gray-5;
+  color: var(--text-color);
 
   &__title {
     font-size: 16px;
@@ -34,7 +34,7 @@
   }
 
   &__desc {
-    color: $text-gray-7;
+    color: var(--text-gray);
     margin-bottom: 16px;
   }
 
@@ -92,7 +92,7 @@
   }
 
   .form-label {
-    color: $text-gray-7;
+    color: var(--text-gray);
     font-weight: 600;
   }
 

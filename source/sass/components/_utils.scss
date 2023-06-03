@@ -30,22 +30,31 @@
   }
 
   .page-link {
-    color: $gray-800;
-    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    width: 32px;
+    height: 32px;
     border-radius: 4px;
     background: 0 !important;
     border-color: transparent !important;
+
+    &:hover {
+      background-color: rgba(#000, 0.06) !important;
+    }
   }
 
   .page-item.active .page-link {
-    background-color: $white !important;
-    border-color: $white !important;
-    color: var(--bs-primary) !important;
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
   }
 
   @media (max-width: 767px) {
     .page-link {
-      padding: 4px 10px;
+      width: 28px;
+      height: 28px;
     }
   }
 }

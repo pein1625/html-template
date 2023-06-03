@@ -256,6 +256,10 @@
     }
   }
 
+  &__slider {
+    display: none;
+  }
+
   .menu-product > .menu-item > .menu-link {
     & > img,
     & > svg {

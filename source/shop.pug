@@ -4,43 +4,26 @@ block content
   section.shop-banner
     img.shop-banner__bg(src="./images/shop-banner-bg.jpg", alt="")
     .container
-      .shop-banner__body
-        .row.g-4
-          .col-md-4
-            .row.g-12
+      .row.g-3
+        .col-auto
+          .shop-banner__frame
+            img(src="./images/shop.jpg", alt="")
+        .col-auto
+          .shop-banner__name Tên shop
+          .shop-banner__stars
+            .row.gx-2.gy-0
               .col-auto
-                .shop-banner__frame
-                  img(src="./images/shop.jpg", alt="")
-              .col
-                .shop-banner__name Tên shop
-                .shop-banner__location
-                  i.fal.fa-map-marker-alt.me-2
-                  | Thành phố Hà Nội
-                .shop-banner__stars
-                  i.fas.fa-star.me-1
-                  strong 4.9
-                  span /5
+                i.fas.fa-star.me-1
+                span 4.9
+                span /5
+              .col-lg.text-white 12345 người theo dõi
+        .col
+          .shop-banner__btn-wrap
+            a.btn.btn-primary.text-white.text-nowrap(href="#!") Theo dõi
+        .col-sm-auto.align-self-end
+          +search-shop
 
-          .col-md-8
-            table.w-100
-              tbody
-                tr
-                  td Đánh giá
-                  td.text-primary 2.000
-                  td Thời gian phản hồi
-                  td.text-primary Trong vài giờ
-                tr
-                  td Sản phẩm
-                  td.text-primary 123
-                  td Tham gia
-                  td.text-primary 1 năm trước
-                tr
-                  td Tỉ lệ phản hồi
-                  td.text-primary 95%
-                  td Người theo dõi
-                  td.text-primary 12345
-
-  section.section-3.section-3--light-blue.pb-30.pb-xl-50
+  section.pt-3.pb-3.pb-xl-40
     .container
       .banner-grid.row.g-3
         .banner-grid__col.col
@@ -53,98 +36,21 @@ block content
             .col-6.col-lg-12
               +card-slider-2
 
-  section.py-3
+  section.pb-4
     .container
-      .row.g-30
+      .row.g-3
         .col-lg-9.order-lg-1
-          section.section-2
-            h1.section-2__title Vật tư nông nghiệp
-            nav.pd-nav
-              .pd-nav__label Sắp xếp theo
-              select.form-select
-                option Phổ biến
-                option Mới nhất
-                option Bán chạy
-                option Giá cao tới thấp
-                option Giá thấp tới cao
-              .pd-nav__paging.ms-auto
-                span.text-primary 1
-                span /20
-              .pd-nav__prev
-                i.fal.fa-angle-left
-              .pd-nav__next
-                i.fal.fa-angle-right
+          section.section-6
+            .section-6__header
+              h1.section-6__title Vật tư nông nghiệp
+              +pd-nav
 
-            .row.g-2.g-sm-3.g-xl-30
-              - for(let i = 0; i < 9; i++)
-                .col-6.col-md-4
-                  +product
+            .product-grid
+              - for(let i = 0; i < 25; i++)
+                +product
 
-            nav.d-flex.mt-3
+            nav.d-flex.justify-content-center.mt-3
               +pagination
 
         .col-lg-3
-          section.aside.d-none.d-lg-block
-            nav.menu-nav.menu-nav--static
-              .menu-product-wrapper.w-100
-                .menu-nav__title.menu-nav__title--darker
-                  | Danh mục
-
-                ul.menu.menu-product
-                  each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
-                    li.menu-item.menu-item-group
-                      a.menu-link(href="#!")
-                        img(src=`./images/menu-icon-${index + 1}.png`, alt="")
-                        = item
-                      span.menu-toggle
-                      ul.menu.menu-sub(data-title=item)
-                        each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
-                          li.menu-item
-                            a.menu-link(href="#!")= item2
-
-          section.aside
-            h3.aside__title Khoảng giá
-
-            .row.g-2.align-items-center
-              .col
-                input.form-control.form-control-sm.js-number-input(type="text", placeholder="Từ")
-              .col-auto -
-              .col
-                input.form-control.form-control-sm.js-number-input(type="text", placeholder="Đến")
-              .col-auto
-                button.btn.btn-sm.btn-primary.text-white Áp dụng
-
-          section.aside
-            h3.aside__title Nơi bán
-            each item in ['Hà Nội','Hồ Chí Minh','Huế','Đà Nẵng','Yên Bái','Vũng Tàu','Quảng Ninh']
-              .mb-10.m-last-0
-                +checkbox
-                  span=item
-
-          section.aside
-            h3.aside__title Đánh giá
-            .d-flex.flex-column
-              label.star-select
-                input.js-star-rating-filter(type="checkbox")
-                span.star-select__bg
-                span.stars.stars--5
-              label.star-select
-                input.js-star-rating-filter(type="checkbox")
-                span.star-select__bg
-                span.stars.stars--4
-                span Từ 4 sao
-              label.star-select
-                input.js-star-rating-filter(type="checkbox")
-                span.star-select__bg
-                span.stars.stars--3
-                span Từ 3 sao
-              label.star-select
-                input.js-star-rating-filter(type="checkbox")
-                span.star-select__bg
-                span.stars.stars--2
-                span Từ 2 sao
-              label.star-select
-                input.js-star-rating-filter(type="checkbox")
-                span.star-select__bg
-                span.stars.stars--1
-                span Từ 1 sao
+          +pd-sidebar

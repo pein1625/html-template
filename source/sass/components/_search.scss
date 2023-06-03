@@ -24,7 +24,7 @@
 
   .input-group-text {
     background-color: $white;
-    color: $text-gray-5;
+    color: var(--text-color);
     border-color: $white !important;
   }
 
@@ -71,6 +71,45 @@
           text-decoration: underline;
         }
       }
+    }
+  }
+}
+
+.search-shop {
+  .form-control {
+    height: 36px;
+    border: 0;
+
+    &:focus {
+      box-shadow: unset;
+    }
+  }
+
+  .form-control:focus ~ .input-group-text {
+    border-color: $input-focus-border-color;
+  }
+
+  .input-group-text {
+    background-color: $white;
+    color: var(--text-color);
+    border-color: $white !important;
+  }
+
+  .input-group-text {
+    padding: 6px 12px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 290px;
+
+    .form-control {
+      height: 40px;
+      padding-left: 16px;
+    }
+
+    .input-group-text {
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 }

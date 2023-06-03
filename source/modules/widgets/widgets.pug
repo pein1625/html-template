@@ -34,3 +34,100 @@ mixin s-news
 
       .text-center.mt-30
         a.button(href="./news.html") Xem tất cả
+
+mixin pd-nav
+  nav.pd-nav
+    .pd-nav__list
+      a.pd-nav__item.active(href="#!") Phổ biến
+      a.pd-nav__item(href="#!") Bán chạy
+      a.pd-nav__item(href="#!") Hàng mới
+      a.pd-nav__item(href="#!") Giá cao tới thấp
+      a.pd-nav__item(href="#!") Giá thấp tới cao
+
+    button.pd-nav__filter.btn.btn-primary.btn-sm.js-open-sidebar.text-white.d-lg-none(type="button")
+      i.fal.fa-filter.me-2
+      | Filter
+
+    .pd-nav__paging.ms-auto
+      span.text-primary 1
+      span /20
+    .pd-nav__prev
+      i.fal.fa-angle-left
+    .pd-nav__next
+      i.fal.fa-angle-right
+
+mixin pd-sidebar
+  .sidebar.js-sidebar
+    .sidebar__backdrop.js-close-sidebar
+    .sidebar__content
+      .sidebar__header
+        button.sidebar__close.js-close-sidebar(type="button")
+          span Close
+          i.fal.fa-arrow-right.ms-2
+
+      section.aside
+        .aside__block.d-none.d-lg-block
+          h3.aside__title.aside__title--product Danh mục sản phẩm
+          nav.menu-nav.menu-nav--static
+            .menu-product-wrapper.w-100
+              .menu-nav__title.menu-nav__title--darker
+                | Danh mục
+
+              ul.menu.menu-product
+                each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
+                  li.menu-item.menu-item-group
+                    a.menu-link(href="#!")
+                      img(src=`./images/menu-icon-${index + 1}.png`, alt="")
+                      = item
+                    span.menu-toggle
+                    ul.menu.menu-sub(data-title=item)
+                      each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                        li.menu-item
+                          a.menu-link(href="#!")= item2
+
+        .aside__block
+          h3.aside__title Khoảng giá
+
+          .row.g-2.align-items-center
+            .col
+              input.form-control.form-control-sm.js-number-input(type="text", placeholder="Từ")
+            .col-auto -
+            .col
+              input.form-control.form-control-sm.js-number-input(type="text", placeholder="Đến")
+            .col-12.d-grid
+              button.btn.btn-sm.btn-primary.text-white Áp dụng
+
+        .aside__block
+          h3.aside__title Nơi bán
+          each item in ['Hà Nội','Hồ Chí Minh','Huế','Đà Nẵng','Yên Bái','Vũng Tàu','Quảng Ninh']
+            .mb-10.m-last-0
+              +checkbox
+                span=item
+
+        .aside__block
+          h3.aside__title Đánh giá
+          .d-flex.flex-column
+            label.star-select
+              input.js-star-rating-filter(type="checkbox")
+              span.star-select__bg
+              span.stars.stars--5
+            label.star-select
+              input.js-star-rating-filter(type="checkbox")
+              span.star-select__bg
+              span.stars.stars--4
+              span.ms-1 Từ 4 sao
+            label.star-select
+              input.js-star-rating-filter(type="checkbox")
+              span.star-select__bg
+              span.stars.stars--3
+              span.ms-1 Từ 3 sao
+            label.star-select
+              input.js-star-rating-filter(type="checkbox")
+              span.star-select__bg
+              span.stars.stars--2
+              span.ms-1 Từ 2 sao
+            label.star-select
+              input.js-star-rating-filter(type="checkbox")
+              span.star-select__bg
+              span.stars.stars--1
+              span.ms-1 Từ 1 sao

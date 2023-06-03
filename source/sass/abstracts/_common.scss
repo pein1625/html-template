@@ -1,5 +1,17 @@
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
 .text-info {
   color: var(--bs-info) !important;
+}
+
+.bg-info {
+  background-color: var(--bs-info) !important;
 }
 
 .page {
@@ -80,6 +92,11 @@
   @include media-breakpoint-up(xl) {
     .menu-nav__dropdown {
       display: block;
+    }
+
+    .menu-nav__slider {
+      display: block;
+      margin-top: 10px;
     }
   }
 }

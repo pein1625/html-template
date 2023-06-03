@@ -159,7 +159,6 @@ $(function() {
 $(function() {
   const $window = $(window);
   const $nav = $('.navigation');
-  const $footer = $('.footer');
 
   $window.on('scroll', function() {
     const vw = $window.width();
