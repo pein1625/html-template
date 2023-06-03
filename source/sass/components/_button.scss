@@ -7,7 +7,7 @@
   align-items: center;
   border: 0;
   background: 0;
-  color: $gray-800;
+  color: var(--bs-primary);
 
   &::before,
   &::after {

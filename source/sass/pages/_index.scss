@@ -1,3 +1,9 @@
+.home-container {
+  @include media-breakpoint-up(xl) {
+    margin-left: 252px;
+  }
+}
+
 .home-4-banner {
   display: grid;
   grid-template-columns: 236px calc(100% - 252px);
@@ -185,5 +191,23 @@
       font-size: 12px;
       padding: 12px 6px;
     }
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px 8px;
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

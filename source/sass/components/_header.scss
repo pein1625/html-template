@@ -11,10 +11,10 @@
 
   &__logo {
     display: inline-flex;
-    margin: 20px 0;
+    margin: 15px 0;
 
     img {
-      height: 40px;
+      height: 45px;
     }
   }
 
@@ -25,8 +25,19 @@
   }
 
   @include media-breakpoint-up(xl) {
+    &__inner {
+      padding: 24px 0;
+      align-items: flex-start;
+    }
+
+    &__elements {
+      align-items: flex-start;
+      flex: 1;
+      max-width: calc(100% - 252px);
+    }
+
     &__logo {
-      margin: 20px 0;
+      margin: 0 0 8px;
 
       img {
         height: 50px;
@@ -35,394 +46,62 @@
   }
 }
 
-.menu-nav {
-  border-top: 1px solid #ccc;
 
-  &__title {
-    padding: 10px 20px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background: var(--bs-primary);
-    color: $white;
-
-    &--darker {
-      background-color: #2B409A;
-    }
-  }
-
-  .menu-product > .menu-item > .menu-link {
-    & > img,
-    & > svg {
-      width: 18px;
-      height: 18px;
-      object-fit: contain;
-      object-position: 50% 50%;
-      margin-right: 8px;
-    }
-  }
-
-  @include media-breakpoint-up(xl) {
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-radius: 4px 4px 0;
-    border-top: 0;
-
-    &__title {
-      border-radius: 4px;
-    }
-
-    .menu-product-wrapper {
-      width: 236px;
-      position: relative;
-    }
-
-    .menu-product {
-      display: none;
-      width: 100%;
-      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
-      border-radius: 0px 0px 4px 4px;
-      background-color: $white;
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      padding: 6px 0;
-
-      &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 8px;
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-      }
-
-      .menu-item {
-        border: 0;
-        position: static;
-      }
-
-      .menu-toggle {
-        display: none;
-      }
-
-      .menu-link {
-        padding: 6px 30px 6px 16px;
-        position: relative;
-        font-size: 14px;
-        text-transform: unset;
-
-        &::after {
-          content: '\f105';
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 32px;
-          height: 32px;
-          font-family: 'Font Awesome 5 Pro';
-          font-size: 18px;
-          font-weight: 300;
-          color: var(--bs-primary);
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
-      }
-
-      .menu-sub {
-        display: none;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        align-content: flex-start;
-        min-height: 100%;
-        width: 600px;
-        padding: 50px 0 0;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 0px 0px 4px 4px;
-        background-color: $white;
-        position: absolute;
-        top: 0;
-        left: 100%;
-
-        &::before {
-          content: attr(data-title);
-          position: absolute;
-          top: 16px;
-          left: 20px;
-          font-size: 16px;
-          font-weight: 600;
-          color: #585858;
-        }
-
-        & > .menu-item {
-          flex: 0 0 50%;
-          padding: 0 8px;
-        }
-      }
-
-      .menu-item:hover > .menu-link {
-        // color: var(--bs-secondary);
-        background-color: rgba(40, 121, 254, 0.1);
-      }
-
-      .menu-item:hover > .menu-sub {
-        display: flex;
-      }
-    }
-
-    .menu-product-wrapper:hover > .menu-product {
-      display: block;
-    }
-
-    &--static {
-      z-index: 100;
-
-      .menu-nav__title {
-        border-radius: 4px 4px 0 0;
-      }
-
-      .menu-product {
-        display: block;
-        box-shadow: unset;
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-    }
-  }
-}
-
-.h-contact {
-  display: block;
-  color: #7B7B7B;
+.h-info {
+  display: flex;
   font-size: 12px;
-  line-height: 1.2;
+
+  &__item {
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
 
   &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    color: var(--bs-primary);
-    font-size: 14px;
-    border: 1px solid rgba(193, 62, 151, 0.3);
-    border-radius: 50%;
-  }
-
-  @include media-breakpoint-up(xl) {
-    font-size: 14px;
-    margin-right: 100px;
-
-    &__icon {
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
-    }
-  }
-}
-
-.toppage {
-  background-color: $white;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  padding: 10px 0;
-  border-bottom: 1px solid $border-color;
-  color: $text-gray-5;
-
-  &__inner {
-    display: flex;
-    align-items: center;
-  }
-
-
-  &__nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-
-    a {
-      color: $text-gray-5;
-
-      &:hover {
-        color: var(--bs-primary);
-        text-decoration: none;
-        opacity: 0.8;
-      }
-
-      &:not(:last-child) {
-        margin-right: 24px;
-      }
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    &__nav {
-      margin-left: 0;
-      flex-grow: 1;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 8px 0;
-  }
-
-  @include media-breakpoint-down(sm) {
-    &__nav {
-      a {
-        font-size: 11px;
-
-        &:not(:last-child) {
-          margin-right: 12px;
-        }
-      }
-    }
-  }
-}
-
-.navigation {
-  background-color: #2B409A;
-
-  &__inner {
-    display: block;
-    align-items: center;
-    position: relative;
-    z-index: 10;
-    padding: 8px 0;
-  }
-
-  @include media-breakpoint-up(xl) {
-    &__inner {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-  }
-}
-
-.h-info {
-  padding: 20px;
-  color: $text-gray-7;
-
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px dashed $border-color;
-    }
-  }
-
-  a {
-    color: inherit;
-
-    &:hover {
-      color: var(--bs-primary);
-    }
-  }
-
-  @include media-breakpoint-up(xl) {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    position: absolute;
-    top: -45px;
-    right: 0;
-    transform: translateY(-50%);
-
-    &__item {
-      &:not(:last-child) {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: 0;
-        margin-right: 60px;
-      }
-    }
-  }
-}
-
-.h-cart {
-  transform: translateY(-50%);
-  position: absolute;
-  z-index: 10;
-  top: -40px;
-  right: 60px;
-  color: $text-gray-5;
-  transition: 0.3s;
-
-  &:hover {
     color: var(--bs-primary);
   }
 
-  &__text {
+  &__content {
     display: none;
   }
 
-  &__number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-    color: $white;
-    line-height: 1;
-    background-color: $danger;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(#000, 0.16);
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-  }
-
   @include media-breakpoint-up(xl) {
-    display: flex;
-    align-items: center;
-    position: static;
-    background-color: var(--bs-primary);
-    border-radius: 4px;
-    width: 236px;
-    height: 40px;
-    color: $white;
-    padding: 10px 16px;
-    justify-content: space-between;
-    transform: unset;
+    min-height: 40px;
 
-    &:hover {
-      color: $white;
-      opacity: 0.9;
-    }
+    &__item {
+      display: flex;
+      align-items: center;
 
-    &__text {
-      display: inline-block;
-    }
-
-    &__number {
-      display: none;
-    }
-  }
-}
-
-.header--2 {
-  @include media-breakpoint-up(xl) {
-    .navigation {
-      &__inner {
-        padding-right: 200px;
+      &:not(:last-child) {
+        margin-right: 16px;
+        padding-right: 16px;
+        border-right: 1px solid $border-color;
       }
+    }
 
-      .navbar {
-        margin-left: -30px;
+    &__icon {
+      margin-right: 10px;
+    }
 
-        .menu-nav {
-          display: none;
-        }
-      }
+    &__content {
+      display: block;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    &__title {
+      font-weight: 400;
+      color: var(--bs-primary);
     }
   }
 }

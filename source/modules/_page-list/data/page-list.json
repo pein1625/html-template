@@ -6,18 +6,6 @@
         "url": "index"
       },
       {
-        "title": "Trang chủ 2",
-        "url": "index-2"
-      },
-      {
-        "title": "Trang chủ 3",
-        "url": "index-3"
-      },
-      {
-        "title": "Trang chủ 4 - NEW",
-        "url": "index-4"
-      },
-      {
         "title": "Sản phẩm",
         "url": "products"
       },
@@ -68,6 +56,10 @@
       {
         "title": "Đăng ký 4",
         "url": "sign-up-4"
+      },
+      {
+        "title": "Link design",
+        "url": "https://www.figma.com/file/XYCKVUCwRB8vrVmb6oYKGL/sanviet-full?type=design&node-id=616-12710&t=2BYQt7ylAtM4E7Y1-0"
       }
     ]
   }

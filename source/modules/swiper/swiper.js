@@ -46,7 +46,7 @@ $(function() {
     pagination: true,
     loop: true,
     slidesPerView: 2.5,
-    spaceBetween: 16,
+    spaceBetween: 8,
     speed: 400,
     breakpoints: {
       576: {
@@ -60,7 +60,6 @@ $(function() {
       },
       1200: {
         slidesPerView: 6,
-        spaceBetween: 30,
       }
     }
   });
@@ -72,7 +71,7 @@ $(function() {
     pagination: true,
     loop: true,
     slidesPerView: 2,
-    spaceBetween: 16,
+    spaceBetween: 8,
     speed: 400,
     breakpoints: {
       768: {
@@ -83,7 +82,6 @@ $(function() {
       },
       1200: {
         slidesPerView: 4,
-        spaceBetween: 20,
       }
     }
   });
@@ -92,7 +90,7 @@ $(function() {
 $(function() {
   addSwiper('.card-slider-2', {
     pagination: true,
-    spaceBetween: 16,
+    spaceBetween: 8,
     speed: 500,
     loop: true,
     slidesPerView: 1,
@@ -106,7 +104,7 @@ $(function() {
 $(function() {
   addSwiper('.card-slider-3', {
     pagination: true,
-    spaceBetween: 16,
+    spaceBetween: 8,
     speed: 500,
     loop: true,
     slidesPerView: 1,
@@ -134,7 +132,7 @@ $(function () {
     freeMode: true,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
-    spaceBetween: 10,
+    spaceBetween: 8,
   })[0];
 
   addSwiper(".preview-slider", {
@@ -150,31 +148,7 @@ $(function() {
   addSwiper('.product-slider', {
     pagination: true,
     navigation: true,
-    spaceBetween: 16,
-    slidesPerView: 2,
-    loop: true,
-    breakpoints: {
-      576: {
-        slidesPerView: 3
-      },
-      768: {
-        slidesPerView: 4
-      },
-      992: {
-        slidesPerView: 5
-      },
-      1200: {
-        slidesPerView: 6,
-      }
-    }
-  });
-});
-
-$(function() {
-  addSwiper('.product-slider-2', {
-    pagination: true,
-    navigation: true,
-    spaceBetween: 16,
+    spaceBetween: 8,
     slidesPerView: 2,
     loop: true,
     breakpoints: {

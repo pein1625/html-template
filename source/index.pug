@@ -1,29 +1,51 @@
 extends layout/page
 
+block define
+  - addBodyClass = 'home-page'
+
 block content
-  section.section-3
-    .container
-      .banner-grid.row.g-3
-        .banner-grid__col.col
-          .position-relative.h-100
-            +banner-slider('banner-slider--absolute', 1)
-        .banner-grid__col.col-auto
-          .row.g-12
-            .col-6.col-lg-12
-              +card-slider-2
-            .col-6.col-lg-12
-              +card-slider-2
+  .container.pt-3
+    .home-container
+      section.section-5.mb-4
+        .banner-grid.row.g-3
+          .banner-grid__col.col
+            .position-relative.h-100
+              +banner-slider('banner-slider--absolute', 1)
+          .banner-grid__col.col-auto
+            .row.g-12
+              .col-6.col-lg-12
+                +card-slider-2
+              .col-6.col-lg-12
+                +card-slider-2
 
-      .cat-grid.pt-30.pt-lg-50
-        each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Đặc sản vùng miền','Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp']
-          a.cat-grid__item(href="#!")
-            img(src=`./images/cat-icon-${index % 6 + 1}.png`, alt="")
-            span= item
+      section.section-5.section-5--box.section-5--gradient.mb-4
+        h2.section-5__title Sản phẩm tiêu biểu
+        +product-slider
 
-  section.section-3.pt-0
-    .container
-      +s-shop
+      section.section-5.section-5--box.section-5--brown.mb-4
+        h2.section-5__title Gian hàng tiêu biểu
+        +shop-slider
 
-  +s-other-products
-  +s-featured-products
-  +s-news
+      section.section-5.mb-4
+        h2.section-5__title Sản phẩm OCOP
+        +product-slider
+
+      section.section-5.mb-4
+        h2.section-5__title Sản phẩm công nghiệp nông thôn tiêu biểu
+        +product-slider
+
+      section.section-5.mb-4
+        +card-slider
+
+      section.section-5.mb-4
+        h2.section-5__title Sản phẩm khác
+        .product-grid
+          - for(let i = 0; i < 10; i++)
+            +product
+
+      section.section-5.mb-4
+        h2.section-5__title Tin tức mới
+        .row.g-3
+          - for(let i = 0; i < 4; i++)
+            .col-md-6
+              +news-4

@@ -95,20 +95,33 @@
 }
 
 .section-5 {
-  padding: 16px;
-  border-radius: 4px;
-  background-color: $white;
+  &--box {
+    border-radius: 4px;
+    padding: 10px;
+  }
 
-  & + & {
-    margin-top: 40px;
+  &--box &__title {
+    margin-bottom: 8px;
+  }
+
+  &--box .product-slider,
+  &--box .shop-slider {
+    &__prev,
+    &__next {
+      top: -36px;
+    }
   }
 
   &--gradient {
-    background: linear-gradient(to bottom, #9FD9FF, $white);
+    background: linear-gradient(to bottom, #CCDFB7, rgba(#CCDFB7, 0));
   }
 
   &--blue-light {
     background-color: #BEF4FF;
+  }
+
+  &--brown {
+    background-color: #FFECCA;
   }
 
   &__header {
@@ -122,8 +135,8 @@
   &__title {
     font-size: 20px;
     font-weight: 500;
-    color: var(--bs-primary);
-    margin-bottom: 0;
+    color: var(--text-color);
+    margin-bottom: 16px;
   }
 }
 

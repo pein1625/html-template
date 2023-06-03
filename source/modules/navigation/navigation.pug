@@ -1,0 +1,44 @@
+include ../menu/menu
+
+mixin navigation
+  nav.navigation
+    .navigation__wrapper
+      .container
+        .navigation__inner
+          +navbar
+            nav.menu-nav
+              .menu-product-wrapper
+                .menu-nav__title
+                  i.fal.fa-fw.fa-bars.me-2
+                  | Danh mục
+
+                .menu-nav__dropdown
+                  ul.menu.menu-product
+                    each item, index in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang nữ','Thời trang nam','Vật tư nông nghiệp','Thiết bị điện tử','Gia dụng – Đời sống','Siêu thị – Tạp hoá','Thời trang trẻ em','Sức khoẻ – Làm đẹp','Thể thao – Du lịch']
+                      li.menu-item.menu-item-group
+                        a.menu-link(href="#!")
+                          img(src=`./images/menu-icon-${index + 1}.png`, alt="")
+                          = item
+                        span.menu-toggle
+                        ul.menu.menu-sub(data-title=item)
+                          each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                            li.menu-item
+                              a.menu-link(href="#!")= item2
+
+                  .d-none.d-xl-block.mt-10.order-1
+                    +card-slider-3
+
+              ul.menu.menu-root
+                each item in ['Sản phẩm OCOP', 'Sản phẩm HOT', 'Sản phẩm khác']
+                    li.menu-item.menu-item-group
+                      a.menu-link(href="#!")= item
+                      span.menu-toggle
+                      ul.menu.menu-sub(data-title=item)
+                        each item2 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                          li.menu-item.menu-item-group
+                            a.menu-link(href="#!")= item2
+                            span.menu-toggle
+                            ul.menu.menu-sub.menu-sub-2(data-title=item2)
+                              each item3 in ['Sản phẩm OCOP','Đặc sản vùng miền','Thời trang – Phụ kiện nữ','Thời trang – Phụ kiện nam','Vật tư nông nghiệp']
+                                li.menu-item
+                                  a.menu-link(href="#!")= item3

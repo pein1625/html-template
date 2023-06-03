@@ -138,16 +138,4 @@ mixin product-slider
       .swiper-wrapper
         - for(let i = 0; i < 8; i++)
           .swiper-slide
-            +product-2
-
-mixin product-slider-2
-  .product-slider-2
-    .product-slider-2__prev
-      i.fal.fa-angle-left
-    .product-slider-2__next
-      i.fal.fa-angle-right
-    .product-slider-2__container.swiper-container
-      .swiper-wrapper
-        - for(let i = 0; i < 8; i++)
-          .swiper-slide
-            +product-2
+            +product

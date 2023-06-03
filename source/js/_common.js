@@ -155,3 +155,22 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  const $window = $(window);
+  const $nav = $('.navigation');
+  const $footer = $('.footer');
+
+  $window.on('scroll', function() {
+    const vw = $window.width();
+    const vh = $window.height();
+    const scrollTop = $window.scrollTop();
+    const clientHeight = document.body.clientHeight;
+
+    if (vw >= 1200 && scrollTop >= 114 && (scrollTop + vh) < clientHeight - 100) {
+      $nav.addClass('is-fixed');
+    } else {
+      $nav.removeClass('is-fixed');
+    }
+  });
+});

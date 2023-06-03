@@ -3,46 +3,17 @@ mixin product
   - count++
   .product
     a.product__frame(href="#!")
-      img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
-    span.product__label Sàn Việt
+      img(src=`./images/product-${count % 8 + 1}.png`, alt="")
     .product__body
       .product__brands
         img.product__brand.ocop(src="./images/brand-1.png", alt="")
         img.product__brand.spcnnttb(src="./images/brand-2.png", alt="")
       h3.product__title
         a(href="#!") Nón cỏ bàng thời trang cho nữ
-      .product__stars
-        span.stars.stars--5
-        span (23)
-      .row.justify-content-between.g-2
-        .col-auto
-          .product__price 70.000 ₫
-            span.product__discount -30%
-          .product__old-price 120.000đ
-        .col-auto
-          a.product__add-cart(href="#!")
-            i.fal.fa-fw.fa-lg.fa-shopping-cart
-
-mixin product-2
-  - count++
-  .product-2
-    a.product-2__frame(href="#!")
-      img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
-    .product-2__discount -30%
-    .product-2__body
-      .product-2__brands
-        img.product-2__brand.ocop(src="./images/brand-1.png", alt="")
-        img.product-2__brand.spcnnttb(src="./images/brand-2.png", alt="")
-      h3.product-2__title
-        a(href="#!") Nón cỏ bàng thời trang cho nữ
-      .product-2__stars
-        span.stars.stars--5
-        span (23)
-      .product-2__info
-        .product-2__price 70.000 ₫
-        .product-2__old-price 120.000đ
-      a.product-2__add-cart(href="#!")
-        i.fal.fa-fw.fa-lg.fa-shopping-cart
+      .product__stars 4.6 #[i.fas.fa-star] | (23)
+      .product__price 70.000 ₫
+        span.product__discount -30%
+      .product__old-price 120.000đ
 
 mixin news
   - count++
@@ -85,25 +56,15 @@ mixin news-3
 
 mixin news-4
   - count++
-  .news.news--4
-    .row.g-3.g-xl-20
-      .col-auto
-        a.news__frame(href="./news-detail.html")
-          img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
-      .col
-        h3.news__title.fw-700.mt-0
-          a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
-        .news__time
-          i.fal.fa-clock.me-2.text-primary
-          | 03/07/2022
-
-mixin news-5
-  - count++
-  .news.news--5
-    a.news__frame(href="./news-detail.html")
-      img(src=`./images/news-${count % 3 + 1}.jpg`, alt="")
-    h3.news__title
-      a(href="./news-detail.html") Worem ipsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+  .news-4
+    a.news-4__frame(href="#!")
+      img(src=`./images/news-${count % 4 + 1}.png`, alt="")
+    .news-4__body
+      h3.news-4__title
+        a(href="#!") Upsum dolor sit amet, conectetur adipiscing elit sit amet conectetur.
+      .news-4__time
+        i.fal.fa-clock.me-2.text-primary
+        | 03/07/2022
 
 mixin card(img='', url='', addClass='')
   - count++

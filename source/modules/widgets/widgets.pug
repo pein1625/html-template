@@ -1,17 +1,3 @@
-mixin s-shop(home = 1)
-  section.s-shop
-    if (home === 1)
-      img.s-shop__texture-1(src="./images/texture-1.png", alt="")
-      img.s-shop__texture-2(src="./images/texture-2.png", alt="")
-      img.s-shop__texture-3(src="./images/texture-3.png", alt="")
-      img.s-shop__texture-4(src="./images/texture-4.png", alt="")
-      img.s-shop__texture-5(src="./images/texture-1.png", alt="")
-    h2.s-shop__title
-      | Gian hàng tiêu biểu
-      if (home === 4)
-        img(src="./images/3_stars.svg", alt="")
-    +shop-slider
-
 mixin s-other-products
   section.section-3.section-3--light-blue
     .container

@@ -49,36 +49,3 @@
     }
   }
 }
-
-.search {
-  .form-control {
-    border: 0;
-    height: 38px;
-
-    &:focus {
-      box-shadow: unset;
-    }
-  }
-
-  .form-control:focus ~ .input-group-text {
-    border-color: $input-focus-border-color;
-  }
-
-  .input-group-text {
-    background-color: $white;
-    color: $text-gray-5;
-    border-color: $white !important;
-  }
-
-  .input-group-text {
-    padding: 6px 12px;
-  }
-
-  @media (min-width: 1200px) {
-    flex: 1;
-
-    .form-control {
-      height: 40px;
-    }
-  }
-}

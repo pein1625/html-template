@@ -1,0 +1,36 @@
+.navigation {
+  background-color: var(--bs-primary);
+
+  &__wrapper {
+    transition: 0.2s;
+  }
+
+  &__inner {
+    display: block;
+    height: 44px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 40px;
+    background-color: $white;
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      gap: 30px;
+      background-color: var(--bs-primary);
+      border-radius: 4px 4px 0 0;
+    }
+
+    &.is-fixed &__wrapper {
+      width: 100%;
+      background-color: var(--bs-primary);
+      box-shadow: 0 1px 2px rgba(#000, 0.16);
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      left: 0;
+    }
+  }
+}

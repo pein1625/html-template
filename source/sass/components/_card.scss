@@ -107,8 +107,56 @@
   }
 }
 
+.news-4 {
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: $white;
+
+  &__frame {
+    @include frame('rect', 66.66%);
+    @include frame('zoom');
+    width: 190px;
+  }
+
+  &__body {
+    flex: 1;
+    padding: 10px;
+  }
+
+  &__title {
+    @include max-line(2);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    max-height: 2.4em;
+    margin-bottom: 0;
+
+    a {
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--bs-primary);
+      }
+    }
+  }
+
+  &__time {
+    font-size: 12px;
+    color: var(--text-gray);
+    margin-top: 8px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__frame {
+      width: 160px;
+    }
+  }
+}
+
 .card {
   @include frame('rect', 43%);
+  border: 0;
   border-radius: 4px;
 
   &--square {
@@ -179,6 +227,8 @@
   color: $text-gray-5;
   border-radius: 2px;
   position: relative;
+  border-radius: 4px;
+  overflow: hidden;
 
   &:only-child {
     height: 100%;
@@ -208,7 +258,7 @@
   &__body {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 16px 10px;
     flex-grow: 1;
     position: relative;
     z-index: 10;
@@ -218,7 +268,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 19px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     a {
       color: inherit;
@@ -233,7 +283,11 @@
     font-size: 12px;
     color: $text-gray-8;
     margin-top: auto;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
+
+    i {
+      color: #ffc120;
+    }
   }
 
   &__price {

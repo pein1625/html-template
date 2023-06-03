@@ -1,17 +1,16 @@
 body {
+  --bs-primary: #6BB13E;
+  --bs-light-primary: #E7F2DF;
+  --bs-secondary: #5FA535;
+  --text-color: #585858;
+  --text-gray: #7B7B7B;
+  --body-background: #F5F5F5;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #F5F5F5;
-
-  --bs-primary: #2879FE;
-  --bs-secondary: #2B409A;
-
-  &.home-4 {
-    --bs-primary: #029BFC;
-    --bs-secondary: #0C6BAB;
-    --bs-info: #1BDECB;
-  }
+  background-color: var(--body-background);
+  color: var(--text-color);
 }
 
 img {
