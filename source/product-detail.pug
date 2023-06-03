@@ -4,64 +4,72 @@ block content
   section.pt-3.pb-40
     .container
       section.section-4.mt-3
-        .row.g-4
-          .col-lg-5.col-xl-6
+        .row.g-0
+          .col-lg-6.section-4__block
             +preview
+          .col-lg-6.section-4__block
+            .section-4__grid
+              .section-4__col
+                section.product-detail
+                  h1.product-detail__title Trà thảo mộc kê quan hoa
 
-          .col-lg
-            section.product-detail
-              h1.product-detail__title Trà thảo mộc kê quan hoa
-              .product-detail__price 160.000 ₫
-              .product-detail__old-price 120.000đ
-              .product-detail__location Nơi bán:
-                span.ms-3
-                  i.fal.fa-map-marker-alt.me-2
-                  | Thành phố Hà Nội
-              .product-detail__stars
-                span.stars.stars--5
-                span (23)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;(23) đã bán
+                  .product-detail__stars
+                    span.stars.stars--5
+                    span (23)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;(23) đã bán
 
-              .d-flex.align-items-center.mb-3
-                span.me-3 Số lượng
-                +quantity('quantity--lg quantity--square')
-              .d-grid
-                a.btn.btn-primary.text-white.py-12(href="#!") Mua hàng
+                  .product-detail__price-wrapper
+                    .product-detail__price 160.000 ₫
+                    .product-detail__old-price 120.000đ
 
-          .col-lg
-            .shop
-              .row.g-2
-                .col-auto
-                  a.shop__frame(href="./shop.html")
-                    img(src="./images/shop.jpg", alt="")
-                .col
-                  .shop__name Tên Shop
-                  .shop__location
-                    i.fal.fa-map-marker-alt.me-2
-                    | Thành phố Hà Nội
-                  a.shop__btn(href="./shop.html") Xem shop
-              .shop__body
-                table
-                  tbody
-                    tr
-                      td Đánh giá
-                      td 2.000
-                    tr
-                      td Sản phẩm
-                      td 123
-                    tr
-                      td Tỉ lệ phản hồi
-                      td 95%
-                    tr
-                      td Thời gian phản hồi
-                      td Trong vài giờ
-                    tr
-                      td Tham gia
-                      td 1 năm trước
-                    tr
-                      td Người theo dõi
-                      td 12345
+                  .d-flex.align-items-center.mb-3
+                    span.me-3 Số lượng
+                    +quantity('quantity--lg quantity--square')
+                  .d-grid
+                    a.btn.btn-primary.text-white.py-10(href="#!") Mua hàng
 
-      section.section-4.mt-3
+              .col-lg
+                .shop
+                  .row.g-2
+                    .col-auto
+                      a.shop__frame(href="./shop.html")
+                        img(src="./images/shop.jpg", alt="")
+                    .col
+                      .shop__name Tên Shop
+                      .shop__location
+                        i.fal.fa-map-marker-alt.me-2
+                        | Thành phố Hà Nội
+
+                  .row.g-2.mt-2
+                    .col-6.d-grid
+                      a.shop__btn(href="./shop.html") Xem shop
+                    .col-6.d-grid
+                      a.shop__btn(href="./shop.html")
+                        i.fal.fa-plus.me-2
+                        | Theo dõi
+
+                  .shop__body
+                    table
+                      tbody
+                        tr
+                          td Đánh giá
+                          td 2.000
+                        tr
+                          td Sản phẩm
+                          td 123
+                        tr
+                          td Tỉ lệ phản hồi
+                          td 95%
+                        tr
+                          td Thời gian phản hồi
+                          td Trong vài giờ
+                        tr
+                          td Tham gia
+                          td 1 năm trước
+                        tr
+                          td Người theo dõi
+                          td 12345
+
+      section.section-4.p-3.p-lg-4.mt-3
         ul.nav.pd-tabs
           li.nav-item
             a.nav-link.active(href='#pd-tab-1', data-bs-toggle='tab') Mô tả
@@ -111,7 +119,7 @@ block content
                     td.pb-2.pe-3 Chất liệu:
                     td.pb-2.pe-3 TPU
 
-      section.section-4.mt-3.pb-0
+      section.section-4.p-3.p-lg-4.mt-3.pb-0
         h2.section-4__title Đánh giá sản phẩm
 
         .row.g-4
@@ -156,10 +164,9 @@ block content
         nav.d-flex.border-top.py-2.mt-20
           +pagination
 
-      section.section-2.pb-0.mt-40
-        h2.section-2__title.text-secondary.mb-20 Gợi ý cho bạn
+      section.section-5.pb-0.mt-40
+        h2.section-5__title.text-secondary Sản phẩm khác
 
-        .row.g-2.g-sm-20
-          - for(let i = 0; i < 8; i++)
-            .col-6.col-lg-3
-              +product
+        .product-grid.product-grid--2
+          - for(let i = 0; i < 12; i++)
+            +product

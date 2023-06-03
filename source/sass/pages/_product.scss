@@ -242,7 +242,7 @@
   color: var(--text-color);
 
   &__title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     margin-bottom: 8px;
   }
@@ -252,6 +252,13 @@
     flex-wrap: wrap;
     align-items: center;
     color: var(--text-gray);
+    margin-bottom: 16px;
+  }
+
+  &__price-wrapper {
+    background-color: var(--bs-light-primary);
+    padding: 4px 10px;
+    border-radius: 4px;
     margin-bottom: 20px;
   }
 
@@ -266,12 +273,6 @@
     text-decoration: line-through;
     color: var(--text-gray);
     font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  &__location {
-    color: var(--text-gray);
-    margin-bottom: 4px;
   }
 
   &__btn {
@@ -283,13 +284,9 @@
 }
 
 .shop {
-  padding: 16px;
-  // border: 1px solid rgba(193, 62, 151, 0.2);
-  border-left: 1px solid $border-color;
+  padding: 10px;
+  border: 1px solid $border-color;
   border-radius: 4px;
-  margin: -24px -24px -24px 0;
-  background-color: #F7FAFF;
-  height: calc(100% + 48px);
 
   &__frame {
     @include frame('square');
@@ -297,9 +294,9 @@
   }
 
   &__body {
+    border-top: 1px solid $border-color;
     padding-top: 12px;
     margin-top: 16px;
-    // border-top: 1px solid $border-color;
   }
 
   &__name {
@@ -314,9 +311,11 @@
   }
 
   &__btn {
-    display: inline-block;
-    font-size: 14px;
-    padding: 4px 16px;
+    display: block;
+    font-size: 13px;
+    padding: 4px 8px;
+    text-align: center;
+    white-space: nowrap;
     border: 1px solid var(--bs-primary);
     border-radius: 4px;
     color: var(--bs-primary);
@@ -330,14 +329,16 @@
 
   table {
     width: 100%;
-    color: #7B7B7B;
+    color: var(--text-gray);
+    font-size: 12px;
 
     td {
       padding: 4px 1px;
 
       &:nth-child(2) {
-        padding-left: 16px;
-        color: var(--bs-primary);
+        padding-left: 10px;
+        font-weight: 500;
+        color: var(--text-color);
       }
     }
   }

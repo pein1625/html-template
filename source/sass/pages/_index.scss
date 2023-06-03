@@ -199,6 +199,12 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 16px 8px;
 
+  &--2 {
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
   @include media-breakpoint-down(xl) {
     grid-template-columns: repeat(4, 1fr);
   }
