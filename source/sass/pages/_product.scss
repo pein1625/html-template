@@ -115,7 +115,7 @@
 .rating {
   &__point {
     font-size: 24px;
-    color: $danger;
+    color: var(--bs-danger);
     line-height: 1.2;
     color: #A4A4A4;
     margin: 12px 0 4px;

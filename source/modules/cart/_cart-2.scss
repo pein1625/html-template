@@ -22,11 +22,11 @@
   &__price {
     white-space: nowrap;
     text-transform: uppercase;
-    color: $danger;
+    color: var(--bs-danger);
   }
 
   &__delete {
-    color: #666;
+    color: var(--text-gray);
   }
 
   &__footer {

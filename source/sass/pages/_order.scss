@@ -30,7 +30,7 @@
     color: inherit;
 
     &:hover {
-      color: $danger;
+      color: var(--bs-danger);
     }
   }
 
