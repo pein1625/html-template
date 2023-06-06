@@ -72,7 +72,7 @@
     white-space: nowrap;
     font-size: 14px;
     font-weight: 700;
-    color: $danger;
+    color: var(--bs-danger);
   }
 
   &__extend {
@@ -141,7 +141,7 @@
   &__price {
     font-size: 14px;
     font-weight: 700;
-    color: $danger;
+    color: var(--bs-danger);
     text-align: right;
   }
 }

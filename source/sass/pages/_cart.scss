@@ -1,5 +1,5 @@
 .cart {
-  color: $text-gray-5;
+  color: var(--text-color);
 
   &__group {
     background-color: $white;
@@ -30,7 +30,7 @@
     color: inherit;
 
     &:hover {
-      color: $danger;
+      color: var(--bs-danger);
     }
   }
 

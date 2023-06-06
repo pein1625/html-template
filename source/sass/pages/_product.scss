@@ -29,7 +29,7 @@
     line-height: 30px;
     padding-bottom: 8px;
     position: relative;
-    color: #585858;
+    color: var(--text-color);
     border-bottom: 2px solid transparent;
 
     &:hover {
@@ -113,7 +113,7 @@
 .rating {
   &__point {
     font-size: 24px;
-    color: $danger;
+    color: var(--bs-danger);
     line-height: 1.2;
     color: #A4A4A4;
     margin: 12px 0 4px;
@@ -121,7 +121,7 @@
     strong {
       font-size: 1.5em;
       font-weight: 600;
-      color: #7B7B7B;
+      color: var(--text-gray);
     }
   }
 
@@ -203,7 +203,7 @@
 .star-select {
   display: flex;
   align-items: center;
-  color: $text-gray-8;
+  color: var(--text-gray);
   font-size: 12px;
   padding: 4px 12px;
   position: relative;
@@ -235,7 +235,7 @@
 }
 
 .product-detail {
-  color: $text-gray-5;
+  color: var(--text-color);
 
   &__title {
     font-size: 20px;
@@ -247,7 +247,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    color: $text-gray-7;
+    color: var(--text-gray);
     margin-bottom: 20px;
   }
 
@@ -260,13 +260,13 @@
 
   &__old-price {
     text-decoration: line-through;
-    color: $text-gray-7;
+    color: var(--text-gray);
     font-size: 16px;
     margin-bottom: 20px;
   }
 
   &__location {
-    color: $text-gray-7;
+    color: var(--text-gray);
     margin-bottom: 4px;
   }
 
@@ -306,7 +306,7 @@
 
   &__location {
     margin-bottom: 8px;
-    color: #7B7B7B;
+    color: var(--text-gray);
   }
 
   &__btn {
@@ -326,7 +326,7 @@
 
   table {
     width: 100%;
-    color: #7B7B7B;
+    color: var(--text-gray);
 
     td {
       padding: 4px 1px;
@@ -384,7 +384,7 @@
 
   &__location {
     margin-bottom: 8px;
-    color: #7B7B7B;
+    color: var(--text-gray);
   }
 
   &__stars {
@@ -457,7 +457,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 30px;
-    color: $text-gray-5;
+    color: var(--text-color);
     padding: 0 0 8px;
 
     &:hover {

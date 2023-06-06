@@ -3,15 +3,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #F5F5F5;
-
-  --bs-primary: #2879FE;
-  --bs-secondary: #2B409A;
-
-  &.home-4 {
-    --bs-primary: #029BFC;
-    --bs-secondary: #0C6BAB;
-    --bs-info: #1BDECB;
-  }
 }
 
 img {

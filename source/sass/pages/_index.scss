@@ -143,8 +143,8 @@
   &__item {
     display: block;
     color: var(--bs-primary);
-    background: #E0F2FF;
-    border: 1px solid #A5D9FF;
+    background: var(--bs-light-primary);
+    border: 1px solid var(--bs-primary);
     border-radius: 4px;
     padding: 20px 8px;
     font-size: 14px;

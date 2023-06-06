@@ -1,7 +1,7 @@
 .footer {
   background-color: $white;
   padding: 35px 0 20px;
-  color: $text-gray-7;
+  color: var(--text-gray);
   font-size: 12px;
 
   &__grid {

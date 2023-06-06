@@ -44,11 +44,11 @@
     line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    background: var(--bs-primary);
+    background: var(--bs-secondary);
     color: $white;
 
     &--darker {
-      background-color: #2B409A;
+      background-color: var(--bs-secondary);
     }
   }
 
@@ -154,7 +154,7 @@
           left: 20px;
           font-size: 16px;
           font-weight: 600;
-          color: #585858;
+          color: var(--text-color);
         }
 
         & > .menu-item {
@@ -164,8 +164,7 @@
       }
 
       .menu-item:hover > .menu-link {
-        // color: var(--bs-secondary);
-        background-color: rgba(40, 121, 254, 0.1);
+        background-color: var(--bs-light-primary);
       }
 
       .menu-item:hover > .menu-sub {
@@ -197,7 +196,7 @@
 
 .h-contact {
   display: block;
-  color: #7B7B7B;
+  color: var(--text-gray);
   font-size: 12px;
   line-height: 1.2;
 
@@ -232,7 +231,7 @@
   line-height: 20px;
   padding: 10px 0;
   border-bottom: 1px solid $border-color;
-  color: $text-gray-5;
+  color: var(--text-color);
 
   &__inner {
     display: flex;
@@ -246,7 +245,7 @@
     margin-left: auto;
 
     a {
-      color: $text-gray-5;
+      color: var(--text-color);
 
       &:hover {
         color: var(--bs-primary);
@@ -287,7 +286,7 @@
 }
 
 .navigation {
-  background-color: #2B409A;
+  background-color: var(--bs-primary);
 
   &__inner {
     display: block;
@@ -308,7 +307,7 @@
 
 .h-info {
   padding: 20px;
-  color: $text-gray-7;
+  color: var(--text-gray);
 
   &__item {
     &:not(:last-child) {
@@ -352,7 +351,7 @@
   z-index: 10;
   top: -40px;
   right: 60px;
-  color: $text-gray-5;
+  color: var(--text-color);
   transition: 0.3s;
 
   &:hover {
@@ -372,7 +371,7 @@
     font-size: 10px;
     color: $white;
     line-height: 1;
-    background-color: $danger;
+    background-color: var(--bs-danger);
     border-radius: 50%;
     box-shadow: 0 1px 2px rgba(#000, 0.16);
     position: absolute;
@@ -385,7 +384,7 @@
     display: flex;
     align-items: center;
     position: static;
-    background-color: var(--bs-primary);
+    background-color: var(--bs-secondary);
     border-radius: 4px;
     width: 236px;
     height: 40px;

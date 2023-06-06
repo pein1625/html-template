@@ -1,0 +1,22 @@
+:root {
+  --text-color: #585858;
+  --text-gray: var(--text-gray);
+  --bs-primary: #7da52c;
+  --bs-light-primary: #f2f6eb;
+  --bs-dark-primary: #7da52c;
+  --bs-secondary: #ff9900;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+
+  --bs-gradient-1: linear-gradient(33.39deg, #7da52c 33.03%, #f2f6eb 109.88%);
+}
+
+body.home-4 {
+  --bs-primary: #029BFC;
+  --bs-secondary: #0C6BAB;
+  --bs-info: #1BDECB;
+}
