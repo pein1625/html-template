@@ -160,12 +160,15 @@ $(function() {
 $(function() {
   const $window = $(window);
   const $nav = $('.navigation');
+  const $body = $('body');
 
   $window.on('scroll', function() {
     const vw = $window.width();
     const vh = $window.height();
     const scrollTop = $window.scrollTop();
     const clientHeight = document.body.clientHeight;
+
+    if ($body.hasClass('home-page-4')) return;
 
     if (vw >= 1200 && scrollTop >= 114 && (scrollTop + vh) < clientHeight - 100) {
       $nav.addClass('is-fixed');

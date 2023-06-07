@@ -100,3 +100,11 @@
     }
   }
 }
+
+.home-page-4 {
+  @include media-breakpoint-up(xl) {
+    .menu-nav__slider {
+      display: none;
+    }
+  }
+}

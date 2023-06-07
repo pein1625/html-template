@@ -128,13 +128,25 @@ mixin partner-slider
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
 
-mixin product-slider
-  .product-slider
+mixin product-slider(addClass='')
+  .product-slider(class=addClass)
     .product-slider__prev
       i.fal.fa-angle-left
     .product-slider__next
       i.fal.fa-angle-right
     .product-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +product
+
+mixin product-slider-2
+  .product-slider-2
+    .product-slider-2__prev
+      i.fal.fa-angle-left
+    .product-slider-2__next
+      i.fal.fa-angle-right
+    .product-slider-2__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 8; i++)
           .swiper-slide

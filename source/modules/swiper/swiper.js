@@ -164,3 +164,27 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  addSwiper('.product-slider-2', {
+    pagination: true,
+    navigation: true,
+    spaceBetween: 8,
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 5
+      },
+      1200: {
+        slidesPerView: 6,
+      }
+    }
+  });
+});
