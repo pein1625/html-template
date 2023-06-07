@@ -142,15 +142,15 @@
   }
 
   &--gradient {
-    background: linear-gradient(to bottom, #CCDFB7, rgba(#CCDFB7, 0));
+    background: var(--bs-gradient-2);
   }
 
   &--blue-light {
-    background-color: #BEF4FF;
+    background-color: var(--light-blue);
   }
 
   &--brown {
-    background-color: #FFECCA;
+    background-color: var(--light-brown);
   }
 
   &__header {

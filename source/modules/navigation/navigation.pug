@@ -1,11 +1,11 @@
 include ../menu/menu
 
-mixin navigation
+mixin navigation(logo)
   nav.navigation
     .navigation__wrapper
       .container
         .navigation__inner
-          +navbar
+          +navbar(logo)
             nav.menu-nav
               .menu-product-wrapper
                 .menu-nav__title

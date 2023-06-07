@@ -1,0 +1,40 @@
+include ../top-page/top-page
+include ../navbar/navbar
+include ../navigation/navigation
+include ../menu/menu
+include ../search/search
+
+mixin h-info-4
+  .h-info-4
+    a.h-info-4__item(href="#!")
+      .h-info-4__icon
+        i.fal.fa-fw.fa-shopping-cart
+      .h-info-4__content
+        .h-info-4__title Giỏ hàng
+        div (0) Sản phẩm
+
+    a.h-info-4__item(href="#!")
+      .h-info-4__icon
+        i.fal.fa-fw.fa-user-plus
+      .h-info-4__content
+        .h-info-4__title Kênh người bán
+        div Đăng ký tại đây
+
+mixin header-4
+  header.header
+    +top-page
+
+    .header__wrapper
+      .container
+        .header__inner
+          a.header__logo(href="./index.html")
+            img(src="./images/logo-4.svg", alt="")
+
+          .header__elements
+            +search
+
+            +h-info-4
+
+            button.btn-toggle.d-xl-none.js-navbar-toggle.ms-12(type="button")
+
+    +navigation('./images/logo-4.svg')

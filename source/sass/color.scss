@@ -11,5 +11,17 @@
   --text-color: #585858;
   --text-gray: #7B7B7B;
   --body-background: #F5F5F5;
+
+  --light-blue: #BEF4FF;
+  --light-brown: #FFECCA;
+
   --bs-gradient-1: linear-gradient(33.39deg, #7da52c 33.03%, #f2f6eb 109.88%);
+  --bs-gradient-2: linear-gradient(to bottom,#ccdfb7,rgba(204,223,183,0));
+}
+
+.home-page-4 {
+  --bs-primary: #0c6bab;
+  --bs-light-primary: #BEF4FF;
+  --bs-gradient-1: linear-gradient(33.39deg, #2B409A 33.03%, #5BC0F9 109.88%);
+  --bs-gradient-2: linear-gradient(to bottom, #9FD9FF, #FFFFFF);
 }

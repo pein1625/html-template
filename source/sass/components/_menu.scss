@@ -200,7 +200,7 @@
     }
 
     &-root &-sub &-item:hover > &-link {
-      background-color: rgba(40, 121, 254, 0.1);;
+      background-color: var(--bs-light-primary);
     }
 
     &-root > &-item > &-link {

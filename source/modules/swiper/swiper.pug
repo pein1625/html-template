@@ -151,3 +151,15 @@ mixin product-slider-2
         - for(let i = 0; i < 8; i++)
           .swiper-slide
             +product
+
+mixin product-slider-3(addClass='')
+  .product-slider-3(class=addClass)
+    .product-slider-3__prev
+      i.fal.fa-angle-left
+    .product-slider-3__next
+      i.fal.fa-angle-right
+    .product-slider-3__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 8; i++)
+          .swiper-slide
+            +product
