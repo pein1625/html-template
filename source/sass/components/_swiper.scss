@@ -525,3 +525,42 @@
     right: 38px;
   }
 }
+
+.product-slider-3 {
+  @include slider-nav-4;
+  position: relative;
+  z-index: 1;
+
+  &__prev,
+  &__next {
+    border-radius: 4px;
+    background-color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    color: $white;
+    width: 28px;
+    position: absolute;
+    top: -64px;
+    right: 0;
+
+    &:hover {
+      color: var(--bs-primary);
+      background-color: $white;
+    }
+  }
+
+  &__prev {
+    right: 38px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__prev,
+    &__next {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__prev {
+      right: 36px;
+    }
+  }
+}

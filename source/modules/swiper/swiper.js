@@ -190,3 +190,24 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  addSwiper('.product-slider-3', {
+    pagination: true,
+    navigation: true,
+    spaceBetween: 16,
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 5
+      },
+    }
+  });
+});

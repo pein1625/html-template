@@ -17,10 +17,11 @@ mixin s-other-products
     .container
       h2.section-3__title
         span Sản phẩm từ sàn khác
-      .row.g-2.g-sm-20
-        - for(let i = 0; i < 4; i++)
-          .col-6.col-lg-3
-            +product
+      +product-slider-3
+      //- .row.g-2.g-sm-20
+      //-   - for(let i = 0; i < 4; i++)
+      //-     .col-6.col-lg-3
+      //-       +product
 
 mixin s-featured-products
   section.section-3

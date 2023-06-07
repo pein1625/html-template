@@ -28,7 +28,7 @@ mixin product-2
   .product-2
     a.product-2__frame(href="#!")
       img(src=`./images/product-${count % 4 + 1}.jpg`, alt="")
-    .product-2__discount -30%
+    span.product__label Sàn Việt
     .product-2__body
       .product-2__brands
         img.product-2__brand.ocop(src="./images/brand-1.png", alt="")
@@ -39,7 +39,9 @@ mixin product-2
         span.stars.stars--5
         span (23)
       .product-2__info
-        .product-2__price 70.000 ₫
+        .product-2__price
+          span 70.000 ₫
+          span.product-2__discount -30%
         .product-2__old-price 120.000đ
       a.product-2__add-cart(href="#!")
         i.fal.fa-fw.fa-lg.fa-shopping-cart
