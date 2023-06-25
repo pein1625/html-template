@@ -1,7 +1,7 @@
-const GAME_CONTROL = {
-}
-
+// game control
+const GAME_CONTROL = {};
 
 GAME_CONTROL.showResult = () => {
-  showModal('.md-game-result');
-}
+  showModal(".md-game-result");
+};
+// end game control
