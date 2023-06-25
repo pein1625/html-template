@@ -196,7 +196,7 @@ function reIndexing() {
 }
 
 function isSlideAble(index) {
-  const sideBySide = getSideBySide(PUZZLE.lastSelected);
+  const sideBySide = getAvailableCells(PUZZLE.lastSelected);
 
   return PUZZLE.lastSelected >= 0 && sideBySide.includes(index);
 }
@@ -209,15 +209,15 @@ function getZeroIndex() {
   return 0;
 }
 
-function getSideBySide(index) {
-  const items = [];
+function getAvailableCells(index) {
+  // const items = [];
 
-  if (index - 3 >= 0) items.push(index - 3);
-  if (index % 3 > 0) items.push(index - 1);
-  if (index % 3 < 2) items.push(index + 1);
-  if (index + 3 < 12) items.push(index + 3);
+  // if (index - 3 >= 0) items.push(index - 3);
+  // if (index % 3 > 0) items.push(index - 1);
+  // if (index % 3 < 2) items.push(index + 1);
+  // if (index + 3 < 12) items.push(index + 3);
 
-  return items.filter((index) => index !== 0 && index !== 1 && index !== 2);
+  return [3,4,5,6,7,8,9,10,11].filter((id) => id !== 0 && id !== 1 && id !== 2 && id !== index);
 }
 
 function puzzleCheckResult() {
@@ -243,9 +243,9 @@ function shuffle() {
 function randomMove() {
   const selected = Math.floor(Math.random() * 9) + 3;
 
-  const sideBySide = getSideBySide(selected);
+  const available = getAvailableCells(selected);
 
-  const randomSide = sideBySide[Math.floor(Math.random() * sideBySide.length)];
+  const randomSide = available[Math.floor(Math.random() * available.length)];
 
   const tmp = PUZZLE.arr[selected];
 

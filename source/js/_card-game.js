@@ -8,6 +8,6 @@ $(function () {
 });
 
 function cardGameLoading() {
-  showModal(".md-card-game-intro");
+  window.location.href = '/game/find-card';
 }
 // end card game
