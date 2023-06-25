@@ -11,6 +11,7 @@ const PUZZLE = {
   result: "",
   el: null,
   timeEl: null,
+  lastSelected: -1,
 };
 
 const classesToRemove = PUZZLE.arr.reduce((carry, item, index) => {
@@ -54,22 +55,24 @@ async function puzzleLoading() {
   } catch (error) {
     $(".js-puzzle-error").find(".modal-desc").text(error.message);
 
-    showModal('.md-puzzle-error');
+    showModal(".md-puzzle-error");
   }
 }
 
 function puzzleReset() {
-  PUZZLE.arr = [0,1,2,3,4,5,6,7,8,9,10,11];
+  PUZZLE.arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   PUZZLE.time = 0;
   PUZZLE.interval = null;
   PUZZLE.isCompleted = false;
 
-  const cellImages = [,,,...PUZZLE.images];
+  const cellImages = [, , , ...PUZZLE.images];
 
-  PUZZLE.el.find('.cell').each(function(index, el) {
+  PUZZLE.el.find(".cell").each(function (index, el) {
     if (!cellImages[index]) return;
 
-    $(el).empty().append(`<img class="cell-img" src="${cellImages[index]}" alt="">`);
+    $(el)
+      .empty()
+      .append(`<img class="cell-img" src="${cellImages[index]}" alt="">`);
   });
 
   PUZZLE.timeEl.text(`${PUZZLE.timeLimit - PUZZLE.time}s`);
@@ -89,28 +92,25 @@ function puzzleStart() {
 
     let remainingTime = PUZZLE.timeLimit - PUZZLE.time;
 
-    PUZZLE.timeEl.text(remainingTime + 's');
+    PUZZLE.timeEl.text(remainingTime + "s");
 
     if (!remainingTime) puzzleFinish();
   }, 1000);
 
-  PUZZLE.el.addClass('unlock');
+  PUZZLE.el.addClass("unlock");
 }
 
 function puzzleContinue() {
   if (PUZZLE.isCompleted) {
-    //setCookie('puzzle_finished', 1);
-    //document.cookie = "puzzle_finished=1;path=/;domain=vrplus.com.vn";
     window.location.href = "/quiz";
-
     return;
   }
 
-  PUZZLE.el.removeClass('unlock');
+  PUZZLE.el.removeClass("unlock");
 
   puzzleReset();
 
-  showModal('.md-puzzle');
+  showModal(".md-puzzle");
 }
 
 function puzzleFinish() {
@@ -144,47 +144,61 @@ function puzzleFinish() {
   `);
   }
 
-  showModal('.md-puzzle-result');
+  showModal(".md-puzzle-result");
 }
 
 function puzzleMove(e) {
   e.preventDefault();
 
-  const index = Number($(this).data('index'));
+  const index = Number($(this).data("index"));
   const value = PUZZLE.arr[index];
 
   if (value === 0 || value === 1 || value === 2) return false;
 
-  if (isSlideAble(index)) {
-    const zeroIndex = getZeroIndex();
+  if (PUZZLE.lastSelected < 0) {
+    // Select
+    PUZZLE.lastSelected = index;
+    $(this).addClass("is-selected");
+    return;
+  }
 
-    PUZZLE.arr[zeroIndex] = value;
-    PUZZLE.arr[index] = 0;
+  if (isSlideAble(index)) {
+    // Switch
+    const tmp = PUZZLE.arr[index];
+    PUZZLE.arr[index] = PUZZLE.arr[PUZZLE.lastSelected];
+    PUZZLE.arr[PUZZLE.lastSelected] = tmp;
 
     reIndexing();
 
     if (puzzleCheckResult()) {
       PUZZLE.isCompleted = true;
+      PUZZLE.lastSelected = -1;
+      $(".cell.is-selected").removeClass("is-selected");
       puzzleFinish();
     }
   }
+
+  PUZZLE.lastSelected = -1;
+  $(".cell.is-selected").removeClass("is-selected");
 }
 
 function reIndexing() {
-  const $cell = $('.cell');
+  const $cell = $(".cell");
 
   $cell.removeClass(classesToRemove);
 
   PUZZLE.arr.forEach((value, index) => {
-    $cell.eq(value).addClass('cell--' + index).data('index', index);
+    $cell
+      .eq(value)
+      .addClass("cell--" + index)
+      .data("index", index);
   });
 }
 
 function isSlideAble(index) {
-  const sideBySide = getSideBySide(index);
-  const zeroIndex = getZeroIndex();
+  const sideBySide = getSideBySide(PUZZLE.lastSelected);
 
-  return sideBySide.includes(zeroIndex);
+  return PUZZLE.lastSelected >= 0 && sideBySide.includes(index);
 }
 
 function getZeroIndex() {
@@ -203,7 +217,7 @@ function getSideBySide(index) {
   if (index % 3 < 2) items.push(index + 1);
   if (index + 3 < 12) items.push(index + 3);
 
-  return items.filter(index => index !== 1 && index !== 2);
+  return items.filter((index) => index !== 0 && index !== 1 && index !== 2);
 }
 
 function puzzleCheckResult() {
@@ -219,21 +233,23 @@ function puzzleCheckResult() {
 }
 
 function shuffle() {
+  // TODO edit shuffle
   for (let i = 0; i < 1000; i++) {
     randomMove();
   }
-
   reIndexing();
 }
 
 function randomMove() {
-  const zeroIndex = getZeroIndex();
-  const sideBySide = getSideBySide(zeroIndex);
+  const selected = Math.floor(Math.random() * 9) + 3;
 
-  const randomIndex = sideBySide[Math.floor(Math.random() * sideBySide.length)];
+  const sideBySide = getSideBySide(selected);
 
-  PUZZLE.arr[zeroIndex] = PUZZLE.arr[randomIndex];
-  PUZZLE.arr[randomIndex] = 0;
+  const randomSide = sideBySide[Math.floor(Math.random() * sideBySide.length)];
+
+  const tmp = PUZZLE.arr[selected];
+
+  PUZZLE.arr[selected] = PUZZLE.arr[randomSide];
+  PUZZLE.arr[randomSide] = tmp;
 }
-
 // end puzzle
