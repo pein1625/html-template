@@ -60,19 +60,31 @@
     margin-bottom: -1em;
   }
 
-  &.has-file &__wrapper {
+  &__btn {
     display: none;
+    width: 100%;
+    border: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    position: relative;
+    background: #002b2a;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
-  &.has-file &__list {
-    display: block;
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  &.has-file &__counter {
-    display: block;
-  }
-
-  input {
+  &__files {
     position: absolute;
     top: 0;
     left: 0;
@@ -105,5 +117,37 @@
   &__remove {
     color: #fff;
     cursor: pointer;
+    padding: 10px 12px;
+    margin: -10px -12px;
+  }
+
+  &.has-file &__wrapper {
+    padding: 0;
+    margin-top: 8px;
+  }
+
+  &.has-file &__btn {
+    display: block;
+  }
+
+  &.has-file &__icon,
+  &.has-file &__text {
+    display: none;
+  }
+
+  &.has-file &__list {
+    display: block;
+  }
+
+  &.has-file &__counter {
+    display: block;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
   }
 }

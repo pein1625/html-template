@@ -131,8 +131,34 @@ $(function () {
   const $list = $el.find(".file-input__list");
   const $counter = $el.find(".file-input__counter");
   const input = $el.find(".js-file-input").get(0);
+  const storage = $el.find('.js-file-storage').get(0);
 
-  $(input).on("change", renderFileList);
+  $(input).on("change", function() {
+
+    const dt = new DataTransfer();
+    const fileNames = [];
+    const { files : storageFiles } = storage;
+    const { files: inputFiles } = input;
+
+    for (let i = 0; i < storageFiles.length; i++) {
+        const file = storageFiles[i];
+        dt.items.add(file);
+        fileNames.push(file.name);
+    }
+
+    for (let i = 0; i < inputFiles.length; i++) {
+        const file = inputFiles[i];
+
+        if (!fileNames.includes(file.name)) {
+            dt.items.add(file);
+            fileNames.push(file.name);
+        }
+    }
+
+    storage.files = dt.files;
+
+    renderFileList();
+  });
 
   $el.on("click", ".file-input__remove", function (e) {
     e.preventDefault();
@@ -143,14 +169,14 @@ $(function () {
     if (index === undefined) return false;
 
     const dt = new DataTransfer();
-    const { files } = input;
+    const { files } = storage;
 
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
       if (index !== i) dt.items.add(file);
     }
 
-    input.files = dt.files;
+    storage.files = dt.files;
 
     renderFileList();
   });
@@ -158,7 +184,7 @@ $(function () {
   function renderFileList() {
     $list.empty();
 
-    const { files } = input;
+    const { files } = storage;
 
     if (files.length) {
       $el.addClass("has-file");

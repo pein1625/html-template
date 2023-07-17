@@ -1,8 +1,10 @@
 mixin file-input
   .file-input.js-file-upload
+    .file-input__list
+    input.file-input__files.js-file-storage(type="file", multiple)
     label.file-input__wrapper
       input.js-file-input(type="file", data-target="#avatar-preview", multiple)
       img.file-input__icon(src="./images/icon-cloud-upload.svg", alt="")
       span.file-input__text.js-file-text Chấp nhận file .jpg, .png
-    .file-input__list
+      span.file-input__btn Thêm ảnh
     .file-input__counter Đã tải lên 10/10

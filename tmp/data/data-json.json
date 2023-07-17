@@ -1,4 +1,68 @@
 {
+	"menu": [
+		{
+			"text": "Trang chủ",
+			"url": "./index.html",
+			"active": true,
+			"hasIcon": false
+		},
+		{
+			"text": "Giới thiệu",
+			"url": "./about.html",
+			"submenu": [
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						},
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						},
+						{
+							"text": "Dropdown",
+							"url": "#!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"text": "Sản phẩm",
+			"url": "./products.html"
+		},
+		{
+			"text": "Dự án",
+			"url": "./projects.html"
+		},
+		{
+			"text": "Hệ thống phân phối",
+			"url": "./distribution.html"
+		},
+		{
+			"text": "Tin tức",
+			"url": "./news.html"
+		},
+		{
+			"text": "Liên hệ",
+			"url": "./contact.html"
+		}
+	],
 	"head": {
 		"jquery": {
 			"js": [
@@ -120,70 +184,6 @@
 			]
 		}
 	},
-	"menu": [
-		{
-			"text": "Trang chủ",
-			"url": "./index.html",
-			"active": true,
-			"hasIcon": false
-		},
-		{
-			"text": "Giới thiệu",
-			"url": "./about.html",
-			"submenu": [
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
-				}
-			]
-		},
-		{
-			"text": "Sản phẩm",
-			"url": "./products.html"
-		},
-		{
-			"text": "Dự án",
-			"url": "./projects.html"
-		},
-		{
-			"text": "Hệ thống phân phối",
-			"url": "./distribution.html"
-		},
-		{
-			"text": "Tin tức",
-			"url": "./news.html"
-		},
-		{
-			"text": "Liên hệ",
-			"url": "./contact.html"
-		}
-	],
 	"pageList": {
 		"data": [
 			{
