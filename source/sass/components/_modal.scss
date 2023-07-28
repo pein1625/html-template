@@ -1,5 +1,5 @@
 .modal {
-  font-size: 14px;
+  font-size: 12px;
 
   &-content {
     position: relative;
@@ -240,6 +240,22 @@
 
     &-desc {
       font-size: 16px;
+    }
+  }
+
+  @media (max-width: 991px) and (orientation: landscape) {
+    &-dialog {
+      max-width: 400px;
+    }
+
+    &-body {
+      max-height: calc(100vh - 60px);
+      overflow: auto;
+
+      &.not-overflow {
+        max-height: unset;
+        overflow: unset;
+      }
     }
   }
 }
