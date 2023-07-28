@@ -168,7 +168,9 @@ $(function() {
     const scrollTop = $window.scrollTop();
     const clientHeight = document.body.clientHeight;
 
-    if ($body.hasClass('home-page-4')) return;
+    // if ($body.hasClass('home-page-4')) {
+    //     return;
+    // }
 
     if (vw >= 1200 && scrollTop >= 114 && (scrollTop + vh) < clientHeight - 100) {
       $nav.addClass('is-fixed');
@@ -177,3 +179,21 @@ $(function() {
     }
   });
 });
+
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "115000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}

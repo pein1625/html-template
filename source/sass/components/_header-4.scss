@@ -100,11 +100,24 @@
 
     @include media-breakpoint-up(xl) {
       &__title {
-        background: 0;
+        background: #029CFE;
+        border-radius: 4px 4px 0 0;
       }
 
-      &__dropdown {
-        top: calc(100% + 16px);
+    //   &__dropdown {
+    //     top: calc(100% + 16px);
+    //   }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .navigation.is-fixed {
+      .menu-product {
+        display: none;
+      }
+
+      .menu-product-wrapper:hover .menu-product {
+        display: block;
       }
     }
   }
@@ -117,11 +130,11 @@
     }
   }
 
-  .menu-product {
-    @include media-breakpoint-up(xl) {
-      display: block !important;
-    }
-  }
+//   .menu-product {
+//     @include media-breakpoint-up(xl) {
+//       display: block;
+//     }
+//   }
 
   .banner-grid {
     @include media-breakpoint-up(xl) {

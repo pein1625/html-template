@@ -108,3 +108,13 @@
     }
   }
 }
+
+.toast {
+  &-success {
+    background-color: #51A351 !important;
+  }
+
+  &-error {
+    background-color: #BD362F !important;
+  }
+}

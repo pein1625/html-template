@@ -1,0 +1,40 @@
+extends layout/page
+
+block define
+  - addBodyClass = 'home-page-4'
+
+block header
+  +header-4
+
+block content
+  section.section-3.section-3--light-blue.pb-30.pb-xl-50
+    .container
+      .banner-grid.row.g-3
+        .banner-grid__col.col
+          .position-relative.h-100
+            +banner-slider('banner-slider--absolute', 1)
+        .banner-grid__col.col-auto
+          .row.g-12
+            .col-6.col-lg-12
+              +card-slider-2
+            .col-6.col-lg-12
+              +card-slider-2
+
+  section.py-4
+    .container
+      .row.g-3
+        .col-lg-9.order-lg-1
+          section.section-6
+            .section-6__header
+              h1.section-6__title Vật tư nông nghiệp
+              +pd-nav
+
+            .product-grid
+              - for(let i = 0; i < 25; i++)
+                +product
+
+            nav.d-flex.justify-content-center.mt-3
+              +pagination
+
+        .col-lg-3
+          +pd-sidebar
