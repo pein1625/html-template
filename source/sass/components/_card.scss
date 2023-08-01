@@ -147,6 +147,9 @@
   }
 
   &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 10px;
     position: relative;
   }
@@ -169,6 +172,7 @@
     font-size: 18px;
     font-weight: 600;
     color: $primary;
+    margin-top: auto;
     margin-bottom: 4px;
   }
 
@@ -182,7 +186,6 @@
     font-size: 12px;
     padding-top: 12px;
     color: #7B7B7B;
-    margin-top: auto;
   }
 
   &__location {
