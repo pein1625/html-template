@@ -136,3 +136,12 @@ mixin feedback
           - for(let i = 0; i < 4; i++)
             a.feedback__image(href=`./images/feedback${i + 1}.jpg` data-fancybox="feedback")
               img(src=`./images/feedback${i + 1}.jpg`, alt="")
+
+mixin video
+  .video
+    a.video__link(href="https://www.youtube.com/watch?v=50W9GEIk3Wc", data-fancybox="video")
+      .video__frame
+        img(src="https://img.youtube.com/vi/50W9GEIk3Wc/hqdefault.jpg", alt="")
+      .video__overlay
+        img(src="./images/play-button.svg", alt="")
+    .video__title Lorem ipsum dolor sit amet consectetur adipisicing elit

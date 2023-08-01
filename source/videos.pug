@@ -1,0 +1,15 @@
+extends layout/page
+
+block define
+  - addBodyClass = 'home-page-4'
+
+block header
+  +header-4
+
+block content
+  section.section-3
+    .container
+      .row.g-3.g-lg-30
+        - for(let i = 0; i < 9; i++)
+          .col-6.col-lg-4
+            +video
