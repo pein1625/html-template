@@ -1,7 +1,6 @@
 $(function () {
-  var $moveTop = $(".btn-movetop");
-  var $window = $(window);
-  var $body = $("html");
+  const $moveTop = $(".btn-movetop");
+  const $window = $(window);
 
   if (!$moveTop.length) return;
 

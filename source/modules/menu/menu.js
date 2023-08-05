@@ -1,7 +1,7 @@
 // menu toggle
 $(function () {
   $(".menu-toggle").on("click", function () {
-    var $toggle = $(this);
+    const $toggle = $(this);
 
     $toggle.toggleClass("active").siblings(".menu-sub").slideToggle();
 

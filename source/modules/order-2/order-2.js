@@ -1,7 +1,7 @@
 $(function () {
     $('.js-order-toggle').on('change', function () {
-        var checked = $(this).prop('checked');
-        var $expand = $('.order__info--expand');
+        const checked = $(this).prop('checked');
+        const $expand = $('.order__info--expand');
 
         if (checked) {
             $expand.slideUp();

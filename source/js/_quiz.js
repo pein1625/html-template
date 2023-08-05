@@ -42,10 +42,10 @@ $(function () {
 
     if (question.answered) {
       QUIZ.answered++;
+    }
 
-      if (question.answered === question.true_option) {
-        QUIZ.correct++;
-      }
+    if (question.answered === question.true_option) {
+      QUIZ.correct++;
     }
   }
 
@@ -57,28 +57,28 @@ $(function () {
     quizShowResult();
   } else if (step) {
     quizStart();
-  } else if (!step) {
+  } else {
     showModal(".md-quiz-begin");
   }
 
-  $(".js-quiz-start").on("click", async () => {
-    if (window.sendMessage && typeof window.sendMessage === "function") {
-      window.sendMessage("game_quiz_start");
-    }
-    // quizStart();
-  });
+  $(".js-quiz-start").on("click", onQuizStart);
 
   QUIZ.el
     .on("change", ".js-quiz-option", quizSelectOption)
-    .on("click", ".js-quiz-continue", async function () {
-      if (
-        window.cardGameLoading &&
-        typeof window.cardGameLoading === "function"
-      ) {
-        window.cardGameLoading();
-      }
-    });
+    .on("click", ".js-quiz-continue", onQuizContinue);
 });
+
+async function onQuizStart() {
+  if (typeof window.sendMessage === "function") {
+    window.sendMessage("game_quiz_start");
+  }
+}
+
+async function onQuizContinue() {
+  if (typeof window.cardGameLoading === "function") {
+    window.cardGameLoading();
+  }
+}
 
 async function quizStart() {
   renderQuizQuestion();
@@ -263,7 +263,7 @@ $(function () {
     }, [])
     .join(",");
 
-  let quizScore = Number(window.quizScore) || 0;
+  let quizScore = toNumber(window.quizScore);
 
   setCookie("quiz_score", quizScore);
   setCookie("quiz_answered", answered);
@@ -278,10 +278,10 @@ $(function () {
   interval = setInterval(() => {
     const now = new Date().getTime();
 
-    const startTime = Number(getCookie("quiz_start_timestamp")) * 1000 || 0;
+    const startTime = toNumber(getCookie("quiz_start_timestamp")) * 1000;
 
-    const quizTime = Number(getCookie("quiz_time")) || 0;
-    const quizScore = Number(getCookie("quiz_score")) || 0;
+    const quizTime = toNumber(getCookie("quiz_time"));
+    const quizScore = toNumber(getCookie("quiz_score"));
 
     let time = quizTime ? quizTime : Math.round((now - startTime) / 1000);
 
@@ -310,3 +310,7 @@ $(function () {
   }, 1000);
 });
 // end quiz game
+
+function toNumber(value) {
+  return Number(value) || 0;
+}

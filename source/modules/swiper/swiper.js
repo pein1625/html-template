@@ -1,7 +1,7 @@
 // swiper template
 function addSwiper(selector, options = {}) {
   return Array.from(document.querySelectorAll(selector), function (item) {
-    var $sliderContainer = $(item),
+    const $sliderContainer = $(item),
       $sliderEl = $sliderContainer.find(selector + "__container");
 
     if (options.navigation) {
