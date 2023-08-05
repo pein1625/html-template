@@ -488,7 +488,6 @@
   }
 
   span {
-    display: flex;
     justify-content: center;
     align-items: center;
     display: none;
@@ -733,7 +732,6 @@
     text-transform: uppercase;
     color: #FFC72F;
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -768,7 +766,6 @@
     &::-webkit-scrollbar-track
     {
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      border-radius: 10px;
       background-color: #003A39;
       border-radius: 10px;
     }
@@ -931,7 +928,6 @@
       display: block;
       width: calc(100% - 4px);
       height: calc(100% - 4px);
-      border-radius: 50%;
       background: $green4;
       border-radius: 50%;
       position: absolute;

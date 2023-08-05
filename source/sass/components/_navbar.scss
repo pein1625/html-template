@@ -31,20 +31,6 @@
     line-height: 1;
   }
 
-  &__close {
-    padding: 0 2px;
-    background-color: transparent;
-    border: 0;
-    font-size: 12px;
-    line-height: 1;
-    font-weight: 700;
-
-    &:before {
-      content: "\f104\f104\f104";
-      font-family: "fontawesome";
-    }
-  }
-
   &__body {
     flex-grow: 1;
     overflow-x: hidden;
