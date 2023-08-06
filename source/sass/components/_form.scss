@@ -21,7 +21,7 @@
 
     &::before {
       content: "\f00c";
-      font-family: "Font Awesome 5 Pro", Arial, Helvetica;
+      font-family: 'Font Awesome 5 Pro', sans-serif;
       display: flex;
       width: 100%;
       height: 100%;
@@ -81,7 +81,7 @@
 
     &::before {
       content: '\f00c';
-      font-family: 'Font Awesome 5 Pro';
+      font-family: 'Font Awesome 5 Pro', sans-serif;
       font-size: 12px;
     }
 
@@ -152,7 +152,7 @@
       height: 100%;
       justify-content: center;
       align-items: center;
-      font-family: "Font Awesome 5 Pro", Arial, Helvetica;
+      font-family: 'Font Awesome 5 Pro', sans-serif;
       font-size: 8px;
     }
 
@@ -243,7 +243,7 @@
 
     &::before {
       content: "\f005";
-      font-family: "Font Awesome 5 Pro", Arial, Helvetica;
+      font-family: 'Font Awesome 5 Pro', sans-serif;
       display: flex;
       width: 1em;
       height: 1em;
@@ -280,13 +280,13 @@
 
   &::before {
     content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: "Font Awesome 5 Pro", Arial, Helvetica;
+    font-family: 'Font Awesome 5 Pro', sans-serif;
     letter-spacing: 4px;
     font-weight: 700;
   }
 
   &::after {
-    font-family: "Font Awesome 5 Pro", Arial, Helvetica;
+    font-family: 'Font Awesome 5 Pro', sans-serif;
     letter-spacing: 4px;
     font-weight: 300;
     color: $gray-600;

@@ -210,13 +210,6 @@ function getZeroIndex() {
 }
 
 function getAvailableCells(index) {
-  // const items = [];
-
-  // if (index - 3 >= 0) items.push(index - 3);
-  // if (index % 3 > 0) items.push(index - 1);
-  // if (index % 3 < 2) items.push(index + 1);
-  // if (index + 3 < 12) items.push(index + 3);
-
   return [3,4,5,6,7,8,9,10,11].filter((id) => id !== 0 && id !== 1 && id !== 2 && id !== index);
 }
 
