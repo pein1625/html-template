@@ -100,6 +100,7 @@ $(function() {
     let subtotal = 0;
     let totalDiscount = 0;
     let isAllChecked = true;
+    let hasOneChecked = false;
 
     $('.cart__group').each(function() {
       const $el = $(this);
@@ -116,6 +117,8 @@ $(function() {
         if (!$(this).find('.js-cart-check-item').prop('checked')) {
           isChecked = false;
           isAllChecked = false;
+        } else {
+            hasOneChecked = true;
         }
 
         totalDiscount += discount;
@@ -133,6 +136,7 @@ $(function() {
     $('.js-cart-subtotal').text(`${subtotal.toLocaleString('en')} ₫`);
     $('.js-cart-grandtotal').text(`${(subtotal - totalDiscount).toLocaleString('en')} ₫`);
     $('.js-cart-total-discount').removeClass('d-none').text(`${totalDiscount.toLocaleString('en')} ₫`);
+    $('.js-cart-submit-btn').prop('disabled', !hasOneChecked);
   }
 });
 
