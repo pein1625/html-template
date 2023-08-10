@@ -51,6 +51,10 @@
     }
   }
 
+  .toppage {
+    transition: 0.2s;
+  }
+
   .navigation {
     background-color: var(--bs-primary);
 
@@ -61,7 +65,8 @@
 
     @include media-breakpoint-up(xl) {
       &__inner {
-        height: 40px;
+        // height: 40px;
+        height: auto;
         background: 0;
       }
     }
@@ -111,13 +116,33 @@
   }
 
   @include media-breakpoint-up(xl) {
-    .navigation.is-fixed {
+    .header.is-fixed {
+      .toppage {
+        margin-top: -40px;
+
+        &__group {
+          position: absolute;
+          z-index: 100;
+          bottom: -97px;
+          right: 0;
+        }
+      }
+
       .menu-product {
         display: none;
       }
 
       .menu-product-wrapper:hover .menu-product {
         display: block;
+      }
+
+      .header__logo {
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        img {
+          height: 32px;
+        }
       }
     }
   }

@@ -11,13 +11,14 @@
   }
 
   @include media-breakpoint-up(xl) {
-    height: 40px;
+    // height: 40px;
     background-color: $white;
 
     &__inner {
       display: flex;
       align-items: center;
-      height: 40px;
+    //   height: 40px;
+      height: auto;
       gap: 30px;
       background-color: var(--bs-primary);
       border-radius: 4px 4px 0 0;

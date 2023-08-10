@@ -10,6 +10,7 @@
   &__inner {
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   &__nav {
@@ -29,6 +30,16 @@
       &:not(:last-child) {
         margin-right: 24px;
       }
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    &:not(:last-child) {
+      margin-right: 24px;
     }
   }
 

@@ -164,7 +164,7 @@ $(function() {
 $(function() {
   const $window = $(window);
   const $nav = $('.navigation');
-  const $body = $('body');
+  const $header = $('.header');
 
   $window.on('scroll', function() {
     const vw = $window.width();
@@ -176,10 +176,10 @@ $(function() {
     //     return;
     // }
 
-    if (vw >= 1200 && scrollTop >= 114 && (scrollTop + vh) < clientHeight - 100) {
-      $nav.addClass('is-fixed');
+    if (vw >= 1200 && scrollTop >= 10 && (scrollTop + vh) < clientHeight - 100) {
+      $header.addClass('is-fixed');
     } else {
-      $nav.removeClass('is-fixed');
+      $header.removeClass('is-fixed');
     }
   });
 });
