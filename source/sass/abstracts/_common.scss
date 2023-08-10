@@ -346,6 +346,11 @@
     background-color: var(--bs-dark-primary);
     border-color: var(--bs-dark-primary);
   }
+
+  &:disabled {
+    background-color: var(--bs-light-primary);
+    border-color: var(--bs-light-primary);
+  }
 }
 
 .btn-outline-primary {
