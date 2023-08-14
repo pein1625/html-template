@@ -163,25 +163,58 @@ $(function() {
 
 $(function() {
   const $window = $(window);
-  const $nav = $('.navigation');
+  // const $nav = $('.navigation');
+  const $body = $('body');
   const $header = $('.header');
+  const $menuProduct = $('.menu-product');
+  const $menuCell = $('.home-4-banner__menu');
+  const $home4banner = $('.home-4-banner');
 
-  $window.on('scroll', function() {
-    const vw = $window.width();
-    const vh = $window.height();
-    const scrollTop = $window.scrollTop();
-    const clientHeight = document.body.clientHeight;
+  $window
+    .on('scroll', function() {
+      const vw = $window.width();
+      const vh = $window.height();
+      const scrollTop = $window.scrollTop();
+      const clientHeight = document.body.clientHeight;
+      const isHomePage = $body.hasClass('home-page');
+      const home4menuHeight = $menuCell.height();
 
-    // if ($body.hasClass('home-page-4')) {
-    //     return;
-    // }
+      // if ($body.hasClass('home-page-4')) {
+      //     return;
+      // }
+      if (isHomePage) {
+        if (scrollTop > home4menuHeight + 80) {
+          $header.addClass('hide-menu');
+        } else {
+          $header.removeClass('hide-menu');
+        }
+      }
 
-    if (vw >= 1200 && scrollTop >= 10 && (scrollTop + vh) < clientHeight - 100) {
-      $header.addClass('is-fixed');
-    } else {
-      $header.removeClass('is-fixed');
-    }
-  });
+      if (vw >= 1200 && scrollTop >= 10 && (scrollTop + vh) < clientHeight - 100) {
+        $header.addClass('is-fixed');
+      } else {
+        $header.removeClass('is-fixed');
+      }
+    })
+    .on('resize', function() {
+      calcBannerGrid();
+    });
+
+  calcBannerGrid();
+
+  function calcBannerGrid() {
+    if (
+      !$home4banner.length ||
+      !$body.hasClass('home-page home-page-4') ||
+      $window.width() < 1200
+    ) return;
+
+    const menuProductHeight = $menuProduct.height();
+
+    console.log('menuProductHeight', menuProductHeight);
+
+    $home4banner.css('grid-template-rows', (menuProductHeight) + 'px 1fr');
+  }
 });
 
 toastr.options = {

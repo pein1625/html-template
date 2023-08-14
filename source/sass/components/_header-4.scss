@@ -11,6 +11,8 @@
     }
 
     @include media-breakpoint-up(xl) {
+      height: 184px;
+
       &__inner {
         padding-top: 24px;
         padding-bottom: 0;
@@ -128,14 +130,6 @@
         }
       }
 
-      .menu-product {
-        display: none;
-      }
-
-      .menu-product-wrapper:hover .menu-product {
-        display: block;
-      }
-
       .header__logo {
         padding-top: 4px;
         padding-bottom: 4px;
@@ -143,6 +137,16 @@
         img {
           height: 32px;
         }
+      }
+    }
+
+    .header.hide-menu {
+      .menu-product {
+        display: none;
+      }
+
+      .menu-product-wrapper:hover .menu-product {
+        display: block;
       }
     }
   }
@@ -280,7 +284,7 @@
 .home-4-banner {
   display: grid;
   grid-template-columns: 236px calc(100% - 252px);
-  grid-template-rows: 365px 1fr;
+  grid-template-rows: 350px 1fr;
   gap: 16px;
 
   &__main {
