@@ -9,7 +9,7 @@ mixin cart-item
 mixin cart-header
   .cart__row
     .cart__col.text-center
-      +checkbox('', '', 'js-cart-check-all')
+      //- +checkbox('', '', 'js-cart-check-all')
     .cart__col Sản Phẩm
     .cart__col.text-center Đơn giá
     .cart__col.text-center Số lượng
@@ -58,11 +58,11 @@ block content
         .cart__group
           .cart__footer
             .row.align-items-center.g-4
-              .col-12.col-sm-auto.me-auto.d-flex.align-items-center.justify-content-between
-                +checkbox('', '', 'js-cart-check-all')
-                  span Chọn Tất Cả (#[span.js-cart-item-count 4])
-                a.cart__delete-selected.ms-4.js-cart-delete-selected-items(href="#!") Xoá
-              .col-12.col-md-auto
+              //- .col-12.col-sm-auto.me-auto.d-flex.align-items-center.justify-content-between
+                //- +checkbox('', '', 'js-cart-check-all')
+                //-   span Chọn Tất Cả (#[span.js-cart-item-count 4])
+                //- a.cart__delete-selected.ms-4.js-cart-delete-selected-items(href="#!") Xoá
+              .col-12.col-md-auto.ms-auto
                 .row.align-items-center
                   .col-12.col-sm-auto.me-auto Tổng thanh toán (#[span.js-cart-item-count 4] sản phẩm):
                   .col-12.col-sm-auto.text-sm-end.mt-3.mt-sm-0

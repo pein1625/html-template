@@ -71,7 +71,12 @@ $(function() {
     $itemCheckbox.prop('checked', checked).trigger('change');
   });
 
-  $('.js-cart-check-item, .js-cart-quantity').on('change', function() {
+  $('.js-cart-check-item').on('change', function() {
+    $(this).closest('.cart__group').siblings('.cart__group').find('.js-cart-check-item').prop('checked', false);
+    calcSubtotal();
+  });
+
+  $('.js-cart-quantity').on('change', function() {
     calcSubtotal();
   });
 
@@ -210,8 +215,6 @@ $(function() {
     ) return;
 
     const menuProductHeight = $menuProduct.height();
-
-    console.log('menuProductHeight', menuProductHeight);
 
     $home4banner.css('grid-template-rows', (menuProductHeight) + 'px 1fr');
   }
