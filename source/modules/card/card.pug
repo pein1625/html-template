@@ -11,7 +11,10 @@ mixin product
         img.product__brand.spcnnttb(src="./images/brand-2.png", alt="")
       h3.product__title
         a(href="#!") Nón cỏ bàng thời trang cho nữ
-      .product__stars 4.6 #[i.fas.fa-star] | (23)
+      .product__stars
+        .stars.stars--3-5
+        span (23)
+        //- span 4.6 #[i.fas.fa-star] | (23)
       .product__price 70.000 ₫
         span.product__discount -30%
       .product__old-price 120.000đ
