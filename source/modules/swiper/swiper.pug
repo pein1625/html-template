@@ -237,3 +237,15 @@ mixin branding-slider
         - for(let i = 0; i < 8; i++)
           .swiper-slide
             +branding(`./images/cat-${i % 8 + 1}.jpg`)
+
+mixin market-slider
+  .market-slider
+    .market-slider__prev
+      i.fal.fa-angle-left
+    .market-slider__next
+      i.fal.fa-angle-right
+    .market-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 5; i++)
+          .swiper-slide
+            +market

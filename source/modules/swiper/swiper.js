@@ -147,7 +147,6 @@ $(function() {
   });
 });
 
-
 $(function() {
   addSwiper('.banner-slider', {
     pagination: true,
@@ -183,6 +182,23 @@ $(function() {
         slidesPerView: 5,
         spaceBetween: 16,
       },
+    }
+  });
+});
+
+$(function() {
+  addSwiper('.market-slider', {
+    navigation: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    speed: 500,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 5,
+      }
     }
   });
 });
