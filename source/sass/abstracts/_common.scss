@@ -22,3 +22,19 @@
     background-color: #BD362F !important;
   }
 }
+
+.n-password {
+  position: relative;
+
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

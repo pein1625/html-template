@@ -222,3 +222,23 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  $('.n-password__toggle').on('click', function(e) {
+    e.preventDefault();
+
+    const $btn = $(this);
+    const $parent = $btn.closest('.n-password');
+    const $input = $parent.find('input');
+
+    $parent.toggleClass('is-visible');
+
+    if ($parent.hasClass('is-visible')) {
+      $input.attr('type', 'text');
+      $btn.html('<i class="fal fa-fw fa-eye-slash"></i>');
+    } else {
+      $input.attr('type', 'password');
+      $btn.html('<i class="fal fa-fw fa-eye"></i>');
+    }
+  });
+});
