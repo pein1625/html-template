@@ -24,6 +24,118 @@ function addSwiper(selector, options = {}) {
   });
 }
 
+// banner-slider
+$(function() {
+  // cate slider
+  addSwiper('.cate-slider', {
+    navigation: true,
+    speed: 500,
+    slidesPerView: 2.5,
+    slidesPerColumn: 2,
+    slidesPerColumnFill: 'row',
+    spaceBetween: 1,
+    breakpoints: {
+      576: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 5,
+      },
+      992: {
+        slidesPerView: 7,
+      },
+      1200: {
+        slidesPerView: 8,
+      }
+    }
+  });
+
+  addSwiper('.banner-slider', {
+    pagination: true,
+    spaceBetween: 16,
+    speed: 500,
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    }
+  });
+
+// card slider 2
+  addSwiper('.card-slider-2', {
+    pagination: true,
+    spaceBetween: 16,
+    speed: 500,
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    }
+  });
+
+// market slider
+  addSwiper('.market-slider', {
+    navigation: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    speed: 500,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 5,
+      }
+    }
+  });
+});
+
+// card slider
+$(function() {
+  addSwiper('.card-slider', {
+    pagination: true,
+    slidesPerView: 2,
+    spaceBetween: 16,
+    speed: 500,
+    loop: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      }
+    }
+  });
+});
+
+// product slider
+$(function() {
+  addSwiper('.product-slider', {
+    pagination: true,
+    navigation: true,
+    spaceBetween: 16,
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 5
+      },
+      1200: {
+        slidesPerView: 6,
+      }
+    }
+  });
+});
+
 // horizontal preview sync slider
 $(function () {
   if (!$(".preview-slider, .thumb-slider").length) {
@@ -53,31 +165,7 @@ $(function () {
   });
 });
 
-
-$(function() {
-  addSwiper('.product-slider', {
-    pagination: true,
-    navigation: true,
-    spaceBetween: 16,
-    slidesPerView: 2,
-    loop: true,
-    breakpoints: {
-      576: {
-        slidesPerView: 3
-      },
-      768: {
-        slidesPerView: 4
-      },
-      992: {
-        slidesPerView: 5
-      },
-      1200: {
-        slidesPerView: 6,
-      }
-    }
-  });
-});
-
+// product slider 3
 $(function() {
   addSwiper('.product-slider-3', {
     pagination: true,
@@ -90,77 +178,7 @@ $(function() {
   });
 });
 
-$(function() {
-  addSwiper('.cate-slider', {
-    navigation: true,
-    speed: 500,
-    slidesPerView: 2.5,
-    slidesPerColumn: 2,
-    slidesPerColumnFill: 'row',
-    spaceBetween: 1,
-    breakpoints: {
-      576: {
-        slidesPerView: 4,
-      },
-      768: {
-        slidesPerView: 5,
-      },
-      992: {
-        slidesPerView: 7,
-      },
-      1200: {
-        slidesPerView: 8,
-      }
-    }
-  });
-});
-
-$(function() {
-  addSwiper('.card-slider', {
-    pagination: true,
-    slidesPerView: 2,
-    spaceBetween: 16,
-    speed: 500,
-    loop: true,
-    breakpoints: {
-      992: {
-        slidesPerView: 2,
-      },
-      1200: {
-        slidesPerView: 3,
-      }
-    }
-  });
-});
-
-$(function() {
-  addSwiper('.card-slider-2', {
-    pagination: true,
-    spaceBetween: 16,
-    speed: 500,
-    loop: true,
-    slidesPerView: 1,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    }
-  });
-});
-
-$(function() {
-  addSwiper('.banner-slider', {
-    pagination: true,
-    spaceBetween: 16,
-    speed: 500,
-    loop: true,
-    slidesPerView: 1,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    }
-  });
-});
-
+// branding slider
 $(function() {
   addSwiper('.branding-slider', {
     navigation: true,
@@ -182,23 +200,6 @@ $(function() {
         slidesPerView: 5,
         spaceBetween: 16,
       },
-    }
-  });
-});
-
-$(function() {
-  addSwiper('.market-slider', {
-    navigation: true,
-    slidesPerView: 2,
-    spaceBetween: 16,
-    speed: 500,
-    breakpoints: {
-      992: {
-        slidesPerView: 2,
-      },
-      1200: {
-        slidesPerView: 5,
-      }
     }
   });
 });

@@ -10,11 +10,12 @@ mixin head(data)
     // Styles
     link(rel="stylesheet", type="text/css", href="./css/libs.css")
     link(rel="stylesheet", type="text/css", href="./vendor/fontawesome-pro/css/all.min.css")
+    link(rel="stylesheet", type="text/css", href="./vendor/fancybox/jquery.fancybox.min.css")
     each item in rest
       if (cssList = data[item].css)
         each css in cssList
           link(rel="stylesheet", href=css)
-    link(rel="stylesheet", type="text/css", href="./css/app.css?v=1.7")
+    link(rel="stylesheet", type="text/css", href="./css/app.css?v=1.9")
 
     // Scripts
     script(src="./js/libs.js", defer)
@@ -22,4 +23,5 @@ mixin head(data)
       if (jsList = data[item].js)
         each js in jsList
           script(src=js, defer)
-    script(src="./js/app.js?v=1.8", defer)
+    script(src="./vendor/fancybox/jquery.fancybox.min.js?v=1.9", defer)
+    script(src="./js/app.js?v=1.9", defer)
