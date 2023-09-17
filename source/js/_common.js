@@ -242,3 +242,72 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  const $uploader = $('.js-media-uploader');
+  const $imageInput = $('.js-media-image-input');
+  const $videoInput = $('.js-media-video-input');
+
+  $imageInput.on('change', renderItems);
+  $videoInput.on('change', renderItems);
+
+  $uploader.on('click', '.media-uploader__remove', function() {
+    const removeIndex = Number($(this).data('index'));
+    const type = $(this).data('type');
+    let input;
+
+    if (type === 'image') {
+      input = $imageInput[0];
+    } else if (type === 'video') {
+      input = $videoInput[0];
+    }
+
+    const dt = new DataTransfer();
+
+    const { files } = input;
+
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i]
+      if (i !== removeIndex)
+        dt.items.add(file) // here you exclude the file. thus removing it.
+    }
+
+    input.files = dt.files;
+
+    $(this).closest('.js-media-uploader-item').remove();
+  });
+
+  function renderItems() {
+    const imageFiles = $imageInput[0].files;
+    const videoFiles = $videoInput[0].files;
+
+    $uploader.find('.js-media-uploader-item').remove();
+
+    Object.values(imageFiles).forEach((imageFile, index) => {
+      const url = URL.createObjectURL(imageFile);
+
+      $uploader.append(`
+<div class="media-uploader__item js-media-uploader-item">
+    <img src="${url}" alt="" />
+    <button class="media-uploader__remove" data-index="${index}" data-type="image" type="button">
+      <i class="fal fa-times"></i>
+    </button>
+</div>
+      `);
+    });
+
+    Object.values(videoFiles).forEach((videoFile, index) => {
+      const url = URL.createObjectURL(videoFile);
+
+      $uploader.append(`
+<div class="media-uploader__item js-media-uploader-item">
+    <video><source src="${url}" /></video>
+    <button class="media-uploader__remove" data-index="${index}" data-type="video" type="button">
+      <i class="fal fa-times"></i>
+    </button>
+    <div class="media-uploader__video-overlay"><i class="fal fa-play-circle"></i></div>
+</div>
+      `);
+    });
+  }
+});

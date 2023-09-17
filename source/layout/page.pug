@@ -9,6 +9,7 @@ include ../modules/modal/modal
 include ../modules/swiper/swiper
 include ../modules/social/social
 include ../modules/sticky/sticky
+include ../modules/sprites/sprites
 
 block define
 
@@ -16,6 +17,8 @@ doctype html
 html(lang="vi")
   +head(head)
   body(class=addBodyClass?addBodyClass:'')
+    +sprites
+
     .page
       block header
         // header

@@ -9,6 +9,7 @@
 @import "abstracts/mixin";
 @import "abstracts/typography";
 @import "abstracts/normalize";
+@import "abstracts/color";
 @import "abstracts/common";
 
 // utilities
@@ -18,6 +19,7 @@
 @import "utilities/spacing";
 
 // components
+@import "components/badge";
 @import "components/button";
 @import "components/utils";
 @import "components/sticky";

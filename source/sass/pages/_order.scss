@@ -1,5 +1,239 @@
+.od-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 180px 1fr;
+
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    flex-direction: column;
+
+    &__aside {
+      order: 1;
+    }
+  }
+}
+
+.od-nav {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: inset 0 -1px 0 $border-color;
+  background-color: $white;
+  font-size: 14px;
+  line-height: 20px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+    flex-grow: 1;
+    padding: 15px 0;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+      box-shadow: inset 0 -2px 0 $primary;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      object-position: 50% 50%;
+      margin-right: 10px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background-color: $border-color;
+
+    &__item {
+      background-color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+
+    &__item {
+      padding: 12px 0;
+    }
+  }
+}
+
+.od-section {
+  color: $text-color;
+  background-color: $white;
+  border-radius: 4px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__icon {
+    align-self: flex-start;
+    color: $primary;
+  }
+
+  &__title-wrap {
+    flex: 1;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: $primary;
+    margin-bottom: 0;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      object-position: 50% 50%;
+      margin-right: 8px;
+    }
+  }
+
+  &__title-link {
+    margin-right: 12px;
+  }
+
+  &__infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    font-size: 13px;
+    color: $text-color;
+    margin-top: 8px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__body {
+    padding: 16px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 1px solid $border-color;
+    gap: 12px;
+  }
+
+  &__total-price {
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__note {
+    font-style: italic;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      flex: 0 0 100%;
+    }
+
+    &__title-link {
+      display: block;
+      padding-right: 8px;
+      margin-right: auto;
+    }
+
+    &__badge {
+      display: flex;
+      justify-content: flex-end;
+      flex: 0 0 100%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__header {
+      padding: 12px;
+    }
+
+    &__body {
+      padding: 12px;
+    }
+
+    &__footer {
+      font-size: 12px;
+      flex-direction: column-reverse;
+      padding: 12px;
+    }
+  }
+}
+
+.od-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: $text-color;
+
+  & + & {
+    margin-top: 16px;
+  }
+
+  &__frame {
+    @include frame('square');
+    width: 60px;
+  }
+
+  &__info {
+    flex-grow: 1;
+  }
+
+  &__price {
+    white-space: nowrap;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+}
+
+// Cart & Checkout Pages
 .order {
-  color: $text-gray-5;
+  color: $text-color;
 
   &__group {
     background-color: $white;

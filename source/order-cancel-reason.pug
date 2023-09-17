@@ -1,0 +1,16 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header
+      a.section__link(href="#!")
+        i.fal.fa-lg.fa-angle-left.me-2
+        span Trở lại
+      h1.section__title Chi tiết đơn hàng
+
+    section.od-section
+      .od-section__body
+        i.fal.fa-fw.fa-lg.fa-clipboard-list.me-2.text-primary
+        i Lí do hủy: Đổi ý không mua nữa
+
+    +od-cancel-detail('Đã huỷ', 'text-primary bg-primary-light')

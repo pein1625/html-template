@@ -85,7 +85,7 @@
 
   &__title {
     font-size: 14px;
-    color: #585858;
+    color: $text-color;
 
     &:hover {
       color: $secondary;
@@ -160,7 +160,7 @@
     margin-bottom: 6px;
 
     a {
-      color: #585858;
+      color: $text-color;
 
       &:hover {
         color: $primary;
@@ -326,7 +326,7 @@
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: #585858;
+    color: $text-color;
     margin: 8px 0 0;
   }
 }
@@ -433,6 +433,211 @@
   @include media-breakpoint-down(lg) {
     &__title {
       font-size: 12px;
+    }
+  }
+}
+
+.od-user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 8px;
+  align-items: center;
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-color;
+    margin-bottom: 8px;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    font-size: 14px;
+    color: $text-color;
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+.od-menu {
+  font-size: 14px;
+  line-height: 22px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding: 4px 0 4px 42px;
+    font-weight: 600;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      color: #2879FE;
+      background-color: rgba(#2879FE, 0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 42px;
+
+    li {
+      margin-top: 8px;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    color: $text-color;
+
+    &.active,
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.media-uploader {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  color: $text-color;
+  gap: 16px;
+
+  &__item {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(#000, 0.5);
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: $white;
+    transition: 0.3s;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 10;
+
+    &:hover {
+      opacity: 0.7;
+      background-color: $danger;
+      border: 1px solid $white;
+    }
+  }
+
+  &__video-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed $border-color;
+    border-radius: 4px;
+    padding: 6px;
+    position: relative;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
+
+    input {
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
     }
   }
 }

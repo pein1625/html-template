@@ -136,3 +136,183 @@ mixin market
       img(src="https://placehold.jp/300x200.png", alt="")
     h3.market__title
       a(href="#!") Sàn TMĐT Tỉnh Cao Bằng
+
+mixin od-grid
+  section.section
+    .container
+      .od-grid
+        .od-grid__aside
+          +od-user
+          +od-menu('mt-4')
+
+        .od-grid__main
+          if (block)
+            block
+
+mixin od-user
+  .od-user
+    .od-user__avatar
+      img(src="./images/avatar.png", alt="")
+    .od-user__info
+      .od-user__name admin_sanviet
+      a.od-user__btn(href="#!") Sửa hồ sơ
+
+mixin od-menu(className="")
+  nav.od-menu(class=className)
+    .od-menu__item
+      a.od-menu__link(href="#!")
+        i.fal.fa-fw.fa-user
+        span Tài khoản của tôi
+      ul.od-menu__submenu
+        li
+          a(href="#!") Hồ sơ
+        li
+          a(href="#!") Đổi mật khẩu
+        li
+          a(href="#!") Điểm nhận hàng
+    .od-menu__item
+      a.od-menu__link.active(href="#!")
+        i.fal.fa-fw.fa-shopping-cart(style="color: #6BB13E; background-color: #E8EEE7;")
+        span Đơn hàng
+    .od-menu__item
+      a.od-menu__link(href="#!")
+        i.fal.fa-fw.fa-comment-alt-dots(style="color: #FF6C2D; background-color: #F5E7E5;")
+        span Quản lý nhận xét
+
+mixin od-nav(id=1)
+  nav.od-nav
+    a.od-nav__item(href="./order.html", class=id==1?'active':'')
+      +svg-icon('icon-task-queue', '0 0 18 19')
+      span Tất cả
+    a.od-nav__item(href="#!", class=id==2?'active':'')
+      +svg-icon('icon-clock', '0 0 18 19')
+      span Chờ lấy hàng
+    a.od-nav__item(href="#!", class=id==3?'active':'')
+      +svg-icon('icon-truck', '0 0 17 17')
+      span Đang giao hàng
+    a.od-nav__item(href="./order-completed.html", class=id==4?'active':'')
+      +svg-icon('icon-tick-circle', '0 0 17 17')
+      span Hoàn thành
+    a.od-nav__item(href="#!", class=id==5?'active':'')
+      +svg-icon('icon-undo', '0 0 18 15')
+      span Trả hàng
+    a.od-nav__item(href="#!", class=id==6?'active':'')
+      +svg-icon('icon-tag-cross', '0 0 18 15')
+      span Huỷ hàng
+
+mixin od-item
+  .od-item
+    a.od-item__frame(href="#!")
+      img(src="./images/order-item-img.jpg", alt="")
+    .od-item__info
+      div
+        a(href="#!")
+          strong Chao môn ngon Hưng Phát size nhỏ 200g
+      div x2
+    .od-item__price 70.000 ₫
+
+mixin od-section(badge='Hoàn thành', badgeClass='text-success bg-success-light', btn='Xem đánh giá', btnClass='btn-outline', note='Ghi chú: Ship hàng vào giờ hành chính', btnLink='#!')
+  section.od-section.mt-4
+    .od-section__header
+      .od-section__icon
+        i.fal.fa-fw.fal-lg.fa-store
+      .od-section__title-wrap
+        h2.od-section__title
+          a.od-section__title-link(href="./order-detail.html") Cơ sở sản xuất miến dong Chiến Thọ
+          a.badge.text-secondary.border-secondary(href="#!") Sàn Long An
+      .od-section__badge
+        span.badge.ms-auto(class=badgeClass)=badge
+
+    .od-section__body
+      - for(let i = 0; i < 2; i++)
+        +od-item
+
+    .od-section__footer
+      .od-section__btns
+        a.btn.px-30(href=btnLink, class=btnClass)= btn
+      .text-sm-end
+        span.me-3 Tổng số tiền (2 sản phẩm):
+        strong 140.000 ₫
+        if (note)
+          .od-section__note
+            i.fal.fa-fw.fa-clipboard-list.me-2.text-primary
+            i= note
+
+mixin od-summary(className='')
+  section.od-section(class=className)
+    .od-section__body
+      .row.justify-content-between.gx-3
+        .col-auto Tổng số tiền (2 sản phẩm):
+        .col-auto.text-end 450.000 ₫
+
+      .row.justify-content-between.gx-3.mt-3
+        .col-auto Tổng giảm
+        .col-auto.text-end -245.000 ₫
+
+      .row.justify-content-between.gx-3.mt-3
+        .col-auto
+          div Tổng thanh toán
+          div (2 sản phẩm):
+        .col-auto.text-end
+          .fs-24.text-primary.fw-600(style="line-height: 1.2") 280.000 ₫
+          div Tiết kiệm 165.000đ
+
+      .border-top.mt-3
+
+      .row.justify-content-between.gx-3.mt-3.align-items-center
+        .col-auto Phương thức thanh toán
+        .col-auto.text-end.ms-auto
+          select.form-select
+            option Thanh toán COD
+            option Thanh toán COD
+            option Thanh toán COD
+            option Thanh toán COD
+
+      .row.justify-content-between.gx-3.mt-3.align-items-center
+        .col-auto Trạng thái thanh toán
+        .col-auto.text-end
+          span.badge.text-primary.bg-primary-light Chưa thanh toán
+
+mixin od-cancel-detail(badge='Đang giao hàng', badgeClass='text-secondary bg-secondary-light')
+  section.od-section.mt-3
+    .od-section__header
+      .od-section__icon
+        i.fal.fa-fw.fal-lg.fa-store
+
+      .od-section__title-wrap
+        h2.od-section__title
+          a.me-12(href="./order-detail.html") Cơ sở sản xuất miến dong Chiến Thọ
+          a.badge.text-secondary.border-secondary(href="#!") Sàn Long An
+
+        .od-section__infos
+          a.od-section__info(href="mailto:daotao@ecomviet.vn")
+            i.fal.fa-fw.fa-envelope.me-2
+            span daotao@ecomviet.vn
+          a.od-section__info(href="tel:024 2220 5365")
+            i.fal.fa-fw.fa-phone.me-2
+            span 024 2220 5365
+          .od-section__info
+            i.fal.fa-fw.fa-map-marker-alt.me-2
+            span 25 Ngô Quyền - Quận Hoàn Kiếm - Hà Nội
+
+      .od-section__badge
+        span.badge.ms-auto(class=badgeClass)=badge
+
+    .od-section__body
+      - for(let i = 0; i < 6; i++)
+        +od-item
+
+  +od-summary('mt-3')
+
+mixin media-uploader
+  .media-uploader.js-media-uploader
+    .media-uploader__item
+      label.media-uploader__label
+        input.js-media-image-input(type="file", multiple, accept="image/*")
+        i.fal.fa-fa.fa-lg.fa-camera
+        span Thêm hình ảnh
+    .media-uploader__item
+      label.media-uploader__label
+        input.js-media-video-input(type="file", multiple, accept="video/*")
+        i.fal.fa-fa.fa-lg.fa-video
+        span Thêm video

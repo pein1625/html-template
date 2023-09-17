@@ -8,6 +8,28 @@
     color: $secondary;
     margin-bottom: 16px;
   }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-color;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__header &__title {
+    margin-bottom: 0;
+  }
 }
 
 .section-2 {
@@ -107,7 +129,7 @@
   &__title {
     font-size: 14px;
     font-weight: 600;
-    color: #585858;
+    color: $text-color;
     margin-bottom: 16px;
 
     &--lg {

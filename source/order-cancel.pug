@@ -1,0 +1,28 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header
+      a.section__link(href="#!")
+        i.fal.fa-lg.fa-angle-left.me-2
+        span Trở lại
+      h1.section__title Huỷ đơn hàng
+
+    section.od-section
+      .od-section__body
+        .row
+          .col-lg-8.col-xl-6
+            .fs-16.fw-600 Lý do hủy
+            .mt-2.fst-italic Nếu bạn xác nhận hủy, toàn bộ đơn hàng sẽ được hủy.
+            .mt-3 Lý do&nbsp;
+              span.text-danger *
+            .mt-1
+              select.form-select
+                option Chọn lí do
+                option Chọn lí do
+                option Chọn lí do
+            .d-flex.gap-3.mt-3
+              button.btn.btn-primary.px-4(type="button") Hủy đơn hàng
+              button.btn.btn-outline.px-4(type="button") Không hủy
+
+    +od-cancel-detail
