@@ -1,0 +1,67 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header
+      h1.section__title Hồ sơ của tôi
+
+    section.pf-section
+      .pf-section__body
+        .row.gx-60
+          .col-xl-4.border-xl-end
+            .pf-uploader
+              .pf-uploader__avatar
+                img(src="./images/avatar.png", alt="")
+              label.d-block.mt-10.relative
+                input.pf-uploader__input(type="file", accept=".jpg, .jpeg, .png", data-max-size="1")
+                span.btn.btn-outline Chọn ảnh
+              .pf-uploader__desc.mt-2
+                div Dụng lượng file tối đa 1 MB
+                div Định dạng: .JPEG, .PNG
+
+          .col-xl-8
+            .row.gy-3
+              .col-md-6
+                label.form-label.text-gray Tài khoản
+                input.form-control(type="text", value="admin_sanviet", disabled, readonly)
+              .col-md-6.d-none.d-md-block
+              .col-md-6
+                label.form-label.text-gray Họ tên
+                input.form-control(type="text", value="Họ tên")
+              .col-md-6.d-none.d-md-block
+              .col-md-6
+                label.form-label.text-gray Ngày sinh
+                .row.g-2
+                  .col-auto.flex-grow-1
+                    select.form-select
+                      option 1
+                      option 2
+                      option 3
+                      option 4
+                  .col-auto.flex-grow-1
+                    select.form-select
+                      option Tháng 1
+                      option Tháng 2
+                      option Tháng 3
+                      option Tháng 4
+                  .col-auto.flex-grow-1
+                    select.form-select
+                      option 1985
+                      option 1986
+                      option 1987
+                      option 1988
+              .col-md-6
+                label.form-label.text-gray Giới tính
+                select.form-select.w-auto
+                  option Nam
+                  option Nữ
+                  option Khác
+              .col-md-6
+                label.form-label.text-gray Email
+                input.form-control(type="text", value="sanviet@gmail.com")
+              .col-md-6
+                label.form-label.text-gray Điện thoại
+                input.form-control(type="text", value="0987654321", size="12", style="width: 160px;")
+              .col-12.d-flex.gap-3
+                button.btn.btn-primary.px-30 Lưu
+                button.btn.btn-outline.px-4 Nhập lại

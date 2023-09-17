@@ -1,0 +1,44 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header
+      a.section__link(href="./profile-place.html")
+        i.fal.fa-lg.fa-angle-left.me-2
+        span Trở lại
+      h1.section__title Sửa điểm nhận hàng
+
+    form.pf-section(action="./profile-place.html")
+      .pf-section__body
+        .row
+          .col-lg-6.col-xxl-4
+            .mb-3
+              label.form-label.text-gray Họ tên
+              input.form-control(type="text", value="Lê Chí Mạnh")
+            .mb-3
+              label.form-label.text-gray Số điện thoại
+              input.form-control(type="text", value="0956877412")
+          .col-lg-6.col-xxl-4
+            .mb-3
+              label.form-label.text-gray Địa chỉ
+              input.form-control(type="text", value="6 Lê Văn Thiêm")
+            .mb-3
+              label.form-label.text-gray Tỉnh/ Thành phố
+              select.form-select
+                option Hà Nội
+                option Hà Nội
+            .mb-3
+              label.form-label.text-gray Quận/ Huyện
+              select.form-select
+                option Thanh Xuân
+                option Thanh Xuân
+            .mb-3
+              label.form-label.text-gray Phường
+              select.form-select
+                option Nhân Chính
+                option Nhân Chính
+        div
+          a.btn.btn-sm.btn-outline.px-4(href="./profile-place.html") Đặt làm mặc định
+        .d-flex.gap-3.mt-3
+          button.btn.btn-primary.px-30(type="submit") Lưu
+          button.btn.btn-outline.px-4(type="reset") Làm lại

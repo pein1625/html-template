@@ -38,3 +38,9 @@
     right: 0;
   }
 }
+
+.border-xl-end {
+  @include media-breakpoint-up(xl) {
+    border-right: 1px solid $border-color;
+  }
+}

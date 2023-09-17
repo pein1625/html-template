@@ -311,3 +311,15 @@ $(function() {
     });
   }
 });
+
+$(function() {
+  const $avatar = $('.pf-uploader__avatar');
+
+  $('.pf-uploader__input').on('change', function() {
+    const url = URL.createObjectURL(this.files[0]);
+
+    console.log('url', url);
+
+    $avatar.empty().append(`<img src="${url}" alt="" />`);
+  });
+});

@@ -449,6 +449,8 @@
     border-radius: 50%;
     border: 1px solid $border-color;
     position: relative;
+    border-radius: 50%;
+    overflow: hidden;
 
     img {
       width: 100%;

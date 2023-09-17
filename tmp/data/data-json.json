@@ -249,6 +249,22 @@
 			{
 				"title": "Đơn hàng - Trả hàng",
 				"url": "order-return"
+			},
+			{
+				"title": "Hồ sơ",
+				"url": "profile"
+			},
+			{
+				"title": "Hồ sơ - Đổi mật khẩu",
+				"url": "profile-change-password"
+			},
+			{
+				"title": "Hồ sơ - Điểm nhận hàng",
+				"url": "profile-place"
+			},
+			{
+				"title": "Hồ sơ - Sửa điểm nhận hàng",
+				"url": "profile-place-edit"
 			}
 		]
 	}

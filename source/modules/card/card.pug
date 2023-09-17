@@ -155,7 +155,7 @@ mixin od-user
       img(src="./images/avatar.png", alt="")
     .od-user__info
       .od-user__name admin_sanviet
-      a.od-user__btn(href="#!") Sửa hồ sơ
+      a.od-user__btn(href="./profile.html") Sửa hồ sơ
 
 mixin od-menu(className="")
   nav.od-menu(class=className)
@@ -165,13 +165,13 @@ mixin od-menu(className="")
         span Tài khoản của tôi
       ul.od-menu__submenu
         li
-          a(href="#!") Hồ sơ
+          a(href="./profile.html") Hồ sơ
         li
-          a(href="#!") Đổi mật khẩu
+          a(href="./profile-change-password.html") Đổi mật khẩu
         li
-          a(href="#!") Điểm nhận hàng
+          a(href="./profile-place.html") Điểm nhận hàng
     .od-menu__item
-      a.od-menu__link.active(href="#!")
+      a.od-menu__link.active(href="./order.html")
         i.fal.fa-fw.fa-shopping-cart(style="color: #6BB13E; background-color: #E8EEE7;")
         span Đơn hàng
     .od-menu__item
@@ -316,3 +316,31 @@ mixin media-uploader
         input.js-media-video-input(type="file", multiple, accept="video/*")
         i.fal.fa-fa.fa-lg.fa-video
         span Thêm video
+
+mixin pf-place(className='')
+  .pf-place(class=className)
+    .row.g-3.justify-content-between
+      .col-auto
+        .mb-1 #[strong Hà Thu]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;#[a(href="tel: 024 2220 5365") 024 2220 5365]
+        div 72 trúc khê
+          br
+          | Phường Kim Giang, Quận Thanh Xuân, Hà Nội
+      .col-auto
+        .d-flex.flex-wrap.gap-2
+          a.btn.btn-sm.btn-outline(href="./profile-place-edit.html") Sửa
+          a.btn.btn-sm.btn-outline(href="#!") Xóa
+          a.btn.btn-sm.btn-outline(href="#!") Đặt làm mặc định
+
+mixin pf-place-default(className='')
+  .pf-place(class=className)
+    .row.g-3.justify-content-between
+      .col-auto
+        .mb-1 #[strong Lê Chí Mạnh]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;#[a(href="tel: 024 2220 5365") 024 2220 5365]
+        div 6 Lê Văn Thiêm
+          br
+          | Quận Thanh Xuân, Hà Nội
+        .mt-1
+          span.badge.text-primary.bg-primary-light.border.border-primary.rounded Mặc định
+      .col-auto
+        .d-flex.flex-wrap.gap-2
+          a.btn.btn-sm.btn-outline(href="./profile-place-edit.html") Sửa

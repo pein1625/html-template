@@ -1,0 +1,16 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header.justify-content-between
+      h1.section__title Điểm nhận hàng
+      a.btn.btn-outline-primary(href="./profile-place-edit.html") Thêm điểm nhận hàng
+
+    +pf-place-default('mb-3')
+
+    - for(let i = 0; i < 8; i++)
+      +pf-place('mb-3')
+
+    .d-flex.justify-content-center.mt-3
+      a.btn.btn-outline-primary.py-2.text-center(href="#!", style="min-width: 290px;")
+        span.d-inline-block.py-2 Xem thêm
