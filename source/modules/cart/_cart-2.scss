@@ -12,10 +12,10 @@
 
   &__name {
     font-size: 14px;
-    color: #333;
+    color: var(--text-color);
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 
@@ -26,7 +26,7 @@
   }
 
   &__delete {
-    color: #666;
+    color: var(--text-gray);
   }
 
   &__footer {
@@ -38,10 +38,10 @@
 
   thead th {
     text-transform: uppercase;
-    background-color: $primary;
+    background-color: var(--bs-primary);
     color: $white;
     font-weight: 400;
-    border-color: $primary;
+    border-color: var(--bs-primary);
 
     &:not(:last-child) {
       border-right-color: $border-color;

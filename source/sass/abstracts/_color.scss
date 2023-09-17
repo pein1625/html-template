@@ -1,11 +1,20 @@
 .bg-primary-light {
-  background-color: rgba($primary, 0.1);
+  background-color: var(--bs-primary-light);
+  background-color: darken($info, 10%);
 }
 
 .bg-secondary-light {
-  background-color: rgba($secondary, 0.1);
+  background-color: var(--bs-secondary-light);
 }
 
 .bg-success-light {
-  background-color: rgba($success, 0.1);
+  background-color: var(--bs-success-light);
+}
+
+.bg-danger-light {
+  background-color: var(--bs-success-light);
+}
+
+.bg-info-light {
+  background-color: var(--bs-info-light);
 }

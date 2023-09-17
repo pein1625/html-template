@@ -1,0 +1,14 @@
+extends layout/page
+
+block content
+  +od-grid
+    h1.section__title Quản lý nhận xét
+
+    +od-nav-2(1)
+
+    - for(let i = 0; i < 8; i++)
+      +od-section('Hoàn thành', 'text-success bg-success-light', 'Đánh giá', 'btn-primary', '', '#!', 'Xem shop', 'text-gray btn-outline rounded')
+
+    .d-flex.justify-content-center.mt-3
+      a.btn.btn-outline-primary.py-2.text-center(href="#!", style="min-width: 290px;")
+        span.d-inline-block.py-2 Xem thêm

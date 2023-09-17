@@ -44,7 +44,7 @@
     line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    background: #A3277B;
+    background: var(--bs-primary-darken);
     color: $white;
   }
 
@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    background-color: #C13E97;
+    background-color: var(--bs-primary);
     border-radius: 4px 4px 0;
 
     &__title {
@@ -111,7 +111,7 @@
           font-family: 'Font Awesome 5 Pro';
           font-size: 18px;
           font-weight: 300;
-          color: $primary;
+          color: var(--bs-primary);
           position: absolute;
           top: 0;
           right: 0;
@@ -150,8 +150,8 @@
       }
 
       .menu-item:hover > .menu-link {
-        color: $primary;
-        background-color: #FFECF9;
+        color: var(--bs-primary);
+        background-color: var(--bs-primary-light);
       }
 
       .menu-item:hover > .menu-sub {
@@ -167,7 +167,7 @@
 
 .h-contact {
   display: block;
-  color: #7B7B7B;
+  color: var(--text-gray);
   font-size: 12px;
   line-height: 1.2;
 
@@ -177,7 +177,7 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    color: $primary;
+    color: var(--bs-primary);
     font-size: 14px;
     border: 1px solid rgba(193, 62, 151, 0.3);
     border-radius: 50%;
@@ -268,7 +268,7 @@
   align-items: center;
   width: 30px;
   height: 30px;
-  color: $primary;
+  color: var(--bs-primary);
   font-size: 14px;
   border: 1px solid rgba(193, 62, 151, 0.3);
   border-radius: 50%;
@@ -281,7 +281,7 @@
   align-items: center;
   width: 30px;
   height: 30px;
-  color: $primary;
+  color: var(--bs-primary);
   font-size: 14px;
   border: 1px solid rgba(193, 62, 151, 0.3);
   border-radius: 50%;
@@ -320,10 +320,10 @@
     background-color: $white;
     border-radius: 4px;
     padding: 0 14px;
-    color: $primary;
+    color: var(--bs-primary);
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
       opacity: 0.9;
     }
 

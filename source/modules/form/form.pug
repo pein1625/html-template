@@ -33,6 +33,22 @@ mixin star-input(name='star-input', addClass = '')
     input(type="radio", name=name, value="1")
     span
 
+mixin label-star-input(label='Chất lượng sản phẩm', name='feedback-star-1')
+  .label-star-input
+    .label-star-input__title.me-3= label
+    .star-input(class=addClass)
+      input(type="radio", name=name, value="5", checked, data-label="Tuyệt vời")
+      span
+      input(type="radio", name=name, value="4", data-label="Tốt")
+      span
+      input(type="radio", name=name, value="3", data-label="Bình thường")
+      span
+      input(type="radio", name=name, value="2", data-label="Tệ")
+      span
+      input(type="radio", name=name, value="1", data-label="Rất tệ")
+      span
+    .label-star-input__label Tuyệt vời
+
 mixin color-picker
   .color-picker
     label.color-picker__item

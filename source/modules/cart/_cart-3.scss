@@ -55,10 +55,10 @@
   }
 
   &__name {
-    color: #333;
+    color: var(--text-color);
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 

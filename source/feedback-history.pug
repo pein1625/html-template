@@ -1,0 +1,16 @@
+extends layout/page
+
+block content
+  +od-grid
+    h1.section__title Quản lý nhận xét
+
+    +od-nav-2(2)
+
+    section.od-section
+      .od-section__body
+        - for(let i = 0; i < 7; i++)
+          +feedback-history
+
+    .d-flex.justify-content-center.mt-3
+      a.btn.btn-outline-primary.py-2.text-center(href="#!", style="min-width: 290px;")
+        span.d-inline-block.py-2 Xem thêm

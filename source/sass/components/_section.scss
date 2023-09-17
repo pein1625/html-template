@@ -5,7 +5,7 @@
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    color: $secondary;
+    color: var(--bs-secondary);
     margin-bottom: 16px;
   }
 
@@ -23,7 +23,7 @@
     color: $text-color;
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 
@@ -38,7 +38,7 @@
   &__title {
     font-size: 20px;
     font-weight: 500;
-    color: $secondary;
+    color: var(--bs-secondary);
     margin-bottom: 10px;
   }
 
@@ -48,7 +48,7 @@
     border-radius: 4px;
 
     &--dark-pink {
-      background-color: #872367;
+      background-color: var(--bs-primary-darker);
     }
 
     &--category {
@@ -108,7 +108,7 @@
 
   &__title {
     font-size: 16px;
-    color: $secondary;
+    color: var(--bs-secondary);
     border-bottom: 1px solid $border-color;
     padding-bottom: 10px;
     margin-bottom: 20px;

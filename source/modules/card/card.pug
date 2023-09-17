@@ -175,7 +175,7 @@ mixin od-menu(className="")
         i.fal.fa-fw.fa-shopping-cart(style="color: #6BB13E; background-color: #E8EEE7;")
         span Đơn hàng
     .od-menu__item
-      a.od-menu__link(href="#!")
+      a.od-menu__link(href="./feedback.html")
         i.fal.fa-fw.fa-comment-alt-dots(style="color: #FF6C2D; background-color: #F5E7E5;")
         span Quản lý nhận xét
 
@@ -200,6 +200,15 @@ mixin od-nav(id=1)
       +svg-icon('icon-tag-cross', '0 0 18 15')
       span Huỷ hàng
 
+mixin od-nav-2(id=1)
+  nav.od-nav.od-nav--2
+    a.od-nav__item(href="./feedback.html", class=id==1?'active':'')
+      +svg-icon('icon-task-queue', '0 0 18 19')
+      span Chưa viết đánh giá
+    a.od-nav__item(href="./feedback-history.html", class=id==2?'active':'')
+      +svg-icon('icon-clock', '0 0 18 19')
+      span Lịch sử đánh giá
+
 mixin od-item
   .od-item
     a.od-item__frame(href="#!")
@@ -211,7 +220,7 @@ mixin od-item
       div x2
     .od-item__price 70.000 ₫
 
-mixin od-section(badge='Hoàn thành', badgeClass='text-success bg-success-light', btn='Xem đánh giá', btnClass='btn-outline', note='Ghi chú: Ship hàng vào giờ hành chính', btnLink='#!')
+mixin od-section(badge='Hoàn thành', badgeClass='text-success bg-success-light', btn='Xem đánh giá', btnClass='btn-outline', note='Ghi chú: Ship hàng vào giờ hành chính', btnLink='#!', shopText='Sàn Long An', shopClass='text-secondary border-secondary')
   section.od-section.mt-4
     .od-section__header
       .od-section__icon
@@ -219,7 +228,7 @@ mixin od-section(badge='Hoàn thành', badgeClass='text-success bg-success-light
       .od-section__title-wrap
         h2.od-section__title
           a.od-section__title-link(href="./order-detail.html") Cơ sở sản xuất miến dong Chiến Thọ
-          a.badge.text-secondary.border-secondary(href="#!") Sàn Long An
+          a.badge(href="#!", class=shopClass)= shopText
       .od-section__badge
         span.badge.ms-auto(class=badgeClass)=badge
 
@@ -306,16 +315,17 @@ mixin od-cancel-detail(badge='Đang giao hàng', badgeClass='text-secondary bg-s
 
 mixin media-uploader
   .media-uploader.js-media-uploader
-    .media-uploader__item
-      label.media-uploader__label
-        input.js-media-image-input(type="file", multiple, accept="image/*")
-        i.fal.fa-fa.fa-lg.fa-camera
-        span Thêm hình ảnh
-    .media-uploader__item
-      label.media-uploader__label
-        input.js-media-video-input(type="file", multiple, accept="video/*")
-        i.fal.fa-fa.fa-lg.fa-video
-        span Thêm video
+    .media-uploader__list.js-media-uploader-list
+      .media-uploader__item
+        label.media-uploader__label
+          input.js-media-image-input(type="file", multiple, accept="image/*")
+          i.fal.fa-fa.fa-lg.fa-camera
+          span Thêm hình ảnh
+      .media-uploader__item
+        label.media-uploader__label
+          input.js-media-video-input(type="file", multiple, accept="video/*")
+          i.fal.fa-fa.fa-lg.fa-video
+          span Thêm video
 
 mixin pf-place(className='')
   .pf-place(class=className)
@@ -344,3 +354,13 @@ mixin pf-place-default(className='')
       .col-auto
         .d-flex.flex-wrap.gap-2
           a.btn.btn-sm.btn-outline(href="./profile-place-edit.html") Sửa
+
+mixin feedback-history
+  .feedback-history
+    .od-item
+      a.od-item__frame(href="#!")
+        img(src="./images/order-item-img.jpg", alt="")
+      .od-item__info.align-self-start
+        a(href="#!")
+          strong Chao môn ngon Hưng Phát size nhỏ 200g
+    +feedback

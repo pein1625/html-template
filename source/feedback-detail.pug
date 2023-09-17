@@ -1,0 +1,22 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header
+      a.section__link(href="#!")
+        i.fal.fa-lg.fa-angle-left.me-2
+        span Trở lại
+      h1.section__title Đánh giá sản phẩm
+
+    section.od-section
+      .od-section__body
+        - for(let i = 0; i < 2; i++)
+          +feedback-history
+
+        .feedback-history
+          .feedback-history__label Đánh giá người bán
+          .feedback-history__shop
+            a(href="#!")
+              i.fal.fa-fw.fal-lg.fa-store.me-2
+              | Cơ sở sản xuất miến dong Chiến Thọ
+          +feedback

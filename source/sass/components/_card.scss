@@ -80,7 +80,7 @@
     border: 1px solid rgba(43, 64, 154, 0.3);
     font-size: 14px;
     border-radius: 4px;
-    color: $secondary;
+    color: var(--bs-secondary);
   }
 
   &__title {
@@ -88,7 +88,7 @@
     color: $text-color;
 
     &:hover {
-      color: $secondary;
+      color: var(--bs-secondary);
     }
 
     a {
@@ -98,15 +98,15 @@
 
   &__btn {
     font-size: 14px;
-    color: $primary;
-    border: 1px solid $primary;
+    color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
     border-radius: 4px;
     padding: 6px 20px;
     transition: 0.3s;
 
     &:hover {
       color: $white;
-      background-color: $primary;
+      background-color: var(--bs-primary);
     }
   }
 }
@@ -163,7 +163,7 @@
       color: $text-color;
 
       &:hover {
-        color: $primary;
+        color: var(--bs-primary);
       }
     }
   }
@@ -171,26 +171,26 @@
   &__price {
     font-size: 18px;
     font-weight: 600;
-    color: $primary;
+    color: var(--bs-primary);
     margin-top: auto;
     margin-bottom: 4px;
   }
 
   &__old-price {
     font-size: 12px;
-    color: #7B7B7B;
+    color: var(--text-gray);
     text-decoration: line-through;
   }
 
   &__stars {
     font-size: 12px;
     padding-top: 12px;
-    color: #7B7B7B;
+    color: var(--text-gray);
   }
 
   &__location {
     font-size: 12px;
-    color: #7B7B7B;
+    color: var(--text-gray);
     margin-top: 8px;
   }
 
@@ -248,7 +248,7 @@
   &__title {
     @include max-line(1);
     font-size: 14px;
-    color: $primary;
+    color: var(--bs-primary);
     margin-top: 8px;
     margin-bottom: 0;
   }
@@ -345,7 +345,7 @@
   &__title {
     @include max-line(1);
     font-size: 14px;
-    color: $primary;
+    color: var(--bs-primary);
     margin-top: 8px;
     margin-bottom: 0;
   }
@@ -370,7 +370,7 @@
 
   &__name {
     font-size: 14px;
-    color: #7B7B7B;
+    color: var(--text-gray);
     margin-bottom: 4px;
   }
 
@@ -382,7 +382,7 @@
 
   &__content {
     margin-top: 6px;
-    color: #7B7B7B;
+    color: var(--text-gray);
   }
 
   &__images {
@@ -416,7 +416,7 @@
   &__title {
     font-size: 14px;
     font-weight: 700;
-    color: $secondary;
+    color: var(--bs-secondary);
     margin-top: 8px;
     margin-bottom: 0;
 
@@ -479,8 +479,8 @@
     color: $text-color;
 
     &:hover {
-      color: $primary;
-      border-color: $primary;
+      color: var(--bs-primary);
+      border-color: var(--bs-primary);
       text-decoration: none;
     }
   }
@@ -533,17 +533,20 @@
 
     &.active,
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 }
 
 .media-uploader {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
   color: $text-color;
-  gap: 16px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: 100%;
+  }
 
   &__item {
     position: relative;
@@ -629,8 +632,8 @@
     left: 0;
 
     &:hover {
-      color: $primary;
-      border-color: $primary;
+      color: var(--bs-primary);
+      border-color: var(--bs-primary);
     }
 
     input {
@@ -641,5 +644,62 @@
       left: 0;
       opacity: 0;
     }
+  }
+}
+
+.media-uploader-2 {
+  &__btn {
+    position: relative;
+
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+
+.feedback-history {
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &__shop {
+    font-size: 14px;
+    font-weight: 500;
+
+    a {
+      color: var(--bs-primary);
+
+      &:hover {
+        color: var(--bs-primary);
+      }
+    }
+  }
+
+  & + & {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $border-color;
+  }
+
+  .feedback {
+    padding-top: 16px;
+    padding-left: 12px;
+    margin-top: 0;
+    border-top: 0;
   }
 }

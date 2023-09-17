@@ -8,7 +8,7 @@
   border: 0;
   background: 0;
   color: $gray-800;
-  color: $primary;
+  color: var(--bs-primary);
 
   &::before,
   &::after {
@@ -83,7 +83,7 @@
 
 .button {
   display: inline-block;
-  border: 1px solid $primary;
+  border: 1px solid var(--bs-primary);
   border-radius: 4px;
   padding: 10px 20px;
   text-align: center;
@@ -94,7 +94,7 @@
 
   &:hover {
     color: $white;
-    background-color: $primary;
+    background-color: var(--bs-primary);
     text-decoration: none;
   }
 }
@@ -103,7 +103,7 @@
   border-color: $border-color;
 
   &:hover {
-    color: $primary;
-    border-color: $primary;
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
   }
 }

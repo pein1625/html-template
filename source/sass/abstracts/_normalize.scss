@@ -27,6 +27,14 @@ p:last-child {
   margin-bottom: 0;
 }
 
+a {
+  color: var(--bs-primary);
+
+  &:hover {
+    color: var(--bs-primary-darken);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -46,7 +54,7 @@ h6 {
     }
 
     &:hover {
-      color: $primary;
+      color: var(--bs-primary);
     }
   }
 }

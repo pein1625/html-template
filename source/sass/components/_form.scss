@@ -36,7 +36,7 @@
   }
 
   &:hover &__icon {
-    border-color: $primary;
+    border-color: var(--bs-primary);
   }
 
   &__input {
@@ -46,8 +46,8 @@
   }
 
   &__input:checked + &__icon {
-    border-color: $primary;
-    background-color: $primary;
+    border-color: var(--bs-primary);
+    background-color: var(--bs-primary);
     color: $white;
 
     &::before {
@@ -89,13 +89,13 @@
       top: 0;
       left: 0;
       transform: scale(0);
-      background-color: $primary;
+      background-color: var(--bs-primary);
       border-radius: 50%;
     }
   }
 
   &:hover &__icon {
-    border-color: $primary;
+    border-color: var(--bs-primary);
   }
 
   &__input {
@@ -105,7 +105,7 @@
   }
 
   &__input:checked + &__icon {
-    border-color: $primary;
+    border-color: var(--bs-primary);
 
     &::before {
       transform: scale(0.675);
@@ -535,7 +535,7 @@
     &::after {
       content: "";
       border: 4px solid transparent;
-      border-bottom-color: #666;
+      border-bottom-color: var(--text-gray);
       position: absolute;
       bottom: calc(50% + 1px);
       right: 8px;
@@ -544,7 +544,7 @@
     &::after {
       bottom: auto;
       top: calc(50% + 1px);
-      border-color: #666 transparent transparent;
+      border-color: var(--text-gray) transparent transparent;
     }
 
     input {
@@ -557,7 +557,7 @@
       display: block;
       padding: 7px 34px 7px 24px;
       order: 1;
-      color: #666;
+      color: var(--text-gray);
     }
 
     input:checked + span {
@@ -584,7 +584,7 @@
     display: block;
     padding: 0 16px;
     line-height: 35px;
-    color: #666;
+    color: var(--text-gray);
     border-radius: 4px;
     white-space: nowrap;
     cursor: pointer;
@@ -593,5 +593,16 @@
     &:hover {
       background-color: #fdedd8;
     }
+  }
+}
+
+.label-star-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+
+  &__label {
+    color: $text-gray;
   }
 }

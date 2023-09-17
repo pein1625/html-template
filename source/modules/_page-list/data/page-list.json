@@ -80,6 +80,22 @@
       {
         "title": "Hồ sơ - Sửa điểm nhận hàng",
         "url": "profile-place-edit"
+      },
+      {
+        "title": "Quản lý nhận xét",
+        "url": "feedback"
+      },
+      {
+        "title": "Quản lý nhận xét - Lịch sử",
+        "url": "feedback-history"
+      },
+      {
+        "title": "Quản lý nhận xét - Đánh giá",
+        "url": "feedback-form"
+      },
+      {
+        "title": "Quản lý nhận xét - Chi tiết",
+        "url": "feedback-detail"
       }
     ]
   }

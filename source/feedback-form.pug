@@ -1,0 +1,53 @@
+extends layout/page
+
+block content
+  +od-grid
+    .section__header
+      a.section__link(href="#!")
+        i.fal.fa-lg.fa-angle-left.me-2
+        span Trở lại
+      h1.section__title Đánh giá sản phẩm
+
+    section.od-section
+      .od-section__body
+        - for(let i = 0; i < 2; i++)
+          .feedback-history
+            .od-item
+              a.od-item__frame(href="#!")
+                img(src="./images/order-item-img.jpg", alt="")
+              .od-item__info.align-self-start
+                a(href="#!")
+                  strong Chao môn ngon Hưng Phát size nhỏ 200g
+            .my-3
+              +label-star-input('Chất lượng sản phẩm', 'feedback-start-input-no-' + i)
+            .row.mb-3
+              .col-xl-6
+                textarea.form-control(rows='5', placeholder='Nội dung đánh giá')
+            .row
+              .col-xl-6
+                .media-uploader-2.js-media-uploader
+                  .d-flex.gap-12
+                    label.btn.btn-outline-primary.media-uploader-2__btn
+                      input.js-media-image-input(type="file", multiple, accept="image/*")
+                      i.fal.fa-fw.fa-camera.me-2
+                      span Thêm hình ảnh
+                    label.btn.btn-outline-primary.media-uploader-2__btn
+                      input.js-media-video-input(type="file", multiple, accept="video/*")
+                      i.fal.fa-fw.fa-video.me-2
+                      span Thêm video
+                  .media-uploader-2__list.js-media-uploader-list
+
+        .feedback-history
+          .feedback-history__label Đánh giá người bán
+          .feedback-history__shop
+            a(href="#!")
+              i.fal.fa-fw.fal-lg.fa-store.me-2
+              | Cơ sở sản xuất miến dong Chiến Thọ
+          .my-3
+            +label-star-input('Đánh giá dịch vụ người bán')
+          .row.mb-3
+            .col-xl-6
+              textarea.form-control(rows='5', placeholder='Nội dung đánh giá')
+          .d-flex.gap-3
+            button.btn.btn-primary.px-30(type="submit") Gửi đánh giá
+            a.btn.btn-outline.px-3(href="#!") Quay lại

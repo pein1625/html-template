@@ -48,7 +48,7 @@
       height: 100%;
       justify-content: center;
       align-items: center;
-      color: $primary;
+      color: var(--bs-primary);
       font-size: 18px;
       border-radius: 50%;
       transition: 0.3s ease-out;
@@ -192,7 +192,7 @@
         font-family: 'Font Awesome 5 Pro';
         font-size: 18px;
         font-weight: 300;
-        color: $primary;
+        color: var(--bs-primary);
         position: absolute;
         top: 0;
         right: 0;
@@ -204,7 +204,7 @@
     }
 
     &-root &-sub &-item:hover > &-link {
-      background-color: #FFECF9;
+      background-color: var(--bs-primary-light);
     }
 
     &-root > &-item > &-link {
