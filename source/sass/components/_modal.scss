@@ -245,15 +245,59 @@
   @media (max-width: 991px) and (orientation: landscape) {
     &-dialog {
       max-width: 400px;
+      margin-bottom: 0;
+    }
+
+    &-content {
+      padding: 20px 0;
     }
 
     &-body {
-      max-height: calc(100vh - 60px);
+      max-height: calc(100vh - 80px);
       overflow: auto;
+      padding: 20px 20px 0;
 
       &.not-overflow {
         max-height: unset;
         overflow: unset;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      margin-bottom: 20px !important;
+    }
+
+    &-icon {
+      margin-bottom: 20px;
+
+      img {
+        max-width: 100px;
+        object-fit: contain;
+        object-position: 50% 50%;
+      }
+    }
+
+    &.md-game-leaderboard,
+    &.md-game-guide {
+      .modal-content {
+        padding-top: 0;
+      }
+
+      .modal-body {
+        padding-top: 60px;
+
+        .game__header {
+          font-size: 16px;
+          padding: 8px 30px;
+          transform: translate(-50%, 12px);
+        }
+      }
+    }
+
+    &.md-game-result {
+      .game-result__badge {
+        display: none;
       }
     }
   }
@@ -333,5 +377,15 @@
 
   @media (min-width: 1800px) {
     font-size: 16px;
+  }
+
+  @media (max-width: 991px) and (orientation: landscape) {
+    &__label {
+      font-size: 16px;
+    }
+
+    &__group + &__group {
+      margin-top: 24px;
+    }
   }
 }

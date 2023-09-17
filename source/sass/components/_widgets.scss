@@ -130,6 +130,18 @@
       height: 40px;
     }
   }
+
+  @media (max-width: 991px) and (orientation: landscape) {
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    &__desc {
+      font-size: 13px;
+      margin-bottom: 20px !important;
+    }
+  }
 }
 
 .quiz-info {
@@ -676,6 +688,16 @@
     &__icon {
       width: 50px;
       height: 50px;
+    }
+  }
+
+  @media (max-width: 991px) and (orientation: landscape) {
+    &__item {
+      font-size: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
   }
 }
