@@ -1,0 +1,57 @@
+extends layout/page
+
+block define
+  - addBodyClass = 'home-page home-page-2'
+
+block header
+  +header-2
+
+block footer
+  +footer-2
+
+block content
+  .container.pt-3
+    .home-container
+      section.section-5.mb-4
+        .banner-grid.row.g-3
+          .banner-grid__col.col
+            .position-relative.h-100
+              +banner-slider('banner-slider--absolute', 1)
+          .banner-grid__col.col-auto
+            .row.g-12
+              .col-6.col-lg-12
+                +card-slider-2
+              .col-6.col-lg-12
+                +card-slider-2
+
+      section.section-5.section-5--box.section-5--gradient.mb-4
+        h2.section-5__title Sản phẩm tiêu biểu
+        +product-slider
+
+      section.section-5.section-5--box.section-5--brown.mb-4
+        h2.section-5__title Gian hàng tiêu biểu
+        +shop-slider
+
+      section.section-5.mb-4
+        h2.section-5__title Sản phẩm OCOP
+        +product-slider
+
+      section.section-5.mb-4
+        h2.section-5__title Sản phẩm công nghiệp nông thôn tiêu biểu
+        +product-slider
+
+      section.section-5.mb-4
+        +card-slider
+
+      section.section-5.mb-4
+        h2.section-5__title Sản phẩm khác
+        .product-grid
+          - for(let i = 0; i < 10; i++)
+            +product
+
+      section.section-5.mb-4
+        h2.section-5__title Tin tức mới
+        .row.g-3
+          - for(let i = 0; i < 4; i++)
+            .col-md-6
+              +news-4

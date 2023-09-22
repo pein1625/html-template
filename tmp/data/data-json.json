@@ -187,11 +187,19 @@
 	"pageList": {
 		"data": [
 			{
-				"title": "Trang chủ - NEW",
+				"title": "Trang chủ - 2 - NEW",
+				"url": "index-2"
+			},
+			{
+				"title": "Sản phẩm - 2 - NEW",
+				"url": "products-2"
+			},
+			{
+				"title": "Trang chủ",
 				"url": "index"
 			},
 			{
-				"title": "Trang chủ - 4 - NEW",
+				"title": "Trang chủ - 4",
 				"url": "index-4"
 			},
 			{
