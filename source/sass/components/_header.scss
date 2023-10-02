@@ -114,7 +114,27 @@
     justify-content: center;
     align-items: center;
     color: var(--bs-primary);
+    position: relative;
   }
+
+  &__sup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    color: $white;
+    font-size: 10px;
+    line-height: 1;
+    transform: translate(50%, -70%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+
 
   &__content {
     display: none;

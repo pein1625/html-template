@@ -194,11 +194,24 @@
       transition: 0.2s;
     }
 
-    // .menu-product {
-    //   width: 100%;
-    //   position: absolute;
-    //   top: 100%;
-    //   left: 0;
-    // }
+    .h-info {
+      order: 10;
+
+      &__icon {
+        .fa-shopping-cart {
+          font-size: 20px;
+        }
+      }
+
+      &__title {
+        color: inherit;
+      }
+
+      &__content {
+        strong {
+          color: var(--bs-primary);
+        }
+      }
+    }
   }
 }
