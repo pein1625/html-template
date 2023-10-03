@@ -48,6 +48,8 @@
   }
 
   @include media-breakpoint-down(lg) {
+    display: block;
+
     &__col {
       width: 100% !important;
 
@@ -57,10 +59,10 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     &__col {
       &:first-child {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
       }
     }
   }
