@@ -1,0 +1,11 @@
+extends layout/page
+
+block content
+  .container.py-5
+    .mb-5
+      button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target=".md-message") Popup thông báo !!!
+    .mb-5
+      button.btn.btn-primary(type="button", data-bs-toggle="modal", data-bs-target=".md-form") Popup form !!!
+
+  +md-message
+  +md-form

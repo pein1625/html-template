@@ -211,7 +211,9 @@ mixin card-slider-2
       .swiper-wrapper
         - for(let i = 0; i < 6; i++)
           .swiper-slide
-            +card
+            .card-slider-2__frame
+              img(src=`./images/card-${i+1}.jpg`, alt="")
+            //- +card
 
 mixin banner-slider
   .banner-slider

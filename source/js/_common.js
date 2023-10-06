@@ -338,3 +338,25 @@ $(function() {
       $container.find('.label-star-input__label').text(labelText);
     });
 });
+
+$(function() {
+  $messageModal = $('.md-message');
+
+  if (!$messageModal.length) return false;
+
+  let timeout = null;
+
+  $messageModal.on('shown.bs.modal', function() {
+    clearTimeout(timeout);
+
+    timeout = setTimeout(() => {
+      $messageModal.modal('hide');
+    }, 4000);
+  });
+
+  setTimeout(function() {
+    if ($messageModal.data('auto-show')) {
+      $messageModal.modal('show');
+    }
+  }, 1000);
+});
