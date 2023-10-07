@@ -16,7 +16,7 @@ mixin head(data)
         each css in cssList
           link(rel="stylesheet", href=css)
     link(rel="stylesheet", type="text/css", href="./css/app.css?v=2.2")
-    link(rel="stylesheet", type="text/css", href="./css/color.css?v=2.1")
+    link(rel="stylesheet", type="text/css", href="./css/color.css?v=2.2")
 
     // Scripts
     script(src="./js/libs.js", defer)
@@ -25,4 +25,5 @@ mixin head(data)
         each js in jsList
           script(src=js, defer)
     script(src="./vendor/fancybox/jquery.fancybox.min.js", defer)
-    script(src="./js/app.js?v=2.1", defer)
+    script(src="./js/app.js?v=2.2", defer)
+    script(src="./js/loadmore.js?v=2.2", defer)

@@ -141,9 +141,10 @@ mixin od-grid
   section.section
     .container
       .od-grid
-        .od-grid__aside
-          +od-user
-          +od-menu('mt-4')
+        .od-grid__aside.floating-container
+          .od-grid__aside-content.floating
+            +od-user
+            +od-menu('mt-4')
 
         .od-grid__main
           if (block)
@@ -156,6 +157,8 @@ mixin od-user
     .od-user__info
       .od-user__name admin_sanviet
       a.od-user__btn(href="./profile.html") Sửa hồ sơ
+    button.od-user__toggle(type="button")
+      i.fal.fa-caret-right
 
 mixin od-menu(className="")
   nav.od-menu(class=className)
@@ -221,7 +224,7 @@ mixin od-item
     .od-item__price 70.000 ₫
 
 mixin od-section(badge='Hoàn thành', badgeClass='text-success bg-success-light', btn='Xem đánh giá', btnClass='btn-outline', note='Ghi chú: Ship hàng vào giờ hành chính', btnLink='#!', shopText='Sàn Long An', shopClass='text-secondary border-secondary')
-  section.od-section.mt-4
+  section.od-section.mt-4(data-id="10")
     .od-section__header
       .od-section__icon
         i.fal.fa-fw.fal-lg.fa-store

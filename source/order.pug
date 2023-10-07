@@ -12,6 +12,11 @@ block content
       +od-section('Đang giao hàng', 'text-secondary bg-secondary-light', 'Huỷ đơn', 'btn-outline', '', './order-cancel.html')
       +od-section('Đã huỷ', 'text-primary bg-primary-light', 'Chi tiết hủy', 'btn-outline', 'Ghi chú: Đổi ý không mua nữa')
 
-    .d-flex.justify-content-center.mt-3
-      a.btn.btn-outline-primary.py-2.text-center(href="#!", style="min-width: 290px;")
-        span.d-inline-block.py-2 Xem thêm
+    //- .d-flex.justify-content-center.mt-3
+    //-   a.btn.btn-outline-primary.py-2.text-center.js-load-more-order(href="#!", style="min-width: 290px;")
+    //-     span.d-inline-block.py-2 Xem thêm
+
+    .loadmore
+      .loadmore__text
+        img(src="./images/loading.svg", alt="")
+        span Loading...

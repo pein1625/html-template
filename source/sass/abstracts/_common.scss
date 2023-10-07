@@ -44,3 +44,34 @@
     border-right: 1px solid $border-color;
   }
 }
+
+@keyframes loadingAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadmore {
+  display: none;
+  padding: 40px 24px;
+  text-align: center;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    object-position: 50% 50%;
+    margin-right: 16px;
+    animation: loadingAnimation 1s linear infinite;
+  }
+}

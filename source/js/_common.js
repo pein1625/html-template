@@ -360,3 +360,79 @@ $(function() {
     }
   }, 1000);
 });
+
+$(function() {
+  floating();
+//   const $window = $(window);
+//   const $aside = $('.od-grid__aside');
+//   const $content = $('.od-grid__aside-content');
+
+//   $window.on('scroll', function() {
+//   });
+});
+
+// floating
+function floating() {
+  $(".floating").each(function () {
+    var $floating = $(this),
+      width = $floating.width(),
+      offsetLeft = $floating.offset().left,
+      offsetTop = $floating.offset().top;
+
+    $floating.data("offsetLeft", offsetLeft).data("offsetTop", offsetTop).css({
+      width: width,
+    });
+  });
+
+  $(window).on("scroll resize", function () {
+    $(".floating").each(function () {
+      var $floating = $(this),
+        offsetTop = $floating.data("offsetTop"),
+        height = $floating.outerHeight(),
+        outerHeight = $floating.outerHeight(true),
+        $container = $floating.closest(".floating-container"),
+        dataTop = $floating.data("top"),
+        top = dataTop !== undefined ? parseInt(dataTop) : 24,
+        containerHeight = $container.outerHeight(),
+        containerOffsetTop = $container.offset().top,
+        offsetLeft = $container.data("offsetLeft"),
+        scrollTop = $(window).scrollTop();
+
+      if (outerHeight + offsetTop == containerHeight + containerOffsetTop) {
+        return;
+      } else if ($(window).width() < 1200 || scrollTop + top <= offsetTop) {
+        $(this).css({
+          position: "static",
+        }).width('100%');
+      } else if (
+        scrollTop + height + top >
+        containerHeight + containerOffsetTop
+      ) {
+        $(this).css({
+          position: "absolute",
+          zIndex: 2,
+          top: "auto",
+          bottom: 0,
+          left: "15px",
+        });
+      } else {
+        $(this).css({
+          position: "fixed",
+          zIndex: 2,
+          top: top,
+          left: offsetLeft,
+          bottom: "auto",
+        });
+      }
+    });
+  });
+}
+
+$(function() {
+  $('.od-user__toggle').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).toggleClass('active');
+    $(this).closest('.od-grid__aside').find('.od-menu').slideToggle();;
+  })
+});

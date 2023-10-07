@@ -8,7 +8,13 @@
     flex-direction: column;
 
     &__aside {
-      order: 1;
+      background-color: $white;
+      border-radius: 4px;
+      padding: 20px;
+    }
+
+    &__aside-content {
+      position: sticky;
     }
   }
 }
@@ -20,6 +26,7 @@
   background-color: $white;
   font-size: 14px;
   line-height: 20px;
+  position: sticky;
 
   &__item {
     display: flex;
