@@ -34,50 +34,6 @@ $(function() {
   });
 });
 
-$(function() {
-  const $window = $(window);
-  const $search = $('.search');
-  const $searchBtn = $('.search-btn');
-
-  $searchBtn.on('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    $searchBtn.toggleClass('active');
-
-    if ($searchBtn.hasClass('active')) {
-      $search.fadeIn();
-      $search.find('input').focus();
-    } else {
-      $search.fadeOut();
-    }
-  });
-
-  $search.on('click', function(e) {
-    e.stopPropagation();
-  });
-
-  $('html, body').on('click', function() {
-    if ($window.width() >= 1200) return;
-
-    $search.fadeOut();
-    $searchBtn.removeClass('active');
-  });
-});
-
-// $(function() {
-//   $('.js-number-input').on('input', function() {
-//     const value = $(this).val();
-//     let newVal = value.replace(/[^0-9]/g, '');
-
-//     if (newVal !== '') {
-//       newVal = Number(newVal).toLocaleString('en-US');
-//     }
-
-//     $(this).val(newVal);
-//   });
-// });
-
 $(function () {
   // number input
   $(document).on(
@@ -363,12 +319,6 @@ $(function() {
 
 $(function() {
   floating();
-//   const $window = $(window);
-//   const $aside = $('.od-grid__aside');
-//   const $content = $('.od-grid__aside-content');
-
-//   $window.on('scroll', function() {
-//   });
 });
 
 // floating
