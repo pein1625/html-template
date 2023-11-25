@@ -7,7 +7,7 @@
   background-clip: border-box;
   border: 1px solid transparent;
 
-  @include media-breakpoint-down(md) {
+  @media (max-width: 991px) {
     font-size: 12px;
     padding: 1px 10px;
   }
