@@ -1,11 +1,11 @@
-mixin menu-sub(menu, index = 0)
-  ul.menu.menu-sub(class=index?`menu-sub-${index + 1}`:'')
+mixin menu-sub(menu, index = 0, label='')
+  ul.menu.menu-sub(class=index?`menu-sub-${index + 1}`:'', data-label=label)
     each item in menu
       li.menu-item(class=item.submenu?'menu-item-group':'')
         a.menu-link(href=item.url)= item.text
         if (item.submenu)
           span.menu-toggle
-          +menu-sub(item.submenu, index + 1)
+          +menu-sub(item.submenu, index + 1, label ? item.text : '')
 
 mixin menu(menu)
   ul.menu.menu-root
@@ -15,7 +15,7 @@ mixin menu(menu)
           a.menu-link(href=item.url, class=item.active?'active':'')= item.text
           span.menu-toggle
           .menu-mega
-            +menu-sub(item.submenu)
+            +menu-sub(item.submenu, 0, item.text)
       else
         li.menu-item(class=item.submenu?'menu-item-group':'')
           a.menu-link(href=item.url, class=item.active?'active':'')
@@ -35,7 +35,7 @@ mixin menu-float
           a.menu-link(href=item.url, class=item.active?'active':'')= item.text
           span.menu-toggle
           .menu-mega
-            +menu-sub(item.submenu)
+            +menu-sub(item.submenu, 0, item.text)
       else
         li.menu-item(class=item.submenu?'menu-item-group':'')
           a.menu-link(href=item.url, class=item.active?'active':'')

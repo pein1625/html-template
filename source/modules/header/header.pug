@@ -4,11 +4,31 @@ include ../menu/menu
 mixin header
   header.header
     .header__wrapper
-      .container
+      .container-fluid
         .header__inner
-          a.header__logo(href="./index.html")
+          a.header__logo.logo(href="./index.html")
             img(src="./images/logo.svg", alt="")
+            span KẾT NỐI CUNG CẦU
+
           .header__elements
             +navbar
               +menu(menu)
+
+              nav.h-nav
+                a.h-nav__item(href="#!")
+                  i.fal.fa-lg.fa-sign-in.me-12.text-primary
+                  span Đăng nhập
+
+                a.h-nav__item(href="#!")
+                  i.fal.fa-lg.fa-user-plus.me-12.text-primary
+                  span Đăng ký
+                    br
+                    | thành viên
+
+                a.h-nav__item(href="tel:0826273888")
+                  i.fal.fa-lg.fa-phone.me-12.text-primary
+                  span Hỗ trợ
+                    br
+                    span.text-primary.fw-700 0826273888
+
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3

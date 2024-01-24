@@ -1,62 +1,4 @@
 {
-	"menu": [
-		{
-			"text": "Danh mục",
-			"url": "./about.html",
-			"submenu": [
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!"
-				},
-				{
-					"text": "Dropdown",
-					"url": "#!",
-					"submenu": [
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						},
-						{
-							"text": "Dropdown",
-							"url": "#!"
-						}
-					]
-				}
-			]
-		},
-		{
-			"text": "Doanh nghiệp",
-			"url": "./business.html"
-		},
-		{
-			"text": "Chào bán",
-			"url": "./offer.html"
-		},
-		{
-			"text": "Chào mua",
-			"url": "./offer.html"
-		},
-		{
-			"text": "Tin tức",
-			"url": "./news.html"
-		},
-		{
-			"text": "Hỏi đáp",
-			"url": "./faq.html"
-		}
-	],
 	"head": {
 		"jquery": {
 			"js": [
@@ -178,6 +120,235 @@
 			]
 		}
 	},
+	"menu": [
+		{
+			"text": "Danh mục",
+			"url": "./about.html",
+			"isMega": true,
+			"submenu": [
+				{
+					"text": "Rau củ",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						},
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						}
+					]
+				},
+				{
+					"text": "Trái cây",
+					"url": "#!"
+				},
+				{
+					"text": "Thịt gia súc gia cầm",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						},
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						}
+					]
+				},
+				{
+					"text": "Ngũ cốc, gia vị",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						}
+					]
+				},
+				{
+					"text": "Hải sản",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						}
+					]
+				},
+				{
+					"text": "Đồ uống",
+					"url": "#!",
+					"submenu": [
+						{
+							"text": "Sản phẩm OCOP",
+							"url": "#!"
+						},
+						{
+							"text": "Đặc sản vùng miền",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nữ",
+							"url": "#!"
+						},
+						{
+							"text": "Thời trang – Phụ kiện nam",
+							"url": "#!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"text": "Doanh nghiệp",
+			"url": "./business.html",
+			"submenu": [
+				{
+					"text": "Dropdown item 1",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 2",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 3",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 4",
+					"url": "#!"
+				}
+			]
+		},
+		{
+			"text": "Chào bán",
+			"url": "./offer.html",
+			"submenu": [
+				{
+					"text": "Dropdown item 1",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 2",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 3",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 4",
+					"url": "#!"
+				}
+			]
+		},
+		{
+			"text": "Chào mua",
+			"url": "./offer.html",
+			"submenu": [
+				{
+					"text": "Dropdown item 1",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 2",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 3",
+					"url": "#!"
+				},
+				{
+					"text": "Dropdown item 4",
+					"url": "#!"
+				}
+			]
+		},
+		{
+			"text": "Tin tức",
+			"url": "./news.html"
+		},
+		{
+			"text": "Hỏi đáp",
+			"url": "./faq.html"
+		}
+	],
 	"pageList": {
 		"data": [
 			{

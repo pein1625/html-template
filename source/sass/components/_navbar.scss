@@ -93,8 +93,11 @@
     }
 
     &__body {
+      display: flex;
       padding: 0;
       overflow: visible;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &__backdrop,

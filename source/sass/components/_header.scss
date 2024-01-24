@@ -1,6 +1,17 @@
 .header {
   position: relative;
   z-index: $zindex-fixed;
+  height: 78px;
+
+  &__wrapper {
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    background-color: $white;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
 
   &__inner {
     display: flex;
@@ -9,18 +20,27 @@
   }
 
   &__logo {
-    display: inline-flex;
-    margin: 16px 0;
-
-    img {
-      height: 40px;
-    }
+    margin: 18px 0;
   }
 
   &__elements {
     display: flex;
     align-items: center;
     margin-left: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__elements {
+      display: block;
+      flex-grow: 1;
+      margin-left: 30px;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &__elements {
+      margin-left: 60px;
+    }
   }
 }
 
@@ -40,5 +60,42 @@
   img {
     height: 42px;
     margin-right: 10px;
+  }
+}
+
+.h-nav {
+  margin-top: 20px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $light;
+    color: $text-gray;
+    min-height: 62px;
+
+    &:hover {
+      color: $text-gray;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    margin-top: 0;
+
+    &__item {
+      background: 0;
+      padding: 0 16px;
+      min-height: 44px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+        border-right: 1px solid $border-color;
+      }
+    }
   }
 }
