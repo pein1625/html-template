@@ -1,0 +1,144 @@
+.banner-home {
+  position: relative;
+  z-index: 1;
+  padding: 200px 0;
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    font-family: $gilroy;
+    font-size: 58px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  &__desc {
+    font-size: 24px;
+    margin-top: 1em;
+    text-align: center;
+  }
+
+  &__search {
+    width: 650px;
+    max-width: 100%;
+    margin: 64px auto 0;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    padding: 120px 0;
+
+    &__title {
+      font-size: 46px;
+    }
+
+    &__desc {
+      font-size: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 70px 0;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+
+    &__search {
+      margin-top: 30px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 16px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 16px;
+
+  @include media-breakpoint-down(xxl) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+}
+
+.home-news-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: dense;
+  grid-gap: 24px;
+
+  &__col {
+    &:first-child {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    grid-gap: 16px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    &__col {
+      &:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+  }
+}

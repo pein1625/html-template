@@ -8,3 +8,10 @@
     flex-grow: 1;
   }
 }
+
+.container-fluid {
+  @include media-breakpoint-up(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

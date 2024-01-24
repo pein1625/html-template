@@ -161,3 +161,70 @@
     }
   }
 }
+
+@mixin paging-1 {
+  position: relative;
+  padding-bottom: 50px;
+
+  &__pagination {
+    @include shadow('xs');
+
+    display: flex;
+    width: auto;
+    background-color: $white;
+    padding: 6px 8px;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border: 1px solid $text-gray;
+      background-color: $white;
+      opacity: 1;
+
+      &-active {
+        background-color: $primary;
+        border-color: $primary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 32px;
+
+    &__pagination {
+      padding: 5px 10px;
+      bottom: 0;
+
+      .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+}
+
+.card-slider {
+  @include paging-1();
+}
+
+.cate-slider,
+.business-slider {
+  @include paging-1();
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 0;
+
+    &__pagination {
+      display: none;
+    }
+  }
+}

@@ -29,6 +29,11 @@ mixin preview
 
 mixin swiper(el, number, hasNav, hasPaging)
   div(class=el)
+    .swiper-container(class=el + '__container')
+      .swiper-wrapper
+        - for(let i = 0; i < number; i++)
+          .swiper-slide
+            block
     if (hasNav)
       div(class=el + '__prev')
         i.fa.fa-angle-left
@@ -36,11 +41,6 @@ mixin swiper(el, number, hasNav, hasPaging)
         i.fa.fa-angle-right
     if (hasPaging)
       div(class=el + '__pagination')
-    .swiper-container(class=el + '__container')
-      .swiper-wrapper
-        - for(let i = 0; i < number; i++)
-          .swiper-slide
-            block
 
 mixin banner-slider
   .banner-slider
@@ -64,3 +64,16 @@ mixin partner-slider
             a.partner-slider__frame(href="#!")
               //- img(src=`./images/partner-${i + 1}.png`, alt="")
               +img
+
+//- //////////////////////////////
+mixin card-slider
+  +swiper('card-slider', 6, false, true)
+    +card-1
+
+mixin business-slider
+  +swiper('business-slider', 7, false, true)
+    +business
+
+mixin cate-slider
+  +swiper('cate-slider', 7, false, true)
+    +cate

@@ -1,0 +1,10 @@
+extends layout/page
+
+block content
+  +banner('./images/banner-business.jpg', 'Kết nối các doanh nghiệp, tổ chức, cá nhân kinh doanh')
+  div
+    .business-grid
+      - for(let i = 0; i < 30; i++)
+        +business
+    .text-center.mt-4
+      a.button(href="#!")

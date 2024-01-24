@@ -1,3 +1,62 @@
 extends layout/page
 
 block content
+  // banner
+  section.banner-home
+    img.banner-home__bg(src="./images/banner-home.jpg", alt="")
+    .container-fluid
+      .banner-home__title Vườn ươm doanh nghiệp
+        br
+        | khởi nghiệp #[span.text-primary chuyển đổi số]
+      .banner-home__desc Kết nối các doanh nghiệp, tổ chức, cá nhân kinh doanh
+      .banner-home__search
+        +bs-search
+
+  // Danh mục tiêu biểu
+  section.section
+    .container-fluid
+      h2.section__title Danh mục tiêu biểu
+      +cate-slider
+
+  // Sản phẩm cần bán
+  section.section.pt-20
+    .container-fluid
+      h2.section__title Sản phẩm cần bán
+      .product-grid
+        - for(let i = 0; i < 14; i++)
+          +product
+
+  // Slide
+  section.section.section--blue
+    .container-fluid.pt-3.pt-lg-4.pt-xxl-40
+      +card-slider
+
+  // Sản phẩm cần mua
+  section.section.pb-30
+    .container-fluid
+      h2.section__title Sản phẩm cần mua
+      .row.g-10.g-md-3
+        - for(let i = 0; i < 6; i++)
+          .col-6.col-lg-4
+            +product-2
+      .mt-30.text-center
+        a.button.button--view-more(href="#!") Xem thêm
+
+  // Doanh nghiệp tiêu biểu
+  section.section.section--gray.pb-30.pb-md-50.pb-lg-70
+    .container-fluid
+      h2.section__title Doanh nghiệp tiêu biểu
+      +business-slider
+
+  // Tin tức tiêu biểu
+  section.section.section--bg
+    img.section__bg(src="./images/home-news-bg.jpg", alt="")
+    .container-fluid
+      h2.section__title Tin tức tiêu biểu
+
+      .home-news-grid
+        .home-news-grid__col
+          +news--lg
+        - for(let i = 0; i < 4; i++)
+          .home-news-grid__col
+            +news

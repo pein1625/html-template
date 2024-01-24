@@ -79,3 +79,41 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.button {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: $white;
+  background-color: $primary;
+  border: 1px solid $primary;
+  text-align: center;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+    color: $white;
+  }
+
+  &--view-more {
+    text-transform: uppercase;
+    width: 224px;
+    max-width: 100%;
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $primary;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 13px;
+  }
+}
