@@ -1,9 +1,9 @@
-mixin banner(bg, title='Doanh nghiệp', desc='Kết nối các doanh nghiệp, tổ chức, cá nhân kinh doanh')
+mixin banner(bg, title='Doanh nghiệp', desc)
   article.banner
     img.banner__bg(src=bg, alt="")
     h3.banner__title= title
-    .banner__desc= desc
-
+    if (desc)
+      .banner__desc= desc
 
 mixin bs-search
   form.bs-search(action="#!")
@@ -11,20 +11,37 @@ mixin bs-search
 
     .bs-search__group
       .bs-search__selector
-        input.bs-search__input(type="text", name="province", size="10", value="Hồ Chí Minh", readonly)
+        input.bs-search__input(type="text", name="province", size="10", value="Hồ Chí Minh", readonly, autocomplete="off")
         .bs-search__dropdown
-          input.bs-search__dropdown-search(type="text", name="type", size="10", placeholder="Type to search...")
-          .bs-search__dropdown-item Tỉnh thành
-          .bs-search__dropdown-item Hà Nội
-          .bs-search__dropdown-item.is-selected Hồ Chí Minh
-          .bs-search__dropdown-item Đà Nẵng
+          input.bs-search__dropdown-search(type="text", name="type", size="10", placeholder="Type to search...", autocomplete="off")
+          .bs-search__dropdown-list
+            .bs-search__dropdown-item Tỉnh thành
+            .bs-search__dropdown-item Hà Nội
+            .bs-search__dropdown-item.is-selected Hồ Chí Minh
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
+            .bs-search__dropdown-item Đà Nẵng
 
       .bs-search__selector
-        input.bs-search__input(type="text", name="province", size="10", value="Tất cả", readonly)
+        input.bs-search__input(type="text", name="province", size="10", value="Tất cả", readonly, autocomplete="off")
         .bs-search__dropdown
-          .bs-search__dropdown-item Tất cả
-          .bs-search__dropdown-item Sản phẩm
-          .bs-search__dropdown-item Doanh nghiệp
+          .bs-search__dropdown-list
+            .bs-search__dropdown-item Tất cả
+            .bs-search__dropdown-item Sản phẩm
+            .bs-search__dropdown-item Doanh nghiệp
 
       button.bs-search__btn(type="button")
         i.fal.fa-lg.fa-search

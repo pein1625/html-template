@@ -1,3 +1,10 @@
 extends layout/page
 
 block content
+  +banner('./images/banner-faq.jpg', 'Hỏi đáp')
+
+  .container.pt-40.pb-4
+    - for(let i = 0; i < 10; i++)
+      +faq
+    .text-center.mt-4
+      a.button.button--view-more(href="#!") Xem thêm

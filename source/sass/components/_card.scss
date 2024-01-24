@@ -146,7 +146,14 @@
 }
 
 .business {
+  display: flex;
+  flex-direction: column;
+  @include shadow('xs');
   background-color: $white;
+
+  &:only-child {
+    height: 100%;
+  }
 
   &__frame-wrap {
     padding: 24px;
@@ -159,6 +166,9 @@
 
   &__body {
     padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 
   &__title {
@@ -175,65 +185,115 @@
   border-radius: 4px;
   overflow: hidden;
 
-  &:only-child {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
   &__frame {
     @include frame('rect', 56.25%);
     @include frame('zoom');
   }
 
   &__body {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 12px;
     flex-grow: 1;
   }
 
   &__title {
     @include max-line(2);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 0;
   }
 
   &__time {
-    font-size: 14px;
+    font-size: 12px;
     color: $text-gray;
-    margin-top: 10px;
+    padding-top: 6px;
+    margin-top: auto;
   }
 
   &__desc {
     @include max-line(2);
-    font-size: 14px;
+    font-size: 12px;
     color: $text-gray;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
-  @include media-breakpoint-down(xl) {
+  &:only-child {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(xl) {
     &__body {
       padding: 16px;
     }
 
     &__title {
+      font-size: 16px;
+    }
+
+    &__time,
+    &__desc {
       font-size: 14px;
     }
 
-    &__time {
-      font-size: 12px;
-      margin-top: 8px;
+    &--lg &__body {
+      padding: 20px;
     }
+  }
+}
 
-    &__desc {
-      font-size: 12px;
-      margin-top: 8px;
+.faq {
+  @include shadow('xs');
+  border-radius: 12px;
+  background-color: $white;
+  padding: 24px;
+
+  &__question {
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-right: 12px;
+
+    &::after {
+      content: '\f105';
+      font-family: 'Font Awesome 5 Pro';
+      display: block;
+      position: absolute;
+      top: 4px;
+      right: 0;
+      transition: 0.3s;
     }
   }
 
+  &.active &__question::after {
+    transform: translateY(-25%) rotate(90deg);
+  }
+
+  &__answer {
+    display: none;
+    color: $text-gray;
+    padding-top: 24px;
+  }
+
+  & + & {
+    margin-top: 20px;
+  }
+
   @include media-breakpoint-down(sm) {
-    &__body {
-      padding: 12px;
+    padding: 16px;
+
+    &__question {
+      font-size: 14px;
+    }
+
+    &__answer {
+      padding-top: 16px;
+      font-size: 12px;
     }
   }
 }

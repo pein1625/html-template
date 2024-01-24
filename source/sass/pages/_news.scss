@@ -1,0 +1,26 @@
+.news-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+
+  &__col {
+    &:first-child {
+      grid-column: span 2;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+
+    &__col {
+      &:first-child {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+}

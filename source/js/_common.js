@@ -1,5 +1,6 @@
 $(function() {
   handleSearch();
+  handleFaqPage();
 });
 
 function handleSearch() {
@@ -85,4 +86,13 @@ function removeVietnameseTones(str) {
   // Bỏ dấu câu, kí tự đặc biệt
   str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ");
   return str;
+}
+
+function handleFaqPage() {
+  $('.faq__question').on('click', function() {
+    const $faq = $(this).closest('.faq');
+
+    $faq.toggleClass('active');
+    $faq.find('.faq__answer').slideToggle();
+  });
 }

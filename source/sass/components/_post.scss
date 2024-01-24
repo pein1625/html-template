@@ -1,19 +1,28 @@
 .post {
   &__title {
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
   }
 
   &__info {
-    color: #999;
-    margin-bottom: 16px;
+    font-size: 14px;
+    color: $text-gray;
+    margin-bottom: 12px;
   }
 
-  &__sapo {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 16px;
+  &__content {
+    color: $text-gray;
+  }
+
+  @include media-breakpoint-up(lg) {
+    box-shadow: 0px 6.386px 12.771px 0px rgba(0, 0, 0, 0.10);
+    padding: 24px;
+    border-radius: 12px;
+    background-color: $white;
+
+    &__title {
+      font-size: 24px;
+    }
   }
 }

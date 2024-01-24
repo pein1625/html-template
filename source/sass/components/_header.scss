@@ -23,3 +23,22 @@
     margin-left: auto;
   }
 }
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: $gilroy;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #585858;
+
+  &:hover {
+    color: #585858;
+  }
+
+  img {
+    height: 42px;
+    margin-right: 10px;
+  }
+}

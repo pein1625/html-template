@@ -48,19 +48,19 @@ mixin business(img='./images/business-1.jpg', title='Hộ Kinh Doanh Lê Thanh S
         img(src=img, alt="")
     .business__body
       h3.business__title= title
-      .text-center
+      .text-center.mt-auto
         a.button.button--outline.py-1(href="#!") Chi tiết
 
-mixin news(img='./images/news-1.jpg', title='News title')
-  .news
+mixin news(className='', img='./images/news-1.jpg', title='News title')
+  .news(class=className)
     a.news__frame(href="./news-detail.html")
       img(src=img, alt="")
     .news__body
       h3.news__title
         a(href="./news-detail.html")= title
 
-mixin news--lg(img='./images/news-1.jpg', title='News title')
-  .news
+mixin news--lg(className='', img='./images/news-1.jpg', title='News title')
+  .news(class=className)
     a.news__frame(href="./news-detail.html")
       img(src=img, alt="")
     .news__body
@@ -70,3 +70,9 @@ mixin news--lg(img='./images/news-1.jpg', title='News title')
         i.fal.fa-clock.me-2
         | 03/07/2022
       .news__desc Morem ipsum dolor sit amet, consectetur adipiscing elit. Morem ipsum dolor sit amet, consectetur adipiscing elit. Morem ipsum dolor sit amet, consectetur adipiscing elit. Morem ipsum dolor sit am Morem ipsum dolor sit amet
+
+mixin faq
+  .faq
+    .faq__question Osum dolor sit amet, conectetur adipiscing dolor sit amet, conectetur adipiscing ?
+    .faq__answer
+      p Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!. Reply quickly, so you need not to wait too long for a response!.

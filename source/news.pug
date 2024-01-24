@@ -1,3 +1,20 @@
 extends layout/page
 
 block content
+  +banner('./images/banner-news.jpg', 'Tin tức')
+
+  .container.pt-40.pb-4
+    .news-grid.mb-10.mb-lg-20
+      .news-grid__col
+        +news--lg
+      - for(let i = 0; i < 4; i++)
+        .news-grid__col
+          +news
+
+    .row.g-10.g-lg-20
+      - for(let i = 0; i < 12; i++)
+        .col-6.col-lg-3
+          +news--lg
+
+    .text-center.mt-4
+      a.button.button--view-more(href="#!") Xem thêm

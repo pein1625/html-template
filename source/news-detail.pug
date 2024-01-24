@@ -1,3 +1,22 @@
 extends layout/page
 
 block content
+  .container.pt-40
+    article.post
+      h1.post__title Worem ipsum dolor sit amet, conectetur adipiscing
+      .post__info
+        i.fal.fa-clock.me-2
+        | 03/07/2022
+      .post__content
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat facilis fugiat, officia sed fuga ex? Modi distinctio, alias, quibusdam saepe adipisci facere unde quidem, praesentium vero mollitia omnis blanditiis voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minus sed deserunt nulla doloremque laborum! Temporibus reprehenderit maxime sit omnis ut quas! Obcaecati cupiditate, dolore aliquid iure officiis consectetur porro.
+        p.text-center
+          img(src="./images/news-1.jpg", alt="")
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat facilis fugiat, officia sed fuga ex? Modi distinctio, alias, quibusdam saepe adipisci facere unde quidem, praesentium vero mollitia omnis blanditiis voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minus sed deserunt nulla doloremque laborum! Temporibus reprehenderit maxime sit omnis ut quas! Obcaecati cupiditate, dolore aliquid iure officiis consectetur porro.
+
+    section.section
+      h2.section__title Tin tức khác
+
+      .row.g-10.g-lg-20
+        - for(let i = 0; i < 4; i++)
+          .col-6.col-lg-3
+            +news--lg

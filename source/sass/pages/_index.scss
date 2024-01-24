@@ -1,6 +1,6 @@
 .banner-home {
   position: relative;
-  z-index: 1;
+  z-index: 100;
   padding: 200px 0;
 
   &__bg {
@@ -109,6 +109,22 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 16px;
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .home-news-grid {

@@ -1,13 +1,7 @@
 {
   "menu": [
     {
-      "text": "Trang chủ",
-      "url": "./index.html",
-      "active": true,
-      "hasIcon": false
-    },
-    {
-      "text": "Giới thiệu",
+      "text": "Danh mục",
       "url": "./about.html",
       "submenu": [
         {
@@ -43,24 +37,24 @@
       ]
     },
     {
-      "text": "Sản phẩm",
-      "url": "./products.html"
+      "text": "Doanh nghiệp",
+      "url": "./business.html"
     },
     {
-      "text": "Dự án",
-      "url": "./projects.html"
+      "text": "Chào bán",
+      "url": "./offer.html"
     },
     {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
+      "text": "Chào mua",
+      "url": "./offer.html"
     },
     {
       "text": "Tin tức",
       "url": "./news.html"
     },
     {
-      "text": "Liên hệ",
-      "url": "./contact.html"
+      "text": "Hỏi đáp",
+      "url": "./faq.html"
     }
   ]
 }
