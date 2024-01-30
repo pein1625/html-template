@@ -126,49 +126,6 @@
   }
 }
 
-.shop-info {
-  border: 1px solid $border-color;
-  border-radius: 2px;
-
-  &__header {
-    padding: 20px 16px;
-    background: linear-gradient(180deg, #EBF5FF 0%, rgba(255, 255, 255, 0) 100%);
-  }
-
-  &__info {
-    @include frame('square');
-    width: 64px;
-    border: 1px solid $border-color;
-  }
-
-  &__btn {
-    display: inline-block;
-    border-radius: 4px;
-    font-size: 14px;
-    padding: 4px 16px;
-    color: $primary;
-    transition: 0.2s;
-    border: 1px solid $primary;
-
-    &:hover {
-      background-color: $primary;
-      color: $white;
-    }
-  }
-
-  &__body {
-    padding: 16px;
-
-    a {
-      color: inherit;
-
-      &:hover {
-        color: $primary;
-      }
-    }
-  }
-}
-
 .pd-share {
   display: flex;
   align-items: center;

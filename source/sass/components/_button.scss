@@ -81,6 +81,7 @@
 }
 
 .button {
+  @include btn('shine');
   display: inline-block;
   font-size: 14px;
   line-height: 18px;

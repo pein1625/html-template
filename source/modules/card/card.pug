@@ -45,11 +45,12 @@ mixin card-1(img="./images/card-1.jpg")
   a.card-1(href="#!")
     img(src=img, alt="")
 
-mixin business(img='./images/business-1.jpg', title='Hộ Kinh Doanh Lê Thanh Sơn')
+mixin business(title='Hộ Kinh Doanh Lê Thanh Sơn')
+  - count++
   .business
     .business__frame-wrap
       a.business__frame(href="#!")
-        img(src=img, alt="")
+        img(src=`./images/business-${count % 4 + 1}.png`, alt="")
     .business__body
       h3.business__title= title
       .text-center.mt-auto

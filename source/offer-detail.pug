@@ -1,3 +1,72 @@
 extends layout/page
 
 block content
+  section.section
+    .container-fluid
+      .detail-grid
+        .detail-grid__col
+          .ratio.ratio-1x1
+            img(src="./images/product-1.jpg", alt="")
+
+        .detail-grid__col
+          section.pd-detail
+            h1.pd-detail__title Cần mua 2 tấn cá diêu hồng
+
+            .pd-pricing.mb-3
+              .pd-pricing__title Số lượng cần mua
+              .pd-pricing__wrapper
+                .pd-pricing__item
+                  .pd-pricing__price 100.000kg
+                    span / tháng
+
+            h3.fs-16.fw-600.mb-3 Yêu cầu
+
+            table.pd-detail__info.w-100.mb-3
+              tbody
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-shopping-cart.me-2.text-primary
+                    | Số lượng tối thiểu
+                  td 100kg
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-arrow-square-down.me-2.text-primary
+                    | Quy cách đóng gói
+                  td Túi 10kg
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-clock.me-2.text-primary
+                    | Thời gian giao hàng
+                  td 7 ngày
+
+            .border-top.mb-20
+            .flex.flex-wrap.pb-30
+              a.button.button--view-more.mb-10.me-3(href="#!")
+                i.fal.fa-fw.fa-paper-plane.me-2
+                | Báo giá ngay
+              a.button.button--view-more.mb-10.button--outline(href="#!")
+                i.fal.fa-fw.fa-envelope.me-2
+                | Liên hệ
+
+            ul.nav.pd-detail__tab
+              li.nav-item
+                a.nav-link.active(href='#detail-info-tab-1', data-bs-toggle='tab') Chi tiết yêu cầu
+
+            .tab-content.pd-detail__tab-content
+              #detail-info-tab-1.tab-pane.fade.show.active
+                p Cá diêu hồng làm sạch VietGAP là một sản phẩm cá tươi ngon và chất lượng cao, được làm sạch hoàn toàn và đóng gói trong vỉ 500g (1 vỉ). Sản phẩm này tuân thủ tiêu chuẩn VietGAP, đảm bảo quy trình nuôi trồng an toàn và bền vững. Cá diêu hồng có thịt mềm, trắng và có hương vị tuyệt vời. Được làm sạch kỹ lưỡng, sản phẩm đảm bảo chất lượng và độ tươi ngon. Cá diêu hồng là nguồn cung cấp chất dinh dưỡng quan trọng như protein, axit béo omega-3, và các vitamin và khoáng chất. Với cá diêu hồng làm sạch VietGAP, bạn có thể tận hưởng món ăn ngon và an toàn cho sức khỏe của mình.
+
+        .detail-grid__col
+          +shop-info
+
+  section.section
+    .container-fluid
+      h2.section__title Sản phẩm cần mua
+
+      .row.g-10.g-md-3
+        - for(let i = 0; i < 12; i++)
+          .col-6.col-lg-4
+            +offer
+
+      .mt-40.text-center
+        a.button.button--view-more(href="#!") Xem thêm

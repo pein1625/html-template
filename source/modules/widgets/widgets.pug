@@ -45,3 +45,62 @@ mixin bs-search
 
       button.bs-search__btn(type="button")
         i.fal.fa-lg.fa-search
+
+mixin shop-info
+  .shop-info
+    .shop-info__header
+      .row.g-3
+        .col-auto
+          .shop-info__frame
+            img(src="./images/shop-logo.jpg", alt="")
+        .col
+          .fw-600.mb-12 Hộ Kinh Doanh Lê Thanh Sơn
+          a.shop-info__btn(href="#!") Xem shop
+    .shop-info__body
+      .row
+        .col-12.col-lg-6.col-xl-12
+          .fs-16.fw-600.mb-4 Thông tin doanh nghiệp
+          .row.gx-3.mt-4.align-items-center
+            .col-auto
+              i.fal.fa-fw.fa-2x.fa-map-marker-alt.text-primary
+            .col
+              .fw-500 Địa chỉ
+              .text-gray 25 Ngô Quyền - Quận Hoàn Kiếm - Hà Nội
+          .row.gx-3.mt-4.align-items-center
+            .col-auto
+              i.fal.fa-fw.fa-2x.fa-envelope.text-primary
+            .col
+              .fw-500 Email
+              .text-gray
+                a(href="mailto:daotao@ecomviet.vn") daotao@ecomviet.vn
+          .row.gx-3.mt-4.align-items-center
+            .col-auto
+              i.fal.fa-fw.fa-2x.fa-phone.text-primary
+            .col
+              .fw-500 Hotline
+              .text-gray
+                a(href="tel:024 2220 5365")  024 2220 5365
+          .row.gx-3.mt-4.align-items-center
+            .col-auto
+              i.fal.fa-fw.fa-2x.fa-globe.text-primary
+            .col
+              .fw-500 Website
+              .text-gray
+                a(href="ecomviet.vn") ecomviet.vn
+
+        .col-12.col-lg-6.col-xl-12
+          .border-top.my-4.d-lg-none.d-xl-block
+
+          .fs-16.fw-600.mb-4 Thông tin người đại diện
+          .row.gx-3.mt-4.align-items-center
+            .col-auto
+              i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+            .col
+              .fw-500 Họ và tên
+              .text-gray Hà Thị Mỹ Duyên
+          .row.gx-3.mt-4.align-items-center
+            .col-auto
+              i.fal.fa-fw.fa-2x.fa-building.text-primary
+            .col
+              .fw-500 Chức vụ
+              .text-gray Giám Đốc Kinh Doanh

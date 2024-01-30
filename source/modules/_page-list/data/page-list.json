@@ -18,6 +18,14 @@
         "url": "product-detail"
       },
       {
+        "title": "Chào bán",
+        "url": "offer"
+      },
+      {
+        "title": "Chi tiết chào bán",
+        "url": "offer-detail"
+      },
+      {
         "title": "Tin tức",
         "url": "news"
       },
