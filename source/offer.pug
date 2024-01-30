@@ -1,3 +1,21 @@
 extends layout/page
 
 block content
+  +banner('./images/banner-offer.jpg', 'Chào mua')
+
+  section.section
+    .container-fluid
+      .mx-auto(style="max-width: 650px;")
+        +bs-search
+
+  section.section.pt-0
+    .container-fluid
+      h1.section__title Sản phẩm cần mua
+
+      .row.g-10.g-lg-3
+        - for(let i = 0; i < 33; i++)
+          .col-6.col-xl-4
+            +offer
+
+      .text-center.mt-40
+        a.button.button--view-more(href="#!") Xem thêm

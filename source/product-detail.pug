@@ -1,3 +1,155 @@
 extends layout/page
 
 block content
+  section.section
+    .container-fluid
+      .detail-grid
+        .detail-grid__col
+          +preview
+
+          .pd-share.mt-3.mt-xl-4
+            i.fal.fa-share-alt.me-2.text-primary
+            span Chia sẻ
+            a.ms-3(href="#!", style="color: #0866FF")
+              i.fab.fa-fw.fa-lg.fa-facebook
+
+        .detail-grid__col
+          section.pd-detail
+            h1.pd-detail__title Cá diêu hồng làm sạch VietGAP vỉ 500g (1 Vỉ) 55.000 đ
+
+            .pd-pricing.mb-3
+              .pd-pricing__title Tối thiểu 100kg
+              .pd-pricing__wrapper
+                .pd-pricing__item
+                  div 100 - 200kg
+                  .pd-pricing__price 100.000
+                    span / kg
+                .pd-pricing__item
+                  div 200 - 400kg
+                  .pd-pricing__price 90.000
+                    span / kg
+                .pd-pricing__item
+                  div >= 400kg
+                  .pd-pricing__price 80.000
+                    span / kg
+
+            table.pd-detail__info.w-100.mb-3
+              tbody
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-map-marker-alt.me-2.text-primary
+                    | Xuất xứ
+                  td Hồ Chí Minh
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-tag.me-2.text-primary
+                    | Mã sản phẩm
+                  td KCN1343
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-usd-circle.me-2.text-primary
+                    | Khoảng giá
+                  td 80.000 - 100.000/kg
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-shopping-cart.me-2.text-primary
+                    | Số lượng tối thiểu
+                  td 100kg
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-arrow-square-down.me-2.text-primary
+                    | Quy cách đóng gói
+                  td Hộp 30g , 50g , 100g
+                tr
+                  td(width="30%")
+                    i.fal.fa-fw.fa-clock.me-2.text-primary
+                    | Thời gian giao hàng
+                  td 7 ngày
+
+            .border-top.mb-20
+            .flex.flex-wrap.pb-30
+              a.button.button--view-more.mb-10.me-3(href="#!")
+                i.fal.fa-fw.fa-paper-plane.me-2
+                | Yêu cầu báo giá
+              a.button.button--view-more.mb-10.button--outline(href="#!")
+                i.fal.fa-fw.fa-envelope.me-2
+                | Liên hệ
+
+            ul.nav.pd-detail__tab
+              li.nav-item
+                a.nav-link.active(href='#detail-info-tab-1', data-bs-toggle='tab') Giới thiệu chung
+              li.nav-item
+                a.nav-link(href='#detail-info-tab-2', data-bs-toggle='tab') Chi tiết sản phẩm
+
+            .tab-content.pd-detail__tab-content
+              #detail-info-tab-1.tab-pane.fade.show.active
+                p Giới thiệu chung Cá diêu hồng làm sạch VietGAP là một sản phẩm cá tươi ngon và chất lượng cao, được làm sạch hoàn toàn và đóng gói trong vỉ 500g (1 vỉ). Sản phẩm này tuân thủ tiêu chuẩn VietGAP, đảm bảo quy trình nuôi trồng an toàn và bền vững. Cá diêu hồng có thịt mềm, trắng và có hương vị tuyệt vời. Được làm sạch kỹ lưỡng, sản phẩm đảm bảo chất lượng và độ tươi ngon. Cá diêu hồng là nguồn cung cấp chất dinh dưỡng quan trọng như protein, axit béo omega-3, và các vitamin và khoáng chất. Với cá diêu hồng làm sạch VietGAP, bạn có thể tận hưởng món ăn ngon và an toàn cho sức khỏe của mình.
+              #detail-info-tab-2.tab-pane.fade
+                p Chi tiết sản phẩm Cá diêu hồng làm sạch VietGAP là một sản phẩm cá tươi ngon và chất lượng cao, được làm sạch hoàn toàn và đóng gói trong vỉ 500g (1 vỉ). Sản phẩm này tuân thủ tiêu chuẩn VietGAP, đảm bảo quy trình nuôi trồng an toàn và bền vững. Cá diêu hồng có thịt mềm, trắng và có hương vị tuyệt vời. Được làm sạch kỹ lưỡng, sản phẩm đảm bảo chất lượng và độ tươi ngon. Cá diêu hồng là nguồn cung cấp chất dinh dưỡng quan trọng như protein, axit béo omega-3, và các vitamin và khoáng chất. Với cá diêu hồng làm sạch VietGAP, bạn có thể tận hưởng món ăn ngon và an toàn cho sức khỏe của mình.
+
+        .detail-grid__col
+          .shop-info
+            .shop-info__header
+              .row.g-3
+                .col-auto
+                  .shop-info__frame
+                    img(src="./images/shop-logo.jpg", alt="")
+                .col
+                  .fw-600.mb-12 Hộ Kinh Doanh Lê Thanh Sơn
+                  a.shop-info__btn(href="#!") Xem shop
+            .shop-info__body
+              .row
+                .col-12.col-lg-6.col-xl-12
+                  .fs-16.fw-600.mb-4 Thông tin doanh nghiệp
+                  .row.gx-3.mt-4.align-items-center
+                    .col-auto
+                      i.fal.fa-fw.fa-2x.fa-map-marker-alt.text-primary
+                    .col
+                      .fw-500 Địa chỉ
+                      .text-gray 25 Ngô Quyền - Quận Hoàn Kiếm - Hà Nội
+                  .row.gx-3.mt-4.align-items-center
+                    .col-auto
+                      i.fal.fa-fw.fa-2x.fa-envelope.text-primary
+                    .col
+                      .fw-500 Email
+                      .text-gray
+                        a(href="mailto:daotao@ecomviet.vn") daotao@ecomviet.vn
+                  .row.gx-3.mt-4.align-items-center
+                    .col-auto
+                      i.fal.fa-fw.fa-2x.fa-phone.text-primary
+                    .col
+                      .fw-500 Hotline
+                      .text-gray
+                        a(href="tel:024 2220 5365")  024 2220 5365
+                  .row.gx-3.mt-4.align-items-center
+                    .col-auto
+                      i.fal.fa-fw.fa-2x.fa-globe.text-primary
+                    .col
+                      .fw-500 Website
+                      .text-gray
+                        a(href="ecomviet.vn") ecomviet.vn
+
+                .col-12.col-lg-6.col-xl-12
+                  .border-top.my-4.d-lg-none.d-xl-block
+
+                  .fs-16.fw-600.mb-4 Thông tin người đại diện
+                  .row.gx-3.mt-4.align-items-center
+                    .col-auto
+                      i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                    .col
+                      .fw-500 Họ và tên
+                      .text-gray Hà Thị Mỹ Duyên
+                  .row.gx-3.mt-4.align-items-center
+                    .col-auto
+                      i.fal.fa-fw.fa-2x.fa-building.text-primary
+                    .col
+                      .fw-500 Chức vụ
+                      .text-gray Giám Đốc Kinh Doanh
+
+  section.section
+    .container-fluid
+      h2.section__title Sản phẩm liên quan
+
+      .product-grid
+        - for(let i = 0; i < 14; i++)
+          +product

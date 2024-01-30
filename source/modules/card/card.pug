@@ -1,3 +1,5 @@
+- count = 0
+
 mixin cate(img='./images/cate-1.svg', title='Rau củ')
   .cate
     .cate__body
@@ -6,32 +8,34 @@ mixin cate(img='./images/cate-1.svg', title='Rau củ')
       .cate__title= title
     a.cate__link(href="#!")
 
-mixin product(img='./images/product-1.jpg', title='Ba chỉ bò Mỹ')
+mixin product(title='Ba chỉ bò Mỹ')
+  - count++
   .product
     a.product__frame(href="./product-detail.html")
-      img(src=img, alt="")
+      img(src=`./images/product-${count % 8 + 1}.jpg`, alt="")
     .product__body
       h3.product__title
-        a(href="#!")= title
+        a(href="./product-detail.html")= title
       .product__price 100.000 - 200.000đ
         span.product__unit /kg
       .product__note Tối thiểu 100kg
-      a.button.button--outline(href="#!")
+      a.button.button--block.button--outline(href="./product-detail.html")
         i.fal.fa-paper-plane.me-2
         | Yêu cầu báo giá
 
-mixin product-2(img='./images/product-1.jpg', title='Cần mua 2 tấn ba chỉ bò')
-  .product-2
+mixin offer(title='Cần mua 2 tấn ba chỉ bò')
+  - count++
+  .offer
     .row.g-3
       .col-lg-auto
-        a.product-2__frame(href="./product-detail.html")
-          img(src=img, alt="")
+        a.offer__frame(href="./product-detail.html")
+          img(src=`./images/offer-${count % 6 + 1}.jpg`, alt="")
       .col-lg
-        .product-2__body
-          .product-2__from.mb-1 Công ty TNHH Muối Thương mại Gia Thịnh
-          h3.product-2__title
+        .offer__body
+          .offer__from.mb-1 Công ty TNHH Muối Thương mại Gia Thịnh
+          h3.offer__title
             a(href="./product-detail.html")= title
-          .product-2__desc Currently, our company are interested to purchase a wide range of pharmaceutical products
+          .offer__desc Currently, our company are interested to purchase a wide range of pharmaceutical products
           .mt-3
             a.button.button--outline(href="./product-detail.html")
               i.fal.fa-paper-plane.me-2
@@ -51,18 +55,19 @@ mixin business(img='./images/business-1.jpg', title='Hộ Kinh Doanh Lê Thanh S
       .text-center.mt-auto
         a.button.button--outline.py-1(href="#!") Chi tiết
 
-mixin news(className='', img='./images/news-1.jpg', title='News title')
+mixin news(className='', title='News title')
+  - count++
   .news(class=className)
     a.news__frame(href="./news-detail.html")
-      img(src=img, alt="")
+      img(src=`./images/news-${count % 5 + 1}.jpg`, alt="")
     .news__body
       h3.news__title
         a(href="./news-detail.html")= title
 
-mixin news--lg(className='', img='./images/news-1.jpg', title='News title')
+mixin news--lg(className='', title='News title')
   .news(class=className)
     a.news__frame(href="./news-detail.html")
-      img(src=img, alt="")
+      img(src=`./images/news-${count % 5 + 1}.jpg`, alt="")
     .news__body
       h3.news__title
         a(href="./news-detail.html")= title

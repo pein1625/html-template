@@ -125,6 +125,7 @@
 			"text": "Danh mục",
 			"url": "./about.html",
 			"isMega": true,
+			"active": true,
 			"submenu": [
 				{
 					"text": "Rau củ",

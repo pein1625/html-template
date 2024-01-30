@@ -53,6 +53,8 @@
 .product {
   @include shadow('xs');
   background-color: $white;
+  border-radius: 2px;
+  overflow: hidden;
 
   &__frame {
     @include frame('rect', 89%);
@@ -94,10 +96,12 @@
   }
 }
 
-.product-2 {
+.offer {
   @include shadow('xs');
   padding: 16px;
   background-color: $white;
+  overflow: hidden;
+  border-radius: 2px;
 
   &__frame {
     @include frame('square');
@@ -127,7 +131,7 @@
     padding: 12px;
 
     &__title {
-      font-size: 15px;
+      font-size: 14px;
     }
 
     &__from {
@@ -136,6 +140,11 @@
 
     &__desc {
       font-size: 12px;
+    }
+
+    .button {
+      width: 100%;
+      text-align: center;
     }
   }
 }

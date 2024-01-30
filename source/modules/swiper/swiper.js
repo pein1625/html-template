@@ -109,3 +109,32 @@ $(function() {
     }
   });
 });
+
+// vertical preview sync slider
+$(function () {
+  if (!$(".preview-slider, .thumb-slider").length) {
+    return;
+  }
+
+  if (!window.addSwiper) {
+    console.warn('"addSwiper" funtion is required!');
+    return;
+  }
+
+  var thumbSlider = addSwiper(".thumb-slider", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    spaceBetween: 10,
+  })[0];
+
+  addSwiper(".preview-slider", {
+    effect: "fade",
+    allowTouchMove: false,
+    thumbs: {
+      swiper: thumbSlider,
+    },
+  });
+});

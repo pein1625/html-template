@@ -156,7 +156,8 @@
     }
 
     &-root &-sub &-item:hover > &-link {
-      background-color: $light;
+      background-color: #EAF2FF;
+      color: $primary;
     }
 
     &-root > &-item:not(:last-child) {
@@ -172,7 +173,9 @@
       line-height: 58px;
     }
 
+    &-root > &-item.active > &-link,
     &-root > &-item:hover > &-link {
+      color: $primary;
       box-shadow: inset 0 -4px 0 $primary;
     }
 
@@ -219,6 +222,7 @@
       z-index: 2;
       top: 100%;
       left: 0;
+      transform-origin: 0 4px;
 
       & > .menu-sub {
         display: block !important;
@@ -330,6 +334,7 @@
 
     &-root > &-item-mega:hover > &-mega {
       display: block;
+      animation: menu-float-show 0.2s ease-out;
     }
   }
 

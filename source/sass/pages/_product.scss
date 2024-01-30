@@ -1,0 +1,176 @@
+.detail-grid {
+  display: grid;
+  grid-template-columns: 540px 1fr 380px;
+  grid-gap: 20px;
+
+  @media (max-width: 1699px) {
+    grid-template-columns: 440px 1fr 300px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: 440px 1fr;
+
+    &__col {
+      &:nth-child(3) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+
+    &__col {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.pd-detail {
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    width: 100%;
+
+    td {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      &:first-child {
+        padding-right: 16px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__tab {
+    box-shadow: inset 0 -1px 0 0 $border-color;
+    margin-bottom: 24px;
+
+    .nav-item {
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+
+    .nav-link {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #585858;
+      padding: 8px 0;
+
+      &.active {
+        color: $primary;
+        box-shadow: inset 0 -2px 0 0 $primary;
+      }
+    }
+  }
+
+  &__tab-content {
+    color: #666;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
+
+.pd-pricing {
+  padding: 16px;
+  background-color: rgba($primary, 0.1);
+
+  &__title {
+    font-size: 14px;
+    color: $text-gray;
+    margin-bottom: 10px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: $white;
+    padding: 12px;
+  }
+
+  &__item {
+    flex-grow: 1;
+  }
+
+  &__price {
+    font-size: 28px;
+    font-weight: 600;
+    color: $primary;
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-gray;
+      margin-left: 3px;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__price {
+      font-size: 24px;
+    }
+  }
+}
+
+.shop-info {
+  border: 1px solid $border-color;
+  border-radius: 2px;
+
+  &__header {
+    padding: 20px 16px;
+    background: linear-gradient(180deg, #EBF5FF 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &__info {
+    @include frame('square');
+    width: 64px;
+    border: 1px solid $border-color;
+  }
+
+  &__btn {
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 4px 16px;
+    color: $primary;
+    transition: 0.2s;
+    border: 1px solid $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &__body {
+    padding: 16px;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.pd-share {
+  display: flex;
+  align-items: center;
+  color: #666;
+}

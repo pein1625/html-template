@@ -83,18 +83,23 @@
 .button {
   display: inline-block;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
   padding: 8px 12px;
   border-radius: 20px;
   color: $white;
   background-color: $primary;
   border: 1px solid $primary;
   text-align: center;
-  transition: 0.2s;
+  transition: 0.3s;
 
   &:hover {
     opacity: 0.9;
     color: $white;
+  }
+
+  &--block {
+    width: 100%;
+    text-align: center;
   }
 
   &--view-more {
