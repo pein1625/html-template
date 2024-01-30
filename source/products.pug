@@ -1,3 +1,21 @@
 extends layout/page
 
 block content
+  +banner('./images/banner-products.jpg', 'Rau củ', false, true)
+
+  .container-fluid.pt-40.pb-4
+    .list-page-grid
+      .list-page-grid__main
+        .pd-grid
+          - for(let i = 0; i < 36; i++)
+            +product
+        .text-center.mt-30
+          a.button.button--view-more(href="#!") Xem thêm
+
+      .list-page-grid__aside
+        +as-menu
+
+        +card-1('mt-20')
+        +card-1('mt-20')
+        +card-1('mt-20')
+        +card-1('mt-20')

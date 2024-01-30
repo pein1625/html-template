@@ -83,7 +83,7 @@ $(function() {
   addSwiper('.business-slider', {
     pagination: true,
     slidesPerView: 2,
-    spaceBetween: 10,
+    // spaceBetween: 10,
     speed: 500,
     loop: true,
     breakpoints: {
@@ -92,19 +92,19 @@ $(function() {
       },
       768: {
         slidesPerView: 4,
-        spaceBetween: 16,
+        // spaceBetween: 16,
       },
       992: {
         slidesPerView: 5,
-        spaceBetween: 16,
+        // spaceBetween: 16,
       },
       1200: {
         slidesPerView: 6,
-        spaceBetween: 16,
+        // spaceBetween: 16,
       },
       1700: {
         slidesPerView: 7,
-        spaceBetween: 16,
+        // spaceBetween: 16,
       }
     }
   });

@@ -2,7 +2,7 @@
   "menu": [
     {
       "text": "Danh mục",
-      "url": "./about.html",
+      "url": "./products.html",
       "isMega": true,
       "active": true,
       "submenu": [

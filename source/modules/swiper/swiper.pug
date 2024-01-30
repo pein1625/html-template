@@ -75,5 +75,10 @@ mixin business-slider
     +business
 
 mixin cate-slider
-  +swiper('cate-slider', 7, false, true)
-    +cate
+  .cate-slider
+    .cate-slider__container.swiper-container
+      .swiper-wrapper
+        each item, index in ["Rau củ","Trái cây","Thịt gia súc, gia cầm","Ngũ cốc, gia vị","Hải sản","Đồ uống","Ngũ cốc, gia vị"]
+          .swiper-slide
+            +cate(`./images/cate-${index + 1}.svg`, item)
+    .cate-slider__pagination

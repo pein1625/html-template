@@ -38,6 +38,8 @@
   }
 
   @include media-breakpoint-up(xxl) {
+    height: 98px;
+
     &__elements {
       margin-left: 60px;
     }

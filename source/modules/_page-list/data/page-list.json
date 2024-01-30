@@ -6,8 +6,12 @@
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
+        "title": "Doanh nghiệp",
+        "url": "business"
+      },
+      {
+        "title": "Chi tiết doanh nghiệp",
+        "url": "business-detail"
       },
       {
         "title": "Sản phẩm",
@@ -34,8 +38,8 @@
         "url": "news-detail"
       },
       {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Hỏi đáp",
+        "url": "faq"
       }
     ]
   }

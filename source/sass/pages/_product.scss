@@ -1,3 +1,101 @@
+.list-page-grid {
+  display: grid;
+  grid-template-columns: 300px calc(100% - 330px);
+  grid-gap: 30px;
+
+  &__aside {
+    grid-column: 1 / span 1;
+  }
+
+  &__main {
+    grid-column: 2 / span 1;
+    order: 1;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+
+    &__main {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.list-page-grid-2 {
+  display: grid;
+  grid-template-columns: 380px calc(100% - 410px);
+  grid-gap: 30px;
+
+  &__aside {
+    grid-column: 1 / span 1;
+  }
+
+  &__main {
+    grid-column: 2 / span 1;
+    order: 1;
+  }
+
+  @include media-breakpoint-down(xl) {
+    display: block;
+
+    &__main {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.pd-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+
+  @media (max-width: 1699px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include media-breakpoint-down(xxl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(xl) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-gap: 10px;
+  }
+}
+
+.pd-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+
+  @media (max-width: 1699px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include media-breakpoint-down(xxl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-gap: 10px;
+  }
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: 540px 1fr 380px;
@@ -80,6 +178,20 @@
   @include media-breakpoint-down(xxl) {
     &__title {
       font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__tab {
+      .nav-item {
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+      }
+
+      .nav-link {
+        font-size: 14px;
+      }
     }
   }
 }

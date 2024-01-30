@@ -6,7 +6,7 @@ mixin cate(img='./images/cate-1.svg', title='Rau củ')
       .cate__frame
         img(src=img, alt="")
       .cate__title= title
-    a.cate__link(href="#!")
+    a.cate__link(href="./products.html")
 
 mixin product(title='Ba chỉ bò Mỹ')
   - count++
@@ -19,7 +19,7 @@ mixin product(title='Ba chỉ bò Mỹ')
       .product__price 100.000 - 200.000đ
         span.product__unit /kg
       .product__note Tối thiểu 100kg
-      a.button.button--block.button--outline(href="./product-detail.html")
+      a.button.button--block.button--outline(href=".md-pricing-request", data-bs-toggle="modal")
         i.fal.fa-paper-plane.me-2
         | Yêu cầu báo giá
 
@@ -28,33 +28,34 @@ mixin offer(title='Cần mua 2 tấn ba chỉ bò')
   .offer
     .row.g-3
       .col-lg-auto
-        a.offer__frame(href="./product-detail.html")
+        a.offer__frame(href="./offer-detail.html")
           img(src=`./images/offer-${count % 6 + 1}.jpg`, alt="")
       .col-lg
         .offer__body
           .offer__from.mb-1 Công ty TNHH Muối Thương mại Gia Thịnh
           h3.offer__title
-            a(href="./product-detail.html")= title
+            a(href="./offer-detail.html")= title
           .offer__desc Currently, our company are interested to purchase a wide range of pharmaceutical products
           .mt-3
-            a.button.button--outline(href="./product-detail.html")
+            a.button.button--outline(href=".md-pricing", data-bs-toggle="modal")
               i.fal.fa-paper-plane.me-2
               | Báo giá ngay
 
-mixin card-1(img="./images/card-1.jpg")
-  a.card-1(href="#!")
-    img(src=img, alt="")
+mixin card-1(className='')
+  - count++
+  a.card-1(href="#!", class=className)
+    img(src=`./images/card-${count % 4 + 1}.jpg`, alt="")
 
 mixin business(title='Hộ Kinh Doanh Lê Thanh Sơn')
   - count++
   .business
     .business__frame-wrap
-      a.business__frame(href="#!")
+      a.business__frame(href="./business-detail.html")
         img(src=`./images/business-${count % 4 + 1}.png`, alt="")
     .business__body
       h3.business__title= title
       .text-center.mt-auto
-        a.button.button--outline.py-1(href="#!") Chi tiết
+        a.button.button--outline.py-1(href="./business-detail.html") Chi tiết
 
 mixin news(className='', title='News title')
   - count++

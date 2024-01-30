@@ -1,9 +1,41 @@
-mixin banner(bg, title='Doanh nghiệp', desc)
-  article.banner
+mixin banner(bg, title='Doanh nghiệp', desc, search)
+  article.banner(class=search ? 'pb-40' : '', style=search ? 'position: relative; z-index: 100' : '')
     img.banner__bg(src=bg, alt="")
     h3.banner__title= title
     if (desc)
       .banner__desc= desc
+    if (search)
+      .banner__search
+        form.bs-search(action="#!")
+          input.bs-search__input(type="text", name="search", placeholder="Tìm kiếm sản phẩm", autocomplete="off")
+
+          .bs-search__group
+            .bs-search__selector
+              input.bs-search__input(type="text", name="province", size="10", value="Hồ Chí Minh", readonly, autocomplete="off")
+              .bs-search__dropdown
+                input.bs-search__dropdown-search(type="text", name="type", size="10", placeholder="Type to search...", autocomplete="off")
+                .bs-search__dropdown-list
+                  .bs-search__dropdown-item Tỉnh thành
+                  .bs-search__dropdown-item Hà Nội
+                  .bs-search__dropdown-item.is-selected Hồ Chí Minh
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+                  .bs-search__dropdown-item Đà Nẵng
+            button.bs-search__btn(type="button")
+              i.fal.fa-lg.fa-search
 
 mixin bs-search
   form.bs-search(action="#!")
@@ -46,16 +78,28 @@ mixin bs-search
       button.bs-search__btn(type="button")
         i.fal.fa-lg.fa-search
 
-mixin shop-info
-  .shop-info
-    .shop-info__header
-      .row.g-3
-        .col-auto
-          .shop-info__frame
-            img(src="./images/shop-logo.jpg", alt="")
-        .col
-          .fw-600.mb-12 Hộ Kinh Doanh Lê Thanh Sơn
-          a.shop-info__btn(href="#!") Xem shop
+mixin shop-info(detailPage = false)
+  .shop-info(class=detailPage ? 'shop-info--detail' : '')
+    if detailPage
+      .shop-info__intro
+        .shop-info__intro-logo
+          img(src="./images/business-1.png", alt="")
+        .shop-info__intro-title Hộ Kinh Doanh Lê Thanh Sơn
+        .shop-info__intro-desc Yến Sào, nguồn thực phẩm giàu protein, 18 loại axit amin và nhiều dưỡng chất quý giá khác, có tác dụng hồi phục sức khỏe sau bệnh
+        .d-flex.justify-content-center.mt-3
+          a.d-inline-block.me-2(href="#!", style="color: #FF0302")
+            i.fab.fa-fw.fa-lg.fa-youtube
+          a.d-inline-block(href="#!", style="color: #0866FF")
+            i.fab.fa-fw.fa-lg.fa-facebook
+    else
+      .shop-info__header
+        .row.g-3
+          .col-auto
+            .shop-info__frame
+              img(src="./images/shop-logo.jpg", alt="")
+          .col
+            .fw-600.mb-12 Hộ Kinh Doanh Lê Thanh Sơn
+            a.shop-info__btn(href="./business-detail.html") Xem shop
     .shop-info__body
       .row
         .col-12.col-lg-6.col-xl-12

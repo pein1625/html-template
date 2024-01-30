@@ -1,3 +1,49 @@
 extends layout/page
 
 block content
+  +banner('./images/banner-business-detail.jpg', '')
+
+  .container-fluid.pt-40.pb-4
+    .list-page-grid-2
+      .list-page-grid-2__main
+        .row.gx-30.gy-3.mb-4
+          .col-xxl
+            ul.nav.pd-detail__tab.mb-0
+              li.nav-item
+                a.nav-link.active(href='#business-tab-1', data-bs-toggle='tab') SẢN PHẨM CẦN BÁN
+              li.nav-item
+                a.nav-link(href='#business-tab-2', data-bs-toggle='tab') SẢN PHẨM CẦN MUA
+          .col-xxl-auto
+            form.bs-search.bs-search--sm(action="#!")
+              input.bs-search__input(type="text", name="search", placeholder="Tìm kiếm sản phẩm", autocomplete="off")
+
+              .bs-search__group
+                .bs-search__selector
+                  input.bs-search__input(type="text", name="province", size="10", value="Danh mục", readonly, autocomplete="off")
+                  .bs-search__dropdown
+                    .bs-search__dropdown-list
+                      .bs-search__dropdown-item.is-selected Danh mục
+                      .bs-search__dropdown-item Rau củ
+                      .bs-search__dropdown-item Trái cây
+                      .bs-search__dropdown-item Thịt gia súc gia cầm
+                      .bs-search__dropdown-item Ngũ cốc, gia vị
+                button.bs-search__btn(type="button")
+                  i.fal.fa-lg.fa-search
+
+        .tab-content.pd-detail__tab-content
+          #business-tab-1.tab-pane.fade.show.active
+            .pd-grid-2
+              - for(let i = 0; i < 20; i++)
+                +product
+            .text-center.mt-30
+              a.button.button--view-more(href="#!") Xem thêm
+
+          #business-tab-2.tab-pane.fade
+            .pd-grid-2
+              - for(let i = 0; i < 20; i++)
+                +product
+            .text-center.mt-30
+              a.button.button--view-more(href="#!") Xem thêm
+
+      .list-page-grid-2__aside
+        +shop-info(true)

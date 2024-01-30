@@ -360,3 +360,72 @@
     }
   }
 }
+
+.as-menu {
+  border-radius: 4px;
+  border: 1px solid $border-color;
+
+  &__title {
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .menu-link {
+    transition: 0.3s;
+  }
+
+  .menu-toggle {
+    width: 49px;
+    height: 49px;
+    border: 0 !important;
+
+    &::before,
+    &::after {
+      border: 0 !important;
+    }
+  }
+
+  .menu-sub {
+    background-color: $white;
+    padding: 16px 50px;
+
+    .menu-item {
+      border: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    .menu-link {
+      padding: 0;
+
+      &.active,
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  & > .menu {
+    & > .menu-item {
+      border-top: 1px solid $border-color;
+
+      & > .menu-link {
+        padding: 15px 24px;
+
+        &.active {
+          color: $primary;
+          background-color: #EFF7FE;
+        }
+      }
+
+      &:hover > .menu-link {
+        color: $primary;
+        background-color: #EFF7FE;
+      }
+    }
+  }
+}

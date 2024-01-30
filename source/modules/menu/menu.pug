@@ -46,3 +46,18 @@ mixin menu-float
           if (item.submenu)
             span.menu-toggle
             +menu-sub(item.submenu)
+
+mixin as-menu
+  nav.as-menu.mb-30
+    .as-menu__title
+      i.fal.fa-fw.fa-bars.me-10
+      | Danh mục
+    ul.menu.menu-aside
+      each item in ["Rau củ","Trái cây","Thịt gia súc gia cầm","Ngũ cốc, gia vị","Hải sản","Đồ uống"]
+        li.menu-item.menu-item-group
+          a.menu-link(href="#!")= item
+          span.menu-toggle
+          ul.menu.menu-sub
+            each item2 in ["Vật tư nông nghiệp","Sản phẩm OCOP","Đặc sản vùng miền","Thời trang – Phụ kiện nữ","Thời trang – Phụ kiện nam"]
+              li.menu-item
+                a.menu-link(href="#!")= item2
