@@ -1,0 +1,223 @@
+mixin md-login
+  .md-login.md-form.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header.pt-4.pb-3
+          button.btn-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .mb-40
+            .text-center
+              img(src="./images/logo.svg", alt="", height="42")
+            .text-center.fs-18.fw-700.text-uppercase.mt-10(style="color: #585858;") Kết nối cung cầu
+          .input-group.input-group--reverse.mb-3
+            input.form-control(type="text", placeholder="Tên đăng nhập")
+            button.input-group-text(type="button")
+              i.fal.fa-fw.fa-user
+          .input-group.input-group--reverse.mb-3
+            input.form-control(type="password", placeholder="Mật khẩu")
+            button.input-group-text(type="button")
+              i.fal.fa-fw.fa-lock
+          .d-flex.flex-wrap.justify-content-between.text-label
+            +checkbox
+              span Giữ tôi luôn đăng nhập
+            a(href="#!") Quên mật khẩu?
+          .mb-3.mt-4
+            button.button.w-100(type="button") Đăng nhập
+          .text-center Chưa có tài khoản? #[a.text-primary.js-switch-modal(href=".md-register") Đăng ký thành viên]
+
+mixin md-register
+  .md-form.md-register.modal.fade(tabindex='-1')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h3.modal-title Đăng ký thành viên
+          button.btn-close(type="button", data-bs-dismiss="modal")
+        .modal-body
+          .row.g-3
+            .col-12
+              h4.md-form__title
+                span.md-form__icon 1
+                | Thông tin doanh nghiệp/ Đơn vị
+            .col-12
+              label.form-label Tên
+              input.form-control(type="text")
+            .col-xl-6
+              label.form-label Loại hình kinh doanh
+              input.form-control(type="text")
+            .col-xl-6
+              label.form-label Mã số thuế/ Đăng ký kinh doanh
+              input.form-control(type="text")
+            .col-12
+              +file-input
+            .col-xl-4
+              label.form-label Ngày cấp
+              .input-group
+                input.form-control.js-datepicker(type="text")
+                button.input-group-text(type="button")
+                  i.fal.fa-fw.fa-calendar
+            .col-xl-4
+              label.form-label Ngành nghề
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Ngành nghề cụ thể
+              input.form-control(type="text")
+            .col-12
+              label.form-label Địa chỉ trên đăng ký kinh doanh
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Điện thoại
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Fax
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Website
+              input.form-control(type="email")
+
+            .col-12.mt-40
+              h4.md-form__title
+                span.md-form__icon 2
+                | Thông tin người đại diện
+
+            .col-12
+              label.form-label Tên người đại diện
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Chức vụ
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Điện thoại
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Email
+              input.form-control(type="email")
+            .col-xl-6
+              label.form-label Loại hình kinh doanh
+              input.form-control(type="text")
+            .col-xl-6
+              label.form-label Mã số thuế/ Đăng ký kinh doanh
+              input.form-control(type="text")
+            .col-12.mt-40
+              h4.md-form__title
+                span.md-form__icon 3
+                | Thông tin tài khoản
+            .col-12
+              label.form-label Tên người đại diện
+              input.form-control(type="text")
+            .col-xl-4
+              label.form-label Email đăng nhập hệ thống
+              input.form-control(type="email")
+            .col-xl-4
+              label.form-label Mật khẩu
+              input.form-control(type="password")
+            .col-xl-4
+              label.form-label Nhập lại mật khẩu
+              input.form-control(type="password")
+
+        .modal-footer
+          button.button.button--outline.text-uppercase(type="button" data-bs-dismiss="modal") Hủy bỏ
+          a.button.text-uppercase.ms-3(href="#!") Đăng ký
+
+mixin md-pricing-request
+  .md-form.md-pricing-request.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h3.modal-title Gửi yêu cầu báo giá tới
+          button.btn-close(type="button", data-bs-dismiss="modal")
+
+        .modal-body.pt-0
+          .p-3.mb-4(style="background-color: rgba(51, 153, 255, 0.10); border-radius: 8px;")
+            .row.g-4
+              .col-12
+                .row.gx-3.align-items-center
+                  .col-auto
+                    i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                  .col
+                    .fw-500 Hà Thị Mỹ Duyên
+                    .text-gray Hộ Kinh Doanh Lê Thanh Sơn
+              .col-xl-6
+                .row.gx-3.align-items-center
+                  .col-auto
+                    i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                  .col
+                    .fw-500 Email
+                    .text-gray daotao@ecomviet.vn
+              .col-xl-6
+                .row.gx-3.align-items-center
+                  .col-auto
+                    i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                  .col
+                    .fw-500 Hotline
+                    .text-gray 024 2220 5365
+
+            .border-top.my-12
+
+            .row.g-3.align-items-center
+              .col-auto
+                .ratio.ratio-1x1(style="width: 48px")
+                  img(src="./images/product-1.jpg", alt="")
+              .col.fw-600
+                div(style="max-width: 240px;") Cá diêu hồng làm sạch VietGAP vỉ 500g (1 Vỉ)
+              .col-auto
+                .d-flex.align-items-center
+                  span.me-12 Số lượng
+                  input.form-control.w-auto(type="text", size="6", placeholder="100")
+                  select.form-select.w-auto.bg-transparent.border-0.pe-30
+                    option Kg
+                    option Con
+
+          .mb-3
+            input.form-control(type="text", placeholder="Tiêu đề")
+          .mb-3
+            textarea.form-control(rows="3", placeholder="Nội dung liên hệ")
+          .mb-0
+            +file-input-2
+
+        .modal-footer.d-flex
+          button.button.button--outline.text-uppercase.flex-1(type="button", data-bs-dismiss="modal") Hủy bỏ
+          a.button.text-uppercase.flex-1.ms-3(href="#!") Gửi yêu cầu
+
+mixin md-pricing
+  .md-form.md-pricing.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h3.modal-title Báo giá tới
+          button.btn-close(type="button", data-bs-dismiss="modal")
+
+        .modal-body.pt-0
+          .p-3.mb-4(style="background-color: rgba(51, 153, 255, 0.10); border-radius: 8px;")
+            .row.g-4
+              .col-12
+                .row.gx-3.align-items-center
+                  .col-auto
+                    i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                  .col
+                    .fw-500 Hà Thị Mỹ Duyên
+                    .text-gray Hộ Kinh Doanh Lê Thanh Sơn
+              .col-xl-6
+                .row.gx-3.align-items-center
+                  .col-auto
+                    i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                  .col
+                    .fw-500 Email
+                    .text-gray daotao@ecomviet.vn
+              .col-xl-6
+                .row.gx-3.align-items-center
+                  .col-auto
+                    i.fal.fa-fw.fa-2x.fa-user-circle.text-primary
+                  .col
+                    .fw-500 Hotline
+                    .text-gray 024 2220 5365
+
+          .mb-3
+            input.form-control(type="text", placeholder="Tiêu đề")
+          .mb-3
+            textarea.form-control(rows="3", placeholder="Nội dung liên hệ")
+          .mb-0
+            +file-input-2
+
+        .modal-footer.d-flex
+          button.button.button--outline.text-uppercase.flex-1(type="button", data-bs-dismiss="modal") Hủy bỏ
+          a.button.text-uppercase.flex-1.ms-3(href="#!") Gửi báo giá

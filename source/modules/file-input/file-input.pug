@@ -1,16 +1,24 @@
 mixin file-input
   label.file-input.js-file
     input.js-file-input(type="file", data-target="#avatar-preview")
-    span.file-input__btn Chọn từ máy tính
-    span.file-input__text.js-file-text Tối đa 2MB (Ảnh chân dung rõ mặt)
+    span.file-input__btn
+      i.fal.fa-fw.fa-paperclip
+    span.file-input__text.js-file-text Tải file đăng ký kinh doanh
 
 mixin file-input-2
   label.file-input.js-file
-    input.js-file-input(type="file")
-    span.file-input__btn-2
-      i.fa.fa-paperclip.mr-2
-      | Chọn tệp
-    span.file-input__text.js-file-text (Định dạng file .doc, .docx, .pdf và dung lượng <= 2MB)
+    input.js-file-input(type="file", data-target="#avatar-preview")
+    span.file-input__btn
+      i.fal.fa-fw.fa-paperclip
+    span.file-input__text.js-file-text Tải file / ảnh vào đây để đính kèm
+
+//- mixin file-input-2
+//-   label.file-input.js-file
+//-     input.js-file-input(type="file")
+//-     span.file-input__btn-2
+//-       i.fa.fa-paperclip.mr-2
+//-       | Chọn tệp
+//-     span.file-input__text.js-file-text (Định dạng file .doc, .docx, .pdf và dung lượng <= 2MB)
 
 mixin file-input-3
   label.file-input.js-file

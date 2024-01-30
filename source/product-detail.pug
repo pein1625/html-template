@@ -68,7 +68,7 @@ block content
 
             .border-top.mb-20
             .flex.flex-wrap.pb-30
-              a.button.button--view-more.mb-10.me-3(href="#!")
+              a.button.button--view-more.mb-10.me-3(href=".md-pricing-request", data-bs-toggle="modal")
                 i.fal.fa-fw.fa-paper-plane.me-2
                 | Yêu cầu báo giá
               a.button.button--view-more.mb-10.button--outline(href="#!")
@@ -97,3 +97,5 @@ block content
       .product-grid
         - for(let i = 0; i < 14; i++)
           +product
+
+  +md-pricing-request

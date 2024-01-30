@@ -7,16 +7,16 @@
 
   &__icon {
     display: inline-block;
-    width: 1.25em;
-    height: 1.25em;
+    width: 20px;
+    height: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     position: relative;
-    margin: 0 0 0.25em 0;
+    margin: 0;
 
     &:not(:last-child) {
-      margin-right: 1em;
+      margin-right: 8px;
     }
 
     &::before {
@@ -418,9 +418,58 @@
 
 .form-control,
 .form-select {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px 12px;
+
   &:focus {
     outline: 0;
     box-shadow: unset;
+  }
+}
+
+input.form-control,
+select.form-control {
+  border-radius: 8px;
+  height: 44px;
+}
+
+textarea.form-control {
+  border-radius: 8px;
+}
+
+.input-group {
+
+  .form-control:focus + .input-group-text {
+    border-color: #9cf;
+  }
+
+  &:not(.input-group--reverse) {
+    .form-control {
+      border-right: 0;
+      border-radius: 8px 0 0 8px !important;
+    }
+
+    .input-group-text {
+      border-left: 0;
+      color: $text-gray;
+      border-radius: 0 8px 8px 0 !important;
+    }
+  }
+
+  &--reverse {
+    .form-control {
+      order: 1;
+      border-left: 0;
+      border-radius: 0 8px 8px 0 !important;
+      padding-left: 0 !important;
+    }
+
+    .input-group-text {
+      border-right: 0;
+      color: $text-gray;
+      border-radius: 8px 0 0 8px !important;
+    }
   }
 }
 

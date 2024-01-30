@@ -1,6 +1,7 @@
 $(function() {
   handleSearch();
   handleFaqPage();
+  commonJs();
 });
 
 function handleSearch() {
@@ -94,5 +95,25 @@ function handleFaqPage() {
 
     $faq.toggleClass('active');
     $faq.find('.faq__answer').slideToggle();
+  });
+}
+
+function commonJs() {
+  $('.js-datepicker').datepicker({});
+
+  $('.js-switch-modal').on('click', function(e) {
+    e.preventDefault();
+
+    const target = $(this).attr('href') || $(this).data('target');
+
+    $(this).closest('.modal').modal('hide');
+
+    const $target = $(target);
+
+    if ($target.length) {
+      setTimeout(() => {
+        $target.modal('show');
+      }, 350);
+    }
   });
 }

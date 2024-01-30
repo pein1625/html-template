@@ -1,0 +1,93 @@
+.md-form {
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $primary;
+    color: $white;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .modal-header {
+    border-bottom: 0;
+  }
+
+  .modal-footer {
+    border-top: 0;
+  }
+
+  .modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .form-label {
+    color: #1A2F36;
+    margin-bottom: 4px;
+  }
+
+  .button {
+    min-width: 120px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(xl) {
+    .modal-dialog {
+      max-width: 780px !important;
+    }
+
+    .modal-content {
+      border-radius: 16px !important;
+    }
+
+    .modal-header {
+      padding: 26px 20px 20px;
+    }
+
+    .modal-body,
+    .modal-footer {
+      padding: 20px;
+    }
+
+    .button {
+      min-width: 138px;
+      padding: 12px 24px;
+      border-radius: 22px;
+    }
+  }
+}
+
+.md-login {
+  &__forgot-pass {
+    color: #1A2F36;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .modal-body {
+    padding-bottom: 60px !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .modal-dialog {
+      max-width: 412px !important;
+    }
+  }
+}
