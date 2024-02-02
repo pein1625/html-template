@@ -14,21 +14,21 @@ mixin header
             +navbar
               +menu(menu)
 
-              nav.h-nav
-                a.h-nav__item(href=".md-login", data-bs-toggle="modal")
-                  i.fal.fa-lg.fa-sign-in.me-12.text-primary
-                  span Đăng nhập
+            nav.h-nav
+              a.h-nav__item(href=".md-login", data-bs-toggle="modal")
+                i.fal.fa-lg.fa-sign-in.me-12.text-primary
+                span.h-nav__text Đăng nhập
 
-                a.h-nav__item(href=".md-register", data-bs-toggle="modal")
-                  i.fal.fa-lg.fa-user-plus.me-12.text-primary
-                  span Đăng ký
-                    br
-                    | thành viên
+              a.h-nav__item(href=".md-register", data-bs-toggle="modal")
+                i.fal.fa-lg.fa-user-plus.me-12.text-primary
+                span.h-nav__text Đăng ký
+                  br
+                  | thành viên
 
-                a.h-nav__item(href="tel:0826273888")
-                  i.fal.fa-lg.fa-phone.me-12.text-primary
-                  span Hỗ trợ
-                    br
-                    span.text-primary.fw-700 0826273888
+              a.h-nav__item(href="tel:0826273888")
+                i.fal.fa-lg.fa-phone.me-12.text-primary
+                span.h-nav__text Hỗ trợ
+                  br
+                  span.text-primary.fw-700 0826273888
 
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3

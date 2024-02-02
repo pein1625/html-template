@@ -31,7 +31,7 @@
 
   @include media-breakpoint-up(xl) {
     &__elements {
-      display: block;
+      justify-content: space-between;
       flex-grow: 1;
       margin-left: 30px;
     }
@@ -42,6 +42,14 @@
 
     &__elements {
       margin-left: 60px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .logo {
+      span {
+        display: none;
+      }
     }
   }
 }
@@ -66,37 +74,45 @@
 }
 
 .h-nav {
-  margin-top: 20px;
+  display: flex;
 
   &__item {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: $light;
+    padding: 0 16px;
     color: $text-gray;
-    min-height: 62px;
+    min-height: 44px;
 
     &:hover {
       color: $text-gray;
     }
 
     &:not(:last-child) {
-      margin-bottom: 8px;
+      border-right: 1px solid $border-color;
     }
   }
 
-  @include media-breakpoint-up(xl) {
-    display: flex;
-    margin-top: 0;
-
+  @include media-breakpoint-down(md) {
     &__item {
-      background: 0;
-      padding: 0 16px;
-      min-height: 44px;
+      padding: 0 8px;
+      min-height: unset;
 
       &:not(:last-child) {
-        margin-bottom: 0;
-        border-right: 1px solid $border-color;
+        border-right: 0;
+      }
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__item {
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 16px;
       }
     }
   }
