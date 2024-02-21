@@ -5,6 +5,11 @@ mixin navbar
       .navbar__header
         a.navbar__logo(href="./index.html")
           img(src="./images/logo.png", alt="")
+        nav.lang.lang--mobile
+          a(href="#!")
+            img(src="./images/gb.svg", alt="")
+          a(href="#!")
+            img(src="./images/vn.svg", alt="")
         button.btn-toggle.js-navbar-toggle.ms-auto
       .navbar__body
         block

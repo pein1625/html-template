@@ -1,0 +1,40 @@
+.lang {
+  display: flex;
+  margin-left: auto;
+
+  &--pc {
+    display: none;
+  }
+
+  a {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  img {
+    height: 22px;
+  }
+
+  @media (min-width: 576px) {
+    &--mobile {
+      display: none;
+    }
+
+    &--pc {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    position: absolute;
+    top: 8px;
+    right: 0;
+
+    img {
+      height: 20px;
+    }
+  }
+}
