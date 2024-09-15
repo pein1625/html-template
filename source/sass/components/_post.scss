@@ -1,19 +1,61 @@
 .post {
+  padding-bottom: 80px;
+
   &__title {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
   }
 
   &__info {
-    color: #999;
-    margin-bottom: 16px;
+    font-weight: 600;
+    font-style: italic;
+    margin: 30px 0 24px;
   }
 
-  &__sapo {
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  &__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50%;
+    color: $yellow;
+    background-color: #327E6D;
+
+    &:hover {
+      background-color: darken(#327E6D, 10%);
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+
+  &__btn-2 {
+    display: inline-block;
     font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 16px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: $white;
+    background-color: $yellow-dark;
+
+    &:hover {
+      color: $white;
+      background-color: darken($yellow-dark, 10%);
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 60px;
   }
 }

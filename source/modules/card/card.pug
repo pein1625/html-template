@@ -7,23 +7,23 @@ mixin product(img='https://placehold.co/600x400', title='', url='#!')
 
 mixin news(img='https://placehold.co/600x400')
     article.news
-        a.news__frame(href="#!")
+        a.news__frame(href="./news-detail.html")
             img(src=img, alt="")
         .news__body
             h3.news__title
-                a(href="#!") Lễ hội diều truyền thống
+                a(href="./news-detail.html") Lễ hội diều truyền thống
             .news__info
                 span.news__tag Du lịch
                 span.news__time 10/11/2022
             .news__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam Lorem ipsum dolor sit amet, ...
             .mt-auto
-                a.news__link(href="#!") Xem thêm
+                a.news__link(href="./news-detail.html") Xem thêm
 
 mixin news-2(img='https://placehold.co/600x400')
     article.news-2
-        a.news-2__frame(href="#!")
+        a.news-2__frame(href="./news-detail.html")
             img(src=img, alt="")
         .news-2__body
             h3.news-2__title
-                a(href="#!") Lorem ipsum dolor sit lorem ipsum dolor sit
+                a(href="./news-detail.html") Lorem ipsum dolor sit lorem ipsum dolor sit
             .news-2__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim....

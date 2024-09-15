@@ -1,6 +1,48 @@
 extends layout/page
 
 block content
-    section.section
+    +breadcrumb('Trang chủ', 'Tin tức', 'Bài viết')
+
+    section.post
         .container
-            h1.section__title
+            h1.post__title Lorem ipsum dolor sit amet consectetuer
+
+            .row
+                .col-lg-8.col-xl-9.mb-40.mb-lg-0
+                    img.w-100.rounded(src="./images/news.jpg", alt="")
+
+                    .post__info “ Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+
+                    .post__menu.d-none
+                        // todo hapk update post menu by js
+
+                    .post__content
+                        h2 1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat
+                        p m ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat
+
+                        h2 2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.  ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat
+                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere eaque temporibus quis, commodi minus excepturi dolorem obcaecati fugit et ipsa dolore enim, vel sequi numquam doloribus repudiandae sapiente quidem suscipit?
+
+                    .post__footer
+                        a.post__btn(href="#!")
+                            i.fab.fa-fw.fa-facebook-f
+                        a.post__btn(href="#!")
+                            i.fab.fa-fw.fa-google-plus-g
+                        a.post__btn(href="#!")
+                            i.fab.fa-fw.fa-twitter
+                        a.post__btn-2(href="#!") Chia sẻ bài viết
+
+                .col-lg-4.col-xl-3
+                    section.aside
+                        h2.aside__title Bài viết mới nhất
+                        - for(let i = 0; i < 3; i++)
+                            .mt-3
+                                +news-2
+
+                    section.aside.mt-60
+                        h2.aside__title Bài viết mới nhất
+                        - for(let i = 0; i < 3; i++)
+                            .mt-3
+                                +news-2
