@@ -7,11 +7,18 @@ mixin img(type = 'any', w = 600, h = 400, addClass='')
 
 mixin breadcrumb(...list)
   - var lastItem = list.pop()
-  ol.breadcrumb
-    each item in list
-      li.breadcrumb-item
-        a.link-unstyled(href="#!")= item
-    li.breadcrumb-item.active= lastItem
+  nav
+    .container
+      ol.breadcrumb
+        each item, index in list
+          li.breadcrumb-item
+            a.link-unstyled(href="#!")
+              if (index)
+                = item
+              else
+                i.fal.fa-fw.fa-home.me-2
+                span= item
+        li.breadcrumb-item.active= lastItem
 
 mixin pagination
   ul.pagination

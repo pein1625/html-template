@@ -16,30 +16,30 @@ block content
                             i.fal.fa-fw.fa-arrow-circle-down
 
     section.about.section
-        // todo hapk add bg
         .container
-            .row
-                .col-lg-4
-                    h2.about__title.section__title Đan Phượng
-                    .about__subtitle Đôi nét về một huyện của Hà Nội
-                    .about__content
-                        p "Nằm ở phía Tây Bắc thủ đô Hà Nội, Đan Phượng là một huyện thuộc Hà Nội. Đan Phượng cách trung tâm thành phố khoảng 20km theo trục đường quốc lộ 32. Huyện Đan Phượng nằm tiếp giáp với 5 quận huyện của Hà Nội:
-                        p - Phía Bắc giáp huyện Mê Linh, ranh giới là sông Hồng
-                            br
-                            | - Phía Nam giáp huyện Hoài Đức
-                            br
-                            | - Phía Đông giáp quận Bắc Từ Liêm và huyện Đông Anh
-                            br
-                            | - Phía Tây giáp huyện Phúc Thọ, ranh giới là sông Đáy
-                        p Huyện Đan Phượng nằm tại khoảng giữa của trục quốc lộ 32 từ trung tâm thủ đô đi Sơn Tây. Cụ thể, nếu đi từ phía Hà Nội lên Sơn Tây đến km 16+500 là ngã Tư Trôi (Hoài Đức) rẽ phải khoảng 300m là đến huyện Đan Phượng. Đan Phượng được đánh giá là huyện có diện tích tự nhiên thuộc loại nhỏ, ít đơn vị hành chính trực thuộc.
-                            br
-                            | Huyện có hệ thống sông Hồng, sông Đáy chảy qua, trước kia là ngã ba sông (sông Đáy, sông Nhuệ, sông Hồng) nên địa hình khá bằng phẳng, chủ yếu là đất phù sa, độ cao trung bình từ 6-8m."
-                .col-lg-6
-                    img.about__img(src="https://cafebiz.cafebizcdn.vn/162123310254002176/2023/7/11/vinhomes-dan-phuong-41-1689043878556-1689043878982834194451.jpg", alt="")
+            .about__inner
+                img.about__bg(src="./images/about-bg.png", alt="")
+                .row
+                    .col-lg-5.mb-4.mb-lg-0
+                        h2.about__title.section__title Đan Phượng
+                        .about__subtitle Đôi nét về một huyện của Hà Nội
+                        .about__content
+                            p "#[strong Nằm ở phía Tây Bắc thủ đô Hà Nội, Đan Phượng là một huyện thuộc Hà Nội.] Đan Phượng cách trung tâm thành phố khoảng 20km theo trục đường quốc lộ 32. Huyện Đan Phượng nằm tiếp giáp với 5 quận huyện của Hà Nội:
+                            p.fw-700 - Phía Bắc giáp huyện Mê Linh, ranh giới là sông Hồng
+                                br
+                                | - Phía Nam giáp huyện Hoài Đức
+                                br
+                                | - Phía Đông giáp quận Bắc Từ Liêm và huyện Đông Anh
+                                br
+                                | - Phía Tây giáp huyện Phúc Thọ, ranh giới là sông Đáy
+                            p Huyện Đan Phượng nằm tại khoảng giữa của trục quốc lộ 32 từ trung tâm thủ đô đi Sơn Tây. Cụ thể, nếu đi từ phía Hà Nội lên Sơn Tây đến km 16+500 là ngã Tư Trôi (Hoài Đức) rẽ phải khoảng 300m là đến huyện Đan Phượng. Đan Phượng được đánh giá là huyện có diện tích tự nhiên thuộc loại nhỏ, ít đơn vị hành chính trực thuộc.
+                                br
+                                | Huyện có hệ thống sông Hồng, sông Đáy chảy qua, trước kia là ngã ba sông (sông Đáy, sông Nhuệ, sông Hồng) nên #[strong địa hình khá bằng phẳng, chủ yếu là đất phù sa, độ cao trung bình từ 6-8m.]"
+                    .col-lg-7
+                        img.w-full.rounded(src="./images/about.jpg", alt="")
 
     section.counter.section
-        img.section__bg(src="https://www.textures4photoshop.com/tex/thumbs/seamless-texture-rough-paper-free-thumb33.jpg", alt="")
-        // todo hapk bg
+        img.section__bg(src="./images/counter-bg.png", alt="")
         .container
             .counter__inner
                 .counter__item
@@ -85,6 +85,5 @@ block content
             .section__desc Cùng cập nhật tin tức để biết tường tận về những di tích, cảnh đẹp và điểm đến không thể bỏ qua tại Đan Phượng
             .mt-5
                 +news-slider
-                //- todo hapk news slider
-            .text-center.mt-3
+            .text-center.mt-4
                 a.button(href="#!") Xem tất cả

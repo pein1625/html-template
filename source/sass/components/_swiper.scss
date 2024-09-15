@@ -111,13 +111,12 @@
   &__prev,
   &__next {
     padding: 10px 5px;
-    color: $secondary;
     font-size: 24px;
     line-height: 1;
-    color: $primary;
+    color: #333;
     position: absolute;
     top: 50%;
-    left: -40px;
+    left: -60px;
     z-index: 10;
     transform: translateY(-50%);
     cursor: pointer;
@@ -133,7 +132,7 @@
 
   &__next {
     left: auto;
-    right: -40px;
+    right: -60px;
   }
 
   @media (max-width: 575px) {
@@ -158,6 +157,30 @@
 
     &__next {
       right: -15px;
+    }
+  }
+}
+
+.news-slider {
+  @include slider-nav-3();
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    margin: -8px;
+  }
+
+  .swiper-slide {
+    padding: 8px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__prev {
+      left: -50px;
+    }
+
+    &__next {
+      right: -50px;
     }
   }
 }

@@ -20,6 +20,10 @@
         color: $green-light;
         text-align: center;
         margin: 0;
+
+        &--black {
+            color: #1c1c1c;
+        }
     }
 
     &__subtitle {
@@ -53,5 +57,21 @@
 
     @include media-breakpoint-down(md) {
         padding: 40px 0;
+    }
+}
+
+.section-2 {
+    padding: 60px 0;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.aside {
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
     }
 }

@@ -1,13 +1,26 @@
 extends layout/page
 
 block content
-    section.section
+    +breadcrumb('Trang chủ', 'Tin tức', 'Bài viết')
+
+    section.section.pt-3
         .container
-            h1.section__title Lễ hội
-
             .row
-                - for(let i = 0; i < 9; i++)
-                    .col-6.col-lg-4.mb-30
-                        +news
+                .col-lg-8.col-xl-9.mb-40
+                    h1.section__title.section__title--black Tin tức
 
-            +pagination
+                .col-lg-8.col-xl-9.mb-40.mb-lg-0
+                    .row.g-3.g-xl-30
+                        - for(let i = 0; i < 9; i++)
+                            .col-6.col-lg-4
+                                +news
+
+                    nav.d-flex.justify-content-center.mt-30
+                        +pagination
+
+                .col-lg-4.col-xl-3
+                    section.aside
+                        h2.aside__title Tin tức nổi bật
+                        - for(let i = 0; i < 6; i++)
+                            .mt-3
+                                +news-2
