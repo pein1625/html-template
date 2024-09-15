@@ -1,4 +1,36 @@
 {
+	"pageList": {
+		"data": [
+			{
+				"title": "Trang chủ",
+				"url": "index"
+			},
+			{
+				"title": "Giới thiệu",
+				"url": "about"
+			},
+			{
+				"title": "Sản phẩm",
+				"url": "products"
+			},
+			{
+				"title": "Chi tiết sản phẩm",
+				"url": "product-detail"
+			},
+			{
+				"title": "Tin tức",
+				"url": "news"
+			},
+			{
+				"title": "Chi tiết tin tức",
+				"url": "news-detail"
+			},
+			{
+				"title": "Liên hệ",
+				"url": "contact"
+			}
+		]
+	},
 	"head": {
 		"jquery": {
 			"js": [
@@ -120,38 +152,6 @@
 			]
 		}
 	},
-	"pageList": {
-		"data": [
-			{
-				"title": "Trang chủ",
-				"url": "index"
-			},
-			{
-				"title": "Giới thiệu",
-				"url": "about"
-			},
-			{
-				"title": "Sản phẩm",
-				"url": "products"
-			},
-			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
-			},
-			{
-				"title": "Tin tức",
-				"url": "news"
-			},
-			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
-			},
-			{
-				"title": "Liên hệ",
-				"url": "contact"
-			}
-		]
-	},
 	"menu": [
 		{
 			"text": "Trang chủ",
@@ -217,7 +217,17 @@
 		},
 		{
 			"text": "Tin tức",
-			"url": "./news.html"
+			"url": "./news.html",
+			"submenu": [
+				{
+					"text": "Tin tức",
+					"url": "./news.html"
+				},
+				{
+					"text": "Bài viết",
+					"url": "./posts.html"
+				}
+			]
 		},
 		{
 			"text": "Thư viện",

@@ -39,7 +39,7 @@
         height: 112px;
         padding: 26px;
         border-radius: 50%;
-        background-color: $green-light;
+        background-color: $green;
     }
 
     &__label {
@@ -51,7 +51,7 @@
     }
 
     &__name {
-        color: $green-light;
+        color: $green;
         font-size: 64px;
         margin-top: 2px;
         margin-bottom: 0.625em;
@@ -62,7 +62,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: $green-light;
+        color: $green;
         font-size: 14px;
         font-weight: 600;
         gap: 8px;
@@ -76,7 +76,7 @@
         }
 
         &:hover {
-            color: $green-light;
+            color: $green;
             text-decoration: none;
         }
     }
@@ -210,7 +210,7 @@
     }
 
     &__item {
-        background: $green-light;
+        background: $green;
         border-radius: 20px;
         padding: 40px 16px;
         display: flex;

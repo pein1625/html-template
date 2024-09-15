@@ -7,7 +7,13 @@ block content
         .container
             .row
                 .col-lg-8.col-xl-9.mb-30.mb-lg-40
-                    h1.section__title.section__title--black Tin tức
+                    h1.section__title.section__title--black Bài viết
+
+                    nav.tags.mt-30.mt-lg-40
+                        a.tags__item.active(href="#!") Điểm đến
+                        a.tags__item(href="#!") Hiện vật
+                        a.tags__item(href="#!") Sản phẩm
+                        a.tags__item(href="#!") Lễ hội
 
                 .col-lg-8.col-xl-9.mb-30.mb-lg-0
                     .row.g-3.g-xl-30
@@ -20,7 +26,7 @@ block content
 
                 .col-lg-4.col-xl-3
                     section.aside
-                        h2.aside__title Tin tức nổi bật
+                        h2.aside__title Bài viết nổi bật
                         - for(let i = 0; i < 6; i++)
                             .mt-3
                                 +news-2

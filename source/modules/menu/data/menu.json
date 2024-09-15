@@ -64,7 +64,17 @@
     },
     {
       "text": "Tin tức",
-      "url": "./news.html"
+      "url": "./news.html",
+      "submenu": [
+        {
+          "text": "Tin tức",
+          "url": "./news.html"
+        },
+        {
+          "text": "Bài viết",
+          "url": "./posts.html"
+        }
+      ]
     },
     {
       "text": "Thư viện",

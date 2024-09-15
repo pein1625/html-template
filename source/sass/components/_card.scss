@@ -129,4 +129,12 @@
     &__desc {
         @include max-line(3);
     }
+
+    @include media-breakpoint-down(md) {
+        font-size: 12px;
+
+        &__frame {
+            width: 80px;
+        }
+    }
 }
