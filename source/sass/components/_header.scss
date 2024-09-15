@@ -1,25 +1,73 @@
 .header {
-  position: relative;
-  z-index: $zindex-fixed;
-
-  &__inner {
-    display: flex;
-    align-items: center;
     position: relative;
-  }
+    z-index: $zindex-fixed;
+    height: 54px;
 
-  &__logo {
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $green-light;
+        box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__elements {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+        &__elements {
+            flex-grow: 1;
+        }
+    }
+}
+
+.h-logo {
     display: inline-flex;
-    margin: 16px 0;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $yellow;
+    white-space: nowrap;
+    margin: 10px 0;
 
     img {
-      height: 40px;
+        height: 34px;
     }
-  }
 
-  &__elements {
-    display: flex;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+    }
+}
+
+.h-btn {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    justify-content: center;
     align-items: center;
-    margin-left: auto;
-  }
+    border: 0;
+    border-radius: 50%;
+    color: $yellow;
+    background-color: rgba(#000, 0.3);
+    transition: 0.2s;
+
+    &:hover {
+        color: $yellow;
+        background-color: rgba(#000, 0.5);
+        text-decoration: none;
+    }
 }

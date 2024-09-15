@@ -1,0 +1,95 @@
+.footer {
+    background: url('../images/footer-bg-1.png') no-repeat;
+    background-color: $green-light;
+
+    &__inner {
+        padding: 75px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__bg-2,
+    &__bg-3 {
+        width: 25%;
+        height: calc(100% - 50px);
+        object-fit: contain;
+        object-position: 50% 100%;
+        position: absolute;
+        bottom: 25px;
+        left: 15%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &__bg-3 {
+        left: 85%;
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-align: center;
+        color: $yellow;
+        text-transform: uppercase;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__inner {
+            padding: 40px 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__inner {
+            padding: 32px 0;
+        }
+
+        &__heading {
+            font-size: 16px;
+        }
+    }
+}
+
+.f-contact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 28px;
+
+    &__item {
+        text-align: center;
+        color: $white;
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: inherit;
+
+            &:hover {
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+}
+
+.copyright {
+    color: $yellow;
+    text-align: center;
+    padding: 12px 0;
+    background-color: $green-dark;
+
+    @include media-breakpoint-down(md) {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+}

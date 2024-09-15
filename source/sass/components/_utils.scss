@@ -43,23 +43,41 @@
 }
 
 .search {
-  padding: 16px 20px;
-  border-top: 1px solid #aaa;
-  background-color: $light;
+  display: none;
+  padding: 8px 15px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: -15px;
+  width: calc(100% + 30px);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.15);
 
   .form-control {
     border-right: 0;
+    border: 0;
+    order: 1;
+    padding-left: 0;
 
     &:focus {
       box-shadow: unset;
     }
   }
 
-  .form-control:focus ~ .input-group-text {
-    border-color: $input-focus-border-color;
+  .input-group-text {
+    border: 0;
+    color: #A5A5A5;
   }
 
-  @media (min-width: 1200px) {
-    display: none;
+  @include media-breakpoint-up(sm) {
+    width: 390px;
+    max-width: 100%;
+    right: 0;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    right: 50px;
+    padding: 10px 8px;
   }
 }

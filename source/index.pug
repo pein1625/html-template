@@ -1,3 +1,90 @@
 extends layout/page
 
 block content
+    section.h-banner
+        img.h-banner__bg(src="./images/banner.jpg", alt="")
+        .h-banner__wrapper
+            .container
+                .h-banner__inner
+                    .h-banner__logo
+                        img(src="./images/logo.png", alt="")
+                    .h-banner__label CỔNG THÔNG TIN DU LỊCH
+                    .h-banner__name Huyện Đan Phượng
+                    .h-banner__btn-wrap
+                        a.h-banner__btn(href="#!")
+                            span Xem thêm
+                            i.fal.fa-fw.fa-arrow-circle-down
+
+    section.about.section
+        // todo hapk add bg
+        .container
+            .row
+                .col-lg-4
+                    h2.about__title.section__title Đan Phượng
+                    .about__subtitle Đôi nét về một huyện của Hà Nội
+                    .about__content
+                        p "Nằm ở phía Tây Bắc thủ đô Hà Nội, Đan Phượng là một huyện thuộc Hà Nội. Đan Phượng cách trung tâm thành phố khoảng 20km theo trục đường quốc lộ 32. Huyện Đan Phượng nằm tiếp giáp với 5 quận huyện của Hà Nội:
+                        p - Phía Bắc giáp huyện Mê Linh, ranh giới là sông Hồng
+                            br
+                            | - Phía Nam giáp huyện Hoài Đức
+                            br
+                            | - Phía Đông giáp quận Bắc Từ Liêm và huyện Đông Anh
+                            br
+                            | - Phía Tây giáp huyện Phúc Thọ, ranh giới là sông Đáy
+                        p Huyện Đan Phượng nằm tại khoảng giữa của trục quốc lộ 32 từ trung tâm thủ đô đi Sơn Tây. Cụ thể, nếu đi từ phía Hà Nội lên Sơn Tây đến km 16+500 là ngã Tư Trôi (Hoài Đức) rẽ phải khoảng 300m là đến huyện Đan Phượng. Đan Phượng được đánh giá là huyện có diện tích tự nhiên thuộc loại nhỏ, ít đơn vị hành chính trực thuộc.
+                            br
+                            | Huyện có hệ thống sông Hồng, sông Đáy chảy qua, trước kia là ngã ba sông (sông Đáy, sông Nhuệ, sông Hồng) nên địa hình khá bằng phẳng, chủ yếu là đất phù sa, độ cao trung bình từ 6-8m."
+                .col-lg-6
+                    img.about__img(src="https://cafebiz.cafebizcdn.vn/162123310254002176/2023/7/11/vinhomes-dan-phuong-41-1689043878556-1689043878982834194451.jpg", alt="")
+
+    section.counter.section
+        img.section__bg(src="https://www.textures4photoshop.com/tex/thumbs/seamless-texture-rough-paper-free-thumb33.jpg", alt="")
+        // todo hapk bg
+        .container
+            .counter__inner
+                .counter__item
+                    .counter__number +50
+                    .counter__label Di tích
+                    .counter__desc Trải qua thăng trầm lịch sử
+                .counter__item
+                    .counter__number +2000
+                    .counter__label Hiện vật
+                    .counter__desc Qua các thời đại
+                .counter__item
+                    .counter__number >100
+                    .counter__label Tuyến du lịch
+                    .counter__desc Cho khách trải nghiệm
+                .counter__item
+                    .counter__number >100
+                    .counter__label Sản phẩm
+                    .counter__desc Cho khách trải nghiệm
+
+    section.section
+        .container
+            h2.section__title Điểm đến
+            .section__subtitle Những địa điểm nổi bật
+            .section__desc Cùng khám phá ngay những điểm đến tuyệt vời ở Đan Phượng bạn nhé!
+            // todo hapk place place holder
+            .text-center.mt-3
+                a.button(href="#!") Xem tất cả
+
+    section.section
+        .container
+            h2.section__title Tuyến du lịch
+            .section__subtitle Những tuyến du lịch nổi bật
+            .section__desc Mời bạn chọn tuyến du lịch yêu thích tại đây, khám phá ngay nào!
+                // todo hapk search input
+        div
+            // todo hapk map
+
+    section.section
+        //- todo hapk add bg
+        .container
+            h2.section__title Tin tức
+            .section__subtitle Những tin tức cập nhật mới nhất
+            .section__desc Cùng cập nhật tin tức để biết tường tận về những di tích, cảnh đẹp và điểm đến không thể bỏ qua tại Đan Phượng
+            .mt-5
+                +news-slider
+                //- todo hapk news slider
+            .text-center.mt-3
+                a.button(href="#!") Xem tất cả

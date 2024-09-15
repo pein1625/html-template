@@ -120,6 +120,38 @@
 			]
 		}
 	},
+	"pageList": {
+		"data": [
+			{
+				"title": "Trang chủ",
+				"url": "index"
+			},
+			{
+				"title": "Giới thiệu",
+				"url": "about"
+			},
+			{
+				"title": "Sản phẩm",
+				"url": "products"
+			},
+			{
+				"title": "Chi tiết sản phẩm",
+				"url": "product-detail"
+			},
+			{
+				"title": "Tin tức",
+				"url": "news"
+			},
+			{
+				"title": "Chi tiết tin tức",
+				"url": "news-detail"
+			},
+			{
+				"title": "Liên hệ",
+				"url": "contact"
+			}
+		]
+	},
 	"menu": [
 		{
 			"text": "Trang chủ",
@@ -128,7 +160,7 @@
 			"hasIcon": false
 		},
 		{
-			"text": "Giới thiệu",
+			"text": "Không gian 360",
 			"url": "./about.html",
 			"submenu": [
 				{
@@ -164,56 +196,32 @@
 			]
 		},
 		{
-			"text": "Sản phẩm",
+			"text": "Hiện vật 3D",
 			"url": "./products.html"
 		},
 		{
-			"text": "Dự án",
+			"text": "Điểm đến",
 			"url": "./projects.html"
 		},
 		{
-			"text": "Hệ thống phân phối",
+			"text": "Tuyến du lịch",
 			"url": "./distribution.html"
+		},
+		{
+			"text": "Sản phẩm",
+			"url": "./news.html"
+		},
+		{
+			"text": "Lễ hội",
+			"url": "./news.html"
 		},
 		{
 			"text": "Tin tức",
 			"url": "./news.html"
 		},
 		{
-			"text": "Liên hệ",
-			"url": "./contact.html"
+			"text": "Thư viện",
+			"url": "./news.html"
 		}
-	],
-	"pageList": {
-		"data": [
-			{
-				"title": "Trang chủ",
-				"url": "index"
-			},
-			{
-				"title": "Giới thiệu",
-				"url": "about"
-			},
-			{
-				"title": "Sản phẩm",
-				"url": "products"
-			},
-			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
-			},
-			{
-				"title": "Tin tức",
-				"url": "news"
-			},
-			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
-			},
-			{
-				"title": "Liên hệ",
-				"url": "contact"
-			}
-		]
-	}
+	]
 }

@@ -23,3 +23,9 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.news-slider', {
+    slicesPerView: 4,
+  });
+});

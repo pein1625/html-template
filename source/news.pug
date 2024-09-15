@@ -1,0 +1,13 @@
+extends layout/page
+
+block content
+    section.section
+        .container
+            h1.section__title Lễ hội
+
+            .row
+                - for(let i = 0; i < 9; i++)
+                    .col-6.col-lg-4.mb-30
+                        +news
+
+            +pagination

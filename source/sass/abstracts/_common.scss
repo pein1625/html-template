@@ -8,3 +8,32 @@
     flex-grow: 1;
   }
 }
+
+.button {
+  display: inline-block;
+  border: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 10px;
+  text-align: center;
+  min-width: 210px;
+  text-transform: uppercase;
+  color: $white;
+  background: $yellow-dark;
+  border-radius: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($yellow-dark, 10%);
+    color: $white;
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-down(xl) {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-width: 160px;
+  }
+}

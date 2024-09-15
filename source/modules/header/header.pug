@@ -6,9 +6,17 @@ mixin header
     .header__wrapper
       .container
         .header__inner
-          a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+          a.h-logo(href="./index.html")
+            img(src="./images/logo.png", alt="")
+            .h-logo__text
+              span Số hóa
+              span Đan Phượng
           .header__elements
             +navbar
               +menu(menu)
+            +search
+            button.h-btn.search-btn(type="button")
+              i.fal.fa-fw.fa-search
+            a.h-btn.ms-3(href="#!")
+              i.fal.fa-fw.fa-user
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
