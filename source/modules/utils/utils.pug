@@ -45,3 +45,20 @@ mixin search
       button.input-group-text
         i.far.fa-search
       input.form-control(type='text', placeholder='Tìm kiếm...')
+
+mixin search-field(hasTag = false)
+  .search-field
+    .input-group
+      input.form-control(type="text", placeholder="Tìm kiếm...")
+      button.input-group-text
+        i.fal.fa-fw.fa-search
+    if (hasTag)
+      .search-field__tags
+        span.search-field__tag
+            span Sản phẩm A
+            span
+                i.far.fa-fw.fa-times-circle
+        span.search-field__tag
+            span Sản phẩm B
+            span
+                i.far.fa-fw.fa-times-circle

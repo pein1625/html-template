@@ -1,0 +1,28 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Lễ hội', 'Tìm kiếm lễ hội')
+
+    section.section.pt-10.pb-60
+        .container
+            h1.section__title.section__title--black Lễ hội
+
+
+            .mx-auto.mt-4(style="max-width: 800px")
+                +search-field
+
+            nav.tags.mt-3.mb-4.mb-lg-40
+                a.tags__item.active(href="#!") Tất cả
+                a.tags__item(href="#!") 2024
+                a.tags__item(href="#!") 2023
+                a.tags__item(href="#!") 2022
+                a.tags__item(href="#!") 2021
+                a.tags__item(href="#!") 2020
+
+            .row.g-3.g-xl-30
+                - for(let i = 0; i < 9; i++)
+                    .col-6.col-lg-4
+                        +news
+
+            nav.d-flex.justify-content-center.mt-30
+                +pagination

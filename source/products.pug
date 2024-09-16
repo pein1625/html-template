@@ -12,22 +12,9 @@ block content
                     .s-products__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam
 
                     form.p-filter(action="#!")
-                        .input-group
-                            input.form-control(type="text", placeholder="Tìm kiếm...")
-                            button.input-group-text
-                                i.fal.fa-search
+                        +search-field(true)
 
-                        .p-filter__tags
-                            span.p-filter__tag
-                                span Sản phẩm A
-                                span
-                                    i.far.fa-fw.fa-times-circle
-                            span.p-filter__tag
-                                span Sản phẩm B
-                                span
-                                    i.far.fa-fw.fa-times-circle
-
-                        .p-filter__menu
+                        .p-filter__menu.mt-4.mt-lg-40
                             ul.menu
                                 each item in ['Sản phẩm làng nghề', 'Sản phẩm OCOP', 'Sản phẩm khác']
                                     li.menu-item
