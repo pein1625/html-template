@@ -76,3 +76,90 @@
     }
   }
 }
+
+.p-filter {
+  .input-group {
+    box-shadow: 0 1px 4px rgba(#000, 0.25);
+    border-radius: 10px;
+
+    .form-control {
+      height: 40px;
+      border: 0;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .input-group-text {
+      border: 0;
+      color: #999;
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: 600;
+    background-color: $primary;
+    color: $yellow;
+    gap: 8px;
+    padding: 4px 6px 4px 16px;
+  }
+
+  &__menu {
+    margin-top: 40px;
+
+    .menu {
+      border: 0;
+    }
+
+    .menu-item {
+      &:first-child {
+        border-top: 0;
+      }
+    }
+
+    .menu-link {
+      font-size: 16px;
+      font-weight: 700;
+      padding: 12px 30px 12px 0;
+    }
+
+    .menu-toggle {
+      justify-content: flex-end;
+      width: 100%;
+      border: 0;
+
+      &::before {
+        width: 30px;
+      }
+    }
+
+    .menu-sub {
+      background: 0;
+      padding: 0 0 20px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__tags {
+      margin-top: 12px;
+      gap: 12px;
+    }
+
+    &__tag {
+      font-size: 12px;
+    }
+
+    &__menu {
+      margin-top: 24px;
+    }
+  }
+}

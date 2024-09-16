@@ -138,3 +138,43 @@
         }
     }
 }
+
+.product {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+    &__frame {
+        @include frame('rect', 75%);
+        @include frame('zoom');
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 16px;
+    }
+
+    &__title {
+        @include max-line(2);
+        text-align: center;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    @include media-breakpoint-down(md) {
+        &__body {
+            padding: 10px;
+        }
+
+        &__title {
+            font-size: 12px;
+        }
+    }
+}

@@ -75,3 +75,39 @@
         margin-bottom: 20px;
     }
 }
+
+.s-products {
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 800;
+        color: $yellow-dark;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 800;
+        color: $primary;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+    &__desc {
+        margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(md) {
+        &__title {
+            font-size: 48px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+
+        &__desc {
+            font-size: 12px;
+            margin-bottom: 24px;
+        }
+    }
+}

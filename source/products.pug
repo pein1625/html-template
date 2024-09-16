@@ -1,0 +1,54 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Sản phẩm')
+
+    section.s-products.pt-10.pb-60
+        .container
+            .row
+                .col-lg-4.mb-4.mb-lg-0
+                    .s-products__subtitle Tại huyện Đan Phượng có
+                    h1.s-products__title Sản phẩm
+                    .s-products__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam
+
+                    form.p-filter(action="#!")
+                        .input-group
+                            input.form-control(type="text", placeholder="Tìm kiếm...")
+                            button.input-group-text
+                                i.fal.fa-search
+
+                        .p-filter__tags
+                            span.p-filter__tag
+                                span Sản phẩm A
+                                span
+                                    i.far.fa-fw.fa-times-circle
+                            span.p-filter__tag
+                                span Sản phẩm B
+                                span
+                                    i.far.fa-fw.fa-times-circle
+
+                        .p-filter__menu
+                            ul.menu
+                                each item in ['Sản phẩm làng nghề', 'Sản phẩm OCOP', 'Sản phẩm khác']
+                                    li.menu-item
+                                        span.menu-link= item
+                                        span.menu-toggle
+                                        .menu.menu-sub
+                                            .mt-2
+                                                +checkbox
+                                                    span.ml-1 Sản phẩm A
+                                            .mt-2
+                                                +checkbox
+                                                    span.ml-1 Sản phẩm B
+                                            .mt-2
+                                                +checkbox
+                                                    span.ml-1 Sản phẩm C
+
+                .col-lg-8
+                    .row.g-3.g-xl-30
+                        - for(let i = 0; i < 8; i++)
+                            .col-6
+                                +product
+
+                    nav.d-flex.justify-content-center.mt-30
+                        +pagination

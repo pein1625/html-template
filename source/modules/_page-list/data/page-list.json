@@ -22,6 +22,10 @@
         "url": "news"
       },
       {
+        "title": "Bài viết",
+        "url": "posts"
+      },
+      {
         "title": "Chi tiết tin tức",
         "url": "news-detail"
       },

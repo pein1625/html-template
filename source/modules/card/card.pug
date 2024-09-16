@@ -1,9 +1,10 @@
-mixin product(img='https://placehold.co/600x400', title='', url='#!')
+mixin product
     article.product
-        a.product__frame(href=url)
-            img(src=img, alt="")
-        h3.product__title
-            a(href=url)= title
+        a.product__frame(href='./product-detail.html')
+            img(src='./images/product-1.jpg', alt="")
+        .product__body
+            h3.product__title
+                a(href='./product-detail.html') Làng nghề tre nứa
 
 mixin news(img='https://placehold.co/600x400')
     article.news
