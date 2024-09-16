@@ -1,0 +1,17 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Lễ hội', 'Chi tiết lễ hội')
+
+    section.post.pt-10.pb-60
+        .container
+            h1.post__title Lễ hội thả diều tại Làng diều Bá Dương Nội, xã Hồng Hà, huyện Đan Phượng, Hà Nội
+            .row
+                .col-lg-8.mb-30.mb-lg-0
+                    +post-body
+                .col-lg-4
+                    section.aside
+                        h2.aside__title Bài viết liên quan
+                        - for(let i = 0; i < 5; i++)
+                            .mt-3
+                                +news-2
