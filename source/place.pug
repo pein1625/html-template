@@ -1,0 +1,58 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Điểm đến')
+
+    section.s-products.pt-10.pb-60
+        .container
+            .row
+                .col-lg-4.mb-4.mb-lg-0
+                    form.p-filter(action="#!")
+                        +search-field(['Cụm di tích D', 'Cụm di tích D'])
+
+                        .p-filter__menu.mt-4.mt-lg-40
+                            ul.menu
+                                li.menu-item
+                                    span.menu-link Huyện
+                                    span.menu-toggle
+                                    .menu.menu-sub
+                                        .mt-2
+                                            +checkbox
+                                                span.ml-1 Huyện A
+                                        .mt-2
+                                            +checkbox
+                                                span.ml-1 Huyện B
+                                        .mt-2
+                                            +checkbox
+                                                span.ml-1 Huyện C
+                                li.menu-item
+                                    span.menu-link Cụm di tích
+                                    span.menu-toggle
+                                    .menu.menu-sub
+                                        .mt-2
+                                            +checkbox
+                                                span.ml-1 Cụm di tích 1
+                                        .mt-2
+                                            +checkbox
+                                                span.ml-1 Cụm di tích 2
+                                        .mt-2
+                                            +checkbox
+                                                span.ml-1 Cụm di tích 3
+
+                .col-lg-8
+                    .row.g-3.g-xl-30
+                        .col-6
+                            +product('Cụm di tích D', './images/icon-map-makers.png')
+                        .col-6
+                            +product('Di tích Lorem ipsum', './images/icon-map-marker.png')
+                        .col-6
+                            +product('Đình', './images/icon-map-markers.png')
+                        .col-6
+                            +product('Huyện', './images/icon-map-markers.png')
+                        .col-6
+                            +product('Đình', './images/icon-map-markers.png')
+                        .col-6
+                            +product('Huyện', './images/icon-map-markers.png')
+
+                    nav.d-flex.justify-content-center.mt-30
+                        +pagination

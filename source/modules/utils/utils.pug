@@ -46,19 +46,16 @@ mixin search
         i.far.fa-search
       input.form-control(type='text', placeholder='Tìm kiếm...')
 
-mixin search-field(hasTag = false)
+mixin search-field(tags = false)
   .search-field
     .input-group
       input.form-control(type="text", placeholder="Tìm kiếm...")
       button.input-group-text
         i.fal.fa-fw.fa-search
-    if (hasTag)
+    if (tags)
       .search-field__tags
-        span.search-field__tag
-            span Sản phẩm A
-            span
-                i.far.fa-fw.fa-times-circle
-        span.search-field__tag
-            span Sản phẩm B
-            span
-                i.far.fa-fw.fa-times-circle
+        each tag in tags
+          span.search-field__tag
+              span= tag
+              span
+                  i.far.fa-fw.fa-times-circle
