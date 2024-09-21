@@ -164,7 +164,7 @@
             width: 100%;
             max-width: 100%;
             flex: 0 0 100%;
-            padding: 24px;
+            padding: 20px;
             min-height: 100vh;
         }
 
@@ -178,11 +178,24 @@
             margin-top: 0;
         }
 
+        &__form {
+            margin-top: 28px;
+
+            .form-label {
+                font-size: 13px;
+            }
+        }
+
         &__heading {
+            margin-bottom: 16px;
         }
 
         &__banner {
             display: none;
+        }
+
+        &__footer {
+            margin-top: 16px;
         }
     }
 }

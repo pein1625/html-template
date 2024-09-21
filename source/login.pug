@@ -16,7 +16,7 @@ block content
                     h1.login__heading Đăng nhập
                     .mb-3
                         label.form-label Tên đăng nhập/ Email
-                        .input-group.custom-input-group
+                        .input-group.custom-input-group.error-field
                             input.form-control(type="text", placeholder="Tên")
                             span.input-group-text
                                 i.fal.fa-user
@@ -30,6 +30,8 @@ block content
                     .mb-4
                         +checkbox
                             span.pl-1 Lưu mật khẩu
+
+                    .mb-4.text-danger(style="margin-top: -16px;") Tên đăng nhập sai, nhập lại
 
                     .text-center.mb-4
                         button.login__btn.button.button--primary(type="submit") Đăng nhập
