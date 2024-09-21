@@ -47,3 +47,34 @@ $(function() {
     }
   });
 });
+
+// sample slider syncs
+$(function () {
+  console.log(2131);
+  if (!$(".sample-slider, .sample-slider-thumb").length) {
+    console.log('notfound')
+    return;
+  }
+
+  if (!window.addSwiper) {
+    console.warn('"addSwiper" function is required!');
+    return;
+  }
+
+  const thumbSlider = addSwiper(".sample-slider-thumb", {
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    spaceBetween: 10,
+  })[0];
+
+  addSwiper(".sample-slider", {
+    effect: "fade",
+    allowTouchMove: false,
+    thumbs: {
+      swiper: thumbSlider,
+    },
+  });
+});

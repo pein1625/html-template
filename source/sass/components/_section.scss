@@ -1,7 +1,7 @@
 .section {
     position: relative;
     z-index: 1;
-    padding: 80px 0;
+    padding: 60px 0;
 
     &__bg {
         position: absolute;
@@ -17,13 +17,15 @@
     &__title {
         font-size: 36px;
         font-weight: 800;
-        color: $green;
         text-align: center;
         margin: 0;
+    }
 
-        &--black {
-            color: #1c1c1c;
-        }
+    &__title-2 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1em;
     }
 
     &__subtitle {
@@ -40,7 +42,7 @@
     }
 
     @include media-breakpoint-down(xl) {
-        padding: 60px 0;
+        padding: 50px 0;
 
         &__title {
             font-size: 28px;
@@ -53,10 +55,6 @@
         &__desc {
             font-size: 12px;
         }
-    }
-
-    @include media-breakpoint-down(md) {
-        padding: 40px 0;
     }
 }
 

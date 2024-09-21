@@ -1,0 +1,52 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Hiện vật 3D', 'Chi tiết hiện vật 3D')
+
+    section.section(style="margin-top: -54px;")
+        img.section__bg(src="./images/paper-texture.jpg", alt="")
+        .container
+            .row
+                .col-lg-6
+                    +sample-slider-group
+                .col-lg-6
+                    h2.section__title-2.text-start TÊN DI TÍCH: Di tích Mauris ac nunc vitae turpis dictum elementum
+                    div
+                        p
+                            strong Tên hiện vật:
+                            span.ms-1 Praesent hendrerit diam vitae
+                        p
+                            strong Kích thước hiện vật:
+                            span.ms-1 Praesent hendrerit diam vitae
+                        p
+                            strong Khảo tả đặc điểm:
+                        p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id. Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
+
+    section.section
+        .container
+            h2.section__title-2 Di tích Mauris ac nunc vitae turpis dictum
+                br
+                | elementum
+            .mb-4
+                p.text-center Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
+
+            // todo hapk 3D view
+            img.w-100(src="./images/3d.png", alt="")
+
+    section.section(style="background-color: #FFFCF2;")
+        .container
+            h2.section__title-2 Hiện vật liên quan
+            .row.g-3.g-xl-30
+                - for(let i = 0; i < 3; i++)
+                    .col-6.col-lg-4
+                        +news
+
+    section.section
+        .container
+            h2.section__title-2 Bài viết liên quan
+
+            //- todo hapk posts nafy có font nhỏ hơn
+            .row.g-3.g-xl-30
+                - for(let i = 0; i < 3; i++)
+                    .col-6.col-lg-4
+                        +news

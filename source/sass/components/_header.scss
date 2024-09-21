@@ -42,6 +42,10 @@
     white-space: nowrap;
     margin: 10px 0;
 
+    &:hover {
+        color: $yellow;
+    }
+
     img {
         height: 34px;
     }

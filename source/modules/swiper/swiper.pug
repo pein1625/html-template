@@ -77,3 +77,36 @@ mixin news-slider
       i.fal.fa-fw.fa-angle-left
     .news-slider__next
       i.fal.fa-fw.fa-angle-right
+
+mixin sample-slider
+  .sample-slider
+    .sample-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            .sample-slider__frame
+              img(src=`./images/sample-${i + 1}.jpg`, alt="")
+    .sample-slider__prev
+      i.fal.fa-fw.fa-angle-left
+    .sample-slider__next
+      i.fal.fa-fw.fa-angle-right
+
+mixin sample-slider-thumb
+  .sample-slider-thumb
+    .sample-slider-thumb__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 4; i++)
+          .swiper-slide
+            .sample-slider-thumb__frame
+              img(src=`./images/sample-${i + 1}.jpg`, alt="")
+    .sample-slider-thumb__prev
+      i.fal.fa-fw.fa-angle-left
+    .sample-slider-thumb__next
+      i.fal.fa-fw.fa-angle-right
+
+mixin sample-slider-group
+  .sample-slider-group
+    div
+      +sample-slider
+    .mt-4
+      +sample-slider-thumb

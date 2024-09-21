@@ -7,7 +7,7 @@ mixin img(type = 'any', w = 600, h = 400, addClass='')
 
 mixin breadcrumb(...list)
   - var lastItem = list.pop()
-  nav
+  nav.breadcrumb-wrapper
     .container
       ol.breadcrumb
         each item, index in list

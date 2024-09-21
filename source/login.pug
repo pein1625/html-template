@@ -1,0 +1,46 @@
+extends layout/page
+
+block header
+block footer
+block content
+    section.login
+        .login__content
+            .login__wrapper
+                .login__info
+                    .login__logo
+                        img(src="./images/logo.png", alt="")
+                    .login__subtitle CỔNG THÔNG TIN DU LỊCH
+                    .login__title Huyện Đan Phượng
+
+                form.login__form
+                    h1.login__heading Đăng nhập
+                    .mb-3
+                        label.form-label Tên đăng nhập/ Email
+                        .input-group.custom-input-group
+                            input.form-control(type="text", placeholder="Tên")
+                            span.input-group-text
+                                i.fal.fa-user
+                    .mb-3
+                        label.form-label Mật khẩu
+                        .input-group.custom-input-group.js-password-field
+                            input.form-control(type="password", placeholder="Mật khẩu")
+                            button.input-group-text(type="button")
+                                i.fal.fa-fw.fa-eye
+                            // todo hapk click to toggle eye
+                    .mb-4
+                        +checkbox
+                            span.pl-1 Lưu mật khẩu
+
+                    .text-center.mb-4
+                        button.login__btn.button.button--primary(type="submit") Đăng nhập
+
+                    .text-center
+                        div.mb-2 Hoặc đăng nhập qua
+                        div
+                            a.login__social-btn(href="#!")
+                                img(src="./images/icon-google.png", alt="")
+
+            .login__footer © 2024 UBND huyện Đan Phượng
+
+        .login__banner
+            img(src="./images/login-banner.jpg", alt="")
