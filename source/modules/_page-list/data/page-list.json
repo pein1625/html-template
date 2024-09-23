@@ -18,20 +18,20 @@
         "url": "product-detail"
       },
       {
-        "title": "Tin tức",
-        "url": "news"
-      },
-      {
-        "title": "Bài viết",
+        "title": "Bài viết*",
         "url": "posts"
       },
       {
-        "title": "Chi tiết tin tức",
+        "title": "Tin tức*",
+        "url": "news"
+      },
+      {
+        "title": "Chi tiết tin tức*",
         "url": "news-detail"
       },
       {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Đăng nhập*",
+        "url": "login"
       }
     ]
   }
