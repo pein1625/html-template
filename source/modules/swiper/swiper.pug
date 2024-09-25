@@ -110,3 +110,28 @@ mixin sample-slider-group
       +sample-slider
     .mt-4
       +sample-slider-thumb
+
+//- mixin space-slider
+//-   .space-slider
+//-     .space-slider__container.swiper-container
+//-       .swiper-wrapper
+//-         - for(let i = 0; i < 6; i++)
+//-           .swiper-slide
+//-             .ratio.ratio-16x9
+//-               iframe(allowfullscreen="true" src="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
+
+mixin space-thumb-slider
+  .space-thumb-slider
+    .space-thumb-slider__prev
+      i.fal.fa-angle-left
+    .space-thumb-slider__next
+      i.fal.fa-angle-right
+    .space-thumb-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .space-thumb-slider__slide.swiper-slide.js-space-thumb-slide(class=i?'':'active', data-url="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
+            .space-thumb-slider__frame
+              img(src=`./images/img-${i % 5 + 1}.jpg`, alt="")
+            .space-thumb-slider__overlay
+              img(src="./images/icon-eye.svg", alt="")
+            img.space-thumb-slider__icon(src="./images/icon-360-view.svg", alt="")

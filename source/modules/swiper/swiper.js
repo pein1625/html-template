@@ -25,27 +25,8 @@ function addSwiper(selector, options = {}) {
 }
 
 $(function() {
-  addSwiper('.news-slider', {
-    loop: true,
-    navigation: true,
-    spaceBetween: 0,
-    speed: 500,
-    slidesPerView: 1.5,
-    breakpoints: {
-      576: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 3
-      },
-      992: {
-        slidesPerView: 4
-      },
-      1200: {
-        slidesPerView: 4
-      }
-    }
-  });
+  spaceSlider();
+  newsSlider();
 });
 
 // sample slider syncs
@@ -78,3 +59,74 @@ $(function () {
     },
   });
 });
+
+function spaceSlider() {
+  if (!$('.space-thumb-slider').length) return;
+
+  addSwiper('.space-thumb-slider', {
+    loop: false,
+    navigation: true,
+    spaceBetween: 8,
+    speed: 500,
+    slidesPerView: 3,
+    preventClicks: true,
+    breakpoints: {
+      576: {
+        spaceBetween: 16,
+      },
+      768: {
+        spaceBetween: 16,
+        slidesPerView: 4
+      },
+      992: {
+        spaceBetween: 16,
+        slidesPerView: 5
+      },
+      1200: {
+        spaceBetween: 30,
+        slidesPerView: 6
+      }
+    }
+  });
+
+  $('.js-space-thumb-slide').on('click', function(e) {
+    e.preventDefault();
+
+    const $el = $(this);
+
+    console.log('asdfsdf');
+
+    if ($el.hasClass('active')) return false;
+
+    $el.siblings('.active').removeClass('active');
+    $el.addClass('active');
+
+    const url = $el.data('url');
+
+    $('.js-space-frame').attr('src', url);
+  });
+}
+
+function newsSlider() {
+  addSwiper('.news-slider', {
+    loop: true,
+    navigation: true,
+    spaceBetween: 0,
+    speed: 500,
+    slidesPerView: 1.5,
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3
+      },
+      992: {
+        slidesPerView: 4
+      },
+      1200: {
+        slidesPerView: 4
+      }
+    }
+  });
+}
