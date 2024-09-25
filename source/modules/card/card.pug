@@ -1,3 +1,4 @@
+- count = 0
 mixin product
     article.product
         a.product__frame(href='./product-detail.html')
@@ -29,6 +30,24 @@ mixin news-2(img='https://placehold.co/600x400')
                 a(href="./news-detail.html") Lorem ipsum dolor sit lorem ipsum dolor sit
             .news-2__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim....
 
-mixin lib
+mixin lib(img="./images/img-1.jpg")
     .lib
-        // todo hapk có thể là ảnh / video / 3d
+        .lib__frame
+            a.lib__link(href=img data-fancybox="library")
+                img(src=img, alt="")
+
+mixin lib-2(videoId='f4qHIxmyXt4')
+    .lib
+        .lib__frame
+            a.lib__link(href=`https://www.youtube.com/watch?v=${videoId}`, data-fancybox="library")
+                img(src=`https://img.youtube.com/vi/${videoId}/0.jpg`, alt="")
+                .lib__overlay
+                    i.fas.fa-fw.fa-play
+
+mixin lib-3
+    .lib
+        .lib__frame
+            a.lib__link(href="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66", data-fancybox="library", data-type="iframe")
+                iframe(height="350px" width="75%" allowfullscreen="true" src="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
+                .lib__overlay
+                    img(src="./images/icon-360.png", alt="")

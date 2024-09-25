@@ -1,0 +1,27 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Tìm kiếm')
+
+    section.section.pt-10.pb-60
+        .container
+            h1.section__title Kết quả tìm kiếm
+
+            .mx-auto.mt-4(style="max-width: 800px")
+                +search-field
+
+                nav.tags.mt-3.mb-4.mb-lg-40
+                    a.tags__item.active(href="#!") Tất cả
+                    a.tags__item(href="#!") Du lịch
+                    a.tags__item(href="#!") Du lịch
+                    a.tags__item(href="#!") Ẩm thực
+                    a.tags__item(href="#!") Ẩm thực
+                    a.tags__item(href="#!") Ẩm thực
+
+            .row.g-3.g-xl-30
+                - for(let i = 0; i < 9; i++)
+                    .col-6.col-lg-4
+                        +news
+
+            nav.d-flex.justify-content-center.mt-30
+                +pagination

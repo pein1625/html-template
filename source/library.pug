@@ -7,22 +7,28 @@ block content
         .container
             h1.section__title Thư viện
 
-
             .mx-auto.mt-4(style="max-width: 800px")
                 +search-field
 
-                // todo hapk add date range picker
+                .d-flex.flex-wrap.align-center.justify-between.gap-4
+                    nav.tags.mt-3.mb-4.mb-lg-40
+                        a.tags__item.active(href="#!") Tất cả
+                        a.tags__item(href="#!") Hình ảnh
+                        a.tags__item(href="#!") Hình ảnh 3D
+                        a.tags__item(href="#!") Videos
+                    // todo hapk daterangepicker
+                    input(type="text" class="js-daterangepicker")
 
-                nav.tags.mt-3.mb-4.mb-lg-40
-                    a.tags__item.active(href="#!") Tất cả
-                    a.tags__item(href="#!") Hình ảnh
-                    a.tags__item(href="#!") Hình ảnh 3D
-                    a.tags__item(href="#!") Videos
+            .row.g-3.g-xl-30
+                - for(let i = 0; i < 12; i++)
+                    .col-6.col-lg-3
+                        +lib(`./images/img-${i % 5 + 1}.jpg`)
+                each item in ['f4qHIxmyXt4', 'jAEjfiOH-3w', 'uzt1NCn9BY4', '01dn67QubYQ', 'HaIjR05n1Vc']
+                    .col-6.col-lg-3
+                        +lib-2(item)
+                - for(let i = 0; i < 3; i++)
+                    .col-6.col-lg-3
+                        +lib-3
 
-                .row.g-3.g-xl-30
-                    - for(let i = 0; i < 9; i++)
-                        .col-6.col-lg-3
-                            +news
-
-                nav.d-flex.justify-content-center.mt-30
-                    +pagination
+            nav.d-flex.justify-content-center.mt-30
+                +pagination
