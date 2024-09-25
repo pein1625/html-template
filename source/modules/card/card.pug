@@ -1,11 +1,13 @@
 - count = 0
-mixin product
+mixin product(img='./images/product-1.jpg', url='./product-detail.html', icon='')
     article.product
-        a.product__frame(href='./product-detail.html')
-            img(src='./images/product-1.jpg', alt="")
+        a.product__frame(href=url)
+            img(src=img, alt="")
+            if (icon)
+                img.product__icon(src=icon, alt="")
         .product__body
             h3.product__title
-                a(href='./product-detail.html') Làng nghề tre nứa
+                a(href=url) Lorem ipsum dolor
 
 mixin news(img='https://placehold.co/600x400')
     article.news

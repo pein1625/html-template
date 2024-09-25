@@ -168,6 +168,17 @@
         font-weight: 600;
     }
 
+    &__icon {
+        object-fit: contain !important;
+        object-position: 50% 50% !important;
+        width: 30px !important;
+        height: 30px !important;
+        top: auto !important;
+        left: auto !important;
+        right: 14px !important;
+        bottom: 10px !important;
+    }
+
     @include media-breakpoint-down(md) {
         &__body {
             padding: 10px;

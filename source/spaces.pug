@@ -1,0 +1,41 @@
+extends layout/page
+
+block content
+    +breadcrumb('Trang chủ', 'Không gian 360')
+
+    section.s-products.pt-10.pb-60
+        .container
+            .row
+                .col-lg-4.mb-4.mb-lg-0
+                    .s-products__subtitle Không gian
+                    h1.s-products__title 360
+                    .s-products__desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy tincidunt ut Ut wisi enim ad minim veniam
+
+                    form.p-filter(action="#!")
+                        +search-field(['Cụm di tích D', 'Cụm di tích E'])
+
+                        .p-filter__menu.mt-4.mt-lg-40
+                            ul.menu
+                                each item in ['Cụm di tích 1', 'Cụm di tích 2', 'Cụm di tích 3']
+                                    li.menu-item
+                                        span.menu-link= item
+                                        span.menu-toggle
+                                        .menu.menu-sub
+                                            .mt-2
+                                                +checkbox
+                                                    span.ml-1 Cụm di tích D
+                                            .mt-2
+                                                +checkbox
+                                                    span.ml-1 Cụm di tích E
+                                            .mt-2
+                                                +checkbox
+                                                    span.ml-1 Cụm di tích F
+
+                .col-lg-8
+                    .row.g-3.g-xl-30
+                        - for(let i = 0; i < 8; i++)
+                            .col-6
+                                +product(`./images/img-${i % 5 + 1}.jpg`, './space-detail.html', './images/icon-360-view.png')
+
+                    nav.d-flex.justify-content-center.mt-30
+                        +pagination
