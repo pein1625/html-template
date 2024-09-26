@@ -107,7 +107,10 @@ function sampleSyncSlider() {
     return;
   }
 
-  var thumbSlider = addSwiper(".sample-thumb-slider", {
+  const $modal = $('.md-sample-detail');
+  const $modalGrid = $modal.find('.md-sample-detail__grid');
+
+  const thumbSlider = addSwiper(".sample-thumb-slider", {
     loop: false,
     navigation: true,
     slidesPerView: 3,
@@ -134,6 +137,26 @@ function sampleSyncSlider() {
     thumbs: {
       swiper: thumbSlider,
     },
+  });
+
+  $('.js-sample-slide').on('click', function() {
+    let images = $(this).data('images').split(',');
+
+    console.log('images', images);
+
+    $modal.modal('show');
+
+    $modalGrid.empty();
+
+    images.forEach(image => {
+      $modalGrid.append(`
+<div class="md-sample-detail__col">
+    <a class="md-sample-detail__frame" href="${image}" data-fancybox="sample-detail">
+        <img src="${image}" alt="" />
+    </a>
+</div>
+      `);
+    });
   });
 }
 
