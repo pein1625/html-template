@@ -3,13 +3,14 @@
 mixin 3d-frame(className='')
     iframe(class=className, allowfullscreen="true", src="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
 
-mixin product(img='./images/product-1.jpg', url='./product-detail.html', icon='')
-    article.product
+mixin product(img='./images/product-1.jpg', url='./product-detail.html', icon='', className='')
+    article.product(class=className)
         a.product__frame(href=url)
             img(src=img, alt="")
-            if (icon)
-                img.product__icon(src=icon, alt="")
         .product__body
+            if (icon)
+                .product__icon
+                    img(src=icon, alt="")
             h3.product__title
                 a(href=url) Lorem ipsum dolor
 

@@ -124,6 +124,10 @@
   @include media-breakpoint-down(md) {
     &__menu {
       margin-top: 24px;
+
+      .menu-link {
+        font-size: 14px;
+      }
     }
   }
 }
