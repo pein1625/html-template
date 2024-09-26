@@ -7,8 +7,17 @@ block content
         img.section__bg(src="./images/paper-texture.jpg", alt="")
         .container
             .row
-                .col-lg-6
-                    +sample-slider-group
+                .col-lg-6.mb-30.mb-lg-0
+                    .sample-slider-group
+                        div
+                            +sample-slider
+                        .mt-3.mt-xl-4
+                            +sample-thumb-slider
+                        .mt-3.text-center
+                            a.sample-slider-group__link(href="#!")
+                                i.fal.fa-angle-double-right.me-2.text-secondary
+                                span Xem tất cả Album ảnh của hiện vật
+
                 .col-lg-6
                     h2.section__title-2.text-start TÊN DI TÍCH: Di tích Mauris ac nunc vitae turpis dictum elementum
                     div
@@ -30,23 +39,22 @@ block content
             .mb-4
                 p.text-center Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
 
-            // todo hapk 3D view
-            img.w-100(src="./images/3d.png", alt="")
+            .ratio.ratio-16x9
+                +3d-frame
 
     section.section(style="background-color: #FFFCF2;")
         .container
             h2.section__title-2 Hiện vật liên quan
-            .row.g-3.g-xl-30
-                - for(let i = 0; i < 3; i++)
-                    .col-6.col-lg-4
-                        +news
+            +card-slider
+                each item, index in ['Lorem ipsum dolor', 'Con dấu thời X', 'Trống đồng']
+                    .swiper-slide
+                        +news(`./images/sample-${index % 4 + 1}.jpg`, item, './sample-detail.html', 'news--sample')
 
     section.section
         .container
             h2.section__title-2 Bài viết liên quan
 
-            //- todo hapk posts nafy có font nhỏ hơn
-            .row.g-3.g-xl-30
+            +card-slider
                 - for(let i = 0; i < 3; i++)
-                    .col-6.col-lg-4
+                    .swiper-slide
                         +news

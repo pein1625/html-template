@@ -91,34 +91,18 @@ mixin sample-slider
     .sample-slider__next
       i.fal.fa-fw.fa-angle-right
 
-mixin sample-slider-thumb
-  .sample-slider-thumb
-    .sample-slider-thumb__container.swiper-container
+mixin sample-thumb-slider
+  .sample-thumb-slider
+    .sample-thumb-slider__prev
+      i.fal.fa-angle-left
+    .sample-thumb-slider__next
+      i.fal.fa-angle-right
+    .sample-thumb-slider__container.swiper-container
       .swiper-wrapper
         - for(let i = 0; i < 4; i++)
-          .swiper-slide
-            .sample-slider-thumb__frame
+          .sample-thumb-slider__slide.swiper-slide
+            .sample-thumb-slider__frame
               img(src=`./images/sample-${i + 1}.jpg`, alt="")
-    .sample-slider-thumb__prev
-      i.fal.fa-fw.fa-angle-left
-    .sample-slider-thumb__next
-      i.fal.fa-fw.fa-angle-right
-
-mixin sample-slider-group
-  .sample-slider-group
-    div
-      +sample-slider
-    .mt-4
-      +sample-slider-thumb
-
-//- mixin space-slider
-//-   .space-slider
-//-     .space-slider__container.swiper-container
-//-       .swiper-wrapper
-//-         - for(let i = 0; i < 6; i++)
-//-           .swiper-slide
-//-             .ratio.ratio-16x9
-//-               iframe(allowfullscreen="true" src="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
 
 mixin space-thumb-slider
   .space-thumb-slider
@@ -135,3 +119,14 @@ mixin space-thumb-slider
             .space-thumb-slider__overlay
               img(src="./images/icon-eye.svg", alt="")
             img.space-thumb-slider__icon(src="./images/icon-360-view.svg", alt="")
+
+mixin card-slider
+  .card-slider
+    .card-slider__prev
+      i.fal.fa-angle-left
+    .card-slider__next
+      i.fal.fa-angle-right
+    .card-slider__container.swiper-container
+      .swiper-wrapper
+        if (block)
+          block

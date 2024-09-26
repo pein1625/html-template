@@ -5,6 +5,7 @@
     border-radius: 10px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     overflow: hidden;
+    background-color: $white;
 
     &__frame {
         @include frame('rect', 66.66%);
@@ -64,6 +65,16 @@
         }
     }
 
+    &--sample &__title {
+        font-size: 24px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &--sample &__title {
+            font-size: 20px;
+        }
+    }
+
     @include media-breakpoint-down(lg) {
         &__body {
             padding: 16px;
@@ -79,6 +90,10 @@
 
         &__desc {
             font-size: 12px;
+        }
+
+        &--sample &__title {
+            font-size: 18px;
         }
     }
 
@@ -101,6 +116,10 @@
 
         &__link {
             font-size: 10px;
+        }
+
+        &--sample &__title {
+            font-size: 16px;
         }
     }
 }

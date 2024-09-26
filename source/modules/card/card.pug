@@ -1,4 +1,8 @@
 - count = 0
+
+mixin 3d-frame(className='')
+    iframe(class=className, allowfullscreen="true", src="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
+
 mixin product(img='./images/product-1.jpg', url='./product-detail.html', icon='')
     article.product
         a.product__frame(href=url)
@@ -9,13 +13,13 @@ mixin product(img='./images/product-1.jpg', url='./product-detail.html', icon=''
             h3.product__title
                 a(href=url) Lorem ipsum dolor
 
-mixin news(img='https://placehold.co/600x400')
-    article.news
-        a.news__frame(href="./news-detail.html")
+mixin news(img='https://placehold.co/600x400', title='Lễ hội diều truyền thống', url='./news-detail.html', addClass='')
+    article.news(class=addClass)
+        a.news__frame(href=url)
             img(src=img, alt="")
         .news__body
             h3.news__title
-                a(href="./news-detail.html") Lễ hội diều truyền thống
+                a(href=url)= title
             .news__info
                 span.news__tag Du lịch
                 span.news__time 10/11/2022
@@ -50,6 +54,6 @@ mixin lib-3
     .lib
         .lib__frame
             a.lib__link(href="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66", data-fancybox="library", data-type="iframe")
-                iframe(height="350px" width="75%" allowfullscreen="true" src="https://momento360.com/e/u/a9b53aa8f8b0403ba7a4e18243aabc66")
+                +3d-frame
                 .lib__overlay
                     img(src="./images/icon-360.png", alt="")

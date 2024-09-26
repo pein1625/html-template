@@ -25,42 +25,13 @@ function addSwiper(selector, options = {}) {
 }
 
 $(function() {
-  spaceSlider();
+  spaceSyncSlider();
+  sampleSyncSlider();
   newsSlider();
+  cardSlider();
 });
 
-// sample slider syncs
-$(function () {
-  console.log(2131);
-  if (!$(".sample-slider, .sample-slider-thumb").length) {
-    console.log('notfound')
-    return;
-  }
-
-  if (!window.addSwiper) {
-    console.warn('"addSwiper" function is required!');
-    return;
-  }
-
-  const thumbSlider = addSwiper(".sample-slider-thumb", {
-    direction: "vertical",
-    slidesPerView: "auto",
-    freeMode: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-    spaceBetween: 10,
-  })[0];
-
-  addSwiper(".sample-slider", {
-    effect: "fade",
-    allowTouchMove: false,
-    thumbs: {
-      swiper: thumbSlider,
-    },
-  });
-});
-
-function spaceSlider() {
+function spaceSyncSlider() {
   if (!$('.space-thumb-slider').length) return;
 
   addSwiper('.space-thumb-slider', {
@@ -126,6 +97,55 @@ function newsSlider() {
       },
       1200: {
         slidesPerView: 4
+      }
+    }
+  });
+}
+
+function sampleSyncSlider() {
+  if (!$(".sample-slider, .sample-thumb-slider").length) {
+    return;
+  }
+
+  var thumbSlider = addSwiper(".sample-thumb-slider", {
+    loop: false,
+    navigation: true,
+    slidesPerView: 3,
+    freeMode: true,
+    spaceBetween: 16,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    breakpoints: {
+      576: {
+        spaceBetween: 20,
+      },
+      992: {
+        spaceBetween: 24,
+      },
+    }
+  })[0];
+
+  addSwiper(".sample-slider", {
+    loop: false,
+    effect: "fade",
+    navigation: true,
+    pagination: true,
+    allowTouchMove: false,
+    thumbs: {
+      swiper: thumbSlider,
+    },
+  });
+}
+
+function cardSlider() {
+  addSwiper('.card-slider', {
+    loop: false,
+    navigation: true,
+    slidesPerView: 2,
+    spaceBetween: 0,
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
       }
     }
   });
