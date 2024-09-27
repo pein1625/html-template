@@ -61,16 +61,22 @@ block content
 
     section.section
         .container
-            h2.section__title Điểm đến
+            h2.section__title.text-primary Điểm đến
             .section__subtitle Những địa điểm nổi bật
             .section__desc Cùng khám phá ngay những điểm đến tuyệt vời ở Đan Phượng bạn nhé!
-            // todo hapk place place holder
-            .text-center.mt-3
+
+            .mt-4
+                +card-slider
+                    - for(let i = 0; i < 6; i++)
+                        .swiper-slide
+                            +product(`./images/img-${i % 5 + 1}.jpg`)
+
+            .mt-4.text-center
                 a.button(href="#!") Xem tất cả
 
     section.section
         .container
-            h2.section__title Tuyến du lịch
+            h2.section__title.text-primary Tuyến du lịch
             .section__subtitle Những tuyến du lịch nổi bật
             .section__desc Mời bạn chọn tuyến du lịch yêu thích tại đây, khám phá ngay nào!
                 // todo hapk search input
@@ -80,10 +86,10 @@ block content
     section.section
         //- todo hapk add bg
         .container
-            h2.section__title Tin tức
+            h2.section__title.text-primary Tin tức
             .section__subtitle Những tin tức cập nhật mới nhất
             .section__desc Cùng cập nhật tin tức để biết tường tận về những di tích, cảnh đẹp và điểm đến không thể bỏ qua tại Đan Phượng
-            .mt-5
+            .mt-4
                 +news-slider
-            .text-center.mt-4
+            .mt-4.text-center
                 a.button(href="#!") Xem tất cả

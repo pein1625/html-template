@@ -84,16 +84,10 @@ function newsSlider() {
     navigation: true,
     spaceBetween: 0,
     speed: 500,
-    slidesPerView: 1.5,
+    slidesPerView: 2,
     breakpoints: {
-      576: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 3
-      },
       992: {
-        slidesPerView: 4
+        slidesPerView: 3
       },
       1200: {
         slidesPerView: 4
