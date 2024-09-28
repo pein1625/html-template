@@ -52,3 +52,39 @@
         font-weight: 600;
     }
 }
+
+.district {
+    display: flex;
+    border: 1px solid $border-color;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $primary;
+    text-transform: uppercase;
+    transition: 0.2s;
+
+    &:hover {
+        color: $primary;
+        text-decoration: none;
+        background-color: #f1f1f1;
+    }
+
+    &__frame {
+        @include frame('square');
+        width: 40px;
+        margin-right: 10px;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    &__name {
+        flex: 1;
+    }
+
+    & + & {
+        margin-top: 12px;
+    }
+}

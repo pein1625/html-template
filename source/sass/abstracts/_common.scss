@@ -32,3 +32,38 @@
     }
   }
 }
+
+.component-index {
+  &__bar {
+    display: flex;
+    position: relative;
+    padding-right: 24px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 12px;
+      background-color: $primary;
+      border-radius: 2px;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      color: #777;
+    }
+  }
+
+  td {
+    border: 0;
+    padding: 16px 8px;
+
+    &:first-child {
+      white-space: nowrap;
+      font-style: italic;
+    }
+  }
+}

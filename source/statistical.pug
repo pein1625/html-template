@@ -1,3 +1,46 @@
 extends layout/page
 
 block content
+    section.section-4.section-3
+        .container
+            .section-4__header
+                h1.section-4__title Thống kê Thương mại điện tử
+
+                .section-4__right
+                    select.custom-select.form-select
+                        option(selected) Lựa chọn Huyện, thành phố...
+                        each item in ['Thành phố Thái Nguyên', 'Thành phố Phổ Yên', 'Thành phố Sông Công', 'Huyện Đại Từ', 'Huyện Phú Bình', 'Huyện Phú Lương', 'Huyện Võ Nhai', 'Huyện Định Hóa', 'Huyện Đồng Hỷ']
+                            option= item
+
+            .row
+                .col-lg-8.mb-40.mb-lg-0
+                    section.section-5
+                        h2.section-5__title Chỉ số Thương mại điện tử tỉnh Thái Nguyên
+                        .section-5__body
+                            //- todo hapk custom select
+                            select.custom-select.form-select.mb-3
+                                option Lựa chọn các chỉ số thành phần..
+                                option Chỉ số 1
+                                option Chỉ số 2
+                                option Chỉ số 3
+                                option Chỉ số 4
+
+                            table.table.component-index
+                                tbody
+                                    each item in ['Thành phố Thái Nguyên', 'Thành phố Phổ Yên', 'Thành phố Sông Công', 'Huyện Đại Từ', 'Huyện Phú Bình', 'Huyện Phú Lương', 'Huyện Võ Nhai', 'Huyện Định Hóa', 'Huyện Đồng Hỷ']
+                                        tr
+                                            td(width="5%")= item
+                                            td
+                                                .component-index__bar(style="width: 96%")
+                                                    span 96
+
+
+                .col-lg-4
+                    section.section-5
+                        h2.section-5__title Vị trí, tiềm năng các Huyện, TP
+                        .section-5__body
+                            each item in ['Thành phố Thái Nguyên', 'Thành phố Phổ Yên', 'Thành phố Sông Công', 'Huyện Đại Từ', 'Huyện Phú Bình', 'Huyện Phú Lương', 'Huyện Võ Nhai', 'Huyện Định Hóa', 'Huyện Đồng Hỷ']
+                                a.district(href="#!")
+                                    .district__frame
+                                        img(src="https://placehold.co/40x40", alt="")
+                                    .district__name= item

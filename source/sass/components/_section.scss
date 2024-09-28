@@ -20,6 +20,47 @@
     }
 }
 
+.section-4 {
+    padding: 40px 0;
+
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 40px;
+        gap: 24px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #444;
+    }
+
+    &__right {
+        flex: 1;
+    }
+}
+
+.section-5 {
+    &__title {
+        padding: 10px 12px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $white;
+        background-color: $primary;
+        margin-bottom: 0;
+        border-radius: 2px 2px 0 0;
+    }
+
+    &__body {
+        border: 1px solid #ccc;
+        border-top: 0;
+        border-radius: 0 0 2px 2px;
+        padding: 12px;
+    }
+}
+
 .aside {
     &__title {
         font-size: 24px;
