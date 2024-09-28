@@ -1,4 +1,6 @@
 .navbar {
+  padding: 0;
+
   &__wrapper {
     display: flex;
     width: 300px;
@@ -79,6 +81,7 @@
     display: block;
     position: static;
     padding: 0;
+    flex-grow: 1;
 
     &__wrapper {
       display: block;

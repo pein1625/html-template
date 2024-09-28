@@ -1,0 +1,38 @@
+extends layout/page
+
+block content
+    section.survey
+        .container
+            h1.survey__title Khảo sát thương mại điện tử tỉnh Thái Nguyên 2024
+            .survey__desc Các thông tin Đơn vị, Doanh nghiệp, cá nhân cung cấp trong phiếu điều tra chỉ sử dụng cho mục đích nghiên cứu, thống kê, xây dựng Chỉ số Thương mại điện tử tỉnh Thái Nguyên năm 2024. Chúng tôi cam kết không tiết lộ thông tin tại Phiếu điều tra này cho bên thứ ba.
+
+            form.survey__form(action="./survey-2.html")
+                h2.survey__form-heading Thông tin khảo sát
+                .survey__form-desc Vui lòng điền đầy đủ các thông tin bên dưới và ấn vào nút khảo sát để bắt đầu khảo sát.
+                    br
+                    | Trân trọng cảm hơn!
+                .mb-4
+                    input.form-control(type="text", placeholder="Nhập họ và tên (*)", required)
+                .mb-4
+                    input.form-control(type="text", placeholder="Số điện thoại (*)", required)
+                .mb-4
+                    input.form-control(type="text", placeholder="Địa phương (thành phố, Huyện)")
+                    // todo hapk làm dropdown select 9 huyện thành phố
+                .mb-4
+                    div
+                        div Đơn vị
+                        div
+                            div
+                                +checkbox
+                                    span Cơ quan Nhà nước
+                            div
+                                +checkbox
+                                    span Hội, hiệp hội
+                            div
+                                +checkbox
+                                    span Doanh nghiệp/HTX
+                            div
+                                +checkbox
+                                    span Cá nhân
+
+                button.survey__btn(type="submit") Khảo sát

@@ -15,9 +15,8 @@ mixin breadcrumb(...list)
 
 mixin pagination
   ul.pagination
-    li.page-item.disabled
-      a.page-link(href="#!")
-        i.fal.fa-angle-left
+    li.page-item
+      a.page-link(href="#!") Trang đầu
     li.page-item.active
       a.page-link(href="#!") 1
     li.page-item
@@ -29,11 +28,11 @@ mixin pagination
     li.page-item
       a.page-link(href="#!") 5
     li.page-item
-      a.page-link(href="#!")
-        i.fal.fa-angle-right
+      a.page-link(href="#!") Trang cuối
 
 mixin search
-  form.search.input-group
-    input.form-control(type='text', placeholder='Tìm kiếm...')
-    button.input-group-text
-      i.far.fa-search
+  form.search
+    .input-group
+      input.form-control(type='text', placeholder='Tìm kiếm từ khóa...')
+      button.input-group-text
+        i.far.fa-search

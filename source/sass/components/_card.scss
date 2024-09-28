@@ -1,0 +1,54 @@
+.news {
+    font-size: 13px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        color: #EAA655;
+        margin-bottom: 8px;
+
+        a {
+            color: #EAA655;
+
+            &:hover {
+                color: darken(#EAA655, 10%);
+            }
+        }
+    }
+
+    &__frame {
+        @include frame('rect', 150%);
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    &__desc {
+        @include max-line(6);
+        max-height: 156px;
+        color: #777;
+    }
+
+    &__info {
+        font-weight: 600;
+    }
+
+    &__icon {
+        width: 30px;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.news-2 {
+    &__frame {
+        @include frame('rect', 75%);
+        width: 135px;
+    }
+
+    &__title {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}

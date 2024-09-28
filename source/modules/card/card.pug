@@ -1,0 +1,29 @@
+mixin news
+    .news
+        h3.news__title
+            a(href="#!") Báo cáo chỉ số Thương mại điện tử Việt Nam _ EBI 2024
+        .row
+            .col-auto.col-lg-3
+                a.news__frame(href="#!")
+                    img(src="https://placehold.co/100x150", alt="")
+            .col.border-end
+                .news__desc - Bản Tiếng Việt - Bảnn Tiếng Anh. Trong bối cảnh kinh tế thế giới và Việt Nam gặp nhiều khó khăn, lĩnh vực thương mại điện tử nước ta tiếp tục phát triển mạnh mẽ với tốc độ tăng trưởng trên 25% và đạt quy mô trên 25 tỷ USD. Xuất khẩu bối cảnh kinh tế thế giới và Việt Nam gặp nhiều khó khăn, lĩnh vực thương mại điện tử nước ta tiếp tục phát triển mạnh mẽ với tốc độ tăng trưởng trên 25% và đạt quy mô trên 25 tỷ USD.
+            .col-md-3.col-lg-4.col-xl-3.mt-2.mt-md-0
+                .news__info Tác giả: Hiệp hội Thương mại điện tử  Việt Nam
+                    br
+                    | Năm xuất bản: 2024
+                    br
+                    | Định dạng: PDF
+
+mixin news-2(img="https://placehold.co/135x100", icon="")
+    .news-2
+        .row.g-3
+            .col-auto
+                .position-relative.d-flex
+                    a.news-2__frame(href="#!")
+                        img(src=img, alt="")
+                    img.news-2__icon(src=icon, alt="")
+                    //- todo hapk add icon alert / info
+            .col
+                h3.news-2__title
+                    a(href="#!") Kiểm tra, rà soát và gỡ bỏ các thực phẩm bổ sung vi phạm

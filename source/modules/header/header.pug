@@ -7,8 +7,36 @@ mixin header
       .container
         .header__inner
           a.header__logo(href="./index.html")
-            img(src="./images/logo.svg", alt="")
+            img(src="./images/logo.png", alt="")
+          .h-info
+            .h-info__label Sở công thương tỉnh Thái Nguyên
+            .h-info__title Hệ thống khảo sát thương mại điện tử tỉnh Thái Nguyên
+            .h-info__url Ebithainguyen.etix.vn
+
           .header__elements
-            +navbar
-              +menu(menu)
             button.btn-toggle.d-xl-none.js-navbar-toggle.ms-3
+
+    nav.navigation
+      .container
+        .navigation__inner
+          +navbar
+            +menu(menu)
+
+            form.h-form
+              .h-form__left
+                .h-form__grid
+                  input.form-control.form-control-sm(type="text", placeholder="Tên đăng nhập")
+                  input.form-control.form-control-sm(type="password", placeholder="Mật khẩu")
+                .h-form__grid.mt-2
+                  .h-form__checkbox.mt-2
+                    +checkbox
+                      span Lưu đăng nhập
+                  .mt-2
+                    a.h-form__link(href="#!")
+                      i.fal.fa-fw.fa-key.me-2
+                      span Quên mật khẩu
+              .h-form__btns
+                button.h-form__btn(type="submit") Đăng nhập
+                a.h-form__btn.h-form__btn--primary.mt-2(href="#!") Đăng ký
+
+          +search

@@ -2,32 +2,28 @@
   "pageList": {
     "data": [
       {
-        "title": "Trang chủ",
+        "title": "Trang chủ ----------",
         "url": "index"
       },
       {
-        "title": "Giới thiệu",
-        "url": "about"
+        "title": "Chỉ số thương mại điện tử Thái Nguyên ----------",
+        "url": "index-tn"
       },
       {
-        "title": "Sản phẩm",
-        "url": "products"
+        "title": "Chỉ số thương mại điện tử Việt Nam ----------",
+        "url": "index-vn"
       },
       {
-        "title": "Chi tiết sản phẩm",
-        "url": "product-detail"
+        "title": "Thống kê thương mại điện tử ----------",
+        "url": "statistical"
       },
       {
-        "title": "Tin tức",
-        "url": "news"
+        "title": "Khảo sát 1 ----------",
+        "url": "survey-1"
       },
       {
-        "title": "Chi tiết tin tức",
-        "url": "news-detail"
-      },
-      {
-        "title": "Liên hệ",
-        "url": "contact"
+        "title": "Khảo sát 2 ----------",
+        "url": "survey-2"
       }
     ]
   }

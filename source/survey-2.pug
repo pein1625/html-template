@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+    section.survey
+        .container
+            h1.survey__title Phiếu khảo sát doanh nghiệp
+            .survey__subtitle địa bàn Thành Phố Thái Nguyên
+            .survey__desc Các thông tin Đơn vị, Doanh nghiệp, cá nhân cung cấp trong phiếu điều tra chỉ sử dụng cho mục đích nghiên cứu, thống kê, xây dựng Chỉ số Thương mại điện tử tỉnh Thái Nguyên năm 2024. Chúng tôi cam kết không tiết lộ thông tin tại Phiếu điều tra này cho bên thứ ba.
+
+            form.survey__form-2(action="./survey-2.html")
+                .mb-3
+                    input.form-control(type="text", placeholder="Tên Doanh nghiệp (*)", required)
+                .mb-3
+                    input.form-control(type="text", placeholder="Mã số Thuế")
+                .mb-3
+                    input.form-control(type="text", placeholder="Người đại diện hợp pháp của Doanh nghiệp")
+                .mb-3
+                    input.form-control(type="text", placeholder="Các câu hỏi tiếp theo....")
+                .mb-3
+                    input.form-control(type="text")
+                .mb-3
+                    input.form-control(type="text")
+                .mb-3
+                    input.form-control(type="text")
+                .row
+                    .col-6
+                        a.survey__btn(href="#!") Xem khảo sát
+                        // todo hapk click vào sẽ show bản PDF người dùng vừa thực hiện các thao tác khảo sát, để xem lại và có thể in ra trước khi ấn gửi khảo sát cho Sở công thương
+                    .col-6
+                        button.survey__btn(type="submit") Gửi khảo sát
+                // todo hapk tự động cuộn lên để người khảo sát không phải kéo chuột

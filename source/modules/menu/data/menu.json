@@ -8,59 +8,23 @@
     },
     {
       "text": "Giới thiệu",
-      "url": "./about.html",
-      "submenu": [
-        {
-          "text": "Dropdown",
-          "url": "#!"
-        },
-        {
-          "text": "Dropdown",
-          "url": "#!"
-        },
-        {
-          "text": "Dropdown",
-          "url": "#!"
-        },
-        {
-          "text": "Dropdown",
-          "url": "#!",
-          "submenu": [
-            {
-              "text": "Dropdown",
-              "url": "#!"
-            },
-            {
-              "text": "Dropdown",
-              "url": "#!"
-            },
-            {
-              "text": "Dropdown",
-              "url": "#!"
-            }
-          ]
-        }
-      ]
+      "url": "./about.html"
     },
     {
-      "text": "Sản phẩm",
-      "url": "./products.html"
+      "text": "Khảo sát",
+      "url": "./survey-1.html"
     },
     {
-      "text": "Dự án",
-      "url": "./projects.html"
+      "text": "Bản tin Công Thương",
+      "url": "./index-tn.html"
     },
     {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
-    },
-    {
-      "text": "Tin tức",
-      "url": "./news.html"
+      "text": "Hướng dẫn",
+      "url": "#!"
     },
     {
       "text": "Liên hệ",
-      "url": "./contact.html"
+      "url": "#!"
     }
   ]
 }

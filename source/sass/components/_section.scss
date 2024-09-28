@@ -1,0 +1,41 @@
+.section-2 {
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__title {
+            font-size: 24px;
+        }
+    }
+}
+
+.section-3 {
+    padding: 60px 0;
+
+    @include media-breakpoint-down(xl) {
+        padding: 40px 0;
+    }
+}
+
+.aside {
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        background-color: $primary;
+        padding: 12px 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__title {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -103,6 +103,7 @@
     &-root {
       display: flex;
       border: 0;
+      justify-content: center;
     }
 
     &-root &-item {
@@ -161,14 +162,17 @@
 
     &-root > &-item {
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 16px;
       }
     }
 
     &-root > &-item > &-link {
-      font-size: 14px;
-      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px;
       transition: 0.3s;
+      color: $white;
+      text-transform: unset;
     }
 
     &-root > &-item > &-toggle {
@@ -185,19 +189,6 @@
     &-root > &-item-group &-item-group:hover > &-sub {
       display: block;
       animation: menu-float-show 0.2s ease-out;
-    }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    &-root > &-item {
-      &:not(:last-child) {
-        margin-right: 40px;
-      }
-    }
-
-    &-root > &-item > &-link {
-      font-size: 16px;
-      padding: 20px 0;
     }
   }
 }

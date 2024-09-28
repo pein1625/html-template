@@ -1,0 +1,100 @@
+.footer {
+    background-color: $primary;
+    color: $white;
+    padding: 30px 0;
+
+    &__copyright {
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        font-family: $roboto;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    &__content {
+        line-height: 2;
+    }
+
+    &__grid {
+        display: flex;
+        gap: 30px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        padding: 24px 0;
+        font-size: 13px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 24px 16px;
+        }
+
+        &__col {
+            &:first-child {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__grid {
+            grid-template-columns: 140px 1fr;
+        }
+    }
+}
+
+.f-support {
+    font-weight: 700;
+
+    &__label {
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+
+    &__phone {
+        color: $white;
+
+        &:hover {
+            color: #eee;
+            text-decoration: none;
+        }
+    }
+
+    &__img {
+        margin-top: 4px;
+        width: 120px;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.f-statistic {
+    border: 1px solid $white;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    &__label {
+        background-color: $primary;
+        padding: 4px 8px;
+    }
+
+    &__content {
+        padding: 4px 8px;
+        color: $danger;
+        font-size: 13px;
+    }
+}

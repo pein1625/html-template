@@ -30,9 +30,12 @@
   }
 
   .page-link {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
     color: $gray-800;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 4px 12px;
+    border-radius: 2px;
   }
 
   @media (max-width: 767px) {
@@ -43,23 +46,50 @@
 }
 
 .search {
-  padding: 16px 20px;
-  border-top: 1px solid #aaa;
-  background-color: $light;
-
   .form-control {
-    border-right: 0;
+    font-size: 12px;
+    border: 0;
+    font-style: italic;
 
     &:focus {
       box-shadow: unset;
     }
   }
 
+  .input-group-text {
+    border: 0;
+  }
+
   .form-control:focus ~ .input-group-text {
     border-color: $input-focus-border-color;
   }
 
-  @media (min-width: 1200px) {
-    display: none;
+  @include media-breakpoint-up(xl) {
+    background-color: rgba(#000, 0.3);
+    border-radius: 2px;
+    width: 300px;
+    padding: 4px 12px;
+    margin-left: auto;
+
+    .form-control {
+      border-radius: 0;
+      border-bottom: 1px solid #fff;
+      background: 0;
+      color: $white;
+      font-size: 12px;
+      height: 28px;
+      padding: 0;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    .input-group-text {
+      border-radius: 0;
+      border-bottom: 1px solid #fff;
+      background: 0;
+      color: $white;
+    }
   }
 }

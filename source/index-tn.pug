@@ -1,0 +1,31 @@
+extends layout/page
+
+block content
+    section.section-3
+        .container
+            .row
+                .col-lg-8.mb-30.mb-lg-0.pe-xl-30.pe-xxl-60
+                    section.section-2
+                        h1.section-2__title Chỉ số Thương mại điện tử Thái Nguyên
+
+                        .news-list
+                            - for(let i = 0; i < 4; i++)
+                                .news-list__item
+                                    +news
+
+                        nav.d-flex.justify-content-center.mt-30
+                            +pagination
+
+                .col-lg-4
+                    section.aside
+                        h2.aside__title Thông tin nhanh
+
+                        .mb-3
+                            +news-2
+                        .mb-3
+                            +news-2
+                        .mb-3
+                            +news-2
+
+                        a(href="#!")
+                            img.w-100(src="https://placehold.co/260x110", alt="")
