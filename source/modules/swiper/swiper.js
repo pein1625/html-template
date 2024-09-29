@@ -27,6 +27,7 @@ function addSwiper(selector, options = {}) {
 $(function() {
   spaceSyncSlider();
   sampleSyncSlider();
+  placeSyncSlider();
   newsSlider();
   cardSlider();
 });
@@ -101,9 +102,6 @@ function sampleSyncSlider() {
     return;
   }
 
-  const $modal = $('.md-sample-detail');
-  const $modalGrid = $modal.find('.md-sample-detail__grid');
-
   const thumbSlider = addSwiper(".sample-thumb-slider", {
     loop: false,
     navigation: true,
@@ -132,26 +130,6 @@ function sampleSyncSlider() {
       swiper: thumbSlider,
     },
   });
-
-  $('.js-sample-slide').on('click', function() {
-    let images = $(this).data('images').split(',');
-
-    console.log('images', images);
-
-    $modal.modal('show');
-
-    $modalGrid.empty();
-
-    images.forEach(image => {
-      $modalGrid.append(`
-<div class="md-sample-detail__col">
-    <a class="md-sample-detail__frame" href="${image}" data-fancybox="sample-detail">
-        <img src="${image}" alt="" />
-    </a>
-</div>
-      `);
-    });
-  });
 }
 
 function cardSlider() {
@@ -165,5 +143,66 @@ function cardSlider() {
         slidesPerView: 3,
       }
     }
+  });
+
+  addSwiper('.card-slider-2', {
+    loop: true,
+    navigation: true,
+    spaceBetween: 0,
+    speed: 500,
+    slidesPerView: 2,
+    breakpoints: {
+      992: {
+        slidesPerView: 3
+      },
+      1200: {
+        slidesPerView: 4
+      }
+    }
+  });
+}
+
+function placeSyncSlider() {
+  if (!$(".place-slider, .place-thumb-slider").length) {
+    return;
+  }
+
+  const thumbSlider = addSwiper(".place-thumb-slider", {
+    loop: false,
+    navigation: true,
+    slidesPerView: 3,
+    freeMode: true,
+    spaceBetween: 16,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 6,
+        spaceBetween: 24,
+      },
+    }
+  })[0];
+
+  addSwiper(".place-slider", {
+    loop: false,
+    effect: "fade",
+    navigation: true,
+    pagination: true,
+    allowTouchMove: false,
+    thumbs: {
+      swiper: thumbSlider,
+    },
   });
 }

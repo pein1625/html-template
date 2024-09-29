@@ -83,7 +83,7 @@ mixin sample-slider
       .swiper-wrapper
         - for(let i = 0; i < 4; i++)
           .swiper-slide
-            .sample-slider__frame.js-sample-slide(data-images="./images/sample-detail-1.jpg,./images/sample-detail-2.jpg,./images/sample-detail-3.jpg,./images/sample-detail-4.jpg,./images/sample-detail-5.jpg,./images/sample-detail-6.jpg,./images/sample-detail-7.jpg,./images/sample-detail-8.jpg,./images/sample-detail-9.jpg")
+            .sample-slider__frame
               img(src=`./images/sample-${i + 1}.jpg`, alt="")
     .sample-slider__prev
       i.fal.fa-fw.fa-angle-left
@@ -129,3 +129,40 @@ mixin card-slider
       .swiper-wrapper
         if (block)
           block
+
+mixin card-slider-2
+  .card-slider-2
+    .card-slider-2__prev
+      i.fal.fa-angle-left
+    .card-slider-2__next
+      i.fal.fa-angle-right
+    .card-slider-2__container.swiper-container
+      .swiper-wrapper
+        if (block)
+          block
+
+mixin place-slider
+  .place-slider
+    .place-slider__prev
+      i.fal.fa-angle-left
+    .place-slider__next
+      i.fal.fa-angle-right
+    .place-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide
+            .place-slider__frame
+              img(src=`./images/img-${i % 5 + 1}.jpg`, alt="")
+
+mixin place-thumb-slider
+  .place-thumb-slider
+    .place-thumb-slider__prev
+      i.fal.fa-angle-left
+    .place-thumb-slider__next
+      i.fal.fa-angle-right
+    .place-thumb-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 6; i++)
+          .swiper-slide.position-relative
+            .place-thumb-slider__frame
+              img(src=`./images/img-${i % 5 + 1}.jpg`, alt="")

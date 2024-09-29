@@ -56,6 +56,14 @@
             font-size: 12px;
         }
     }
+
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0;
+
+        &__title {
+            font-size: 24px;
+        }
+    }
 }
 
 .section-2 {

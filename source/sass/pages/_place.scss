@@ -1,0 +1,138 @@
+.place-detail {
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 18px;
+    }
+
+    &__block {
+        padding: 60px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        z-index: -2;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: r;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__heading {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 28px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__block {
+            padding: 40px 0;
+        }
+
+        &__heading {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__heading {
+            font-size: 18px;
+        }
+    }
+}
+
+.s-vr {
+    background-color: #2E5A50;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+
+    &__texture {
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        z-index: -1;
+        transform: translateY(-50%);
+
+        &--right {
+            left: auto;
+            right: 2%;
+        }
+    }
+
+    &__logo {
+        margin: 0 auto 12px;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.12;
+        text-align: center;
+        color: $white;
+        margin-bottom: 28px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        padding: 60px 0;
+
+        &__subtitle {
+            font-size: 20px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 40px 0;
+
+        &__subtitle {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+    }
+}

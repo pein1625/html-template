@@ -58,3 +58,13 @@ mixin lib-3
                 +3d-frame
                 .lib__overlay
                     img(src="./images/icon-360.png", alt="")
+
+mixin sample(img="./images/img-1.jpg", title="Sư tử đá")
+    .sample
+        .sample__frame
+            img(src=img, alt="")
+        .sample__title= title
+        a.sample__overlay(href="#!")
+            img.sample__icon(src="./images/icon-place.png", alt="")
+            .sample__overlay-title Sư tử đá
+            .sample__overlay-desc Trải qua thăng trầm lịch sử

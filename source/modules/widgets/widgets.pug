@@ -30,3 +30,14 @@ mixin post-body
         a.post__btn(href="#!")
             i.fab.fa-fw.fa-twitter
         a.post__btn-2(href="#!") Chia sẻ bài viết
+
+mixin sample-slider-group
+    .sample-slider-group
+        div
+            +sample-slider
+        .mt-3.mt-xl-4
+            +sample-thumb-slider
+        .mt-3.text-center
+            a.link-view-album(href="#md-album-sample", data-bs-toggle="modal")
+                i.fal.fa-angle-double-right.me-2.text-secondary
+                span Xem tất cả Album ảnh của hiện vật

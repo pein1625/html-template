@@ -1,22 +1,20 @@
 .sample-slider-group {
     max-width: 483px;
     margin: 0 auto;
+}
 
-    &__link {
-        font-size: 16px;
-        font-weight: 700;
-        color: $primary;
-        transition: 0.2s;
+.link-view-album {
+    font-size: 16px;
+    font-weight: 700;
+    color: $primary;
+    transition: 0.2s;
 
-        &:hover {
-            color: darken($primary, 10%);
-            text-decoration: none;
-        }
+    &:hover {
+        color: darken($primary, 10%);
+        text-decoration: none;
     }
 
     @include media-breakpoint-down(lg) {
-        &__link {
-            font-size: 14px;
-        }
+        font-size: 14px;
     }
 }

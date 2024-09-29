@@ -3,7 +3,7 @@ extends layout/page
 block content
     +breadcrumb('Trang chủ', 'Điểm đến', 'Chi tiết điểm đến')
 
-    section.s-products.pt-10.pb-60
+    section.place-detail.s-products.pt-10.pb-60
         .container
             nav.tags.mb-6
                 a.tags__item.active(href="#!") Điểm đến
@@ -13,80 +13,100 @@ block content
                 a.tags__item(href="#!") VR tour
 
             // todo hapk style these things
-            .mt-3 Điểm đến
-            div Đền Văn Hiến
+            .place-detail__subtitle.mt-3 Điểm đến
+            .place-detail__title Đền Văn Hiến
 
-            div
-                span
+            .place-detail__info
+                .place-detail__info-item
                     i.fal.fa-fw.fa-clock.me-2
                     span 26/06/2024 | 8:00 AM
-                span
+                .place-detail__info-item
                     i.fal.fa-fw.fa-map-marker-alt.me-2
                     span Đường Vạn Xuân, Hạ Mỗ, Đan Phượng, Hà Nội, Việt Nam
 
             // todo hapk add place sliders
+            .mt-3
+                +place-slider
+            .mt-20.mt-xl-4
+                +place-thumb-slider
+            .mt-3.text-center
+                a.link-view-album(href="#md-album-place", data-bs-toggle="modal")
+                    i.fal.fa-angle-double-right.text-secondary.me-2
+                    span Xem tất cả Album ảnh của điểm đến
 
-            h2 1. Thông tin về di tích Đền Văn Hiến
+            .mt-30.mt-xl-40
+                h2.place-detail__heading 1. Thông tin về di tích Đền Văn Hiến
 
-            div
-                p
-                    strong Sơ nét về điểm đến: Đền Văn Hiến - Đan Phượng
-                p Đền Văn Hiến, tên chữ là Văn Hiến Đường thuộc làng Hạ Mỗ, xã Hạ Mỗ, huyện Đan Phượng, thành phố Hà Nội. Xưa kia Đền Văn Hiến là văn chỉ thờ Khổng Tử và là nơi biểu dương các danh nhân khoa bảng trong làng. Sau khi Thái úy Tô Hiến Thành, người con ưu tú của quê hương qua đời, nhân dân xây mộ và thờ ông tại đây. Tháng 11/1991, Bộ Văn hóa-Thông tin thể thao và du lịch đã xếp hạng đền Văn Hiến là di tích lịch sử và kiến trúc nghệ thuật.
-                p Đền là nơi thờ chính hai vị đại hiền của làng Hạ Mỗ là Thái úy Tô Hiến Thành và quan nghề Đỗ Trí Trung. Năm Duy Tân thứ 2 (Mậu Thân – 1908), sau lễ Đồng Giáng bút tại chùa Hải Giác (Đinh Mùi – 1907), các nho sĩ và nhân dân Hạ Mỗ tiến hành sửa sang, quy hoạch lại di tích thành đền Văn Hiến như ngày nay.
-                    br
-                    | Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
+                div
+                    p
+                        strong Sơ nét về điểm đến: Đền Văn Hiến - Đan Phượng
+                    p Đền Văn Hiến, tên chữ là Văn Hiến Đường thuộc làng Hạ Mỗ, xã Hạ Mỗ, huyện Đan Phượng, thành phố Hà Nội. Xưa kia Đền Văn Hiến là văn chỉ thờ Khổng Tử và là nơi biểu dương các danh nhân khoa bảng trong làng. Sau khi Thái úy Tô Hiến Thành, người con ưu tú của quê hương qua đời, nhân dân xây mộ và thờ ông tại đây. Tháng 11/1991, Bộ Văn hóa-Thông tin thể thao và du lịch đã xếp hạng đền Văn Hiến là di tích lịch sử và kiến trúc nghệ thuật.
+                    p Đền là nơi thờ chính hai vị đại hiền của làng Hạ Mỗ là Thái úy Tô Hiến Thành và quan nghề Đỗ Trí Trung. Năm Duy Tân thứ 2 (Mậu Thân – 1908), sau lễ Đồng Giáng bút tại chùa Hải Giác (Đinh Mùi – 1907), các nho sĩ và nhân dân Hạ Mỗ tiến hành sửa sang, quy hoạch lại di tích thành đền Văn Hiến như ngày nay.
+                        br
+                        | Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
 
-    section
+    section.place-detail__block
+        img.place-detail__bg(src="./images/paper-1.jpg", alt="")
         .container
-            h2 2. Hiện vật 3D tại đền
+            h2.place-detail__heading 2. Hiện vật 3D tại đền
 
             .row
-                .col-lg-5
-                    // todo hapk hiện vật 3d sliders
-                .col-lg-7
-                    p
+                .col-lg-6.mb-30.mb-lg-0
+                    +sample-slider-group
+
+                .col-lg-6
+                    p(style="font-size: 18px;")
                         strong Di tích Mauris ac nunc vitae turpis dictum elementum
-                    p
+                    p(style="font-size: 16px;")
                         strong Di tích Mauris ac nunc vitae turpis dictum elementum
                     p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
                     p
                         strong Đặc điểm:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p
                         strong Cấu tạo:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p
                         strong Niên đại:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p
                         strong Kích thước hiện vật:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p
                         strong Chất liệu:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p
                         strong Màu sắc:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p
                         strong Trọng lượng:
-                        span.ml-2 Praesent hendrerit diam vitae
+                        span.ml-2  Praesent hendrerit diam vitae
                     p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id. Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
                     p
                         a.button(href="#!") XEM HIỆN VẬT 3D
 
-    section
+    section.place-detail__block
+        img.place-detail__bg(src="./images/paper-2.jpg", alt="")
+        .place-detail__overlay
         .container
-            h2 Danh sách hiện vật 3D tại đền
+            h2.place-detail__heading Danh sách hiện vật 3D tại đền
             // todo hapk sliders
+            +card-slider-2
+                each item, index in ['Sư tử đá', 'Con dấu hình rồng', 'Tượng điêu khắc', 'Trống đồng']
+                    .swiper-slide
+                        +sample(`./images/img-${index % 5 + 1}.jpg`, item)
 
-        // todo hapk maps
+    // todo hapk maps
+    img.w-100(src="./images/map-placeholder.jpg", alt="")
 
-    section
+    section.s-vr
+        img.s-vr__texture(src="./images/vr-left.png", alt="")
+        img.s-vr__texture.s-vr__texture--right(src="./images/vr-right.png", alt="")
         .container
-            div
-                // todo hapk logo
-            div Để có cảm giác thật hơn
-            div Trải nghiệm không gian VR tour ngay
+            .s-vr__logo.n-logo
+                img(src="./images/logo.png", alt="")
+            .s-vr__subtitle Để có cảm giác thật hơn
+            .s-vr__title Trải nghiệm không gian #[span(style="color: #FAEF50;") VR tour] ngay
             .text-center
                 a.button(href="#!") Tham quan 360 độ
 
@@ -101,3 +121,6 @@ block content
             h2.section__title Các bài viết liên quan
             .mt-4
                 +news-slider
+
+    +md-album-place
+    +md-album-sample

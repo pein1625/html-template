@@ -1,10 +1,29 @@
-mixin md-sample-detail
-  .md-sample-detail.modal.fade(tabindex='-1')
+mixin md-album-sample
+  #md-album-sample.md-album.modal.fade(tabindex='-1')
     .modal-dialog.modal-dialog-centered
       .modal-content
         .modal-header
             h4.modal-title Chi tiết ảnh hiện vật
-            button.md-sample-detail__close(type="button", data-bs-dismiss="modal")
+            button.md-album__close(type="button", data-bs-dismiss="modal")
         .modal-body
-            .md-sample-detail__heading Ảnh hiện vật
-            .md-sample-detail__grid
+            .md-album__heading Ảnh hiện vật
+            .md-album__grid
+              each item in ['./images/sample-detail-1.jpg','./images/sample-detail-2.jpg','./images/sample-detail-3.jpg','./images/sample-detail-4.jpg','./images/sample-detail-5.jpg','./images/sample-detail-6.jpg','./images/sample-detail-7.jpg','./images/sample-detail-8.jpg','./images/sample-detail-9.jpg']
+                .md-album__col
+                  a.md-album__frame(href=item, data-fancybox="album")
+                    img(src=item, alt="")
+
+mixin md-album-place
+  #md-album-place.md-album.modal.fade(tabindex='-1')
+    .modal-dialog
+      .modal-content
+        .modal-header
+            h4.modal-title Chi tiết ảnh điểm đến
+            button.md-album__close(type="button", data-bs-dismiss="modal")
+        .modal-body
+            .md-album__heading Đền Văn Hiến
+            .md-album__grid
+              each item in ['./images/sample-detail-1.jpg','./images/sample-detail-2.jpg','./images/sample-detail-3.jpg','./images/sample-detail-4.jpg','./images/sample-detail-5.jpg','./images/sample-detail-6.jpg','./images/sample-detail-7.jpg','./images/sample-detail-8.jpg','./images/sample-detail-9.jpg']
+                .md-album__col
+                  a.md-album__frame(href=item, data-fancybox="album")
+                    img(src=item, alt="")
