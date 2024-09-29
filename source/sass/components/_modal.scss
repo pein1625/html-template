@@ -1,0 +1,41 @@
+.md-survey-success {
+    font-weight: 600;
+
+    .modal-body {
+        position: relative;
+        text-align: center;
+        padding: 40px 32px;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__text-1 {
+        font-family: $roboto;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    &__text-2 {
+        font-size: 18px;
+        color: $danger;
+        font-style: italic;
+    }
+
+    @include media-breakpoint-down(md) {
+        .modal-body {
+            padding: 32px 16px;
+        }
+
+        &__text-1 {
+            font-size: 20px;
+        }
+
+        &__text-2 {
+            font-size: 14px;
+        }
+    }
+}

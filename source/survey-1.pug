@@ -16,22 +16,24 @@ block content
                 .mb-4
                     input.form-control(type="text", placeholder="Số điện thoại (*)", required)
                 .mb-4
-                    input.form-control(type="text", placeholder="Địa phương (thành phố, Huyện)")
-                    // todo hapk làm dropdown select 9 huyện thành phố
+                    select.custom-select.form-select
+                        option(selected) Địa phương (thành phố, Huyện)
+                        each item in ['Thành phố Thái Nguyên', 'Thành phố Phổ Yên', 'Thành phố Sông Công', 'Huyện Đại Từ', 'Huyện Phú Bình', 'Huyện Phú Lương', 'Huyện Võ Nhai', 'Huyện Định Hóa', 'Huyện Đồng Hỷ']
+                            option= item
                 .mb-4
-                    div
-                        div Đơn vị
-                        div
-                            div
+                    .survey__unit
+                        .survey__unit-title Đơn vị:
+                        .survey__unit-grid
+                            .survey__unit-item
                                 +checkbox
                                     span Cơ quan Nhà nước
-                            div
+                            .survey__unit-item
                                 +checkbox
                                     span Hội, hiệp hội
-                            div
+                            .survey__unit-item
                                 +checkbox
                                     span Doanh nghiệp/HTX
-                            div
+                            .survey__unit-item
                                 +checkbox
                                     span Cá nhân
 

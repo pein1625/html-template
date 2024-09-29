@@ -80,3 +80,154 @@
         }
     }
 }
+
+.survey {
+    padding: 40px 0;
+
+    &__title {
+        font-family: $roboto;
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+        color: $danger;
+    }
+
+    &__subtitle {
+        text-align: center;
+        color: #999;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    &__desc {
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    &__form {
+        max-width: 700px;
+        border: 1px solid $border-color;
+        border-radius: 20px;
+        margin: 30px auto 0;
+        padding: 24px;
+
+        &--2 {
+            padding: 0;
+            border: 0;
+        }
+    }
+
+    &__form-heading {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    &__form-desc {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__btn {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 0;
+        background-color: $primary;
+        color: $white;
+        transition: 0.2s;
+
+        &:hover {
+            color: $white;
+            background-color: darken($primary, 10%);
+            text-decoration: none;
+        }
+    }
+
+    &__unit {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 16px;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        padding: 20px;
+
+        &-title {
+            font-style: italic;
+            text-decoration: underline;
+            font-style: italic;
+            color: #777;
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+    }
+
+    .form-control {
+        height: 40px;
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+
+    .form-select {
+        height: 40px;
+        border-radius: 10px;
+        padding-left: 20px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__desc {
+            font-size: 13px;
+        }
+
+        &__form {
+            &-heading {
+                font-size: 20px;
+            }
+
+            &-desc {
+                font-size: 13px;
+            }
+        }
+
+        &__unit {
+            display: block;
+
+            &-title {
+                margin-bottom: 12px;
+            }
+
+
+            &-grid {
+                grid-gap: 12px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        &__unit {
+            &-grid {
+                grid-template-columns: 1fr;
+                grid-gap: 8px;
+            }
+        }
+    }
+}

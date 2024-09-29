@@ -102,6 +102,7 @@ $phoneRingColor: #e73a35;
   align-items: center;
   border: 0;
   border-radius: 50%;
+  border: 1px solid $white;
   background-color: rgba($primary, 0.8);
   color: $white;
   box-shadow: 0 2px 10px rgba(#000, 0.15);
@@ -110,6 +111,7 @@ $phoneRingColor: #e73a35;
   z-index: $zindex-sticky;
   bottom: 15px;
   right: 15px;
+  font-size: 12px;
 
   &:hover {
     color: $white;
