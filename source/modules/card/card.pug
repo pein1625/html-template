@@ -15,15 +15,31 @@ mixin news
                     br
                     | Định dạng: PDF
 
-mixin news-2(img="https://placehold.co/135x100", icon="")
+mixin news-2(type="info", img="https://placehold.co/135x100")
     .news-2
         .row.g-3
             .col-auto
                 .position-relative.d-flex
                     a.news-2__frame(href="#!")
                         img(src=img, alt="")
-                    img.news-2__icon(src=icon, alt="")
-                    //- todo hapk add icon alert / info
+                    if (type === 'info')
+                        span.news-2__icon.bg-primary
+                            i.fal.fa-bullhorn
+                    if (type === 'danger')
+                        span.news-2__icon.bg-danger
+                            i.fal.fa-exclamation-triangle
             .col
                 h3.news-2__title
                     a(href="#!") Kiểm tra, rà soát và gỡ bỏ các thực phẩm bổ sung vi phạm
+
+mixin news-3(img="https://placehold.co/135x100")
+    .news-3
+        a.news-3__frame(href="#!")
+            img(src=img, alt="")
+        .news-3__body
+            h3.news-3__title
+                a(href="#!") Công tác lãnh đạo, chỉ đạo triển khai hiệu quả các nhiệm vụ trọng tâm thực hiện tháng 8 năm 2024
+            .news-3__time
+                i.fal.fa-fw.fa-calendar.me-2
+                span 20/09/2024
+            .news-3__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ipsum in quos enim, voluptatibus vel iste, quasi eaque nisi sunt, fuga ducimus commodi soluta? Debitis molestias doloribus repudiandae voluptatem sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quasi dicta doloribus dignissimos ipsa optio, sequi doloremque numquam illo voluptates? Reiciendis doloremque delectus molestias fugit earum consectetur commodi excepturi sequi.

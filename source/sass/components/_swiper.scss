@@ -13,7 +13,7 @@
     position: absolute;
     z-index: 10;
     top: 50%;
-    left: 3%;
+    left: 2%;
     transform: translateY(-50%);
     cursor: pointer;
     @include shadow("");
@@ -31,7 +31,7 @@
 
   &__next {
     left: auto;
-    right: 3%;
+    right: 2%;
   }
 
   &:hover &__prev,
@@ -51,12 +51,12 @@
     }
 
     &:hover &__prev {
-      left: 3%;
+      left: 2%;
       opacity: 1;
     }
 
     &:hover &__next {
-      right: 3%;
+      right: 2%;
       opacity: 1;
     }
   }
@@ -160,4 +160,11 @@
       right: -15px;
     }
   }
+}
+
+.banner-slider {
+  position: relative;
+  z-index: 1;
+
+  @include slider-nav-1();
 }

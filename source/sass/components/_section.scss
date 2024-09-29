@@ -231,3 +231,35 @@
         }
     }
 }
+
+.section-6 {
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $primary;
+        border-bottom: 2px solid $primary;
+        padding: 6px 0 8px;
+        margin-bottom: 16px;
+    }
+}
+
+.section-7 {
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        background-color: $primary;
+        padding: 8px 12px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__title {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -23,3 +23,15 @@ function addSwiper(selector, options = {}) {
     return new Swiper($sliderEl, options);
   });
 }
+
+$(function() {
+  addSwiper('.banner-slider', {
+    loop: true,
+    speed: 400,
+    navigation: true,
+    pagination: true,
+    autoplay: {
+      delay: 4000,
+    }
+  })
+});

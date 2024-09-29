@@ -1,5 +1,5 @@
 {
-  "using": ["jquery", "popper", "bootstrap"],
+  "using": ["jquery", "popper", "bootstrap", "swiper"],
   "data": {
     "jquery": {
       "js": ["./node_modules/jquery/dist/jquery.min.js"]

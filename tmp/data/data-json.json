@@ -2,59 +2,31 @@
 	"pageList": {
 		"data": [
 			{
-				"title": "Trang chủ ----------",
+				"title": "Trang chủ",
 				"url": "index"
 			},
 			{
-				"title": "Chỉ số thương mại điện tử Thái Nguyên ----------",
+				"title": "Chỉ số thương mại điện tử Thái Nguyên",
 				"url": "index-tn"
 			},
 			{
-				"title": "Chỉ số thương mại điện tử Việt Nam ----------",
+				"title": "Chỉ số thương mại điện tử Việt Nam",
 				"url": "index-vn"
 			},
 			{
-				"title": "Thống kê thương mại điện tử ----------",
+				"title": "Thống kê thương mại điện tử",
 				"url": "statistical"
 			},
 			{
-				"title": "Khảo sát 1 ----------",
+				"title": "Khảo sát 1",
 				"url": "survey-1"
 			},
 			{
-				"title": "Khảo sát 2 ----------",
+				"title": "Khảo sát 2",
 				"url": "survey-2"
 			}
 		]
 	},
-	"menu": [
-		{
-			"text": "Trang chủ",
-			"url": "./index.html",
-			"active": true,
-			"hasIcon": false
-		},
-		{
-			"text": "Giới thiệu",
-			"url": "./about.html"
-		},
-		{
-			"text": "Khảo sát",
-			"url": "./survey-1.html"
-		},
-		{
-			"text": "Bản tin Công Thương",
-			"url": "./index-tn.html"
-		},
-		{
-			"text": "Hướng dẫn",
-			"url": "#!"
-		},
-		{
-			"text": "Liên hệ",
-			"url": "#!"
-		}
-	],
 	"head": {
 		"jquery": {
 			"js": [
@@ -175,5 +147,33 @@
 				"https://cdnjs.cloudflare.com/ajax/libs/clndr/1.4.7/clndr.min.js"
 			]
 		}
-	}
+	},
+	"menu": [
+		{
+			"text": "Trang chủ",
+			"url": "./index.html",
+			"active": true,
+			"hasIcon": false
+		},
+		{
+			"text": "Giới thiệu",
+			"url": "#!"
+		},
+		{
+			"text": "Khảo sát",
+			"url": "./survey-1.html"
+		},
+		{
+			"text": "Bản tin Công Thương",
+			"url": "./index-tn.html"
+		},
+		{
+			"text": "Hướng dẫn",
+			"url": "#!"
+		},
+		{
+			"text": "Liên hệ",
+			"url": "#!"
+		}
+	]
 }
