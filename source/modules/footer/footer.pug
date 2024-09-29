@@ -1,4 +1,4 @@
-mixin footer
+mixin footer(statistic = true)
   footer.footer
     .container
       .footer__grid
@@ -22,12 +22,12 @@ mixin footer
             a.f-support__phone(href="tel:0916.155.787") 0916.155.787
             .f-support__img
               img(src="./images/footer-qr.png", alt="")
-
-        .footer__col
-          .f-statistic
-            .f-statistic__label Số người khảo sát
-            .f-statistic__content TP. THÁI NGUYÊN: 00000
-            .f-statistic__label Số người truy cập
-            .f-statistic__content 8888888
-            .f-statistic__label Số người online
-            .f-statistic__content 8888888
+        if (statistic)
+          .footer__col
+            .f-statistic
+              .f-statistic__label Số người khảo sát
+              .f-statistic__content TP. THÁI NGUYÊN: 00000
+              .f-statistic__label Số người truy cập
+              .f-statistic__content 8888888
+              .f-statistic__label Số người online
+              .f-statistic__content 8888888
