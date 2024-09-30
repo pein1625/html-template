@@ -62,10 +62,8 @@ $(function () {
 
   $('.js-daterangepicker').daterangepicker({
     timePicker: true,
-    startDate: moment().startOf('hour'),
-    endDate: moment().startOf('hour').add(32, 'hour'),
     locale: {
-      format: 'M/DD hh:mm A'
+      format: 'DD/MM/YYYY'
     }
   });
 });
@@ -144,3 +142,25 @@ function createPostMenu() {
     }
   });
 }
+
+$(function() {
+  const $route = $('.route');
+
+  if (!$route.length) return;
+
+  const $select = $route.find('.route__select');
+  const $dropdown = $route.find('.route__dropdown');
+
+  $select.on('click', function(e) {
+    e.stopPropagation();
+    $dropdown.fadeToggle('fast');
+  });
+
+  $dropdown.on('click', function(e) {
+    e.stopPropagation();
+  });
+
+  $('html, body').on('click', function() {
+    $dropdown.fadeOut('fast');
+  });
+});

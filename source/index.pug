@@ -21,7 +21,7 @@ block content
                 img.about__bg(src="./images/about-bg.png", alt="")
                 .row
                     .col-lg-5.mb-4.mb-lg-0
-                        h2.about__title.section__title Đan Phượng
+                        h2.about__title.section__title.text-primary Đan Phượng
                         .about__subtitle Đôi nét về một huyện của Hà Nội
                         .about__content
                             p "#[strong Nằm ở phía Tây Bắc thủ đô Hà Nội, Đan Phượng là một huyện thuộc Hà Nội.] Đan Phượng cách trung tâm thành phố khoảng 20km theo trục đường quốc lộ 32. Huyện Đan Phượng nằm tiếp giáp với 5 quận huyện của Hà Nội:
@@ -59,7 +59,10 @@ block content
                     .counter__label Sản phẩm
                     .counter__desc Cho khách trải nghiệm
 
-    section.section
+    section.section.offset-section
+        img.texture-5(src="./images/texture-1.png", alt="")
+        img.texture-4(src="./images/texture-4.png", alt="")
+        img.texture-3(src="./images/texture-3.png", alt="")
         .container
             h2.section__title.text-primary Điểm đến
             .section__subtitle Những địa điểm nổi bật
@@ -69,21 +72,68 @@ block content
                 +card-slider
                     - for(let i = 0; i < 6; i++)
                         .swiper-slide
-                            +product(`./images/img-${i % 5 + 1}.jpg`)
+                            +place(`./images/img-${i % 5 + 1}.jpg`)
 
             .mt-4.text-center
                 a.button(href="#!") Xem tất cả
 
-    section.section
+    section.section.pb-0
         .container
             h2.section__title.text-primary Tuyến du lịch
             .section__subtitle Những tuyến du lịch nổi bật
             .section__desc Mời bạn chọn tuyến du lịch yêu thích tại đây, khám phá ngay nào!
                 // todo hapk search input
+            .mt-3.mb-40.mx-auto.position-relative(style="max-width: 790px; z-index: 100")
+                .route
+                    .route__select
+                        span Chọn tuyến
+                        i.fal.fa-fw.fa-angle-down
+                    .route__dropdown
+                        .route__item
+                            +checkbox
+                                strong Tuyến A:
+                                span.ms-1 Hạ Mỗ (Hồng Thái)
+                        .route__item
+                            +checkbox
+                                strong Tuyến B:
+                                span.ms-1 Miếu Đinh Nguyên (xã Thọ An)
+                        .route__item
+                            +checkbox
+                                strong Tuyến C:
+                                span.ms-1 Đền Nhã Lang (xã Hạ Mỗ)
+                        .route__item
+                            +checkbox
+                                strong Tuyến D:
+                                span.ms-1 Đình chùa Phương Mạc (xã Phương Đình)
+                        .route__item
+                            +checkbox
+                                strong Tuyến E:
+                                span.ms-1 Đền Văn Hiến - Thờ Thái úy Phụ chính Tô Hiến Thành (xã Hạ Mỗ)
+                        .route__item
+                            +checkbox
+                                strong Tuyến F:
+                                span.ms-1 Đình Vạn Xuân (xã Hạ Mỗ)
+                        .route__item
+                            +checkbox
+                                strong Tuyến G:
+                                span.ms-1 Đình chùa Phương Mạc (xã Phương Đình)
+                        .route__item
+                            +checkbox
+                                strong Tuyến H:
+                                span.ms-1 Miếu Xương Rồng (xã Liên Hồng)
+                        .route__item
+                            +checkbox
+                                strong Tuyến I:
+                                span.ms-1 Đình chùa Phương Mạc (xã Phương Đình)
+
         div
             // todo hapk map
+            img.w-100(src="./images/map-placeholder.jpg", alt="")
 
     section.section
+        img.texture-1(src="./images/texture-1.png", alt="")
+        img.texture-2(src="./images/texture-2.png", alt="")
+        .section__bg-1
         //- todo hapk add bg
         .container
             h2.section__title.text-primary Tin tức

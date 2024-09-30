@@ -10,14 +10,17 @@ block content
             .mx-auto.mt-4(style="max-width: 800px")
                 +search-field
 
-                .d-flex.flex-wrap.align-center.justify-between.gap-4
-                    nav.tags.mt-3.mb-4.mb-lg-40
+                .d-flex.flex-wrap.align-items-center.justify-content-between.gap-4.mt-3.mb-4.mb-lg-40
+                    nav.tags.me-auto
                         a.tags__item.active(href="#!") Tất cả
                         a.tags__item(href="#!") Hình ảnh
                         a.tags__item(href="#!") Hình ảnh 3D
                         a.tags__item(href="#!") Videos
-                    // todo hapk daterangepicker
-                    input(type="text" class="js-daterangepicker")
+                    .custom-daterangepicker
+                        .input-group
+                            span.input-group-text
+                                i.fal.fa-fw.fa-calendar
+                            input.form-control(type="text" class="js-daterangepicker")
 
             .row.g-3.g-xl-30
                 - for(let i = 0; i < 12; i++)

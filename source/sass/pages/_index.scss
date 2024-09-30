@@ -287,3 +287,75 @@
         }
     }
 }
+
+.route {
+    position: relative;
+    z-index: 20;
+
+    &__select {
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 1px 8px rgba(#000, 0.2);
+        position: relative;
+        z-index: 1;
+        color: #999;
+        background-color: #fff;
+        cursor: pointer;
+
+        i {
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            right: 14px;
+            transform: translateY(-50%);
+            color: #333;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        width: 100%;
+        background-color: $white;
+        border-radius: 8px;
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        box-shadow: 0 4px 12px rgba(#000, 0.35);
+        padding: 32px 40px;
+        max-height: 360px;
+        overflow: auto;
+
+        &::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        &::-webkit-scrollbar
+        {
+            width: 8px;
+            background-color: #f9f9f9;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
+            background-color: #aaa;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+.offset-section {
+    padding-bottom: 325px;
+    margin-bottom: -265px;
+}
