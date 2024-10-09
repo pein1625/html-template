@@ -290,7 +290,7 @@
 
 .route {
     position: relative;
-    z-index: 20;
+    z-index: 200;
 
     &__select {
         padding: 16px;
@@ -351,6 +351,21 @@
             margin-bottom: 8px;
             padding-bottom: 8px;
             border-bottom: 1px solid $border-color;
+        }
+
+        .checkbox-styled {
+            flex-wrap: wrap;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__dropdown {
+            max-height: 275px;
+            padding: 16px 20px;
+        }
+
+        &__item {
+            font-size: 13px;
         }
     }
 }
