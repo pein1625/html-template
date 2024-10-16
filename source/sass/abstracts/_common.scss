@@ -60,11 +60,11 @@
     padding: 6px 18px;
     border-radius: 4px;
     color: $green-dark;
-    background-color: #E3F6F2;
+    background-color: #e3f6f2;
 
     &:hover {
       color: $green-dark;
-      background-color: darken(#E3F6F2, 10%);
+      background-color: darken(#e3f6f2, 10%);
       text-decoration: none;
     }
 
@@ -162,5 +162,69 @@
 
   .form-control {
     border: 0;
+  }
+}
+
+/* Custom InfoWindow CSS */
+.n-info-window {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 250px;
+
+  &__frame {
+    @include frame('rect', 53%);
+  }
+
+  &__body {
+    padding: 12px;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    font-size: 14px;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: 0;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #EB5757;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 12px;
+      border-top: 2px solid #EB5757;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
   }
 }
