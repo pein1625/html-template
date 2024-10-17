@@ -1,4 +1,30 @@
 extends layout/page
 
+block script
+    script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0hNc0IKJXYQzNTWtGesMaT5pcJzXMPQY&loading=async&callback=initMap")
+
 block content
-    // todo hapk
+    section.tour
+        .container
+            .position-relative
+                .tour__inner
+                    button.tour__btn(type="button")
+                        i.fal.fa-fw.fa-filter
+                    button.tour__btn(type="button")
+                        i.fal.fa-fw.fa-bookmark
+                    .tour__search
+                        .input-group
+                            .input-group-text
+                                i.fal.fa-search
+                            input.form-control(type="text", placeholder="Tìm kiếm tuyến du lịch ...")
+                    .tour__nav
+                        .tour__nav-inner
+                            a.tour__link(href="#!") Đền Văn Hiến
+                            a.tour__link.active(href="#!") Miếu Hàm Rồng
+                            a.tour__link(href="#!") Đình Bá Dương
+                            a.tour__link(href="#!") Đình Đại Phùng
+                        .tour__nav-next
+                            i.fal.fa-angle-double-right
+
+        .tour__map
+            #map

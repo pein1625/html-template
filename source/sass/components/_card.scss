@@ -444,7 +444,7 @@
         content: '';
         display: block;
         width: 100%;
-        padding-bottom: 100%;
+        padding-bottom: 45%;
     }
 
     #map {
@@ -453,5 +453,11 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        &::before {
+            padding-bottom: 100%;
+        }
     }
 }

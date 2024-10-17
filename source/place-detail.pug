@@ -1,5 +1,8 @@
 extends layout/page
 
+block script
+    script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0hNc0IKJXYQzNTWtGesMaT5pcJzXMPQY&loading=async&callback=initMap")
+
 block content
     +breadcrumb('Trang chủ', 'Điểm đến', 'Chi tiết điểm đến')
 
@@ -93,8 +96,83 @@ block content
                     .swiper-slide
                         +sample(`./images/img-${index % 5 + 1}.jpg`, item)
 
-    // todo hapk maps
-    img.w-100(src="./images/map-placeholder.jpg", alt="")
+    +map-frame
+    script.
+        var defaultRoutes = ['tuyen_1', 'tuyen_2', 'tuyen_3'];
+        var markersData = {
+            'tuyen_1': {
+                lat: 37.7749,
+                lng: -122.4194,
+                info: {
+                    title: 'San Francisco, California',
+                    description: 'A popular tourist destination, known for the Golden Gate Bridge.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_2': {
+                lat: 34.0522,
+                lng: -118.2437,
+                info: {
+                    title: 'Los Angeles, California',
+                    description: 'Known for its Mediterranean climate and the entertainment industry.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_3': {
+                lat: 40.7128,
+                lng: -74.0060,
+                info: {
+                    title: 'New York, New York',
+                    description: 'The largest city in the USA, known for its iconic skyline.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_4': {
+                lat: 37.7749,
+                lng: -122.4194,
+                info: {
+                    title: 'San Francisco, California',
+                    description: 'A popular tourist destination, known for the Golden Gate Bridge.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_5': {
+                lat: 34.0522,
+                lng: -118.2437,
+                info: {
+                    title: 'Los Angeles, California',
+                    description: 'Known for its Mediterranean climate and the entertainment industry.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_6': {
+                lat: 40.7128,
+                lng: -74.0060,
+                info: {
+                    title: 'New York, New York',
+                    description: 'The largest city in the USA, known for its iconic skyline.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_7': {
+                lat: 34.0522,
+                lng: -118.2437,
+                info: {
+                    title: 'Los Angeles, California',
+                    description: 'Known for its Mediterranean climate and the entertainment industry.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+            'tuyen_8': {
+                lat: 40.7128,
+                lng: -74.0060,
+                info: {
+                    title: 'New York, New York',
+                    description: 'The largest city in the USA, known for its iconic skyline.',
+                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                }
+            },
+        };
 
     section.s-vr
         img.s-vr__texture(src="./images/vr-left.png", alt="")
