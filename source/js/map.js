@@ -9,6 +9,7 @@ async function initMap() {
     map = new google.maps.Map(mapEl, {
         zoom: 8,
         center: { lat: 0, lng: 0 },
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
     });
 }
 
@@ -76,8 +77,10 @@ function closeInfoWindow() {
 
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
-        const defaultRoutesData = defaultRoutes.map(routeName => markersData[routeName]).filter(x => x);
-        renderMarkersAndCentering(defaultRoutesData);
+        if (defaultRoutes) {
+            const defaultRoutesData = defaultRoutes.map(routeName => markersData[routeName]).filter(x => x);
+            renderMarkersAndCentering(defaultRoutesData);
+        }
     }, 1000);
 
     $('.js-location-checkbox').on('change', function() {

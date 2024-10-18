@@ -1,3 +1,175 @@
 // todo hapk
 .tour {
+    position: relative;
+    z-index: 1;
+
+    &__wrapper {
+        width: 100%;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 18px 0;
+        background: linear-gradient(to bottom, rgba(#000, 0.1), rgba(#000, 0));
+    }
+
+    &__inner {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__search {
+        flex: 1;
+        max-width: 400px;
+
+        .form-control {
+            border-radius: 0 8px 8px 0;
+            border: 0;
+        }
+
+        .input-group-text {
+            border-radius: 8px 0 0 8px;
+            border: 0;
+            background: #fff;
+            color: #666;
+            padding-right: 0;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        border: 0;
+        border-radius: 8px;
+        background-color: #419481;
+        color: #FAEF50;
+        transition: 0.2s;
+
+        &:hover {
+            color: #FAEF50;
+            background-color: darken(#419481, 5%);
+            text-decoration: none;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__nav-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        flex: 1;
+    }
+
+    &__nav-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 0;
+        border-radius: 50%;
+        background-color: #FFF5D7;
+        color: #333;
+        transition: 0.3s;
+
+        &.active,
+        &:hover {
+            background-color: #D6A700;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 22px;
+        padding: 6px 18px;
+        border: 0;
+        border-radius: 16px;
+        background-color: #FFF5D7;
+        color: #333;
+        transition: 0.3s;
+
+        &.active,
+        &:hover {
+            background-color: #D6A700;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    &__map {
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        position: relative;
+
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__btn {
+            width: 32px;
+            height: 32px;
+        }
+
+        &__search {
+            .form-control {
+                height: 32px;
+            }
+        }
+
+        &__nav {
+            gap: 8px;
+        }
+
+        &__nav-inner {
+            gap: 8px;
+        }
+
+        &__link {
+            font-size: 12px;
+            line-height: 20px;
+            padding: 6px 16px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__inner {
+            flex-wrap: wrap;
+            gap: 12px 16px;
+        }
+
+        &__search {
+            max-width: unset;
+        }
+
+        &__nav {
+            flex: 0 0 100%;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &__link {
+            font-size: 11px;
+            padding: 4px 10px;
+        }
+    }
 }

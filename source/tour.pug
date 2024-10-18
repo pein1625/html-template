@@ -5,26 +5,104 @@ block script
 
 block content
     section.tour
-        .container
-            .position-relative
-                .tour__inner
-                    button.tour__btn(type="button")
-                        i.fal.fa-fw.fa-filter
-                    button.tour__btn(type="button")
-                        i.fal.fa-fw.fa-bookmark
-                    .tour__search
-                        .input-group
-                            .input-group-text
-                                i.fal.fa-search
-                            input.form-control(type="text", placeholder="Tìm kiếm tuyến du lịch ...")
-                    .tour__nav
-                        .tour__nav-inner
-                            a.tour__link(href="#!") Đền Văn Hiến
-                            a.tour__link.active(href="#!") Miếu Hàm Rồng
-                            a.tour__link(href="#!") Đình Bá Dương
-                            a.tour__link(href="#!") Đình Đại Phùng
-                        .tour__nav-next
-                            i.fal.fa-angle-double-right
+        .tour__wrapper
+            .container
+                .position-relative
+                    .tour__inner
+                        button.tour__btn(type="button")
+                            i.far.fa-fw.fa-filter
+                        button.tour__btn(type="button")
+                            i.far.fa-fw.fa-bookmark
+                        .tour__search
+                            .input-group
+                                .input-group-text
+                                    i.fal.fa-search
+                                input.form-control(type="text", placeholder="Tìm kiếm tuyến du lịch ...")
+                        .tour__nav
+                            .tour__nav-inner
+                                a.tour__link(href="#!") Đền Văn Hiến
+                                a.tour__link.active(href="#!") Miếu Hàm Rồng
+                                a.tour__link(href="#!") Đình Bá Dương
+                                a.tour__link(href="#!") Đình Đại Phùng
+                            button.tour__nav-next(type="button")
+                                i.far.fa-angle-double-right
 
         .tour__map
             #map
+
+            script.
+                var defaultRoutes = ['tuyen_1', 'tuyen_2', 'tuyen_3'];
+                var markersData = {
+                    'tuyen_1': {
+                        lat: 37.7749,
+                        lng: -122.4194,
+                        info: {
+                            title: 'San Francisco, California',
+                            description: 'A popular tourist destination, known for the Golden Gate Bridge.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_2': {
+                        lat: 34.0522,
+                        lng: -118.2437,
+                        info: {
+                            title: 'Los Angeles, California',
+                            description: 'Known for its Mediterranean climate and the entertainment industry.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_3': {
+                        lat: 40.7128,
+                        lng: -74.0060,
+                        info: {
+                            title: 'New York, New York',
+                            description: 'The largest city in the USA, known for its iconic skyline.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_4': {
+                        lat: 37.7749,
+                        lng: -122.4194,
+                        info: {
+                            title: 'San Francisco, California',
+                            description: 'A popular tourist destination, known for the Golden Gate Bridge.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_5': {
+                        lat: 34.0522,
+                        lng: -118.2437,
+                        info: {
+                            title: 'Los Angeles, California',
+                            description: 'Known for its Mediterranean climate and the entertainment industry.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_6': {
+                        lat: 40.7128,
+                        lng: -74.0060,
+                        info: {
+                            title: 'New York, New York',
+                            description: 'The largest city in the USA, known for its iconic skyline.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_7': {
+                        lat: 34.0522,
+                        lng: -118.2437,
+                        info: {
+                            title: 'Los Angeles, California',
+                            description: 'Known for its Mediterranean climate and the entertainment industry.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                    'tuyen_8': {
+                        lat: 40.7128,
+                        lng: -74.0060,
+                        info: {
+                            title: 'New York, New York',
+                            description: 'The largest city in the USA, known for its iconic skyline.',
+                            imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                        }
+                    },
+                };
