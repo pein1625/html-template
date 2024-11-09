@@ -1,0 +1,32 @@
+.section {
+    padding: 40px 0;
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        color: $white;
+        margin-bottom: 20px;
+    }
+
+    &__province {
+        max-width: 400px;
+        margin: 20px auto;
+
+        .select2-container {
+            .select2-selection--single {
+                border-color: #e6e6e6;
+                height: 35px;
+
+                .select2-selection__rendered {
+                    line-height: 33px;
+                    padding-left: 12px;
+                }
+
+                .select2-selection__arrow {
+                    height: 33px;
+                }
+            }
+        }
+    }
+}

@@ -25,13 +25,13 @@
 
   .page-item {
     &:not(:last-child) {
-      margin-right: 4px;
+      margin-right: 8px;
     }
   }
 
   .page-link {
     color: $gray-800;
-    padding: 8px 16px;
+    padding: 5px 13px;
     border-radius: 4px;
   }
 

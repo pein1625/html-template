@@ -103,6 +103,7 @@
     &-root {
       display: flex;
       border: 0;
+      justify-content: center;
     }
 
     &-root &-item {
@@ -167,8 +168,31 @@
 
     &-root > &-item > &-link {
       font-size: 14px;
+      font-weight: 400;
+      color: $white;
       padding: 12px 0;
       transition: 0.3s;
+      text-transform: unset;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: $white;
+        transition: 0.3s ease-in-out;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%) rotateY(90deg);
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      &::after {
+        transform: translateX(-50%);
+      }
     }
 
     &-root > &-item > &-toggle {

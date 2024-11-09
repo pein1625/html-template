@@ -2,65 +2,19 @@
   "menu": [
     {
       "text": "Trang chủ",
-      "url": "./index.html",
-      "active": true,
-      "hasIcon": false
+      "url": "./index.html"
     },
     {
-      "text": "Giới thiệu",
-      "url": "./about.html",
-      "submenu": [
-        {
-          "text": "Dropdown",
-          "url": "#!"
-        },
-        {
-          "text": "Dropdown",
-          "url": "#!"
-        },
-        {
-          "text": "Dropdown",
-          "url": "#!"
-        },
-        {
-          "text": "Dropdown",
-          "url": "#!",
-          "submenu": [
-            {
-              "text": "Dropdown",
-              "url": "#!"
-            },
-            {
-              "text": "Dropdown",
-              "url": "#!"
-            },
-            {
-              "text": "Dropdown",
-              "url": "#!"
-            }
-          ]
-        }
-      ]
+      "text": "Thể lệ",
+      "url": "./the-le.html"
     },
     {
-      "text": "Sản phẩm",
-      "url": "./products.html"
+      "text": "Danh sách trúng thưởng",
+      "url": "./danh-sach-trung-thuong.html"
     },
     {
-      "text": "Dự án",
-      "url": "./projects.html"
-    },
-    {
-      "text": "Hệ thống phân phối",
-      "url": "./distribution.html"
-    },
-    {
-      "text": "Tin tức",
-      "url": "./news.html"
-    },
-    {
-      "text": "Liên hệ",
-      "url": "./contact.html"
+      "text": "Liên hệ đại lý",
+      "url": "./lien-he-dai-ly.html"
     }
   ]
 }
