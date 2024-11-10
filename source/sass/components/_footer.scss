@@ -1,0 +1,22 @@
+.footer {
+    background-color: #22B57F;
+    padding: 60px 0;
+    color: $white;
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__link {
+        color: $white;
+        transition: 0.2s;
+
+        &:hover {
+            color: rgba(#fff, 0.9);
+            text-decoration: underline;
+        }
+    }
+}

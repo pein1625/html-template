@@ -1,32 +1,85 @@
 .section {
-    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+    padding: 50px 0;
+    overflow: hidden;
 
     &__title {
         font-size: 32px;
         font-weight: 700;
         text-align: center;
-        color: $white;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+
+        &--blue {
+            color: $blue;
+        }
+    }
+
+    &__desc {
+        text-align: center;
+        margin-top: -12px;
+        margin-bottom: 24px;
     }
 
     &__province {
         max-width: 400px;
-        margin: 20px auto;
+        margin: 24px auto;
+    }
 
-        .select2-container {
-            .select2-selection--single {
-                border-color: #e6e6e6;
-                height: 35px;
+    &--blue {
+        background-color: $blue;
+    }
 
-                .select2-selection__rendered {
-                    line-height: 33px;
-                    padding-left: 12px;
-                }
+    @include media-breakpoint-down(xl) {
+        padding: 40px 0;
 
-                .select2-selection__arrow {
-                    height: 33px;
-                }
-            }
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        &__desc {
+            margin-top: -8px;
+            margin-bottom: 20px;
         }
     }
+}
+
+.texture-1 {
+    width: 54vw;
+    height: 54vw;
+    border-radius: 50%;
+    background-color: rgba(#fff, 0.1);
+    overflow: hidden;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+}
+
+.texture-2 {
+    width: 54vw;
+    height: 54vw;
+    border-radius: 50%;
+    background-color: rgba(#fff, 0.1);
+    overflow: hidden;
+    transform: translateY(50%);
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+    left: 0;
+}
+
+.texture-3 {
+    width: 26vw;
+    height: 26vw;
+    border-radius: 50%;
+    background-color: rgba(#fff, 0.1);
+    overflow: hidden;
+    transform: translateY(-20%);
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 6%;
 }

@@ -1,3 +1,169 @@
 extends layout/page
 
 block content
+    section.banner-home
+        .container
+            .position-relative
+                // todo hapk make countdown play
+                .banner-home__countdown
+                    .banner-home__countdown-col
+                        .banner-home__countdown-num 27
+                        .banner-home__countdown-label ngày
+                    .banner-home__countdown-col
+                        .banner-home__countdown-num 11
+                        .banner-home__countdown-label giờ
+                    .banner-home__countdown-col
+                        .banner-home__countdown-num 02
+                        .banner-home__countdown-label phút
+                    .banner-home__countdown-col
+                        .banner-home__countdown-num 04
+                        .banner-home__countdown-label giây
+                .banner-home__remaining
+                    .banner-home__remaining-text
+                        div Số quà
+                        div còn lại
+                    .banner-home__remaining-number 3054
+                    img.banner-home__remaining-img(src="./images/giftboxes.png", alt="")
+                img.w-100(src="./images/banner-home.png", alt="")
+            .banner-home__copyright Copyright © 2023 PIAGGIO VIETNAM CO., LTD #[a(href="#!") Điều khoản]
+
+    section.section.section--blue
+        .texture-3
+        .texture-2
+        .container
+            h2.section__title.text-white Thể lệ chương trình
+
+            .section__content.my-30.text-white
+                p Piaggio Việt Nam luôn mang ến cho khách hàng những sản phẩm chất lượng cao và phụ tùng chính hãng. Với mong muốn em ến cho Quý khách hàng cơ hội ược trải nghiệm những sản phẩm tuyệt vời này, Piaggio Việt Nam thực hiện chương trình khuyến mại “VÒNG XOAY MAY MẮN” nhằm khuyến khích khách hàng sử dụng các sản phẩm chất lượng cao của chúng tôi, ồng thời có cơ hội nhận ược các phần quà hấp dẫn từ Piaggio Việt Nam. Với mỗi hoá ơn mua sản phẩm xe máy của Piaggio Việt Nam, khách hàng sẽ có cơ hội nhận hàng nghìn phần quà với tổng trị giá lên tới hơn 3 tỷ ồng và thay dầu miễn phí từ vòng quay may mắn của chương trình.
+                p 1. Nội dung chi tiết của chương trình khuyến mại
+                ul
+                    li Tên chương trình khuyến mại: VÒNG XOAY MAY MẮN
+                    li Thời gian khuyến mại: Từ ngày 15/11/2024 ến hết ngày 09/02/2025.
+                    li Địa bàn (phạm vi khuyến mại): tất cả các ại lý trên toàn quốc.
+                    li Hình thức khuyến mại: Bán hàng, cung ứng dịch vụ kèm theo cơ hội tham gia các chương trình mang tính may rủi.
+                    li Hàng hoá, dịch vụ ược khuyến mại: Tất cả các sản phẩm xe máy tại Cửa hàng xe máy và dịch vụ của Piaggio Việt Nam trên phạm vi toàn quốc.
+                    li Hàng hóa dịch vụ dùng ể khuyến mại: 50 xe máy Piaggio, 50 xe máy iện, 50.000 E-voucher trị giá 100.000 VN, 50.000 E-voucher thay dầu miễn phí và 150.000 thẻ iện thoại mạnh giá 20,000 VN.
+                p 2. Thể lệ chương trình khuyến mại
+                p • Điều kiện
+                p (i) Khách hàng đã mua xe máy của Piaggio Việt Nam và thêm Số khung xe vào ứng dụng;
+                p (ii) Trong thời gian khuyến mại tại Mục 01 của thông báo này, khách hàng có phát sinh dịch vụ sửa chữa, bảo dưỡng xe máy Piaggio Việt Nam với giá trị hoá ơn tối thiểu 1,000,000 VND (Một triệu ồng).
+                p Lưu ý: Mỗi khách hàng chỉ nhận được duy nhất 01 lượt quay trong thời gian diễn ra Chương trình.
+                p • Cách thức, thủ tục
+                p Khi khách hàng áp ứng 2 iều kiện trên, trong vòng 02-03 ngày làm việc kể từ ngày khách hàng phát sinh dịch vụ, Piaggio Việt Nam sẽ tự ộng gửi cho khách hàng 01 lượt tham gia quay vòng quay may mắn thông qua hình thức gửi thông báo trên website của chương trình.
+                p Một số lưu ý:
+                ul
+                    li Thời gian cuối cùng khách hàng phải quay vòng quay may mắn là: Ngày 12/02/2025.
+                    li Đối với khách hàng trúng E-voucher: Thời hạn hiệu lực của Evoucher tính từ khi khách hàng nhận ược voucher tới hết ngày 31/03/2025.
+                p Mọi thông tin liên quan ến chương trình khuyến mại, khách hàng vui lòng liên hệ với Piaggio Việt Nam qua các kênh sau ể ược hướng dẫn và giải áp thắc mắc:
+                ul
+                    li Số iện thoại chăm sóc khách hàng (miễn phí): 1800 8000
+                    li Hòm thư: cr@Piaggio.com.vn
+
+            .mt-30.text-center
+                a.button(href="#!") Xem thêm
+
+    section.section.bg-white
+        .container
+            h2.section__title.section__title--blue Danh sách trúng thưởng
+
+            nav.n-tab
+                a.button.active(href="#!") Tuần này
+                a.button(href="#!") Tháng này
+                a.button(href="#!") Từ đầu chương trình
+
+            .data-tbl
+                table.table.table-borderless.js-datatable
+                    thead
+                        tr
+                            th STT
+                            th Tên khách hàng
+                            th Số điện thoại
+                            th Số CCCD/CMND
+                            th Ngày đăng ký
+                            th Giải thưởng
+                            th Đại lý
+                    tbody
+                        - for(let i = 0; i < 10; i++)
+                            tr
+                                td #{i == 9 ? '10' : '0' + (i+1)}
+                                td Trương Văn Thắng
+                                td 0987654***
+                                td 0123456***
+                                td 20/10/2024
+                                td Xe Vespa
+                                td Xuân Cầu Vespa
+
+                .data-tbl__footer
+                    .data-tbl__search
+                        .input-group
+                            input.form-control(type="text", placeholder="Tìm kiếm thông tin")
+                            button.input-group-text(type="button")
+                                i.far.fa-lg.fa-search
+
+                    .data-tbl__content
+                        div Có #[strong.text-danger 93] đại lý trong danh sách này
+
+                    .data-tbl__pagination
+                        +pagination
+
+    section.section.h-contact
+        .texture-1
+        .container
+            h2.section__title.text-white Liên hệ đại lý
+            .section__desc.text-white Hãy là những khách hàng ầu tiên tham gia và trúng giải thưởng của chương trình
+
+            .row
+                .col-lg-7
+                    // todo hapk make the bike play
+                    .h-contact__bike
+                        img(src="./images/vespa-white.png", alt="")
+                .col-lg-5
+                    form.form-contact(action="#!")
+                        .row.g-2
+                            .col-lg-6
+                                label.form-label Họ và tên
+                                input.form-control(type="text")
+                            .col-lg-6
+                                label.form-label Số điện thoại
+                                input.form-control(type="text")
+                            .col-12
+                                label.form-label Địa chỉ
+                                input.form-control(type="text")
+                            .col-lg-6
+                                label.form-label Đại lý
+                                select.form-select.js-select2
+                                    option XUÂN CẦU PIAGGIO
+                                    option HẠ CẦU PIAGGIO
+                                    option THU CẦU PIAGGIO
+                                    option ĐÔNG CẦU PIAGGIO
+                            .col-lg-6
+                                label.form-label Loại xe quan tâm
+                                select.form-select.js-select2
+                                    option Loại xe 1
+                                    option Loại xe 2
+                                    option Loại xe 3
+                                    option Loại xe 4
+                                    option Loại xe 5
+                            .col-12
+                                label.form-label Ghi chú
+                                textarea.form-control(rows="4")
+                            .col-12
+                                .form-contact__desc Bạn đang liên hệ tới đại lý: Xuân Cầu Piaggio - hotline: 0900 0000 000 - Email: xuancau@gmail.com
+
+                        button.form-contact__btn(type="submit") Liên hệ đại lý
+
+        .h-contact__footer
+            .container
+                .row
+                    .col-lg-5.ms-auto
+                        .h-contact__info
+                            .h-contact__item
+                                .h-contact__icon
+                                    i.fal.fa-fw.fa-2x.fa-phone-volume
+                                div
+                                    div Hotline miễn phí
+                                    a.fw-700(href="tel:19000000") 1900 0000
+                            .h-contact__item
+                                .h-contact__icon
+                                    i.fal.fa-fw.fa-2x.fa-map-marker-alt
+                                div Đại lý toàn quốc
