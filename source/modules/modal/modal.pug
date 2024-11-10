@@ -1,0 +1,79 @@
+mixin md-confirm
+  // todo hapk update data to modal confirm
+  .md-confirm.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-body
+            h3.md-confirm__title XÁC NHẬN THÔNG TIN
+
+            .md-confirm__grid
+                .md-confirm__col
+                    .row.gy-2.gx-3
+                        .col-lg-6
+                            .md-confirm__field(data-name="fullname")
+                                span Họ và tên:
+                                strong
+                        .col-lg-6
+                            .md-confirm__field(data-name="phone")
+                                span Số điện thoại:
+                                strong
+                        .col-lg-9
+                            .md-confirm__field(data-name="address")
+                                span Địa chỉ:
+                                strong
+                        .col-lg-3
+                            .md-confirm__field(data-name="province")
+                                span Tỉnh/TP:
+                                strong
+                        .col-lg-6
+                            .md-confirm__field(data-name="id_number")
+                                span Số CMND/CCCD:
+                                strong
+                        .col-lg-3
+                            .md-confirm__field(data-name="id_place")
+                                span Nơi đăng ký:
+                                strong
+                        .col-lg-3
+                            .md-confirm__field(data-name="id_date")
+                                span Ngày cấp:
+                                strong
+                .md-confirm__col
+                    .row.gy-2.gx-3
+                        .col-6
+                            .cccd-preview.js-modal-preview-id-front
+                        .col-6
+                            .cccd-preview.js-modal-preview-id-back
+
+                .md-confirm__col
+                    .row.gy-2.gx-3
+                        .col-12
+                            .md-confirm__field(data-name="product_code")
+                                span Ký hiệu:
+                                strong
+                        .col-lg-6
+                            .md-confirm__field(data-name="chassis_number")
+                                span Số khung:
+                                strong
+                        .col-lg-6
+                            .md-confirm__field(data-name="machine_number")
+                                span Số máy:
+                                strong
+                        .col-lg-6
+                            .md-confirm__field(data-name="bill_number")
+                                span Số hoá đơn
+                                strong
+                        .col-lg-6
+                            .md-confirm__field(data-name="bill_date")
+                                span Ngày hoá đơn
+                                strong
+
+                .md-confirm__col
+                    .bill-preview.js-modal-preview-bill
+
+            .text-center.text-danger.my-4.font-italic Kiểm tra kỹ thông tin trước khi nhấn nút
+
+            .row.gy-2.gx-40.justify-content-center
+                .col-lg-5
+                    button.button.button--block.button--red.text-uppercase(type="button", data-bs-dismiss="modal") Chỉnh sửa thông tin
+                .col-lg-5
+                    button.button.button--block.text-uppercase.js-modal-confirm-submit(type="button") Hoàn thành & quay thưởng

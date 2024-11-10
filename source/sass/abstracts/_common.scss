@@ -131,4 +131,24 @@
   &.active {
     background-color: $blue;
   }
+
+  &--block {
+    display: block;
+    width: 100%;
+    min-width: unset;
+  }
+
+  &--red {
+    background-color: $danger;
+
+    &:hover {
+      background-color: darken($danger, 5%);
+    }
+  }
+}
+
+.container-fluid {
+  @include media-breakpoint-up(xl) {
+    max-width: 1300px;
+  }
 }

@@ -18,13 +18,13 @@ block content
         main.s-page__body
             .s-page__body-inner.s-page__body-inner--scrollable
                 .container-fluid
-                    form.register-form(action="#!")
+                    form.register-form.js-register-form(action="#!")
                         .row.gy-2.gx-3
                             .col-xl-6
                                 .row.gy-2.gx-3
                                     .col-lg-6
                                         label.form-label Họ và tên
-                                        input.form-control(type="text")
+                                        input.form-control(type="text", name="fullname")
                                     .col-lg-6
                                         label.form-label Số điện thoại
                                         .input-group
@@ -33,44 +33,43 @@ block content
                                                 option VN
                                                 option CN
                                                 option CA
-                                            input.form-control(type="text")
+                                            input.form-control(type="text", name="phone")
                                     .col-lg-6
                                         label.form-label Địa chỉ khách hàng
-                                        input.form-control(type="text")
+                                        input.form-control(type="text", name="address")
                                     .col-lg-6
                                         label.form-label Tỉnh/thành phố
-                                        input.form-control(type="text")
+                                        input.form-control(type="text", name="province")
                                     .col-12
                                         label.form-label Số CMND/Số hộ khẩu/Hộ chiếu
                                         .position-relative
-                                            input.form-control(type="text")
+                                            input.form-control(type="text", name="id_number")
                                             .register-form__upload-btns
                                                 // todo hapk upload to show preview
                                                 label.register-form__upload-btn
-                                                    input(type="file")
+                                                    input.js-file-input(type="file", data-preview=".js-preview-id-front", accept="image/png, image/jpeg")
                                                     i.fal.fa-fw.fa-upload.me-2
                                                     span Tải mặt trước
                                                 label.register-form__upload-btn
-                                                    input(type="file")
+                                                    input.js-file-input(type="file", data-preview=".js-preview-id-back", accept="image/png, image/jpeg")
                                                     i.fal.fa-fw.fa-upload.me-2
                                                     span Tải mặt sau
                                     .col-lg-6
                                         .mb-3
                                             label.form-label Nơi đăng ký CMND
-                                            input.form-control(type="text")
+                                            input.form-control(type="text", name="id_place")
                                         div
                                             label.form-label Ngày cấp CMND
                                             .input-group.input-group-custom
-                                                input.form-control.js-datepicker(type="text")
+                                                input.form-control.js-datepicker(type="text", name="id_date")
                                                 span.input-group-text
                                                     i.fal.fa-fw.fa-calendar-alt
                                     .col-lg-6
                                         .row.gy-2.gx-3
                                             .col-6
-                                                .cccd-preview
-                                                    img(src="./images/cccd.png", alt="")
+                                                .cccd-preview.js-preview-id-front
                                             .col-6
-                                                .cccd-preview
+                                                .cccd-preview.js-preview-id-back
                                             .col-12
                                                 .text-gray.fs-12
                                                     | * Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”
@@ -81,10 +80,10 @@ block content
                                 .row.gy-2.gx-3
                                     .col-12
                                         label.form-label Mã hàng hóa
-                                        input.form-control(type="text")
+                                        input.form-control(type="text", name="product_code")
                                     .col-lg-6
                                         label.form-label Số khung
-                                        input.form-control(type="text", placeholder="0000000000")
+                                        input.form-control(type="text", name="chassis_number", placeholder="")
                                     .col-lg-6
                                         label.form-label Số máy
                                         .input-group
@@ -93,31 +92,30 @@ block content
                                                 option ABCDE
                                                 option ABCDE
                                                 option ABCDE
-                                            input.form-control(type="text", placeholder="0000000000")
+                                            input.form-control(type="text", name="machine_number", placeholder="")
                                     .col-12
                                         label.form-label Số hóa đơn
                                         .position-relative
-                                            input.form-control(type="text")
+                                            input.form-control(type="text", name="bill_number")
                                             .register-form__upload-btns
                                                 label.register-form__upload-btn
-                                                    input(type="file")
+                                                    input.js-file-input(type="file", data-preview=".js-preview-bill", accept="image/png, image/jpeg")
                                                     i.fal.fa-fw.fa-upload.me-2
                                                     span Tải hình ảnh
                                     .col-lg-6.me-auto
                                         label.form-label Ngày hóa đơn
                                         .input-group.input-group-custom
-                                            input.form-control.js-datepicker(type="text")
+                                            input.form-control.js-datepicker(type="text", name="bill_date")
                                             span.input-group-text
                                                 i.fal.fa-fw.fa-calendar-alt
                                     .col-lg-3
-                                        .bill-preview
+                                        .cccd-preview.js-preview-bill
 
                             .col-12.text-center.text-danger Kiểm tra kỹ thông tin trước khi nhấn nút
                             .col-lg-4
                                 .text-gray.fs-12 Ghi chú: Mỗi số iện thoại chỉ được đăng ký 1 lần duy nhất. Trường hợp khách hàng mua nhiều xe và muốn đăng ký bằng các số điện thoại khác nhau, đại lý vui lòng liên hệ đại diện bán hàng của Piaggio Việt Nam để ược hỗ trợ.
                             .col-lg-4.text-center
-                                button.button.button--block.text-uppercase.px-50(type="submit") Hoàn thành & quay thưởng
-                            .col-lg-4
+                                button.button.button--block.text-uppercase.js-open-confirm-modal(type="button") Hoàn thành & quay thưởng
 
         footer.s-page__footer
             .container
@@ -127,3 +125,5 @@ block content
                     a.button.active(href="#!") Đăng ký
                     a.button(href="#!") Danh sách khách hàng
                     a.button(href="#!") Thông tin người dùng
+
+    +md-confirm
