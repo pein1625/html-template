@@ -1,0 +1,91 @@
+.register-form {
+    border-radius: 20px;
+    background-color: $white;
+    padding: 30px;
+    box-shadow: 0 1px 10px rgba(#000, 0.1);
+
+    &__upload-btns {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: 35px;
+        padding: 4px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    &__upload-btn {
+        font-size: 14px;
+        color: $white;
+        background-color: #00AED1;
+        border-radius: 6px;
+        padding: 3px 16px;
+        transition: 0.2s;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(#00AED1, 5%);
+        }
+
+        input {
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+
+    .form-label {
+        color: #666;
+        margin-bottom: 4px;
+    }
+}
+
+.cccd-preview {
+    border: 1px solid $border-color;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 60%;
+    }
+
+    img {
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
+}
+
+.bill-preview {
+    border: 1px solid $border-color;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 60%;
+    }
+
+    img {
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+    }
+}

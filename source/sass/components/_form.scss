@@ -508,3 +508,18 @@
     }
   }
 }
+
+.input-group-custom {
+  .form-control {
+    border-right: 0;
+  }
+
+  .input-group-text {
+    border-left: 0;
+    color: #666;
+  }
+
+  .form-control:focus ~ .input-group-text {
+    border-color: lighten($primary, 25%);
+  }
+}

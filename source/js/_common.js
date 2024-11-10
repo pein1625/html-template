@@ -29,3 +29,7 @@ $(function() {
         }
     })
 })
+
+$(function() {
+    $('.js-datepicker').datepicker();
+});
