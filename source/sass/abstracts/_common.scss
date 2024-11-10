@@ -114,10 +114,13 @@
   padding: 8px 20px;
   border-radius: 8px;
   color: $white;
+  font-size: 14px;
+  line-height: 20px;
   background-color: $blue-darker;
   transition: 0.2s;
   text-align: center;
   min-width: 170px;
+  border: 0;
 
   &:hover {
     color: $white;

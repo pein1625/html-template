@@ -1,0 +1,39 @@
+extends layout/page
+
+block header
+block footer
+block content
+    section.login
+        .container
+            form.login__form(action="#!")
+                .login__left
+                    .login__header
+                        a.login__logo(href="./index.html")
+                            img(src="./images/logo.png", alt="")
+                    img.login__banner(src="./images/banner-login.png", alt="")
+
+                .login__right
+                    .login__form-content
+                        .login__title Chào mừng
+                        .login__desc Bạn đang đăng nhập với tư cách thành viên
+
+                        .mb-3
+                            label.form-label Tên đăng nhập
+                            input.form-control(type="text")
+                        .mb-3
+                            label.form-label Mật khẩu
+                            .input-group.login__password
+                                input.form-control(type="password")
+                                button.input-group-text.js-toggle-show-password(type="button")
+                                    i.fal.fa-eye
+                                    i.fal.fa-eye-slash
+                        .mb-3
+                            .row.g-3.justify-content-between
+                                .col-auto
+                                    +checkbox
+                                        span Lưu mật khẩu
+                                .col-auto
+                                    a.login__link.fw-700(href="#!") Quên mật khẩu?
+                        .mt-4
+                            button.login__submit.button(type="submit") Đăng nhập
+                    .login__copyright Copyright © 2024

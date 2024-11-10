@@ -14,3 +14,18 @@ $(function() {
         $el.select2(data);
     });
 });
+
+$(function() {
+    $('.js-toggle-show-password').on('click', function() {
+        const $parent = $(this).closest('.input-group');
+        const $input = $parent.find('input');
+
+        $parent.toggleClass('active');
+
+        if ($parent.hasClass('active')) {
+            $input.attr('type', 'text');
+        } else {
+            $input.attr('type', 'password');
+        }
+    })
+})
