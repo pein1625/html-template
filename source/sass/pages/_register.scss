@@ -44,6 +44,10 @@
         color: #666;
         margin-bottom: 4px;
     }
+
+    @include media-breakpoint-down(xxl) {
+        padding: 20px;
+    }
 }
 
 .cccd-preview {

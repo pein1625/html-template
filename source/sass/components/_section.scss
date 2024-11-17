@@ -9,8 +9,8 @@
     }
 
     &--page {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
 
     &--page &__inner {
@@ -50,7 +50,7 @@
     &__body {
         flex: 1;
         position: relative;
-        margin: 50px 0;
+        margin: 20px 0 50px;
     }
 
     &__content {
@@ -113,6 +113,37 @@
     &__province {
         max-width: 400px;
         margin: 24px auto;
+    }
+
+    @include media-breakpoint-down(xxl) {
+        padding: 40px 0;
+
+        &--page &__inner {
+            padding-top: 80px;
+        }
+
+        &__inner {
+            padding: 30px 0 20px;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        &__subtitle {
+            margin-bottom: 16px;
+            margin-top: -8px;
+        }
+
+        &__desc {
+            margin-bottom: 16px;
+            margin-top: -8px;
+        }
+
+        &__body {
+            margin: 8px 0 20px;
+        }
     }
 
     @include media-breakpoint-down(xl) {
