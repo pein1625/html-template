@@ -88,7 +88,7 @@
   line-height: 20px;
   padding: 4px 20px 8px;
   border-radius: 16px;
-  background-color: $secondary;
+  background-color: $white;
   color: #333;
   transition: 0.2s;
   text-align: center;
@@ -99,6 +99,17 @@
     color: #333;
     text-decoration: none;
     background-color: darken($secondary, 10%);
+  }
+
+  &--secondary {
+    background-color: $secondary;
+    color: #333;
+
+    &:hover {
+      color: #333;
+      text-decoration: none;
+      background-color: darken($secondary, 10%);
+    }
   }
 
   &--block {

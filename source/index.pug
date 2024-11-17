@@ -1,41 +1,43 @@
 extends layout/page
 
 block content
-    section.banner
-        img.banner__bg(src="./images/banner.jpg", alt="")
-
+    section.section.py-0
+        img.section__bg(src="./images/banner.jpg", alt="")
         .container
-            .banner__inner
-                .banner__footer
-                    .countdown.js-countdown(data-countdown="2024-12-24 12:00:00")
-                        .countdown__item
-                            strong 27
-                            span ngày
-                        .countdown__item
-                            strong 11
-                            span giờ
-                        .countdown__item
-                            strong 02
-                            span phút
-                        .countdown__item
-                            strong 04
-                            span giây
+            .section__inner
+                .section__body
+                .section__footer
+                    .banner
+                        .countdown.js-countdown(data-countdown="2024-12-24 12:00:00")
+                            .countdown__item
+                                strong 27
+                                span ngày
+                            .countdown__item
+                                strong 11
+                                span giờ
+                            .countdown__item
+                                strong 02
+                                span phút
+                            .countdown__item
+                                strong 04
+                                span giây
 
-                    .gift-remaining
-                        span Còn lại
-                        strong.mx-2 3045
-                        span Giải thưởng
+                        .gift-remaining
+                            span Còn lại
+                            strong.mx-2 3045
+                            span Giải thưởng
 
     section.section.py-0
         img.section__bg(src="./images/rule-bg.jpg", alt="")
         .section__backdrop
         .container
-            .rule
-                h2.section__title Thể lệ chương trình khuyến mại
-                h3.section__subtitle “LÊN XE SANG, ĐÓN NGÀN LỘC”
+            .section__inner
+                .section__header
+                    h2.section__title.text-white Thể lệ chương trình khuyến mại
+                    h3.section__subtitle.text-white “LÊN XE SANG, ĐÓN NGÀN LỘC”
 
-                .rule__body
-                    .rule__content
+                .section__body.text-white
+                    .section__content
                         h4 QUY ĐỊNH CHƯƠNG TRÌNH
                         p THỜI GIAN CHƯƠNG TRÌNH: Từ ngày 22/11/2024 đến 23:59:59 31/12/2024 (theo ngày ghi trên hóa đơn)
                         h4 THỂ LỆ VÀ HÌNH THỨC BỐC THĂM:
@@ -61,8 +63,8 @@ block content
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sit, tenetur, ab nemo dolore neque recusandae sequi earum vitae similique expedita quisquam corporis explicabo minus deserunt! Tempore asperiores earum incidunt! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dicta eligendi, nisi doloribus nihil at voluptas dolores sit veritatis optio molestias natus ex maiores aut reiciendis dignissimos dolore, alias explicabo.
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sit, tenetur, ab nemo dolore neque recusandae sequi earum vitae similique expedita quisquam corporis explicabo minus deserunt! Tempore asperiores earum incidunt! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda dicta eligendi, nisi doloribus nihil at voluptas dolores sit veritatis optio molestias natus ex maiores aut reiciendis dignissimos dolore, alias explicabo.
 
-                .rule__footer
-                    a.button(href="#!") Xem thêm
+                .section__footer.text-center
+                    a.button.button--secondary(href="#!") Xem thêm
 
     section.section
         .texture-2
@@ -70,9 +72,9 @@ block content
             h2.section__title.text-white Danh sách trúng thưởng
 
             nav.n-tab
-                a.button.active(href="#!") Tuần này
-                a.button.button--white(href="#!") Tháng này
-                a.button.button--white(href="#!") Từ đầu chương trình
+                a.button.button--secondary(href="#!") Tuần này
+                a.button(href="#!") Tháng này
+                a.button(href="#!") Từ đầu chương trình
 
             .data-tbl
                 table.table.table-borderless.js-datatable

@@ -168,15 +168,15 @@
 		},
 		{
 			"text": "Thể lệ",
-			"url": "./the-le.html"
+			"url": "./rule.html"
 		},
 		{
 			"text": "Danh sách trúng thưởng",
-			"url": "./danh-sach-trung-thuong.html"
+			"url": "./customers.html"
 		},
 		{
 			"text": "Liên hệ đại lý",
-			"url": "./lien-he-dai-ly.html"
+			"url": "./agency.html"
 		}
 	]
 }
