@@ -1,0 +1,34 @@
+extends layout/page
+block header
+block footer
+block content
+    section.s-page
+        .game-bg
+            .game-bg__under
+                .game-bg__texture.game-bg__texture--1
+                .game-bg__texture.game-bg__texture--2
+                .game-bg__texture.game-bg__texture--3
+
+        header.s-page__header
+            .container
+                .s-page__header-inner
+                    a.s-page__logo(href="./index.html")
+                        img(src="./images/logo.png", alt="")
+                    .s-page__header-title.text-white Chương trình "Lên xe sang - Đón ngàn lộc"
+
+        main.s-page__body
+            .s-page__body-inner
+                .container
+                    .game
+                        .game__title Hãy lựa chọn giải thưởng của bạn!
+                        img.game__bike(src="./images/game-bike.png", alt="")
+
+                        .game-grid
+                            img.game-grid__img(src="./images/game-grid.png", alt="")
+                            .game-grid__inner
+                                - for(let i = 0; i < 15; i++)
+                                    .game-grid__col.js-open-modal-gift
+                                        .game-grid__box
+                                            img(src="./images/giftbox.png", alt="")
+
+    +md-gift

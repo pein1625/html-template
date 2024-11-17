@@ -1,0 +1,170 @@
+.profile {
+    border-radius: 20px;
+    background-color: #e6e6e6;
+    box-shadow: 0 2px 8px rgba(#000, 0.2);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 240px 1fr;
+
+    &__left {
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(#000, 0.2);
+        padding: 20px 0;
+    }
+
+    &__right {
+        padding: 20px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+    &__body {
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(#000, 0.2);
+        padding: 20px;
+    }
+
+    &__table {
+        td {
+            color: #666;
+            padding-top: 14px;
+            padding-bottom: 14px;
+
+            &:first-child {
+                width: 200px;
+                padding-left: 0;
+            }
+
+            &:nth-child(2) {
+                font-weight: 700;
+                padding-right: 0;
+            }
+        }
+
+        tr:not(:last-child) td {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &__avatar {
+        position: relative;
+        margin-bottom: 16px;
+
+        &-frame {
+            width: 100px;
+            height: 100px;
+            border: 2px solid $danger;
+            border-radius: 50%;
+            padding: 6px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+        }
+
+        &-upload {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            color: $white;
+            background-color: $danger;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+        }
+    }
+
+    &__point {
+        text-align: center;
+        color: $white;
+        background-color: $danger;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 8px 0 4px;
+    }
+
+    &__pos {
+        font-size: 12px;
+        color: $text-gray;
+    }
+}
+
+.profile-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+        display: block;
+        font-size: 14px;
+        padding: 10px 16px 10px 50px;
+        color: #666;
+        transition: 0.3s ease-out;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba($danger, 0) 0%, rgba($danger, 0.7) 10px, rgba($danger, 1) 24px, $danger 100%);
+            opacity: 0;
+            transition: 0.3s ease-out;
+            transform-origin: 100% 0;
+            transform: rotateY(90deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+
+        &:hover::before {
+            opacity: 1;
+            transform: rotateY(0);
+        }
+    }
+}

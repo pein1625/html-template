@@ -77,3 +77,15 @@ mixin md-confirm
                     button.button.button--block.button--red.text-uppercase(type="button", data-bs-dismiss="modal") Chỉnh sửa thông tin
                 .col-lg-5
                     button.button.button--block.text-uppercase.js-modal-confirm-submit(type="button") Hoàn thành & quay thưởng
+
+mixin md-gift
+  .md-gift.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-title.text-center.pt-4.fw-700(style="font-size: 20px;")
+            div Quý khách đã trúng thưởng
+            div Xe máy Vespa
+        .modal-body
+            img.w100(src="./images/game-bike.png", alt="")
+            .text-center.mt-4
+                a.button(href="#!") In xác nhận quà tặng

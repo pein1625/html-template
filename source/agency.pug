@@ -1,11 +1,12 @@
 extends layout/page
 
+block footer
 block content
-    section.section
+    section.section.pt-3
         .container
             h1.section__title.text-white Danh sách đại lý
 
-            .section__province
+            .section__province.mb-40
                 select.form-select.js-select2(data-placeholder="Tỉnh / thành phố")
                     option Tỉnh / thành phố
                     option Hà Nội
@@ -19,8 +20,6 @@ block content
                     option Hà Nam
                     option Nam Định
                     option Ninh Bình
-            div
-                // todo hapk select
 
             .data-tbl
                 table.table.table-borderless.js-datatable

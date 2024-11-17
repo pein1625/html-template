@@ -91,6 +91,49 @@
   &__content {
     flex: 1;
   }
+
+  &--customer {
+    font-size: 12px;
+    // line-height: 22px;
+    padding: 0;
+    background-color: #fff;
+
+    a {
+      display: inline-block;
+      color: $blue-darker;
+      transition: 0.2s;
+      text-decoration: underline;
+
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+
+    thead {
+      tr {
+        border-bottom: 1px solid #d9d9d9;
+
+        th {
+          padding-bottom: 8px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    tbody {
+      &::before {
+        display: none;
+      }
+
+      tr {
+        td {
+          padding-top: 7px;
+          padding-bottom: 7px;
+        }
+      }
+    }
+  }
 }
 
 .select2-container {

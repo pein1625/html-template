@@ -6,28 +6,36 @@
 				"url": "index"
 			},
 			{
-				"title": "Giới thiệu",
-				"url": "about"
+				"title": "Login",
+				"url": "login"
 			},
 			{
-				"title": "Sản phẩm",
-				"url": "products"
+				"title": "Chương trình",
+				"url": "program"
 			},
 			{
-				"title": "Chi tiết sản phẩm",
-				"url": "product-detail"
+				"title": "Thể lệ",
+				"url": "rule"
 			},
 			{
-				"title": "Tin tức",
-				"url": "news"
+				"title": "Đăng ký",
+				"url": "register"
 			},
 			{
-				"title": "Chi tiết tin tức",
-				"url": "news-detail"
+				"title": "Game",
+				"url": "game"
 			},
 			{
-				"title": "Liên hệ",
-				"url": "contact"
+				"title": "Danh sách khách hàng",
+				"url": "customers"
+			},
+			{
+				"title": "Thông tin người dùng",
+				"url": "profile"
+			},
+			{
+				"title": "Danh sách đại lý",
+				"url": "agency"
 			}
 		]
 	},
