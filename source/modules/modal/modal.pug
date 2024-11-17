@@ -89,3 +89,36 @@ mixin md-gift
             img.w100(src="./images/game-bike.png", alt="")
             .text-center.mt-4
                 a.button(href="#!") In xác nhận quà tặng
+
+mixin md-login
+  .md-login.modal.fade(tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-body
+                    .md-login__logo
+                        img(src="./images/logo.png", alt="")
+
+                    .md-login__title Chào mừng
+                    .md-login__desc Bạn đang đăng nhập với tư cách thành viên
+
+                    .md-login__form
+                        .mb-3
+                            label.form-label Tên đăng nhập
+                            input.form-control(type="text")
+                        .mb-3
+                            label.form-label Mật khẩu
+                            .input-group.md-login__password
+                                input.form-control(type="password")
+                                button.input-group-text.js-toggle-show-password(type="button")
+                                    i.fal.fa-eye
+                                    i.fal.fa-eye-slash
+                        .mb-3
+                            .row.g-3.justify-content-between
+                                .col-auto
+                                    +checkbox
+                                        span Lưu mật khẩu
+                                .col-auto
+                                    a.md-login__link.fw-700(href="#!") Quên mật khẩu?
+                        .mt-4
+                            button.md-login__submit.button(type="submit") Đăng nhập
+                    .md-login__copyright Copyright © 2024
