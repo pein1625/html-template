@@ -1,20 +1,21 @@
 extends layout/page
 
-block header
 block footer
 block content
-    section.s-page
-        header.s-page__header
-            .container
-                .s-page__header-inner
-                    a.s-page__logo(href="./index.html")
-                        img(src="./images/logo.png", alt="")
-                    .s-page__header-title.text-white DANH SÁCH KHÁCH HÀNG
+    section.section.section--page
+        img.section__bg(src="./images/rule-bg.jpg", alt="")
+        .section__backdrop
 
-        main.s-page__body
-            .s-page__body-inner.s-page__body-inner--scrollable
-                .container-fluid
+        .container
+            .section__inner
+                .section__header
+                    .section__title.text-white.mb-0 DANH SÁCH KHÁCH HÀNG
+
+                .section__body
                     .data-tbl.data-tbl--customer
+                        a.data-tbl__export(href="#!")
+                            span Tổng cộng có #[strong.text-danger 100] khách hàng
+                            i.fal.fa-fw.fa-print
                         table.table.table-borderless.js-datatable
                             thead
                                 tr
@@ -61,17 +62,14 @@ block content
                                         i.far.fa-lg.fa-search
 
                             .data-tbl__content
-                                div Có #[strong.text-danger 93] đại lý trong danh sách này
 
                             .data-tbl__pagination
                                 +pagination
 
-
-        footer.s-page__footer
-            .container
-                nav.s-page__nav
-                    a.button(href="./program.html") Trang chủ
-                    a.button(href="./rule.html") Thể lệ
-                    a.button(href="./register.html") Đăng ký
-                    a.button.active(href="./customers.html") Danh sách khách hàng
-                    a.button(href="./profile.html") Thông tin người dùng
+                .section__footer
+                    nav.page-nav
+                        a.button(href="./program.html") Trang chủ
+                        a.button(href="./rule.html") Thể lệ
+                        a.button(href="./register.html") Đăng ký
+                        a.button.active(href="./customers.html") Danh sách khách hàng
+                        a.button(href="./profile.html") Thông tin người dùng
