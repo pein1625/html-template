@@ -120,9 +120,11 @@
 
   &--red {
     background-color: $danger;
+    color: $white;
 
     &:hover {
       background-color: darken($danger, 5%);
+      color: $white;
     }
   }
 

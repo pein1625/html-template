@@ -1,101 +1,77 @@
 extends layout/page
 
 block header
+    +header-2
 block footer
 block content
-    section.s-page.s-page--blue
-        header.s-page__header
-            .container
-                .s-page__header-inner
-                    a.s-page__logo(href="./index.html")
-                        img(src="./images/logo.png", alt="")
-                    .s-page__header-title.text-white THÔNG TIN NGƯỜI DÙNG
 
-        main.s-page__body
-            .s-page__body-inner.s-page__body-inner--scrollable
-                .container-fluid
-                    .profile
-                        .profile__left
-                            .user
-                                .user__avatar
-                                    .user__avatar-frame
-                                        img(src="https://i.pinimg.com/564x/dd/0e/86/dd0e86cc6c9ae4bc0473c762e275f9c4.jpg", alt="")
-                                    label.user__avatar-upload
-                                        input(type="file")
-                                        i.fal.fa-fw.fa-camera
-                                .user__point 16000 điểm
-                                .user__name Nguyễn Văn A
-                                .user__pos Chức vụ
+    section.section.section--page
+        img.section__bg(src="./images/rule-bg.jpg", alt="")
+        .section__backdrop
 
-                            ul.profile-menu
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-th-large.me-2
-                                        span Dashboard
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-user.me-2
-                                        span Hồ sơ cá nhân
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-file-certificate.me-2
-                                        span Chứng chỉ
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-chart-bar.me-2
-                                        span Số lượng khách
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-bell.me-2
-                                        span Thông báo
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-key.me-2
-                                        span Đổi mật khẩu
-                                li
-                                    a(href="#!")
-                                        i.fal.fa-fw.fa-sign-out.me-2
-                                        span Đăng xuất
+        .container
+            .section__inner
+                .section__header
+                    .section__title.text-white.mb-0 THÔNG TIN NGƯỜI DÙNG
 
-                        .profile__right
-                            h1.profile__title Hồ sơ cá nhân
-                            .profile__body
-                                .profile__table
-                                    table.table.table-borderless
-                                        tbody
-                                            tr
-                                                td Họ và tên
-                                                td Nguyễn Văn A
-                                            tr
-                                                td Mã nhân viên
-                                                td 1234567
-                                            tr
-                                                td Giới tính
-                                                td Nam
-                                            tr
-                                                td Số điện thoại
-                                                td 0123456789
-                                            tr
-                                                td Ngày sinh
-                                                td 01/12/1999
-                                            tr
-                                                td Email
-                                                td example@gmail.com
-                                            tr
-                                                td Chức danh
-                                                td Nhân viên quản trị hệ thống
-                                            tr
-                                                td Đơn vị
-                                                td Tổng Công ty CP Công trình Viettel
-                                            tr
-                                                td Địa chỉ
-                                                td Số 06 Phạm Văn Bạch, phường Yên Hòa, quận Cầu Giấy, Hà Nội
+                .section__body
+                    .section__content
+                        .row
+                            .col-lg-8
+                                section.section-2
+                                    h2.section-2__title Thông tin cá nhân
+                                    .section-2__body
+                                        .profile__table
+                                            table.table.table-borderless
+                                                tbody
+                                                    tr
+                                                        td Họ và tên
+                                                        td Nguyễn Văn A
+                                                    tr
+                                                        td Mã nhân viên
+                                                        td 1234567
+                                                    tr
+                                                        td Giới tính
+                                                        td Nam
+                                                    tr
+                                                        td Số điện thoại
+                                                        td 0123456789
+                                                    tr
+                                                        td Ngày sinh
+                                                        td 01/12/1999
+                                                    tr
+                                                        td Email
+                                                        td example@gmail.com
+                                                    tr
+                                                        td Chức danh
+                                                        td Nhân viên quản trị hệ thống
+                                                    tr
+                                                        td Đơn vị
+                                                        td Tổng Công ty CP Công trình Viettel
+                                                    tr
+                                                        td Địa chỉ
+                                                        td Số 06 Phạm Văn Bạch, phường Yên Hòa, quận Cầu Giấy, Hà Nội
 
-        footer.s-page__footer
-            .container
-                nav.s-page__nav
-                    a.button(href="./program.html") Trang chủ
-                    a.button(href="./rule.html") Thể lệ
-                    a.button(href="./register.html") Đăng ký
-                    a.button(href="./customers.html") Danh sách khách hàng
-                    a.button.active(href="./profile.html") Thông tin người dùng
+                            .col-lg-4
+                                section.section-2
+                                    h2.section-2__title Đổi mật khẩu
+                                    .section-2__body
+                                        form(action="#!")
+                                            .mb-3
+                                                label.form-label Mật khẩu cũ
+                                                input.form-control(type="password")
+                                            .mb-3
+                                                label.form-label Mật khẩu mới
+                                                input.form-control(type="password")
+                                            .mb-3
+                                                label.form-label Nhập lại mật khẩu mới
+                                                input.form-control(type="password")
+                                            button.button.button--secondary.button--block(type="submit") Đổi mật khẩu
+
+                .section__footer
+                    nav.page-nav
+                        a.button(href="./program.html") Trang chủ
+                        a.button(href="./rule.html") Thể lệ
+                        a.button(href="./register.html") Đăng ký
+                        a.button(href="./customers.html") Danh sách khách hàng
+                        a.button.active(href="./profile.html") Thông tin người dùng

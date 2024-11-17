@@ -1,5 +1,7 @@
 extends layout/page
 
+block header
+    +header-2
 block footer
 block content
     section.section.section--page
@@ -12,59 +14,60 @@ block content
                     .section__title.text-white.mb-0 DANH SÁCH KHÁCH HÀNG
 
                 .section__body
-                    .data-tbl.data-tbl--customer
-                        a.data-tbl__export(href="#!")
-                            span Tổng cộng có #[strong.text-danger 100] khách hàng
-                            i.fal.fa-fw.fa-print
-                        table.table.table-borderless.js-datatable
-                            thead
-                                tr
-                                    th STT
-                                    th Mã khách hàng
-                                    th Họ tên
-                                    th Số điện thoại
-                                    th Địa chỉ
-                                    th Thành phố
-                                    th CMND/SHK/HC
-                                    th Ngày hóa đơn
-                                    th Ngày đăng ký
-                                    th Mã hàng hóa
-                                    th Số khung
-                                    th Số máy
-                                    th Số hóa đơn
-                                    th Giải thưởng
-                                    th In XN trúng thưởng
-                            tbody
-                                - for(let i = 0; i < 15; i++)
+                    .section__content
+                        .data-tbl.data-tbl--customer
+                            a.data-tbl__export(href="#!")
+                                span Tổng cộng có #[strong.text-danger 100] khách hàng
+                                i.fal.fa-fw.fa-print
+                            table.table.table-borderless.js-datatable
+                                thead
                                     tr
-                                        td #{i >= 9 ? (i + 1) : '0' + (i+1)}
-                                        td 0036868
-                                        td A Thắng
-                                        td 0987654321
-                                        td PCK
-                                        td Hà Nội
-                                        td 011921131
-                                        td 15/10/2024
-                                        td 20/10/2024
-                                        td A03
-                                        td U5568
-                                        td 8868
-                                        td S330
-                                        td Vespa
-                                        td
-                                            a(href="#!") In ấn
+                                        th STT
+                                        th Mã khách hàng
+                                        th Họ tên
+                                        th Số điện thoại
+                                        th Địa chỉ
+                                        th Thành phố
+                                        th CMND/SHK/HC
+                                        th Ngày hóa đơn
+                                        th Ngày đăng ký
+                                        th Mã hàng hóa
+                                        th Số khung
+                                        th Số máy
+                                        th Số hóa đơn
+                                        th Giải thưởng
+                                        th In XN trúng thưởng
+                                tbody
+                                    - for(let i = 0; i < 15; i++)
+                                        tr
+                                            td #{i >= 9 ? (i + 1) : '0' + (i+1)}
+                                            td 0036868
+                                            td A Thắng
+                                            td 0987654321
+                                            td PCK
+                                            td Hà Nội
+                                            td 011921131
+                                            td 15/10/2024
+                                            td 20/10/2024
+                                            td A03
+                                            td U5568
+                                            td 8868
+                                            td S330
+                                            td Vespa
+                                            td
+                                                a(href="#!") In ấn
 
-                        .data-tbl__footer
-                            .data-tbl__search
-                                .input-group
-                                    input.form-control(type="text", placeholder="Tìm kiếm thông tin")
-                                    button.input-group-text(type="button")
-                                        i.far.fa-lg.fa-search
+                            .data-tbl__footer
+                                .data-tbl__search
+                                    .input-group
+                                        input.form-control(type="text", placeholder="Tìm kiếm thông tin")
+                                        button.input-group-text(type="button")
+                                            i.far.fa-lg.fa-search
 
-                            .data-tbl__content
+                                .data-tbl__content
 
-                            .data-tbl__pagination
-                                +pagination
+                                .data-tbl__pagination
+                                    +pagination
 
                 .section__footer
                     nav.page-nav

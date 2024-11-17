@@ -1,27 +1,18 @@
 extends layout/page
 
 block header
+    +header-2
 block footer
 block content
-
-    section.s-page
-        img.s-page__bg(src="./images/vespa-front-yellow.png", alt="")
-
-        header.s-page__header
-            .container
-                a.s-page__logo(href="./index.html")
-                    img(src="./images/logo.png", alt="")
-
-        main.s-page__body
-            .container
-                h1.s-page__title Chương trình “Lên xe sang - đón ngàn lộc”
-                .s-page__desc Công ty Piaggio Việt Nam gửi tới khách hàng thông báo chương trình khuyến mại “Lên xe sang - ón ngàn lộc” với mong muốn tri ân khách hàng đã tin tưởng và ồng hành cùng Piaggio Việt Nam trong năm vừa qua và mong muốn mang lại cho khách hàng những trải nghiệm tuyệt vời về hoạt động dịch vụ chính hãng tại các cửa hàng bán xe máy và dịch vụ do Piaggio Việt Nam uỷ nhiệm.
-
-        footer.s-page__footer
-            .container
-                nav.s-page__nav
-                    a.button.active(href="./program.html") Trang chủ
-                    a.button(href="./rule.html") Thể lệ
-                    a.button(href="./register.html") Đăng ký
-                    a.button(href="./customers.html") Danh sách khách hàng
-                    a.button(href="./profile.html") Thông tin người dùng
+    section.section.section--page
+        img.section__bg(src="./images/banner.jpg", alt="")
+        .container
+            .section__inner
+                .section__body
+                .section__footer
+                    nav.page-nav
+                        a.button.active(href="./program.html") Trang chủ
+                        a.button(href="./rule.html") Thể lệ
+                        a.button(href="./register.html") Đăng ký
+                        a.button(href="./customers.html") Danh sách khách hàng
+                        a.button(href="./profile.html") Thông tin người dùng

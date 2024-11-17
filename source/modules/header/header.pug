@@ -16,14 +16,6 @@ mixin header
             a.h-dropdown__toggle(href="#!")
               img(src="./images/gb.svg", alt="")
 
-            .h-dropdown__menu
-              a.h-dropdown__item(href="#!")
-                img(src="./images/gb.svg", alt="")
-                span English
-              a.h-dropdown__item(href="#!")
-                img(src="./images/vn.svg", alt="")
-                span Tiếng Việt
-
           .h-dropdown.ms-2.ms-xl-3
             a.h-dropdown__toggle(href="#!")
               img(src="./images/user-white.svg", alt="")
@@ -35,3 +27,22 @@ mixin header
               a.h-dropdown__item(href="#!") Dropdown item 4
 
           button.btn-toggle.text-white.d-xl-none.js-navbar-toggle.ms-2
+
+mixin header-2
+  header.header
+    .header__wrapper
+      .container
+        .header__inner
+          a.header__logo(href="./index.html")
+            img(src="./images/logo-2.png", alt="")
+          .header__elements.ms-2.ms-xl-3
+          .h-dropdown.ms-2.ms-xl-3
+            a.h-dropdown__toggle(href="#!")
+              span.me-3 Đại lý Piaggio Xuân Cầu
+              img(src="./images/user-white.svg", alt="")
+
+            .h-dropdown__menu
+              a.h-dropdown__item(href=".md-login", data-bs-toggle="modal") Login
+              a.h-dropdown__item(href="#!") Dropdown item 2
+              a.h-dropdown__item(href="#!") Dropdown item 3
+              a.h-dropdown__item(href="#!") Dropdown item 4

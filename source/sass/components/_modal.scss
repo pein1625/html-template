@@ -1,11 +1,12 @@
 .md-confirm {
+  font-family: $font-display;
+
   &__title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 30px;
-    color: $danger;
+    margin-bottom: 24px;
+    font-family: $font-aptima;
   }
 
   &__grid {
@@ -30,7 +31,7 @@
 
   @include media-breakpoint-up(xl) {
     .modal-dialog {
-      max-width: 1270px;
+      max-width: 1140px;
     }
 
     .modal-content {
