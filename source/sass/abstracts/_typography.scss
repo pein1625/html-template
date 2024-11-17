@@ -3,7 +3,15 @@
 @include font-face('UTMAptima', 'UTMAptima-Italic', 400, 'italic');
 @include font-face('UTMAptima', 'UTMAptima-BoldItalic', 700, 'italic');
 
+@include font-face('SFProDisplay', 'SFProDisplay-Regular', 400, 'normal');
+@include font-face('SFProDisplay', 'SFProDisplay-Semibold', 600, 'normal');
+@include font-face('SFProDisplay', 'SFProDisplay-Bold', 700, 'normal');
+@include font-face('SFProDisplay', 'SFProDisplay-RegularItalic', 400, 'italic');
+@include font-face('SFProDisplay', 'SFProDisplay-SemiboldItalic', 600, 'italic');
+@include font-face('SFProDisplay', 'SFProDisplay-BoldItalic', 700, 'italic');
+
 $font-aptima: 'UTMAptima', sans-serif;
+$font-display: 'SFProDisplay', sans-serif;
 
 .text-gray {
     color: $text-gray !important;

@@ -10,13 +10,17 @@
 }
 
 .data-tbl {
+  font-family: $font-display;
   border-radius: 10px;
   background-color: #E6E6E6;
   padding: 16px;
+  color: #666666;
+  font-size: 13px;
 
   td,
   th {
     padding: 8px;
+    color: #666666;
 
     &:first-child {
       padding-left: 20px;
@@ -30,7 +34,7 @@
   thead {
     tr {
       th {
-        font-weight: 400;
+        font-weight: 700;
         padding-bottom: 16px;
       }
     }
@@ -149,44 +153,6 @@
       .select2-selection__arrow {
           height: 33px;
       }
-  }
-}
-
-.button {
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 8px;
-  color: $white;
-  font-size: 14px;
-  line-height: 20px;
-  background-color: $blue-darker;
-  transition: 0.2s;
-  text-align: center;
-  min-width: 170px;
-  border: 0;
-
-  &:hover {
-    color: $white;
-    text-decoration: none;
-    background-color: lighten($blue-darker, 5%);
-  }
-
-  &.active {
-    background-color: $blue;
-  }
-
-  &--block {
-    display: block;
-    width: 100%;
-    min-width: unset;
-  }
-
-  &--red {
-    background-color: $danger;
-
-    &:hover {
-      background-color: darken($danger, 5%);
-    }
   }
 }
 

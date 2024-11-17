@@ -2,7 +2,8 @@
   "menu": [
     {
       "text": "Trang chủ",
-      "url": "./index.html"
+      "url": "./index.html",
+      "active": true
     },
     {
       "text": "Thể lệ",

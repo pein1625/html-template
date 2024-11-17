@@ -11,7 +11,8 @@ $grid-breakpoints: (
   xxl: 1300px
 );
 
-$primary: #7550A0;
+$primary: #262B5E;
+$secondary: #E4C778;
 
 $blue: #06B2F5;
 $blue-lighter: #67C8F3;
@@ -111,6 +112,6 @@ $gradient: linear-gradient(
 );
 
 $font-size-base: 0.875rem;
-$font-family-sans-serif: Arial, system-ui, -apple-system, "Segoe UI", Roboto,
+$font-family-sans-serif: 'UTMAptima', Arial, system-ui, -apple-system, "Segoe UI", Roboto,
   "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

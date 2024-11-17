@@ -1,11 +1,14 @@
 .header {
   position: relative;
   z-index: $zindex-fixed;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
 
   &__inner {
     display: flex;
@@ -31,10 +34,10 @@
 
   @include media-breakpoint-up(xl) {
     &__logo {
-      margin: 20px 0;
+      margin: 30px 0;
 
       img {
-        height: 50px;
+        height: 60px;
       }
     }
 
