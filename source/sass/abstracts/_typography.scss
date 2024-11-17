@@ -1,3 +1,10 @@
+@include font-face('UTMAptima', 'UTMAptima', 400, 'normal');
+@include font-face('UTMAptima', 'UTMAptimaBold', 700, 'normal');
+@include font-face('UTMAptima', 'UTMAptima-Italic', 400, 'italic');
+@include font-face('UTMAptima', 'UTMAptima-BoldItalic', 700, 'italic');
+
+$font-aptima: 'UTMAptima', sans-serif;
+
 .text-gray {
     color: $text-gray !important;
 }

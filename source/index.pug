@@ -1,31 +1,30 @@
 extends layout/page
 
 block content
-    section.banner-home
+    section.banner
+        img.banner__bg(src="./images/banner.jpg", alt="")
+
         .container
-            .position-relative
-                // todo hapk make countdown play
-                .banner-home__countdown.js-countdown(data-countdown="2024-12-24 12:00:00")
-                    .banner-home__countdown-col
-                        .banner-home__countdown-num 27
-                        .banner-home__countdown-label ngày
-                    .banner-home__countdown-col
-                        .banner-home__countdown-num 11
-                        .banner-home__countdown-label giờ
-                    .banner-home__countdown-col
-                        .banner-home__countdown-num 02
-                        .banner-home__countdown-label phút
-                    .banner-home__countdown-col
-                        .banner-home__countdown-num 04
-                        .banner-home__countdown-label giây
-                .banner-home__remaining
-                    .banner-home__remaining-text
-                        div Số quà
-                        div còn lại
-                    .banner-home__remaining-number 3054
-                    img.banner-home__remaining-img(src="./images/giftboxes.png", alt="")
-                img.w-100(src="./images/banner-home.png", alt="")
-            .banner-home__copyright Copyright © 2023 PIAGGIO VIETNAM CO., LTD #[a(href="#!") Điều khoản]
+            .banner__inner
+                .banner__footer
+                    .countdown.js-countdown(data-countdown="2024-12-24 12:00:00")
+                        .countdown__item
+                            strong 27
+                            span ngày
+                        .countdown__item
+                            strong 11
+                            span giờ
+                        .countdown__item
+                            strong 02
+                            span phút
+                        .countdown__item
+                            strong 04
+                            span giây
+
+                    .gift-remaining
+                        span Còn lại
+                        strong.mx-2 3045
+                        span Giải thưởng
 
     section.section.section--blue
         .texture-3

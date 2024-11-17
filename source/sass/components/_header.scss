@@ -1,6 +1,11 @@
 .header {
   position: relative;
   z-index: $zindex-fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 
   &__inner {
     display: flex;

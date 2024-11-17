@@ -1,99 +1,87 @@
-.banner-home {
-    background-color: $orange;
-    margin-top: -60px;
-    padding-top: 70px;
+.banner {
     position: relative;
+    z-index: 1;
 
-    &__countdown {
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 80px 0 20px;
+    }
+
+    &__footer {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 40px;
-        width: 38%;
-        height: 25%;
-        padding: 20px 16px;
-        position: absolute;
-        top: 2%;
-        right: 1%;
+        background: linear-gradient(to right, rgba(#000, 0), rgba(#000, 1), rgba(#000, 0));
+        padding: 8px 0;
+        margin-top: auto;
         color: $white;
-        text-align: center;
-        line-height: 1.2;
-        font-size: 54px;
-        font-weight: 700;
+        font-family: $font-aptima;
+        text-transform: uppercase;
+        font-size: 12px;
 
-        &-col {
-            position: relative;
-
-            &:not(:last-child)::after {
-                content: ':';
-                position: absolute;
-                top: 0;
-                right: -28px;
-            }
-        }
-
-        &-label {
-            font-size: 20px;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-    }
-
-    &__remaining {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-        width: 38%;
-        height: 18%;
-        font-size: 16px;
-        color: $white;
-        padding: 0 20px;
-        position: absolute;
-        top: 31%;
-        right: 1%;
-
-        &-text {
-            font-size: 16px;
-        }
-
-        &-number {
-            font-size: 54px;
+        strong {
+            font-size: 26px;
             font-weight: 700;
         }
-
-        &-img {
-            height: 100%;
-        }
     }
 
-    &__copyright {
-        font-size: 12px;
-        padding: 16px 0;
-        color: $white;
-        text-align: center;
-
-        a {
-            color: inherit;
-            font-style: italic;
-            display: inline-block;
-            text-decoration: underline;
-
-            &:hover {
-                color: inherit;
+    @include media-breakpoint-down(xxl) {
+        &__footer {
+            strong {
+                font-size: 24px;
             }
         }
     }
+}
 
-    @include media-breakpoint-up(xl) {
-        padding-top: 128px;
-        margin-top: -108px;
+.countdown {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-end;
+    border-right: 1px solid #fff;
+    padding-right: 20px;
 
-        &__copyright {
-            font-size: 14px;
-            padding: 24px 0;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            strong {
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: ':';
+                    position: absolute;
+                    top: 0;
+                    right: -16px;
+                }
+
+            }
         }
     }
+}
+
+.gift-remaining {
+    flex: 0 0 50%;
+    font-size: 14px;
+    padding-left: 20px;
 }
 
 .form-contact {

@@ -1,44 +1,4 @@
 {
-	"pageList": {
-		"data": [
-			{
-				"title": "Trang chủ",
-				"url": "index"
-			},
-			{
-				"title": "Login",
-				"url": "login"
-			},
-			{
-				"title": "Chương trình",
-				"url": "program"
-			},
-			{
-				"title": "Thể lệ",
-				"url": "rule"
-			},
-			{
-				"title": "Đăng ký",
-				"url": "register"
-			},
-			{
-				"title": "Game",
-				"url": "game"
-			},
-			{
-				"title": "Danh sách khách hàng",
-				"url": "customers"
-			},
-			{
-				"title": "Thông tin người dùng",
-				"url": "profile"
-			},
-			{
-				"title": "Danh sách đại lý",
-				"url": "agency"
-			}
-		]
-	},
 	"head": {
 		"jquery": {
 			"js": [
@@ -159,6 +119,46 @@
 				"https://cdnjs.cloudflare.com/ajax/libs/clndr/1.4.7/clndr.min.js"
 			]
 		}
+	},
+	"pageList": {
+		"data": [
+			{
+				"title": "Trang chủ",
+				"url": "index"
+			},
+			{
+				"title": "Login",
+				"url": "login"
+			},
+			{
+				"title": "Chương trình",
+				"url": "program"
+			},
+			{
+				"title": "Thể lệ",
+				"url": "rule"
+			},
+			{
+				"title": "Đăng ký",
+				"url": "register"
+			},
+			{
+				"title": "Game",
+				"url": "game"
+			},
+			{
+				"title": "Danh sách khách hàng",
+				"url": "customers"
+			},
+			{
+				"title": "Thông tin người dùng",
+				"url": "profile"
+			},
+			{
+				"title": "Danh sách đại lý",
+				"url": "agency"
+			}
+		]
 	},
 	"menu": [
 		{
