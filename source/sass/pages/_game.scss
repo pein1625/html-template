@@ -1,180 +1,349 @@
-.game-bg {
-  width: 100%;
-  height: 100%;
-  background-color: #e5460f;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -2;
-
-  &__under {
-    display: block;
-    width: 200%;
-    height: 200%;
-    z-index: -1;
-    background-color: #0d8eb2;
-    transform-origin: 50% 0;
-    transform: translate(-50%, 0) rotateZ(-20deg);
-    position: absolute;
-    top: 58%;
-    left: 50%;
-  }
-
-  &__texture {
-    width: 100%;
-    height: 8vh;
-    border-radius: 4vh;
-    background-color: $yellow;
-    position: absolute;
-
-    &--1 {
-      bottom: calc(100% + 24vh);
-      left: calc(50% + 10vw);
-    }
-
-    &--2 {
-      bottom: calc(100% + 6vh);
-      right: calc(50% + 10vw);
-    }
-
-    &--3 {
-      top: 12%;
-      right: 53%;
-      background-color: #00db73;
-    }
-  }
-}
-
 .game {
-    width: 700px;
-    padding-bottom: 180px;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
 
-    &__title {
-        font-size: 20px;
-        color: $white;
-        text-align: center;
-        margin-bottom: 20px;
-        text-shadow: 0 1px 2px rgba(#000, 0.1);
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0));
+    z-index: -1;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  &__sky {
+    width: 100%;
+    min-height: 60%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+  }
+
+  &__stage {
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 66%;
+    left: 0;
+  }
+
+  &__liberty {
+    height: 48%;
+    object-fit: contain;
+    object-position: 100% 100%;
+    position: absolute;
+    bottom: 20%;
+    right: 55%;
+  }
+
+  &__medley {
+    height: 60%;
+    object-fit: contain;
+    object-position: 100% 100%;
+    position: absolute;
+    bottom: 10%;
+    right: 65%;
+  }
+
+  &__gifts {
+    width: 45%;
+    position: absolute;
+    top: 66%;
+    right: 6%;
+    transform: translateY(-45%);
+  }
+
+  &__title {
+    font-family: $font-aptima;
+    width: 50%;
+    font-size: 65px;
+    color: $white;
+    line-height: 1.1;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+  }
+
+  &__congrat {
+    width: 50%;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.4;
+    font-family: $font-aptima;
+    color: #fff7da;
+    text-shadow: 0 1px 1px rgba(#000, 0.3);
+    position: absolute;
+    top: 28%;
+    right: 0;
+
+    &-title {
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 0.3em;
+      text-transform: uppercase;
+      text-shadow: 0 -1px -1px $yellow, 0 3px 3px rgba(#000, 0.4);
     }
+  }
 
-    &__bike {
-      height: 100%;
+  &__print-btn {
+    font-family: $font-aptima;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 100;
+    bottom: 50px;
+    right: 50px;
+    border: 1px solid $black;
+  }
+
+  &__unbox {
+    width: 50%;
+    height: 40%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
       position: absolute;
-      z-index: 9;
       top: 0;
-      left: 90%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: 50% 50%;
     }
+  }
 }
 
-.game-grid {
-  display: block;
+.giftbox {
   position: relative;
 
-  &__img {
+  &::before {
+    content: "";
+    display: block;
     width: 100%;
+    padding-bottom: 50%;
   }
 
-  &__inner {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 94%;
-    height: 76%;
-    grid-gap: 24px;
+  &__img {
+    height: 60%;
     position: absolute;
-    z-index: 10;
-    top: 12%;
-    left: 3%;
-  }
-
-  &__col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
     cursor: pointer;
 
     &:hover {
-      animation: gelatine 0.5s;
+      animation: bounceAndScale 1.5s ease-in-out infinite;
+      transition: all 0.3s ease;
     }
-  }
 
-  &__box {
-    width: 100%;
-    height: 100%;
-    position: relative;
+    &--1 {
+      height: 58%;
+      top: 0;
+      left: 0;
+    }
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: 50% 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
+    &--2 {
+      height: 58%;
+      top: 2%;
+      right: 21%;
+    }
+
+    &--3 {
+      height: 62%;
+      top: 14%;
+      left: 21%;
+    }
+
+    &--4 {
+      height: 63%;
+      top: 22%;
+      right: 0;
+    }
+
+    &--5 {
+      height: 67%;
+      top: 34%;
+      left: 44%;
     }
   }
 }
 
-@keyframes gelatine {
-  from,
-  to {
-    transform: scale(1, 1);
+@keyframes bounceAndScale {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
   }
   25% {
-    transform: scale(0.9, 1.1);
+    transform: translateY(-20px) scaleY(1.1); /* Nhảy lên và phóng cao */
   }
   50% {
-    transform: scale(1.1, 0.9);
+    transform: translateY(0) scaleY(0.9); /* Hạ xuống và nén chiều cao */
   }
   75% {
-    transform: scale(0.95, 1.05);
+    transform: translateY(-10px) scaleY(1.05); /* Nhảy nhẹ và phóng nhẹ */
   }
 }
 
-// .game-grid {
-//     width: 700px;
-//     height: 500px;
-//     background-color: $black;
-//     border: 10px solid #FF9748;
-//     border-radius: 100px;
-//     position: relative;
-//     z-index: 1;
-//     padding: 40px 12px;
+.box {
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+  background-color: #fff;
 
-//     &::before {
-//         content: '';
-//         display: block;
-//         border-radius: 98px;
-//         box-shadow: 0 0 3px #FFFF16, inset 0 0 3px #FFFF16;
-//         border: 4px solid #FFFF16;
-//         z-index: 1;
-//         background-color: transparent;
-//         position: absolute;
-//         top: -7px;
-//         left: -7px;
-//         right: -7px;
-//         bottom: -7px;
-//     }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 68.26%;
+  }
 
-//     &::after {
-//         content: '';
-//         display: block;
-//         border-radius: 98px;
-//         box-shadow: 0 0 4px #fff, inset 0 0 4px #fff;
-//         border: 1px solid #fff;
-//         z-index: 2;
-//         background-color: transparent;
-//         position: absolute;
-//         top: -6px;
-//         left: -6px;
-//         right: -6px;
-//         bottom: -6px;
-//     }
+  img {
+    height: 100%;
+    width: auto;
+    max-width: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // animation: spriteAnim 5s steps(17) infinite; /* Hoạt ảnh với 17 frame, chạy liên tục */
 
-//     &__inner {
-//         display: grid;
-//         grid-template-columns: repeat(5, 1fr);
-//     }
-// }
+    animation-duration: 4.25s;
+    animation-delay: -0.5s;
+    animation-name: spriteAnim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.sprite-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;  /* Width of one frame */
+  height: 100%; /* Height of one frame */
+  background-image: url('../images/box_sprite.png'); /* Path to your sprite sheet */
+  background-position: 0 0; /* Start at the first frame */
+  background-repeat: no-repeat;
+  // animation: spriteAnim 3s steps(17) infinite; /* Animation with 17 steps, running for 3 seconds, infinitely looping */
+
+  will-change: background-position;
+
+  animation-duration: 4.25s;
+  animation-delay: -0.5s;
+  animation-name: spriteAnim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spriteAnim {
+  0%,
+  5.87% {
+    // background-position: 0 0; /* Start at the first frame */
+    left: 0;
+  }
+  5.88%,
+  11.75% {
+    // background-position: -586px 0; /* Frame 2 */
+    left: 5.88%;
+  }
+  11.76%,
+  17.63% {
+    // background-position: -1172px 0; /* Frame 3 */
+    left: 11.76;
+  }
+  17.64%,
+  23.51% {
+    // background-position: -1758px 0; /* Frame 4 */
+    left: 17.64%;
+  }
+  23.52%,
+  29.40% {
+    // background-position: -2344px 0; /* Frame 5 */
+    left: 23.52%;
+  }
+  29.41%,
+  35.28% {
+    // background-position: -2930px 0; /* Frame 6 */
+    left: 29.41%;
+  }
+  35.29%,
+  41.16% {
+    // background-position: -3516px 0; /* Frame 7 */
+    left: 35.29%;
+  }
+  41.17%,
+  47.05% {
+    // background-position: -4102px 0; /* Frame 8 */
+    left: 41.17%;
+  }
+  47.06%,
+  52.93% {
+    // background-position: -4688px 0; /* Frame 9 */
+    left: 47.06%;
+  }
+  52.94%,
+  58.81% {
+    // background-position: -5274px 0; /* Frame 10 */
+    left: 52.94%;
+  }
+  58.82%,
+  64.70% {
+    // background-position: -5860px 0; /* Frame 11 */
+    left: 58.82%;
+  }
+  64.71%,
+  70.58% {
+    // background-position: -6446px 0; /* Frame 12 */
+    left: 64.71%;
+  }
+  70.59%,
+  76.46% {
+    // background-position: -7032px 0; /* Frame 13 */
+    left: 70.59%;
+  }
+  76.47%,
+  82.34% {
+    // background-position: -7618px 0; /* Frame 14 */
+    left: 76.47%;
+  }
+  82.35%,
+  88.22% {
+    // background-position: -8204px 0; /* Frame 15 */
+    left: 82.35%;
+  }
+  88.23%,
+  94.10% {
+    // background-position: -8790px 0; /* Frame 16 */
+    left: 88.23%;
+  }
+  94.11%,
+  99.99% {
+    // background-position: -9376px 0; /* Frame 17 */
+    left: 94.11%;
+  }
+  100% {
+    background-position: -9972px 0; /* End at the last frame */
+    left: 94.11%;
+  }
+}

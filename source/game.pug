@@ -1,34 +1,45 @@
 extends layout/page
+
 block header
+    +header-3
 block footer
+
+
+mixin giftbox
+    .giftbox
+        img.giftbox__img.giftbox__img--1(src="./images/giftbox-left.png", alt="")
+        img.giftbox__img.giftbox__img--2(src="./images/giftbox-right.png", alt="")
+        img.giftbox__img.giftbox__img--3(src="./images/giftbox-left.png", alt="")
+        img.giftbox__img.giftbox__img--4(src="./images/giftbox-right.png", alt="")
+        img.giftbox__img.giftbox__img--5(src="./images/giftbox-center.png", alt="")
+
 block content
-    section.s-page
-        .game-bg
-            .game-bg__under
-                .game-bg__texture.game-bg__texture--1
-                .game-bg__texture.game-bg__texture--2
-                .game-bg__texture.game-bg__texture--3
+    section.game
+        img.game__bg(src="./images/game-bg.jpg", alt="")
+        //- img.game__sky(src="./images/game-sky.jpg", alt="")
+        //- img.game__stage(src="./images/game-yard.jpg", alt="")
 
-        header.s-page__header
-            .container
-                .s-page__header-inner
-                    a.s-page__logo(href="./index.html")
-                        img(src="./images/logo.png", alt="")
-                    .s-page__header-title.text-white Chương trình "Lên xe sang - Đón ngàn lộc"
+        img.game__liberty.d-none(src="./images/liberty_s.png", alt="")
+        img.game__medley.d-none(src="./images/medley_s_bronze.png", alt="")
 
-        main.s-page__body
-            .s-page__body-inner
-                .container
-                    .game
-                        .game__title Hãy lựa chọn giải thưởng của bạn!
-                        img.game__bike(src="./images/game-bike.png", alt="")
+        .game__title.d-none
+            .fw-700 Chọn ngay
+            div 01 hộp quà may mắn
 
-                        .game-grid
-                            img.game-grid__img(src="./images/game-grid.png", alt="")
-                            .game-grid__inner
-                                - for(let i = 0; i < 15; i++)
-                                    .game-grid__col.js-open-modal-gift
-                                        .game-grid__box
-                                            img(src="./images/giftbox.png", alt="")
+        .game__gifts
+            +giftbox
 
-    +md-gift
+        .game__congrat
+            .game__congrat-title Chúc mừng
+            div Quý khách đã trúng thưởng
+            .fw-700.text-uppercase Giải nhì
+            .fw-700.text-uppercase 01 Xe Piaggio Liberty S
+            div 125 3Vie ABS sản xuất năm 2022
+
+        a.game__print-btn.button.button--secondary(href="#!") In xác nhận quà tặng
+
+        .box.box--1(style="width: 200px")
+            //- img(src="./images/box_sprite.png", alt="")
+            .sprite-animation
+
+        //- .sprite-animation
