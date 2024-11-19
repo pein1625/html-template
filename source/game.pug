@@ -26,10 +26,10 @@ block content
             .fw-700 Chọn ngay
             div 01 hộp quà may mắn
 
-        .game__gifts
+        .game__gifts.d-none
             +giftbox
 
-        .game__congrat
+        .game__congrat.d-none
             .game__congrat-title Chúc mừng
             div Quý khách đã trúng thưởng
             .fw-700.text-uppercase Giải nhì
@@ -38,8 +38,10 @@ block content
 
         a.game__print-btn.button.button--secondary(href="#!") In xác nhận quà tặng
 
-        .box.box--1(style="width: 200px")
-            //- img(src="./images/box_sprite.png", alt="")
-            .sprite-animation
+        .box(style="width: 500px")
+            img.box__box(src="./images/box_sprite.png", alt="")
+            .box__gift
+                img(src="./images/liberty_s.png", alt="")
+            //- .sprite-animation
 
         //- .sprite-animation

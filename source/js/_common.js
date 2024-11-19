@@ -97,7 +97,6 @@ $(function() {
     });
 })
 
-
 // countdown timer
 // .js-countdown(data-countdown="2021-1-24 12:45:04")
 $(function () {
@@ -204,3 +203,9 @@ function hideCCCDField(btnText) {
     $('.js-back-upload-btn').addClass('d-none');
     $('.js-front-upload-btn').find('span').text(btnText);
 }
+
+$(function() {
+    $('.box').on('click', function() {
+        $(this).toggleClass('active');
+    })
+})
