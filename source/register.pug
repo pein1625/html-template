@@ -56,11 +56,11 @@ block content
                                                 .register-form__upload-btns
                                                     // todo hapk upload to show preview
                                                     label.register-form__upload-btn.js-front-upload-btn
-                                                        input.js-file-input(type="file", data-preview=".js-preview-id-front", accept="image/png, image/jpeg")
+                                                        input#input-file-front.js-file-input(type="file", data-preview=".js-preview-id-front", accept="image/png, image/jpeg")
                                                         i.fal.fa-fw.fa-upload.me-2
                                                         span Tải mặt trước
                                                     label.register-form__upload-btn.js-back-upload-btn
-                                                        input.js-file-input(type="file", data-preview=".js-preview-id-back", accept="image/png, image/jpeg")
+                                                        input#input-file-back.js-file-input(type="file", data-preview=".js-preview-id-back", accept="image/png, image/jpeg")
                                                         i.fal.fa-fw.fa-upload.me-2
                                                         span Tải mặt sau
                                         .col-lg-6
@@ -77,8 +77,19 @@ block content
                                             .row.gy-2.gx-3
                                                 .col-6
                                                     .cccd-preview.js-preview-id-front
+                                                        .cccd-preview__overlay
+                                                            label.cccd-preview__btn(for="input-file-front")
+                                                                i.fal.fa-fw.fa-pencil
+                                                            button.cccd-preview__btn.js-clear-file-input(type="button", data-target="#input-file-front")
+                                                                i.fal.fa-fw.fa-trash-alt
+
                                                 .col-6.js-show-back-photo
                                                     .cccd-preview.js-preview-id-back
+                                                        .cccd-preview__overlay
+                                                            label.cccd-preview__btn(for="input-file-back")
+                                                                i.fal.fa-fw.fa-pencil
+                                                            button.cccd-preview__btn.js-clear-file-input(type="button", data-target="#input-file-back")
+                                                                i.fal.fa-fw.fa-trash-alt
                                                 .col-12
                                                     .text-gray.fs-12
                                                         | * Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”
@@ -108,7 +119,7 @@ block content
                                                 input.form-control(type="text", name="bill_number")
                                                 .register-form__upload-btns
                                                     label.register-form__upload-btn
-                                                        input.js-file-input(type="file", data-preview=".js-preview-bill", accept="image/png, image/jpeg")
+                                                        input#input-file-bill.js-file-input(type="file", data-preview=".js-preview-bill", accept="image/png, image/jpeg")
                                                         i.fal.fa-fw.fa-upload.me-2
                                                         span Tải hình ảnh
                                         .col-lg-6.me-auto
@@ -119,6 +130,11 @@ block content
                                                     i.fal.fa-fw.fa-calendar-alt
                                         .col-lg-3
                                             .cccd-preview.js-preview-bill
+                                                .cccd-preview__overlay
+                                                    label.cccd-preview__btn(for="input-file-bill")
+                                                        i.fal.fa-fw.fa-pencil
+                                                    button.cccd-preview__btn.js-clear-file-input(type="button", data-target="#input-file-bill")
+                                                        i.fal.fa-fw.fa-trash-alt
 
                                 .col-12.text-center.text-danger Kiểm tra kỹ thông tin trước khi nhấn nút
                                 .col-lg-4

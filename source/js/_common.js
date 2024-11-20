@@ -78,11 +78,9 @@ $(function() {
 
         if (!$target.length) return;
 
-        $target.empty();
+        $target.removeClass('active').find('img').remove();
 
         const file = event.target.files[0];
-
-        console.log('file', file);
 
         if (!file) return;
 
@@ -90,11 +88,21 @@ $(function() {
 
         reader.onload = function(e) {
             const url = e.target.result;
+            $target.addClass('active');
             $target.append(`<img src="${url}" alt="" />`);
         };
 
         reader.readAsDataURL(file);
     });
+
+    $('.js-clear-file-input').on('click', function() {
+        const target = $(this).data('target');
+        const $target = $(target);
+
+        if (!$target.length) return false;
+
+        $target.val('').trigger('change');
+    })
 })
 
 // countdown timer
@@ -198,6 +206,7 @@ function showCCCDField() {
     $('.js-back-upload-btn').removeClass('d-none');
     $('.js-front-upload-btn').find('span').text('Tải mặt trước');
     $('.js-show-label').removeClass('d-none');
+    $('.js-label-number').text('Số CCCD:');
     $('.js-label-place').text('Nơi cấp CCCD');
     $('.js-label-date').text('Ngày cấp CCCD');
 }
@@ -205,8 +214,10 @@ function showCCCDField() {
 function hideCCCDField(btnText, shk) {
     if (shk) {
         $('.js-show-label').addClass('d-none');
+        $('.js-label-number').text('Số hộ khẩu:');
     } else {
         $('.js-show-label').removeClass('d-none');
+        $('.js-label-number').text('Số hộ chiếu:');
     }
 
     $('.js-show-back-photo').addClass('hide-field');
@@ -219,5 +230,10 @@ function hideCCCDField(btnText, shk) {
 $(function() {
     $('.box').on('click', function() {
         $(this).toggleClass('active');
+    })
+})
+
+$(function() {
+    $('.js-giftbox').on('click', function() {
     })
 })
