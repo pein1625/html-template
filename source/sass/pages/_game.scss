@@ -63,9 +63,9 @@
   &__gifts {
     width: 45%;
     position: absolute;
-    top: 66%;
-    right: 6%;
-    transform: translateY(-45%);
+    top: 70%;
+    left: 75%;
+    transform: translate(-50%, -50%);
   }
 
   &__title {
@@ -75,46 +75,9 @@
     color: $white;
     line-height: 1.1;
     position: absolute;
-    top: 30%;
-    right: 5%;
+    top: 25%;
+    right: 3%;
     text-align: center;
-  }
-
-  &__congrat {
-    width: 50%;
-    text-align: center;
-    font-size: 40px;
-    line-height: 1.4;
-    font-family: $font-aptima;
-    color: #fff7da;
-    text-shadow: 0 1px 1px rgba(#000, 0.3);
-    position: absolute;
-    top: 28%;
-    right: 0;
-
-    &-title {
-      font-size: 2.2em;
-      font-weight: 700;
-      margin-bottom: 0.3em;
-      text-transform: uppercase;
-      text-shadow: 0 -1px -1px $yellow, 0 3px 3px rgba(#000, 0.4);
-    }
-  }
-
-  &__print-btn {
-    font-family: $font-aptima;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
-    padding-left: 45px;
-    padding-right: 45px;
-    border-radius: 24px;
-    text-transform: uppercase;
-    position: absolute;
-    z-index: 100;
-    bottom: 50px;
-    right: 50px;
-    border: 1px solid $black;
   }
 
   &__unbox {
@@ -135,6 +98,125 @@
       object-position: 50% 50%;
     }
   }
+
+  &.picked &__liberty,
+  &.picked &__medley {
+    transition: 1s;
+    transition-delay: 0.8s;
+    transition-timing-function: cubic-bezier(.34,-0.63,.55,.67);
+    transform: translateX(-50vw) scale(0);
+    opacity: 0;
+  }
+
+  &.picked &__liberty {
+    transition-delay: 0.9s;
+  }
+
+  &.picked &__gifts {
+    width: 60%;
+    top: 58%;
+    left: 50%;
+    transition: 1s 1.5s linear;
+  }
+
+  &.picked .giftbox__img.active {
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
+    transition: 1s 1.5s linear;
+    animation: none;
+  }
+
+  &.picked &__title {
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
+    transform: translate(0, -100%);
+    opacity: 0;
+  }
+
+  &.picked .giftbox__img:not(.active) {
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+
+  &.show &__gifts {
+    left: 27%;
+    transition: 1s 3.5s ease-in;
+  }
+
+  &.show .box {
+    display: block;
+  }
+
+  &.show .box .box__box.box__box {
+    animation-duration: 2s; //4.25s
+    animation-delay: 0;
+    animation-name: spriteAnim;
+    animation-timing-function: linear;
+    left: -1600%;
+  }
+
+  &.show .box__gift img {
+    transform: scale(1);
+    opacity: 1;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-name: giftAnim;
+    animation-timing-function: linear;
+  }
+
+  &.show .giftbox__img.active {
+    display: none;
+  }
+
+  &.show .congrat__title {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s 4s linear;
+  }
+
+  &.show .congrat__subtitle {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s 4.3s linear;
+  }
+
+  &.show .congrat__content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s 4.6s linear;
+  }
+
+  &.show .congrat__last {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s 4.9s linear;
+  }
+
+  &.show .game-print-btn {
+    transform: translateX(0);
+    transition: 1s 5s ease-out;
+  }
+
+  &.first .box__first,
+  &.second .box__second,
+  &.third .box__third,
+  &.fourth .box__fourth,
+  &.consolation .box__consolation {
+    display: block;
+  }
+
+  &.first .congrat.first,
+  &.second .congrat.second,
+  &.third .congrat.third,
+  &.fourth .congrat.fourth,
+  &.consolation .congrat.consolation {
+    transform: translateX(0);
+  }
 }
 
 .giftbox {
@@ -151,6 +233,7 @@
     height: 60%;
     position: absolute;
     cursor: pointer;
+    transform: translate(-50%, -50%);
 
     &:hover {
       animation: bounceAndScale 1.5s ease-in-out infinite;
@@ -159,32 +242,32 @@
 
     &--1 {
       height: 58%;
-      top: 0;
-      left: 0;
+      top: 30%;
+      left: 10%;
     }
 
     &--2 {
       height: 58%;
-      top: 2%;
-      right: 21%;
+      top: 30%;
+      left: 68%;
     }
 
     &--3 {
       height: 62%;
-      top: 14%;
-      left: 21%;
+      top: 45%;
+      left: 32%;
     }
 
     &--4 {
       height: 63%;
-      top: 22%;
-      right: 0;
+      top: 54%;
+      left: 88%;
     }
 
     &--5 {
       height: 67%;
-      top: 34%;
-      left: 44%;
+      top: 65%;
+      left: 55%;
     }
   }
 }
@@ -192,21 +275,26 @@
 @keyframes bounceAndScale {
   0%,
   100% {
-    transform: translateY(0) scaleY(1);
+    transform: translate(-50%, -50%) scaleY(1);
   }
   25% {
-    transform: translateY(-20px) scaleY(1.1); /* Nhảy lên và phóng cao */
+    transform: translate(-50%, -65%) scaleY(1.1); /* Nhảy lên và phóng cao */
   }
   50% {
-    transform: translateY(0) scaleY(0.9); /* Hạ xuống và nén chiều cao */
+    transform: translate(-50%, -50%) scaleY(0.9); /* Hạ xuống và nén chiều cao */
   }
   75% {
-    transform: translateY(-10px) scaleY(1.05); /* Nhảy nhẹ và phóng nhẹ */
+    transform: translate(-50%, -57%) scaleY(1.05); /* Nhảy nhẹ và phóng nhẹ */
   }
 }
 
 .box {
-  position: relative;
+  display: none;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  position: absolute;
+  top: 43%;
+  left: 51%;
   z-index: 100;
   overflow: hidden;
 
@@ -236,6 +324,7 @@
     transform: translate(-50%, -50%);
 
     img {
+      display: none;
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -245,24 +334,35 @@
       left: 0;
       transform: scale(0);
       opacity: 0;
+
+      &.box__third,
+      &.box__fourth {
+        width: 80%;
+        height: 80%;
+        left: 10%;
+        top: 10%;
+      }
     }
   }
 
-  &.active &__box {
-    animation-duration: 3s; //4.25s
-    animation-delay: 0;
-    animation-name: spriteAnim;
-    animation-timing-function: linear;
-    left: -1600%;
+  &.picked-left {
+    top: 41%;
   }
 
-  &.active &__gift img {
-    transform: scale(1);
-    opacity: 1;
-    animation-duration: 5s;
-    animation-delay: 0;
-    animation-name: giftAnim;
-    animation-timing-function: linear;
+  &.picked-left &__box {
+    left: -200%;
+  }
+
+  &.picked-right {
+    top: 41%;
+    left: 51.5%;
+  }
+
+  &.picked-center {
+  }
+
+  &.picked-center &__box {
+    left: -100%;
   }
 }
 
@@ -367,5 +467,68 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+.congrat {
+  transform: translateX(100vw);
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.4;
+  font-family: $font-aptima;
+  color: #fff7da;
+  text-shadow: 0 1px 1px rgba(#000, 0.3);
+  position: absolute;
+  top: 20%;
+  right: 0;
+
+  &__title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+    text-transform: uppercase;
+    text-shadow: 0 -1px -1px $yellow, 0 3px 3px rgba(#000, 0.4);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &__subtitle {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &__content {
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &__last {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+.game-print-btn {
+  transform: translateX(500px);
+  font-family: $font-aptima;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  padding-left: 45px;
+  padding-right: 45px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 100;
+  bottom: 50px;
+  right: 50px;
+  border: 1px solid $black;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: darken($secondary, 10%);
   }
 }

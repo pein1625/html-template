@@ -45,19 +45,19 @@
     position: relative;
     z-index: 1;
 
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: calc(100% + 66px);
-      border-radius: 2px;
-      position: absolute;
-      top: -6px;
-      left: 0;
-      z-index: -1;
-      background-color: $white;
-      box-shadow: 0 2px 6px rgba(#000, 0.2);
-    }
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   width: 100%;
+    //   height: calc(100% + 66px);
+    //   border-radius: 2px;
+    //   position: absolute;
+    //   top: -6px;
+    //   left: 0;
+    //   z-index: -1;
+    //   background-color: $white;
+    //   box-shadow: 0 2px 6px rgba(#000, 0.2);
+    // }
 
     tr {
       &:hover {
@@ -169,6 +169,61 @@
           padding-top: 7px;
           padding-bottom: 7px;
         }
+      }
+    }
+  }
+
+  .bottom-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 12px;
+
+    .dataTables_filter {
+      margin-right: auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+
+      input {
+        width: 400px;
+        border: 0;
+        border-radius: 4px;
+        height: 35px;
+        padding: 0 12px;
+        margin: 0;
+        padding-right: 30px;
+
+        background: url('https://img.icons8.com/ios-filled/50/000000/search.png') no-repeat scroll right 7px center; /* Đường dẫn đến icon */
+        background-size: 18px 18px; /* Kích thước icon */
+
+      }
+    }
+
+    .dataTables_info {
+      margin-right: auto;
+      padding-top: 0;
+    }
+
+    .dataTables_paginate {
+      padding-top: 0;
+    }
+
+    .paginate_button {
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 6px 12px;
+      background-color: $white;
+      transition: 0.2s;
+
+      &.current {
+        background: $secondary;
+        border: 1px solid #999;
+      }
+
+      &:not(.disabled):hover {
+        background: darken($secondary, 10%) !important;
+        border: 1px solid #999;
       }
     }
   }

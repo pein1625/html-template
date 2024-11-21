@@ -72,12 +72,12 @@ block content
             h2.section__title.text-white Danh sách trúng thưởng
 
             nav.n-tab
-                a.button.button--secondary(href="#!") Tuần này
-                a.button(href="#!") Tháng này
-                a.button(href="#!") Từ đầu chương trình
+                a.js-filter-btn.button.button--secondary(href="#!", data-filter="this_week") Tuần này
+                a.js-filter-btn.button(href="#!", data-filter="this_month") Tháng này
+                a.js-filter-btn.button(href="#!", data-filter="all") Từ đầu chương trình
 
             .data-tbl
-                table.table.table-borderless.js-datatable
+                table.table.table-borderless.js-datatable(data-url="http://piaggio.hapk.com/ajax/get_customers")
                     thead
                         tr
                             th STT
@@ -88,28 +88,6 @@ block content
                             th Giải thưởng
                             th Đại lý
                     tbody
-                        - for(let i = 0; i < 10; i++)
-                            tr
-                                td #{i == 9 ? '10' : '0' + (i+1)}
-                                td Trương Văn Thắng
-                                td 0987654***
-                                td 0123456***
-                                td 20/10/2024
-                                td Xe Vespa
-                                td Xuân Cầu Vespa
-
-                .data-tbl__footer
-                    .data-tbl__search
-                        .input-group
-                            input.form-control(type="text", placeholder="Tìm kiếm thông tin")
-                            button.input-group-text(type="button")
-                                i.far.fa-lg.fa-search
-
-                    .data-tbl__content
-                        div Có #[strong.text-danger 93] đại lý trong danh sách này
-
-                    .data-tbl__pagination
-                        +pagination
 
     section.section.h-contact
         .texture-1

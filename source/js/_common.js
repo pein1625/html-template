@@ -237,3 +237,124 @@ $(function() {
     $('.js-giftbox').on('click', function() {
     })
 })
+
+$(function() {
+    const $game = $('.game');
+    const $box = $('.box');
+    const url = $game.data('url');
+
+    console.log('url', url);
+
+    $('.giftbox__img').on('click', function() {
+        $game.addClass('picked');
+        $(this).addClass('active');
+
+        const pos = $(this).data('pos');
+
+        $box.addClass('picked-' + pos);
+
+        setTimeout(function() {
+            callApi(url);
+        }, 2500);
+    });
+})
+
+function callApi(url) {
+    $.ajax({
+        url: url,
+        method: 'get',
+        success: function(res) {
+            if (res.error && res.error.message) {
+                handleError(res.error.message)
+                return;
+            }
+
+            const prizeType = res.message;
+
+            if (!(['first', 'second', 'third', 'fourth', 'consolation'].includes(prizeType))) {
+                handleError('Đã xảy ra lỗi, vui lòng thử lại sau');
+                console.log('API trả về ko prize type ko đúng: ', res);
+                return;
+            }
+
+            handleSuccess(res.message);
+        },
+        error: function(e) {
+            handleSuccess(e.message);
+        },
+    });
+}
+
+function handleSuccess(prizeType) {
+    const $game = $('.game');
+
+    console.log('handleSuccess');
+
+    $game.addClass('show');
+    $game.addClass(prizeType)
+}
+
+function handleError(errMsg) {
+    alert(errMsg);
+}
+
+$(function() {
+    const $table = $('.js-datatable');
+
+    if (!$table.length) return;
+
+    const url = $table.data('url');
+
+    const dataTable = $table.DataTable({
+        ajax: {
+            url: url + '?filter=this_week', // URL API trả về dữ liệu JSON
+            type: 'GET',             // Phương thức yêu cầu
+            dataSrc: ''              // Nguồn dữ liệu (đối với JSON Array)
+        },
+        columns: [
+            { // Cột STT
+                data: null, // Không lấy dữ liệu từ server
+                title: 'STT',
+                render: function (data, type, row, meta) {
+                    return meta.row + 1; // Tính số thứ tự dựa trên index
+                },
+                orderable: false, // Không sắp xếp theo cột này
+                searchable: false  // Không cho phép tìm kiếm theo cột này
+            },
+            { data: 'customer_name', title: 'Khách hàng' },
+            { data: 'customer_phone', title: 'Số điện thoại' },
+            { data: 'identifier_number', title: 'Số CCCD/CMND' },
+            { data: 'created_at', title: 'Ngày đăng ký' },
+            { data: 'prize_name', title: 'Giải thưởng' },
+            { data: 'dealer_name', title: 'Đại lý' }
+        ],
+        paging: true,         // Bật/Tắt phân trang
+        searching: true,      // Bật/Tắt ô tìm kiếm
+        ordering: true,       // Bật/Tắt sắp xếp
+        pageLength: 10,        // Số dòng mỗi trang
+        lengthMenu: false,
+        dom:  't<"bottom-bar"fip>',
+        language: {
+            lengthMenu: "Hiển thị _MENU_ dòng",
+            zeroRecords: "Không tìm thấy dữ liệu",
+            info: "Hiển thị từ _START_ đến _END_ của _TOTAL_ dòng",
+            search: "",
+            paginate: {
+                first: "Đầu",
+                last: "Cuối",
+                next: "Tiếp",
+                previous: "Trước"
+            }
+        }
+    });
+
+    $('.js-filter-btn').on('click', function () {
+        $('.js-filter-btn').removeClass('button--secondary');
+        $(this).addClass('button--secondary');
+
+        const filter = $(this).data('filter');
+
+        dataTable.ajax.url(url + '?filter=' + filter).load();
+    });
+
+})
