@@ -173,6 +173,16 @@
     }
   }
 
+  .dataTables_wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 452px;
+
+    .bottom-bar {
+      margin-top:  auto;
+    }
+  }
+
   .bottom-bar {
     display: flex;
     flex-wrap: wrap;

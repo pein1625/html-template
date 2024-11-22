@@ -2,9 +2,10 @@ extends layout/page
 
 block content
     section.section.py-0
-        img.section__bg(src="./images/banner.jpg", alt="")
+        img.section__bg(src="./images/banner-bg.jpg", alt="")
+        img.banner-items(src="./images/banner-items.png", alt="")
         .container
-            .section__inner
+            .section__inner.py-30
                 .section__body
                 .section__footer
                     .banner
@@ -27,7 +28,7 @@ block content
                             strong.mx-2 3045
                             span Giải thưởng
 
-    section.section.py-0
+    section.section.pb-0.pt-60
         img.section__bg(src="./images/rule-bg.jpg", alt="")
         .section__backdrop
         .container
@@ -68,7 +69,7 @@ block content
 
     section.section
         .texture-2
-        .container
+        .container.pt-60
             h2.section__title.text-white Danh sách trúng thưởng
 
             nav.n-tab
@@ -76,7 +77,7 @@ block content
                 a.js-filter-btn.button(href="#!", data-filter="this_month") Tháng này
                 a.js-filter-btn.button(href="#!", data-filter="all") Từ đầu chương trình
 
-            .data-tbl
+            .data-tbl(style="min-height: 484px")
                 table.table.table-borderless.js-datatable(data-url="http://piaggio.hapk.com/ajax/get_customers")
                     thead
                         tr
@@ -87,11 +88,11 @@ block content
                             th Ngày đăng ký
                             th Giải thưởng
                             th Đại lý
-                    tbody
+                    tbody(style="min-height: 355px;")
 
     section.section.h-contact
         .texture-1
-        .container
+        .container.pt-60
             h2.section__title.text-white Liên hệ đại lý
             .section__desc.text-white Hãy là những khách hàng đầu tiên tham gia và trúng giải thưởng của chương trình
 

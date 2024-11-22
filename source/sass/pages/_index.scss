@@ -173,3 +173,15 @@
         margin-right: 16px;
     }
 }
+
+.banner-items {
+    width: 100%;
+    height: calc(100vh - 200px);
+    object-fit: contain;
+    object-position: 50% 50%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
