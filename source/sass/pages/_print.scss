@@ -9,7 +9,7 @@
 
     &__content {
         margin: 0 auto;
-        max-width: 800px;
+        font-size: 14px;
     }
 
     &__date {
@@ -19,7 +19,7 @@
 
     &__table {
         font-weight: 700;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
 
         tr {
             td {
@@ -37,7 +37,7 @@
 
     &__title {
         font-family: $font-aptima;
-        font-size: 40px;
+        font-size: 36px;
         font-weight: 700;
         text-transform: uppercase;
         text-align: center;
@@ -46,14 +46,14 @@
 
     &__subtitle {
         font-family: $font-aptima;
-        font-size: 24px;
+        font-size: 20px;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
     }
 
     &__label {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 700;
         margin-top: 24px;
         margin-bottom: 12px;
@@ -74,8 +74,14 @@
         }
     }
 
+    &__info-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4px 16px;
+    }
+
     &__info {
-        margin-bottom: 10px;
+        margin-bottom: 4px;
     }
 
     &__footer {
@@ -88,7 +94,7 @@
     }
 
     &__sign {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
 
         &-desc {

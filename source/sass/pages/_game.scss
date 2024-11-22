@@ -136,6 +136,10 @@
     opacity: 0;
   }
 
+  &.picked .giftbox__img {
+    pointer-events: none;
+  }
+
   &.picked .giftbox__img:not(.active) {
     transition: 1s;
     transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
