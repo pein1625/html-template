@@ -78,18 +78,29 @@ $(function() {
 
         if (!$target.length) return;
 
-        $target.removeClass('active').find('img').remove();
+        $target.removeClass('active').find('img, iframe').remove();
 
         const file = event.target.files[0];
 
+        console.log('file', file);
+
         if (!file) return;
+
+        const isPdf = file.type === 'application/pdf';
 
         const reader = new FileReader();
 
         reader.onload = function(e) {
             const url = e.target.result;
             $target.addClass('active');
-            $target.append(`<img src="${url}" alt="" />`);
+
+            if (isPdf) {
+                $target.append(`
+<iframe src="${url}" />
+                `);
+            } else {
+                $target.append(`<img src="${url}" alt="" />`);
+            }
         };
 
         reader.readAsDataURL(file);
