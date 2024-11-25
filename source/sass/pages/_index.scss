@@ -19,6 +19,19 @@
             font-size: 24px;
         }
     }
+
+    @include media-breakpoint-down(md) {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        padding: 6px 0;
+        flex-direction: column-reverse;
+        font-size: 10px;
+        align-items: center;
+
+        strong {
+            font-size: 18px;
+        }
+    }
 }
 
 .countdown {
@@ -51,12 +64,29 @@
             }
         }
     }
+
+    @include media-breakpoint-down(md) {
+        width: 240px;
+        max-width: 100%;
+        justify-content: center;
+        padding: 0;
+        border-right: 0;
+        border-top: 1px solid #fff;
+        margin-top: 4px;
+        padding-top: 4px;
+    }
 }
 
 .gift-remaining {
     flex: 0 0 50%;
     font-size: 14px;
     padding-left: 20px;
+
+    @include media-breakpoint-down(md) {
+        padding: 0;
+        text-align: center;
+        font-size: 10px;
+    }
 }
 
 .form-contact {
@@ -67,6 +97,7 @@
     margin-bottom: 80px;
 
     &__btn {
+        white-space: nowrap;
         font-size: 16px;
         line-height: 20px;
         padding: 8px 50px 12px;
@@ -103,11 +134,27 @@
 
 .n-tab {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
     margin-bottom: 32px;
+    align-items: normal;
+
+    @include media-breakpoint-down(md) {
+        .button {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            min-width: 0;
+            flex: 1;
+            align-self: stretch;
+            font-size: 14px;
+            line-height: 1;
+            padding: 4px 12px 8px;
+            border-radius: 20px;
+        }
+    }
 }
 
 .h-contact {
@@ -171,6 +218,22 @@
         background-color: $orange;
         color: $white;
         margin-right: 16px;
+    }
+
+    @include media-breakpoint-down(md) {
+        &__bike {
+            display: none;
+        }
+
+        &__info {
+            font-size: 12px;
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
     }
 }
 

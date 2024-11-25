@@ -3,4 +3,9 @@
     padding: 60px 0;
     color: $white;
     text-align: center;
+
+    @include media-breakpoint-down(md) {
+        padding: 16px 0;
+        font-size: 12px;
+    }
 }

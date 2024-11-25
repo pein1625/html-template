@@ -237,6 +237,76 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .dataTables_wrapper {
+      // display: flex;
+      // flex-direction: column;
+      // min-height: 452px;
+      position: relative;
+
+      .bottom-bar {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        .dataTables_paginate {
+          order: -1;
+        }
+
+        .dataTables_info {
+          width: 100%;
+          text-align: center;
+          margin-top: 6px;
+        }
+
+        .dataTables_filter {
+          width: 100%;
+
+          & > label {
+            display: block;
+            width: 100%;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .bottom-bar {
+      .dataTables_info {
+        margin-right: auto;
+        padding-top: 0;
+      }
+
+      .dataTables_paginate {
+        padding-top: 0;
+      }
+
+      .paginate_button {
+        border: 1px solid #999;
+        border-radius: 4px;
+        padding: 6px 12px;
+        background-color: $white;
+        transition: 0.2s;
+
+        &.current {
+          background: $secondary;
+          border: 1px solid #999;
+        }
+
+        &:not(.disabled):hover {
+          background: darken($secondary, 10%) !important;
+          border: 1px solid #999;
+        }
+      }
+    }
+  }
 }
 
 .select2-container {

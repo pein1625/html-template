@@ -2,10 +2,11 @@ extends layout/page
 
 block content
     section.section.py-0
-        img.section__bg(src="./images/banner-bg.jpg", alt="")
-        img.banner-items(src="./images/banner-items.png", alt="")
+        img.section__bg.d-none.d-md-block(src="./images/banner-bg.jpg", alt="")
+        img.banner-items.d-none.d-md-block(src="./images/banner-items.png", alt="")
+        img.section__bg.d-md-none(src="./images/banner-mb.png", alt="")
         .container
-            .section__inner.py-30
+            .section__inner.pt-30.pb-0.pb-md-30
                 .section__body
                 .section__footer
                     .banner
@@ -28,11 +29,11 @@ block content
                             strong.mx-2 3045
                             span Giải thưởng
 
-    section.section.pb-0.pt-60
+    section.section.py-0
         img.section__bg(src="./images/rule-bg.jpg", alt="")
         .section__backdrop
         .container
-            .section__inner
+            .section__inner.pt-90
                 .section__header
                     h2.section__title.text-white Thể lệ chương trình khuyến mại
                     h3.section__subtitle.text-white “LÊN XE SANG, ĐÓN NGÀN LỘC”
@@ -77,7 +78,7 @@ block content
                 a.js-filter-btn.button(href="#!", data-filter="this_month") Tháng này
                 a.js-filter-btn.button(href="#!", data-filter="all") Từ đầu chương trình
 
-            .data-tbl(style="min-height: 484px")
+            .data-tbl
                 table.table.table-borderless.js-datatable(data-url="http://piaggio.hapk.com/ajax/get_customers")
                     thead
                         tr
