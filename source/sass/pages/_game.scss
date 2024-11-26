@@ -221,6 +221,37 @@
   &.consolation .congrat.consolation {
     transform: translateX(0);
   }
+
+  @include media-breakpoint-down(md) {
+    &__medley {
+      display: none;
+    }
+
+    &__liberty {
+      display: none;
+    }
+
+    &__title {
+      width: 100%;
+      top: 20%;
+      left: 0;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    &__gifts {
+        width: 320px;
+        left: 50%;
+    }
+
+    &.picked &__gifts {
+      width: 70%;
+    }
+
+    &.show &__gifts {
+      left: 50%;
+    }
+  }
 }
 
 .giftbox {
@@ -272,6 +303,43 @@
       height: 67%;
       top: 65%;
       left: 55%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &::before {
+      padding-bottom: 75%;
+    }
+
+    &__img {
+      height: 50%;
+
+      &--1 {
+        height: 58%;
+        top: 30%;
+        left: 10%;
+      }
+
+      &--2 {
+        height: 58%;
+        top: 30%;
+        left: 68%;
+      }
+
+      &--3 {
+        height: 62%;
+        top: 57%;
+      }
+
+      &--4 {
+        height: 63%;
+        top: 57%;
+      }
+
+      &--5 {
+        height: 67%;
+        top: 80%;
+      }
     }
   }
 }
@@ -367,6 +435,10 @@
 
   &.picked-center &__box {
     left: -100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 170%;
   }
 }
 
@@ -513,6 +585,15 @@
     transform: translateY(100px);
     opacity: 0;
   }
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 76px;
+  }
 }
 
 .game-print-btn {
@@ -534,5 +615,15 @@
 
   &:hover {
     background-color: darken($secondary, 10%);
+  }
+
+  @include media-breakpoint-down(md) {
+    right: 50%;
+    transform: translateX(400%);
+    white-space: nowrap;
+
+    .game.show & {
+      transform: translateX(50%);
+    }
   }
 }
