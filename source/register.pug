@@ -19,7 +19,11 @@ block content
                     .section__content
                         form.register-form.js-register-form(action="#!")
                             .row.gy-2.gx-3
-                                .col-xl-6
+                                .col-12
+                                    .register-form__nav
+                                        .register-form__nav-btn.active(data-target=".js-personal-tab") Thông tin khách hàng
+                                        .register-form__nav-btn(data-target=".js-product-tab") Thông tin sản phẩm
+                                .col-xl-6.register-form__tab.js-personal-tab.active
                                     .row.gy-2.gx-3
                                         .col-lg-6
                                             label.form-label Họ và tên
@@ -63,7 +67,7 @@ block content
                                                         input#input-file-back.js-file-input(type="file", data-preview=".js-preview-id-back", accept="image/png, image/jpeg")
                                                         i.fal.fa-fw.fa-upload.me-2
                                                         span Tải mặt sau
-                                        .col-lg-6
+                                        .col-lg-6.register-form__sort-last-mobile
                                             .mb-3.js-show-label
                                                 label.form-label.js-label-place Nơi đăng ký CCCD
                                                 input.form-control(type="text", name="id_place")
@@ -96,7 +100,7 @@ block content
                                                         br
                                                         | * Đối với CCCD phải tải lên cả hai mặt
 
-                                .col-xl-6
+                                .col-xl-6.register-form__tab.js-product-tab
                                     .row.gy-2.gx-3
                                         .col-12
                                             label.form-label Mã hàng hóa
@@ -122,7 +126,7 @@ block content
                                                         input#input-file-bill.js-file-input(type="file", data-preview=".js-preview-bill", accept="application/pdf")
                                                         i.fal.fa-fw.fa-upload.me-2
                                                         span Tải hình ảnh
-                                        .col-lg-6.me-auto
+                                        .col-lg-6.me-auto.register-form__sort-last-mobile
                                             label.form-label Ngày hóa đơn
                                             .input-group.input-group-custom
                                                 input.form-control.js-datepicker(type="text", name="bill_date")

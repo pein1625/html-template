@@ -239,6 +239,18 @@
   }
 
   @include media-breakpoint-down(md) {
+    &__footer {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    &__search {
+      flex: 0 0 100%;
+      width: 100%;
+      margin-top: 8px;
+    }
+
     .dataTables_wrapper {
       // display: flex;
       // flex-direction: column;
@@ -347,6 +359,23 @@
       &:hover {
         color: #000;
         background-color: darken($secondary, 10%);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    display: none;
+
+    .button {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 8px;
       }
     }
   }

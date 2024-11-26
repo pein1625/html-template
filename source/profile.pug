@@ -16,57 +16,61 @@ block content
 
                 .section__body
                     .section__content
-                        .row
-                            .col-lg-8
-                                section.section-2
-                                    h2.section-2__title Thông tin cá nhân
-                                    .section-2__body
-                                        .profile__table
-                                            table.table.table-borderless
-                                                tbody
-                                                    tr
-                                                        td Họ và tên
-                                                        td Nguyễn Văn A
-                                                    tr
-                                                        td Mã nhân viên
-                                                        td 1234567
-                                                    tr
-                                                        td Giới tính
-                                                        td Nam
-                                                    tr
-                                                        td Số điện thoại
-                                                        td 0123456789
-                                                    tr
-                                                        td Ngày sinh
-                                                        td 01/12/1999
-                                                    tr
-                                                        td Email
-                                                        td example@gmail.com
-                                                    tr
-                                                        td Chức danh
-                                                        td Nhân viên quản trị hệ thống
-                                                    tr
-                                                        td Đơn vị
-                                                        td Tổng Công ty CP Công trình Viettel
-                                                    tr
-                                                        td Địa chỉ
-                                                        td Số 06 Phạm Văn Bạch, phường Yên Hòa, quận Cầu Giấy, Hà Nội
+                        .pf-page
+                            .pf-page__nav
+                                .pf-page__nav-btn.active(data-target=".js-profile-personal") Thông tin cá nhân
+                                .pf-page__nav-btn(data-target=".js-profile-password") Đổi mật khẩu
+                            .row
+                                .col-lg-8.pf-page__tab.js-profile-personal.active
+                                    section.section-2
+                                        h2.section-2__title Thông tin cá nhân
+                                        .section-2__body
+                                            .profile__table
+                                                table.table.table-borderless
+                                                    tbody
+                                                        tr
+                                                            td Họ và tên
+                                                            td Nguyễn Văn A
+                                                        tr
+                                                            td Mã nhân viên
+                                                            td 1234567
+                                                        tr
+                                                            td Giới tính
+                                                            td Nam
+                                                        tr
+                                                            td Số điện thoại
+                                                            td 0123456789
+                                                        tr
+                                                            td Ngày sinh
+                                                            td 01/12/1999
+                                                        tr
+                                                            td Email
+                                                            td example@gmail.com
+                                                        tr
+                                                            td Chức danh
+                                                            td Nhân viên quản trị hệ thống
+                                                        tr
+                                                            td Đơn vị
+                                                            td Tổng Công ty CP Công trình Viettel
+                                                        tr
+                                                            td Địa chỉ
+                                                            td Số 06 Phạm Văn Bạch, phường Yên Hòa, quận Cầu Giấy, Hà Nội
 
-                            .col-lg-4
-                                section.section-2
-                                    h2.section-2__title Đổi mật khẩu
-                                    .section-2__body
-                                        form(action="#!")
-                                            .mb-3
-                                                label.form-label Mật khẩu cũ
-                                                input.form-control(type="password")
-                                            .mb-3
-                                                label.form-label Mật khẩu mới
-                                                input.form-control(type="password")
-                                            .mb-3
-                                                label.form-label Nhập lại mật khẩu mới
-                                                input.form-control(type="password")
-                                            button.button.button--secondary.button--block(type="submit") Đổi mật khẩu
+                                .col-lg-4.pf-page__tab.js-profile-password
+                                    section.section-2
+                                        h2.section-2__title Đổi mật khẩu
+                                        .section-2__body
+                                            form(action="#!")
+                                                .mb-3
+                                                    label.form-label Mật khẩu cũ
+                                                    input.form-control(type="password")
+                                                .mb-3
+                                                    label.form-label Mật khẩu mới
+                                                    input.form-control(type="password")
+                                                .mb-3
+                                                    label.form-label Nhập lại mật khẩu mới
+                                                    input.form-control(type="password")
+                                                button.button.button--secondary.button--block(type="submit") Đổi mật khẩu
 
                 .section__footer
                     nav.page-nav

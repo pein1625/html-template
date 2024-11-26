@@ -29,6 +29,10 @@
     }
   }
 
+  .modal-body {
+    position: relative;
+  }
+
   @include media-breakpoint-up(xl) {
     .modal-dialog {
       max-width: 1140px;
@@ -40,6 +44,16 @@
 
     .modal-body {
       padding: 30px 40px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -141,4 +155,20 @@
       padding: 30px 16px;
     }
   }
+}
+
+.modal-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: #999;
 }
