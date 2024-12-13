@@ -4,6 +4,10 @@
   position: relative;
   z-index: 1;
 
+  * {
+    user-select: none;
+  }
+
   &::before {
     content: "";
     display: block;
