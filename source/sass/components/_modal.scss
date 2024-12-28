@@ -85,6 +85,9 @@
 
     .modal-body {
         padding: 30px;
+        max-height: calc(100vh - 130px);
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     .modal-dialog {
