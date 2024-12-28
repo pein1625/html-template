@@ -6,6 +6,8 @@ block script
 block content
     section.h-banner
         img.h-banner__bg(src="./images/banner.jpg", alt="")
+        .h-banner__frame-bg
+            iframe(src="https://danphuong.zend.website/banner-360/", frameborder="0")
         .h-banner__wrapper
             .container
                 .h-banner__inner
@@ -14,11 +16,11 @@ block content
                     .h-banner__label CỔNG THÔNG TIN DU LỊCH
                     .h-banner__name Huyện Đan Phượng
                     .h-banner__btn-wrap
-                        a.h-banner__btn(href="#!")
+                        a.h-banner__btn.js-home-page-scroll-down(href="#!")
                             span Xem thêm
                             i.fal.fa-fw.fa-arrow-circle-down
 
-    section.about.section
+    section.about.section.js-home-scroll-section
         .container
             .about__inner
                 img.about__bg(src="./images/about-bg.png", alt="")

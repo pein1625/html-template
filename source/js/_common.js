@@ -164,3 +164,19 @@ $(function() {
     $dropdown.fadeOut('fast');
   });
 });
+
+$(function() {
+  $('.js-home-page-scroll-down').on('click', function(e) {
+    e.preventDefault();
+
+    const $header = $('.header');
+    const $target = $('.js-home-scroll-section');
+
+    if (!$target.length) return false;
+
+    const headerHeight = $header.outerHeight();
+    const offsetTop = $target.offset().top;
+
+    $(window).scrollTop(offsetTop - headerHeight);
+  });
+});
