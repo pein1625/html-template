@@ -2,7 +2,7 @@
 	"pageList": {
 		"data": [
 			{
-				"title": "Đăng nhập*",
+				"title": "Đăng nhập",
 				"url": "login"
 			},
 			{
@@ -10,39 +10,39 @@
 				"url": "index"
 			},
 			{
-				"title": "Tìm kiếm*",
+				"title": "Tìm kiếm",
 				"url": "search"
 			},
 			{
-				"title": "Không gian 360*",
+				"title": "Không gian 360",
 				"url": "spaces"
 			},
 			{
-				"title": "Chi tiết không gian 360*",
+				"title": "Chi tiết không gian 360",
 				"url": "space-detail"
 			},
 			{
-				"title": "Hiện vật 3D*",
+				"title": "Hiện vật 3D",
 				"url": "samples"
 			},
 			{
-				"title": "Chi tiết hiện vật 3D*",
+				"title": "Chi tiết hiện vật 3D",
 				"url": "sample-detail"
 			},
 			{
-				"title": "Bài viết*",
+				"title": "Bài viết",
 				"url": "posts"
 			},
 			{
-				"title": "Tin tức*",
+				"title": "Tin tức",
 				"url": "news"
 			},
 			{
-				"title": "Chi tiết tin tức*",
+				"title": "Chi tiết tin tức",
 				"url": "news-detail"
 			},
 			{
-				"title": "Điểm đến*",
+				"title": "Điểm đến",
 				"url": "places"
 			},
 			{
@@ -50,27 +50,27 @@
 				"url": "place-detail"
 			},
 			{
-				"title": "Tuyến du lịch-----------",
+				"title": "Tuyến du lịch",
 				"url": "tour"
 			},
 			{
-				"title": "Sản phẩm*",
+				"title": "Sản phẩm",
 				"url": "products"
 			},
 			{
-				"title": "Chi tiết sản phẩm*",
+				"title": "Chi tiết sản phẩm",
 				"url": "product-detail"
 			},
 			{
-				"title": "Lễ hội*",
+				"title": "Lễ hội",
 				"url": "festival"
 			},
 			{
-				"title": "Chi tiết lễ hội*",
+				"title": "Chi tiết lễ hội",
 				"url": "festival-detail"
 			},
 			{
-				"title": "Thư viện*",
+				"title": "Thư viện",
 				"url": "library"
 			}
 		]
