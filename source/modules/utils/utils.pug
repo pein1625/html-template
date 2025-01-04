@@ -20,6 +20,22 @@ mixin breadcrumb(...list)
                 span= item
         li.breadcrumb-item.active= lastItem
 
+mixin float-breadcrumb(...list)
+  - var lastItem = list.pop()
+  nav.breadcrumb-wrapper
+    .breadcrumb-inner
+      .container
+        ol.breadcrumb.breadcrumb--white
+          each item, index in list
+            li.breadcrumb-item
+              a.link-unstyled(href="#!")
+                if (index)
+                  = item
+                else
+                  i.fal.fa-fw.fa-home.me-2
+                  span= item
+          li.breadcrumb-item.active= lastItem
+
 mixin pagination
   ul.pagination
     li.page-item.disabled

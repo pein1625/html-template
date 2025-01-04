@@ -1,34 +1,20 @@
-.s-space {
-    &__title {
-        font-size: 24px;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 8px;
+.space-nav {
+    position: relative;
+    z-index: 10;
+
+    &__wrapper {
+        width: 100%;
+        padding-top: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
-    &__subtitle {
-        font-size: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 8px;
-    }
-
-    &__desc {
-        text-align: center;
-        margin-bottom: 28px;
-    }
-
-    @include media-breakpoint-down(lg) {
-        &__subtitle {
-            font-size: 14px;
-        }
-        &__title {
-            font-size: 20px;
-        }
-
-        &__desc {
-            margin-bottom: 20px;
-        }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
     }
 }

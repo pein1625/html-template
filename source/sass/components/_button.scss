@@ -79,3 +79,24 @@
     transform: translate(-50%, -50%) rotateZ(360deg);
   }
 }
+
+.s-btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 4px;
+  color: $green-dark;
+  background-color: #e3f6f2;
+
+  &:hover {
+    color: $green-dark;
+    background-color: darken(#e3f6f2, 10%);
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $white;
+    font-weight: 700;
+    background-color: $green;
+  }
+}

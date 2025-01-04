@@ -1,8 +1,5 @@
 extends layout/page
 
-block script
-    script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0hNc0IKJXYQzNTWtGesMaT5pcJzXMPQY&loading=async&callback=initMap")
-
 block content
     section.h-banner
         .h-banner__frame-bg
@@ -14,10 +11,10 @@ block content
         .text-center
             a.button(href="#!") Trải nghiệm 360
         .h-banner__btn-wrap
-            a.h-banner__btn.js-home-page-scroll-down(href="#!")
+            a.h-banner__btn(href="#s-about")
                 i.fal.fa-arrow-down
 
-    section.about.section.js-home-scroll-section
+    section.about.section#s-about
         .container
             .about__inner
                 img.about__bg(src="./images/about-bg.png", alt="")
