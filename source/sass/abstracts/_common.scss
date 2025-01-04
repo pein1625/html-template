@@ -236,15 +236,3 @@ html {
 .gmnoprint .gmnoprint {
   display: none;
 }
-
-.float-breadcrumb {
-  position: relative;
-  z-index: 10;
-
-  .breadcrumb-wrapper {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}

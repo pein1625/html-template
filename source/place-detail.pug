@@ -3,10 +3,10 @@ extends layout/page
 block content
     +float-breadcrumb('Trang chủ', 'Điểm đến', 'Chi tiết điểm đến')
 
-    nav.space-nav
-        .space-nav__wrapper
+    nav.page-nav
+        .page-nav__wrapper
             .container
-                .space-nav__inner
+                .page-nav__inner
                     a.s-btn.active(href="#s-virtual") Vrtour
                     a.s-btn(href="#s-about") Điểm đến
                     a.s-btn(href="#s-sample") Hiện vật
@@ -14,21 +14,22 @@ block content
                     a.s-btn(href="#s-album") Album ảnh
                     a.s-btn(href="#s-post") Thông tin & Sự kiện
 
-    section.banner
+    section.banner#s-virtual.js-section
         .banner__bg
             iframe(src="https://danphuong.zend.website/banner-360/", frameborder="0")
-        h3.banner__subtitle Điểm đến
-        h2.banner__title Đền Văn Hiến
-        .banner__desc
-            i.fal.fa-map-marker-alt.me-2
-            span Đường Vạn Xuân, Hạ Mỗ, Đan Phượng, Hà Nội, Việt Nam
-        .banner__btn-wrap
-            a.button(href="#!") Trải nghiệm 360
-        .banner__arrow-wrap
-            a.banner__arrow(href="#s-about")
-                i.fal.fa-arrow-down
+        .banner__wrapper
+            h3.banner__subtitle Điểm đến
+            h2.banner__title Đền Văn Hiến
+            .banner__desc
+                i.fal.fa-map-marker-alt.me-2
+                span Đường Vạn Xuân, Hạ Mỗ, Đan Phượng, Hà Nội, Việt Nam
+            .banner__btn-wrap
+                a.button.js-experience(href="#!") Trải nghiệm 360
+            .banner__arrow-wrap
+                a.banner__arrow(href="#s-about")
+                    i.fal.fa-arrow-down
 
-    section.section-2#s-about
+    section.section-2#s-about.js-section
         .container
             h2.section-2__title Giới thiệu di tích Đền Văn Hiến
             .section-2__content
@@ -36,7 +37,7 @@ block content
                 p Đền là nơi thờ chính hai vị đại hiền của làng Hạ Mỗ là Thái úy Tô Hiến Thành và quan nghề Đỗ Trí Trung. Năm Duy Tân thứ 2 (Mậu Thân – 1908), sau lễ Đồng Giáng bút tại chùa Hải Giác (Đinh Mùi – 1907), các nho sĩ và nhân dân Hạ Mỗ tiến hành sửa sang, quy hoạch lại di tích thành đền Văn Hiến như ngày nay.
                 p Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
 
-    section.section-2#s-sample
+    section.section-2#s-sample.js-section
         img.section-2__bg(src="./images/paper-1.jpg", alt="")
         .container
             h2.section-2__title Hiện vật

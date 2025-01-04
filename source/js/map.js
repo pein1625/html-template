@@ -77,8 +77,8 @@ function closeInfoWindow() {
 
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
-        if (defaultRoutes) {
-            const defaultRoutesData = defaultRoutes.map(routeName => markersData[routeName]).filter(x => x);
+        if (window.defaultRoutes) {
+            const defaultRoutesData = window.defaultRoutes.map(routeName => markersData[routeName]).filter(x => x);
             renderMarkersAndCentering(defaultRoutesData);
         }
     }, 1000);
@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.checked) {
                 const routeName = $(this).data('route');
 
-                if (markersData[routeName]) {
-                    checkedRoutes.push(markersData[routeName]);
+                if (window.markersData[routeName]) {
+                    checkedRoutes.push(window.markersData[routeName]);
                 }
             }
         });

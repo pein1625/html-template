@@ -1,30 +1,31 @@
 extends layout/page
 
 block content
-    +float-breadcrumb('Trang chủ', 'Hiện vật 3D', 'Chi tiết hiện vật 3D')
-
-    nav.space-nav
-        .space-nav__wrapper
+    nav.page-nav
+        .page-nav__wrapper
             .container
-                .space-nav__inner
-                    a.s-btn.active(href="#s-virtual") Ảnh 3D
-                    a.s-btn(href="#s-about") Giới thiệu
-                    a.s-btn(href="#s-album") Album ảnh
-                    a.s-btn(href="#s-post") Thông tin liên quan
+                .page-nav__inner
+                    +float-breadcrumb('Trang chủ', 'Hiện vật 3D', 'Chi tiết hiện vật 3D')
+                    .page-nav__nav
+                        a.s-btn.active(href="#s-virtual") Ảnh 3D
+                        a.s-btn(href="#s-about") Giới thiệu
+                        a.s-btn(href="#s-album") Album ảnh
+                        a.s-btn(href="#s-post") Thông tin liên quan
 
-    section.banner
+    section.banner#s-virtual.js-section
         .banner__bg
-            img(src="./images/banner-sample.png", alt="")
-        img.banner__icon(src="./images/icon-360.svg", alt="", style="opacity: 0.5")
-        h3.banner__subtitle HIỆN VẬT
-        h2.banner__title Sư tử đá thời Nguyễn
-        .banner__desc
-            i.fal.fa-map-marker-alt.me-2
-            span Đình Vạn Xuân - Xã Hạ Mỗ, Huyện Đan Phượng
-        .banner__btn-wrap
-            a.button(href="#!") Trải nghiệm 360
+            iframe(src="https://danphuong.zend.website/banner-360/", frameborder="0")
+        .banner__wrapper
+            img.banner__icon(src="./images/icon-360.svg", alt="", style="opacity: 0.5")
+            h3.banner__subtitle HIỆN VẬT
+            h2.banner__title Sư tử đá thời Nguyễn
+            .banner__desc
+                i.fal.fa-map-marker-alt.me-2
+                span Đình Vạn Xuân - Xã Hạ Mỗ, Huyện Đan Phượng
+            .banner__btn-wrap
+                a.button.js-experience(href="#!") Trải nghiệm 360
 
-    section.section-2.pb-40#s-about
+    section.section-2.pb-40#s-about.js-section
         img.section-2__bg(src="./images/paper-1.jpg", alt="")
         .container
             h2.section-2__title Giới thiệu Hiện vật
