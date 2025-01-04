@@ -41,3 +41,127 @@ mixin sample-slider-group
             a.link-view-album(href="#md-album-sample", data-bs-toggle="modal")
                 i.fal.fa-angle-double-right.me-2.text-secondary
                 span Xem tất cả Album ảnh của hiện vật
+
+mixin map(className='')
+    div
+        +map-frame
+        script.
+            var defaultRoutes = ['tuyen_1', 'tuyen_2', 'tuyen_3'];
+            var markersData = {
+                'tuyen_1': {
+                    lat: 37.7749,
+                    lng: -122.4194,
+                    info: {
+                        title: 'San Francisco, California',
+                        description: 'A popular tourist destination, known for the Golden Gate Bridge.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_2': {
+                    lat: 34.0522,
+                    lng: -118.2437,
+                    info: {
+                        title: 'Los Angeles, California',
+                        description: 'Known for its Mediterranean climate and the entertainment industry.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_3': {
+                    lat: 40.7128,
+                    lng: -74.0060,
+                    info: {
+                        title: 'New York, New York',
+                        description: 'The largest city in the USA, known for its iconic skyline.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_4': {
+                    lat: 37.7749,
+                    lng: -122.4194,
+                    info: {
+                        title: 'San Francisco, California',
+                        description: 'A popular tourist destination, known for the Golden Gate Bridge.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_5': {
+                    lat: 34.0522,
+                    lng: -118.2437,
+                    info: {
+                        title: 'Los Angeles, California',
+                        description: 'Known for its Mediterranean climate and the entertainment industry.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_6': {
+                    lat: 40.7128,
+                    lng: -74.0060,
+                    info: {
+                        title: 'New York, New York',
+                        description: 'The largest city in the USA, known for its iconic skyline.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_7': {
+                    lat: 34.0522,
+                    lng: -118.2437,
+                    info: {
+                        title: 'Los Angeles, California',
+                        description: 'Known for its Mediterranean climate and the entertainment industry.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+                'tuyen_8': {
+                    lat: 40.7128,
+                    lng: -74.0060,
+                    info: {
+                        title: 'New York, New York',
+                        description: 'The largest city in the USA, known for its iconic skyline.',
+                        imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
+                    }
+                },
+            };
+
+mixin s-map(className='')
+    section.s-map(class=className)
+        h2.s-map__title Vị trí các điểm đến
+        +map
+
+mixin s-news-slider(title='Cụm di tích liên quan', className='')
+    section.section-2(class=className)
+        .container
+            h2.section-2__title= title
+            +news-slider
+
+mixin s-about(subtotal='', total='')
+    section.section.s-about
+        .container
+            h3.s-about__subtitle= subtotal
+            h2.s-about__title= total
+            .s-about__content
+                h5.fw-700 Di tích Mauris ac nunc vitae turpis dictum elementum
+                p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iusto possimus unde molestiae rem! Beatae, distinctio perspiciatis! Voluptatibus repudiandae perspiciatis quo itaque, ipsa explicabo dignissimos eum unde, excepturi velit fuga.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nihil, laborum, repellendus reprehenderit officia quidem sunt blanditiis, quod eos placeat veniam tempore odit perspiciatis non eligendi illum ullam cupiditate accusamus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt id repellendus animi, amet earum perferendis corrupti temporibus? Alias, quae ad quo omnis ut, quibusdam praesentium eum sequi nesciunt, quisquam vitae!
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam impedit aspernatur beatae error, eaque aliquam incidunt possimus consequatur itaque neque illum modi cupiditate deserunt velit, esse iure officia! Tempora?
+
+                h5.fw-700.mt-5 Di tích Mauris ac nunc vitae turpis dictum elementum
+                p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iusto possimus unde molestiae rem! Beatae, distinctio perspiciatis! Voluptatibus repudiandae perspiciatis quo itaque, ipsa explicabo dignissimos eum unde, excepturi velit fuga.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nihil, laborum, repellendus reprehenderit officia quidem sunt blanditiis, quod eos placeat veniam tempore odit perspiciatis non eligendi illum ullam cupiditate accusamus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt id repellendus animi, amet earum perferendis corrupti temporibus? Alias, quae ad quo omnis ut, quibusdam praesentium eum sequi nesciunt, quisquam vitae!
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam impedit aspernatur beatae error, eaque aliquam incidunt possimus consequatur itaque neque illum modi cupiditate deserunt velit, esse iure officia! Tempora?
+
+mixin s-sample(title='', linktext='')
+    section.s-sample
+        .s-sample__overlay
+        .container
+            .s-sample__header
+                h2.s-sample__title= title
+                if (linktext)
+                    a.s-sample__link(href="#!")
+                        i.far.fa-angle-double-right.me-2.text-secondary
+                        span= linktext
+            +card-slider-2
+                each item, index in ['Sư tử đá', 'Con dấu hình rồng', 'Tượng điêu khắc', 'Trống đồng']
+                    .swiper-slide
+                        +sample(`./images/img-${index % 5 + 1}.jpg`, item)

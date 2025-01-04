@@ -80,7 +80,28 @@
     padding: 60px 0;
 
     &__title {
+        font-size: 36px;
+        font-weight: 700;
         text-align: center;
+        margin-bottom: 1em;
+    }
+
+    @include media-breakpoint-down(xxl) {
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        &__title {
+            font-size: 28px;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        &__title {
+            font-size: 24px;
+        }
     }
 }
 

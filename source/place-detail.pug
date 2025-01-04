@@ -185,17 +185,8 @@ block content
             .text-center
                 a.button(href="#!") Tham quan 360 độ
 
-    section.section(style="background-color: #FFFCF2;")
-        .container
-            h2.section__title Điểm đến liên quan
-            .mt-4
-                +news-slider
-
-    section.section
-        .container
-            h2.section__title Các bài viết liên quan
-            .mt-4
-                +news-slider
+    +s-news-slider('Điểm đến liên quan')
+    +s-news-slider('Các bài viết liên quan', 'pt-0')
 
     +md-album-place
     +md-album-sample

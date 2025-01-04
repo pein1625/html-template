@@ -1,10 +1,13 @@
 .h-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: calc(100vh - 54px);
+    height: 600px;
     position: relative;
     z-index: 1;
-    font-weight: 800;
     text-align: center;
+    padding-top: 40px;
 
     &__frame-bg {
         width: 100%;
@@ -31,44 +34,20 @@
             display: block;
             width: 100%;
             height: 100%;
-            background-color: rgba(#fff, 0.6);
+            background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 1));
+            opacity: 0.5;
             position: absolute;
             top: 0;
             left: 0;
         }
     }
 
-    &__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -2;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 66.66%;
-        padding: 32px 0;
-    }
-
-    &__inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     &__logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 112px;
-        height: 112px;
+        width: 110px;
+        height: 110px;
         padding: 26px;
         border-radius: 50%;
         background-color: $green;
@@ -77,47 +56,52 @@
     &__label {
         font-size: 36px;
         font-weight: 800;
+        line-height: 1.2;
         color: $yellow-dark;
         text-transform: uppercase;
+        font-weight: 800;
         margin-top: 0.5em;
     }
 
     &__name {
         color: $green;
         font-size: 64px;
+        font-weight: 800;
+        line-height: 1.2;
         margin-top: 2px;
-        margin-bottom: 0.625em;
+        margin-bottom: 24px;
+    }
+
+    &__btn-wrap {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        padding: 16px 0;
     }
 
     &__btn {
-        display: inline-flex;
-        flex-direction: column;
+        display: flex;
         justify-content: center;
         align-items: center;
-        color: $green;
-        font-size: 14px;
-        font-weight: 600;
-        gap: 8px;
-
-        span {
-            display: inline-block;
-        }
-
-        i {
-            font-size: 20px;
-        }
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid $white;
+        color: $white;
+        font-size: 24px;
+        cursor: pointer;
 
         &:hover {
-            color: $green;
+            color: $white;
             text-decoration: none;
         }
     }
 
-    @media (orientation: portrait) {
-        max-height: 600px;
-    }
+    @include media-breakpoint-down(xxl) {
+        height: 500px;
 
-    @include media-breakpoint-down(xl) {
         &__logo {
             width: 80px;
             height: 80px;
@@ -126,24 +110,18 @@
 
         &__label {
             font-size: 24px;
+            margin-top: 20px;
         }
 
         &__name {
-            font-size: 40px;
-            margin-bottom: 16px;
+            font-size: 50px;
         }
 
         &__btn {
-            font-size: 12px;
-
-            i {
-                font-size: 16px;
-            }
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
         }
-    }
-
-    @media (max-width: 1199px) and (orientation: portrait) {
-        max-height: 450px;
     }
 
     @include media-breakpoint-down(md) {
@@ -165,7 +143,7 @@
         }
     }
 
-    @media (max-width: 767px) and (orientation: portrait) {
+    @media (max-width: 767px) {
         &__label {
             margin-top: 20px;
         }
@@ -174,6 +152,11 @@
             margin-top: 4px;
             margin-bottom: 24px;
         }
+    }
+
+    @media (max-width: 575px) {
+        padding-top: 80px;
+        height: calc(100vh - 54px);
     }
 }
 
