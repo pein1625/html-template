@@ -25,41 +25,27 @@ function renderMarkersAndCentering(locations) {
             },
         });
 
-        marker.addListener('click', () => {
-            if (customInfoWindow) {
-                // Close the currently open info window before opening another
-                customInfoWindow.parentNode.removeChild(customInfoWindow);
-            }
-
-            // Custom HTML for the InfoWindow content with a close button
-            const infoContent = document.createElement('div');
-            infoContent.classList.add('n-info-window');
-            infoContent.innerHTML = `
-<button class="n-info-window__close" onclick="closeInfoWindow()">×</button>
+        const infoWindow = new google.maps.InfoWindow({
+            content: `
 <div class="n-info-window__frame">
     <img src="${location.info.imageUrl}" alt="" />
 </div>
 <div class="n-info-window__body">
-    <div class="row g-2 align-items-center">
-        <div class="col-auto">
-            <i class="fal fa-2x fa-map-marker-alt"></i>
-        </div>
-        <div class="col">
-            <h3 class="n-info-window__title">${location.info.title}</h3>
-            <div class="n-info-window__desc">${location.info.description}</div>
-        </div>
+    <div class="n-info-window__icon">
+        <i class="fal fa-2x fa-map-marker-alt"></i>
+    </div>
+    <div class="n-info-window__content">
+        <h3 class="n-info-window__title">${location.info.title}</h3>
+        <div class="n-info-window__desc">${location.info.description}</div>
     </div>
 </div>
-            `;
+            `,
+          });
 
-            // Position the custom InfoWindow on the map
-            customInfoWindow = infoContent;
-            map.controls[google.maps.ControlPosition.TOP_CENTER].push(infoContent);
-
-            // Set the map to pan to the clicked marker's location
-            map.panTo(marker.getPosition());
-
+        marker.addListener("click", () => {
+            infoWindow.open(map, marker); // Gắn InfoWindow với marker
         });
+
 
         bounds.extend(marker.getPosition());
     })
