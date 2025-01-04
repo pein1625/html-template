@@ -100,3 +100,20 @@
     background-color: $green;
   }
 }
+
+.arrow-down {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  color: $primary;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+
+  i {
+    color: inherit;
+  }
+}

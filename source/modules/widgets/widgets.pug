@@ -127,8 +127,8 @@ mixin map(className='')
         };
 
 mixin s-map(className='')
-    section.section.s-map#s-map(class=className)
-        h2.section__title.s-map__title Vị trí các điểm đến
+    section.section-2.s-map#s-map(class=className)
+        h2.section-2__title.s-map__title Vị trí các điểm đến
         +map
 
 mixin s-news(title='Cụm di tích liên quan', className='', id='')
@@ -171,13 +171,32 @@ mixin s-sample(title='', linktext='', id='')
                         +sample(`./images/img-${index % 5 + 1}.jpg`, item)
 
 mixin s-virtual(subtitle='CỤM DI  TÍCH', title='Xã Hạ Mỗ')
-    section.s-virtual#s-virtual
-        .s-virtual__bg
+    section.banner#s-virtual
+        .banner__bg
             img(src="./images/news.jpg", alt="")
-        img.s-virtual__icon(src="./images/icon-360.svg", alt="")
-        .s-virtual__subtitle= subtitle
-        .s-virtual__title= title
-        .s-virtual__addr
+        img.banner__icon(src="./images/icon-360.svg", alt="")
+        h3.banner__subtitle= subtitle
+        h2.banner__title= title
+        .banner__desc
             i.fal.fa-map-marker-alt.me-2
             span Đình Vạn Xuân - Xã Hạ Mỗ, Huyện Đan Phượng
-        a.s-virtual__btn.button(href="#!") Trải nghiệm 3D
+        .banner__btn-wrap
+            a.button(href="#!") Trải nghiệm 360
+
+mixin s-album
+    section#s-album.s-album.section-2
+        img.s-album__texture-5(src="./images/texture-5.png", alt="")
+        img.s-album__texture-6(src="./images/texture-6.png", alt="")
+
+        .container
+            h2.section-2__title.text-white Album ảnh
+
+            +place-slider
+
+            .mt-20.mt-xl-4
+                +place-thumb-slider
+
+            .mt-3.text-center
+                a.link-view-album(href="#md-album-place", data-bs-toggle="modal")
+                    i.fal.fa-angle-double-right.text-secondary.me-2
+                    span.text-white Xem tất cả Album ảnh của điểm đến

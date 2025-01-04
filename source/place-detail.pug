@@ -1,55 +1,45 @@
 extends layout/page
 
-block script
-    script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0hNc0IKJXYQzNTWtGesMaT5pcJzXMPQY&loading=async&callback=initMap")
-
 block content
-    +breadcrumb('Trang chủ', 'Điểm đến', 'Chi tiết điểm đến')
+    +float-breadcrumb('Trang chủ', 'Điểm đến', 'Chi tiết điểm đến')
 
-    section.place-detail.s-products.pt-10.pb-60
+    nav.space-nav
+        .space-nav__wrapper
+            .container
+                .space-nav__inner
+                    a.s-btn.active(href="#s-virtual") Vrtour
+                    a.s-btn(href="#s-about") Điểm đến
+                    a.s-btn(href="#s-sample") Hiện vật
+                    a.s-btn(href="#s-map") Vị trí
+                    a.s-btn(href="#s-album") Album ảnh
+                    a.s-btn(href="#s-post") Thông tin & Sự kiện
+
+    section.banner
+        .banner__bg
+            iframe(src="https://danphuong.zend.website/banner-360/", frameborder="0")
+        h3.banner__subtitle Điểm đến
+        h2.banner__title Đền Văn Hiến
+        .banner__desc
+            i.fal.fa-map-marker-alt.me-2
+            span Đường Vạn Xuân, Hạ Mỗ, Đan Phượng, Hà Nội, Việt Nam
+        .banner__btn-wrap
+            a.button(href="#!") Trải nghiệm 360
+        .banner__arrow-wrap
+            a.banner__arrow(href="#s-about")
+                i.fal.fa-arrow-down
+
+    section.section-2#s-about
         .container
-            nav.tags.mb-6
-                a.tags__item.active(href="#!") Điểm đến
-                a.tags__item(href="#!") Hiện vật 3D
-                a.tags__item(href="#!") Thông tin & Sự kiện
-                a.tags__item(href="#!") Vị trí
-                a.tags__item(href="#!") VR tour
+            h2.section-2__title Giới thiệu di tích Đền Văn Hiến
+            .section-2__content
+                p Đền Văn Hiến, tên chữ là Văn Hiến Đường thuộc làng Hạ Mỗ, xã Hạ Mỗ, huyện Đan Phượng, thành phố Hà Nội. Xưa kia Đền Văn Hiến là văn chỉ thờ Khổng Tử và là nơi biểu dương các danh nhân khoa bảng trong làng. Sau khi Thái úy Tô Hiến Thành, người con ưu tú của quê hương qua đời, nhân dân xây mộ và thờ ông tại đây. Tháng 11/1991, Bộ Văn hóa-Thông tin thể thao và du lịch đã xếp hạng đền Văn Hiến là di tích lịch sử và kiến trúc nghệ thuật.
+                p Đền là nơi thờ chính hai vị đại hiền của làng Hạ Mỗ là Thái úy Tô Hiến Thành và quan nghề Đỗ Trí Trung. Năm Duy Tân thứ 2 (Mậu Thân – 1908), sau lễ Đồng Giáng bút tại chùa Hải Giác (Đinh Mùi – 1907), các nho sĩ và nhân dân Hạ Mỗ tiến hành sửa sang, quy hoạch lại di tích thành đền Văn Hiến như ngày nay.
+                p Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
 
-            .place-detail__subtitle.mt-3 Điểm đến
-            .place-detail__title Đền Văn Hiến
-
-            .place-detail__info
-                .place-detail__info-item
-                    i.fal.fa-fw.fa-clock.me-2
-                    span 26/06/2024 | 8:00 AM
-                .place-detail__info-item
-                    i.fal.fa-fw.fa-map-marker-alt.me-2
-                    span Đường Vạn Xuân, Hạ Mỗ, Đan Phượng, Hà Nội, Việt Nam
-
-            .mt-3
-                +place-slider
-            .mt-20.mt-xl-4
-                +place-thumb-slider
-            .mt-3.text-center
-                a.link-view-album(href="#md-album-place", data-bs-toggle="modal")
-                    i.fal.fa-angle-double-right.text-secondary.me-2
-                    span Xem tất cả Album ảnh của điểm đến
-
-            .mt-30.mt-xl-40
-                h2.place-detail__heading 1. Thông tin về di tích Đền Văn Hiến
-
-                div
-                    p
-                        strong Sơ nét về điểm đến: Đền Văn Hiến - Đan Phượng
-                    p Đền Văn Hiến, tên chữ là Văn Hiến Đường thuộc làng Hạ Mỗ, xã Hạ Mỗ, huyện Đan Phượng, thành phố Hà Nội. Xưa kia Đền Văn Hiến là văn chỉ thờ Khổng Tử và là nơi biểu dương các danh nhân khoa bảng trong làng. Sau khi Thái úy Tô Hiến Thành, người con ưu tú của quê hương qua đời, nhân dân xây mộ và thờ ông tại đây. Tháng 11/1991, Bộ Văn hóa-Thông tin thể thao và du lịch đã xếp hạng đền Văn Hiến là di tích lịch sử và kiến trúc nghệ thuật.
-                    p Đền là nơi thờ chính hai vị đại hiền của làng Hạ Mỗ là Thái úy Tô Hiến Thành và quan nghề Đỗ Trí Trung. Năm Duy Tân thứ 2 (Mậu Thân – 1908), sau lễ Đồng Giáng bút tại chùa Hải Giác (Đinh Mùi – 1907), các nho sĩ và nhân dân Hạ Mỗ tiến hành sửa sang, quy hoạch lại di tích thành đền Văn Hiến như ngày nay.
-                        br
-                        | Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
-
-    section.place-detail__block
-        img.place-detail__bg(src="./images/paper-1.jpg", alt="")
+    section.section-2#s-sample
+        img.section-2__bg(src="./images/paper-1.jpg", alt="")
         .container
-            h2.place-detail__heading 2. Hiện vật 3D tại đền
+            h2.section-2__title Hiện vật
 
             .row
                 .col-lg-6.mb-30.mb-lg-0
@@ -84,108 +74,12 @@ block content
                         span.ml-2  Praesent hendrerit diam vitae
                     p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id. Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
                     p
-                        a.button(href="#!") XEM HIỆN VẬT 3D
+                        a.button(href="#!") XEM HIỆN VẬT
 
-    section.place-detail__block
-        img.place-detail__bg(src="./images/paper-2.jpg", alt="")
-        .place-detail__overlay
-        .container
-            h2.place-detail__heading Danh sách hiện vật 3D tại đền
-            +card-slider-2
-                each item, index in ['Sư tử đá', 'Con dấu hình rồng', 'Tượng điêu khắc', 'Trống đồng']
-                    .swiper-slide
-                        +sample(`./images/img-${index % 5 + 1}.jpg`, item)
-
-    +map-frame
-    script.
-        var defaultRoutes = ['tuyen_1', 'tuyen_2', 'tuyen_3'];
-        var markersData = {
-            'tuyen_1': {
-                lat: 37.7749,
-                lng: -122.4194,
-                info: {
-                    title: 'San Francisco, California',
-                    description: 'A popular tourist destination, known for the Golden Gate Bridge.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_2': {
-                lat: 34.0522,
-                lng: -118.2437,
-                info: {
-                    title: 'Los Angeles, California',
-                    description: 'Known for its Mediterranean climate and the entertainment industry.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_3': {
-                lat: 40.7128,
-                lng: -74.0060,
-                info: {
-                    title: 'New York, New York',
-                    description: 'The largest city in the USA, known for its iconic skyline.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_4': {
-                lat: 37.7749,
-                lng: -122.4194,
-                info: {
-                    title: 'San Francisco, California',
-                    description: 'A popular tourist destination, known for the Golden Gate Bridge.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_5': {
-                lat: 34.0522,
-                lng: -118.2437,
-                info: {
-                    title: 'Los Angeles, California',
-                    description: 'Known for its Mediterranean climate and the entertainment industry.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_6': {
-                lat: 40.7128,
-                lng: -74.0060,
-                info: {
-                    title: 'New York, New York',
-                    description: 'The largest city in the USA, known for its iconic skyline.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_7': {
-                lat: 34.0522,
-                lng: -118.2437,
-                info: {
-                    title: 'Los Angeles, California',
-                    description: 'Known for its Mediterranean climate and the entertainment industry.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'tuyen_8': {
-                lat: 40.7128,
-                lng: -74.0060,
-                info: {
-                    title: 'New York, New York',
-                    description: 'The largest city in the USA, known for its iconic skyline.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-        };
-
-    section.s-vr
-        img.s-vr__texture(src="./images/vr-left.png", alt="")
-        img.s-vr__texture.s-vr__texture--right(src="./images/vr-right.png", alt="")
-        .container
-            .s-vr__logo.n-logo
-                img(src="./images/logo.png", alt="")
-            .s-vr__subtitle Để có cảm giác thật hơn
-            .s-vr__title Trải nghiệm không gian #[span(style="color: #FAEF50;") VR tour] ngay
-            .text-center
-                a.button(href="#!") Tham quan 360 độ
-
-    +s-news('Điểm đến liên quan')
+    +s-sample('Danh sách hiện vật 3D tại đền', 'Xem tất cả hiện vật của điểm đến')
+    +s-map
+    +s-album
+    +s-news('Điểm đến liên quan', '', 's-post')
     +s-news('Các bài viết liên quan', 'pt-0')
 
     +md-album-place

@@ -1,54 +1,51 @@
 extends layout/page
 
 block content
-    +breadcrumb('Trang chủ', 'Hiện vật 3D', 'Chi tiết hiện vật 3D')
+    +float-breadcrumb('Trang chủ', 'Hiện vật 3D', 'Chi tiết hiện vật 3D')
 
-    section.section(style="margin-top: -54px;")
-        img.section__bg(src="./images/paper-texture.jpg", alt="")
+    nav.space-nav
+        .space-nav__wrapper
+            .container
+                .space-nav__inner
+                    a.s-btn.active(href="#s-virtual") Ảnh 3D
+                    a.s-btn(href="#s-about") Giới thiệu
+                    a.s-btn(href="#s-album") Album ảnh
+                    a.s-btn(href="#s-post") Thông tin liên quan
+
+    section.banner
+        .banner__bg
+            img(src="./images/banner-sample.png", alt="")
+        img.banner__icon(src="./images/icon-360.svg", alt="", style="opacity: 0.5")
+        h3.banner__subtitle HIỆN VẬT
+        h2.banner__title Sư tử đá thời Nguyễn
+        .banner__desc
+            i.fal.fa-map-marker-alt.me-2
+            span Đình Vạn Xuân - Xã Hạ Mỗ, Huyện Đan Phượng
+        .banner__btn-wrap
+            a.button(href="#!") Trải nghiệm 360
+
+    section.section-2.pb-40#s-about
+        img.section-2__bg(src="./images/paper-1.jpg", alt="")
         .container
-            .row
-                .col-lg-6.mb-30.mb-lg-0
-                    +sample-slider-group
+            h2.section-2__title Giới thiệu Hiện vật
+            .section-2__content
+                p Đền Văn Hiến, tên chữ là Văn Hiến Đường thuộc làng Hạ Mỗ, xã Hạ Mỗ, huyện Đan Phượng, thành phố Hà Nội. Xưa kia Đền Văn Hiến là văn chỉ thờ Khổng Tử và là nơi biểu dương các danh nhân khoa bảng trong làng. Sau khi Thái úy Tô Hiến Thành, người con ưu tú của quê hương qua đời, nhân dân xây mộ và thờ ông tại đây. Tháng 11/1991, Bộ Văn hóa-Thông tin thể thao và du lịch đã xếp hạng đền Văn Hiến là di tích lịch sử và kiến trúc nghệ thuật.
+                p Đền là nơi thờ chính hai vị đại hiền của làng Hạ Mỗ là Thái úy Tô Hiến Thành và quan nghề Đỗ Trí Trung. Năm Duy Tân thứ 2 (Mậu Thân – 1908), sau lễ Đồng Giáng bút tại chùa Hải Giác (Đinh Mùi – 1907), các nho sĩ và nhân dân Hạ Mỗ tiến hành sửa sang, quy hoạch lại di tích thành đền Văn Hiến như ngày nay.
+                .row
+                    .col-lg-6
+                        img(src="./images/sample-1.jpg", alt="")
+                    .col-lg-6
+                        p Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
+                        p Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
+                        p Đền Văn Hiến tọa lạc trên khu đât cao đầu làng, nằm bên hữu ngạn sông Nhuệ cổ. Các kiến trúc chính của đền được xây dựng theo hướng Đông. Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
+                        p Sau lần tôn tạo năm 2005, quy hoạch mặt bằng nhà đền và nhà mẫu chuyển sang phía trái. Khu “Tô Vương lăng Thái sư mộ” nhìn thẳng nhà bia “Văn Hiến Đường bi ký” bên hồ bán nguyệt. Gian giữa nhà tiền tế chiếu trực diện tượng danh nhân Tô Hiến Thành nằm ở trung tâm khuôn viên đền Văn Hiến.
 
-                .col-lg-6
-                    h2.section__title-2.text-start TÊN DI TÍCH: Di tích Mauris ac nunc vitae turpis dictum elementum
-                    div
-                        p
-                            strong Tên hiện vật:
-                            span.ms-1 Praesent hendrerit diam vitae
-                        p
-                            strong Kích thước hiện vật:
-                            span.ms-1 Praesent hendrerit diam vitae
-                        p
-                            strong Khảo tả đặc điểm:
-                        p Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id. Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
+            .text-center.mt-40
+                a.arrow-down(href="#s-album")
+                    i.fal.fa-arrow-down
 
-    section.section
-        .container
-            h2.section__title-2 Di tích Mauris ac nunc vitae turpis dictum
-                br
-                | elementum
-            .mb-4
-                p.text-center Praesent hendrerit diam vitae mi efficitur, a congue felis dictum. Vivamus vehicula consequat neque, vulputate molestie erat ullamcorper a. Suspendisse sagittis ornare porta. Nullam vel erat at tortor viverra pharetra. Quisque quis metus arcu. Duis sed consectetur ligula, nec pulvinar turpis. Mauris rutrum nisi in volutpat finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam dictum lorem orci, vel pellentesque dolor varius id.
-
-            .ratio.ratio-16x9
-                +3d-frame
-
-    section.section(style="background-color: #FFFCF2;")
-        .container
-            h2.section__title-2 Hiện vật liên quan
-            +card-slider
-                each item, index in ['Lorem ipsum dolor', 'Con dấu thời X', 'Trống đồng']
-                    .swiper-slide
-                        +news(`./images/sample-${index % 4 + 1}.jpg`, item, './sample-detail.html', 'news--sample')
-
-    section.section
-        .container
-            h2.section__title-2 Bài viết liên quan
-
-            +card-slider
-                - for(let i = 0; i < 3; i++)
-                    .swiper-slide
-                        +news
+    +s-album
+    +s-news('Điểm đến liên quan', '', 's-post')
+    +s-news('Các bài viết liên quan', 'pt-0')
 
     +md-album-sample
