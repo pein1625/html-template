@@ -170,13 +170,13 @@ mixin s-sample(title='', linktext='', id='')
                     .swiper-slide
                         +sample(`./images/img-${index % 5 + 1}.jpg`, item)
 
-mixin s-virtual
+mixin s-virtual(subtitle='CỤM DI  TÍCH', title='Xã Hạ Mỗ')
     section.s-virtual#s-virtual
         .s-virtual__bg
             img(src="./images/news.jpg", alt="")
         img.s-virtual__icon(src="./images/icon-360.svg", alt="")
-        .s-virtual__subtitle CỤM DI  TÍCH
-        .s-virtual__title Xã Hạ Mỗ
+        .s-virtual__subtitle= subtitle
+        .s-virtual__title= title
         .s-virtual__addr
             i.fal.fa-map-marker-alt.me-2
             span Đình Vạn Xuân - Xã Hạ Mỗ, Huyện Đan Phượng

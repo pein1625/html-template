@@ -437,15 +437,10 @@
 }
 
 .map-frame {
+    width: 100%;
+    height: calc(100vh - 54px);
     position: relative;
     z-index: 1;
-
-    &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        padding-bottom: 45%;
-    }
 
     #map {
         width: 100%;
