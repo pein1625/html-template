@@ -56,11 +56,11 @@
     },
     {
       "text": "Sản phẩm",
-      "url": "./news.html"
+      "url": "./products.html"
     },
     {
       "text": "Lễ hội",
-      "url": "./news.html"
+      "url": "./festival.html"
     },
     {
       "text": "Tin tức",
@@ -78,7 +78,7 @@
     },
     {
       "text": "Thư viện",
-      "url": "./news.html"
+      "url": "./library.html"
     }
   ]
 }
