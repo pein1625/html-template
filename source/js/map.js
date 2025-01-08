@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         $('.js-location-checkbox').each(function() {
             if (this.checked) {
-                let routeIds = $(this).data('route');
+                let routeIds = $(this).data('relics');
 
                 routeIds = String(routeIds).split(',');
 
