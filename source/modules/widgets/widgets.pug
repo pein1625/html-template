@@ -49,79 +49,73 @@ mixin map-frame
 mixin map(className='')
     +map-frame
     script.
-        window.defaultRoutes = ['route_1', 'route_2', 'route_3'];
+        window.defaultRoutes = ['route_6', 'route_9', 'route_7'];
         window.markersData = {
-            'route_1': {
-                lat: 37.7749,
-                lng: -122.4194,
+            route_6: {
+                lat: 21.112622,
+                lng: 105.6496149,
                 info: {
-                    title: 'San Francisco, California',
-                    description: 'A popular tourist destination, known for the Golden Gate Bridge.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Đền Văn Hiến 2",
+                description: "Đường Vạn Xuân, Hạ Mỗ, Đan Phượng, Hà Nội, Việt Nam",
+                imageUrl: "/uploads/images/destinations/img-4.jpg",
+                },
             },
-            'route_2': {
-                lat: 34.0522,
-                lng: -118.2437,
+            route_9: {
+                lat: 21.0570625,
+                lng: 105.7830873,
                 info: {
-                    title: 'Los Angeles, California',
-                    description: 'Known for its Mediterranean climate and the entertainment industry.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Miếu Voi Phục và Lăng Vân Sơn",
+                description: "Tân Hội, huyện Đan Phượng",
+                imageUrl:
+                    "/uploads/images/diem-den/at_mieu-voi-phuc-va-lang-van-son_4eba637e9cf35bdaabe7706a35fd8290.jpg",
+                },
             },
-            'route_3': {
-                lat: 40.7128,
-                lng: -74.0060,
+            route_7: {
+                lat: 21.1114029,
+                lng: 105.6891871,
                 info: {
-                    title: 'New York, New York',
-                    description: 'The largest city in the USA, known for its iconic skyline.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Chùa Hải Giác",
+                description: "Xã Hạ Mỗ - Huyện Đan Phượng",
+                imageUrl: "/uploads/images/test/thumb0.png",
+                },
             },
-            'route_4': {
-                lat: 37.7749,
-                lng: -122.4194,
+            route_4: {
+                lat: 21.0570625,
+                lng: 105.7830873,
                 info: {
-                    title: 'San Francisco, California',
-                    description: 'A popular tourist destination, known for the Golden Gate Bridge.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Đình Đại Phùng",
+                description: "Xã Đan Phượng, huyện Đan Phượng",
+                imageUrl: "/uploads/images/diem-den/dinh-dai-phung/unnamed.jpg",
+                },
             },
-            'route_5': {
-                lat: 34.0522,
-                lng: -118.2437,
+            route_5: {
+                lat: 21.0916223,
+                lng: 105.6582579,
                 info: {
-                    title: 'Los Angeles, California',
-                    description: 'Known for its Mediterranean climate and the entertainment industry.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Chùa Đại Phùng",
+                description: "Xã Đan Phượng, huyện Đan Phượng",
+                imageUrl:
+                    "/uploads/images/diem-den/chua-dai-phung/094009baoxaydung_image003.jpg",
+                },
             },
-            'route_6': {
-                lat: 40.7128,
-                lng: -74.0060,
+            route_3: {
+                lat: 21.0570625,
+                lng: 105.7830873,
                 info: {
-                    title: 'New York, New York',
-                    description: 'The largest city in the USA, known for its iconic skyline.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Chùa Đông Khê",
+                description: "Làng Đông Khê, xã Đan Phượng",
+                imageUrl:
+                    "/uploads/images/diem-den/nhipsonghanoi_hanoimoi_com_vn-uploads-images-phananh-2022-03-03-_chua-dong-khe.jpg",
+                },
             },
-            'route_7': {
-                lat: 34.0522,
-                lng: -118.2437,
+            route_14: {
+                lat: 21.0916223,
+                lng: 105.6582579,
                 info: {
-                    title: 'Los Angeles, California',
-                    description: 'Known for its Mediterranean climate and the entertainment industry.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
-            },
-            'route_8': {
-                lat: 40.7128,
-                lng: -74.0060,
-                info: {
-                    title: 'New York, New York',
-                    description: 'The largest city in the USA, known for its iconic skyline.',
-                    imageUrl: 'https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2021/10/image2-2-1024x649.png'
-                }
+                title: "Chùa Đôi Hồi",
+                description: "Địa chỉ ----",
+                imageUrl: "/uploads/images/test/thumb0.png",
+                },
             },
         };
     script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0hNc0IKJXYQzNTWtGesMaT5pcJzXMPQY&loading=async&callback=initMap")
