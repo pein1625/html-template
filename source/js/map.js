@@ -65,29 +65,35 @@ function closeInfoWindow() {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         if (window.defaultRoutes) {
-            const defaultRoutesData = window.defaultRoutes.map(routeId => markersData['route_' + routeId]).filter(x => x);
+            const defaultRoutesData = window.defaultRoutes.map(routeName => markersData[routeName]).filter(x => x);
             renderMarkersAndCentering(defaultRoutesData);
         }
     }, 1000);
 
     $('.js-location-checkbox').on('change', function() {
         const checkedRoutes = [];
+        let routeIds = [];
 
         $('.js-location-checkbox').each(function() {
             if (this.checked) {
-                let routeIds = $(this).data('relics');
+                let relics = $(this).data('relics');
 
-                routeIds = String(routeIds).split(',');
+                relics = String(relics).split(',');
 
-                routeIds.forEach(routeId => {
-                    const routeName = 'route_' + routeId;
-
-                    if (window.markersData[routeName]) {
-                        checkedRoutes.push(window.markersData[routeName]);
-                    }
-                })
+                routeIds = [...routeIds, ...relics];
             }
         });
+
+        routeIds = [...new Set(routeIds)];
+        console.log('routeIds', routeIds);
+
+        routeIds.forEach(routeId => {
+            const routeName = 'route_' + routeId;
+
+            if (window.markersData[routeName]) {
+                checkedRoutes.push(window.markersData[routeName]);
+            }
+        })
 
         renderMarkersAndCentering(checkedRoutes);
     })
