@@ -12,6 +12,8 @@ async function initMap() {
         zoom: 8,
         center: { lat: 0, lng: 0 },
         mapTypeId: google.maps.MapTypeId.SATELLITE,
+        fullscreenControl: false,
+        mapTypeControl: false,
     });
 
     directionsService = new google.maps.DirectionsService();

@@ -166,3 +166,15 @@ mixin place-thumb-slider
           .swiper-slide.position-relative
             .place-thumb-slider__frame
               img(src=`./images/img-${i % 5 + 1}.jpg`, alt="")
+
+mixin text-slider
+  .text-slider
+    .text-slider__prev
+      i.fal.fa-angle-double-left
+    .text-slider__next
+      i.fal.fa-angle-double-right
+    .text-slider__container.swiper-container
+      .swiper-wrapper
+        - for(let i = 0; i < 9; i++)
+          .swiper-slide
+            a.text-slider__btn(class=`${i == 3 ? 'active' : ''}` href="#!") Đình Đại Phùng

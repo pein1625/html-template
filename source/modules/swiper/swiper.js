@@ -206,3 +206,17 @@ function placeSyncSlider() {
     },
   });
 }
+
+$(function() {
+  addSwiper('.text-slider', {
+    loop: false,
+    navigation: true,
+    slidesPerView: 'auto',
+    spaceBetween: 6,
+    breakpoints: {
+      768: {
+        spaceBetween: 12,
+      }
+    }
+  })
+})

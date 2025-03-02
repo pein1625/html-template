@@ -29,7 +29,10 @@ const getUniqId = () => {
     let screenHeight =
       window.innerHeight || document.documentElement.clientHeight;
 
-    return bbox.bottom > 0 && bbox.top < screenHeight;
+    return (
+      bbox.top < 54 && bbox.bottom > (screenHeight / 2) ||
+      bbox.top >= 54 && bbox.top < screenHeight / 2
+    );
   };
 })(jQuery);
 
@@ -216,7 +219,7 @@ $(function () {
       const $el = $(this);
       let id = $el.attr("id");
 
-      if (id && pageNavIds.includes("#" + id) && $el.isOnScreen()) {
+      if (!target && id && pageNavIds.includes("#" + id) && $el.isOnScreen()) {
         target = "#" + id;
       }
     });
