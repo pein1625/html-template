@@ -71,10 +71,21 @@ block content
             .section__desc Cùng khám phá ngay những điểm đến tuyệt vời ở Đan Phượng bạn nhé!
 
             .mt-4
-                +card-slider
-                    - for(let i = 0; i < 6; i++)
-                        .swiper-slide
-                            +place(`./images/img-${i % 5 + 1}.jpg`)
+                .place-grid
+                    - for(let i = 0; i < 4; i++)
+                        .place-grid__col
+                            a.place-grid__item(href="#!")
+                                .place-grid__frame
+                                    img(src=`./images/img-${i % 5 + 1}.jpg`, alt="")
+                                .place-grid__overlay
+                                    .place-grid__title Di tích quốc gia đặc biệt
+                                    .place-grid__desc 01 di tích
+                                    img.place-grid__icon(src="./images/icon-360-view.svg", alt="")
+
+                //- +card-slider
+                //-     - for(let i = 0; i < 6; i++)
+                //-         .swiper-slide
+                //-             +place(`./images/img-${i % 5 + 1}.jpg`)
 
             .mt-4.text-center
                 a.button(href="#!") Xem tất cả
