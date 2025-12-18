@@ -10,8 +10,15 @@
 @include font-face('SFProDisplay', 'SFProDisplay-SemiboldItalic', 600, 'italic');
 @include font-face('SFProDisplay', 'SFProDisplay-BoldItalic', 700, 'italic');
 
+@include font-face('SVN-Mightiest', 'SVN-Mightiest-Regular', 400, 'normal');
+
 $font-aptima: 'UTMAptima', sans-serif;
 $font-display: 'SFProDisplay', sans-serif;
+$font-mightiest: 'SVN-Mightiest', sans-serif;
+
+.font-mightiest {
+    font-family: $font-mightiest !important;
+}
 
 .text-gray {
     color: $text-gray !important;

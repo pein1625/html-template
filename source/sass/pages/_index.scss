@@ -237,18 +237,6 @@
     }
 }
 
-.banner-items {
-    width: 100%;
-    height: calc(100vh - 200px);
-    object-fit: contain;
-    object-position: 50% 50%;
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .mobile-bg {
     display: flex;
     flex-direction: column;
@@ -289,5 +277,108 @@
         position: absolute;
         bottom: 80px;
         left: 5%;
+    }
+}
+
+.home-banner {
+    position: relative;
+    font-family: $font-mightiest;
+    z-index: 10;
+    height: 100vh;
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    &__product-1 {
+        width: 33vw;
+        height: 70vh;
+        object-fit: contain;
+        object-position: 50% 50%;
+        position: absolute;
+        top: 55%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__product-2 {
+        width: 27vw;
+        height: 47vh;
+        object-fit: contain;
+        object-position: 50% 50%;
+        position: absolute;
+        top: 55%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__group-1 {
+        text-align: center;
+        font-size: 12px;
+        position: absolute;
+        top: 80%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text-1 {
+        color: $red;
+        text-shadow:
+            -1px -1px 0 #fff,
+            1px -1px 0 #fff,
+            -1px 1px 0 #fff,
+            1px 1px 0 #fff;
+        font-size: 2.5em;
+    }
+
+    &__group-2 {
+        // display: flex;
+        // align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__product-3 {
+        width: 16vw;
+        height: 20vh;
+        object-fit: contain;
+        object-position: 50% 50%;
+    }
+
+    &__group-3 {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__footer {
+    }
+
+    &__footer-inner {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, rgba(#fff, 0), rgba(#fff, 0.9), rgba(#fff, 0));
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, rgba($primary, 0), rgba($primary, 0.9), rgba($primary, 0));
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 }

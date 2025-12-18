@@ -1,633 +1,519 @@
 .game {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  z-index: 1;
-
-  * {
-    user-select: none;
-  }
-
-  &::before {
-    content: "";
-    display: block;
     width: 100%;
-    height: 40%;
-    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0));
-    z-index: -1;
-  }
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    padding-top: 20vh;
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  &__sky {
-    width: 100%;
-    min-height: 60%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    position: absolute;
-    z-index: -3;
-    top: 0;
-    left: 0;
-  }
-
-  &__stage {
-    width: 100%;
-    position: absolute;
-    z-index: -2;
-    top: 66%;
-    left: 0;
-  }
-
-  &__liberty {
-    height: 48%;
-    object-fit: contain;
-    object-position: 100% 100%;
-    position: absolute;
-    bottom: 20%;
-    right: 55%;
-  }
-
-  &__medley {
-    height: 60%;
-    object-fit: contain;
-    object-position: 100% 100%;
-    position: absolute;
-    bottom: 10%;
-    right: 65%;
-  }
-
-  &__gifts {
-    width: 45%;
-    position: absolute;
-    top: 70%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-  }
-
-  &__title {
-    font-family: $font-aptima;
-    width: 50%;
-    font-size: 65px;
-    color: $white;
-    line-height: 1.1;
-    position: absolute;
-    top: 25%;
-    right: 3%;
-    text-align: center;
-  }
-
-  &__unbox {
-    width: 50%;
-    height: 40%;
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: 50% 50%;
-    }
-  }
-
-  &.picked &__liberty,
-  &.picked &__medley {
-    transition: 1s;
-    transition-delay: 0.8s;
-    transition-timing-function: cubic-bezier(.34,-0.63,.55,.67);
-    transform: translateX(-50vw) scale(0);
-    opacity: 0;
-  }
-
-  &.picked &__liberty {
-    transition-delay: 0.9s;
-  }
-
-  &.picked &__gifts {
-    width: 60%;
-    top: 58%;
-    left: 50%;
-    transition: 1s 1.5s linear;
-  }
-
-  &.picked .giftbox__img.active {
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transition: 1s;
-    transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
-    transition: 1s 1.5s linear;
-    animation: none;
-  }
-
-  &.picked &__title {
-    transition: 1s;
-    transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
-    transform: translate(0, -100%);
-    opacity: 0;
-  }
-
-  &.picked .giftbox__img {
-    pointer-events: none;
-  }
-
-  &.picked .giftbox__img:not(.active) {
-    transition: 1s;
-    transition-timing-function: cubic-bezier(.17,-0.08,.55,.67);
-    transform: translate(-50%, -100%);
-    opacity: 0;
-  }
-
-  &.show &__gifts {
-    left: 27%;
-    transition: 1s 3.5s ease-in;
-  }
-
-  &.show .box {
-    display: block;
-  }
-
-  &.show .box .box__box.box__box {
-    animation-duration: 2s; //4.25s
-    animation-delay: 0;
-    animation-name: spriteAnim;
-    animation-timing-function: linear;
-    left: -1600%;
-  }
-
-  &.show .box__gift img {
-    transform: scale(1);
-    opacity: 1;
-    animation-duration: 3s;
-    animation-delay: 0;
-    animation-name: giftAnim;
-    animation-timing-function: linear;
-  }
-
-  &.show .giftbox__img.active {
-    display: none;
-  }
-
-  &.show .congrat__title {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s 4s linear;
-  }
-
-  &.show .congrat__subtitle {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s 4.3s linear;
-  }
-
-  &.show .congrat__content {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s 4.6s linear;
-  }
-
-  &.show .congrat__last {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s 4.9s linear;
-  }
-
-  &.show .game-print-btn {
-    transform: translateX(0);
-    transition: 1s 5s ease-out;
-  }
-
-  &.first .box__first,
-  &.second .box__second,
-  &.third .box__third,
-  &.fourth .box__fourth,
-  &.consolation .box__consolation {
-    display: block;
-  }
-
-  &.first .congrat.first,
-  &.second .congrat.second,
-  &.third .congrat.third,
-  &.fourth .congrat.fourth,
-  &.consolation .congrat.consolation {
-    transform: translateX(0);
-  }
-
-  @include media-breakpoint-down(md) {
-    &__medley {
-      display: none;
+    * {
+        user-select: none;
     }
 
-    &__liberty {
-      display: none;
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    &__sky {
+        width: 100%;
+        min-height: 60%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        position: absolute;
+        z-index: -3;
+        top: 0;
+        left: 0;
+    }
+
+    &__stage {
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+        top: 66%;
+        left: 0;
     }
 
     &__title {
-      width: 100%;
-      top: 20%;
-      left: 0;
-      font-size: 30px;
-      text-transform: uppercase;
+        font-family: $font-mightiest;
+        font-size: 65px;
+        text-transform: uppercase;
+        line-height: 1.1;
+        text-align: center;
+        margin-bottom: 6vh;
     }
 
-    &__gifts {
-        width: 320px;
-        left: 50%;
+    &__unbox {
+        width: 50%;
+        height: 40%;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: 50% 50%;
+        }
     }
 
-    &.picked &__gifts {
-      width: 70%;
+    &.picked &__title {
+        transition: 1s;
+        transition-timing-function: cubic-bezier(0.17, -0.08, 0.55, 0.67);
+        transform: translate(0, -100%);
+        opacity: 0;
     }
 
-    &.show &__gifts {
-      left: 50%;
+    &.picked .giftbox__item {
+        pointer-events: none;
+
+        &.active {
+            top: 40%;
+            left: 50%;
+            transition: 0.5s;
+            animation-name: tilt-shaking;
+            animation-duration: 0.25s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        &:not(.active) .giftbox__img {
+            transition: 0.3s !important;
+            transform: scale(0) translate(-50%, -50%) !important;
+            opacity: 0 !important;
+        }
     }
-  }
+
+    &.show {
+        .box {
+            display: block;
+
+            &__box {
+                animation-duration: 0.9s;
+                animation-delay: 0;
+                animation-name: rotateIn;
+                animation-timing-function: linear;
+            }
+
+            &__gift {
+                img {
+                    animation-duration: 1.8s;
+                    animation-delay: 0;
+                    animation-name: giftRotateIn;
+                    animation-timing-function: linear;
+                }
+            }
+        }
+
+        .giftbox {
+            animation-duration: 0.3s;
+            animation-delay: 0;
+            animation-name: giftFadeOut;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        .congrat {
+            &__title,
+            &__subtitle,
+            &__content,
+            &__last {
+                animation-name: slideInLeft;
+                animation-duration: 0.3s;
+                animation-delay: 1s;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+            }
+
+            &__subtitle {
+              animation-delay: 1.3s;
+            }
+
+            &__content {
+              animation-delay: 1.5s;
+            }
+
+            &__last {
+              animation-delay: 1.7s;
+            }
+        }
+
+        .game-print-btn {
+            animation-name: slideInLeft;
+            animation-duration: 0.3s;
+            animation-delay: 1.9s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &.first .box__first,
+    &.second .box__second,
+    &.third .box__third,
+    &.fourth .box__fourth,
+    &.consolation .box__consolation {
+        display: block;
+    }
+
+    &.first .congrat.first,
+    &.second .congrat.second,
+    &.third .congrat.third,
+    &.fourth .congrat.fourth,
+    &.consolation .congrat.consolation {
+        transform: translateX(0);
+    }
+
+    @include media-breakpoint-down(md) {
+        &__title {
+            width: 100%;
+            top: 20%;
+            left: 0;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .giftbox {
-  position: relative;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    padding-bottom: 50%;
-  }
-
-  &__img {
-    height: 60%;
+    width: 40vw;
     position: absolute;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-
-    &:hover {
-      animation: bounceAndScale 1.5s ease-in-out infinite;
-      transition: all 0.3s ease;
-    }
-
-    &--1 {
-      height: 58%;
-      top: 30%;
-      left: 10%;
-    }
-
-    &--2 {
-      height: 58%;
-      top: 30%;
-      left: 68%;
-    }
-
-    &--3 {
-      height: 62%;
-      top: 45%;
-      left: 32%;
-    }
-
-    &--4 {
-      height: 63%;
-      top: 54%;
-      left: 88%;
-    }
-
-    &--5 {
-      height: 67%;
-      top: 65%;
-      left: 55%;
-    }
-  }
-
-  @include media-breakpoint-down(md) {
-    &::before {
-      padding-bottom: 75%;
-    }
-
-    &__img {
-      height: 50%;
-
-      &--1 {
-        height: 58%;
-        top: 30%;
-        left: 10%;
-      }
-
-      &--2 {
-        height: 58%;
-        top: 30%;
-        left: 68%;
-      }
-
-      &--3 {
-        height: 62%;
-        top: 57%;
-      }
-
-      &--4 {
-        height: 63%;
-        top: 57%;
-      }
-
-      &--5 {
-        height: 67%;
-        top: 80%;
-      }
-    }
-  }
-}
-
-@keyframes bounceAndScale {
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scaleY(1);
-  }
-  25% {
-    transform: translate(-50%, -65%) scaleY(1.1); /* Nhảy lên và phóng cao */
-  }
-  50% {
-    transform: translate(-50%, -50%) scaleY(0.9); /* Hạ xuống và nén chiều cao */
-  }
-  75% {
-    transform: translate(-50%, -57%) scaleY(1.05); /* Nhảy nhẹ và phóng nhẹ */
-  }
-}
-
-.box {
-  display: none;
-  transform: translate(-50%, -50%);
-  width: 110%;
-  position: absolute;
-  top: 43%;
-  left: 51%;
-  z-index: 100;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 100%;
-    padding-bottom: 68.26%;
-  }
-
-  &__box {
-    height: 100%;
-    width: auto;
-    max-width: unset;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  &__gift {
-    width: 50%;
-    height: 50%;
-    z-index: 10;
-    position: absolute;
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    img {
-      display: none;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: 50% 50%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: scale(0);
-      opacity: 0;
-
-      &.box__third,
-      &.box__fourth {
-        width: 80%;
-        height: 80%;
-        left: 10%;
-        top: 10%;
-      }
+    &__grid {
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 66.66%;
+        }
     }
-  }
 
-  &.picked-left {
-    top: 41%;
-  }
+    &__item {
+        width: 30%;
+        height: 45%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
 
-  &.picked-left &__box {
-    left: -200%;
-  }
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
 
-  &.picked-right {
-    top: 41%;
-    left: 51.5%;
-  }
+        &:nth-child(1) {
+            top: 25%;
+            left: 16.666666%;
+        }
 
-  &.picked-center {
-  }
+        &:nth-child(2) {
+            top: 25%;
+            left: 50%;
+        }
 
-  &.picked-center &__box {
-    left: -100%;
-  }
+        &:nth-child(3) {
+            top: 25%;
+            left: 86.666666%;
+        }
 
-  @include media-breakpoint-down(md) {
-    width: 170%;
-  }
+        &:nth-child(4) {
+            top: 75%;
+            left: 16.666666%;
+        }
+
+        &:nth-child(5) {
+            top: 75%;
+            left: 50%;
+        }
+
+        &:nth-child(6) {
+            top: 75%;
+            left: 86.666666%;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+
+    &__img {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50% 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation-duration: 0.8s;
+        animation-delay: 0;
+        animation-name: rotateIn;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    &__item:nth-child(1) .giftbox__img {
+      animation-delay: 0.1s;
+    }
+
+    &__item:nth-child(2) .giftbox__img {
+      animation-delay: 0.3s;
+    }
+
+    &__item:nth-child(3) .giftbox__img {
+      animation-delay: 0.5s;
+    }
+
+    &__item:nth-child(4) .giftbox__img {
+      animation-delay: 0.7s;
+    }
+
+    &__item:nth-child(5) .giftbox__img {
+      animation-delay: 0.9s;
+    }
+
+    &__item:nth-child(6) .giftbox__img {
+      animation-delay: 1.1s;
+    }
 }
 
-@keyframes spriteAnim {
-  0%,
-  5.87999% {
-    // background-position: 0 0; /* Start at the first frame */
-    left: 0;
-  }
-  5.88%,
-  11.759999% {
-    // background-position: -586px 0; /* Frame 2 */
-    left: -100%;
-  }
-  11.76%,
-  17.639999% {
-    // background-position: -1172px 0; /* Frame 3 */
-    left: -200%;
-  }
-  17.64%,
-  23.51999% {
-    // background-position: -1758px 0; /* Frame 4 */
-    left: -300%;
-  }
-  23.52%,
-  29.40999% {
-    // background-position: -2344px 0; /* Frame 5 */
-    left: -400%;
-  }
-  29.41%,
-  35.28999% {
-    // background-position: -2930px 0; /* Frame 6 */
-    left: -500%;
-  }
-  35.29%,
-  41.16999% {
-    // background-position: -3516px 0; /* Frame 7 */
-    left: -600%;
-  }
-  41.17%,
-  47.05999% {
-    // background-position: -4102px 0; /* Frame 8 */
-    left: -700%;
-  }
-  47.06%,
-  52.93999% {
-    // background-position: -4688px 0; /* Frame 9 */
-    left: -800%;
-  }
-  52.94%,
-  58.81999% {
-    // background-position: -5274px 0; /* Frame 10 */
-    left: -900%;
-  }
-  58.82%,
-  64.709999% {
-    // background-position: -5860px 0; /* Frame 11 */
-    left: -1000%;
-  }
-  64.71%,
-  70.58999% {
-    // background-position: -6446px 0; /* Frame 12 */
-    left: -1100%;
-  }
-  70.59%,
-  76.46999% {
-    // background-position: -7032px 0; /* Frame 13 */
-    left: -1200%;
-  }
-  76.47%,
-  82.34999% {
-    // background-position: -7618px 0; /* Frame 14 */
-    left: -1300%;
-  }
-  82.35%,
-  88.22999% {
-    // background-position: -8204px 0; /* Frame 15 */
-    left: -1300%;
-  }
-  88.23%,
-  94.10999% {
-    // background-position: -8790px 0; /* Frame 16 */
-    left: -1400%;
-  }
-  94.11%,
-  99.99999% {
-    // background-position: -9376px 0; /* Frame 17 */
-    left: -1500%;
-  }
-  100% {
-    // background-position: -9972px 0; /* End at the last frame */
-    left: -1600%;
-  }
-}
+.box {
+    display: none;
+    width: 70vw;
+    height: 90vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    z-index: 100;
+    overflow: hidden;
 
-@keyframes giftAnim {
-  0%,
-  60% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-bottom: 68.26%;
+    }
+
+    &__box {
+        height: 100%;
+        width: auto;
+        max-width: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__gift {
+        width: 50%;
+        height: 50%;
+        z-index: 10;
+        position: absolute;
+        top: 27.5%;
+        left: 25%;
+    }
+
+    &__img {
+        display: none;
+        width: 100%;
+        height: 100%;
+
+        &.box__third,
+        &.box__fourth {
+            width: 80%;
+            height: 80%;
+            left: 10%;
+            top: 10%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 170%;
+    }
 }
 
 .congrat {
-  transform: translateX(100vw);
-  width: 50%;
-  text-align: center;
-  font-size: 40px;
-  line-height: 1.4;
-  font-family: $font-aptima;
-  color: #fff7da;
-  text-shadow: 0 1px 1px rgba(#000, 0.3);
-  position: absolute;
-  top: 20%;
-  right: 0;
+    transform: translateX(100vw);
+    width: 50%;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.5;
+    font-family: $font-mightiest;
+    text-shadow: 0 1px 1px rgba(#000, 0.3);
+    position: absolute;
+    top: 20%;
+    right: 0;
 
-  &__title {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    text-transform: uppercase;
-    text-shadow: 0 -1px -1px $yellow, 0 3px 3px rgba(#000, 0.4);
-    transform: translateY(100px);
-    opacity: 0;
-  }
+    &__title {
+        font-size: 2.75em;
+        margin-bottom: 0.1em;
+        line-height: 1;
+        color: $danger;
+        text-transform: uppercase;
+        text-shadow: 0 1px 1px #fff, 0 2px 6px rgba(0, 0, 0, 0.7);
+        opacity: 0;
+    }
 
-  &__subtitle {
-    transform: translateY(100px);
-    opacity: 0;
-  }
+    &__subtitle {
+        transform: translateY(100px);
+        opacity: 0;
+    }
 
-  &__content {
-    font-weight: 700;
-    text-transform: uppercase;
-    transform: translateY(100px);
-    opacity: 0;
-  }
+    &__content {
+        font-size: 2em;
+        line-height: 1;
+        margin-top: 0.05em;
+        margin-bottom: 0.2em;
+        color: $danger;
+        text-shadow: 0 1px 1px #fff, 0 2px 6px rgba(0, 0, 0, 0.7);
+        transform: translateY(100px);
+        opacity: 0;
+    }
 
-  &__last {
-    transform: translateY(100px);
-    opacity: 0;
-  }
+    &__last {
+        transform: translateY(100px);
+        opacity: 0;
+    }
 
-  @include media-breakpoint-down(md) {
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    padding-left: 10px;
-    padding-right: 10px;
-    top: 76px;
-  }
+    @include media-breakpoint-down(md) {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+        top: 76px;
+    }
+}
+
+.game-print-btn-wrap {
+    position: absolute;
+    z-index: 100;
+    bottom: 20vh;
+    left: 75vw;
+    transform: translateX(-50%);
 }
 
 .game-print-btn {
-  transform: translateX(500px);
-  font-family: $font-aptima;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  padding-left: 45px;
-  padding-right: 45px;
-  border-radius: 24px;
-  text-transform: uppercase;
-  position: absolute;
-  z-index: 100;
-  bottom: 50px;
-  right: 50px;
-  border: 1px solid $black;
-  transition: 0.2s;
+    opacity: 0;
+    font-family: $font-mightiest;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px 100px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border: 1px solid $black;
+    transition: 0.2s;
 
-  &:hover {
-    background-color: darken($secondary, 10%);
-  }
-
-  @include media-breakpoint-down(md) {
-    right: 50%;
-    transform: translateX(400%);
-    white-space: nowrap;
-
-    .game.show & {
-      transform: translateX(50%);
+    &:hover {
+        background-color: darken($secondary, 10%);
     }
+}
+
+@keyframes tilt-shaking {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(0eg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes giftFadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+@keyframes rotateIn {
+    0% {
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: rotate3d(0, 0, 1, 30deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes giftRotateIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    30% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    90%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

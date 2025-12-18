@@ -167,20 +167,20 @@ $(function () {
     function getCountDownTemplate(timer = {}) {
       return `
 <div class="countdown__item">
-    <strong>${timer.days}</strong>
-    <span">ngày</span>
+    <span class="countdown__number">${timer.days}</span>
+    <span>ngày</span>
 </div>
 <div class="countdown__item">
-    <strong>${timer.hours}</strong>
-    <span">giờ</span>
+    <span class="countdown__number">${timer.hours}</span>
+    <span>giờ</span>
 </div>
 <div class="countdown__item">
-    <strong>${timer.minutes}</strong>
-    <span">phút</span>
+    <span class="countdown__number">${timer.minutes}</span>
+    <span>phút</span>
 </div>
 <div class="countdown__item">
-    <strong>${timer.seconds}</strong>
-    <span">giây</span>
+    <span class="countdown__number">${timer.seconds}</span>
+    <span>giây</span>
 </div>
       `;
     }
@@ -245,24 +245,12 @@ $(function() {
 })
 
 $(function() {
-    $('.js-giftbox').on('click', function() {
-    })
-})
-
-$(function() {
     const $game = $('.game');
-    const $box = $('.box');
     const url = $game.data('url');
 
-    console.log('url', url);
-
-    $('.giftbox__img').on('click', function() {
+    $('.js-giftbox').on('click', function() {
         $game.addClass('picked');
         $(this).addClass('active');
-
-        const pos = $(this).data('pos');
-
-        $box.addClass('picked-' + pos);
 
         setTimeout(function() {
             callApi(url);
@@ -282,7 +270,7 @@ function callApi(url) {
 
             const prizeType = res.message;
 
-            if (!(['first', 'second', 'third', 'fourth', 'consolation'].includes(prizeType))) {
+            if (!(['first', 'second', 'third', 'consolation'].includes(prizeType))) {
                 handleError('Đã xảy ra lỗi, vui lòng thử lại sau');
                 console.log('API trả về ko prize type ko đúng: ', res);
                 return;
@@ -291,15 +279,13 @@ function callApi(url) {
             handleSuccess(res.message);
         },
         error: function(e) {
-            handleSuccess(e.message);
+            handleError(e.message);
         },
     });
 }
 
 function handleSuccess(prizeType) {
     const $game = $('.game');
-
-    console.log('handleSuccess');
 
     $game.addClass('show');
     $game.addClass(prizeType)

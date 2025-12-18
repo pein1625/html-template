@@ -26,7 +26,7 @@
         z-index: -5;
         top: 0;
         left: 0;
-        background-color: rgba(#000, 0.5);
+        background-color: rgba(#000, 0.1);
     }
 
     &__bg {
@@ -90,7 +90,7 @@
     }
 
     &__title {
-        font-family: $font-aptima;
+        font-family: $font-mightiest;
         font-size: 30px;
         text-align: center;
         margin-bottom: 24px;
@@ -180,8 +180,8 @@
 
 .section-2 {
     &__title {
-        font-size: 16px;
-        color: $white;
+        font-family: $font-mightiest;
+        font-size: 20px;
         margin-bottom: 16px;
     }
 

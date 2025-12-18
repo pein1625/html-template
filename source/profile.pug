@@ -1,18 +1,18 @@
 extends layout/page
 
-block header
-    +header-2
+//- block header
+//-     +header-2
 block footer
 block content
 
     section.section.section--page
-        img.section__bg(src="./images/rule-bg.jpg", alt="")
+        img.section__bg(src="./images/main-bg.png", alt="")
         .section__backdrop
 
         .container
             .section__inner
                 .section__header
-                    .section__title.text-white.mb-0 THÔNG TIN NGƯỜI DÙNG
+                    .section__title.mb-0 THÔNG TIN NGƯỜI DÙNG
 
                 .section__body
                     .section__content
@@ -71,11 +71,3 @@ block content
                                                     label.form-label Nhập lại mật khẩu mới
                                                     input.form-control(type="password")
                                                 button.button.button--secondary.button--block(type="submit") Đổi mật khẩu
-
-                .section__footer
-                    nav.page-nav
-                        a.button(href="./program.html") Trang chủ
-                        a.button(href="./rule.html") Thể lệ
-                        a.button(href="./register.html") Đăng ký
-                        a.button(href="./customers.html") Danh sách khách hàng
-                        a.button.active(href="./profile.html") Thông tin người dùng

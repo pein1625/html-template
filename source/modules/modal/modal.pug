@@ -6,7 +6,7 @@ mixin md-confirm
         .modal-body
             button.modal-close(type="button", data-bs-dismiss="modal")
                 i.fal.fa-times
-            h3.md-confirm__title XÁC NHẬN THÔNG TIN
+            h3.md-confirm__title.font-mightiest XÁC NHẬN THÔNG TIN
 
             .md-confirm__grid
                 .md-confirm__col
@@ -76,9 +76,9 @@ mixin md-confirm
 
             .row.gy-2.gx-2.gx-lg--40.justify-content-center
                 .col-6.col-lg-5
-                    button.button.button--block.button--red.text-uppercase(type="button", data-bs-dismiss="modal") Chỉnh sửa #[span.d-none.d-md-inline thông tin]
+                    button.button.button--block.button--red.text-uppercase.font-mightiest(type="button", data-bs-dismiss="modal") Chỉnh sửa #[span.d-none.d-md-inline thông tin]
                 .col-6.col-lg-5
-                    button.button.button--block.button--secondary.text-uppercase.js-modal-confirm-submit(type="button") #[span.d-none.d-md-inline Hoàn thành &] quay thưởng
+                    button.button.button--block.button--secondary.text-uppercase.font-mightiest.js-modal-confirm-submit(type="button") #[span.d-none.d-md-inline Hoàn thành &] quay thưởng
 
 mixin md-gift
   .md-gift.modal.fade(tabindex='-1')

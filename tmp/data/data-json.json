@@ -171,12 +171,16 @@
 			"url": "./rule.html"
 		},
 		{
-			"text": "Danh sách trúng thưởng",
+			"text": "Đăng ký",
+			"url": "./register.html"
+		},
+		{
+			"text": "Danh sách khách hàng",
 			"url": "./customers.html"
 		},
 		{
-			"text": "Liên hệ đại lý",
-			"url": "./agency.html"
+			"text": "Thông tin người dùng",
+			"url": "./profile.html"
 		}
 	]
 }

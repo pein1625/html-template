@@ -1,20 +1,19 @@
 extends layout/page
-
-block header
-    +header-2
+//- block header
+//-     +header-2
 block footer
 block content
     section.section.section--page
-        img.section__bg(src="./images/rule-bg.jpg", alt="")
+        img.section__bg(src="./images/main-bg.png", alt="")
         .section__backdrop
         .container
             .section__inner
                 .section__header
-                    .section__title.text-white ĐĂNG KÝ QUAY TRÚNG THƯỞNG XE
-                    .section__desc.text-white
+                    .section__title ĐĂNG KÝ QUAY TRÚNG THƯỞNG XE
+                    .section__desc
                         p Công ty Piaggio Việt Nam sẽ kiểm tra chi tiết từng thông tin khách hàng đăng ký, nếu có bất kỳ thông tin sai hoặc phát hiện gian lận, Đại lý sẽ phải chịu trách nhiệm.
                             br
-                            | Mỗi khách hàng chỉ được đăng ký một lần và không được chỉnh sửa. Vì vậy Đại lý cần kiểm tra thông tin kỹ trước khi hoàn tất đăng ký
+                            | Mỗi khách hàng chỉ được đăng ký một lần và không được chỉnh sửa. Vì vậy Đại lỹ cần kiểm tra thông tin kỹ trước khi hoàn tất đăng ký
                 .section__body
                     .section__content
                         form.register-form.js-register-form(action="#!")
@@ -148,12 +147,12 @@ block content
                                 .col-lg-4.align-self-center
                                     button.button.button--secondary.button--block.text-uppercase.js-open-confirm-modal(type="button") Hoàn thành & quay thưởng
 
-                .section__footer
-                    nav.page-nav
-                        a.button(href="./program.html") Trang chủ
-                        a.button(href="./rule.html") Thể lệ
-                        a.button.active(href="./register.html") Đăng ký
-                        a.button(href="./customers.html") Danh sách khách hàng
-                        a.button(href="./profile.html") Thông tin người dùng
+                //- .section__footer
+                //-     nav.page-nav
+                //-         a.button(href="./program.html") Trang chủ
+                //-         a.button(href="./rule.html") Thể lệ
+                //-         a.button.active(href="./register.html") Đăng ký
+                //-         a.button(href="./customers.html") Danh sách khách hàng
+                //-         a.button(href="./profile.html") Thông tin người dùng
 
     +md-confirm
