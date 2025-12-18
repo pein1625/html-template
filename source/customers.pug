@@ -1,24 +1,25 @@
 extends layout/page
 
-block header
-    +header-2
+//- block header
+//-     +header-2
 block footer
 block content
     section.section.section--page
-        img.section__bg(src="./images/main-bg.jpg", alt="")
+        img.section__bg(src="./images/rule-bg.jpg", alt="")
         .section__backdrop
 
-        .container
+        .container-fluid
             .section__inner
                 .section__header
-                    .section__title DANH SÁCH KHÁCH HÀNG
+                    .section__title.mb-2 DANH SÁCH KHÁCH HÀNG
+                    .customer-export.mb-4
+                        a(href="#!")
+                            span Tổng cộng có #[strong.text-danger 100] khách hàng
+                            i.fal.fa-fw.fa-print
 
                 .section__body
                     .section__content
                         .data-tbl.data-tbl--customer
-                            a.data-tbl__export(href="#!")
-                                span Tổng cộng có #[strong.text-danger 100] khách hàng
-                                i.fal.fa-fw.fa-print
                             .table-responsive
                                 table.table.table-borderless
                                     thead
