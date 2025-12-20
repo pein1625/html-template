@@ -8,11 +8,11 @@ mixin box
     .box
         img.box__box(src="./images/opening-box.png", alt="")
         .box__gift
-            .box__img.box__first
+            .box__img.box__special
                 img(src="./images/prize_first.png", alt="")
-            .box__img.box__second
+            .box__img.box__first
                 img(src="./images/prize_second.png", alt="")
-            .box__img.box__third
+            .box__img.box__second
                 img(src="./images/prize_third.png", alt="")
             .box__img.box__consolation
                 img(src="./images/prize_consolation.png", alt="")
@@ -74,9 +74,9 @@ block content
         +giftbox
         +box
 
+        +congrat('special')
         +congrat('first')
         +congrat('second')
-        +congrat('third')
         +congrat('consolation')
 
         .game-print-btn-wrap

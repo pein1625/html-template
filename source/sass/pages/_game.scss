@@ -158,10 +158,9 @@
         }
     }
 
+    &.special .box__special,
     &.first .box__first,
     &.second .box__second,
-    &.third .box__third,
-    &.fourth .box__fourth,
     &.consolation .box__consolation {
         display: block;
     }

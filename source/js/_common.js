@@ -270,7 +270,7 @@ function callApi(url) {
 
             const prizeType = res.message;
 
-            if (!(['first', 'second', 'third', 'consolation'].includes(prizeType))) {
+            if (!(['special', 'first', 'second', 'consolation'].includes(prizeType))) {
                 handleError('Đã xảy ra lỗi, vui lòng thử lại sau');
                 console.log('API trả về ko prize type ko đúng: ', res);
                 return;
