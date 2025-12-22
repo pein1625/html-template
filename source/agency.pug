@@ -2,52 +2,58 @@ extends layout/page
 
 block footer
 block content
-    section.section.pt-3
-        .container
-            h1.section__title.text-white Danh sách đại lý
+    section.section.section--page
+        img.section__bg(src="./images/main-bg.png", alt="")
+        .section__backdrop
 
-            .section__province.mb-40
-                select.form-select.js-select2(data-placeholder="Tỉnh / thành phố")
-                    option Tỉnh / thành phố
-                    option Hà Nội
-                    option Vĩnh Phúc
-                    option Bắc Ninh
-                    option Quảng Ninh
-                    option Hải Dương
-                    option Hải Phòng
-                    option Hưng Yênx
-                    option Thái Bình
-                    option Hà Nam
-                    option Nam Định
-                    option Ninh Bình
+        .container-fluid
+            .section__inner
+                .section__header.mb-0
+                    .section__title.mb-0 DANH SÁCH ĐẠI LÝ
 
-            .data-tbl
-                table.table.table-borderless.js-datatable
-                    thead
-                        tr
-                            th STT
-                            th Đại lý
-                            th Số điện thoại
-                            th Email
-                            th Địa chỉ
-                    tbody
-                        - for(let i = 0; i < 10; i++)
-                            tr
-                                td #{i == 9 ? '10' : '0' + (i+1)}
-                                td Công ty TNHH Mai Tiến Phát
-                                td 0987654***
-                                td truongvanthang@gmail.com
-                                td Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội
+                .section__body.mt-2
+                    .section__province.mb-40
+                        select.form-select.js-select2(data-placeholder="Tỉnh / thành phố")
+                            option Tỉnh / thành phố
+                            option Hà Nội
+                            option Vĩnh Phúc
+                            option Bắc Ninh
+                            option Quảng Ninh
+                            option Hải Dương
+                            option Hải Phòng
+                            option Hưng Yênx
+                            option Thái Bình
+                            option Hà Nam
+                            option Nam Định
+                            option Ninh Bình
 
-                .data-tbl__footer
-                    .data-tbl__search
-                        .input-group
-                            input.form-control(type="text", placeholder="Tìm kiếm thông tin")
-                            button.input-group-text(type="button")
-                                i.far.fa-lg.fa-search
+                    .data-tbl
+                        table.table.table-borderless.js-datatable
+                            thead
+                                tr
+                                    th STT
+                                    th Đại lý
+                                    th Số điện thoại
+                                    th Email
+                                    th Địa chỉ
+                            tbody
+                                - for(let i = 0; i < 10; i++)
+                                    tr
+                                        td #{i == 9 ? '10' : '0' + (i+1)}
+                                        td Công ty TNHH Mai Tiến Phát
+                                        td 0987654***
+                                        td truongvanthang@gmail.com
+                                        td Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội
 
-                    .data-tbl__content
-                        div Có #[strong.text-danger 93] đại lý trong danh sách này
+                        .data-tbl__footer
+                            .data-tbl__search
+                                .input-group
+                                    input.form-control(type="text", placeholder="Tìm kiếm thông tin")
+                                    button.input-group-text(type="button")
+                                        i.far.fa-lg.fa-search
 
-                    .data-tbl__pagination
-                        +pagination
+                            .data-tbl__content
+                                div Có #[strong.text-danger 93] đại lý trong danh sách này
+
+                            .data-tbl__pagination
+                                +pagination
