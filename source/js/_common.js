@@ -31,7 +31,9 @@ $(function() {
 })
 
 $(function() {
-    $('.js-datepicker').datepicker();
+    $('.js-datepicker').datepicker({
+        format: 'dd/mm/yyyy',
+    });
 });
 
 $(function() {
@@ -392,4 +394,20 @@ $(function() {
         $('.pf-page__tab').removeClass('active');
         $target.addClass('active');
     })
+});
+
+$(function() {
+    const $header = $('.header');
+
+    if (!$header.length) return;
+
+    $(window).on('scroll', function() {
+        const scrollTop = $(window).scrollTop();
+
+        if (scrollTop > 100) {
+            $header.addClass('is-fixed');
+        } else {
+            $header.removeClass('is-fixed');
+        }
+    });
 });

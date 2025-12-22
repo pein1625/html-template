@@ -10,6 +10,11 @@
     z-index: 100;
   }
 
+
+  &.is-fixed &__wrapper {
+    background: linear-gradient(to bottom, rgba(#D5BB85, 0.85), rgba(#D5BB85, 0));
+  }
+
   &__inner {
     display: flex;
     align-items: center;
