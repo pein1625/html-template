@@ -367,7 +367,13 @@
         }
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 1499px) {
+        &__group-3 {
+            right: 1%;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
         &__group-1 {
             transform: unset;
             top: 70%;
@@ -375,8 +381,29 @@
         }
 
         &__group-3 {
-            top: 36%;
+            top: 38%;
             right: 10px;
+        }
+
+        &__text-label {
+            width: 100px;
+        }
+
+        &__text-4 {
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+        &__group-1 {
+            transform: unset;
+            top: 75%;
+            left: 5%;
+        }
+
+        &__group-3 {
+            top: 30%;
+            right: 24px;
         }
 
         &__text-label {
