@@ -289,7 +289,7 @@
     &__group-3 {
         position: absolute;
         top: 20%;
-        right: 7%;
+        right: 5%;
     }
 
     &__text-label {
@@ -334,12 +334,6 @@
         }
     }
 
-    @media (max-width: 1850px) {
-        &__group-3 {
-            right: 5%;
-        }
-    }
-
     @media (max-width: 1599px) {
         &__group-2 {
             bottom: 150px;
@@ -347,7 +341,7 @@
 
         &__group-3 {
             top: 20%;
-            right: 6%;
+            right: 2%;
         }
 
         &__text-label {

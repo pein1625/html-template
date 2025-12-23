@@ -298,7 +298,6 @@ function handleError(errMsg) {
 }
 
 $(function() {
-    return null; // todo hapk remove this
     const $table = $('.js-datatable');
 
     if (!$table.length) return;
