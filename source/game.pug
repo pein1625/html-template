@@ -37,12 +37,12 @@ mixin congrat(type="first")
     .congrat(class=type)
         .congrat__title Chúc mừng
         .congrat__subtitle Quý khách đã trúng thưởng
-        if (type == "first")
+        if (type == "special")
             .congrat__content
                 div Giải đặc biệt
                 div 01 Xe máy PIAGGIO LIBERTY
             .congrat__last 125 phiên bản Z
-        else if (type == "second")
+        else if (type == "first")
             .congrat__content
                 div Giải nhất
                 div 01 Thùng đựng đồ Vespa
@@ -53,7 +53,7 @@ mixin congrat(type="first")
                 div 01 Thùng đựng đồ Liberty
             .congrat__last
                 div 31L đi kèm nắp đậy
-        else if (type == "third")
+        else if (type == "second")
             .congrat__content
                 div Giải nhì
                 div 01 mũ bảo hiểm Vespa

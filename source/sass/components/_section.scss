@@ -103,6 +103,12 @@
         text-align: center;
         margin-top: -1.2em;
         margin-bottom: 1.2em;
+
+        background: linear-gradient(to bottom, #B71D17, #97151B);
+        -webkit-background-clip: text;
+                background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 -4px 4px 0 rgba(#000, 0.08);
     }
 
     &__desc {

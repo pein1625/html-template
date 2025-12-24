@@ -13,7 +13,7 @@ block content
                     .section__desc
                         p Công ty Piaggio Việt Nam sẽ kiểm tra chi tiết từng thông tin khách hàng đăng ký, nếu có bất kỳ thông tin sai hoặc phát hiện gian lận, Đại lý sẽ phải chịu trách nhiệm.
                             br
-                            | Mỗi khách hàng chỉ được đăng ký một lần và không được chỉnh sửa. Vì vậy Đại lỹ cần kiểm tra thông tin kỹ trước khi hoàn tất đăng ký
+                            | Mỗi sản phẩm khuyến mại được khách hàng mua chỉ được đăng ký một lần và không được chỉnh sửa. Vì vậy Đại lỹ cần kiểm tra thông tin kỹ trước khi hoàn tất đăng ký.
                 .section__body
                     .section__content
                         form.register-form.js-register-form(action="#!")
@@ -48,9 +48,9 @@ block content
                                                 .me-2
                                                     +radio('type_of_id', '', 'js-input-cccd')
                                                         | &nbsp;Số CCCD
-                                                .me-2
-                                                    +radio('type_of_id', '', 'js-input-shk')
-                                                        | &nbsp;Số hộ khẩu
+                                                //- .me-2
+                                                //-     +radio('type_of_id', '', 'js-input-shk')
+                                                //-         | &nbsp;Số hộ khẩu
                                                 .me-2
                                                     +radio('type_of_id', '', 'js-input-passport')
                                                         | &nbsp;Hộ chiếu
@@ -95,9 +95,6 @@ block content
                                                                 i.fal.fa-fw.fa-trash-alt
                                                 .col-12
                                                     .text-gray.fs-12
-                                                        | * Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”
-                                                        br
-                                                        | * Đối với CCCD phải tải lên cả hai mặt
 
                                 .col-xl-6.register-form__tab.js-product-tab
                                     .row.gy-2.gx-3
@@ -143,7 +140,7 @@ block content
 
                                 .col-12.text-center.text-danger Kiểm tra kỹ thông tin trước khi nhấn nút
                                 .col-lg-4
-                                    .text-gray.fs-12 Ghi chú: Mỗi số iện thoại chỉ được đăng ký 1 lần duy nhất. Trường hợp khách hàng mua nhiều xe và muốn đăng ký bằng các số điện thoại khác nhau, đại lý vui lòng liên hệ đại diện bán hàng của Piaggio Việt Nam để ược hỗ trợ.
+                                    .text-gray.fs-12
                                 .col-lg-4.align-self-center
                                     button.button.button--secondary.button--block.text-uppercase.js-open-confirm-modal(type="button") Hoàn thành & quay thưởng
 

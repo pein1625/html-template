@@ -183,7 +183,7 @@
         display: block;
         width: 100%;
         height: 1px;
-        background-color: #D02018;
+        background-color: #9A161C;
         transition: 0.3s ease-in-out;
         position: absolute;
         bottom: 0;
@@ -194,7 +194,11 @@
 
     &-root > &-item > &-link.active,
     &-root > &-item:hover > &-link {
-      color: #D02018;
+      background: linear-gradient(to bottom, #CC1F18, #A1171D);
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 -4px 4px 0 rgba(#000, 0.08);
 
       &::after {
         transform: translateX(-50%);

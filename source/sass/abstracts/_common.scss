@@ -393,3 +393,14 @@
         }
     }
 }
+
+.text-red-gradient {
+    background: linear-gradient(to bottom, #B71D17, #97151B);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-custom-shadow {
+    box-shadow: 0 -4px 4px 0 rgba(#000, 0.08);
+}
